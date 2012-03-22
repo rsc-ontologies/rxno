@@ -1,0 +1,2967 @@
+format-version: 1.2
+date: 22:03:2012 17:19
+saved-by: batchelorc
+auto-generated-by: OBO-Edit 2.1.1-beta7
+default-namespace: RXNO
+ontology: rxno.obo
+
+[Term]
+id: CHEBI:24431
+name: chemical entity
+
+[Term]
+id: CHEBI:24433
+name: group
+is_a: CHEBI:24431 ! chemical entity
+
+[Term]
+id: CHEBI:33308
+name: carboxylic ester
+is_a: CHEBI:24431 ! chemical entity
+
+[Term]
+id: CHEBI:33364
+name: palladium
+is_a: CHEBI:24431 ! chemical entity
+
+[Term]
+id: CHEBI:36823
+name: pseudohalo group
+is_a: CHEBI:24433 ! group
+
+[Term]
+id: MOP:0000339
+name: silylation
+def: "Formation of a covalent bond between a substrate and an silyl group." [RSC:xp]
+comment: has_participant: CHEBI:33478
+synonym: "silylation" EXACT []
+is_a: MOP:0000566 ! formation of covalent bond with group
+
+[Term]
+id: MOP:0000369
+name: alkylation
+def: "Formation of a covalent bond between a substrate and an alkyl group." [RSC:xp]
+comment: has_participant: CHEBI:22323
+synonym: "alkylation" EXACT []
+is_a: MOP:0000410 ! hydrocarbylation
+
+[Term]
+id: MOP:0000410
+name: hydrocarbylation
+def: "Formation of a covalent bond between a substrate and a hydrocarbyl group." [RSC:xp]
+comment: has_participant: CHEBI:33248
+synonym: "hydrocarbylation" EXACT []
+is_a: MOP:0000458 ! organylation
+
+[Term]
+id: MOP:0000458
+name: organylation
+def: "Formation of a covalent bond between a substrate and an organyl group." [RSC:xp]
+comment: has_participant: CHEBI:33249
+synonym: "organylation" EXACT []
+is_a: MOP:0000566 ! formation of covalent bond with group
+
+[Term]
+id: MOP:0000479
+name: acylation
+def: "Formation of a covalent bond between a substrate and an acyl group." [RSC:xp]
+comment: has_participant: CHEBI:22221
+synonym: "acylation" EXACT []
+is_a: MOP:0000566 ! formation of covalent bond with group
+
+[Term]
+id: MOP:0000539
+name: sulfonylation
+alt_id: MOP:0000524
+def: "Formation of a covalent bond between a substrate and a sulfonyl group." [RSC:xp]
+comment: MERGED COMMENT:\nTARGET COMMENT: has_participant: CHEBI:51100\n--------------------\nSOURCE COMMENT: has_participant: CHEBI:29825
+synonym: "sulfonylation" EXACT []
+is_a: MOP:0000566 ! formation of covalent bond with group
+
+[Term]
+id: MOP:0000543
+name: molecular process
+def: "A process in which at least one of the participants is a molecule." [RSC:cb]
+
+[Term]
+id: MOP:0000550
+name: halogenation
+def: "Formation of a covalent bond between a substrate and a halo group." [RSC:xp]
+comment: has_participant: CHEBI:47854
+is_a: MOP:0000566 ! formation of covalent bond with group
+
+[Term]
+id: MOP:0000561
+name: cyclization
+def: "Formation of a ring in a molecule from a chain by formation of a new bond." [AU:C01494]
+synonym: "cyclisation" EXACT []
+is_a: MOP:0000543 ! molecular process
+
+[Term]
+id: MOP:0000562
+name: cycloaddition
+def: "A molecular process where two or more unsaturated molecules or parts of the same molecule combine to form a cyclic adduct in which there is a net reduction of bond multiplicity." [AU:C01496]
+is_a: MOP:0000561 ! cyclization
+
+[Term]
+id: MOP:0000563
+name: [2+2] cycloaddition
+def: "A cycloaddition in which each participant contributes two electrons to the transformation of reactants to products." [RSC:cb]
+is_a: MOP:0000562 ! cycloaddition
+
+[Term]
+id: MOP:0000564
+name: cycloelimination
+def: "A molecular process in which a cyclic system decomposes into two or more unsaturated molecules or parts of the same molecule and there is a net increase in bond multiplicity." [AU:C01496, AU:C01501]
+synonym: "cycloreversion" EXACT [AU:C01506]
+synonym: "retro-addition" EXACT []
+synonym: "retrocycloaddtion" EXACT [AU:R05372]
+is_a: MOP:0000543 ! molecular process
+
+[Term]
+id: MOP:0000565
+name: [4+2] cycloaddition
+def: "A cycloaddition in which one participant contributes four electrons and the other participant contributes two electrons to the transformation of reactants to products." [RSC:cb]
+is_a: MOP:0000562 ! cycloaddition
+
+[Term]
+id: MOP:0000566
+name: formation of covalent bond with group
+def: "Formation of a covalent bond between a substrate and a group." [RSC:cb]
+is_a: MOP:0000543 ! molecular process
+created_by: batchelorc
+creation_date: 2009-04-22T10:01:32Z
+
+[Term]
+id: MOP:0000567
+name: breaking of covalent bond with group
+def: "Breaking of a covalent bond between a substrate and a group." [RSC:cb]
+is_a: MOP:0000543 ! molecular process
+created_by: batchelorc
+creation_date: 2009-04-30T02:24:32Z
+
+[Term]
+id: MOP:0000568
+name: oxidation
+def: "The complete, net removal of one or mole electrons from a molecular entity, corresponding to an increase in the oxidation number of any atom within any substrate." [AU:O04362]
+synonym: "de-electronation" EXACT []
+is_a: MOP:0000543 ! molecular process
+created_by: batchelorc
+creation_date: 2009-06-01T06:01:47Z
+
+[Term]
+id: MOP:0000569
+name: reduction
+def: "The complete transfer of one or more electrons to a molecular entity." [AU:R05222]
+synonym: "electronation" EXACT []
+is_a: MOP:0000543 ! molecular process
+created_by: batchelorc
+creation_date: 2009-06-01T06:04:18Z
+
+[Term]
+id: MOP:0000570
+name: electron attachment
+def: "The transfer of an electron to a molecular entity, resulting in a molecular entity of increased negative charge." [AU:E01979]
+is_a: MOP:0000569 ! reduction
+created_by: batchelorc
+creation_date: 2009-06-01T06:06:19Z
+
+[Term]
+id: MOP:0000571
+name: aldehyde reduction
+def: "A reduction in which an aldehyde is reduced to form a primary alcohol." [RSC:cb]
+is_a: MOP:0000569 ! reduction
+created_by: batchelorc
+creation_date: 2009-06-01T06:07:02Z
+
+[Term]
+id: MOP:0000572
+name: alcohol oxidation
+def: "An oxidation process where an alcohol is transformed into a carbonyl compound." [RSC:cb]
+is_a: MOP:0000568 ! oxidation
+created_by: batchelorc
+creation_date: 2009-06-01T06:10:35Z
+
+[Term]
+id: MOP:0000573
+name: primary alcohol oxidation to aldehyde
+def: "An oxidation process where a primary alcohol is transformed into an aldehyde." [RSC:cb]
+is_a: MOP:0000572 ! alcohol oxidation
+created_by: batchelorc
+creation_date: 2009-06-01T06:10:59Z
+
+[Term]
+id: MOP:0000574
+name: secondary alcohol oxidation to ketone
+def: "An oxidation process where a secondary alcohol is transformed into a ketone." [RSC:cb]
+is_a: MOP:0000572 ! alcohol oxidation
+created_by: batchelorc
+creation_date: 2009-06-01T06:11:31Z
+
+[Term]
+id: MOP:0000575
+name: amine oxidation
+def: "An oxidation process where an amine is transformed into an imine." [RSC:cb]
+is_a: MOP:0000706 ! oxidation at nitrogen
+created_by: batchelorc
+creation_date: 2009-06-01T06:15:40Z
+
+[Term]
+id: MOP:0000576
+name: imine reduction
+def: "A reduction process where an imine is transformed into an amine." [RSC:cb]
+is_a: MOP:0000569 ! reduction
+created_by: batchelorc
+creation_date: 2009-06-01T06:19:21Z
+
+[Term]
+id: MOP:0000577
+name: ester reduction
+def: "A reduction process where the oxidation state carbonyl carbon in the ester functionality is reduced." [RSC:cb]
+synonym: "reduction of ester" EXACT []
+is_a: MOP:0000569 ! reduction
+created_by: batchelorc
+creation_date: 2009-06-02T05:30:48Z
+
+[Term]
+id: MOP:0000578
+name: ester reduction to aldehyde
+def: "An ester reduction where the product is the corresponding aldehyde." [RSC:cb]
+synonym: "reduction of ester to aldehyde" EXACT []
+synonym: "reduction of esters to aldehyde" EXACT []
+is_a: MOP:0000577 ! ester reduction
+created_by: batchelorc
+creation_date: 2009-06-02T05:31:49Z
+
+[Term]
+id: MOP:0000579
+name: ester reduction to primary alcohol
+def: "An ester reduction where the product is the corresponding primary alcohol." [RSC:cb]
+synonym: "reduction of ester to primary alcohol" EXACT []
+synonym: "reduction of esters to primary alcohol" EXACT []
+is_a: MOP:0000577 ! ester reduction
+created_by: batchelorc
+creation_date: 2009-06-02T05:32:37Z
+
+[Term]
+id: MOP:0000580
+name: ketone reduction
+def: "A reduction process where a ketone is reduced to a secondary alcohol." [RSC:cb]
+synonym: "reduction of ketone" EXACT []
+synonym: "reduction of ketones" EXACT []
+is_a: MOP:0000569 ! reduction
+created_by: batchelorc
+creation_date: 2009-06-02T05:35:42Z
+
+[Term]
+id: MOP:0000581
+name: alkene oxidation
+def: "An oxidation process where the oxidation state of at least one doubly-bonded carbon atom increases." [RSC:cb]
+synonym: "olefin oxidation" EXACT []
+is_a: MOP:0000568 ! oxidation
+created_by: batchelorc
+creation_date: 2009-06-02T05:45:30Z
+
+[Term]
+id: MOP:0000582
+name: alkene oxidation to 1,2-diol
+def: "An alkene oxidation where the product is the corresponding 1,2-diol." [RSC:cb]
+synonym: "alkene oxidation to glycol" EXACT []
+synonym: "oxidation of alkene to 1,2-diol" EXACT []
+synonym: "oxidation of alkenes to 1,2-diol" EXACT []
+is_a: MOP:0000581 ! alkene oxidation
+created_by: batchelorc
+creation_date: 2009-06-02T05:46:52Z
+
+[Term]
+id: MOP:0000583
+name: alkene ozonolysis
+def: "An alkene oxidation where the reagent is ozone and the product is the corresponding ozonide." [RSC:cb]
+synonym: "ozonolysis of alkene" EXACT []
+synonym: "ozonolysis of alkenes" EXACT []
+is_a: RXNO:0000344 ! alkene oxidative cleavage
+created_by: batchelorc
+creation_date: 2009-06-02T05:48:42Z
+
+[Term]
+id: MOP:0000584
+name: primary alkene oxidation to carboxylic acid and carbon dioxide
+def: "An alkene oxidation process where the reactant is a primary alkene and the products are carboxylic acid and carbon dioxide. This can be achieved with a warm, acidic solution of potassium permanganate." [RSC:cb]
+is_a: RXNO:0000344 ! alkene oxidative cleavage
+created_by: batchelorc
+creation_date: 2009-06-02T06:02:46Z
+
+[Term]
+id: MOP:0000585
+name: tertiary alkene oxidation to carboxylic acid and ketone
+def: "An alkene oxidation where the reactant is a tertiary alkene and the products are the corresponding carboxylic acid and ketone. This can be achieved with a warm, acidic solution of potassium permanganate." [RSC:cb]
+is_a: RXNO:0000344 ! alkene oxidative cleavage
+created_by: batchelorc
+creation_date: 2009-06-02T06:04:14Z
+
+[Term]
+id: MOP:0000586
+name: secondary, non-terminal alkene oxidation to aldehydes
+def: "An alkene oxidation process where the reactant is a secondary alkene and the products are the corresponding aldehydes. This can be achieved with warm, acidic potassium permanganate." [RSC:cb]
+is_a: RXNO:0000344 ! alkene oxidative cleavage
+created_by: batchelorc
+creation_date: 2009-06-02T06:06:23Z
+
+[Term]
+id: MOP:0000587
+name: secondary terminal alkene oxidation to ketone and carbon dioxide
+def: "An alkene oxidation process where the reactant is a secondary terminal alkene and the products are carbon dioxide and the corresponding ketone. This can be achieved by warm, acidic potassium permanganate solution." [RSC:cb]
+is_a: RXNO:0000344 ! alkene oxidative cleavage
+created_by: batchelorc
+creation_date: 2009-06-02T06:07:44Z
+
+[Term]
+id: MOP:0000588
+name: quaternary alkene oxidation to ketones
+def: "An alkene oxidation process where the reactant is a quaternary alkene and the products are the corresponding ketones." [RSC:cb]
+is_a: RXNO:0000344 ! alkene oxidative cleavage
+created_by: batchelorc
+creation_date: 2009-06-02T06:09:24Z
+
+[Term]
+id: MOP:0000589
+name: hydrogenation
+def: "A reduction process that involves addition of hydrogen atoms across a double bond." [RSC:cb]
+is_a: MOP:0000569 ! reduction
+created_by: batchelorc
+creation_date: 2009-06-05T04:53:34Z
+
+[Term]
+id: MOP:0000596
+name: pseudohalogenation
+def: "Formation of a covalent bond between a substrate and a pseudohalo group." [RSC:xp]
+is_a: MOP:0000566 ! formation of covalent bond with group
+relationship: has_participant CHEBI:36823 ! pseudohalo group
+
+[Term]
+id: MOP:0000627
+name: condensation reaction
+def: "A reaction in which two or more reactants or remote reactive sites within the same molecular entity yield a single main product with accompanying formation of a small molecule." [AU:C01238]
+is_a: MOP:0000543 ! molecular process
+created_by: batchelorc
+creation_date: 2009-09-16T11:30:32Z
+
+[Term]
+id: MOP:0000628
+name: dehydration reaction
+def: "A condensation reaction where the small molecule produced is water." [RSC:cb]
+is_a: MOP:0000627 ! condensation reaction
+created_by: batchelorc
+creation_date: 2009-09-16T11:32:33Z
+
+[Term]
+id: MOP:0000705
+name: oxidation at sulfur
+def: "An oxidation process where the oxidation state of at least one sulfur atom increases." [RSC:cb]
+is_a: MOP:0000568 ! oxidation
+
+[Term]
+id: MOP:0000706
+name: oxidation at nitrogen
+def: "An oxidation process where the oxidation state of at least one nitrogen atom increases." [RSC:cb]
+is_a: MOP:0000568 ! oxidation
+
+[Term]
+id: MOP:0001458
+name: deorganylation
+def: "Breaking of a covalent bond between a substrate and an organyl group." [RSC:xp]
+comment: has_participant: CHEBI:33249
+is_a: MOP:0000567 ! breaking of covalent bond with group
+
+[Term]
+id: MOP:0001550
+name: dehalogenation
+def: "Breaking of a covalent bond between a substrate and a halo group." [RSC:xp]
+comment: has_participant: CHEBI:47854
+is_a: MOP:0000567 ! breaking of covalent bond with group
+
+[Term]
+id: MOP:0002369
+name: N-alkylation
+def: "Formation of a covalent bond between a nitrogen atom in a substrate and an alkyl group." [RSC:xp]
+comment: has_participant: CHEBI:22323
+is_a: MOP:0000369 ! alkylation
+
+[Term]
+id: MOP:0002479
+name: N-acylation
+def: "Formation of a covalent bond between a nitrogen atom in a substrate and an acyl group." [RSC:xp]
+comment: has_participant: CHEBI:22221
+is_a: MOP:0000479 ! acylation
+
+[Term]
+id: MOP:0002524
+name: N-sulfonylation
+def: "Formation of a covalent bond between a nitrogen atom in a substrate and a sulfonyl group." [RSC:xp]
+comment: has_participant: CHEBI:29825
+is_a: MOP:0000539 ! sulfonylation
+
+[Term]
+id: MOP:0003339
+name: O-silylation
+def: "Formation of a covalent bond between an oxygen atom in a substrate and a silyl group." [RSC:xp]
+comment: has_participant: CHEBI:30541
+is_a: MOP:0000339 ! silylation
+
+[Term]
+id: MOP:0003479
+name: O-acylation
+def: "Formation of a covalent bond between an oxygen atom in a substrate and an acyl group." [RSC:xp]
+comment: has_participant: CHEBI:22221
+is_a: MOP:0000479 ! acylation
+
+[Term]
+id: MOP:0003524
+name: O-sulfonylation
+def: "Formation of a covalent bond between an oxygen atom in a substrate and a sulfonyl group." [RSC:xp]
+comment: has_participant: CHEBI:29825
+is_a: MOP:0000539 ! sulfonylation
+
+[Term]
+id: RXNO:0000000
+name: molecular skeleton joining reaction
+def: "A reaction where the number of atoms in the molecular skeleton increases." [RSC:cb]
+synonym: "coupling reaction" EXACT []
+is_a: RXNO:0000001 ! planned reaction step
+
+[Term]
+id: RXNO:0000001
+name: planned reaction step
+def: "A molecular process which takes place as part of a planned synthesis." [RSC:cb]
+is_a: MOP:0000543 ! molecular process
+intersection_of: MOP:0000543 ! molecular process
+intersection_of: part_of RXNO:0000329 ! planned synthesis
+relationship: part_of RXNO:0000329 ! planned synthesis
+
+[Term]
+id: RXNO:0000002
+name: carbon-carbon coupling reaction
+def: "A joining reaction where a bond is formed between two carbon atoms." [RSC:cb]
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
+
+[Term]
+id: RXNO:0000003
+name: Perkin reaction
+def: "An aldol condensation where an aryl aldehyde reacts with an acid anhydride to form a cinnamic acid." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000017 ! aldol condensation
+
+[Term]
+id: RXNO:0000004
+name: ring reaction
+def: "A reaction in which the number of atoms in any ring changes between the reactant and the products." [RSC:cb, RSC:cc, RSC:db]
+comment: This term was obsoleted because it was a grouping term that wasn't much help.
+is_obsolete: true
+
+[Term]
+id: RXNO:0000005
+name: ring formation reaction step
+def: "A planned reaction step where the product contains a ring that was not in any of the reactants." [RSC:cb]
+is_a: RXNO:0000001 ! planned reaction step
+relationship: has_part MOP:0000561 ! cyclization
+
+[Term]
+id: RXNO:0000006
+name: Diels-Alder reaction
+def: "A [4+2] cycloaddition reaction where a diene reacts with a compound containing a double or triple bond (a dienophile) to form an unsaturated six-membered ring compound." [RSC:cc]
+synonym: "Diels-Alder coupling" EXACT []
+is_a: MOP:0000562 ! cycloaddition
+
+[Term]
+id: RXNO:0000007
+name: ene reaction
+def: "A joining reaction where an alkene with an allylic hydrogen reacts with a compound containing a multiple bond (an enophile) to form a substituted alkene." [RSC:cb]
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
+
+[Term]
+id: RXNO:0000008
+name: conjugate addition
+def: "A joining reaction where a nucleophile adds to the beta-carbon of an alpha,beta-unsaturated system (or an activated carbon-carbon bond)." [rsc:cg, rsc:db]
+synonym: "nucleophilic conjugate addition" EXACT []
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
+
+[Term]
+id: RXNO:0000009
+name: Michael addition
+def: "A conjugate addition reaction where a carbon nucleophile adds to the beta-carbon of an alpha,beta-unsaturated system (or an activated carbon-carbon bond).\n" [RSC:db]
+is_a: RXNO:0000008 ! conjugate addition
+
+[Term]
+id: RXNO:0000010
+name: functional modification
+def: "A reaction where the number of atoms in the skeleton, and their connectivity, remain the same." [RSC:cb]
+is_a: MOP:0000543 ! molecular process
+
+[Term]
+id: RXNO:0000011
+name: functional group modification
+def: "A reaction in which a functional group undergoes a change that does not affect the number of atoms in (or connectivity of) the skeleton of the molecule." [rsc:db]
+is_a: RXNO:0000010 ! functional modification
+
+[Term]
+id: RXNO:0000012
+name: functional group oxidation
+def: "A functional group modification reaction where a functional group is oxidised." [RSC:cb]
+is_a: RXNO:0000011 ! functional group modification
+relationship: has_part MOP:0000568 ! oxidation
+
+[Term]
+id: RXNO:0000013
+name: diazotisation
+def: "A functional group oxidation where an aromatic amine is transformed into an aromatic diazonium salt." [RSC:cc]
+synonym: "diazotization" EXACT []
+is_a: RXNO:0000012 ! functional group oxidation
+
+[Term]
+id: RXNO:0000014
+name: Grignard reaction
+def: "A carbon-carbon coupling reaction where a Grignard reagent reacts with a compound containing an electrophilic carbon atom. A Grignard reagent is a magnesium-stabilised carbon nucleophile. An aldehyde leads to a secondary alcohol, a ketone leads to a tertiary alcohol, an ester leads to a ketone and a nitrile leads to a ketone." [RSC:db]
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000015
+name: Wittig reaction
+def: "A carbon-carbon coupling reaction where a carbonyl compound reacts with a phosphonium ylide to give an alkene." [RSC:cb, RSC:cc, RSC:db]
+synonym: "Wittig condensation" EXACT []
+synonym: "Wittig olefination" EXACT []
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000016
+name: aldol addition
+def: "A carbon-carbon coupling reaction where an enol or enolate reacts with a carbonyl compound to form a beta-hydroxy ketone. The name comes from aldehyde + alcohol." [RSC:cb]
+synonym: "aldol reaction" EXACT []
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000017
+name: aldol condensation
+def: "An aldol addition where an enol or enolate reacts with a carbonyl compound to form an alpha,beta-unsaturated ketone." [RSC:cc]
+is_a: RXNO:0000016 ! aldol addition
+is_a: RXNO:0000315 ! condensation step
+
+[Term]
+id: RXNO:0000018
+name: 1,3-dipolar cycloaddition
+def: "A ring formation reaction where a 1,3-dipolar compound reacts with an alkene or alkyne to form a five-membered ring compound." [RSC:db]
+synonym: "[3+2] cycloaddition" EXACT []
+synonym: "Huisgen cycloaddition" RELATED []
+synonym: "Huisgen reaction" RELATED []
+synonym: "Huisgen's 1,3-dipolar cycloaddition" EXACT []
+is_a: MOP:0000562 ! cycloaddition
+
+[Term]
+id: RXNO:0000019
+name: substitution reaction
+def: "A reaction in which one singly-bonded substituent, but not the hydrogen atom, is replaced by another singly-bonded substituent." [RSC:cb]
+comment: The Gold Book says hydrogen atoms count, but this differs from everyone's intuition. See http://goldbook.iupac.org/S06078.html
+is_a: MOP:0000543 ! molecular process
+
+[Term]
+id: RXNO:0000020
+name: aromatic substitution
+def: "A substitution reaction in which one singly-bonded substituent on an aromatic skeleton is replaced by another singly-bonded substituent." [RSC:cb]
+is_a: RXNO:0000019 ! substitution reaction
+
+[Term]
+id: RXNO:0000021
+name: Sandmeyer reaction
+def: "An aromatic substitution reaction where an aryl diazonium salt reacts with a cuprous halide or pseudohalide to form an aromatic halide or pseudohalide." [RSC:db]
+is_a: RXNO:0000332 ! aromatic substitution step
+union_of: RXNO:0000333 ! Sandmeyer halogenation
+union_of: RXNO:0000334 ! Sandmeyer pseudohalogenation
+
+[Term]
+id: RXNO:0000022
+name: Gattermann halogenation
+def: "An aromatic substitution reaction where an aryl diazonium salt reacts with copper powder and hydrochloric acid or hydrobromic acid to form an aromatic chloride or bromide." [RSC:cc]
+comment: This is also sometimes known as the Gattermann reaction.
+synonym: "Gattermann reaction" RELATED []
+is_a: RXNO:0000332 ! aromatic substitution step
+
+[Term]
+id: RXNO:0000023
+name: Koerner-Contardi reaction
+def: "An aromatic substitution reaction where an aryl diazonium salt reacts with a cupric halide to form an aromatic halide." [RSC:cc]
+is_a: RXNO:0000332 ! aromatic substitution step
+
+[Term]
+id: RXNO:0000024
+name: Heck reaction
+def: "A carbon-carbon coupling reaction where an organohalide or triflate couples to a terminal olefin to produce an internal olefin, catalysed by palladium. It is stereospecific." [RSC:cb, RSC:db]
+comment: This usually produces the trans-olefin rather than the cis-.
+synonym: "Heck-Mizoroki reaction" EXACT []
+synonym: "Mizoroki-Heck reaction" EXACT []
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000025
+name: rearrangement step
+def: "A reaction which preserves the number of rings and number of skeletal atoms and in which the molecule rearranges so that one or more atoms or groups of atoms move from one atom to another." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000001 ! planned reaction step
+
+[Term]
+id: RXNO:0000026
+name: Beckmann rearrangement
+def: "A rearrangement where an oxime rearranges to form an amide. Often there is selective migration of one group." [RSC:cb]
+is_a: RXNO:0000025 ! rearrangement step
+
+[Term]
+id: RXNO:0000027
+name: [3,3]-sigmatropic rearrangement
+comment: This term was obsoleted because it represents a mechanism rather than a reaction as such.
+is_obsolete: true
+
+[Term]
+id: RXNO:0000028
+name: Cope rearrangement
+def: "A [3,3]-sigmatropic rearrangement where a 1,5-hexadiene rearranges to form a 1,5-hexadiene." [RSC:cb]
+is_a: RXNO:0000025 ! rearrangement step
+
+[Term]
+id: RXNO:0000029
+name: oxy-Cope rearrangement
+def: "A [3,3]-sigmatropic rearrangement of a 3-hydroxy-1,5-hexadiene rearranges to form a 5,6-unsaturated carbonyl compound." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000025 ! rearrangement step
+
+[Term]
+id: RXNO:0000030
+name: insertion reaction
+def: "A joining reaction in which one or more atoms are added to the middle of a chain." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
+
+[Term]
+id: RXNO:0000031
+name: Baeyer-Villiger oxidation
+alt_id: RXNO:0000190
+def: "A reaction of a ketone to give an ester, in which an alkyl, benzyl or phenyl group migrates from one of the alpha-carbon centres to an adjacent oxygen, displacing an oxygen-based leaving group; the result is a formal insertion of an oxygen atom. The reaction also works with aldehydes, giving the corresponding carboxylic acid. The term \"Baeyer-Villiger rearrangement\" may occasionally be used in a mechanistic sense to refer specificially to the actual rearrangement step." [RSC:cc, rsc:db]
+synonym: "B-V reaction" EXACT []
+synonym: "Baeyer-Villiger oxidative rearrangement" EXACT []
+synonym: "Baeyer-Villiger reaction" EXACT []
+synonym: "Baeyer-Villiger rearrangement" RELATED []
+is_a: RXNO:0000030 ! insertion reaction
+
+[Term]
+id: RXNO:0000032
+name: Mannich reaction
+def: "A carbon-carbon coupling reaction where ammonia or an amine reacts with a non-enolisable aldehyde, often methanal, and an enolisable carbonyl compound to form a beta-amino carbonyl compound." [RSC:db]
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000033
+name: allylic rearrangement
+def: "A substitution reaction in an allylic system with concomitant migration of the allyl double bond." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000019 ! substitution reaction
+
+[Term]
+id: RXNO:0000034
+name: Mitsunobu reaction
+def: "A substitution where an alcohol is converted into something else. Typical reagents are a dialkyl azodicarboxylate and a triarylphosphine. The alcohol stereocentre is inverted." [RSC:cc, RSC:db]
+is_a: RXNO:0000019 ! substitution reaction
+
+[Term]
+id: RXNO:0000035
+name: Stille coupling
+def: "A carbon-carbon coupling reaction where an organostannane reacts with an organohalide or organotriflate." [RSC:db]
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000036
+name: Reformatsky reaction
+def: "A carbon-carbon coupling reaction where an aldehyde or amine reacts with a alpha-halo ester and zinc to form a beta-hydroxy ester." [RSC:cb]
+synonym: "Reformatskii reaction" EXACT []
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+relationship: has_part MOP:0000580 ! ketone reduction
+relationship: has_part MOP:0001550 ! dehalogenation
+
+[Term]
+id: RXNO:0000037
+name: functional group reduction
+def: "A functional group modification reaction where a functional group is reduced." [RSC:cb]
+is_a: RXNO:0000011 ! functional group modification
+
+[Term]
+id: RXNO:0000038
+name: Clemmensen reduction
+def: "A functional group reduction where an aldehyde or ketone carbonyl group is reduced to a methylene with zinc-mercury amalgam and hydrochloric acid." [RSC:db]
+is_a: RXNO:0000037 ! functional group reduction
+
+[Term]
+id: RXNO:0000039
+name: carbon-carbon homocoupling reaction
+def: "A joining reaction where a carbon-carbon bond is formed between like moieties." [RSC:cb]
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000040
+name: Ullmann reaction
+def: "A carbon-carbon homocoupling reaction of an aryl halide mediated by copper." [RSC:cb]
+is_a: RXNO:0000039 ! carbon-carbon homocoupling reaction
+
+[Term]
+id: RXNO:0000041
+name: addition reaction
+def: "A reaction in which two or more groups of atoms are added to the molecule, resulting in a change of skeletal bond order." [RSC:cb]
+is_a: RXNO:0000010 ! functional modification
+
+[Term]
+id: RXNO:0000042
+name: Birch reduction
+def: "A formal addition reaction where hydrogen atoms add to an arene to form a dihydroarene. It has a radical mechanism." [RSC:db]
+is_a: RXNO:0000041 ! addition reaction
+
+[Term]
+id: RXNO:0000043
+name: Claisen condensation
+def: "A carbon-carbon coupling reaction of an ester and a carbonyl compound to form a beta-keto ester." [RSC:cc]
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+is_a: RXNO:0000315 ! condensation step
+
+[Term]
+id: RXNO:0000044
+name: Knoevenagel condensation
+def: "A carbon-carbon coupling reaction of an aldehyde and a methylene compound." [RSC:cb]
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+is_a: RXNO:0000315 ! condensation step
+
+[Term]
+id: RXNO:0000045
+name: Friedel-Crafts acylation
+def: "A carbon-carbon coupling reaction between an arene and a carbonyl compound (usually an acyl halide) to give an aryl ketone. The reaction is usually catalysed by a Lewis acid." [RSC:cc, RSC:db]
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000046
+name: Friedel-Crafts alkylation
+def: "A carbon-carbon coupling reaction between an arene and an alkyl halide/alkene/alcohol (anything that can form a carbocation) to give a substituted arene. The reaction is usually catalysed by a Lewis acid and proceeds by an SN1 mechanism." [RSC:cc, RSC:db]
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000047
+name: Oppenauer oxidation
+def: "An oxidation of a secondary alcohol to a ketone involving an equilibrium between the alcohol and a reagent ketone present in excess, catalysed by a metal alkoxide." [RSC:cc, RSC:db]
+is_a: RXNO:0000012 ! functional group oxidation
+
+[Term]
+id: RXNO:0000048
+name: Prins reaction
+def: "A carbon-carbon coupling between formaldehyde and an alkene to give a 1,3-diol or an allylic alcohol." [RSC:cc, RSC:db]
+comment: See also "intramolecular Prins reaction".
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000049
+name: intramolecular Prins reaction
+def: "A reaction between formaldehyde and an alkene to give a 1,3-dioxane." [RSC:cc, RSC:db]
+is_a: RXNO:0000005 ! ring formation reaction step
+
+[Term]
+id: RXNO:0000050
+name: pinacol rearrangement
+def: "A rearrangement of a 1,2-diol to give a carbonyl compound, catalysed by acid." [RSC:cc, RSC:db]
+is_a: RXNO:0000025 ! rearrangement step
+
+[Term]
+id: RXNO:0000051
+name: Wolff rearrangement
+def: "A rearrangement of a diazoketone to give a ketene, with the elimination of molecular nitrogen." [RSC:cc, RSC:db]
+is_a: RXNO:0000025 ! rearrangement step
+
+[Term]
+id: RXNO:0000052
+name: fused-ring-system formation
+def: "A reaction in which a fused ring system is present in a product that was not present in any of the reactants." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000005 ! ring formation reaction step
+
+[Term]
+id: RXNO:0000053
+name: Bischler-Napieralski reaction
+def: "A cyclodehydration of a beta-phenethylamide to give a 3,4-dihydroisoquinoline." [RSC:cc, RSC:db]
+synonym: "Bischler-Napieralski 3,4-dihydroisoquinoline synthesis" EXACT []
+synonym: "Bischler-Napieralski dihydroisoquinoline synthesis" EXACT []
+synonym: "Bischler-Napieralski isoquinoline synthesis" EXACT []
+is_a: RXNO:0000052 ! fused-ring-system formation
+
+[Term]
+id: RXNO:0000054
+name: Curtius rearrangement
+def: "A rearrangement of an acyl azide to give an isocyanate by pyrolysis, with the elimination of molecular nitrogen." [RSC:cc, RSC:db]
+is_a: RXNO:0000025 ! rearrangement step
+
+[Term]
+id: RXNO:0000055
+name: Vilsmeier-Haack reaction
+def: "A formylation of an activated arene with a disubstituted formamide to give an aryl carboxaldehyde." [RSC:cc, RSC:db]
+synonym: "Vilsmeier-Haack formylation" EXACT []
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000056
+name: Horner-Wadsworth-Emmons reaction
+def: "A carbon-carbon coupling reaction between a phosphonate and a carbonyl compound to give an alkene." [RSC:cc, RSC:db]
+synonym: "Horner-Emmons reaction" EXACT []
+synonym: "Horner-Emmons-Wadsworth reaction" EXACT []
+synonym: "Horner-Wittig reaction" EXACT []
+synonym: "Wadsworth-Emmons reaction" EXACT []
+synonym: "Wadsworth-Emmons-Horner reaction" EXACT []
+synonym: "Wittig-Horner reaction" EXACT []
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000057
+name: Horner reaction
+def: "A joining reaction between a phosphine oxide and a carbonyl compound to give an alkene." [RSC:cc, RSC:db]
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000058
+name: Ritter reaction
+def: "A reaction between an alcohol or alkene and a nitrile to give an amide, catalysed by acid and proceeding by an SN1 mechanism." [RSC:cc, RSC:db]
+is_a: RXNO:0000011 ! functional group modification
+
+[Term]
+id: RXNO:0000059
+name: Pictet-Spengler reaction
+def: "A condensation-cyclisation of a beta-phenethylamine with an aldehyde to give a tetrahydroisoquinoline." [RSC:cc, RSC:db]
+synonym: "Pictet-Spengler isoquinoline synthesis" EXACT []
+synonym: "Pictet-Spengler tetrahydroisoquinoline synthesis" EXACT []
+is_a: RXNO:0000052 ! fused-ring-system formation
+is_a: RXNO:0000315 ! condensation step
+
+[Term]
+id: RXNO:0000060
+name: Arbuzov reaction
+def: "A substitution of an activated alkane with a phosphite to give a phosphonate." [RSC:cc, RSC:db]
+is_a: RXNO:0000019 ! substitution reaction
+
+[Term]
+id: RXNO:0000061
+name: Mukaiyama aldol condensation
+def: "An aldol condensation between an aldehyde or ketone and a silyl enol ether (also known as a ketene silyl acetal) to give a beta-hydroxy carbonyl compound." [RSC:cc, RSC:db]
+synonym: "Mukaiyama aldol reaction" EXACT []
+is_a: RXNO:0000017 ! aldol condensation
+
+[Term]
+id: RXNO:0000062
+name: Skraup reaction
+def: "A condensation between an aromatic amine and glycerol to give a quinoline." [RSC:cc, RSC:db]
+synonym: "Skraup quinoline synthesis" EXACT []
+is_a: RXNO:0000052 ! fused-ring-system formation
+is_a: RXNO:0000315 ! condensation step
+
+[Term]
+id: RXNO:0000063
+name: Arndt-Eistert reaction
+def: "A homologation reaction of a carboxylic acid to give the homologated carboxylic acid." [RSC:cc, RSC:db]
+comment: This is an insertion because the carbon atom is added between the R group and the carboxyl carbon in the starting material.
+is_a: RXNO:0000030 ! insertion reaction
+
+[Term]
+id: RXNO:0000064
+name: Fischer indole synthesis
+def: "A cyclisation of an aryl hydrazone of an aldehyde or ketone to give an indole." [RSC:cc, RSC:db]
+synonym: "Fischer indolisation" EXACT []
+synonym: "Fischer indolization" EXACT []
+is_a: RXNO:0000052 ! fused-ring-system formation
+
+[Term]
+id: RXNO:0000065
+name: Dieckmann cyclisation
+def: "An intramolecular cyclisation of a diester to give a cyclic beta-ketoester." [RSC:cc, RSC:db]
+comment: This is the intramolecular version of the Claisen condensation.
+synonym: "Dieckmann condensation" EXACT []
+synonym: "Dieckmann cyclization" EXACT []
+synonym: "Dieckmann reaction" EXACT []
+is_a: RXNO:0000005 ! ring formation reaction step
+is_a: RXNO:0000315 ! condensation step
+
+[Term]
+id: RXNO:0000066
+name: Staudinger reaction
+def: "A joining of an organic azide and a tertiary phosphine to give a phosphazo compound. Hydrolysis of the phosphazo compound gives the corresponding amine." [RSC:cc, RSC:db]
+synonym: "Staudinger ligation" EXACT []
+synonym: "Staudinger reduction" EXACT []
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
+
+[Term]
+id: RXNO:0000067
+name: benzidine rearrangement
+def: "A rearrangement of a hydrazobenzene to give a diaminobiphenyl compound." [RSC:cc, RSC:db]
+is_a: RXNO:0000093 ! extrusion reaction
+
+[Term]
+id: RXNO:0000068
+name: semidine rearrangement
+def: "A rearrangement of a p-substituted hydrazobenzene to give a p-aminodiphenylamine." [RSC:cc, RSC:db]
+is_a: RXNO:0000093 ! extrusion reaction
+
+[Term]
+id: RXNO:0000069
+name: Dimroth rearrangement
+def: "A rearrangement of a heterocyclic compound in which endocyclic and exocyclic heteroatoms swap places." [RSC:cc, RSC:db]
+is_a: RXNO:0000202 ! ring rearrangement
+
+[Term]
+id: RXNO:0000070
+name: chain lengthening
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
+
+[Term]
+id: RXNO:0000071
+name: Edman degradation
+def: "A cleaving reaction in which a peptide is treated with phenylisothiocyanate, removing the terminal amino acid group, to form the chain-shortened amine and a phenylthiohydantoin. The latter can be used to identify the terminal amino acid, and the process repeated to enable peptide sequencing." [RSC:cc, RSC:db]
+is_a: RXNO:0000073 ! cleaving reaction
+
+[Term]
+id: RXNO:0000072
+name: Reimer-Tiemann reaction
+def: "A formylation reaction between an aromatic compound (for example, phenol, pyrrole or indole) and chloroform (for example, to form an ortho-formyl phenol)." [RSC:cc, RSC:db]
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000073
+name: cleaving reaction
+def: "A reaction where atoms are lost from the molecular skeleton." [RSC:cb]
+is_a: RXNO:0000001 ! planned reaction step
+
+[Term]
+id: RXNO:0000074
+name: Wurtz reaction
+def: "A carbon-carbon homocoupling reaction of two molecules of an alkyl halide to give a symmetrical product." [RSC:cc, RSC:db]
+synonym: "Wurtz coupling" EXACT []
+is_a: RXNO:0000039 ! carbon-carbon homocoupling reaction
+
+[Term]
+id: RXNO:0000075
+name: benzilic acid rearrangement
+def: "A rearrangement of a 1,2-diketone to an alpha-hydroxy carboxylic acid. It can also be applied to alpha-keto aldehydes. The first exmaple of this reaction was with benzil (PhC(=O)C(=O)Ph) to form benzilic acid, hence the name." [RSC:cc, RSC:db]
+is_a: RXNO:0000025 ! rearrangement step
+
+[Term]
+id: RXNO:0000076
+name: Baylis-Hillman reaction
+def: "A carbon-carbon coupling of an aldehyde to an activated alkene in the presence of a nucleophilic base to give an alpha-hydroxyalkylated compound." [RSC:cb, RSC:cc, RSC:db]
+synonym: "MBH reaction" EXACT []
+synonym: "Morita-Baylis-Hillman reaction" EXACT []
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000077
+name: Darzens reaction
+def: "A coupling of an aldehyde or ketone with an alpha-halo ester to form an alpha,beta-epoxy ester. Hydrolysis of these products yields aldehydes or ketones by elimination of carbon dioxide." [RSC:cc, RSC:db]
+synonym: "Darzens condensation" EXACT []
+synonym: "Darzens-Claisen reaction" EXACT []
+synonym: "glycidic ester condensation" EXACT []
+is_a: RXNO:0000005 ! ring formation reaction step
+is_a: RXNO:0000315 ! condensation step
+
+[Term]
+id: RXNO:0000078
+name: protection reaction
+def: "A reaction in which a functional group is modified by converting it into a protecting group, in order to make subsequent reactions more selective." [RSC:cb]
+is_a: RXNO:0000010 ! functional modification
+
+[Term]
+id: RXNO:0000079
+name: Boc protection
+def: "A protection reaction in which an amine is converted into a tert-butoxycarbonyl compound." [RSC:cc, RSC:db]
+is_a: RXNO:0000078 ! protection reaction
+
+[Term]
+id: RXNO:0000080
+name: Peterson olefination
+def: "A carbon-carbon coupling reaction in which an alpha-silyl carbanion reacts with an aldehyde or a ketone to give an alkene, proceeding via a beta-hydroxysilane. The stereochemistry of the alkene can be controlled by treating the intermediate with acid or base." [RSC:cc, RSC:db]
+synonym: "Peterson reaction" EXACT []
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000081
+name: Ullmann condensation
+def: "A coupling reaction in which a phenol is coupled to an aryl halide to give a diaryl ether in the presence of a copper compound." [RSC:cc, RSC:db]
+synonym: "Ullmann ether synthesis" EXACT []
+is_a: RXNO:0000020 ! aromatic substitution
+
+[Term]
+id: RXNO:0000082
+name: Goldberg reaction
+def: "A coupling reaction in which an acetanilide is coupled to an aryl halide to give an N-acetyl diaryl amine in the presence of a copper compound." [RSC:cc, RSC:db]
+is_a: RXNO:0000020 ! aromatic substitution
+
+[Term]
+id: RXNO:0000083
+name: Paterno-Buchi reaction
+def: "A photochemical cycloaddition between an aldehyde or ketone and an alkene to give an oxetane." [RSC:cc, RSC:db]
+is_a: MOP:0000562 ! cycloaddition
+
+[Term]
+id: RXNO:0000084
+name: Barbier reaction
+def: "A joining reaction between an aldehyde or ketone and an alkyl halide to give a secondary or tertiary alcohol." [RSC:cc, RSC:db]
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000085
+name: acyloin condensation
+def: "A reductive coupling reaction between two esters to give an acyloin (an alpha-hydroxyketone)." [RSC:cc, RSC:db]
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000086
+name: Henry reaction
+def: "A carbon-carbon coupling reaction between a nitroalkane and an aldehyde or ketone to give a beta-hydroxy nitroalkane." [RSC:cc, RSC:db]
+synonym: "nitroaldol reaction" EXACT []
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000087
+name: Barton reaction
+def: "The photolytic oxidation of a nitrate ester to give a gamma-nitroalcohol." [RSC:cc, RSC:db]
+is_a: RXNO:0000025 ! rearrangement step
+
+[Term]
+id: RXNO:0000088
+name: Negishi coupling
+def: "A carbon-carbon coupling reaction between an organohalide or organotriflate and an organozinc compound. The reaction is catalysed by palladium or nickel." [RSC:cc, RSC:db]
+synonym: "Negishi cross-coupling" EXACT []
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000089
+name: Meerwein-Ponndorf-Verley reduction
+def: "A reduction of an aldehyde or ketone to an alcohol involving an equilibrium between the aldehyde or ketone and a reagent alcohol present in excess, catalysed by a metal alkoxide. This reaction is the reverse of the Oppenauer oxidation (RXNO:0000047)." [RSC:cc, RSC:db]
+is_a: RXNO:0000037 ! functional group reduction
+
+[Term]
+id: RXNO:0000090
+name: Williamson ether synthesis
+def: "The reaction between an alkyl halide or alkyl sulfate and a metal alkoxide to give an ether." [RSC:cc, RSC:db]
+is_a: RXNO:0000019 ! substitution reaction
+
+[Term]
+id: RXNO:0000091
+name: Wittig methylenation
+def: "A carbon-carbon coupling reaction where a carbonyl compound reacts with a phosphonium ylide to give a terminal alkene." [RSC:cb]
+is_a: RXNO:0000015 ! Wittig reaction
+
+[Term]
+id: RXNO:0000092
+name: aza-Diels-Alder reaction
+def: "A Diels-Alder reaction between a diene and an imine or an azadiene and an alkene to give a six-membered nitrogen-containing ring compound." [RSC:cc, RSC:db]
+is_a: RXNO:0000313 ! hetero-Diels-Alder reaction
+
+[Term]
+id: RXNO:0000093
+name: extrusion reaction
+def: "A cleaving reaction in which a skeletal atom or group of atoms is removed from the middle of a molecule." [RSC:cb]
+is_a: RXNO:0000073 ! cleaving reaction
+
+[Term]
+id: RXNO:0000094
+name: Ramberg-Backlund reaction
+def: "The reaction of an alpha-halosulfone to give an alkene, with the extrusion of sulfur dioxide." [RSC:cc, RSC:db]
+is_a: RXNO:0000093 ! extrusion reaction
+
+[Term]
+id: RXNO:0000095
+name: Fischer-Hepp rearrangement
+def: "The rearrangement of an aromatic nitrosamine to a para-nitrosoaniline." [RSC:cc, RSC:db]
+is_a: RXNO:0000025 ! rearrangement step
+
+[Term]
+id: RXNO:0000096
+name: azo coupling
+def: "A coupling reaction of a diazonium salt with a phenol or aniline to give an azo compound." [RSC:cc, RSC:db]
+is_a: RXNO:0000011 ! functional group modification
+
+[Term]
+id: RXNO:0000097
+name: imino-Reformatsky reaction
+def: "A carbon-carbon coupling reaction where an imine reacts with a alpha-halo ester and zinc to form a beta-amino ester." [RSC:cb]
+synonym: "imino Reformatsky reaction" EXACT []
+is_a: RXNO:0000036 ! Reformatsky reaction
+
+[Term]
+id: RXNO:0000098
+name: Glaser coupling
+def: "A coupling reaction between two molecules of a terminal alkyne catalysed by Cu(I) salts." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000039 ! carbon-carbon homocoupling reaction
+
+[Term]
+id: RXNO:0000099
+name: Eglinton reaction
+def: "A coupling reaction between two molecules of a terminal alkyne using stoichiometric Cu(II) salts." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000039 ! carbon-carbon homocoupling reaction
+
+[Term]
+id: RXNO:0000100
+name: Cadiot-Chodkiewicz coupling
+def: "A coupling reaction between a terminal alkyne and an alkynyl halide catalysed by Cu(I) salts." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000101
+name: Leuckart reaction
+def: "The reductive amination of ketones or aldehydes with an ammonium formate or formamide to form an amine." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000011 ! functional group modification
+
+[Term]
+id: RXNO:0000102
+name: Leuckart-Wallach reaction
+def: "The reductive amination of ketones or aldehydes with an amine and formic acid to form amines." [RSC:cb, RSC:cc, RSC:db]
+synonym: "Wallach reaction" EXACT []
+is_a: RXNO:0000011 ! functional group modification
+
+[Term]
+id: RXNO:0000103
+name: Gabriel synthesis
+def: "The reaction of primary alkyl halides with sodium or potassium phthalimide, followed by hydrolysis, to give the corresponding primary amine." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000019 ! substitution reaction
+
+[Term]
+id: RXNO:0000104
+name: Ing-Manske procedure
+def: "The reaction of primary alkyl halides with sodium or potassium phthalimide, followed by treatment with hydrazine, to give the corresponding primary amine." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000019 ! substitution reaction
+
+[Term]
+id: RXNO:0000105
+name: end-of-chain chain shortening
+def: "A reaction in which a single skeletal atom is removed from the end of a chain." [RSC:cb]
+is_a: RXNO:0000073 ! cleaving reaction
+
+[Term]
+id: RXNO:0000106
+name: Hunsdiecker reaction
+def: "The decarboxylation of silver carboxylates with halogens to give organic halides." [RSC:cb, RSC:cc, RSC:db]
+synonym: "Borodin reaction" EXACT []
+synonym: "Borodine reaction" EXACT []
+is_a: RXNO:0000105 ! end-of-chain chain shortening
+
+[Term]
+id: RXNO:0000107
+name: malonic ester synthesis
+def: "A carbon-carbon coupling reaction between a dialkyl malonate and an alkyl halide, to give a substituted acetic acid. The base/R'X treatment can be repeated to give a disubstituted product." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000108
+name: ring expansion
+def: "A reaction in which an existing ring is increased in size." [RSC:cb]
+synonym: "ring enlargement" EXACT []
+is_a: RXNO:0000001 ! planned reaction step
+
+[Term]
+id: RXNO:0000109
+name: Pfitzinger reaction
+def: "The reaction between isatin and an alpha-methylene carbonyl compound to give a substituted quinoline-4-carboxylic acid." [RSC:cb, RSC:cc, RSC:db]
+synonym: "Pfitzinger quinoline synthesis" EXACT []
+is_a: RXNO:0000108 ! ring expansion
+
+[Term]
+id: RXNO:0000110
+name: fragmentation reaction
+def: "A reaction in which the parent molecule breaks up into three or more products." [RSC:cb]
+is_a: RXNO:0000073 ! cleaving reaction
+
+[Term]
+id: RXNO:0000111
+name: Grob fragmentation
+def: "The fragmentation of a molecule that takes place when an electron-donating fragment (X) and an electron-accepting fragment (X') are situated at positions 1 and 3 on an aliphatic chain, to give a cationic fragment, a neutral fragment (e.g. an alkene) and an anionic fragment." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000110 ! fragmentation reaction
+
+[Term]
+id: RXNO:0000112
+name: Michaelis-Arbuzov reaction
+def: "The alkylation of a trialkyl phosphite with an alkyl halide or acyl halide to give a phosphonate." [RSC:cb, RSC:cc, RSC:db]
+synonym: "Michaelis-Arbuzov phosphonate synthesis" EXACT []
+is_a: RXNO:0000019 ! substitution reaction
+
+[Term]
+id: RXNO:0000113
+name: Brook rearrangement
+def: "The rearrangement of an alpha-, beta- or gamma-hydroxy silane to give a silyl ether." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000025 ! rearrangement step
+
+[Term]
+id: RXNO:0000114
+name: Nicholas reaction
+def: "The reaction of a propargylic cation (stabilised with dicobalt octacarbonyl) with a nucleophile to give a substituted alkyne." [RSC:cb, RSC:cc, RSC:db]
+comment: This term was obsoleted because it doesn't fit into the classification scheme.
+is_obsolete: true
+
+[Term]
+id: RXNO:0000115
+name: Nicholas reaction, nucleophilic heteroatom centre
+def: "The reaction of a propargylic cation (stabilised with dicobalt octacarbonyl) with a hydride or amine or enamine to give a substituted alkyne." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000019 ! substitution reaction
+
+[Term]
+id: RXNO:0000116
+name: Nicholas reaction, nucleophilic carbon centre
+def: "The reaction of a propargylic cation (stabilised with dicobalt octacarbonyl) with a nucleophilic carbon centre (on e.g. enolates, allyl silanes, ketones, electron-rich aromatics, beta-dicarbonyl compounds) to give a substituted alkyne." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000117
+name: Julia olefination
+def: "A carbon-carbon coupling reaction between a phenyl sulfone and an aldehyde or ketone to give a (typically trans) alkene." [RSC:cb, RSC:cc, RSC:db]
+synonym: "Julia-Lythgoe olefination" EXACT []
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000118
+name: Sommelet reaction
+def: "The oxidation of a benzylic halide to give an aldehyde. The reaction uses hexamethylenetetramine." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000011 ! functional group modification
+
+[Term]
+id: RXNO:0000119
+name: Bouveault-Blanc reaction
+def: "The reduction of an ester using sodium to give two alcohols." [RSC:cb, RSC:cc, RSC:db]
+synonym: "Bouveault-Blanc procedure" EXACT []
+synonym: "Bouveault-Blanc reduction" EXACT []
+is_a: RXNO:0000037 ! functional group reduction
+
+[Term]
+id: RXNO:0000120
+name: Payne rearrangement
+def: "A base-catalysed isomerisation of a 2,3-epoxyalcohol, with inversion of configuration at C2." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000202 ! ring rearrangement
+
+[Term]
+id: RXNO:0000121
+name: aza-Payne rearrangement
+def: "A base-catalysed isomerisation of a 2,3-epoxyamine to form a hydroxy aziridine, with inversion of configuration at C2." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000202 ! ring rearrangement
+
+[Term]
+id: RXNO:0000122
+name: Baker-Venkataraman rearrangement
+def: "The base-catalysed rearrangement of an o-acetoxyacetophenone to give a 1,3-diketone." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000025 ! rearrangement step
+
+[Term]
+id: RXNO:0000123
+name: elimination reaction
+def: "A reaction in which two or more groups of atoms are removed from the molecule, resulting in a change of skeletal bond order." [RSC:cb]
+is_a: RXNO:0000010 ! functional modification
+
+[Term]
+id: RXNO:0000124
+name: Bamford-Stevens reaction
+def: "The reaction of a tosylhydrazone of an aldehyde or ketone with a strong base to give an alkene. This generally provides the more-substituted alkene as the thermodynamic product." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000123 ! elimination reaction
+
+[Term]
+id: RXNO:0000125
+name: Shapiro reaction
+def: "The reaction of a tosylhydrazone of an aldehyde or ketone with an alkyllithium or Grignard reagent to give an alkene. This generally provides the less-substituted alkene as the kinetic product." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000123 ! elimination reaction
+
+[Term]
+id: RXNO:0000126
+name: Doebner reaction
+def: "The reaction between an aromatic amine, an aldehyde and pyruvic acid to give a quinoline 4-carboxylic acid (cinchoninic acid)." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000052 ! fused-ring-system formation
+
+[Term]
+id: RXNO:0000127
+name: Balz-Schiemann reaction
+def: "The conversion of an aromatic amine to the corresponding fluoride via the diazonium fluoroborate." [RSC:cb, RSC:cc, RSC:db]
+synonym: "Schiemann reaction" EXACT []
+is_a: RXNO:0000020 ! aromatic substitution
+
+[Term]
+id: RXNO:0000128
+name: Kolbe electrolysis
+def: "The decarboxylation and coupling of a carboxylate or mixture of carboxylates to give a dimer." [RSC:cb, RSC:cc, RSC:db]
+synonym: "Kolbe electrolytic synthesis" EXACT []
+synonym: "Kolbe electrosynthesis" EXACT []
+synonym: "Kolbe reaction" EXACT []
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000129
+name: Ugi reaction
+def: "Reaction of a ketone or aldehyde, amine, isocyanide and carboxylic acid to form a bisamide." [RSC:cb, RSC:cc, RSC:db]
+synonym: "4CC" EXACT []
+synonym: "Ugi four-component condensation" EXACT []
+synonym: "Ugi-4CR" EXACT []
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
+is_a: RXNO:0000315 ! condensation step
+
+[Term]
+id: RXNO:0000130
+name: Wacker-Tsuji oxidation
+def: "The oxidation of a terminal alkene or ethene to a methyl ketone or acetaldehyde, catalysed by PdCl2 and CuCl2, and using molecular oxygen as the oxidant." [RSC:cb, RSC:cc, RSC:db]
+synonym: "Wacker oxidation" EXACT []
+synonym: "Wacker reaction" EXACT []
+is_a: RXNO:0000012 ! functional group oxidation
+
+[Term]
+id: RXNO:0000131
+name: Wacker process
+def: "The oxidation of ethene to acetaldehyde, catalysed by PdCl2 and CuCl2, and using molecular oxygen as the oxidant." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000130 ! Wacker-Tsuji oxidation
+
+[Term]
+id: RXNO:0000132
+name: Monsanto process
+def: "The reaction of formaldehyde with methanol to form acetic acid, catalysed by a rhodium complex." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000133
+name: Cativa process
+def: "The reaction of formaldehyde with methanol to form acetic acid, catalysed by an iridium complex." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000134
+name: Barton-McCombie deoxygenation
+def: "The deoxygenation of an alcohol to the corresponding alkane using a thiochloroformate. It proceeds by a radical mechanism." [RSC:cb, RSC:cc, RSC:db]
+synonym: "Barton deoxygenation" EXACT []
+synonym: "Barton reduction" EXACT []
+is_a: RXNO:0000037 ! functional group reduction
+
+[Term]
+id: RXNO:0000135
+name: Barton decarboxylation
+def: "The decarboxylation of a carboxylic acid to the lower homologue alkane using a pyridine thione. The reaction proceeds by a radical mechanism." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000105 ! end-of-chain chain shortening
+
+[Term]
+id: RXNO:0000136
+name: Rosenmund reduction
+def: "The hydrogenolysis of an acyl halide to the corresponding aldehyde (FG reduction), catalysed by palladium-on-barium sulfate." [RSC:cg, rsc:db]
+synonym: "Rosenmund reaction" EXACT []
+is_a: RXNO:0000037 ! functional group reduction
+relationship: has_catalyst CHEBI:33364 ! palladium
+
+[Term]
+id: RXNO:0000137
+name: Sonogashira coupling
+def: "A carbon-carbon coupling reaction where a terminal alkyne reacts with an aryl halide to give an aryl alkyne. It is catalysed by palladium." [RSC:cb, RSC:cc, RSC:db]
+synonym: "Hagihara-Sonogashira coupling" EXACT []
+synonym: "Sonogashira cross-coupling" EXACT []
+synonym: "Sonogashira reaction" EXACT []
+is_a: RXNO:0000316 ! platinum-catalysed carbon--carbon coupling reaction
+relationship: has_catalyst CHEBI:33364 ! palladium
+
+[Term]
+id: RXNO:0000138
+name: benzoin condensation
+def: "A reaction between two aromatic aldehydes to give a benzoin (an alpha-hydroxyketone)." [RSC:cc, RSC:db]
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000139
+name: Gattermann reaction
+def: "The formylation of an arene with hydrogen cyanide to give an aryl aldehyde or ketone." [RSC:cc, RSC:db]
+comment: This is essentially a variant of the Friedel-Crafts acylation.
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000140
+name: Suzuki-Miyaura coupling
+def: "The coupling of a boronic acid or boronic ester with an unsaturated halide, triflate or sulfonate catalysed by a palladium(0) complex." [RSC:cb, RSC:cc, RSC:db]
+synonym: "Suzuki coupling" EXACT []
+synonym: "Suzuki reaction" EXACT []
+synonym: "Suzuki-Miyaura reaction" EXACT []
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000141
+name: Sharpless asymmetric epoxidation
+def: "The epoxidation of an allylic alcohol to give a beta,gamma-epoxy alcohol, with control of absolute stereochemistry at the two new stereocentres. The oxidising agent is tert-butyl hydroperoxide, and the catalyst is a complex of titanium salt and optically active diethyl tartrate." [RSC:cb, RSC:cc, RSC:db]
+synonym: "Katsuki-Sharpless asymmetric epoxidation" EXACT []
+synonym: "Katsuki-Sharpless epoxidation" EXACT []
+synonym: "Sharpless epoxidation" EXACT []
+synonym: "Sharpless-Katsuki asymmetric epoxidation" EXACT []
+synonym: "Sharpless-Katsuki epoxidation" EXACT []
+is_a: RXNO:0000005 ! ring formation reaction step
+
+[Term]
+id: RXNO:0000142
+name: Sharpless asymmetric dihydroxylation
+def: "The dihydroxylation of an alkene to give an alpha,beta-diol, with control of absolute stereochemistry at the two new stereocentres. The oxidising agent is osmium tetroxide, which is used catalytically with a stoichiometric oxidant and a chiral ligand. The reagents are available commercially as AD-mix." [RSC:cb, RSC:cc, RSC:db]
+synonym: "Sharpless bishydroxylation" EXACT []
+synonym: "Sharpless hydroxylation" EXACT []
+is_a: RXNO:0000041 ! addition reaction
+
+[Term]
+id: RXNO:0000143
+name: Sharpless asymmetric aminohydroxylation
+def: "The aminohydroxylation of an alkene to give a beta-amino alcohol, with control of absolute stereochemistry at the two new stereocentres. The oxidising agent is an oxygen-containing osmium species and/or an amino derivative which can be used catalytically with a stoichiometric oxidant and a chiral ligand." [RSC:cb, RSC:cc, RSC:db]
+synonym: "Sharpless oxyamination" EXACT []
+is_a: RXNO:0000041 ! addition reaction
+
+[Term]
+id: RXNO:0000144
+name: Kumada coupling
+def: "A cross-coupling reaction between a Grignard reagent and an activated (aryl or vinyl) halide or triflate. The reaction is catalysed by a palladium or nickel catalyst." [RSC:cb, RSC:cc, RSC:db]
+synonym: "Kharasch cross-coupling" EXACT []
+synonym: "Kumada cross-coupling" EXACT []
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000145
+name: Barbier-Wieland degradation
+def: "The degradation of a carboxylic acid to its next lower homologous carboxylic acid." [RSC:cb, RSC:cc, RSC:db]
+synonym: "Barbier-Wieland procedure" EXACT []
+is_a: RXNO:0000105 ! end-of-chain chain shortening
+
+[Term]
+id: RXNO:0000146
+name: Corey-Fuchs reaction
+def: "A homologation reaction of an aldehyde to yield a terminal alkyne. The reagents are tetrabromomethane, triphenylphosphine, butyllithium and water." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000070 ! chain lengthening
+
+[Term]
+id: RXNO:0000147
+name: Emde degradation
+def: "A reduction of a quaternary ammonium salt containing at least one unsaturated substituent, to give a tertiary amine." [RSC:cb, RSC:cc, RSC:db]
+synonym: "Emde reaction" EXACT []
+synonym: "Emde reduction" EXACT []
+is_a: RXNO:0000073 ! cleaving reaction
+
+[Term]
+id: RXNO:0000148
+name: Claisen rearrangement
+def: "The [3,3]-sigmatropic rearrangement of an allyl vinyl ether to give a gamma,delta-unsaturated carbonyl compound." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000025 ! rearrangement step
+
+[Term]
+id: RXNO:0000149
+name: Ireland-Claisen rearrangement
+def: "The enolisation and subsequent [3,3]-sigmatropic rearrangement of an allylic acetate to give a gamma,delta-unsaturated carboxylic acid." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000025 ! rearrangement step
+
+[Term]
+id: RXNO:0000150
+name: joining with rearrangement
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
+
+[Term]
+id: RXNO:0000151
+name: Bellus-Claisen rearrangement
+def: "The coupling and subsequent [3,3]-sigmatropic rearrangement of an allylic ether or allylic thioether or allylic amine and a ketene to give the corresponding gamma,delta-unsaturated carbonyl compound." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000150 ! joining with rearrangement
+
+[Term]
+id: RXNO:0000152
+name: Eschenmoser-Claisen rearrangement
+def: "The coupling and subsequent [3,3]-sigmatropic rearrangement of an allylic alcohol and alpha,alpha-dialkoxy ethylamine to give a gamma,delta-unsaturated dialkyl amide." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000150 ! joining with rearrangement
+
+[Term]
+id: RXNO:0000153
+name: Johnson-Claisen rearrangement
+def: "The coupling and subsequent [3,3]-sigmatropic rearrangement of an allylic alcohol and trimethyl orthoacetate to give a gamma,delta-unsaturated alkyl ester." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000150 ! joining with rearrangement
+
+[Term]
+id: RXNO:0000154
+name: Swern oxidation
+def: "The oxidation of a primary alcohol or secondary alcohol to an aldehyde or ketone respectively. Does not work with allylic or benzylic alcohols." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000012 ! functional group oxidation
+relationship: has_part MOP:0000572 ! alcohol oxidation
+
+[Term]
+id: RXNO:0000155
+name: Finkelstein reaction
+def: "The conversion of an alkyl chloride, alkyl bromide or alkyl sulfonate ester to an alkyl iodide by SN2 substitution. The reaction relies upon the equilibrium being pushed to completion by the precipitation." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000011 ! functional group modification
+
+[Term]
+id: RXNO:0000156
+name: Lossen rearrangement
+def: "The derivatisation (for example with tosyl chloride) and subsequent rearrangement of a hydroxamic acid to give an isocyanate." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000025 ! rearrangement step
+
+[Term]
+id: RXNO:0000157
+name: Nef reaction
+def: "The conversion of a primary nitroalkane or secondary nitroalkane to an aldehyde or ketone, respectively." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000011 ! functional group modification
+
+[Term]
+id: RXNO:0000158
+name: Japp-Klingemann reaction
+def: "The reaction of a doubly activated methylene compound that has at least one carbonyl substituent with an aryl azide to give a hydrazone. Usually there is concomitant cleaving and oxidation of one of the carbonyl substituents." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000073 ! cleaving reaction
+
+[Term]
+id: RXNO:0000159
+name: Doebner-Miller reaction
+def: "The formation of a quinoline from a primary aromatic amine and an alpha,beta-unsaturated carbonyl compound." [RSC:cb, RSC:cc]
+synonym: "Doebner-von Miller reaction" EXACT []
+synonym: "Skraup-Doebner-von Miller quinoline synthesis" EXACT []
+is_a: RXNO:0000052 ! fused-ring-system formation
+
+[Term]
+id: RXNO:0000160
+name: Fmoc protection
+def: "The protection of an amine (often a peptide) as its 9H-fluoren-9-ylmethoxycarbonyl derivative." [RSC:cb, RSC:cc]
+is_a: RXNO:0000078 ! protection reaction
+
+[Term]
+id: RXNO:0000161
+name: Paal-Knorr synthesis
+def: "The cyclisation of a 1,4-dicarbonyl compound to give a five-membered aromatic ring compound." [RSC:cb, RSC:cc]
+is_a: RXNO:0000005 ! ring formation reaction step
+
+[Term]
+id: RXNO:0000162
+name: Paal-Knorr furan synthesis
+def: "The cyclisation of a 1,4-dicarbonyl compound with an acid catalyst to give a pyrrole." [RSC:cb, RSC:cc]
+is_a: RXNO:0000161 ! Paal-Knorr synthesis
+
+[Term]
+id: RXNO:0000163
+name: Paal-Knorr thiophene synthesis
+def: "The cyclisation of a 1,4-dicarbonyl compound with phosphorus pentasulfide to give a five-membered aromatic ring compound." [RSC:cb, RSC:cc]
+is_a: RXNO:0000161 ! Paal-Knorr synthesis
+
+[Term]
+id: RXNO:0000164
+name: Paal-Knorr pyrrole synthesis
+def: "The cyclisation of a 1,4-dicarbonyl compound with an amine to give a five-membered aromatic ring compound." [RSC:cb, RSC:cc]
+is_a: RXNO:0000161 ! Paal-Knorr synthesis
+
+[Term]
+id: RXNO:0000165
+name: Schotten-Baumann reaction
+def: "The coupling of an alcohol or amine with an acyl chloride to give an ester or amide. A two-phase solvent system is often used, to enable the acid generated during the reaction to be neutralised by the aqueous base, while the starting materials and products remain in the organic phase." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000019 ! substitution reaction
+
+[Term]
+id: RXNO:0000166
+name: Hofmann elimination
+def: "The elimination of a methylated amine from an alkyl amine to form an alkene. The reaction proceeds via the quaternary ammonium salt." [RSC:cb, RSC:cc, RSC:db]
+synonym: "exhaustive methylation" EXACT []
+is_a: RXNO:0000123 ! elimination reaction
+
+[Term]
+id: RXNO:0000167
+name: Fischer-Speier esterification
+def: "The esterification of a carboxylic acid with an alcohol. Various Lewis acids or Bronsted acids may be used as catalyst." [RSC:cb, RSC:cc, RSC:db]
+synonym: "Fischer esterification" EXACT []
+is_a: RXNO:0000019 ! substitution reaction
+
+[Term]
+id: RXNO:0000168
+name: Weerman reaction
+def: "The degradation of an alpha-hydroxy amide or an alpha,beta-unsaturated amide to the lower homologue aldehyde, especially in carbohydrate chemistry. The process proceeds via Hofmann degradation." [RSC:cb, RSC:cc, RSC:db]
+synonym: "Weerman degradation" EXACT []
+synonym: "Weerman's reaction" EXACT []
+is_a: RXNO:0000105 ! end-of-chain chain shortening
+
+[Term]
+id: RXNO:0000169
+name: Dakin reaction
+def: "The reaction of ortho- or para-phenolic (or ortho- or para-anilinic) aldehydes or ketones with hydrogen peroxide to form bisphenols (or hydroxy anilines) and carboxylic acids." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000073 ! cleaving reaction
+
+[Term]
+id: RXNO:0000170
+name: Schmidt rearrangement, carboxylic acid
+def: "The reaction of a carboxylic acid with hydrazoic acid to give the lower homologue amine, with the loss of the terminal carbon atom." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000105 ! end-of-chain chain shortening
+
+[Term]
+id: RXNO:0000171
+name: Schmidt rearrangement, ketone
+def: "The reaction of a ketone with hydrazoic acid with the insertion of an NH group between the carbonyl carbon and one of the R groups to form an amide." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000030 ! insertion reaction
+
+[Term]
+id: RXNO:0000172
+name: Schmidt rearrangement, tertiary alcohol
+def: "The reaction of a tertiary alcohol with hydrazoic acid with rearrangement to form an imide." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000030 ! insertion reaction
+
+[Term]
+id: RXNO:0000173
+name: Schmidt rearrangement, alkene
+def: "The reaction of an alkene with hydrazoic acid with rearrangement to form an imide." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000030 ! insertion reaction
+
+[Term]
+id: RXNO:0000174
+name: Sommelet-Hauser rearrangement
+def: "The [2,3]-sigmatropic rearrangement of a benzyl quaternary ammonium salt to form an aniline." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000025 ! rearrangement step
+
+[Term]
+id: RXNO:0000175
+name: Dakin-West reaction
+def: "The reaction of an amino acid with an acid anhydride to give an alpha-acylamido ketone. The reaction proceeds via the mixed anhydride and an oxazolone; the product is always racemic." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
+
+[Term]
+id: RXNO:0000176
+name: Beckmann fragmentation
+def: "The cleavage of an oxime to the corresponding nitrile and an alkyl halide. This reaction is related to the Beckmann rearrangement, and occurs when the R group that is anti to the oxime hydroxyl is quaternary." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000073 ! cleaving reaction
+
+[Term]
+id: RXNO:0000177
+name: Kharasch reaction
+def: "The transfer of a hydrogen or halogen atom from a haloalkane to an alkene, giving the chain-extended halogenated alkane." [RSC:cb, RSC:cc, RSC:db]
+synonym: "Kharasch addition reaction" EXACT []
+is_a: RXNO:0000070 ! chain lengthening
+
+[Term]
+id: RXNO:0000178
+name: Kharasch-Sosnovsky reaction
+def: "The allylic oxidation of an alkene with a peroxy ester or a peroxide to give the corresponding allylic alcohol derivative. The catalyst is a copper compound." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000019 ! substitution reaction
+
+[Term]
+id: RXNO:0000179
+name: Elbs persulfate oxidation, phenol variant
+def: "The oxidation of a phenol to give a (predominantly para) diphenol using potassium persulfate." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000020 ! aromatic substitution
+
+[Term]
+id: RXNO:0000180
+name: Elbs persulfate oxidation, tolyl variant
+def: "The oxidation of a methyl-substituted aromatic compound to the corresponding benzaldehyde using potassium persulfate." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000012 ! functional group oxidation
+
+[Term]
+id: RXNO:0000181
+name: Boyland-Sims oxidation
+def: "The oxidation of an aromatic amine to give a (predominantly ortho) amino aryl sulfate using potassium persulfate followed by hydrolysis to yield the corresponding aminophenol." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000020 ! aromatic substitution
+
+[Term]
+id: RXNO:0000182
+name: Kolbe-Schmitt reaction
+def: "The (predominantly ortho) carboxylation of a phenoxide." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000183
+name: Perkow reaction
+def: "The reaction between an alpha-halocarbonyl compound and a trialkyl phosphite to give an enol phosphate." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
+
+[Term]
+id: RXNO:0000184
+name: Pfitzner-Moffatt oxidation
+def: "The oxidation of a primary or secondary alcohol to the corresponding aldehyde or ketone respectively using dimethyl sulfoxide, 1,3-dicyclohexylcarbodiimide and acid. The reaction proceeds via an alkoxysulfonium ylide." [RSC:cb, RSC:cc, RSC:db]
+synonym: "Moffatt oxidation" EXACT []
+is_a: RXNO:0000012 ! functional group oxidation
+
+[Term]
+id: RXNO:0000185
+name: Willgerodt reaction
+def: "The conversion of an aryl alkyl ketone to an amide and/or an ammonium salt of a carboxylic acid using ammonium polysulfide. The carbonyl group of the product is always at the end of the alkyl chain." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000011 ! functional group modification
+
+[Term]
+id: RXNO:0000186
+name: Willgerodt-Kindler reaction
+def: "The conversion of an aryl alkyl ketone to an amide using sulfur and dry ammonia or a primary or secondary amine. The amide carbonyl group is always at the end of the alkyl chain." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000011 ! functional group modification
+
+[Term]
+id: RXNO:0000187
+name: Tishchenko reaction
+def: "The formation of an ester from two aldehydes via a disproportionation process using a metal alkoxide to oxidise one aldehyde and reduce the other." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000011 ! functional group modification
+
+[Term]
+id: RXNO:0000188
+name: Zimmermann reaction
+def: "The reaction between a methylene ketone and a polynitro aromatic compound." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000189
+name: Neber rearrangement
+def: "The rearrangement of the sulfonic ester of a ketoxime in base to give an alpha-amino ketone." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000025 ! rearrangement step
+
+[Term]
+id: RXNO:0000191
+name: Nozaki-Hiyama-Kishi reaction
+def: "A coupling reaction of an aldehyde to an allyl, vinyl or aryl halide or triflate in the presence of chromium(II). It is catalysed by nickel." [RSC:cb, RSC:cc, RSC:db]
+synonym: "Nozaki reaction" EXACT []
+synonym: "Nozaki-Hiyama-Kishi coupling" EXACT []
+synonym: "Nozaki-Kishi reaction" EXACT []
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000192
+name: Buchwald-Hartwig amination
+def: "A reaction in which an aryl halide or aryl triflate reacts with a primary or secondary amine in the presence of base to give a secondary or tertiary amine. It is catalysed by a palladium catalyst." [RSC:cb, RSC:cc, RSC:db]
+synonym: "Buchwald-Hartwig reaction" EXACT []
+is_a: RXNO:0000020 ! aromatic substitution
+
+[Term]
+id: RXNO:0000193
+name: Hiyama coupling
+def: "A carbon-carbon coupling reaction where an organosilane reacts with an organic halide or triflate. It is catalysed by a palladium or nickel complex." [RSC:cb, RSC:cc, RSC:db]
+synonym: "Hiyama cross-coupling" EXACT []
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000194
+name: Stevens rearrangement
+def: "The 1,2-rearrangement of an alpha-methylene ammonium salt or alpha-methylene sulfonium salt to an amine or sulfide in the presence of strong base." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000025 ! rearrangement step
+
+[Term]
+id: RXNO:0000195
+name: Stevens rearrangement, ammonium
+def: "The 1,2-rearrangement of an alpha-methylene ammonium salt to an amine in the presence of strong base." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000194 ! Stevens rearrangement
+
+[Term]
+id: RXNO:0000196
+name: Stevens rearrangement, sulfonium
+def: "The 1,2-rearrangement of an alpha-methylene sulfonium salt to a sulfide in the presence of strong base." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000194 ! Stevens rearrangement
+
+[Term]
+id: RXNO:0000197
+name: aza-Cope rearrangement
+def: "A [3,3]-sigmatropic rearrangement where an aza-1,5-hexadiene rearranges to form an aza-1,5-hexadiene." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000025 ! rearrangement step
+
+[Term]
+id: RXNO:0000198
+name: 2-aza-Cope rearrangement
+def: "The rearrangement of a 2-aza-1,5-hexadiene to form an imine." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000197 ! aza-Cope rearrangement
+
+[Term]
+id: RXNO:0000199
+name: 3-aza-Cope rearrangement
+def: "The rearrangement of a 3-aza-1,5-hexadiene to form a delta,epsilon-unsaturated imine." [RSC:cb, RSC:cc, RSC:db]
+comment: This is the reverse of the 1-aza-Cope rearrangement.
+synonym: "amino-Claisen rearrangement" EXACT []
+synonym: "aza-Claisen rearrangement" EXACT []
+is_a: RXNO:0000197 ! aza-Cope rearrangement
+
+[Term]
+id: RXNO:0000200
+name: 1-aza-Cope rearrangement
+def: "The rearrangement of a delta,epsilon-unsaturated imine to form a 3-aza-1,5-hexadiene." [RSC:cb, RSC:cc, RSC:db]
+comment: This is the reverse of the 3-aza-Cope rearrangement.
+is_a: RXNO:0000197 ! aza-Cope rearrangement
+
+[Term]
+id: RXNO:0000201
+name: Steglich rearrangement
+def: "The rearrangement of an oxazolyl carbonate to a C-carboxyazlactone." [RSC:cb, RSC:jrw]
+is_a: RXNO:0000025 ! rearrangement step
+
+[Term]
+id: RXNO:0000202
+name: ring rearrangement
+def: "A reaction in which the number of rings in a molecule stays the same but the connectivity of the atoms in at least one ring changes." [RSC:cb]
+is_a: RXNO:0000001 ! planned reaction step
+
+[Term]
+id: RXNO:0000203
+name: deprotection reaction
+def: "A reaction in which a protecting group is modified by converting it into a functional group." [RSC:cb]
+is_a: RXNO:0000010 ! functional modification
+
+[Term]
+id: RXNO:0000204
+name: multiple-bond metathesis
+def: "A joining reaction in which two carbon-carbon multiple bonds are redistributed among two fragments. The reaction is typically catalysed by a metal carbenoid, and proceeds via two four-membered intermediates (metallacyclobutanes). The reaction is driven by release of a low-MW alkene." [RSC:cb]
+synonym: "metathesis" EXACT []
+synonym: "multiple bond metathesis" EXACT []
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
+
+[Term]
+id: RXNO:0000205
+name: ring breaking
+def: "A reaction where the product has fewer rings than the reactants." [RSC:cb]
+is_a: RXNO:0000001 ! planned reaction step
+
+[Term]
+id: RXNO:0000206
+name: ring contraction
+def: "A reaction in which an existing ring is reduced in size." [RSC:cb]
+is_a: RXNO:0000001 ! planned reaction step
+
+[Term]
+id: RXNO:0000207
+name: Strecker reaction
+def: "An addition reaction between a carbonyl compound, an inorganic cyanide and an ammonium salt, followed by hydrolysis, to give an alpha-amino carboxylic acid." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000070 ! chain lengthening
+
+[Term]
+id: RXNO:0000208
+name: aromatic Claisen rearrangement
+def: "The [3,3]-sigmatropic rearrangement, and subsequent re-aromatisation, of an allyl aryl ether to give an ortho-allyl phenol." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000025 ! rearrangement step
+
+[Term]
+id: RXNO:0000209
+name: Nazarov cyclisation
+def: "The acid-catalysed cyclisation of a divinylketone to give a cyclopentenone." [RSC:cb, RSC:cc, RSC:db]
+synonym: "Nazarov cyclization" EXACT []
+is_a: RXNO:0000005 ! ring formation reaction step
+
+[Term]
+id: RXNO:0000210
+name: Fleming-Tamao oxidation
+def: "The stereospecific oxidation of a (phenyldimethylsilyl)alkane to the corresponding alcohol using bromine, usually generated in situ from potassium bromide and peracetic acid." [RSC:cb, RSC:cc, RSC:db]
+synonym: "Fleming oxidation" EXACT []
+synonym: "Tamao-Fleming oxidation" EXACT []
+is_a: RXNO:0000019 ! substitution reaction
+
+[Term]
+id: RXNO:0000211
+name: Tamao oxidation
+def: "The stereospecific oxidation of a (halosilyl)alkane to the corresponding alcohol using potassium fluoride and hydrogen peroxide." [RSC:cb, RSC:cc, RSC:db]
+synonym: "Tamao-Kumada oxidation" EXACT []
+is_a: RXNO:0000019 ! substitution reaction
+
+[Term]
+id: RXNO:0000212
+name: Sakurai reaction, aldehyde or ketone
+def: "A carbon-carbon coupling reaction in which an aldehyde or ketone reacts with allyltrimethylsilane to form a homoallylic alcohol." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000213
+name: Sakurai reaction, enone
+def: "A carbon-carbon coupling reaction in which an enone reacts with allyltrimethylsilane to form a delta,epsilon-unsaturated carbonyl compound." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000214
+name: Sakurai reaction, acid chloride
+def: "A carbon-carbon coupling reaction in which an acid chloride reacts with allyltrimethylsilane to form a gamma,delta-unsaturated ketone." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000215
+name: Sakurai reaction, acetal or ketal
+def: "A carbon-carbon coupling reaction in which an acetal or ketal reacts with allyltrimethylsilane to form a homoallylic ether." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000216
+name: Sakurai reaction, iminium salt
+def: "A carbon-carbon coupling reaction in which an iminium salt reacts with allyltrimethylsilane to form a homoallylic amine." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000217
+name: Sakurai reaction, epoxide
+def: "A ring-breaking reaction in which an epoxide reacts with allyltrimethylsilane to form a hydroxy alkene." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000205 ! ring breaking
+
+[Term]
+id: RXNO:0000218
+name: Cannizzaro reaction
+def: "The disproportionation of a non-enolisable aldehyde to the corresponding carboxylic acid salt and alcohol. The reaction is base-catalysed." [RSC:cc, RSC:cg, RSC:db]
+is_a: RXNO:0000011 ! functional group modification
+
+[Term]
+id: RXNO:0000219
+name: crossed Cannizzaro reaction
+def: "The reaction between two different non-enolisable aldehydes to give a carboxylic acid salt and an alcohol. The reaction is base-catalysed." [RSC:cc, RSC:cg, RSC:db]
+is_a: RXNO:0000011 ! functional group modification
+
+[Term]
+id: RXNO:0000220
+name: Pummerer rearrangement
+def: "The conversion of a sulfoxide with an alpha-hydrogen to an alpha-subtituted thioether. The reaction is usually performed with an acid anhydride or acyl halide." [RSC:cc, RSC:cg, RSC:db]
+synonym: "Pummerer methyl sulfoxide rearrangement" EXACT []
+is_a: RXNO:0000011 ! functional group modification
+
+[Term]
+id: RXNO:0000221
+name: Polonovski reaction
+def: "The reaction of a tertiary amine oxide with an anhydride or acyl chloride to give an N,N-disubstituted acetamide and an aldehyde." [RSC:cc, RSC:cg, RSC:db]
+is_a: RXNO:0000073 ! cleaving reaction
+
+[Term]
+id: RXNO:0000222
+name: Polonovski-Potier reaction
+def: "The reaction of a tertiary amine oxide with trifluoroacetic anhydride to give an N,N-disubstituted acetamide and an aldehyde." [RSC:cc, RSC:cg, RSC:db]
+synonym: "Potier-Polonovski reaction" EXACT []
+is_a: RXNO:0000221 ! Polonovski reaction
+
+[Term]
+id: RXNO:0000223
+name: Menshutkin reaction
+def: "The alkylation of a tertiary amine with an alkyl halide to the corresponding ammonium salt." [RSC:cc, RSC:cg, RSC:db]
+is_a: RXNO:0000012 ! functional group oxidation
+
+[Term]
+id: RXNO:0000224
+name: Strecker degradation
+def: "The deamination and decarboxylation of amino acids to imines and then to aldehydes or ketones, in the presence of a carbonyl compound (especially an alpha,beta-dicarbonyl compound or a reducing sugar such as glucose). The reaction is involved in the generation of meat aromas/flavours in cooking." [RSC:cc, RSC:cg, RSC:db]
+is_a: RXNO:0000105 ! end-of-chain chain shortening
+
+[Term]
+id: RXNO:0000225
+name: Wohl-Ziegler bromination
+def: "The allylic or benzylic bromination of hydrocarbons using an N-bromoimide and a radical initiator, to give an allylic or benzylic bromide." [RSC:cc, RSC:cg, RSC:db]
+synonym: "Wohl-Ziegler reaction" EXACT []
+is_a: RXNO:0000019 ! substitution reaction
+
+[Term]
+id: RXNO:0000226
+name: Wolff-Kishner reduction
+def: "The reduction of an aldehyde or ketone to the corresponding methylene compound, using hydrazine hydrate and a base." [RSC:cc, RSC:cg, RSC:db]
+is_a: RXNO:0000037 ! functional group reduction
+
+[Term]
+id: RXNO:0000227
+name: Wolff-Kishner reduction, Huang-Minlon modification
+def: "The reduction of an aldehyde or ketone to the corresponding methylene compound, using hydrazine hydrate and a base in refluxing ethylene glycol." [RSC:cc, RSC:cg, RSC:db]
+synonym: "Huang-Minlon modification" EXACT []
+is_a: RXNO:0000226 ! Wolff-Kishner reduction
+
+[Term]
+id: RXNO:0000228
+name: Zemplen transesterification
+def: "The reduction of an ester to the corresponding alcohol, using sodium methoxide in dry methanol." [RSC:cb, RSC:cg, RSC:db]
+synonym: "Zemplen procedure" EXACT []
+is_a: RXNO:0000037 ! functional group reduction
+
+[Term]
+id: RXNO:0000229
+name: Ferrier rearrangement
+def: "The rearrangement of an O-alkenyl acetal to give the corresponding beta-alkoxy carbonyl compound." [RSC:cg]
+synonym: "Ferrier reaction" EXACT []
+is_a: RXNO:0000025 ! rearrangement step
+
+[Term]
+id: RXNO:0000230
+name: aza-Ferrier rearrangement
+def: "The rearrangement of an O-alkenyl hemiaminal ether to give the corresponding beta-amino carbonyl compound." [RSC:cg]
+synonym: "aza-Ferrier reaction" EXACT []
+is_a: RXNO:0000025 ! rearrangement step
+
+[Term]
+id: RXNO:0000231
+name: aza-ene reaction
+def: "A joining reaction where an N=C system with an allylic hydrogen reacts with a compound containing a multiple bond (an enophile) to form a substituted alkene." [RSC:cb]
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
+
+[Term]
+id: RXNO:0000232
+name: Petasis reaction
+def: "The alkylation of an amine with a boronic acid and an aldehyde to give a substituted amine." [RSC:db]
+is_a: RXNO:0000019 ! substitution reaction
+
+[Term]
+id: RXNO:0000233
+name: Achmatowicz rearrangement
+def: "A rearrangement of a furfuryl alcohol derivative to a dihydropyranone, from which monosaccharides may be synthesised." [RSC:db]
+is_a: RXNO:0000202 ! ring rearrangement
+
+[Term]
+id: RXNO:0000234
+name: aza-Achmatowicz rearrangement
+def: "A rearrangement of a furfuryl amine derivative to a tetrahydropyridinone." [RSC:db]
+is_a: RXNO:0000202 ! ring rearrangement
+
+[Term]
+id: RXNO:0000235
+name: aza-Henry reaction
+def: "A carbon-carbon coupling reaction between a nitroalkane and an imine to give a beta-amino nitroalkane." [RSC:db]
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000236
+name: Biginelli reaction
+def: "A three-component coupling of a beta-keto ester, an aldehyde and urea to give a 3,4-dihydropyrimidinone." [RSC:db]
+synonym: "Biginelli pyrimidone synthesis" EXACT []
+is_a: RXNO:0000005 ! ring formation reaction step
+
+[Term]
+id: RXNO:0000237
+name: Blaise reaction
+def: "The coupling of an alpha-bromo ester with a nitrile to give a beta-ketoester, in the presence of zinc." [RSC:db]
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000238
+name: Katritzky pyrylium-pyridinium method
+def: "The substitution of an amine with a nucleophile using a pyrylium salt." [RSC:cg]
+is_a: RXNO:0000019 ! substitution reaction
+
+[Term]
+id: RXNO:0000239
+name: metalla-aza-Claisen rearrangement
+def: "The rearrangement of a 3-aza-4-metalla-1,5-hexadiene to form a delta,epsilon-unsaturated metallaimine." [RSC:cb, RSC:cg]
+is_a: RXNO:0000025 ! rearrangement step
+
+[Term]
+id: RXNO:0000240
+name: Bergman cyclisation
+def: "The cyclisation of an ene-diyne to give a biradical. The biradical usually aromatises." [RSC:cg]
+synonym: "Bergman cyclization" EXACT []
+synonym: "Bergman reaction" EXACT []
+synonym: "Masamune-Bergman cyclisation" EXACT []
+synonym: "Masamune-Bergman cyclization" EXACT []
+is_a: RXNO:0000005 ! ring formation reaction step
+
+[Term]
+id: RXNO:0000241
+name: nitro-Michael reaction
+def: "A conjugate addition reaction where a carbon nucleophile adds to an alpha,beta-unsaturated nitro compound." [RSC:cg]
+is_a: RXNO:0000009 ! Michael addition
+
+[Term]
+id: RXNO:0000242
+name: Noyori asymmetric hydrogenation, alkene
+def: "The homogeneous asymmetric catalytic hydrogenation of a C=C double bond using a ruthenium(II) BINAP catalyst." [RSC:cg]
+synonym: "Noyori hydrogenation, alkene" EXACT []
+is_a: RXNO:0000041 ! addition reaction
+
+[Term]
+id: RXNO:0000243
+name: Noyori asymmetric hydrogenation, carbonyl
+def: "The homogeneous asymmetric catalytic hydrogenation of a carbonyl bond using a ruthenium(II) BINAP catalyst." [RSC:cg]
+synonym: "Noyori hydrogenation, carbonyl" EXACT []
+is_a: RXNO:0000037 ! functional group reduction
+
+[Term]
+id: RXNO:0000244
+name: Passerini reaction
+def: "The reaction between an isonitrile, a carboxylic acid and aldehyde or ketone to give an alpha-acyloxy amide." [RSC:cg]
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
+
+[Term]
+id: RXNO:0000245
+name: ring-closing metathesis
+def: "A joining reaction in which two carbon-carbon double bonds in the same molecule are redistributed to give a cycloalkene. It is typically catalysed by a metal carbenoid, and proceeds via two four-membered intermediates (metallacyclobutanes). The reaction is driven by release of a low-MW alkene." [RSC:cg]
+synonym: "RCM" EXACT []
+synonym: "ring closing alkene metathesis" EXACT []
+synonym: "ring closing metathesis" EXACT []
+synonym: "ring closing olefin metathesis" EXACT []
+synonym: "ring-closing alkene metathesis" EXACT []
+synonym: "ring-closing olefin metathesis" EXACT []
+is_a: RXNO:0000005 ! ring formation reaction step
+
+[Term]
+id: RXNO:0000246
+name: polymerisation reaction
+def: "A joining reaction in which a large number of monomers react together to produce a polymer consisting of repeating units." [rsc:db]
+synonym: "polymerisation" EXACT []
+synonym: "polymerization" EXACT []
+synonym: "polymerization reaction" EXACT []
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
+
+[Term]
+id: RXNO:0000247
+name: ring-opening metathesis polymerisation
+def: "A joining reaction in which two carbon-carbon double bonds are redistributed among two fragments, i.e. two alkenes. It is typically catalysed by a metal carbenoid, and proceeds via two four-membered intermediates (metallacyclobutanes). The reaction is driven by release of ring strain in the cycloalkene." [RSC:cg, rsc:db]
+synonym: "ring-opening metathesis polymerization" EXACT []
+synonym: "ROMP" EXACT []
+is_a: RXNO:0000246 ! polymerisation reaction
+
+[Term]
+id: RXNO:0000248
+name: Carroll rearrangement
+def: "An adaptation of the Claisen rearrangement that transforms a beta-keto allyl ester into a gamma,delta-allyl ketone. It uses base and high temperature or milder conditions with a ruthenium or palladium complex as catalyst." [RSC:db]
+synonym: "Kimel-Cope rearrangement" EXACT []
+is_a: RXNO:0000025 ! rearrangement step
+
+[Term]
+id: RXNO:0000249
+name: Bose-Mitsunobu reaction
+def: "A Mitsunobu reaction, where an alcohol is converted to something else with inversion at the stereocentre, using diphenylphosphoryl azide." [RSC:db]
+is_a: RXNO:0000034 ! Mitsunobu reaction
+
+[Term]
+id: RXNO:0000250
+name: Fritsch-Buttenberg-Wiechell rearrangement
+def: "The rearrangement of a 2-bromoalkene into an alkyne, mediated by strong base." [RSC:db]
+is_a: RXNO:0000025 ! rearrangement step
+
+[Term]
+id: RXNO:0000251
+name: Stork-Wittig olefination
+def: "A carbon-carbon coupling reaction where an aldehyde reacts with a phosphonium salt to give a Z-iodoalkene. The reaction is mediated by sodium or potassium hexamethyldisilazide." [RSC:db]
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000252
+name: Cadogan carbazole synthesis
+def: "The reduction of a 2-nitrobiaryl compound to give a carbazole." [doi:10.1039/JR9650004831, RSC:cg]
+synonym: "Cadogan reaction" EXACT []
+synonym: "Cadogan ring closure" EXACT []
+synonym: "Cadogan ring-closure" EXACT []
+is_a: RXNO:0000052 ! fused-ring-system formation
+
+[Term]
+id: RXNO:0000253
+name: Cadogan coupling
+def: "The arylation of an arylamine mediated by isopentyl nitrite." [doi:10.1039/b409373a, RSC:cg]
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000254
+name: MacDonald condensation
+def: "The reaction between a 1,9-diformyldipyrromethane and a dipyrromethane to give a porphodimethene." [doi:10.1039/a908784b, RSC:cg]
+is_a: RXNO:0000052 ! fused-ring-system formation
+
+[Term]
+id: RXNO:0000255
+name: Zweifel diene synthesis
+def: "The carbon-carbon homocoupling reaction of a pair of alkyne molecules using a borane and iodine. The reaction proceeds via a borane intermediate." [isbn:9780521096430, RSC:cg]
+is_a: RXNO:0000039 ! carbon-carbon homocoupling reaction
+
+[Term]
+id: RXNO:0000256
+name: Dess-Martin oxidation
+def: "The oxidation of a primary alcohol to an aldehyde or a secondary alcohol to a ketone using the Dess-Martin periodinane." [RSC:cb]
+synonym: "Dess-Martin periodinane oxidation" EXACT []
+is_a: RXNO:0000012 ! functional group oxidation
+relationship: has_part MOP:0000572 ! alcohol oxidation
+
+[Term]
+id: RXNO:0000257
+name: Criegee oxidation
+def: "The oxidative cleavage of an alpha,beta-diol using lead tetraacetate to give the corresponding carbonyl compounds." [RSC:cb]
+synonym: "Criegee glycol cleavage" EXACT []
+synonym: "Criegee reaction" EXACT []
+is_a: RXNO:0000073 ! cleaving reaction
+relationship: has_part RXNO:0000344 ! alkene oxidative cleavage
+
+[Term]
+id: RXNO:0000258
+name: Simmons-Smith reaction
+def: "A ring formation reaction where an alkene reacts with a dihalomethane in the presence of a metal atom or metal complexes to form a cyclopropane. The traditional reaction uses a zinc-copper couple and diiodomethane." [RSC:cb, RSC:cg, RSC:db]
+is_a: RXNO:0000005 ! ring formation reaction step
+
+[Term]
+id: RXNO:0000259
+name: Wittig rearrangement
+def: "Any of a family of sigmatropic rearrangements that involve the migration of a group on an electronegative atom (O or N) to a carbon atom." [rsc:cb, rsc:cc, rsc:db]
+is_a: RXNO:0000025 ! rearrangement step
+
+[Term]
+id: RXNO:0000260
+name: [1,2]-Wittig rearrangement
+def: "A base-mediated 1,2-sigmatropic rearrangement of an ether to give an alcohol." [rsc:db]
+synonym: "1,2-Wittig rearrangment" EXACT []
+synonym: "[1,2] Wittig rearrangement" EXACT []
+is_a: RXNO:0000259 ! Wittig rearrangement
+
+[Term]
+id: RXNO:0000261
+name: [2,3]-Wittig rearrangement
+def: "A base-mediated 2,3-sigmatropic rearrangement of an allyl ether to give a homoallylic alcohol." [rsc:db]
+synonym: "2,3-Wittig rearrangement" EXACT []
+synonym: "[2,3] Wittig rearrangement" EXACT []
+is_a: RXNO:0000259 ! Wittig rearrangement
+
+[Term]
+id: RXNO:0000262
+name: [1,2]-aza-Wittig rearrangement
+def: "A base-mediated 1,2-sigmatropic rearrangement of a tertiary amine to give a secondary amine." [rsc:db]
+synonym: "1,2-aza-Wittig rearrangement" EXACT []
+synonym: "[1,2] aza-Wittig rearrangement" EXACT []
+is_a: RXNO:0000259 ! Wittig rearrangement
+
+[Term]
+id: RXNO:0000263
+name: [2,3]-aza-Wittig rearrangement
+def: "A base-mediated 2,3-sigmatropic rearrangement of an activated tertiary allyl amine, to give a secondary homoallylic amine." [rsc:db]
+synonym: "2,3-aza-Wittig rearrangement" EXACT []
+synonym: "[2,3] aza-Wittig rearrangement" EXACT []
+is_a: RXNO:0000259 ! Wittig rearrangement
+
+[Term]
+id: RXNO:0000264
+name: aza-Baylis-Hillman reaction
+def: "A carbon-carbon coupling of an imine to an activated alkene in the presence of a nucleophilic base to give an allylic amine." [rsc:db]
+synonym: "aza-Morita-Baylis-Hillman reaction" EXACT []
+is_a: RXNO:0000076 ! Baylis-Hillman reaction
+
+[Term]
+id: RXNO:0000265
+name: aza-Wittig reaction
+def: "A carbon-carbon coupling reaction where a carbonyl compound reacts with a phosphazene to give an imine." [rsc:db]
+is_a: RXNO:0000011 ! functional group modification
+
+[Term]
+id: RXNO:0000266
+name: Fenton reaction
+alt_id: RXNO:0000267
+def: "Either: (a) The oxidation of a 1,2-glycol with Fenton's reagent (hydrogen peroxide and iron salts) to give an alpha-hydroxy aldehyde;  (b) The oxidation of an alpha-hydroxy carboxylic acid with Fenton's reagent to give an alpha-keto carboxylic acid; or (c) the reaction of the components of Fenton's reagent, viz. reduction of hydrogen peroxide by Fe(II) , producing an hydroxyl radical." [rsc:db]
+synonym: "Fenton's reaction" EXACT []
+is_a: RXNO:0000012 ! functional group oxidation
+
+[Term]
+id: RXNO:0000268
+name: Hantzsch pyridine synthesis
+def: "A ring-forming reaction between two equivalents of a beta-ketoester, an aldehyde and ammonia (or an ammonium salt), to give a dihydropyridine. The dihydropyridine can be oxidised to a pyridine using an oxidising agent." [rsc:db]
+synonym: "Hantzsch dihydropyridine synthesis" EXACT []
+is_a: RXNO:0000005 ! ring formation reaction step
+
+[Term]
+id: RXNO:0000269
+name: alkyne-azide click reaction
+def: "A [3+2] cycloaddition reaction between an azide and an alkyne to give a 1,2,3-triazole, needing only heat to proceed." [rsc:db]
+comment: Note: The term "click reaction" was originally used in a broader sense to refer to any coupling that took place cleanly and quickly in quantitative yield, but it now always seems to be used in this narrower sense.
+synonym: "\"click\" reaction" EXACT []
+synonym: "'click' reaction" EXACT []
+synonym: "alkyne-azide Huisgen cycloaddition" EXACT []
+synonym: "alkyne-azide Huisgen reaction" EXACT []
+synonym: "azide-alkyne click reaction" EXACT []
+synonym: "azide-alkyne Huisgen cycloaddition" EXACT []
+synonym: "azide-alkyne Huisgen reaction" EXACT []
+synonym: "click reaction" EXACT []
+synonym: "Huisgen cycloaddition" RELATED []
+synonym: "Huisgen reaction" RELATED []
+synonym: "Huisgen's 1,3-dipolar cycloaddition" EXACT []
+is_a: MOP:0000562 ! cycloaddition
+
+[Term]
+id: RXNO:0000270
+name: copper(I)-catalyzed azide-alkyne cycloaddition
+def: "A [3+2] cycloaddition reaction between an azide and an alkyne to give a 1,2,3-triazole as a single regioisomer. Commonly described as a variant of the (uncatalyzed) alkyne-azide click reaction, the mechanism of reaction is different, and thus formally it is not a 1,3-dipolar cycloaddition." [rsc:db]
+synonym: "copper(I)-catalysed alkyne-azide cycloaddition" EXACT []
+synonym: "copper(I)-catalysed azide-alkyne click reaction" EXACT []
+synonym: "copper(I)-catalysed azide-alkyne cycloaddition" EXACT []
+synonym: "copper(I)-catalyzed alkyne-azide cycloaddition" EXACT []
+synonym: "copper(I)-catalyzed azide-alkyne click reaction" EXACT []
+synonym: "copper(I)-catalyzed azide-alkyne cycloaddition" EXACT []
+synonym: "CuAAC" EXACT []
+is_a: MOP:0000562 ! cycloaddition
+
+[Term]
+id: RXNO:0000271
+name: Fischer-Tropsch process
+def: "A process in which carbon monoxide and hydrogen ('syngas') are converted into various liquid hydrocarbons." [rsc:db]
+synonym: "Fischer-Tropsch reaction" EXACT []
+synonym: "Fischer-Tropsch synthesis" EXACT []
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
+
+[Term]
+id: RXNO:0000272
+name: hydroformylation
+def: "The reaction of hydrogen and carbon monoxide with an alkene, to give an aldehyde, catalysed by a rhodium or cobalt catalyst. The process is equivalent to the formal addition of the H-C bond of formaldehyde across the double bond of an alkene." [rsc:db]
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
+
+[Term]
+id: RXNO:0000273
+name: retro-Diels-Alder reaction
+def: "The reverse of a [4+2] cycloaddition reaction, in which an unsaturated six-membered ring compound fragments to give a diene and a compound containing a double or triple bond (a dienophile)." [rsc:db]
+synonym: "retro Diels-Alder reaction" EXACT []
+is_a: RXNO:0000205 ! ring breaking
+
+[Term]
+id: RXNO:0000274
+name: retro-aldol addition
+def: "The reverse of an aldol addition, in which a beta-hydroxy ketone fragments to form a carbonyl compound and the enolate of an alpha-acidic carbonyl compound." [rsc:db]
+comment: This process can occur because the whole reaction is an equilibrium. In the forward direction (aldol addition), elimination of water from the beta-hydroxy ketone, giving an alpha,beta-unsaturated ketone, is irreversible, and thus the aldol condensation does not have a "retro" counterpart.
+synonym: "retro-aldol reaction" EXACT []
+is_a: RXNO:0000073 ! cleaving reaction
+
+[Term]
+id: RXNO:0000275
+name: Stork-Crabtree hydrogenation
+def: "A hydrogenation in which a metal-ligating group distant from the reacting alkene directs the attack of hydrogen, giving preferentially one stereoisomer of the product." [doi:10.1021/jo00364a007, rsc:db]
+is_a: RXNO:0000041 ! addition reaction
+
+[Term]
+id: RXNO:0000276
+name: Aufbau reaction
+def: "The insertion of alkenes (usually ethene) into the Al-C bond of an aluminium alkyl, to give a long-chain aluminium alkyl that can go on to react again, or can decompose into the corresponding terminal alkene. The addition of transition metals results in reliable production of high molecular weight polymers." [rsc:db]
+synonym: "\"Aufbau\" reaction" EXACT []
+synonym: "'Aufbau' reaction" EXACT []
+synonym: "Aufbau process" EXACT []
+is_a: RXNO:0000246 ! polymerisation reaction
+
+[Term]
+id: RXNO:0000277
+name: hydroalumination
+def: "The reaction of an aluminium alkyl with an alkene, to give an intermediate aluminium species that can give various products after work-up." [rsc:db]
+is_a: RXNO:0000294 ! hydrometallation
+
+[Term]
+id: RXNO:0000278
+name: hydrovinylation
+def: "The reaction of two alkenes to give an elongated alkene, employing a transition-metal-based catalyst." [rsc:db]
+synonym: "1,2-hydrovinylation" EXACT []
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000279
+name: 1,4-hydrovinylation
+def: "The reaction of a 1,3-diene with an alkene to give a 1,4-diene, usually employing a cobalt-based catalyst (see Hilt and Luers, Synthesis, 2002, 609)." [rsc:db]
+is_a: RXNO:0000278 ! hydrovinylation
+
+[Term]
+id: RXNO:0000280
+name: alkene metathesis
+def: "A joining reaction in which two carbon-carbon double bonds are redistributed among two fragments, i.e. two alkenes. It is typically catalysed by a metal carbenoid, and proceeds via two four-membered intermediates (metallacyclobutanes). The reaction is driven by release of a low-MW alkene." [rsc:db]
+synonym: "cross metathesis" EXACT []
+synonym: "cross-metathesis" EXACT []
+synonym: "Grubbs reaction" EXACT []
+synonym: "olefin metathesis" EXACT []
+synonym: "transalkylidenation" EXACT []
+is_a: RXNO:0000204 ! multiple-bond metathesis
+
+[Term]
+id: RXNO:0000281
+name: alkyne metathesis
+def: "A joining reaction in which two carbon-carbon triple bonds are redistributed among two fragments, i.e. two alkynes. It is catalysed by a metal carbenoid, and proceeds via two four-membered intermediates (metallacyclobutenes). The reaction is driven by release of a low-MW alkyne." [rsc:db]
+is_a: RXNO:0000204 ! multiple-bond metathesis
+
+[Term]
+id: RXNO:0000282
+name: enyne metathesis
+def: "A joining reaction in which a carbon-carbon double bond and a carbon-carbon triple bond are redistributed among two fragments, i.e. an alkene and an alkyne. It is typically catalysed by a metal carbenoid, and proceeds via two four-membered intermediates (metallacyclobutenes). As a low-MW alkene is not released, the reaction is usually driven by formation of a ring." [rsc:db]
+is_a: RXNO:0000204 ! multiple-bond metathesis
+
+[Term]
+id: RXNO:0000283
+name: ring-closing enyne metathesis
+def: "A joining reaction in which a carbon-carbon double bond and a carbon-carbon triple bond in the same molecule are redistributed to give a alkene-substituted cycloalkene. It is typically catalysed by a metal carbenoid, and proceeds via two four-membered intermediates (metallacyclobutanes). The reaction is driven by formation of the ring." [rsc:db]
+synonym: "ring closing enyne metathesis" EXACT []
+is_a: RXNO:0000005 ! ring formation reaction step
+
+[Term]
+id: RXNO:0000284
+name: ring-opening metathesis
+def: "A ring-breaking reaction in which two carbon-carbon double bonds are redistributed among two fragments, i.e. an alkene and a cycloalkene. It is typically catalysed by a metal carbenoid, and proceeds via two four-membered intermediates (metallacyclobutanes). The reaction is driven by release of ring strain in the cycloalkene." [rsc:db]
+synonym: "ring opening metathesis" EXACT []
+is_a: RXNO:0000205 ! ring breaking
+
+[Term]
+id: RXNO:0000285
+name: Luche reaction
+def: "A carbon-carbon coupling reaction where an aldehyde or ketone reacts with an allyl halide and zinc to give a homoallylic alcohol. Not to be confused with the Luche reduction (the chemoselective reduction of an enone to an allylic alcohol)." [:cg, rsc:db]
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000286
+name: Luche reduction
+def: "The chemoselective reduction of an enone to give an allylic alcohol, using sodium borohydride and an lanthanoid chloride, typically cerium chloride. Not to be confused with the Luche reaction (the coupling of an aldehyde or ketone with an allyl halide)." [:cg, rsc:db]
+is_a: RXNO:0000037 ! functional group reduction
+
+[Term]
+id: RXNO:0000287
+name: Lindgren oxidation
+def: "The oxidation of an aldehyde to a carboxylic acid with chlorite." [:cg, doi:10.3891/acta.chem.scand.27-0888, rsc:db]
+is_a: RXNO:0000012 ! functional group oxidation
+
+[Term]
+id: RXNO:0000288
+name: Rosenmund-von Braun reaction
+def: "A carbon-carbon coupling reaction where an aryl halide reacts with cuprous cyanide to give an aryl nitrile." [:cg, rsc:db]
+synonym: "Rosenmund-von Braun synthesis" EXACT []
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000289
+name: Woehler reaction
+def: "The formation of urea from ammonium cyanate. Ammonium cyanate is unstable, and so is formed in situ from either (a) cyanic acid and ammonia, (b) a metal cyanate and an ammonium salt, or (c) a metal cyanate and ammonia." [:cg, rsc:db]
+synonym: "Woehler synthesis" EXACT []
+synonym: "Wohler reaction" EXACT []
+synonym: "Wohler synthesis" EXACT []
+is_a: RXNO:0000011 ! functional group modification
+
+[Term]
+id: RXNO:0000290
+name: hydrosilylation
+def: "The addition of a hydrosilane across the double bond of an alkene or alkyne to give a more substituted silane. Addition to an aldehyde or ketone produces a silyl ether." [:cg, rsc:db]
+synonym: "hydrosilation" EXACT []
+is_a: RXNO:0000041 ! addition reaction
+
+[Term]
+id: RXNO:0000291
+name: hydroamination
+def: "The addition of the N-H bond of an amine across a double bond of an alkene or alkyne, to give a more substituted amine." [:cg, rsc:db]
+is_a: RXNO:0000041 ! addition reaction
+
+[Term]
+id: RXNO:0000292
+name: hydroboration
+def: "The addition of a boron hydride across a double bond of an alkene or alkyne. The boron usually adds to the less substituted carbon." [:cg, XX:db]
+is_a: RXNO:0000041 ! addition reaction
+
+[Term]
+id: RXNO:0000293
+name: hydroboration-oxidation
+def: "The formal addition of water across a double bond of an alkene or alkyne by formation of an organoborane and in situ oxidation, typically with basic peroxide. The product is usually the less substituted alcohol." [:cg, rsc:db]
+is_a: RXNO:0000041 ! addition reaction
+
+[Term]
+id: RXNO:0000294
+name: hydrometallation
+def: "The reaction of any of a number of metal hydride species with an alkene or alkyne, to give an intermediate organometal species that can give various products after work-up." [:cg, rsc:db]
+synonym: "hydrometalation" EXACT []
+is_a: RXNO:0000041 ! addition reaction
+
+[Term]
+id: RXNO:0000295
+name: hydrozirconation
+def: "The reaction of a organozirconium hydride with an alkene or alkyne, to give an intermediate zirconium species that can give various products after work-up. The zirconium reagent used is typically Schwartz's reagent, Cp2ZrHCl." [:cg, rsc:db]
+is_a: RXNO:0000294 ! hydrometallation
+
+[Term]
+id: RXNO:0000296
+name: hydrostannylation
+def: "The reaction of a organotin hydride with an alkene or alkyne, to give an intermediate tin species that can give various products after work-up." [:cg, rsc:db]
+is_a: RXNO:0000294 ! hydrometallation
+
+[Term]
+id: RXNO:0000297
+name: hydrotelluration
+def: "The reaction of a organotellurium hydride with an alkyne, to give a (usually (Z)-configured) vinyltellurium species." [:cg, rsc:db]
+is_a: RXNO:0000294 ! hydrometallation
+
+[Term]
+id: RXNO:0000298
+name: Fetizon oxidation
+def: "The oxidation of a primary alcohol to an aldehyde or a secondary alcohol to a ketone using Fetizon's reagent." [:cg, rsc:db]
+is_a: RXNO:0000012 ! functional group oxidation
+
+[Term]
+id: RXNO:0000299
+name: Vorbrueggen condensation
+def: "The substitution of an acylated sugar with a silylated base to give a nucleoside." [:, RSC:cg, rsc:db]
+synonym: "Vorbrueggen glycosylation" EXACT []
+synonym: "Vorbruggen condensation" EXACT []
+synonym: "Vorbruggen glycosylation" EXACT []
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
+
+[Term]
+id: RXNO:0000300
+name: thiol-ene reaction
+def: "The addition of a thiol across the double bond of an alkene to give a thioether." [:cg, rsc:db]
+synonym: "thiol-ene click reaction" EXACT []
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
+
+[Term]
+id: RXNO:0000301
+name: Yamamoto polymerisation
+def: "The nickel-catalysed carbon-carbon coupling of a dihaloaromatic compound or aromatic bistriflate to give a polymer." [rsc:cg, rsc:db]
+synonym: "Yamamoto coupling" EXACT []
+synonym: "Yamamoto polymerization" EXACT []
+is_a: RXNO:0000246 ! polymerisation reaction
+
+[Term]
+id: RXNO:0000302
+name: thermal hydrosilylation
+def: "The thermally induced addition of a hydrosilane across the double bond of an alkene or alkyne to give a more substituted silane, usually applied to cases where the hydrosilane is part of a silicon surface." [:cg, rsc:db]
+is_a: RXNO:0000290 ! hydrosilylation
+
+[Term]
+id: RXNO:0000303
+name: photohydrosilylation
+def: "The photochemically induced addition of a hydrosilane across the double bond of an alkene or alkyne to give a more substituted silane, usually applied to cases where the hydrosilane is part of a silicon surface. The reaction uses UV irradiation and is usually initiated by an added photoactive compound such as a platinum catalyst." [:cg, rsc:db]
+synonym: "photo-hydrosilylation" EXACT []
+is_a: RXNO:0000290 ! hydrosilylation
+
+[Term]
+id: RXNO:0000304
+name: Julia-Kocienski olefination
+def: "A carbon-carbon coupling reaction between a tetrazole sulfone and an aldehyde or ketone to give a (typically trans) alkene." [rsc:db]
+synonym: "Julia-Kocienski coupling" EXACT []
+synonym: "Julia-Kocienski reaction" EXACT []
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000305
+name: seleno-Pummerer rearrangement
+def: "The conversion of a selenoxide with an alpha-hydrogen to an alpha-subtituted selenoether." [rsc:db]
+synonym: "selenoxide Pummerer reaction" EXACT []
+is_a: RXNO:0000220 ! Pummerer rearrangement
+
+[Term]
+id: RXNO:0000306
+name: intramolecular Heck reaction
+def: "A carbon-carbon coupling reaction where an organohalide or triflate couples to an alkene in the same molecule, catalysed by palladium." [rsc:db]
+synonym: "intramolecular Heck-Mizoroki" EXACT []
+is_a: RXNO:0000005 ! ring formation reaction step
+relationship: has_catalyst CHEBI:33364 ! palladium
+
+[Term]
+id: RXNO:0000307
+name: Mori-Ban indole synthesis
+def: "An intramolecular Heck reaction of an ortho-halo-aniline with an alkene, catalysed by palladium." [rsc:db]
+synonym: "Mori-Ban indole reaction" EXACT []
+is_a: RXNO:0000052 ! fused-ring-system formation
+
+[Term]
+id: RXNO:0000308
+name: Yamaguchi lactonisation
+def: "The intramolecular esterification of a carboxylic acid group with an alcohol group using 2,4,6-trichlorobenzoyl chloride (Yamaguchi reagent) - an intramolecular Yamaguchi esterification." [rsc:db]
+synonym: "Yamaguchi lactonization" EXACT []
+is_a: RXNO:0000005 ! ring formation reaction step
+
+[Term]
+id: RXNO:0000309
+name: Yamaguchi esterification
+def: "The esterification of a carboxylic acid with an alcohol using 2,4,6-trichlorobenzoyl chloride (Yamaguchi reagent)." [rsc:db]
+is_a: RXNO:0000019 ! substitution reaction
+
+[Term]
+id: RXNO:0000310
+name: oxa-Diels-Alder reaction
+def: "A Diels-Alder reaction between a diene and an aldehyde or ketone to give a six-membered oxygen-containing ring compound." [rsc:db]
+is_a: RXNO:0000313 ! hetero-Diels-Alder reaction
+
+[Term]
+id: RXNO:0000311
+name: Tsuji-Trost reaction
+def: "A carbon-carbon coupling reaction in which a nucleophile reacts with an allyl acetate, allyl halide, allyl carbonate, allyl carbamate, allyl phosphate, allyl sulfone or allyl nitro compound to give an allyl compound. The reaction is catalsed by Pd(0)." [rsc:db]
+synonym: "Trost allylation" EXACT []
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000312
+name: Clauson-Kaas reaction
+def: "A ring rearrangement reaction where an amine reacts with a 2,5-dialkoxytetrahydrofuran to give a pyrrole." [http://www.clauson-kaas.com/cgi-files/mdmgfx/file-709-116554-7465.pdf]
+synonym: "Clauson-Kaas pyrrole synthesis" EXACT []
+is_a: RXNO:0000202 ! ring rearrangement
+
+[Term]
+id: RXNO:0000313
+name: hetero-Diels-Alder reaction
+def: "A [4+2] cycloaddition reaction where a diene (or heterocyclic analogue) reacts with a dienophile to form an unsaturated heterocyclic six-membered ring compound." [rsc:djb]
+is_a: RXNO:0000006 ! Diels-Alder reaction
+
+[Term]
+id: RXNO:0000314
+name: cycloaddition
+def: "A ring-formation reaction that proceeds by an addition." [RSC:cb]
+comment: superseded by the pre-existing MOP cycloaddition, MOP:0000562
+is_a: RXNO:0000005 ! ring formation reaction step
+created_by: batchelorc
+creation_date: 2011-07-21T10:46:26Z
+is_obsolete: true
+
+[Term]
+id: RXNO:0000315
+name: condensation step
+def: "A reaction where two moieties combine to produce a large molecule and a small molecule, typically water." [RSC:cb]
+comment: This is not part of David's grand diagram. The manual classification is pro tem and we shall try to move to a formal definition of it as a union of dehydrations, decarboxylations and so forth.
+is_a: RXNO:0000001 ! planned reaction step
+created_by: batchelorc
+creation_date: 2011-07-21T10:50:38Z
+
+[Term]
+id: RXNO:0000316
+name: platinum-catalysed carbon--carbon coupling reaction
+def: "A carbon--carbon coupling reaction that is catalysed by a palladium atom." [RSC:cb]
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+intersection_of: RXNO:0000002 ! carbon-carbon coupling reaction
+intersection_of: has_catalyst CHEBI:33364 ! palladium
+relationship: has_catalyst CHEBI:33364 ! palladium
+
+[Term]
+id: RXNO:0000317
+name: ester condensation reaction
+is_a: MOP:0000627 ! condensation reaction
+intersection_of: MOP:0000627 ! condensation reaction
+intersection_of: has_product CHEBI:33308 ! carboxylic ester
+relationship: has_product CHEBI:33308 ! carboxylic ester
+
+[Term]
+id: RXNO:0000318
+name: O-substitution
+def: "A substitution reaction where the reactive centre is an oxygen atom." [RSC:cb]
+is_a: RXNO:0000019 ! substitution reaction
+
+[Term]
+id: RXNO:0000319
+name: N-substitution
+def: "A substitution reaction where the reactive centre is a nitrogen atom." [RSC:cb]
+is_a: RXNO:0000019 ! substitution reaction
+
+[Term]
+id: RXNO:0000320
+name: amino group deprotection
+def: "A deprotection reaction where the reactive centre is an amino nitrogen atom." [RSC:cb]
+is_a: RXNO:0000203 ! deprotection reaction
+
+[Term]
+id: RXNO:0000321
+name: amino group protection
+def: "A protection reaction where the reactive centre is an amino nitrogen atom." [RSC:cb]
+is_a: RXNO:0000078 ! protection reaction
+
+[Term]
+id: RXNO:0000322
+name: benzylamine protection
+def: "An amino group protection where the amino nitrogen atom is protected by reaction with benzylamine." [RSC:cb]
+is_a: RXNO:0000321 ! amino group protection
+
+[Term]
+id: RXNO:0000323
+name: hydroxyl group protection
+def: "A protection reaction where the reactive centre is a hydroxyl oxygen atom." [RSC:cb]
+is_a: RXNO:0000078 ! protection reaction
+
+[Term]
+id: RXNO:0000324
+name: benzyl ether protection
+def: "A hydroxyl group protection where the hydroxyl oxygen atom is protected by formation of a benzyl ether." [RSC:cb]
+is_a: RXNO:0000323 ! hydroxyl group protection
+
+[Term]
+id: RXNO:0000325
+name: carboxylic acid protection
+def: "A protection reaction where the reactive centre is a carboxy oxygen." [RSC:cb]
+is_a: RXNO:0000078 ! protection reaction
+
+[Term]
+id: RXNO:0000326
+name: Boc deprotection
+def: "An amino group deprotection reaction where a tertbutoxycarbonyl group is removed in acid conditions." [RSC:cb]
+is_a: RXNO:0000320 ! amino group deprotection
+
+[Term]
+id: RXNO:0000327
+name: benzylamine deprotection
+def: "An amino group deprotection reaction where a benzylamine group is removed by hydrogenation." [RSC:cb]
+is_a: MOP:0000589 ! hydrogenation
+is_a: RXNO:0000320 ! amino group deprotection
+
+[Term]
+id: RXNO:0000328
+name: silyl protection
+def: "A hydroxyl group protection where the hydroxyl oxygen atom is protected by formation of a silyl ether." [RSC:cb]
+is_a: MOP:0003339 ! O-silylation
+is_a: RXNO:0000323 ! hydroxyl group protection
+
+[Term]
+id: RXNO:0000329
+name: planned synthesis
+def: "An experimental procedure with the aim of producing a portion of a given compound or mixture." [RSC:cb]
+
+[Term]
+id: RXNO:0000330
+name: acetate protection
+def: "A hydroxyl group protection where the hydroxyl oxygen atom is protected by formation of an acetate ester." [RSC:cb]
+is_a: RXNO:0000323 ! hydroxyl group protection
+
+[Term]
+id: RXNO:0000331
+name: substitution step
+def: "A planned reaction step in which one singly-bonded substituent, but not a hydrogen, is replaced by another singly-bonded substituent." [RSC:cb]
+is_a: RXNO:0000010 ! functional modification
+relationship: has_part RXNO:0000019 ! substitution reaction
+
+[Term]
+id: RXNO:0000332
+name: aromatic substitution step
+def: "A substitution step where one singly-bonded substituent on an aromatic skeleton is replaced by another singly-bonded substituent." [RSC:cb]
+is_a: RXNO:0000331 ! substitution step
+relationship: has_part RXNO:0000020 ! aromatic substitution
+
+[Term]
+id: RXNO:0000333
+name: Sandmeyer halogenation
+def: "An aromatic substitution reaction where an aryl diazonium salt reacts with a cuprous halide to form an aromatic halide." [RSC:db]
+is_a: RXNO:0000021 ! Sandmeyer reaction
+relationship: has_part MOP:0000550 ! halogenation
+
+[Term]
+id: RXNO:0000334
+name: Sandmeyer pseudohalogenation
+def: "An aromatic substitution reaction where an aryl diazonium salt reacts with a cuprous pseudohalide to form an aromatic pseudohalide." [RSC:db]
+is_a: RXNO:0000021 ! Sandmeyer reaction
+relationship: has_part MOP:0000596 ! pseudohalogenation
+
+[Term]
+id: RXNO:0000335
+name: reductive amination
+def: "A functional group molecule where a carbonyl oxygen is replaced by an amine." [rsc:cb]
+is_a: RXNO:0000011 ! functional group modification
+created_by: batchelorc
+creation_date: 2012-03-22T12:15:29Z
+
+[Term]
+id: RXNO:0000336
+name: S-substitution
+def: "A substitution reaction where the reactive centre is an oxygen atom." [RSC:cb]
+is_a: RXNO:0000019 ! substitution reaction
+created_by: batchelorc
+creation_date: 2012-03-22T12:22:59Z
+
+[Term]
+id: RXNO:0000337
+name: nitro reduction to amine
+def: "A reduction reaction where a nitro group is reduced to an amine." [RSC:cb]
+is_a: MOP:0000569 ! reduction
+created_by: batchelorc
+creation_date: 2012-03-22T12:28:47Z
+
+[Term]
+id: RXNO:0000338
+name: amide reduction to amine
+def: "A reduction process where an amide is transformed into an amine." [RSC:cb]
+is_a: MOP:0000569 ! reduction
+created_by: batchelorc
+creation_date: 2012-03-22T12:29:51Z
+
+[Term]
+id: RXNO:0000339
+name: alkene reduction to alkane
+def: "A hydrogenation reaction where an alkene is reduced to an alkane." [RSC:cb]
+is_a: MOP:0000589 ! hydrogenation
+created_by: batchelorc
+creation_date: 2012-03-22T12:30:40Z
+
+[Term]
+id: RXNO:0000340
+name: amide N-alkylation
+def: "An N-alkylation where the reactive centre is an amide nitrogen." [RSC:cb]
+is_a: MOP:0002369 ! N-alkylation
+created_by: batchelorc
+creation_date: 2012-03-22T03:07:17Z
+
+[Term]
+id: RXNO:0000341
+name: aniline N-alkylation
+def: "An N-alkylation where the reactive centre is an aniline nitrogen." [RSC:cb]
+is_a: MOP:0002369 ! N-alkylation
+created_by: batchelorc
+creation_date: 2012-03-22T03:07:44Z
+
+[Term]
+id: RXNO:0000342
+name: nitrile reduction to amine
+def: "A reduction where a nitrile is replaced by an amine function." [RSC:cb]
+is_a: MOP:0000569 ! reduction
+created_by: batchelorc
+creation_date: 2012-03-22T03:12:31Z
+
+[Term]
+id: RXNO:0000343
+name: imine reduction to amine
+def: "A reduction reaction where an imine function is replaced by an amine." [RSC:cb]
+is_a: MOP:0000569 ! reduction
+created_by: batchelorc
+creation_date: 2012-03-22T03:13:12Z
+
+[Term]
+id: RXNO:0000344
+name: alkene oxidative cleavage
+def: "An alkene oxidation where the carbon--carbon double bond is cleaved." [RSC:cb]
+is_a: MOP:0000581 ! alkene oxidation
+created_by: batchelorc
+creation_date: 2012-03-22T03:15:25Z
+
+[Term]
+id: RXNO:0000345
+name: heteroaryl N-alkylation
+def: "An N-alkylation reaction where the reactive centre is an azacycle ring nitrogen." [RSC:cb]
+is_a: MOP:0002369 ! N-alkylation
+created_by: batchelorc
+creation_date: 2012-03-22T03:22:27Z
+
+[Term]
+id: RXNO:0000346
+name: oxacycle formation
+def: "A ring formation reaction where the product contains an oxacycle that was not in any of the reactants." [RSC:cb]
+is_a: RXNO:0000349 ! heterocycle formation
+created_by: batchelorc
+creation_date: 2012-03-22T03:24:06Z
+
+[Term]
+id: RXNO:0000347
+name: azacycle formation
+def: "A ring formation reaction where the product contains an azacycle that was not in any of the reactants." [RSC:cb]
+is_a: RXNO:0000349 ! heterocycle formation
+created_by: batchelorc
+creation_date: 2012-03-22T03:24:12Z
+
+[Term]
+id: RXNO:0000348
+name: thiacycle formation
+def: "A ring formation reaction where the product contains an thiacycle that was not in any of the reactants." [RSC:cb]
+is_a: RXNO:0000349 ! heterocycle formation
+created_by: batchelorc
+creation_date: 2012-03-22T03:24:23Z
+
+[Term]
+id: RXNO:0000349
+name: heterocycle formation
+def: "A ring formation reaction where the product contains a heterocycle that was not in any of the reactants." [RSC:cb]
+is_a: RXNO:0000005 ! ring formation reaction step
+created_by: batchelorc
+creation_date: 2012-03-22T03:24:34Z
+
+[Term]
+id: RXNO:0000350
+name: alkyne reduction to alkane
+def: "A hydrogenation reaction where an alkyne is reduced to an alkane." [RSC:cb]
+is_a: MOP:0000589 ! hydrogenation
+created_by: batchelorc
+creation_date: 2012-03-22T03:30:01Z
+
+[Term]
+id: RXNO:0000351
+name: aryl reduction to cycloalkyl
+def: "A hydrogenation reaction where an aryl ring is reduced to a cycloalkyl ring." [RSC:cb]
+is_a: MOP:0000589 ! hydrogenation
+created_by: batchelorc
+creation_date: 2012-03-22T03:30:50Z
+
+[Term]
+id: RXNO:0000352
+name: heteroaryl reduction to saturated heterocycle
+def: "A hydrogenation reaction where a heteroaryl is reduced to a saturated heterocycle." [RSC:cb]
+is_a: MOP:0000589 ! hydrogenation
+created_by: batchelorc
+creation_date: 2012-03-22T03:31:49Z
+
+[Term]
+id: RXNO:0000353
+name: alcohol oxidation to carboxylic acid
+def: "An alcohol oxidation where the alcohol centre is replaced with a carboxy group." [RSC:cb]
+is_a: MOP:0000572 ! alcohol oxidation
+created_by: batchelorc
+creation_date: 2012-03-22T03:34:20Z
+
+[Term]
+id: RXNO:0000354
+name: benzylic oxidation
+def: "An oxidation reaction where a carbon centre bonded to the benzene ring is oxidized to a carboxyl group." [RSC:cb]
+is_a: MOP:0000568 ! oxidation
+created_by: batchelorc
+creation_date: 2012-03-22T03:37:52Z
+
+[Term]
+id: RXNO:0000355
+name: allylic oxidation
+def: "An oxidation reaction where an allylic C-H bond is replaced by a C=O bond." [http:://www.chemtube3d.com/ox_se_allylic.html, RSC:cb]
+comment: This can be done with, for instance, selenium dioxide.
+is_a: MOP:0000568 ! oxidation
+created_by: batchelorc
+creation_date: 2012-03-22T03:39:47Z
+
+[Term]
+id: RXNO:0000356
+name: Jones oxidation
+def: "An oxidation reaction where an alcohol is oxidized to the corresponding carbonyl compound by a dichromate ion." [http://www.chemtube3d.com/ox_jones_oxidation.html, RSC:cb]
+is_a: RXNO:0000012 ! functional group oxidation
+relationship: has_part MOP:0000572 ! alcohol oxidation
+created_by: batchelorc
+creation_date: 2012-03-22T03:39:47Z
+
+[Term]
+id: RXNO:0000357
+name: N-acylation to amide
+def: "An acylation reaction where a nitrogen atom is acylated to form an amide." [RSC:cb]
+is_a: MOP:0002479 ! N-acylation
+created_by: batchelorc
+creation_date: 2012-03-22T03:39:47Z
+
+[Term]
+id: RXNO:0000358
+name: N-acylation to urea
+def: "An acylation reaction where a nitrogen atom is acylated to form a urea." [RSC:cb]
+is_a: MOP:0002479 ! N-acylation
+created_by: batchelorc
+creation_date: 2012-03-22T03:39:47Z
+
+[Term]
+id: RXNO:0000359
+name: N-acylation to carbamate
+def: "An N-acylation reaction where a nitrogen centre is acylated to form a carbamate." [RSC:cb]
+is_a: MOP:0002479 ! N-acylation
+created_by: batchelorc
+creation_date: 2012-03-22T04:09:47Z
+
+[Term]
+id: RXNO:0000360
+name: O-acylation to ester
+def: "An O-acylation reaction where an oxygen centre is acylated to result in an ester." [RSC:cb]
+is_a: MOP:0003479 ! O-acylation
+created_by: batchelorc
+creation_date: 2012-03-22T04:10:47Z
+
+[Term]
+id: RXNO:0000361
+name: Pinner reaction
+def: "A functional group modification where a nitrile reacts with an alcohol under acid catalysis to form an amidine or ester." [RSC:cb]
+is_a: RXNO:0000011 ! functional group modification
+relationship: has_part RXNO:0000362 ! nitrile alcoholysis
+
+[Term]
+id: RXNO:0000362
+name: nitrile alcoholysis
+def: "An oxidation reaction where a nitrile reacts with an alcohol to form an alkyl imidate." [RSC:cb]
+is_a: MOP:0000568 ! oxidation
+
+[Term]
+id: RXNO:0000363
+name: amide to imidoyl chloride conversion
+def: "A functional group modification where an amide is converted to an imidoyl chloride." [RSC:cb]
+is_a: RXNO:0000011 ! functional group modification
+created_by: batchelorc
+creation_date: 2012-03-22T05:04:20Z
+
+[Term]
+id: RXNO:0000364
+name: alcohol to halide conversion
+def: "A functional group modification where an alcohol was converted to a halide." [RSC:cb]
+is_a: RXNO:0000011 ! functional group modification
+created_by: batchelorc
+creation_date: 2012-03-22T05:05:15Z
+
+[Term]
+id: RXNO:0000365
+name: carboxylic acid to acid chloride conversion
+def: "A functional group modification where a carboxylic acid is converted to an acid chloride." [rsc:cb]
+is_a: RXNO:0000011 ! functional group modification
+created_by: batchelorc
+creation_date: 2012-03-22T05:06:09Z
+
+[Term]
+id: RXNO:0000366
+name: nitrile to acid conversion
+def: "A functional group modification where a nitrile is transformed into a carboxylic acid." [RSC:cb]
+is_a: RXNO:0000011 ! functional group modification
+created_by: batchelorc
+creation_date: 2012-03-22T05:12:32Z
+
+[Term]
+id: RXNO:0000367
+name: carbonyl compound to imine conversion
+def: "A functional group modification where a carbonyl compound is converted to an imine." [RSC:cb]
+is_a: RXNO:0000011 ! functional group modification
+created_by: batchelorc
+creation_date: 2012-03-22T05:17:03Z
+
+[Typedef]
+id: has_catalyst
+name: has_catalyst
+
+[Typedef]
+id: has_part
+name: has_part
+
+[Typedef]
+id: has_participant
+name: has_participant
+
+[Typedef]
+id: has_product
+name: has_product
+
+[Typedef]
+id: part_of
+name: part_of
+
