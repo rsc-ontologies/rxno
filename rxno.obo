@@ -2,8 +2,14 @@ format-version: 1.2
 data-version: rxno/releases/2014-01-07/rxno.owl
 date: 07:01:2014 17:19
 saved-by: batchelorc
+synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
+
+[Term]
+id: CHEBI:16842
+name: formaldehyde
+is_a: CHEBI:24431 ! chemical entity
 
 [Term]
 id: CHEBI:24129
@@ -30,6 +36,16 @@ name: thiophenes
 is_a: CHEBI:24431 ! chemical entity
 
 [Term]
+id: CHEBI:32878
+name: alkene
+is_a: CHEBI:24431 ! chemical entity
+
+[Term]
+id: CHEBI:32952
+name: amine
+is_a: CHEBI:24431 ! chemical entity
+
+[Term]
 id: CHEBI:33308
 name: carboxylic ester
 is_a: CHEBI:24431 ! chemical entity
@@ -43,6 +59,11 @@ is_a: CHEBI:24431 ! chemical entity
 id: CHEBI:36823
 name: pseudohalo group
 is_a: CHEBI:24433 ! group
+
+[Term]
+id: CHEBI:37602
+name: allenes
+is_a: CHEBI:24431 ! chemical entity
 
 [Term]
 id: CHEBI:38784
@@ -493,6 +514,7 @@ relationship: has_part MOP:0000561 ! cyclization
 id: RXNO:0000006
 name: Diels-Alder reaction
 def: "A [4+2] cycloaddition reaction where a diene reacts with a compound containing a double or triple bond (a dienophile) to form an unsaturated six-membered ring compound." [RSC:cc]
+synonym: "[C:1]=[C:2][C:3]=[C:4].[C:5]=[C:6]>>[C:1]1[C:2]=[C:3][C:4][C:5][C:6]1" SMIRKS []
 synonym: "Diels-Alder coupling" EXACT []
 is_a: MOP:0000562 ! cycloaddition
 
@@ -860,7 +882,10 @@ is_a: RXNO:0000315 ! condensation step
 [Term]
 id: RXNO:0000060
 name: Arbuzov reaction
-def: "A substitution of an activated alkane with a phosphite to give a phosphonate." [RSC:cc, RSC:db]
+alt_id: RXNO:0000112
+def: "The alkylation of a trialkyl phosphite with an alkyl halide or acyl halide to give a phosphonate." [RSC:cb, RSC:cc, RSC:db]
+synonym: "Michaelis-Arbuzov phosphonate synthesis" EXACT []
+synonym: "Michaelis-Arbuzov reaction" EXACT []
 is_a: RXNO:0000019 ! substitution reaction
 
 [Term]
@@ -1199,13 +1224,6 @@ id: RXNO:0000111
 name: Grob fragmentation
 def: "The fragmentation of a molecule that takes place when an electron-donating fragment (X) and an electron-accepting fragment (X') are situated at positions 1 and 3 on an aliphatic chain, to give a cationic fragment, a neutral fragment (e.g. an alkene) and an anionic fragment." [RSC:cb, RSC:cc, RSC:db]
 is_a: RXNO:0000110 ! fragmentation reaction
-
-[Term]
-id: RXNO:0000112
-name: Michaelis-Arbuzov reaction
-def: "The alkylation of a trialkyl phosphite with an alkyl halide or acyl halide to give a phosphonate." [RSC:cb, RSC:cc, RSC:db]
-synonym: "Michaelis-Arbuzov phosphonate synthesis" EXACT []
-is_a: RXNO:0000019 ! substitution reaction
 
 [Term]
 id: RXNO:0000113
@@ -2974,6 +2992,19 @@ def: "A functional group modification where a carbonyl compound is converted to 
 is_a: RXNO:0000011 ! functional group modification
 created_by: batchelorc
 creation_date: 2012-03-22T05:17:03Z
+
+[Term]
+id: RXNO:0000368
+name: Crabbe homologation
+def: "Oxidation of an alkene to an allene by heating with formaldehyde, an amine and an inorganic salt." [doi:10.1039/c39790000859, RSC:cb]
+synonym: "[C:1]=[C:2].[C:3]=O>>[C:1]=[C:2]=[C:3]" SMIRKS []
+is_a: MOP:0000581 ! alkene oxidation
+relationship: has_participant CHEBI:32952 ! amine
+relationship: has_product CHEBI:37602 ! allenes
+relationship: has_reactant CHEBI:16842 ! formaldehyde
+relationship: has_reactant CHEBI:32878 ! alkene
+created_by: batchelorc
+creation_date: 2014-01-08T13:48:00Z
 
 [Typedef]
 id: has_catalyst

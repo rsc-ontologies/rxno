@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/rxno.obo.owl#"
      xml:base="http://purl.obolibrary.org/obo/rxno.obo.owl"
+     xmlns:rxno="http://purl.obolibrary.org/obo/rxno.obo#"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -32,6 +33,24 @@
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">definition</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/rxno.obo#SMIRKS -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/rxno.obo#SMIRKS">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SMIRKS</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty"/>
+        <oboInOwl:hasScope rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">synonym_type_property</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -120,6 +139,14 @@
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_related_synonym</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasScope -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasScope">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_scope</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -239,6 +266,17 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_16842 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_16842">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">formaldehyde</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:16842</oboInOwl:id>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_24129 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_24129">
@@ -293,6 +331,28 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_32878 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_32878">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alkene</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:32878</oboInOwl:id>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_32952 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_32952">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">amine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:32952</oboInOwl:id>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_33308 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_33308">
@@ -321,6 +381,17 @@
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pseudohalo group</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24433"/>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:36823</oboInOwl:id>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_37602 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_37602">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">allenes</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:37602</oboInOwl:id>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
     </owl:Class>
     
@@ -1508,6 +1579,7 @@ SOURCE COMMENT: has_participant: CHEBI:29825</rdfs:comment>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diels-Alder coupling</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000006</oboInOwl:id>
+        <rxno:SMIRKS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[C:1]=[C:2][C:3]=[C:4].[C:5]=[C:6]&gt;&gt;[C:1]1[C:2]=[C:3][C:4][C:5][C:6]1</rxno:SMIRKS>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A [4+2] cycloaddition reaction where a diene reacts with a compound containing a double or triple bond (a dienophile) to form an unsaturated six-membered ring compound.</owl:annotatedTarget>
@@ -2567,14 +2639,18 @@ SOURCE COMMENT: has_participant: CHEBI:29825</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000060">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arbuzov reaction</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000019"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A substitution of an activated alkane with a phosphite to give a phosphonate.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michaelis-Arbuzov phosphonate synthesis</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michaelis-Arbuzov reaction</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000060</oboInOwl:id>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000112</oboInOwl:hasAlternativeId>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The alkylation of a trialkyl phosphite with an alkyl halide or acyl halide to give a phosphonate.</obo:IAO_0000115>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A substitution of an activated alkane with a phosphite to give a phosphonate.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RSC:cb</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RSC:cc</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RSC:db</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The alkylation of a trialkyl phosphite with an alkyl halide or acyl halide to give a phosphonate.</owl:annotatedTarget>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000060"/>
     </owl:Axiom>
@@ -3584,27 +3660,6 @@ SOURCE COMMENT: has_participant: CHEBI:29825</rdfs:comment>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The fragmentation of a molecule that takes place when an electron-donating fragment (X) and an electron-accepting fragment (X&apos;) are situated at positions 1 and 3 on an aliphatic chain, to give a cationic fragment, a neutral fragment (e.g. an alkene) and an anionic fragment.</owl:annotatedTarget>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000111"/>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RXNO_0000112 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000112">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michaelis-Arbuzov reaction</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000019"/>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michaelis-Arbuzov phosphonate synthesis</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000112</oboInOwl:id>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The alkylation of a trialkyl phosphite with an alkyl halide or acyl halide to give a phosphonate.</obo:IAO_0000115>
-    </owl:Class>
-    <owl:Axiom>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RSC:cb</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RSC:cc</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RSC:db</oboInOwl:hasDbXref>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The alkylation of a trialkyl phosphite with an alkyl halide or acyl halide to give a phosphonate.</owl:annotatedTarget>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000112"/>
     </owl:Axiom>
     
 
@@ -8740,6 +8795,52 @@ SOURCE COMMENT: has_participant: CHEBI:29825</rdfs:comment>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RSC:cb</oboInOwl:hasDbXref>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000367"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RXNO_0000368 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000368">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crabbe homologation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MOP_0000581"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/rxno.obo#has_reactant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_16842"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/rxno.obo#has_reactant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_32878"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/rxno.obo#has_product"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_37602"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/rxno.obo#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_32952"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-01-08T13:48:00Z</oboInOwl:creation_date>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oxidation of an alkene to an allene by heating with formaldehyde, an amine and an inorganic salt.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000368</oboInOwl:id>
+        <rxno:SMIRKS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[C:1]=[C:2].[C:3]=O&gt;&gt;[C:1]=[C:2]=[C:3]</rxno:SMIRKS>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">batchelorc</oboInOwl:created_by>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oxidation of an alkene to an allene by heating with formaldehyde, an amine and an inorganic salt.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RSC:cb</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doi:10.1039/c39790000859</oboInOwl:hasDbXref>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000368"/>
     </owl:Axiom>
 </rdf:RDF>
 
