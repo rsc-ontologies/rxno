@@ -46,6 +46,11 @@ name: amine
 is_a: CHEBI:24431 ! chemical entity
 
 [Term]
+id: CHEBI:32988
+name: amide
+is_a: CHEBI:24431 ! chemical entity
+
+[Term]
 id: CHEBI:33308
 name: carboxylic ester
 is_a: CHEBI:24431 ! chemical entity
@@ -74,6 +79,10 @@ is_a: CHEBI:24431 ! chemical entity
 id: CHEBI:51080
 name: nitrate ester
 is_a: CHEBI:24431 ! chemical entity
+
+[Term]
+id: IAO:0000030
+name: information content entity
 
 [Term]
 id: MOP:0000339
@@ -120,7 +129,7 @@ id: MOP:0000539
 name: sulfonylation
 alt_id: MOP:0000524
 def: "Formation of a covalent bond between a substrate and a sulfonyl group." [RSC:xp]
-comment: MERGED COMMENT:\nTARGET COMMENT: has_participant: CHEBI:51100\n--------------------\nSOURCE COMMENT: has_participant: CHEBI:29825
+comment: has_participant: CHEBI:51100; has_participant: CHEBI:29825
 synonym: "sulfonylation" EXACT []
 is_a: MOP:0000566 ! formation of covalent bond with group
 
@@ -413,6 +422,14 @@ def: "An oxidation process where the oxidation state of at least one nitrogen at
 is_a: MOP:0000568 ! oxidation
 
 [Term]
+id: MOP:0000712
+name: oxidation state
+def: "A formal account of the degree of oxidation of an atom." [RSC:cb]
+comment: It turns out to be formally defined, which makes our definitions a bit poor.
+xref: http://goldbook.iupac.org/O04365.html
+is_a: IAO:0000030 ! information content entity
+
+[Term]
 id: MOP:0001458
 name: deorganylation
 def: "Breaking of a covalent bond between a substrate and an organyl group." [RSC:xp]
@@ -494,6 +511,8 @@ is_a: RXNO:0000000 ! molecular skeleton joining reaction
 id: RXNO:0000003
 name: Perkin reaction
 def: "An aldol condensation where an aryl aldehyde reacts with an acid anhydride to form a cinnamic acid." [RSC:cb, RSC:cc, RSC:db]
+synonym: "[c:1][C:2](=O)O>>[c:1][C:2]=C(=O)O" SMIRKS []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000327/
 is_a: RXNO:0000017 ! aldol condensation
 
 [Term]
@@ -516,12 +535,15 @@ name: Diels-Alder reaction
 def: "A [4+2] cycloaddition reaction where a diene reacts with a compound containing a double or triple bond (a dienophile) to form an unsaturated six-membered ring compound." [RSC:cc]
 synonym: "[C:1]=[C:2][C:3]=[C:4].[C:5]=[C:6]>>[C:1]1[C:2]=[C:3][C:4][C:5][C:6]1" SMIRKS []
 synonym: "Diels-Alder coupling" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000109/
 is_a: MOP:0000562 ! cycloaddition
 
 [Term]
 id: RXNO:0000007
 name: ene reaction
 def: "A joining reaction where an alkene with an allylic hydrogen reacts with a compound containing a multiple bond (an enophile) to form a substituted alkene." [RSC:cb]
+synonym: "[C:1]=[C:2][C:3][H:4].[X:5]=[X:6]>>[C:3]=[C:2][C:1][X:6]=[X:5][H:4]" SMIRKS []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000129/
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
 
 [Term]
@@ -534,7 +556,7 @@ is_a: RXNO:0000000 ! molecular skeleton joining reaction
 [Term]
 id: RXNO:0000009
 name: Michael addition
-def: "A conjugate addition reaction where a carbon nucleophile adds to the beta-carbon of an alpha,beta-unsaturated system (or an activated carbon-carbon bond).\n" [RSC:db]
+def: "A conjugate addition reaction where a carbon nucleophile adds to the beta-carbon of an alpha,beta-unsaturated system (or an activated carbon-carbon bond)." [RSC:db]
 is_a: RXNO:0000008 ! conjugate addition
 
 [Term]
@@ -686,16 +708,20 @@ id: RXNO:0000031
 name: Baeyer-Villiger oxidation
 alt_id: RXNO:0000190
 def: "A reaction of a ketone to give an ester, in which an alkyl, benzyl or phenyl group migrates from one of the alpha-carbon centres to an adjacent oxygen, displacing an oxygen-based leaving group; the result is a formal insertion of an oxygen atom. The reaction also works with aldehydes, giving the corresponding carboxylic acid. The term \"Baeyer-Villiger rearrangement\" may occasionally be used in a mechanistic sense to refer specificially to the actual rearrangement step." [RSC:cc, rsc:db]
+synonym: "[C:1][C:2](=O)[C:3]>>[C:1]O[C:2](=O)[C:3]" SMIRKS []
 synonym: "B-V reaction" EXACT []
 synonym: "Baeyer-Villiger oxidative rearrangement" EXACT []
 synonym: "Baeyer-Villiger reaction" EXACT []
 synonym: "Baeyer-Villiger rearrangement" RELATED []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000013/
 is_a: RXNO:0000030 ! insertion reaction
 
 [Term]
 id: RXNO:0000032
 name: Mannich reaction
 def: "A carbon-carbon coupling reaction where ammonia or an amine reacts with a non-enolisable aldehyde, often methanal, and an enolisable carbonyl compound to form a beta-amino carbonyl compound." [RSC:db]
+synonym: "[N:1].[C:2]=O.[C:3][C:4](=O)[C:5]>>[N:1][C:2][C:3][C:4](=O)[C:5]" SMIRKS []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000265/
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 
 [Term]
@@ -1564,6 +1590,8 @@ is_a: RXNO:0000005 ! ring formation reaction step
 id: RXNO:0000162
 name: Paal-Knorr furan synthesis
 def: "The cyclisation of a 1,4-dicarbonyl compound with an acid catalyst to give a furan." [RSC:cb, RSC:cc]
+synonym: "O=[C:1]-[C:2]-[C:3]-[C:4]=O>>o1[c:1][c:2][c:3][c:4]1" SMIRKS []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000315/
 is_a: RXNO:0000161 ! Paal-Knorr synthesis
 relationship: has_product CHEBI:24129 ! furans
 
@@ -1571,6 +1599,7 @@ relationship: has_product CHEBI:24129 ! furans
 id: RXNO:0000163
 name: Paal-Knorr thiophene synthesis
 def: "The cyclisation of a 1,4-dicarbonyl compound with phosphorus pentasulfide to give a thiophene." [RSC:cb, RSC:cc]
+synonym: "O=[C:1]-[C:2]-[C:3]-[C:4]=O.S=P13SP2(=S)SP(=S)(S1)SP(=S)(S2)S3>>s1[c:1][c:2][c:3][c:4]1" SMIRKS []
 is_a: RXNO:0000161 ! Paal-Knorr synthesis
 relationship: has_product CHEBI:26961 ! thiophenes
 
@@ -1578,6 +1607,9 @@ relationship: has_product CHEBI:26961 ! thiophenes
 id: RXNO:0000164
 name: Paal-Knorr pyrrole synthesis
 def: "The cyclisation of a 1,4-dicarbonyl compound with an amine to give a pyrrole." [RSC:cb, RSC:cc]
+comment: Merck Index says "ammonia or primary amines"
+synonym: "O=[C:1]-[C:2]-[C:3]-[C:4]=O.[N:5]>>[n:5]1[c:1][c:2][c:3][c:4]1" SMIRKS []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000316/
 is_a: RXNO:0000161 ! Paal-Knorr synthesis
 relationship: has_product CHEBI:26455 ! pyrroles
 
@@ -1585,6 +1617,8 @@ relationship: has_product CHEBI:26455 ! pyrroles
 id: RXNO:0000165
 name: Schotten-Baumann reaction
 def: "The coupling of an alcohol or amine with an acyl chloride to give an ester or amide. A two-phase solvent system is often used, to enable the acid generated during the reaction to be neutralised by the aqueous base, while the starting materials and products remain in the organic phase." [RSC:cb, RSC:cc, RSC:db]
+synonym: "[C:1][*:N,O].[C:2](=[O:3])Cl>>[O:3]=[C:2]O[C:1]" SMIRKS []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000392/
 is_a: RXNO:0000019 ! substitution reaction
 
 [Term]
@@ -1592,6 +1626,9 @@ id: RXNO:0000166
 name: Hofmann elimination
 def: "The elimination of a methylated amine from an alkyl amine to form an alkene. The reaction proceeds via the quaternary ammonium salt." [RSC:cb, RSC:cc, RSC:db]
 synonym: "exhaustive methylation" EXACT []
+synonym: "Hofmann degradation" EXACT []
+synonym: "N1[C:2][C:3][C:4][C:5][C:6]1[C:7]>>[C:2]=[C:3][C:4][C:5][C:6]=[C:7]" SMIRKS []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000205/
 is_a: RXNO:0000123 ! elimination reaction
 
 [Term]
@@ -2204,7 +2241,7 @@ is_a: RXNO:0000025 ! rearrangement step
 id: RXNO:0000260
 name: [1,2]-Wittig rearrangement
 def: "A base-mediated 1,2-sigmatropic rearrangement of an ether to give an alcohol." [rsc:db]
-synonym: "1,2-Wittig rearrangment" EXACT []
+synonym: "1,2-Wittig rearrangement" EXACT []
 synonym: "[1,2] Wittig rearrangement" EXACT []
 is_a: RXNO:0000259 ! Wittig rearrangement
 
@@ -2912,6 +2949,7 @@ creation_date: 2012-03-22T03:39:47Z
 id: RXNO:0000357
 name: N-acylation to amide
 def: "An acylation reaction where a nitrogen atom is acylated to form an amide." [RSC:cb]
+xref: NAMERXN:2.1
 is_a: MOP:0002479 ! N-acylation
 created_by: batchelorc
 creation_date: 2012-03-22T03:39:47Z
@@ -2920,6 +2958,7 @@ creation_date: 2012-03-22T03:39:47Z
 id: RXNO:0000358
 name: N-acylation to urea
 def: "An acylation reaction where a nitrogen atom is acylated to form a urea." [RSC:cb]
+xref: NAMERXN:2.3
 is_a: MOP:0002479 ! N-acylation
 created_by: batchelorc
 creation_date: 2012-03-22T03:39:47Z
@@ -2928,6 +2967,7 @@ creation_date: 2012-03-22T03:39:47Z
 id: RXNO:0000359
 name: N-acylation to carbamate
 def: "An N-acylation reaction where a nitrogen centre is acylated to form a carbamate." [RSC:cb]
+xref: NAMERXN:2.4
 is_a: MOP:0002479 ! N-acylation
 created_by: batchelorc
 creation_date: 2012-03-22T04:09:47Z
@@ -2936,6 +2976,7 @@ creation_date: 2012-03-22T04:09:47Z
 id: RXNO:0000360
 name: O-acylation to ester
 def: "An O-acylation reaction where an oxygen centre is acylated to result in an ester." [RSC:cb]
+xref: NAMERXN:2.6
 is_a: MOP:0003479 ! O-acylation
 created_by: batchelorc
 creation_date: 2012-03-22T04:10:47Z
@@ -2957,14 +2998,17 @@ is_a: MOP:0000568 ! oxidation
 id: RXNO:0000363
 name: amide to imidoyl chloride conversion
 def: "A functional group modification where an amide is converted to an imidoyl chloride." [RSC:cb]
+xref: NAMERXN:9.2
 is_a: RXNO:0000011 ! functional group modification
+relationship: has_reactant CHEBI:32988 ! amide
 created_by: batchelorc
 creation_date: 2012-03-22T05:04:20Z
 
 [Term]
 id: RXNO:0000364
 name: alcohol to halide conversion
-def: "A functional group modification where an alcohol was converted to a halide." [RSC:cb]
+def: "A functional group modification where an alcohol is converted to a halide." [RSC:cb]
+xref: NAMERXN:9.1
 is_a: RXNO:0000011 ! functional group modification
 created_by: batchelorc
 creation_date: 2012-03-22T05:05:15Z
@@ -2973,6 +3017,7 @@ creation_date: 2012-03-22T05:05:15Z
 id: RXNO:0000365
 name: carboxylic acid to acid chloride conversion
 def: "A functional group modification where a carboxylic acid is converted to an acid chloride." [rsc:cb]
+xref: NAMERXN:9.3
 is_a: RXNO:0000011 ! functional group modification
 created_by: batchelorc
 creation_date: 2012-03-22T05:06:09Z
@@ -2981,6 +3026,7 @@ creation_date: 2012-03-22T05:06:09Z
 id: RXNO:0000366
 name: nitrile to acid conversion
 def: "A functional group modification where a nitrile is transformed into a carboxylic acid." [RSC:cb]
+xref: NAMERXN:9.4
 is_a: RXNO:0000011 ! functional group modification
 created_by: batchelorc
 creation_date: 2012-03-22T05:12:32Z
@@ -2989,6 +3035,7 @@ creation_date: 2012-03-22T05:12:32Z
 id: RXNO:0000367
 name: carbonyl compound to imine conversion
 def: "A functional group modification where a carbonyl compound is converted to an imine." [RSC:cb]
+xref: NAMERXN:9.6
 is_a: RXNO:0000011 ! functional group modification
 created_by: batchelorc
 creation_date: 2012-03-22T05:17:03Z
