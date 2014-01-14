@@ -1,6 +1,6 @@
 format-version: 1.2
 data-version: rxno/releases/2014-01-07/rxno.owl
-date: 07:01:2014 17:19
+date: 14:01:2014 12:00
 saved-by: batchelorc
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
@@ -9,6 +9,11 @@ ontology: rxno.obo
 [Term]
 id: CHEBI:16842
 name: formaldehyde
+is_a: CHEBI:24431 ! chemical entity
+
+[Term]
+id: CHEBI:18379
+name: nitrile
 is_a: CHEBI:24431 ! chemical entity
 
 [Term]
@@ -36,6 +41,11 @@ name: thiophenes
 is_a: CHEBI:24431 ! chemical entity
 
 [Term]
+id: CHEBI:278547
+name: sodium azide
+is_a: CHEBI:24431 ! chemical entity
+
+[Term]
 id: CHEBI:32878
 name: alkene
 is_a: CHEBI:24431 ! chemical entity
@@ -58,6 +68,11 @@ is_a: CHEBI:24431 ! chemical entity
 [Term]
 id: CHEBI:33364
 name: palladium
+is_a: CHEBI:24431 ! chemical entity
+
+[Term]
+id: CHEBI:35689
+name: tetrazoles
 is_a: CHEBI:24431 ! chemical entity
 
 [Term]
@@ -535,6 +550,7 @@ name: Diels-Alder reaction
 def: "A [4+2] cycloaddition reaction where a diene reacts with a compound containing a double or triple bond (a dienophile) to form an unsaturated six-membered ring compound." [RSC:cc]
 synonym: "[C:1]=[C:2][C:3]=[C:4].[C:5]=[C:6]>>[C:1]1[C:2]=[C:3][C:4][C:5][C:6]1" SMIRKS []
 synonym: "Diels-Alder coupling" EXACT []
+synonym: "Diels-Alder cycloaddition" EXACT []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000109/
 is_a: MOP:0000562 ! cycloaddition
 
@@ -805,13 +821,13 @@ is_a: RXNO:0000315 ! condensation step
 id: RXNO:0000045
 name: Friedel-Crafts acylation
 def: "A carbon-carbon coupling reaction between an arene and a carbonyl compound (usually an acyl halide) to give an aryl ketone. The reaction is usually catalysed by a Lewis acid." [RSC:cc, RSC:db]
-is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+is_a: RXNO:0000369 ! Friedel-Crafts reaction
 
 [Term]
 id: RXNO:0000046
 name: Friedel-Crafts alkylation
 def: "A carbon-carbon coupling reaction between an arene and an alkyl halide/alkene/alcohol (anything that can form a carbocation) to give a substituted arene. The reaction is usually catalysed by a Lewis acid and proceeds by an SN1 mechanism." [RSC:cc, RSC:db]
-is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+is_a: RXNO:0000369 ! Friedel-Crafts reaction
 
 [Term]
 id: RXNO:0000047
@@ -876,9 +892,11 @@ is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 id: RXNO:0000056
 name: Horner-Wadsworth-Emmons reaction
 def: "A carbon-carbon coupling reaction between a phosphonate and a carbonyl compound to give an alkene." [RSC:cc, RSC:db]
+synonym: "Emmons reaction" EXACT []
 synonym: "Horner-Emmons reaction" EXACT []
 synonym: "Horner-Emmons-Wadsworth reaction" EXACT []
 synonym: "Horner-Wittig reaction" EXACT []
+synonym: "Wadsworth-Emmons olefination" EXACT []
 synonym: "Wadsworth-Emmons reaction" EXACT []
 synonym: "Wadsworth-Emmons-Horner reaction" EXACT []
 synonym: "Wittig-Horner reaction" EXACT []
@@ -1440,8 +1458,12 @@ is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 id: RXNO:0000140
 name: Suzuki-Miyaura coupling
 def: "The coupling of a boronic acid or boronic ester with an unsaturated halide, triflate or sulfonate catalysed by a palladium(0) complex." [RSC:cb, RSC:cc, RSC:db]
-synonym: "Suzuki coupling" EXACT []
+synonym: "Suzuki coupling reaction" EXACT []
+synonym: "Suzuki cross-coupling" EXACT []
+synonym: "Suzuki cross-coupling reaction" EXACT []
 synonym: "Suzuki reaction" EXACT []
+synonym: "Suzuki-Miyaura cross-coupling" EXACT []
+synonym: "Suzuki-Miyaura cross-coupling reaction" EXACT []
 synonym: "Suzuki-Miyaura reaction" EXACT []
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 
@@ -3052,6 +3074,31 @@ relationship: has_reactant CHEBI:16842 ! formaldehyde
 relationship: has_reactant CHEBI:32878 ! alkene
 created_by: batchelorc
 creation_date: 2014-01-08T13:48:00Z
+
+[Term]
+id: RXNO:0000369
+name: Friedel-Crafts reaction
+def: "A carbon-carbon coupling reaction between an arene and a carbonyl compound (an acylation) or an alkyl compound that can form a carbocation (an alkylation) to form a substituted arene." [RSC:cb]
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+union_of: RXNO:0000045 ! Friedel-Crafts acylation
+union_of: RXNO:0000046 ! Friedel-Crafts alkylation
+
+[Term]
+id: RXNO:0000370
+name: Demko-Sharpless reaction
+def: "A functional group modification of a nitrile to a 1H-tetrazole by addition of sodium azide." [doi:10.1021/jo010635w, RSC:cb]
+synonym: "[#7,S,N;H0:1][C:2]#[N:3].[Na+].[N-:4]=[N+:5]=[N-:6]>>[*:1][C:2]=[N:3][N:4][N:5]=[N:6]1" SMIRKS []
+is_a: RXNO:0000011 ! functional group modification
+relationship: has_product CHEBI:35689 ! tetrazoles
+relationship: has_reactant CHEBI:18379 ! nitrile
+relationship: has_reactant CHEBI:278547 ! sodium azide
+
+[Term]
+id: RXNO:0000371
+name: Griess reaction
+def: "A diazotisation that proceeds by the addition of nitrous acid, nitric acid and water, resulting in a diazonium nitrate salt." [RSC:cb]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000174/
+is_a: RXNO:0000013 ! diazotisation
 
 [Typedef]
 id: has_catalyst
