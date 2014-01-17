@@ -566,13 +566,20 @@ is_a: RXNO:0000000 ! molecular skeleton joining reaction
 id: RXNO:0000008
 name: conjugate addition
 def: "A joining reaction where a nucleophile adds to the beta-carbon of an alpha,beta-unsaturated system (or an activated carbon-carbon bond)." [rsc:cg, rsc:db]
+synonym: "[*:1].[C:2]=[C:3][C:4]=[O:5]>>[*:1][C:2][C:3][C:4]=[O:5]" SMIRKS []
 synonym: "nucleophilic conjugate addition" EXACT []
+xref: http://en.wikipedia.org/wiki/Nucleophilic_conjugate_addition
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
 
 [Term]
 id: RXNO:0000009
 name: Michael addition
 def: "A conjugate addition reaction where a carbon nucleophile adds to the beta-carbon of an alpha,beta-unsaturated system (or an activated carbon-carbon bond)." [RSC:db]
+comment: SMIRKS needs work
+synonym: "[C:1].[C:2]=[C:3][C:4]=[O:5]>>[C:1][C:2][C:3][C:4]=[O:5]" SMIRKS []
+synonym: "Michael reaction" EXACT []
+xref: http://en.wikipedia.org/wiki/Michael_reaction
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000281/
 is_a: RXNO:0000008 ! conjugate addition
 
 [Term]
@@ -598,6 +605,7 @@ relationship: has_part MOP:0000568 ! oxidation
 id: RXNO:0000013
 name: diazotisation
 def: "A functional group oxidation where an aromatic amine is transformed into an aromatic diazonium salt." [RSC:cc]
+synonym: "[c:1][N:2]>>[c:1][N:2]=[N+]" SMIRKS []
 synonym: "diazotization" EXACT []
 is_a: RXNO:0000012 ! functional group oxidation
 
