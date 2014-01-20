@@ -1,7 +1,5 @@
 format-version: 1.2
-data-version: rxno/releases/2014-01-07/rxno.owl
-date: 14:01:2014 12:00
-saved-by: batchelorc
+data-version: rxno/releases/2014-01-20/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
@@ -46,6 +44,11 @@ name: sodium azide
 is_a: CHEBI:24431 ! chemical entity
 
 [Term]
+id: CHEBI:29785
+name: nitro group
+is_a: CHEBI:24433 ! group
+
+[Term]
 id: CHEBI:32878
 name: alkene
 is_a: CHEBI:24431 ! chemical entity
@@ -64,6 +67,11 @@ is_a: CHEBI:24431 ! chemical entity
 id: CHEBI:33308
 name: carboxylic ester
 is_a: CHEBI:24431 ! chemical entity
+
+[Term]
+id: CHEBI:33338
+name: aryl group
+is_a: CHEBI:24433 ! group
 
 [Term]
 id: CHEBI:33364
@@ -124,6 +132,14 @@ synonym: "hydrocarbylation" EXACT []
 is_a: MOP:0000458 ! organylation
 
 [Term]
+id: MOP:0000411
+name: arylation
+def: "Formation of a covalent bond between a substrate and an aryl group." [RSC:xp]
+synonym: "arylation" EXACT []
+is_a: MOP:0000410 ! hydrocarbylation
+relationship: has_participant CHEBI:33338 ! aryl group
+
+[Term]
 id: MOP:0000458
 name: organylation
 def: "Formation of a covalent bond between a substrate and an organyl group." [RSC:xp]
@@ -159,6 +175,13 @@ name: halogenation
 def: "Formation of a covalent bond between a substrate and a halo group." [RSC:xp]
 comment: has_participant: CHEBI:47854
 is_a: MOP:0000566 ! formation of covalent bond with group
+
+[Term]
+id: MOP:0000556
+name: nitration
+def: "Formation of a covalent bond between a substrate and a nitro group." [RSC:xp]
+is_a: MOP:0000566 ! formation of covalent bond with group
+relationship: has_participant CHEBI:29785 ! nitro group
 
 [Term]
 id: MOP:0000561
@@ -466,6 +489,13 @@ comment: has_participant: CHEBI:22323
 is_a: MOP:0000369 ! alkylation
 
 [Term]
+id: MOP:0002411
+name: N-arylation
+def: "Formation of a covalent bond between a nitrogen atom in a substrate and an aryl group." [RSC:xp]
+is_a: MOP:0000411 ! arylation
+relationship: has_participant CHEBI:33338 ! aryl group
+
+[Term]
 id: MOP:0002479
 name: N-acylation
 def: "Formation of a covalent bond between a nitrogen atom in a substrate and an acyl group." [RSC:xp]
@@ -520,6 +550,7 @@ relationship: part_of RXNO:0000329 ! planned synthesis
 id: RXNO:0000002
 name: carbon-carbon coupling reaction
 def: "A joining reaction where a bond is formed between two carbon atoms." [RSC:cb]
+xref: NAMERXN:3
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
 
 [Term]
@@ -558,7 +589,7 @@ is_a: MOP:0000562 ! cycloaddition
 id: RXNO:0000007
 name: ene reaction
 def: "A joining reaction where an alkene with an allylic hydrogen reacts with a compound containing a multiple bond (an enophile) to form a substituted alkene." [RSC:cb]
-synonym: "[C:1]=[C:2][C:3][H:4].[X:5]=[X:6]>>[C:3]=[C:2][C:1][X:6]=[X:5][H:4]" SMIRKS []
+synonym: "[C:1]=[C:2][C:3][H:4].[*:5]=[*:6]>>[C:3]=[C:2][C:1][*:6]=[*:5][H:4]" SMIRKS []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000129/
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
 
@@ -592,6 +623,7 @@ is_a: MOP:0000543 ! molecular process
 id: RXNO:0000011
 name: functional group modification
 def: "A reaction in which a functional group undergoes a change that does not affect the number of atoms in (or connectivity of) the skeleton of the molecule." [rsc:db]
+xref: NAMERXN:9
 is_a: RXNO:0000010 ! functional modification
 
 [Term]
@@ -613,6 +645,7 @@ is_a: RXNO:0000012 ! functional group oxidation
 id: RXNO:0000014
 name: Grignard reaction
 def: "A carbon-carbon coupling reaction where a Grignard reagent reacts with a compound containing an electrophilic carbon atom. A Grignard reagent is a magnesium-stabilised carbon nucleophile. An aldehyde leads to a secondary alcohol, a ketone leads to a tertiary alcohol, an ester leads to a ketone and a nitrile leads to a ketone." [RSC:db]
+xref: NAMERXN:3.7
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 
 [Term]
@@ -621,6 +654,7 @@ name: Wittig reaction
 def: "A carbon-carbon coupling reaction where a carbonyl compound reacts with a phosphonium ylide to give an alkene." [RSC:cb, RSC:cc, RSC:db]
 synonym: "Wittig condensation" EXACT []
 synonym: "Wittig olefination" EXACT []
+xref: NAMERXN:3.8
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 
 [Term]
@@ -689,6 +723,7 @@ def: "A carbon-carbon coupling reaction where an organohalide or triflate couple
 comment: This usually produces the trans-olefin rather than the cis-.
 synonym: "Heck-Mizoroki reaction" EXACT []
 synonym: "Mizoroki-Heck reaction" EXACT []
+xref: NAMERXN:3.2
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 
 [Term]
@@ -764,6 +799,7 @@ is_a: RXNO:0000019 ! substitution reaction
 id: RXNO:0000035
 name: Stille coupling
 def: "A carbon-carbon coupling reaction where an organostannane reacts with an organohalide or organotriflate." [RSC:db]
+xref: NAMERXN:3.4
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 
 [Term]
@@ -1065,6 +1101,7 @@ is_a: RXNO:0000315 ! condensation step
 id: RXNO:0000078
 name: protection reaction
 def: "A reaction in which a functional group is modified by converting it into a protecting group, in order to make subsequent reactions more selective." [RSC:cb]
+xref: NAMERXN:5
 is_a: RXNO:0000010 ! functional modification
 
 [Term]
@@ -1446,6 +1483,7 @@ def: "A carbon-carbon coupling reaction where a terminal alkyne reacts with an a
 synonym: "Hagihara-Sonogashira coupling" EXACT []
 synonym: "Sonogashira cross-coupling" EXACT []
 synonym: "Sonogashira reaction" EXACT []
+xref: NAMERXN:3.3
 is_a: RXNO:0000316 ! platinum-catalysed carbon--carbon coupling reaction
 relationship: has_catalyst CHEBI:33364 ! palladium
 
@@ -1473,6 +1511,7 @@ synonym: "Suzuki reaction" EXACT []
 synonym: "Suzuki-Miyaura cross-coupling" EXACT []
 synonym: "Suzuki-Miyaura cross-coupling reaction" EXACT []
 synonym: "Suzuki-Miyaura reaction" EXACT []
+xref: NAMERXN:3.1
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 
 [Term]
@@ -1647,7 +1686,7 @@ relationship: has_product CHEBI:26455 ! pyrroles
 id: RXNO:0000165
 name: Schotten-Baumann reaction
 def: "The coupling of an alcohol or amine with an acyl chloride to give an ester or amide. A two-phase solvent system is often used, to enable the acid generated during the reaction to be neutralised by the aqueous base, while the starting materials and products remain in the organic phase." [RSC:cb, RSC:cc, RSC:db]
-synonym: "[C:1][*:N,O].[C:2](=[O:3])Cl>>[O:3]=[C:2]O[C:1]" SMIRKS []
+synonym: "[C:1][N,O].[C:2](=[O:3])Cl>>[O:3]=[C:2]O[C:1]" SMIRKS []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000392/
 is_a: RXNO:0000019 ! substitution reaction
 
@@ -1889,6 +1928,7 @@ is_a: RXNO:0000001 ! planned reaction step
 id: RXNO:0000203
 name: deprotection reaction
 def: "A reaction in which a protecting group is modified by converting it into a functional group." [RSC:cb]
+xref: NAMERXN:6
 is_a: RXNO:0000010 ! functional modification
 
 [Term]
@@ -2030,7 +2070,7 @@ id: RXNO:0000225
 name: Wohl-Ziegler bromination
 def: "The allylic or benzylic bromination of hydrocarbons using an N-bromoimide and a radical initiator, to give an allylic or benzylic bromide." [RSC:cc, RSC:cg, RSC:db]
 synonym: "Wohl-Ziegler reaction" EXACT []
-is_a: RXNO:0000019 ! substitution reaction
+is_a: RXNO:0000373 ! functional group addition step
 
 [Term]
 id: RXNO:0000226
@@ -2685,6 +2725,7 @@ relationship: has_catalyst CHEBI:33364 ! palladium
 [Term]
 id: RXNO:0000317
 name: ester condensation reaction
+xref: NAMERXN:3.6
 is_a: MOP:0000627 ! condensation reaction
 intersection_of: MOP:0000627 ! condensation reaction
 intersection_of: has_product CHEBI:33308 ! carboxylic ester
@@ -2694,6 +2735,7 @@ relationship: has_product CHEBI:33308 ! carboxylic ester
 id: RXNO:0000318
 name: O-substitution
 def: "A substitution reaction where the reactive centre is an oxygen atom." [RSC:cb]
+xref: NAMERXN:1.7
 is_a: RXNO:0000019 ! substitution reaction
 
 [Term]
@@ -2801,6 +2843,7 @@ relationship: has_part MOP:0000596 ! pseudohalogenation
 id: RXNO:0000335
 name: reductive amination
 def: "A functional group molecule where a carbonyl oxygen is replaced by an amine." [rsc:cb]
+xref: NAMERXN:1.2
 is_a: RXNO:0000011 ! functional group modification
 created_by: batchelorc
 creation_date: 2012-03-22T12:15:29Z
@@ -2808,7 +2851,8 @@ creation_date: 2012-03-22T12:15:29Z
 [Term]
 id: RXNO:0000336
 name: S-substitution
-def: "A substitution reaction where the reactive centre is an oxygen atom." [RSC:cb]
+def: "A substitution reaction where the reactive centre is a sulfur atom." [RSC:cb]
+xref: NAMERXN:1.8
 is_a: RXNO:0000019 ! substitution reaction
 created_by: batchelorc
 creation_date: 2012-03-22T12:22:59Z
@@ -2817,6 +2861,7 @@ creation_date: 2012-03-22T12:22:59Z
 id: RXNO:0000337
 name: nitro reduction to amine
 def: "A reduction reaction where a nitro group is reduced to an amine." [RSC:cb]
+xref: NAMERXN:7.1
 is_a: MOP:0000569 ! reduction
 created_by: batchelorc
 creation_date: 2012-03-22T12:28:47Z
@@ -2825,6 +2870,7 @@ creation_date: 2012-03-22T12:28:47Z
 id: RXNO:0000338
 name: amide reduction to amine
 def: "A reduction process where an amide is transformed into an amine." [RSC:cb]
+xref: NAMERXN:7.2
 is_a: MOP:0000569 ! reduction
 created_by: batchelorc
 creation_date: 2012-03-22T12:29:51Z
@@ -2833,6 +2879,7 @@ creation_date: 2012-03-22T12:29:51Z
 id: RXNO:0000339
 name: alkene reduction to alkane
 def: "A hydrogenation reaction where an alkene is reduced to an alkane." [RSC:cb]
+xref: NAMERXN:7.6
 is_a: MOP:0000589 ! hydrogenation
 created_by: batchelorc
 creation_date: 2012-03-22T12:30:40Z
@@ -2841,6 +2888,7 @@ creation_date: 2012-03-22T12:30:40Z
 id: RXNO:0000340
 name: amide N-alkylation
 def: "An N-alkylation where the reactive centre is an amide nitrogen." [RSC:cb]
+xref: NAMERXN:1.4
 is_a: MOP:0002369 ! N-alkylation
 created_by: batchelorc
 creation_date: 2012-03-22T03:07:17Z
@@ -2849,6 +2897,7 @@ creation_date: 2012-03-22T03:07:17Z
 id: RXNO:0000341
 name: aniline N-alkylation
 def: "An N-alkylation where the reactive centre is an aniline nitrogen." [RSC:cb]
+xref: NAMERXN:1.5
 is_a: MOP:0002369 ! N-alkylation
 created_by: batchelorc
 creation_date: 2012-03-22T03:07:44Z
@@ -2873,6 +2922,7 @@ creation_date: 2012-03-22T03:13:12Z
 id: RXNO:0000344
 name: alkene oxidative cleavage
 def: "An alkene oxidation where the carbon--carbon double bond is cleaved." [RSC:cb]
+xref: NAMERXN:1.6
 is_a: MOP:0000581 ! alkene oxidation
 created_by: batchelorc
 creation_date: 2012-03-22T03:15:25Z
@@ -2881,6 +2931,7 @@ creation_date: 2012-03-22T03:15:25Z
 id: RXNO:0000345
 name: heteroaryl N-alkylation
 def: "An N-alkylation reaction where the reactive centre is an azacycle ring nitrogen." [RSC:cb]
+xref: NAMERXN:1.1
 is_a: MOP:0002369 ! N-alkylation
 created_by: batchelorc
 creation_date: 2012-03-22T03:22:27Z
@@ -2889,6 +2940,7 @@ creation_date: 2012-03-22T03:22:27Z
 id: RXNO:0000346
 name: oxacycle formation
 def: "A ring formation reaction where the product contains an oxacycle that was not in any of the reactants." [RSC:cb]
+xref: NAMERXN:4.2
 is_a: RXNO:0000349 ! heterocycle formation
 created_by: batchelorc
 creation_date: 2012-03-22T03:24:06Z
@@ -2897,6 +2949,7 @@ creation_date: 2012-03-22T03:24:06Z
 id: RXNO:0000347
 name: azacycle formation
 def: "A ring formation reaction where the product contains an azacycle that was not in any of the reactants." [RSC:cb]
+xref: NAMERXN:4.1
 is_a: RXNO:0000349 ! heterocycle formation
 created_by: batchelorc
 creation_date: 2012-03-22T03:24:12Z
@@ -2905,6 +2958,7 @@ creation_date: 2012-03-22T03:24:12Z
 id: RXNO:0000348
 name: thiacycle formation
 def: "A ring formation reaction where the product contains an thiacycle that was not in any of the reactants." [RSC:cb]
+xref: NAMERXN:4.3
 is_a: RXNO:0000349 ! heterocycle formation
 created_by: batchelorc
 creation_date: 2012-03-22T03:24:23Z
@@ -2913,6 +2967,7 @@ creation_date: 2012-03-22T03:24:23Z
 id: RXNO:0000349
 name: heterocycle formation
 def: "A ring formation reaction where the product contains a heterocycle that was not in any of the reactants." [RSC:cb]
+xref: NAMERXN:4
 is_a: RXNO:0000005 ! ring formation reaction step
 created_by: batchelorc
 creation_date: 2012-03-22T03:24:34Z
@@ -2921,6 +2976,7 @@ creation_date: 2012-03-22T03:24:34Z
 id: RXNO:0000350
 name: alkyne reduction to alkane
 def: "A hydrogenation reaction where an alkyne is reduced to an alkane." [RSC:cb]
+xref: NAMERXN:7.7
 is_a: MOP:0000589 ! hydrogenation
 created_by: batchelorc
 creation_date: 2012-03-22T03:30:01Z
@@ -3087,6 +3143,7 @@ creation_date: 2014-01-08T13:48:00Z
 id: RXNO:0000369
 name: Friedel-Crafts reaction
 def: "A carbon-carbon coupling reaction between an arene and a carbonyl compound (an acylation) or an alkyl compound that can form a carbocation (an alkylation) to form a substituted arene." [RSC:cb]
+xref: NAMERXN:3.10
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 union_of: RXNO:0000045 ! Friedel-Crafts acylation
 union_of: RXNO:0000046 ! Friedel-Crafts alkylation
@@ -3095,7 +3152,7 @@ union_of: RXNO:0000046 ! Friedel-Crafts alkylation
 id: RXNO:0000370
 name: Demko-Sharpless reaction
 def: "A functional group modification of a nitrile to a 1H-tetrazole by addition of sodium azide." [doi:10.1021/jo010635w, RSC:cb]
-synonym: "[#7,S,N;H0:1][C:2]#[N:3].[Na+].[N-:4]=[N+:5]=[N-:6]>>[*:1][C:2]=[N:3][N:4][N:5]=[N:6]1" SMIRKS []
+synonym: "[#6,S,N;H0:1][C:2]#[N:3].[Na+].[N-:4]=[N+:5]=[N-:6]>>[*:1][C:2]=[N:3][N:4][N:5]=[N:6]1" SMIRKS []
 is_a: RXNO:0000011 ! functional group modification
 relationship: has_product CHEBI:35689 ! tetrazoles
 relationship: has_reactant CHEBI:18379 ! nitrile
@@ -3107,6 +3164,21 @@ name: Griess reaction
 def: "A diazotisation that proceeds by the addition of nitrous acid, nitric acid and water, resulting in a diazonium nitrate salt." [RSC:cb]
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000174/
 is_a: RXNO:0000013 ! diazotisation
+
+[Term]
+id: RXNO:0000372
+name: heteroaryl N-arylation
+def: "An N-arylation reaction where the reactive centre is an azacycle ring nitrogen." [RSC:cb]
+xref: NAMERXN:1.3
+is_a: MOP:0002411 ! N-arylation
+
+[Term]
+id: RXNO:0000373
+name: functional group addition step
+def: "A planned reaction step in which a covalent bond is formed between the molecular skeleton and a functional group." [RSC:cb]
+xref: NAMERXN:10
+is_a: RXNO:0000001 ! planned reaction step
+relationship: has_part MOP:0000566 ! formation of covalent bond with group
 
 [Typedef]
 id: has_catalyst
