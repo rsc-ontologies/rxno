@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: rxno/releases/2014-01-20/rxno.owl
+data-version: rxno/releases/2014-01-21/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
@@ -3179,6 +3179,24 @@ def: "A planned reaction step in which a covalent bond is formed between the mol
 xref: NAMERXN:10
 is_a: RXNO:0000001 ! planned reaction step
 relationship: has_part MOP:0000566 ! formation of covalent bond with group
+
+[Term]
+id: RXNO:0000374
+name: Chan-Lam coupling
+def: "Arylation of an amine or an alcohol with an arylboronic acid, stannane or siloxane in air with a copper acetate catalyst." [doi:10.1016/j.tet.2012.06.015]
+comment: The canonical variant is the N-arylation of an amine with an arylboronic acid.
+synonym: "Chan-Lam reaction" EXACT []
+synonym: "Chan-Lam-Evans coupling" EXACT []
+synonym: "Chan-Lam-Evans reaction" EXACT []
+is_a: MOP:0000411 ! arylation
+
+[Term]
+id: RXNO:0000375
+name: Menschutkin reaction
+def: "Reaction of a tertiary amine with an alkyl halide to yield a quaternary amine salt." [RSC:cb]
+synonym: "Menshutkin reaction" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000275/
+is_a: MOP:0002369 ! N-alkylation
 
 [Typedef]
 id: has_catalyst
