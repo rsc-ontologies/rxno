@@ -109,6 +109,11 @@ name: oxetanes
 is_a: CHEBI:24431 ! chemical entity
 
 [Term]
+id: CHEBI:46883
+name: carboxy group
+is_a: CHEBI:24433 ! group
+
+[Term]
 id: CHEBI:51080
 name: nitrate ester
 is_a: CHEBI:24431 ! chemical entity
@@ -224,7 +229,7 @@ name: cycloelimination
 def: "A molecular process in which a cyclic system decomposes into two or more unsaturated molecules or parts of the same molecule and there is a net increase in bond multiplicity." [AU:C01496, AU:C01501]
 synonym: "cycloreversion" EXACT [AU:C01506]
 synonym: "retro-addition" EXACT []
-synonym: "retrocycloaddtion" EXACT [AU:R05372]
+synonym: "retrocycloaddition" EXACT [AU:R05372]
 is_a: MOP:0000543 ! molecular process
 
 [Term]
@@ -484,6 +489,13 @@ xref: http://goldbook.iupac.org/O04365.html
 is_a: IAO:0000030 ! information content entity
 
 [Term]
+id: MOP:0000713
+name: carboxylation
+def: "Formation of a covalent bond between a molecule and a carboxy group." [RSC:xp]
+is_a: MOP:0000458 ! organylation
+relationship: has_participant CHEBI:46883 ! carboxy group
+
+[Term]
 id: MOP:0001458
 name: deorganylation
 def: "Breaking of a covalent bond between a substrate and an organyl group." [RSC:xp]
@@ -496,6 +508,13 @@ name: dehalogenation
 def: "Breaking of a covalent bond between a substrate and a halo group." [RSC:xp]
 comment: has_participant: CHEBI:47854
 is_a: MOP:0000567 ! breaking of covalent bond with group
+
+[Term]
+id: MOP:0001713
+name: decarboxylation
+def: "Breaking of a covalent bond between a molecule and a carboxy group." [RSC:xp]
+is_a: MOP:0001458 ! deorganylation
+relationship: has_participant CHEBI:46883 ! carboxy group
 
 [Term]
 id: MOP:0002364
@@ -3255,6 +3274,43 @@ is_a: RXNO:0000052 ! fused-ring-system formation
 relationship: has_part MOP:0000561 ! cyclization
 relationship: has_part RXNO:0000009 ! Michael addition
 relationship: has_part RXNO:0000017 ! aldol condensation
+
+[Term]
+id: RXNO:0000381
+name: Tiffeneau-Demjanov rearrangement
+def: "Rearrangement of a beta-amino alcohol to yield a carbonyl compound. In the first step the amine is diazotised by reaction with nitrous acid." [RSC:cb]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000432/
+is_a: RXNO:0000025 ! rearrangement step
+
+[Term]
+id: RXNO:0000382
+name: Demjanov rearrangement
+def: "Substitution reaction of a primary amine via deazotisation to yield a mixture of the corresponding primary alcohol and secondary alcohol." [RSC:cb]
+comment: Not *entirely* sure how we classify this. Have given it multiple parentage for the now.
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000106/
+is_a: RXNO:0000019 ! substitution reaction
+is_a: RXNO:0000025 ! rearrangement step
+
+[Term]
+id: RXNO:0000384
+name: cyclic alpha-haloketone Favorskii rearrangement
+def: "Base-catalysed rearrangement of a cyclic alpha-haloketone to the ring-contracted cyclic carboxylic acid." [RSC:cb]
+is_a: RXNO:0000206 ! ring contraction
+is_a: RXNO:0000385 ! Favorskii rearrangement
+
+[Term]
+id: RXNO:0000385
+name: Favorskii rearrangement
+def: "Base-catalysed rearrangement of an alpha-haloketone to a carboxylic acid or ester or amide." [RSC:cb]
+is_a: RXNO:0000025 ! rearrangement step
+
+[Term]
+id: RXNO:0000386
+name: Wallach degradation
+def: "Favorskii rearrangement of a cyclic alpha-dibromoketone followed by decarboxylation to yield a ring-contracted cyclic ketone." [RSC:cb]
+is_a: RXNO:0000206 ! ring contraction
+relationship: has_part MOP:0001713 ! decarboxylation
+relationship: has_part RXNO:0000384 ! cyclic alpha-haloketone Favorskii rearrangement
 
 [Typedef]
 id: has_catalyst
