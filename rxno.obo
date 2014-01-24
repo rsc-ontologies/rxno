@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: rxno/releases/2014-01-22/rxno.owl
+data-version: rxno/releases/2014-01-24/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
@@ -133,7 +133,7 @@ is_a: MOP:0000566 ! formation of covalent bond with group
 [Term]
 id: MOP:0000364
 name: methylation
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000369 ! alkylation
 
 [Term]
 id: MOP:0000369
@@ -173,7 +173,7 @@ name: acylation
 def: "Formation of a covalent bond between a substrate and an acyl group." [RSC:xp]
 comment: has_participant: CHEBI:22221
 synonym: "acylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000458 ! organylation
 
 [Term]
 id: MOP:0000539
@@ -492,8 +492,14 @@ is_a: IAO:0000030 ! information content entity
 id: MOP:0000713
 name: carboxylation
 def: "Formation of a covalent bond between a molecule and a carboxy group." [RSC:xp]
-is_a: MOP:0000458 ! organylation
+is_a: MOP:0000479 ! acylation
 relationship: has_participant CHEBI:46883 ! carboxy group
+
+[Term]
+id: MOP:0000714
+name: carbonyl oxidation to alkyne
+def: "Oxidation of a carbonyl group to an alkyne." [RSC:cb]
+is_a: MOP:0000568 ! oxidation
 
 [Term]
 id: MOP:0001458
@@ -3174,6 +3180,7 @@ name: Crabbe homologation
 def: "Oxidation of an alkene to an allene by heating with formaldehyde, an amine and an inorganic salt." [doi:10.1039/c39790000859, RSC:cb]
 synonym: "[C:1]=[C:2].[C:3]=O>>[C:1]=[C:2]=[C:3]" SMIRKS []
 is_a: MOP:0000581 ! alkene oxidation
+is_a: RXNO:0000070 ! chain lengthening
 relationship: has_participant CHEBI:32952 ! amine
 relationship: has_product CHEBI:37602 ! allenes
 relationship: has_reactant CHEBI:16842 ! formaldehyde
@@ -3311,6 +3318,34 @@ def: "Favorskii rearrangement of a cyclic alpha-dibromoketone followed by decarb
 is_a: RXNO:0000206 ! ring contraction
 relationship: has_part MOP:0001713 ! decarboxylation
 relationship: has_part RXNO:0000384 ! cyclic alpha-haloketone Favorskii rearrangement
+
+[Term]
+id: RXNO:0000387
+name: Seyferth-Gilbert homologation
+def: "Reaction of a carbonyl compound with a dimethyl diazomethyl phosphonate under basic conditions to yield an alkyne." [RSC:cb]
+is_a: MOP:0000714 ! carbonyl oxidation to alkyne
+
+[Term]
+id: RXNO:0000388
+name: Seyferth-Gilbert aldehyde homologation
+def: "Reaction of an aldehyde with a dimethyl diazomethyl phosphonate under basic conditions to yield a terminal alkyne." [RSC:cb]
+is_a: RXNO:0000070 ! chain lengthening
+is_a: RXNO:0000387 ! Seyferth-Gilbert homologation
+
+[Term]
+id: RXNO:0000389
+name: Seyferth-Gilbert ketone homologation
+def: "Reaction of a ketone with a dimethyl diazomethyl phosphonate under basic conditions to yield a terminal alkyne." [RSC:cb]
+is_a: RXNO:0000030 ! insertion reaction
+is_a: RXNO:0000387 ! Seyferth-Gilbert homologation
+
+[Term]
+id: RXNO:0000390
+name: Seyferth-Gilbert-Bestmann homologation
+def: "Seyferth-Gilbert aldehyde homologation where the Seyferth-Gilbert reagent is generated in situ by reaction with methanol and potassium carbonate." [RSC:cb]
+synonym: "Bestmann modification" EXACT []
+synonym: "Ohira-Bestmann modification" EXACT []
+is_a: RXNO:0000388 ! Seyferth-Gilbert aldehyde homologation
 
 [Typedef]
 id: has_catalyst
