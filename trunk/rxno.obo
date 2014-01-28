@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: rxno/releases/2014-01-27/rxno.owl
+data-version: rxno/releases/2014-01-28/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
@@ -12,6 +12,11 @@ is_a: CHEBI:24431 ! chemical entity
 [Term]
 id: CHEBI:18379
 name: nitrile
+is_a: CHEBI:24431 ! chemical entity
+
+[Term]
+id: CHEBI:22715
+name: benzimidazoles
 is_a: CHEBI:24431 ! chemical entity
 
 [Term]
@@ -29,6 +34,11 @@ name: group
 is_a: CHEBI:24431 ! chemical entity
 
 [Term]
+id: CHEBI:24828
+name: indoles
+is_a: CHEBI:24431 ! chemical entity
+
+[Term]
 id: CHEBI:26410
 name: pyrazoles
 is_a: CHEBI:24431 ! chemical entity
@@ -41,6 +51,11 @@ is_a: CHEBI:24431 ! chemical entity
 [Term]
 id: CHEBI:26513
 name: quinolines
+is_a: CHEBI:24431 ! chemical entity
+
+[Term]
+id: CHEBI:26588
+name: triazines
 is_a: CHEBI:24431 ! chemical entity
 
 [Term]
@@ -74,6 +89,11 @@ name: amine
 is_a: CHEBI:24431 ! chemical entity
 
 [Term]
+id: CHEBI:32955
+name: epoxide
+is_a: CHEBI:24431 ! chemical entity
+
+[Term]
 id: CHEBI:32988
 name: amide
 is_a: CHEBI:24431 ! chemical entity
@@ -91,6 +111,11 @@ is_a: CHEBI:24433 ! group
 [Term]
 id: CHEBI:33341
 name: titanium atom
+is_a: CHEBI:24431 ! chemical entity
+
+[Term]
+id: CHEBI:33363
+name: palladium
 is_a: CHEBI:24431 ! chemical entity
 
 [Term]
@@ -119,6 +144,11 @@ name: oxetanes
 is_a: CHEBI:24431 ! chemical entity
 
 [Term]
+id: CHEBI:39447
+name: pyrimidines
+is_a: CHEBI:39447 ! pyrimidines
+
+[Term]
 id: CHEBI:46883
 name: carboxy group
 is_a: CHEBI:24433 ! group
@@ -126,6 +156,11 @@ is_a: CHEBI:24433 ! group
 [Term]
 id: CHEBI:51080
 name: nitrate ester
+is_a: CHEBI:24431 ! chemical entity
+
+[Term]
+id: CHEBI:52094
+name: peroxy acid
 is_a: CHEBI:24431 ! chemical entity
 
 [Term]
@@ -477,6 +512,13 @@ def: "A condensation reaction where the small molecule produced is water." [RSC:
 is_a: MOP:0000627 ! condensation reaction
 created_by: batchelorc
 creation_date: 2009-09-16T11:32:33Z
+
+[Term]
+id: MOP:0000671
+name: epoxidation
+def: "A cyclisation that results in the formation of an epoxide." [RSC:cb]
+is_a: MOP:0000561 ! cyclization
+relationship: has_product CHEBI:32955 ! epoxide
 
 [Term]
 id: MOP:0000705
@@ -1030,6 +1072,7 @@ name: Pictet-Spengler reaction
 def: "A condensation-cyclisation of a beta-phenethylamine with an aldehyde to give a tetrahydroisoquinoline." [RSC:cc, RSC:db]
 synonym: "Pictet-Spengler isoquinoline synthesis" EXACT []
 synonym: "Pictet-Spengler tetrahydroisoquinoline synthesis" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000338/
 is_a: RXNO:0000052 ! fused-ring-system formation
 is_a: RXNO:0000315 ! condensation step
 
@@ -1070,7 +1113,7 @@ name: Fischer indole synthesis
 def: "A cyclisation of an aryl hydrazone of an aldehyde or ketone to give an indole." [RSC:cc, RSC:db]
 synonym: "Fischer indolisation" EXACT []
 synonym: "Fischer indolization" EXACT []
-is_a: RXNO:0000052 ! fused-ring-system formation
+is_a: RXNO:0000395 ! indole synthesis
 
 [Term]
 id: RXNO:0000065
@@ -1313,14 +1356,14 @@ is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 id: RXNO:0000101
 name: Leuckart reaction
 def: "The reductive amination of ketones or aldehydes with an ammonium formate or formamide to form an amine." [RSC:cb, RSC:cc, RSC:db]
-is_a: RXNO:0000011 ! functional group modification
+is_a: RXNO:0000335 ! reductive amination
 
 [Term]
 id: RXNO:0000102
 name: Leuckart-Wallach reaction
 def: "The reductive amination of ketones or aldehydes with an amine and formic acid to form amines." [RSC:cb, RSC:cc, RSC:db]
 synonym: "Wallach reaction" EXACT []
-is_a: RXNO:0000011 ! functional group modification
+is_a: RXNO:0000335 ! reductive amination
 
 [Term]
 id: RXNO:0000103
@@ -1592,6 +1635,7 @@ synonym: "Katsuki-Sharpless epoxidation" EXACT []
 synonym: "Sharpless epoxidation" EXACT []
 synonym: "Sharpless-Katsuki asymmetric epoxidation" EXACT []
 synonym: "Sharpless-Katsuki epoxidation" EXACT []
+is_a: MOP:0000671 ! epoxidation
 is_a: RXNO:0000005 ! ring formation reaction step
 relationship: has_catalyst CHEBI:33341 ! titanium atom
 
@@ -1765,7 +1809,7 @@ id: RXNO:0000166
 name: Hofmann elimination
 def: "The elimination of a methylated amine from an alkyl amine to form an alkene. The reaction proceeds via the quaternary ammonium salt." [RSC:cb, RSC:cc, RSC:db]
 synonym: "exhaustive methylation" EXACT []
-synonym: "Hofmann degradation" EXACT []
+synonym: "Hofmann degradation" RELATED []
 synonym: "N1[C:2][C:3][C:4][C:5][C:6]1[C:7]>>[C:2]=[C:3][C:4][C:5][C:6]=[C:7]" SMIRKS []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000205/
 is_a: RXNO:0000123 ! elimination reaction
@@ -2423,8 +2467,8 @@ is_a: RXNO:0000076 ! Baylis-Hillman reaction
 [Term]
 id: RXNO:0000265
 name: aza-Wittig reaction
-def: "A carbon-carbon coupling reaction where a carbonyl compound reacts with a phosphazene to give an imine." [rsc:db]
-is_a: RXNO:0000011 ! functional group modification
+def: "Reaction of a carbonyl compound with a phosphazene to give an imine." [rsc:db]
+is_a: RXNO:0000367 ! carbonyl compound to imine conversion
 
 [Term]
 id: RXNO:0000266
@@ -2729,7 +2773,7 @@ id: RXNO:0000307
 name: Mori-Ban indole synthesis
 def: "An intramolecular Heck reaction of an ortho-halo-aniline with an alkene, catalysed by palladium." [rsc:db]
 synonym: "Mori-Ban indole reaction" EXACT []
-is_a: RXNO:0000052 ! fused-ring-system formation
+is_a: RXNO:0000395 ! indole synthesis
 
 [Term]
 id: RXNO:0000308
@@ -2908,7 +2952,7 @@ relationship: has_part MOP:0000596 ! pseudohalogenation
 [Term]
 id: RXNO:0000335
 name: reductive amination
-def: "A functional group molecule where a carbonyl oxygen is replaced by an amine." [rsc:cb]
+def: "A functional group modification where a carbonyl oxygen is replaced by an amine." [rsc:cb]
 xref: NAMERXN:1.2
 is_a: RXNO:0000011 ! functional group modification
 created_by: batchelorc
@@ -3395,6 +3439,145 @@ name: Knorr quinoline synthesis
 def: "Synthesis of an alpha-hydroxyquinoline by reaction of a beta-ketoester and an arylamine then dehydration with concentrated sulfuric acid." [RSC:cb]
 is_a: RXNO:0000393 ! quinoline synthesis
 relationship: has_part MOP:0000628 ! dehydration reaction
+
+[Term]
+id: RXNO:0000395
+name: indole synthesis
+def: "A reaction in which the intended product is an indole that was not present in any of the reactants." [RSC:cb]
+is_a: RXNO:0000052 ! fused-ring-system formation
+relationship: has_product CHEBI:24828 ! indoles
+
+[Term]
+id: RXNO:0000396
+name: Larock indole synthesis
+def: "Palladium-catalysed synthesis of a 2,3-substituted indole by reaction of an ortho-iodoaniline with an internal alkyne." [RSC:cb]
+synonym: "Larock indolisation" EXACT []
+synonym: "Larock indolization" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000250/
+is_a: RXNO:0000395 ! indole synthesis
+relationship: has_catalyst CHEBI:33363 ! palladium
+
+[Term]
+id: RXNO:0000397
+name: Pechmann pyrazole synthesis
+def: "Reaction of an organic diazo compound with an acetylene to yield a pyrazole." [RSC:cb]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000323/
+is_a: RXNO:0000392 ! pyrazole synthesis
+
+[Term]
+id: RXNO:0000398
+name: benzimidazole synthesis
+def: "A reaction in which the intended product is a benzimidazole that was not present in any of the reactants." [RSC:cb]
+is_a: RXNO:0000052 ! fused-ring-system formation
+relationship: has_product CHEBI:22715 ! benzimidazoles
+
+[Term]
+id: RXNO:0000399
+name: Phillips benzimidazole synthesis
+def: "Reaction of an ortho-diaminobenzene with a carboxylic acid under heat to yield a benzimidazole." [ISBN:9780080534459, RSC:cb]
+comment: This may be done in the presence of an acid, hexamethyldisilazane in the presence of catalytic triflic acid, a titanium catalyst, elevated pressure, or under UV. [ISBN:9780080534459]
+synonym: "Phillips benzimidazole condensation" EXACT []
+is_a: RXNO:0000398 ! benzimidazole synthesis
+
+[Term]
+id: RXNO:0000400
+name: pyrimidine synthesis
+def: "A reaction in which the intended product is a pyrimidine that was not present in any of the reactants." [RSC:cb]
+is_a: RXNO:0000347 ! azacycle formation
+relationship: has_product CHEBI:39447 ! pyrimidines
+
+[Term]
+id: RXNO:0000401
+name: triazine synthesis
+def: "A reaction in which the intended product is a triazine that was not present in any of the reactants." [RSC:cb]
+is_a: RXNO:0000347 ! azacycle formation
+relationship: has_product CHEBI:26588 ! triazines
+
+[Term]
+id: RXNO:0000402
+name: Pinner pyrimidine synthesis
+def: "Reaction of a 1,3-dicarbonyl compound with an amidine to yield a pyrimidine." [RSC:cb]
+is_a: RXNO:0000400 ! pyrimidine synthesis
+relationship: has_part MOP:0000628 ! dehydration reaction
+
+[Term]
+id: RXNO:0000403
+name: Pinner triazine synthesis
+def: "Reaction of aryl amidines or halogenated aliphatics amidines with phosgene to yield a 2-hydroxy-4,6-diaryl-s-triazine with loss of ammonia." [RSC:cb]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000343/
+is_a: RXNO:0000401 ! triazine synthesis
+
+[Term]
+id: RXNO:0000404
+name: oxa-Pictet-Spengler reaction
+def: "Cyclisation-condensation of a beta-arylethanol with an aldehyde to yield an ortho-,peri-fused aryl-oxacycle." [RSC:cb]
+is_a: RXNO:0000052 ! fused-ring-system formation
+is_a: RXNO:0000315 ! condensation step
+
+[Term]
+id: RXNO:0000405
+name: Prilezhaev epoxidation
+def: "Epoxidation of an alkene by reaction with a peroxy acid." [RSC:cb]
+synonym: "Prileschajew reaction" EXACT []
+synonym: "Prilezhaev reaction" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000351/
+is_a: MOP:0000671 ! epoxidation
+is_a: RXNO:0000005 ! ring formation reaction step
+
+[Term]
+id: RXNO:0000406
+name: Appel halogenation
+def: "Conversion of an alcohol to an alkyl chloride with triphenylphosphine and a halide source." [doi:10.1002/anie.197508011, RSC:cb]
+synonym: "Appel reaction" EXACT []
+is_a: RXNO:0000364 ! alcohol to halide conversion
+
+[Term]
+id: RXNO:0000407
+name: Appel iodination
+def: "Conversion of an alcohol to an alkyl iodide with triphenylphosphine and tetraiodomethane." [RSC:cb]
+is_a: RXNO:0000406 ! Appel halogenation
+
+[Term]
+id: RXNO:0000408
+name: Appel chlorination
+def: "Conversion of an alcohol to an alkyl iodide with triphenylphosphine and tetrachloromethane." [RSC:cb]
+is_a: RXNO:0000406 ! Appel halogenation
+
+[Term]
+id: RXNO:0000409
+name: Appel bromination
+def: "Conversion of an alcohol to an alkyl iodide with triphenylphosphine and tetrabromomethane or bromine." [RSC:cb]
+is_a: RXNO:0000406 ! Appel halogenation
+
+[Term]
+id: RXNO:0000410
+name: Hofmann rearrangement
+def: "Rearrangement of a primary carboxylic amide to an isocyanate." [RSC:cb]
+comment: This counts as an end-of-chain chain shortening because the terminal carbon is separated from the skeleton into the isocyanate group.
+is_a: RXNO:0000105 ! end-of-chain chain shortening
+
+[Term]
+id: RXNO:0000411
+name: Hofmann reaction
+def: "Conversion of a primary carboxylic amide to the lower homologue primary amine. The first step is the Hofmann rearrangement" [RSC:cb]
+synonym: "Hofmann degradation" RELATED []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000209/
+is_a: RXNO:0000105 ! end-of-chain chain shortening
+relationship: has_part RXNO:0000410 ! Hofmann rearrangement
+
+[Term]
+id: RXNO:0000412
+name: Newman-Kwart rearrangement
+def: "Rearrangement of an O-aryl thiocarbamate to an S-aryl thiocarbamate by migration of the aryl group." [RSC:cb]
+is_a: RXNO:0000011 ! functional group modification
+
+[Term]
+id: RXNO:0000413
+name: Zincke nitration
+def: "Substitution of phenol ortho- or para-bromine or iodine atoms by a nitro group on treatment with nitrous acid or a nitrite in acetic acid." [https://www.rsc.org/Merck-Index/reaction/rxn1500000484/]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000484/
+is_a: MOP:0000556 ! nitration
+is_a: RXNO:0000332 ! aromatic substitution step
 
 [Typedef]
 id: has_catalyst
