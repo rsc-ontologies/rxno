@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: rxno/releases/2014-01-29/rxno.owl
+data-version: rxno/releases/2014-01-31/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
@@ -12,17 +12,17 @@ is_a: CHEBI:24431 ! chemical entity
 [Term]
 id: CHEBI:16842
 name: formaldehyde
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:17478 ! aldehyde
 
 [Term]
 id: CHEBI:17087
 name: ketone
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:36587 ! carbonyl compound
 
 [Term]
 id: CHEBI:17478
 name: aldehyde
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:36587 ! carbonyl compound
 
 [Term]
 id: CHEBI:18379
@@ -121,7 +121,7 @@ is_a: CHEBI:24431 ! chemical entity
 [Term]
 id: CHEBI:33308
 name: carboxylic ester
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:36587 ! carbonyl compound
 
 [Term]
 id: CHEBI:33338
@@ -154,6 +154,11 @@ name: tetrazoles
 is_a: CHEBI:24431 ! chemical entity
 
 [Term]
+id: CHEBI:36587
+name: carbonyl compound
+is_a: CHEBI:24431 ! chemical entity
+
+[Term]
 id: CHEBI:36823
 name: pseudohalo group
 is_a: CHEBI:24433 ! group
@@ -174,6 +179,16 @@ name: pyrimidines
 is_a: CHEBI:24431 ! chemical entity
 
 [Term]
+id: CHEBI:43176
+name: hydroxy group
+is_a: CHEBI:24433 ! group
+
+[Term]
+id: CHEBI:46882
+name: amino group
+is_a: CHEBI:24433 ! group
+
+[Term]
 id: CHEBI:46883
 name: carboxy group
 is_a: CHEBI:24433 ! group
@@ -184,9 +199,19 @@ name: nitrate ester
 is_a: CHEBI:24431 ! chemical entity
 
 [Term]
+id: CHEBI:51154
+name: phosphonium ylide
+is_a: CHEBI:24431 ! chemical entity
+
+[Term]
+id: CHEBI:51236
+name: organomagnesium halide
+is_a: CHEBI:24431 ! chemical entity
+
+[Term]
 id: CHEBI:52094
 name: peroxy acid
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:36587 ! carbonyl compound
 
 [Term]
 id: CHEBI:73477
@@ -798,6 +823,7 @@ name: Grignard reaction
 def: "A carbon-carbon coupling reaction where a Grignard reagent reacts with a compound containing an electrophilic carbon atom. A Grignard reagent is a magnesium-stabilised carbon nucleophile. An aldehyde leads to a secondary alcohol, a ketone leads to a tertiary alcohol, an ester leads to a ketone and a nitrile leads to a ketone." [RSC:db]
 xref: NAMERXN:3.7
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+relationship: has_reactant CHEBI:51236 ! organomagnesium halide
 
 [Term]
 id: RXNO:0000015
@@ -807,6 +833,7 @@ synonym: "Wittig condensation" EXACT []
 synonym: "Wittig olefination" EXACT []
 xref: NAMERXN:3.8
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+relationship: has_reactant CHEBI:51154 ! phosphonium ylide
 
 [Term]
 id: RXNO:0000016
@@ -1251,12 +1278,13 @@ relationship: has_reactant CHEBI:17478 ! aldehyde
 [Term]
 id: RXNO:0000077
 name: Darzens reaction
-def: "A coupling of an aldehyde or ketone with an alpha-halo ester to form an alpha,beta-epoxy ester. Hydrolysis of these products yields aldehydes or ketones by elimination of carbon dioxide." [RSC:cc, RSC:db]
+def: "A coupling of an aldehyde or ketone with an alpha-halo ester to form an alpha,beta-epoxy ester, which hydrolyses to yield aldehydes or ketones by elimination of carbon dioxide." [RSC:cc, RSC:db]
 synonym: "Darzens condensation" EXACT []
 synonym: "Darzens-Claisen reaction" EXACT []
 synonym: "glycidic ester condensation" EXACT []
-is_a: RXNO:0000005 ! ring formation reaction step
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 is_a: RXNO:0000315 ! condensation step
+relationship: has_part MOP:0001713 ! decarboxylation
 
 [Term]
 id: RXNO:0000078
@@ -1264,12 +1292,15 @@ name: protection reaction
 def: "A reaction in which a functional group is modified by converting it into a protecting group, in order to make subsequent reactions more selective." [RSC:cb]
 xref: NAMERXN:5
 is_a: RXNO:0000010 ! functional modification
+disjoint_from: RXNO:0000203 ! deprotection reaction
 
 [Term]
 id: RXNO:0000079
 name: Boc protection
 def: "A protection reaction in which an amine is converted into a tert-butoxycarbonyl compound." [RSC:cc, RSC:db]
-is_a: RXNO:0000078 ! protection reaction
+is_a: RXNO:0000321 ! amino group protection
+relationship: has_reactant CHEBI:32952 ! amine
+relationship: RXNO:0000416 CHEBI:46882 ! protects amino group
 
 [Term]
 id: RXNO:0000080
@@ -1825,7 +1856,8 @@ is_a: RXNO:0000052 ! fused-ring-system formation
 id: RXNO:0000160
 name: Fmoc protection
 def: "The protection of an amine (often a peptide) as its 9H-fluoren-9-ylmethoxycarbonyl derivative." [RSC:cb, RSC:cc]
-is_a: RXNO:0000078 ! protection reaction
+is_a: RXNO:0000321 ! amino group protection
+relationship: RXNO:0000416 CHEBI:46882 ! protects amino group
 
 [Term]
 id: RXNO:0000161
@@ -2940,12 +2972,18 @@ id: RXNO:0000320
 name: amino group deprotection
 def: "A deprotection reaction where the reactive centre is an amino nitrogen atom." [RSC:cb]
 is_a: RXNO:0000203 ! deprotection reaction
+intersection_of: RXNO:0000203 ! deprotection reaction
+intersection_of: RXNO:0000417 CHEBI:46882 ! deprotects amino group
+relationship: RXNO:0000417 CHEBI:46882 ! deprotects amino group
 
 [Term]
 id: RXNO:0000321
 name: amino group protection
 def: "A protection reaction where the reactive centre is an amino nitrogen atom." [RSC:cb]
 is_a: RXNO:0000078 ! protection reaction
+intersection_of: RXNO:0000078 ! protection reaction
+intersection_of: RXNO:0000416 CHEBI:46882 ! protects amino group
+relationship: RXNO:0000416 CHEBI:46882 ! protects amino group
 
 [Term]
 id: RXNO:0000322
@@ -2958,18 +2996,25 @@ id: RXNO:0000323
 name: hydroxyl group protection
 def: "A protection reaction where the reactive centre is a hydroxyl oxygen atom." [RSC:cb]
 is_a: RXNO:0000078 ! protection reaction
+intersection_of: RXNO:0000078 ! protection reaction
+intersection_of: RXNO:0000416 CHEBI:43176 ! protects hydroxy group
+relationship: RXNO:0000416 CHEBI:43176 ! protects hydroxy group
 
 [Term]
 id: RXNO:0000324
 name: benzyl ether protection
 def: "A hydroxyl group protection where the hydroxyl oxygen atom is protected by formation of a benzyl ether." [RSC:cb]
 is_a: RXNO:0000323 ! hydroxyl group protection
+relationship: RXNO:0000416 CHEBI:43176 ! protects hydroxy group
 
 [Term]
 id: RXNO:0000325
 name: carboxylic acid protection
 def: "A protection reaction where the reactive centre is a carboxy oxygen." [RSC:cb]
 is_a: RXNO:0000078 ! protection reaction
+intersection_of: RXNO:0000078 ! protection reaction
+intersection_of: RXNO:0000416 CHEBI:46883 ! protects carboxy group
+relationship: RXNO:0000416 CHEBI:46883 ! protects carboxy group
 
 [Term]
 id: RXNO:0000326
@@ -2983,6 +3028,7 @@ name: benzylamine deprotection
 def: "An amino group deprotection reaction where a benzylamine group is removed by hydrogenation." [RSC:cb]
 is_a: MOP:0000589 ! hydrogenation
 is_a: RXNO:0000320 ! amino group deprotection
+relationship: RXNO:0000417 CHEBI:46882 ! deprotects amino group
 
 [Term]
 id: RXNO:0000328
@@ -3665,6 +3711,39 @@ def: "Substitution of phenol ortho- or para-bromine or iodine atoms by a nitro g
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000484/
 is_a: MOP:0000556 ! nitration
 is_a: RXNO:0000332 ! aromatic substitution step
+
+[Term]
+id: RXNO:0000414
+name: haloethanoate ester-aldehyde Darzens reaction
+def: "A coupling of an aldehyde with an alpha-haloethanoate ester to form the next homologous aldehyde." [RSC:cb]
+is_a: RXNO:0000070 ! chain lengthening
+is_a: RXNO:0000077 ! Darzens reaction
+relationship: has_product CHEBI:17478 ! aldehyde
+relationship: has_reactant CHEBI:17478 ! aldehyde
+
+[Term]
+id: RXNO:0000415
+name: haloethanoate ester-ketone Darzens reaction
+def: "A coupling of a ketone with an alpha-haloethanoate ester to replace the oxo group with a formyl group." [RSC:cb]
+is_a: RXNO:0000077 ! Darzens reaction
+relationship: has_product CHEBI:17478 ! aldehyde
+relationship: has_reactant CHEBI:17087 ! ketone
+
+[Typedef]
+id: RXNO:0000416
+name: protects
+def: "The notion here is that a given reaction is meant to 'protect' a given group from reacting in a subsequent process and can be 'deprotected' later." [RSC:cb]
+comment: can we chain has_reactant and has_part ?
+domain: RXNO:0000078 ! protection reaction
+range: CHEBI:24433 ! group
+
+[Typedef]
+id: RXNO:0000417
+name: deprotects
+def: "If a reaction R deprotects a group G, then G is in the product where it wasn't in the reactant." [RSC:cb]
+comment: can we chain has_product and has_part ?
+domain: RXNO:0000203 ! deprotection reaction
+range: CHEBI:24433 ! group
 
 [Typedef]
 id: has_catalyst
