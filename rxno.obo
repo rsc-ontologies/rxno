@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: rxno/releases/2014-01-31/rxno.owl
+data-version: rxno/releases/2014-02-03/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
@@ -156,6 +156,11 @@ is_a: CHEBI:24431 ! chemical entity
 [Term]
 id: CHEBI:36587
 name: carbonyl compound
+is_a: CHEBI:24431 ! chemical entity
+
+[Term]
+id: CHEBI:36605
+name: phthalic anhydride
 is_a: CHEBI:24431 ! chemical entity
 
 [Term]
@@ -3728,6 +3733,21 @@ def: "A coupling of a ketone with an alpha-haloethanoate ester to replace the ox
 is_a: RXNO:0000077 ! Darzens reaction
 relationship: has_product CHEBI:17478 ! aldehyde
 relationship: has_reactant CHEBI:17087 ! ketone
+
+[Term]
+id: RXNO:0000418
+name: phthalimide protection
+def: "Protection of a primary amino group by reaction with phthalic anhydride." [RSC:cb]
+is_a: RXNO:0000321 ! amino group protection
+relationship: has_reactant CHEBI:36605 ! phthalic anhydride
+relationship: RXNO:0000416 CHEBI:46882 ! protects amino group
+
+[Term]
+id: RXNO:0000419
+name: phthalimide deprotection
+def: "Conversion of a phthalimide into the corresponding primary amine." [RSC:cb]
+is_a: RXNO:0000320 ! amino group deprotection
+relationship: RXNO:0000417 CHEBI:46882 ! deprotects amino group
 
 [Typedef]
 id: RXNO:0000416
