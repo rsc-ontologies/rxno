@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: rxno/releases/2014-02-03/rxno.owl
+data-version: rxno/releases/2014-02-04/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
@@ -61,6 +61,11 @@ is_a: CHEBI:24431 ! chemical entity
 [Term]
 id: CHEBI:26410
 name: pyrazoles
+is_a: CHEBI:24431 ! chemical entity
+
+[Term]
+id: CHEBI:26421
+name: pyridines
 is_a: CHEBI:24431 ! chemical entity
 
 [Term]
@@ -1378,6 +1383,7 @@ id: RXNO:0000090
 name: Williamson ether synthesis
 def: "The reaction between an alkyl halide or alkyl sulfate and a metal alkoxide to give an ether." [RSC:cc, RSC:db]
 is_a: RXNO:0000019 ! substitution reaction
+synonym: "Williamson etherification" EXACT []
 
 [Term]
 id: RXNO:0000091
@@ -1867,7 +1873,8 @@ relationship: RXNO:0000416 CHEBI:46882 ! protects amino group
 [Term]
 id: RXNO:0000161
 name: Paal-Knorr synthesis
-def: "The cyclisation of a 1,4-dicarbonyl compound to give a five-membered aromatic ring compound." [RSC:cb, RSC:cc]
+def: "The cyclisation of a 1,4-dicarbonyl compound with another molecule to give a five-membered aromatic ring compound." [RSC:cb, RSC:cc]
+comment: Usually this gives rise to a heterocycle.
 is_a: RXNO:0000005 ! ring formation reaction step
 
 [Term]
@@ -3748,6 +3755,14 @@ name: phthalimide deprotection
 def: "Conversion of a phthalimide into the corresponding primary amine." [RSC:cb]
 is_a: RXNO:0000320 ! amino group deprotection
 relationship: RXNO:0000417 CHEBI:46882 ! deprotects amino group
+
+[Term]
+id: RXNO:0000420
+name: Krohnke pyridine synthesis
+def: "Condensation of a 1,5-diketone with ammonium acetate in acetic acid to form a pyridine." [RSC:cb]
+xref: http://dx.doi.org/10.1039/SP543
+is_a: RXNO:0000347 ! azacycle formation
+relationship: has_product CHEBI:26421 ! pyridines
 
 [Typedef]
 id: RXNO:0000416
