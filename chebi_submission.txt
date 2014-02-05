@@ -1,0 +1,12 @@
+#
+# New classes for submission to ChEBI.
+#
+
+aromatic diazonium salt: salt (CHEBI:24866) and has_part aromatic diazonium ion (CHEBI:53507)
+aromatic bromide: is_a aromatic halide (CHEBI:new)
+aromatic chloride: is_a aromatic halide (CHEBI:new)
+aromatic halide: organic aromatic compound (CHEBI:33659) and has_part halo group (CHEBI:47854)
+aromatic pseudohalide: organic aromatic compound (CHEBI:33659) and has_part pseudohalo group (CHEBI:36823)
+copper(I) halide: is_a inorganic halide (CHEBI:new).  copper(I) chloride (CHEBI:53472) is_a copper(I) halide
+copper(I) pseudohalide: is_a inorganic pseudohalide (CHEBI:new)
+pseudohalide salt: salt (CHEBI:24866) and has_part pseudohalide anion (CHEBI:36828)
