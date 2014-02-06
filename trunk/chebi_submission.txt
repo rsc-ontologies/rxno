@@ -9,4 +9,8 @@ aromatic halide: organic aromatic compound (CHEBI:33659) and has_part halo group
 aromatic pseudohalide: organic aromatic compound (CHEBI:33659) and has_part pseudohalo group (CHEBI:36823)
 copper(I) halide: is_a inorganic halide (CHEBI:new).  copper(I) chloride (CHEBI:53472) is_a copper(I) halide
 copper(I) pseudohalide: is_a inorganic pseudohalide (CHEBI:new)
+copper(II) halide: is_a inorganic halide (CHEBI:new). copper(II) chloride (CHEBI:49553) is_a copper(II) halide
+1,5-hexadiene: is_a alkadiene (CHEBI:33646)
+3-hydroxy-1,5-hexadiene:
 pseudohalide salt: salt (CHEBI:24866) and has_part pseudohalide anion (CHEBI:36828)
+5,6-unsaturated carbonyl compound:
