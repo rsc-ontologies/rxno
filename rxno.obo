@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: rxno/releases/2014-02-05/rxno.owl
+data-version: rxno/releases/2014-02-06/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
@@ -7,7 +7,7 @@ ontology: rxno.obo
 [Term]
 id: CHEBI:15734
 name: primary alcohol
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:16842
@@ -27,12 +27,12 @@ is_a: CHEBI:36587 ! carbonyl compound
 [Term]
 id: CHEBI:17883
 name: hydrogen chloride
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:18379
 name: nitrile
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:22698
@@ -42,17 +42,23 @@ is_a: CHEBI:17478 ! aldehyde
 [Term]
 id: CHEBI:22715
 name: benzimidazoles
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:23252
 name: cinnamic acids
+is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:23367
+name: molecular entity
 is_a: CHEBI:24431 ! chemical entity
+disjoint_from: CHEBI:24433 ! group
 
 [Term]
 id: CHEBI:24129
 name: furans
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:24431
@@ -66,47 +72,52 @@ is_a: CHEBI:24431 ! chemical entity
 [Term]
 id: CHEBI:24828
 name: indoles
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:25750
+name: oxime
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:26410
 name: pyrazoles
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:26421
 name: pyridines
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:26455
 name: pyrroles
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:26513
 name: quinolines
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:26588
 name: triazines
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:26961
 name: thiophenes
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:278547
 name: sodium azide
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:28694
 name: copper atom
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:29785
@@ -121,22 +132,22 @@ is_a: CHEBI:32952 ! amine
 [Term]
 id: CHEBI:32878
 name: alkene
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:32952
 name: amine
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:32955
 name: epoxide
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:32988
 name: amide
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:33308
@@ -151,22 +162,22 @@ is_a: CHEBI:24433 ! group
 [Term]
 id: CHEBI:33341
 name: titanium atom
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:33363
 name: palladium
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:33364
 name: platinum
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:33641
 name: olefin
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:33855
@@ -176,32 +187,32 @@ is_a: CHEBI:17478 ! aldehyde
 [Term]
 id: CHEBI:33860
 name: aromatic amine
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:35681
 name: secondary alcohol
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:35689
 name: tetrazoles
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:36587
 name: carbonyl compound
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:36605
 name: phthalic anhydride
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:36606
 name: acid anhydride
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:36823
@@ -209,19 +220,24 @@ name: pseudohalo group
 is_a: CHEBI:24433 ! group
 
 [Term]
+id: CHEBI:37579
+name: acyl halide
+is_a: CHEBI:23367 ! molecular entity
+
+[Term]
 id: CHEBI:37602
 name: allenes
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:38784
 name: oxetanes
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:39447
 name: pyrimidines
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:43176
@@ -241,22 +257,22 @@ is_a: CHEBI:24433 ! group
 [Term]
 id: CHEBI:47266
 name: hydrogen bromide
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:51080
 name: nitrate ester
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:51154
 name: phosphonium ylide
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:51236
 name: organomagnesium halide
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:51721
@@ -276,7 +292,7 @@ is_a: CHEBI:17087 ! ketone
 [Term]
 id: CHEBI:73477
 name: terminal acetylenic compound
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: IAO:0000030
@@ -317,7 +333,7 @@ name: arylation
 def: "Formation of a covalent bond between a substrate and an aryl group." [RSC:xp]
 synonym: "arylation" EXACT []
 is_a: MOP:0000410 ! hydrocarbylation
-relationship: has_participant CHEBI:33338 ! aryl group
+relationship: BFO:0000057 CHEBI:33338 ! has_participant aryl group
 
 [Term]
 id: MOP:0000458
@@ -361,7 +377,7 @@ id: MOP:0000556
 name: nitration
 def: "Formation of a covalent bond between a substrate and a nitro group." [RSC:xp]
 is_a: MOP:0000566 ! formation of covalent bond with group
-relationship: has_participant CHEBI:29785 ! nitro group
+relationship: BFO:0000057 CHEBI:29785 ! has_participant nitro group
 
 [Term]
 id: MOP:0000561
@@ -445,8 +461,9 @@ id: MOP:0000571
 name: aldehyde reduction
 def: "A reduction in which an aldehyde is reduced to form a primary alcohol." [RSC:cb]
 is_a: MOP:0000569 ! reduction
-relationship: has_product CHEBI:15734 ! primary alcohol
-relationship: has_reactant CHEBI:17478 ! aldehyde
+is_a: RXNO:0000001 ! planned reaction step
+relationship: RXNO:0000423 CHEBI:15734 ! has specified product primary alcohol
+relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 created_by: batchelorc
 creation_date: 2009-06-01T06:07:02Z
 
@@ -463,8 +480,9 @@ id: MOP:0000573
 name: primary alcohol oxidation to aldehyde
 def: "An oxidation process where a primary alcohol is transformed into an aldehyde." [RSC:cb]
 is_a: MOP:0000572 ! alcohol oxidation
-relationship: has_product CHEBI:17478 ! aldehyde
-relationship: has_reactant CHEBI:15734 ! primary alcohol
+is_a: RXNO:0000001 ! planned reaction step
+relationship: RXNO:0000423 CHEBI:17478 ! has specified product aldehyde
+relationship: RXNO:0000424 CHEBI:15734 ! has specified reactant primary alcohol
 created_by: batchelorc
 creation_date: 2009-06-01T06:10:59Z
 
@@ -473,8 +491,9 @@ id: MOP:0000574
 name: secondary alcohol oxidation to ketone
 def: "An oxidation process where a secondary alcohol is transformed into a ketone." [RSC:cb]
 is_a: MOP:0000572 ! alcohol oxidation
-relationship: has_product CHEBI:17087 ! ketone
-relationship: has_reactant CHEBI:35681 ! secondary alcohol
+is_a: RXNO:0000001 ! planned reaction step
+relationship: RXNO:0000423 CHEBI:17087 ! has specified product ketone
+relationship: RXNO:0000424 CHEBI:35681 ! has specified reactant secondary alcohol
 created_by: batchelorc
 creation_date: 2009-06-01T06:11:31Z
 
@@ -510,7 +529,8 @@ def: "An ester reduction where the product is the corresponding aldehyde." [RSC:
 synonym: "reduction of ester to aldehyde" EXACT []
 synonym: "reduction of esters to aldehyde" EXACT []
 is_a: MOP:0000577 ! ester reduction
-relationship: has_product CHEBI:17478 ! aldehyde
+is_a: RXNO:0000001 ! planned reaction step
+relationship: RXNO:0000423 CHEBI:17478 ! has specified product aldehyde
 created_by: batchelorc
 creation_date: 2009-06-02T05:31:49Z
 
@@ -521,7 +541,8 @@ def: "An ester reduction where the product is the corresponding primary alcohol.
 synonym: "reduction of ester to primary alcohol" EXACT []
 synonym: "reduction of esters to primary alcohol" EXACT []
 is_a: MOP:0000577 ! ester reduction
-relationship: has_product CHEBI:15734 ! primary alcohol
+is_a: RXNO:0000001 ! planned reaction step
+relationship: RXNO:0000423 CHEBI:15734 ! has specified product primary alcohol
 created_by: batchelorc
 creation_date: 2009-06-02T05:32:37Z
 
@@ -532,8 +553,9 @@ def: "A reduction process where a ketone is reduced to a secondary alcohol." [RS
 synonym: "reduction of ketone" EXACT []
 synonym: "reduction of ketones" EXACT []
 is_a: MOP:0000569 ! reduction
-relationship: has_product CHEBI:35681 ! secondary alcohol
-relationship: has_reactant CHEBI:17087 ! ketone
+is_a: RXNO:0000001 ! planned reaction step
+relationship: RXNO:0000423 CHEBI:35681 ! has specified product secondary alcohol
+relationship: RXNO:0000424 CHEBI:17087 ! has specified reactant ketone
 created_by: batchelorc
 creation_date: 2009-06-02T05:35:42Z
 
@@ -579,8 +601,9 @@ creation_date: 2009-06-02T06:02:46Z
 id: MOP:0000585
 name: tertiary alkene oxidation to carboxylic acid and ketone
 def: "An alkene oxidation where the reactant is a tertiary alkene and the products are the corresponding carboxylic acid and ketone. This can be achieved with a warm, acidic solution of potassium permanganate." [RSC:cb]
+is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000344 ! alkene oxidative cleavage
-relationship: has_product CHEBI:17087 ! ketone
+relationship: RXNO:0000423 CHEBI:17087 ! has specified product ketone
 created_by: batchelorc
 creation_date: 2009-06-02T06:04:14Z
 
@@ -588,8 +611,9 @@ creation_date: 2009-06-02T06:04:14Z
 id: MOP:0000586
 name: secondary, non-terminal alkene oxidation to aldehydes
 def: "An alkene oxidation process where the reactant is a secondary alkene and the products are the corresponding aldehydes. This can be achieved with warm, acidic potassium permanganate." [RSC:cb]
+is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000344 ! alkene oxidative cleavage
-relationship: has_product CHEBI:17478 ! aldehyde
+relationship: RXNO:0000423 CHEBI:17478 ! has specified product aldehyde
 created_by: batchelorc
 creation_date: 2009-06-02T06:06:23Z
 
@@ -597,8 +621,9 @@ creation_date: 2009-06-02T06:06:23Z
 id: MOP:0000587
 name: secondary terminal alkene oxidation to ketone and carbon dioxide
 def: "An alkene oxidation process where the reactant is a secondary terminal alkene and the products are carbon dioxide and the corresponding ketone. This can be achieved by warm, acidic potassium permanganate solution." [RSC:cb]
+is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000344 ! alkene oxidative cleavage
-relationship: has_product CHEBI:17087 ! ketone
+relationship: RXNO:0000423 CHEBI:17087 ! has specified product ketone
 created_by: batchelorc
 creation_date: 2009-06-02T06:07:44Z
 
@@ -606,8 +631,9 @@ creation_date: 2009-06-02T06:07:44Z
 id: MOP:0000588
 name: quaternary alkene oxidation to ketones
 def: "An alkene oxidation process where the reactant is a quaternary alkene and the products are the corresponding ketones." [RSC:cb]
+is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000344 ! alkene oxidative cleavage
-relationship: has_product CHEBI:17087 ! ketone
+relationship: RXNO:0000423 CHEBI:17087 ! has specified product ketone
 created_by: batchelorc
 creation_date: 2009-06-02T06:09:24Z
 
@@ -624,7 +650,7 @@ id: MOP:0000596
 name: pseudohalogenation
 def: "Formation of a covalent bond between a substrate and a pseudohalo group." [RSC:xp]
 is_a: MOP:0000566 ! formation of covalent bond with group
-relationship: has_participant CHEBI:36823 ! pseudohalo group
+relationship: BFO:0000057 CHEBI:36823 ! has_participant pseudohalo group
 
 [Term]
 id: MOP:0000627
@@ -647,7 +673,8 @@ id: MOP:0000671
 name: epoxidation
 def: "A cyclisation that results in the formation of an epoxide." [RSC:cb]
 is_a: MOP:0000561 ! cyclization
-relationship: has_product CHEBI:32955 ! epoxide
+is_a: RXNO:0000001 ! planned reaction step
+relationship: RXNO:0000423 CHEBI:32955 ! has specified product epoxide
 
 [Term]
 id: MOP:0000705
@@ -674,7 +701,7 @@ id: MOP:0000713
 name: carboxylation
 def: "Formation of a covalent bond between a molecule and a carboxy group." [RSC:xp]
 is_a: MOP:0000479 ! acylation
-relationship: has_participant CHEBI:46883 ! carboxy group
+relationship: BFO:0000057 CHEBI:46883 ! has_participant carboxy group
 
 [Term]
 id: MOP:0000714
@@ -707,7 +734,7 @@ id: MOP:0001713
 name: decarboxylation
 def: "Breaking of a covalent bond between a molecule and a carboxy group." [RSC:xp]
 is_a: MOP:0001458 ! deorganylation
-relationship: has_participant CHEBI:46883 ! carboxy group
+relationship: BFO:0000057 CHEBI:46883 ! has_participant carboxy group
 
 [Term]
 id: MOP:0002364
@@ -728,7 +755,7 @@ id: MOP:0002411
 name: N-arylation
 def: "Formation of a covalent bond between a nitrogen atom in a substrate and an aryl group." [RSC:xp]
 is_a: MOP:0000411 ! arylation
-relationship: has_participant CHEBI:33338 ! aryl group
+relationship: BFO:0000057 CHEBI:33338 ! has_participant aryl group
 
 [Term]
 id: MOP:0002479
@@ -766,6 +793,10 @@ comment: has_participant: CHEBI:29825
 is_a: MOP:0000539 ! sulfonylation
 
 [Term]
+id: OBI:0000011
+name: planned process
+
+[Term]
 id: RXNO:0000000
 name: molecular skeleton joining reaction
 def: "A reaction where the number of atoms in the molecular skeleton increases." [RSC:cb]
@@ -777,6 +808,7 @@ id: RXNO:0000001
 name: planned reaction step
 def: "A molecular process which takes place as part of a planned synthesis." [RSC:cb]
 is_a: MOP:0000543 ! molecular process
+is_a: OBI:0000011 ! planned process
 intersection_of: MOP:0000543 ! molecular process
 intersection_of: part_of RXNO:0000329 ! planned synthesis
 relationship: part_of RXNO:0000329 ! planned synthesis
@@ -795,9 +827,9 @@ def: "An aldol condensation where an aryl aldehyde reacts with an acid anhydride
 synonym: "[c:1][C:2](=O)O>>[c:1][C:2]=C(=O)O" SMIRKS []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000327/
 is_a: RXNO:0000017 ! aldol condensation
-relationship: has_product CHEBI:23252 ! cinnamic acids
-relationship: has_reactant CHEBI:33855 ! arenecarbaldehyde
-relationship: has_reactant CHEBI:36606 ! acid anhydride
+relationship: RXNO:0000423 CHEBI:23252 ! has specified product cinnamic acids
+relationship: RXNO:0000424 CHEBI:33855 ! has specified reactant arenecarbaldehyde
+relationship: RXNO:0000424 CHEBI:36606 ! has specified reactant acid anhydride
 
 [Term]
 id: RXNO:0000004
@@ -877,16 +909,18 @@ name: diazotisation
 def: "A functional group oxidation where an aromatic amine is transformed into an aromatic diazonium salt." [RSC:cc]
 synonym: "[c:1][N:2]>>[c:1][N:2]=[N+]" SMIRKS []
 synonym: "diazotization" EXACT []
+is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000012 ! functional group oxidation
-relationship: has_reactant CHEBI:33860 ! aromatic amine
+relationship: RXNO:0000424 CHEBI:33860 ! has specified reactant aromatic amine
 
 [Term]
 id: RXNO:0000014
 name: Grignard reaction
 def: "A carbon-carbon coupling reaction where a Grignard reagent reacts with a compound containing an electrophilic carbon atom. A Grignard reagent is a magnesium-stabilised carbon nucleophile. An aldehyde leads to a secondary alcohol, a ketone leads to a tertiary alcohol, an ester leads to a ketone and a nitrile leads to a ketone." [RSC:db]
 xref: NAMERXN:3.7
+is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
-relationship: has_reactant CHEBI:51236 ! organomagnesium halide
+relationship: RXNO:0000424 CHEBI:51236 ! has specified reactant organomagnesium halide
 
 [Term]
 id: RXNO:0000015
@@ -895,17 +929,19 @@ def: "A carbon-carbon coupling reaction where a carbonyl compound reacts with a 
 synonym: "Wittig condensation" EXACT []
 synonym: "Wittig olefination" EXACT []
 xref: NAMERXN:3.8
+is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
-relationship: has_product CHEBI:33641 ! olefin
-relationship: has_reactant CHEBI:51154 ! phosphonium ylide
+relationship: RXNO:0000423 CHEBI:33641 ! has specified product olefin
+relationship: RXNO:0000424 CHEBI:51154 ! has specified reactant phosphonium ylide
 
 [Term]
 id: RXNO:0000016
 name: aldol addition
 def: "A carbon-carbon coupling reaction where an enol or enolate reacts with a carbonyl compound to form a beta-hydroxy ketone. The name comes from aldehyde + alcohol." [RSC:cb]
 synonym: "aldol reaction" EXACT []
+is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
-relationship: has_product CHEBI:55380 ! beta-hydroxy ketone
+relationship: RXNO:0000423 CHEBI:55380 ! has specified product beta-hydroxy ketone
 
 [Term]
 id: RXNO:0000017
@@ -913,7 +949,7 @@ name: aldol condensation
 def: "An aldol addition where an enol or enolate reacts with a carbonyl compound to form an alpha,beta-unsaturated ketone." [RSC:cc]
 is_a: RXNO:0000016 ! aldol addition
 is_a: RXNO:0000315 ! condensation step
-relationship: has_product CHEBI:51721 ! alpha,beta-unsaturated ketone
+relationship: RXNO:0000423 CHEBI:51721 ! has specified product alpha,beta-unsaturated ketone
 
 [Term]
 id: RXNO:0000018
@@ -951,27 +987,28 @@ name: Gattermann halogenation
 def: "An aromatic substitution reaction where an aryl diazonium salt reacts with copper powder and hydrochloric acid or hydrobromic acid to form an aromatic chloride or bromide." [RSC:cc]
 comment: This is also sometimes known as the Gattermann reaction. Also doesn't work to make fluorides or iodides.
 synonym: "Gattermann reaction" RELATED []
+is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000332 ! aromatic substitution step
 union_of: RXNO:0000421 ! Gattermann chlorination
 union_of: RXNO:0000422 ! Gattermann bromination
-relationship: has_catalyst CHEBI:28694 ! copper atom
+relationship: RXNO:0000425 CHEBI:28694 ! has_catalyst copper atom
 
 [Term]
 id: RXNO:0000023
 name: Koerner-Contardi reaction
-def: "An aromatic substitution reaction where an aryl diazonium salt reacts with a cupric halide to form an aromatic halide." [RSC:cc]
+def: "An aromatic substitution reaction where an aryl diazonium salt reacts with a copper(II) halide to form an aromatic halide." [RSC:cc]
 is_a: RXNO:0000332 ! aromatic substitution step
 
 [Term]
 id: RXNO:0000024
 name: Heck reaction
 def: "A carbon-carbon coupling reaction where an organohalide or triflate couples to a terminal olefin to produce an internal olefin, catalysed by palladium. It is stereospecific." [RSC:cb, RSC:db]
-comment: This usually produces the trans-olefin rather than the cis-.
+comment: This usually produces the trans-olefin rather than the cis-. ALSO Merck Index gives a non-terminal example.
 synonym: "Heck-Mizoroki reaction" EXACT []
 synonym: "Mizoroki-Heck reaction" EXACT []
 xref: NAMERXN:3.2
 is_a: RXNO:0000316 ! palladium-catalysed carbon-carbon coupling reaction
-relationship: has_catalyst CHEBI:33363 ! palladium
+relationship: RXNO:0000425 CHEBI:33363 ! has_catalyst palladium
 
 [Term]
 id: RXNO:0000025
@@ -984,6 +1021,8 @@ id: RXNO:0000026
 name: Beckmann rearrangement
 def: "A rearrangement where an oxime rearranges to form an amide. Often there is selective migration of one group." [RSC:cb]
 is_a: RXNO:0000025 ! rearrangement step
+relationship: RXNO:0000423 CHEBI:32988 ! has specified product amide
+relationship: RXNO:0000424 CHEBI:25750 ! has specified reactant oxime
 
 [Term]
 id: RXNO:0000027
@@ -1021,6 +1060,8 @@ synonym: "Baeyer-Villiger reaction" EXACT []
 synonym: "Baeyer-Villiger rearrangement" RELATED []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000013/
 is_a: RXNO:0000030 ! insertion reaction
+relationship: RXNO:0000423 CHEBI:33308 ! has specified product carboxylic ester
+relationship: RXNO:0000424 CHEBI:17087 ! has specified reactant ketone
 
 [Term]
 id: RXNO:0000032
@@ -1107,7 +1148,7 @@ name: Knoevenagel condensation
 def: "A carbon-carbon coupling reaction of an aldehyde and a methylene compound." [RSC:cb]
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 is_a: RXNO:0000315 ! condensation step
-relationship: has_reactant CHEBI:17478 ! aldehyde
+relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 
 [Term]
 id: RXNO:0000045
@@ -1125,24 +1166,26 @@ is_a: RXNO:0000369 ! Friedel-Crafts reaction
 id: RXNO:0000047
 name: Oppenauer oxidation
 def: "An oxidation of a secondary alcohol to a ketone involving an equilibrium between the alcohol and a reagent ketone present in excess, catalysed by a metal alkoxide." [RSC:cc, RSC:db]
+is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000012 ! functional group oxidation
-relationship: has_product CHEBI:17478 ! aldehyde
-relationship: has_reactant CHEBI:35681 ! secondary alcohol
+relationship: RXNO:0000423 CHEBI:17478 ! has specified product aldehyde
+relationship: RXNO:0000424 CHEBI:35681 ! has specified reactant secondary alcohol
 
 [Term]
 id: RXNO:0000048
 name: Prins reaction
 def: "A carbon-carbon coupling between formaldehyde and an alkene to give a 1,3-diol or an allylic alcohol." [RSC:cc, RSC:db]
 comment: See also "intramolecular Prins reaction".
+is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
-relationship: has_reactant CHEBI:16842 ! formaldehyde
+relationship: RXNO:0000424 CHEBI:16842 ! has specified reactant formaldehyde
 
 [Term]
 id: RXNO:0000049
 name: intramolecular Prins reaction
 def: "A reaction between formaldehyde and an alkene to give a 1,3-dioxane." [RSC:cc, RSC:db]
 is_a: RXNO:0000005 ! ring formation reaction step
-relationship: has_reactant CHEBI:16842 ! formaldehyde
+relationship: RXNO:0000424 CHEBI:16842 ! has specified reactant formaldehyde
 
 [Term]
 id: RXNO:0000050
@@ -1221,7 +1264,7 @@ synonym: "Pictet-Spengler tetrahydroisoquinoline synthesis" EXACT []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000338/
 is_a: RXNO:0000052 ! fused-ring-system formation
 is_a: RXNO:0000315 ! condensation step
-relationship: has_reactant CHEBI:17478 ! aldehyde
+relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 
 [Term]
 id: RXNO:0000060
@@ -1341,8 +1384,9 @@ name: Baylis-Hillman reaction
 def: "A carbon-carbon coupling of an aldehyde to an activated alkene in the presence of a nucleophilic base to give an alpha-hydroxyalkylated compound." [RSC:cb, RSC:cc, RSC:db]
 synonym: "MBH reaction" EXACT []
 synonym: "Morita-Baylis-Hillman reaction" EXACT []
+is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
-relationship: has_reactant CHEBI:17478 ! aldehyde
+relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 
 [Term]
 id: RXNO:0000077
@@ -1367,9 +1411,10 @@ disjoint_from: RXNO:0000203 ! deprotection reaction
 id: RXNO:0000079
 name: Boc protection
 def: "A protection reaction in which an amine is converted into a tert-butoxycarbonyl compound." [RSC:cc, RSC:db]
+is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000321 ! amino group protection
-relationship: has_reactant CHEBI:32952 ! amine
 relationship: RXNO:0000416 CHEBI:46882 ! protects amino group
+relationship: RXNO:0000424 CHEBI:32952 ! has specified reactant amine
 
 [Term]
 id: RXNO:0000080
@@ -1396,7 +1441,8 @@ id: RXNO:0000083
 name: Paterno-Buchi reaction
 def: "A photochemical cycloaddition between an aldehyde or ketone and an alkene to give an oxetane." [RSC:cc, RSC:db]
 is_a: MOP:0000562 ! cycloaddition
-relationship: has_product CHEBI:38784 ! oxetanes
+is_a: RXNO:0000001 ! planned reaction step
+relationship: RXNO:0000423 CHEBI:38784 ! has specified product oxetanes
 
 [Term]
 id: RXNO:0000084
@@ -1422,7 +1468,7 @@ id: RXNO:0000087
 name: Barton reaction
 def: "The photolytic oxidation of a nitrate ester to give a gamma-nitroalcohol." [RSC:cc, RSC:db]
 is_a: RXNO:0000025 ! rearrangement step
-relationship: has_reactant CHEBI:51080 ! nitrate ester
+relationship: RXNO:0000424 CHEBI:51080 ! has specified reactant nitrate ester
 
 [Term]
 id: RXNO:0000088
@@ -1491,23 +1537,26 @@ is_a: RXNO:0000036 ! Reformatsky reaction
 id: RXNO:0000098
 name: Glaser coupling
 def: "A coupling reaction between two molecules of a terminal alkyne catalysed by Cu(I) salts." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000039 ! carbon-carbon homocoupling reaction
-relationship: has_reactant CHEBI:73477 ! terminal acetylenic compound
+relationship: RXNO:0000424 CHEBI:73477 ! has specified reactant terminal acetylenic compound
 
 [Term]
 id: RXNO:0000099
 name: Eglinton reaction
 def: "A coupling reaction between two molecules of a terminal alkyne using stoichiometric Cu(II) salts." [RSC:cb, RSC:cc, RSC:db]
 synonym: "Eglinton coupling" EXACT []
+is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000039 ! carbon-carbon homocoupling reaction
-relationship: has_reactant CHEBI:73477 ! terminal acetylenic compound
+relationship: RXNO:0000424 CHEBI:73477 ! has specified reactant terminal acetylenic compound
 
 [Term]
 id: RXNO:0000100
 name: Cadiot-Chodkiewicz coupling
 def: "A coupling reaction between a terminal alkyne and an alkynyl halide catalysed by Cu(I) salts." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
-relationship: has_reactant CHEBI:73477 ! terminal acetylenic compound
+relationship: RXNO:0000424 CHEBI:73477 ! has specified reactant terminal acetylenic compound
 
 [Term]
 id: RXNO:0000101
@@ -1616,8 +1665,9 @@ is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 id: RXNO:0000118
 name: Sommelet reaction
 def: "The oxidation of a benzylic halide to give an aldehyde. The reaction uses hexamethylenetetramine." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000011 ! functional group modification
-relationship: has_product CHEBI:17478 ! aldehyde
+relationship: RXNO:0000423 CHEBI:17478 ! has specified product aldehyde
 
 [Term]
 id: RXNO:0000119
@@ -1713,15 +1763,17 @@ is_a: RXNO:0000130 ! Wacker-Tsuji oxidation
 id: RXNO:0000132
 name: Monsanto process
 def: "The reaction of formaldehyde with methanol to form acetic acid, catalysed by a rhodium complex." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
-relationship: has_reactant CHEBI:16842 ! formaldehyde
+relationship: RXNO:0000424 CHEBI:16842 ! has specified reactant formaldehyde
 
 [Term]
 id: RXNO:0000133
 name: Cativa process
 def: "The reaction of formaldehyde with methanol to form acetic acid, catalysed by an iridium complex." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
-relationship: has_reactant CHEBI:16842 ! formaldehyde
+relationship: RXNO:0000424 CHEBI:16842 ! has specified reactant formaldehyde
 
 [Term]
 id: RXNO:0000134
@@ -1743,9 +1795,11 @@ id: RXNO:0000136
 name: Rosenmund reduction
 def: "The hydrogenolysis of an acyl halide to the corresponding aldehyde (FG reduction), catalysed by palladium-on-barium sulfate." [RSC:cg, rsc:db]
 synonym: "Rosenmund reaction" EXACT []
+is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000037 ! functional group reduction
-relationship: has_catalyst CHEBI:33363 ! palladium
-relationship: has_product CHEBI:17478 ! aldehyde
+relationship: RXNO:0000423 CHEBI:17478 ! has specified product aldehyde
+relationship: RXNO:0000424 CHEBI:37579 ! has specified reactant acyl halide
+relationship: RXNO:0000425 CHEBI:33363 ! has_catalyst palladium
 
 [Term]
 id: RXNO:0000137
@@ -1755,17 +1809,19 @@ synonym: "Hagihara-Sonogashira coupling" EXACT []
 synonym: "Sonogashira cross-coupling" EXACT []
 synonym: "Sonogashira reaction" EXACT []
 xref: NAMERXN:3.3
+is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000316 ! palladium-catalysed carbon-carbon coupling reaction
-relationship: has_catalyst CHEBI:33363 ! palladium
-relationship: has_reactant CHEBI:73477 ! terminal acetylenic compound
+relationship: RXNO:0000423 CHEBI:73477 ! has specified product terminal acetylenic compound
+relationship: RXNO:0000425 CHEBI:33363 ! has_catalyst palladium
 
 [Term]
 id: RXNO:0000138
 name: benzoin condensation
 def: "A reaction between two aromatic aldehydes to give a benzoin (an alpha-hydroxyketone)." [RSC:cc, RSC:db]
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000035/
+is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
-relationship: has_reactant CHEBI:17478 ! aldehyde
+relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 
 [Term]
 id: RXNO:0000139
@@ -1787,7 +1843,7 @@ synonym: "Suzuki-Miyaura cross-coupling reaction" EXACT []
 synonym: "Suzuki-Miyaura reaction" EXACT []
 xref: NAMERXN:3.1
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
-relationship: has_catalyst CHEBI:33364 ! platinum
+relationship: RXNO:0000425 CHEBI:33364 ! has_catalyst platinum
 
 [Term]
 id: RXNO:0000141
@@ -1800,7 +1856,7 @@ synonym: "Sharpless-Katsuki asymmetric epoxidation" EXACT []
 synonym: "Sharpless-Katsuki epoxidation" EXACT []
 is_a: MOP:0000671 ! epoxidation
 is_a: RXNO:0000005 ! ring formation reaction step
-relationship: has_catalyst CHEBI:33341 ! titanium atom
+relationship: RXNO:0000425 CHEBI:33341 ! has_catalyst titanium atom
 
 [Term]
 id: RXNO:0000142
@@ -1837,8 +1893,8 @@ id: RXNO:0000146
 name: Corey-Fuchs reaction
 def: "A homologation reaction of an aldehyde to yield a terminal alkyne. The reagents are tetrabromomethane, triphenylphosphine, butyllithium and water." [RSC:cb, RSC:cc, RSC:db]
 is_a: RXNO:0000070 ! chain lengthening
-relationship: has_product CHEBI:73477 ! terminal acetylenic compound
-relationship: has_reactant CHEBI:17478 ! aldehyde
+relationship: RXNO:0000423 CHEBI:73477 ! has specified product terminal acetylenic compound
+relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 
 [Term]
 id: RXNO:0000147
@@ -1943,7 +1999,7 @@ def: "The cyclisation of a 1,4-dicarbonyl compound with an acid catalyst to give
 synonym: "O=[C:1]-[C:2]-[C:3]-[C:4]=O>>o1[c:1][c:2][c:3][c:4]1" SMIRKS []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000315/
 is_a: RXNO:0000161 ! Paal-Knorr synthesis
-relationship: has_product CHEBI:24129 ! furans
+relationship: RXNO:0000423 CHEBI:24129 ! has specified product furans
 
 [Term]
 id: RXNO:0000163
@@ -1951,7 +2007,7 @@ name: Paal-Knorr thiophene synthesis
 def: "The cyclisation of a 1,4-dicarbonyl compound with phosphorus pentasulfide to give a thiophene." [RSC:cb, RSC:cc]
 synonym: "O=[C:1]-[C:2]-[C:3]-[C:4]=O.S=P13SP2(=S)SP(=S)(S1)SP(=S)(S2)S3>>s1[c:1][c:2][c:3][c:4]1" SMIRKS []
 is_a: RXNO:0000161 ! Paal-Knorr synthesis
-relationship: has_product CHEBI:26961 ! thiophenes
+relationship: RXNO:0000423 CHEBI:26961 ! has specified product thiophenes
 
 [Term]
 id: RXNO:0000164
@@ -1961,7 +2017,7 @@ comment: Merck Index says "ammonia or primary amines"
 synonym: "O=[C:1]-[C:2]-[C:3]-[C:4]=O.[N:5]>>[n:5]1[c:1][c:2][c:3][c:4]1" SMIRKS []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000316/
 is_a: RXNO:0000161 ! Paal-Knorr synthesis
-relationship: has_product CHEBI:26455 ! pyrroles
+relationship: RXNO:0000423 CHEBI:26455 ! has specified product pyrroles
 
 [Term]
 id: RXNO:0000165
@@ -1995,7 +2051,7 @@ def: "The degradation of an alpha-hydroxy amide or an alpha,beta-unsaturated ami
 synonym: "Weerman degradation" EXACT []
 synonym: "Weerman's reaction" EXACT []
 is_a: RXNO:0000105 ! end-of-chain chain shortening
-relationship: has_product CHEBI:17478 ! aldehyde
+relationship: RXNO:0000423 CHEBI:17478 ! has specified product aldehyde
 
 [Term]
 id: RXNO:0000169
@@ -2068,8 +2124,9 @@ is_a: RXNO:0000020 ! aromatic substitution
 id: RXNO:0000180
 name: Elbs persulfate oxidation, tolyl variant
 def: "The oxidation of a methyl-substituted aromatic compound to the corresponding benzaldehyde using potassium persulfate." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000012 ! functional group oxidation
-relationship: has_product CHEBI:22698 ! benzaldehydes
+relationship: RXNO:0000423 CHEBI:22698 ! has specified product benzaldehydes
 
 [Term]
 id: RXNO:0000181
@@ -2112,8 +2169,9 @@ is_a: RXNO:0000011 ! functional group modification
 id: RXNO:0000187
 name: Tishchenko reaction
 def: "The formation of an ester from two aldehydes via a disproportionation process using a metal alkoxide to oxidise one aldehyde and reduce the other." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000011 ! functional group modification
-relationship: has_reactant CHEBI:17478 ! aldehyde
+relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 
 [Term]
 id: RXNO:0000188
@@ -2134,8 +2192,9 @@ def: "A coupling reaction of an aldehyde to an allyl, vinyl or aryl halide or tr
 synonym: "Nozaki reaction" EXACT []
 synonym: "Nozaki-Hiyama-Kishi coupling" EXACT []
 synonym: "Nozaki-Kishi reaction" EXACT []
+is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
-relationship: has_reactant CHEBI:17478 ! aldehyde
+relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 
 [Term]
 id: RXNO:0000192
@@ -2143,7 +2202,7 @@ name: Buchwald-Hartwig amination
 def: "A reaction in which an aryl halide or aryl triflate reacts with a primary or secondary amine in the presence of base to give a secondary or tertiary amine. It is catalysed by a palladium catalyst." [RSC:cb, RSC:cc, RSC:db]
 synonym: "Buchwald-Hartwig reaction" EXACT []
 is_a: RXNO:0000020 ! aromatic substitution
-relationship: has_catalyst CHEBI:33363 ! palladium
+relationship: RXNO:0000425 CHEBI:33363 ! has_catalyst palladium
 
 [Term]
 id: RXNO:0000193
@@ -2311,15 +2370,17 @@ is_a: RXNO:0000205 ! ring breaking
 id: RXNO:0000218
 name: Cannizzaro reaction
 def: "The disproportionation of a non-enolisable aldehyde to the corresponding carboxylic acid salt and alcohol. The reaction is base-catalysed." [RSC:cc, RSC:cg, RSC:db]
+is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000011 ! functional group modification
-relationship: has_reactant CHEBI:17478 ! aldehyde
+relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 
 [Term]
 id: RXNO:0000219
 name: crossed Cannizzaro reaction
 def: "The reaction between two different non-enolisable aldehydes to give a carboxylic acid salt and an alcohol. The reaction is base-catalysed." [RSC:cc, RSC:cg, RSC:db]
+is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000011 ! functional group modification
-relationship: has_reactant CHEBI:17478 ! aldehyde
+relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 
 [Term]
 id: RXNO:0000220
@@ -2333,7 +2394,7 @@ id: RXNO:0000221
 name: Polonovski reaction
 def: "The reaction of a tertiary amine oxide with an anhydride or acyl chloride to give an N,N-disubstituted acetamide and an aldehyde." [RSC:cc, RSC:cg, RSC:db]
 is_a: RXNO:0000073 ! cleaving reaction
-relationship: has_product CHEBI:17478 ! aldehyde
+relationship: RXNO:0000423 CHEBI:17478 ! has specified product aldehyde
 
 [Term]
 id: RXNO:0000222
@@ -2341,7 +2402,7 @@ name: Polonovski-Potier reaction
 def: "The reaction of a tertiary amine oxide with trifluoroacetic anhydride to give an N,N-disubstituted acetamide and an aldehyde." [RSC:cc, RSC:cg, RSC:db]
 synonym: "Potier-Polonovski reaction" EXACT []
 is_a: RXNO:0000221 ! Polonovski reaction
-relationship: has_product CHEBI:17478 ! aldehyde
+relationship: RXNO:0000423 CHEBI:17478 ! has specified product aldehyde
 
 [Term]
 id: RXNO:0000223
@@ -2410,8 +2471,9 @@ is_a: RXNO:0000000 ! molecular skeleton joining reaction
 id: RXNO:0000232
 name: Petasis reaction
 def: "The alkylation of an amine with a boronic acid and an aldehyde to give a substituted amine." [RSC:db]
+is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000019 ! substitution reaction
-relationship: has_reactant CHEBI:17478 ! aldehyde
+relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 
 [Term]
 id: RXNO:0000233
@@ -2437,7 +2499,7 @@ name: Biginelli reaction
 def: "A three-component coupling of a beta-keto ester, an aldehyde and urea to give a 3,4-dihydropyrimidinone." [RSC:db]
 synonym: "Biginelli pyrimidone synthesis" EXACT []
 is_a: RXNO:0000005 ! ring formation reaction step
-relationship: has_reactant CHEBI:17478 ! aldehyde
+relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 
 [Term]
 id: RXNO:0000237
@@ -2545,8 +2607,9 @@ is_a: RXNO:0000025 ! rearrangement step
 id: RXNO:0000251
 name: Stork-Wittig olefination
 def: "A carbon-carbon coupling reaction where an aldehyde reacts with a phosphonium salt to give a Z-iodoalkene. The reaction is mediated by sodium or potassium hexamethyldisilazide." [RSC:db]
+is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
-relationship: has_reactant CHEBI:17478 ! aldehyde
+relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 
 [Term]
 id: RXNO:0000252
@@ -2663,7 +2726,7 @@ name: Hantzsch pyridine synthesis
 def: "A ring-forming reaction between two equivalents of a beta-ketoester, an aldehyde and ammonia (or an ammonium salt), to give a dihydropyridine. The dihydropyridine can be oxidised to a pyridine using an oxidising agent." [rsc:db]
 synonym: "Hantzsch dihydropyridine synthesis" EXACT []
 is_a: RXNO:0000005 ! ring formation reaction step
-relationship: has_reactant CHEBI:17478 ! aldehyde
+relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 
 [Term]
 id: RXNO:0000269
@@ -2711,7 +2774,7 @@ id: RXNO:0000272
 name: hydroformylation
 def: "The reaction of hydrogen and carbon monoxide with an alkene, to give an aldehyde, catalysed by a rhodium or cobalt catalyst. The process is equivalent to the formal addition of the H-C bond of formaldehyde across the double bond of an alkene." [rsc:db]
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
-relationship: has_product CHEBI:17478 ! aldehyde
+relationship: RXNO:0000423 CHEBI:17478 ! has specified product aldehyde
 
 [Term]
 id: RXNO:0000273
@@ -2817,8 +2880,9 @@ is_a: RXNO:0000037 ! functional group reduction
 id: RXNO:0000287
 name: Lindgren oxidation
 def: "The oxidation of an aldehyde to a carboxylic acid with chlorite." [doi:10.3891/acta.chem.scand.27-0888, rsc:cg, rsc:db]
+is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000012 ! functional group oxidation
-relationship: has_reactant CHEBI:17478 ! aldehyde
+relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 
 [Term]
 id: RXNO:0000288
@@ -2950,7 +3014,7 @@ name: intramolecular Heck reaction
 def: "A carbon-carbon coupling reaction where an organohalide or triflate couples to an alkene in the same molecule, catalysed by palladium." [rsc:db]
 synonym: "intramolecular Heck-Mizoroki" EXACT []
 is_a: RXNO:0000005 ! ring formation reaction step
-relationship: has_catalyst CHEBI:33363 ! palladium
+relationship: RXNO:0000425 CHEBI:33363 ! has_catalyst palladium
 
 [Term]
 id: RXNO:0000307
@@ -3013,17 +3077,18 @@ name: palladium-catalysed carbon-carbon coupling reaction
 def: "A carbon-carbon coupling reaction that is catalysed by a palladium atom." [RSC:cb]
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 intersection_of: RXNO:0000002 ! carbon-carbon coupling reaction
-intersection_of: has_catalyst CHEBI:33363 ! palladium
-relationship: has_catalyst CHEBI:33363 ! palladium
+intersection_of: RXNO:0000425 CHEBI:33363 ! has_catalyst palladium
+relationship: RXNO:0000425 CHEBI:33363 ! has_catalyst palladium
 
 [Term]
 id: RXNO:0000317
 name: ester condensation reaction
 xref: NAMERXN:3.6
 is_a: MOP:0000627 ! condensation reaction
+is_a: RXNO:0000001 ! planned reaction step
 intersection_of: MOP:0000627 ! condensation reaction
-intersection_of: has_product CHEBI:33308 ! carboxylic ester
-relationship: has_product CHEBI:33308 ! carboxylic ester
+intersection_of: RXNO:0000423 CHEBI:33308 ! has specified product carboxylic ester
+relationship: RXNO:0000423 CHEBI:33308 ! has specified product carboxylic ester
 
 [Term]
 id: RXNO:0000318
@@ -3112,6 +3177,7 @@ is_a: RXNO:0000323 ! hydroxyl group protection
 id: RXNO:0000329
 name: planned synthesis
 def: "An experimental procedure with the aim of producing a portion of a given compound or mixture." [RSC:cb]
+is_a: OBI:0000011 ! planned process
 
 [Term]
 id: RXNO:0000330
@@ -3393,8 +3459,9 @@ id: RXNO:0000363
 name: amide to imidoyl chloride conversion
 def: "A functional group modification where an amide is converted to an imidoyl chloride." [RSC:cb]
 xref: NAMERXN:9.2
+is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000011 ! functional group modification
-relationship: has_reactant CHEBI:32988 ! amide
+relationship: RXNO:0000424 CHEBI:32988 ! has specified reactant amide
 created_by: batchelorc
 creation_date: 2012-03-22T05:04:20Z
 
@@ -3441,10 +3508,10 @@ def: "Oxidation of an alkene to an allene by heating with formaldehyde, an amine
 synonym: "[C:1]=[C:2].[C:3]=O>>[C:1]=[C:2]=[C:3]" SMIRKS []
 is_a: MOP:0000581 ! alkene oxidation
 is_a: RXNO:0000070 ! chain lengthening
-relationship: has_participant CHEBI:32952 ! amine
-relationship: has_product CHEBI:37602 ! allenes
-relationship: has_reactant CHEBI:16842 ! formaldehyde
-relationship: has_reactant CHEBI:32878 ! alkene
+relationship: BFO:0000057 CHEBI:32952 ! has_participant amine
+relationship: RXNO:0000423 CHEBI:37602 ! has specified product allenes
+relationship: RXNO:0000424 CHEBI:16842 ! has specified reactant formaldehyde
+relationship: RXNO:0000424 CHEBI:32878 ! has specified reactant alkene
 created_by: batchelorc
 creation_date: 2014-01-08T13:48:00Z
 
@@ -3462,10 +3529,11 @@ id: RXNO:0000370
 name: Demko-Sharpless reaction
 def: "A functional group modification of a nitrile to a 1H-tetrazole by addition of sodium azide." [doi:10.1021/jo010635w, RSC:cb]
 synonym: "[#6,S,N;H0:1][C:2]#[N:3].[Na+].[N-:4]=[N+:5]=[N-:6]>>[*:1][C:2]=[N:3][N:4][N:5]=[N:6]1" SMIRKS []
+is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000011 ! functional group modification
-relationship: has_product CHEBI:35689 ! tetrazoles
-relationship: has_reactant CHEBI:18379 ! nitrile
-relationship: has_reactant CHEBI:278547 ! sodium azide
+relationship: RXNO:0000423 CHEBI:35689 ! has specified product tetrazoles
+relationship: RXNO:0000424 CHEBI:18379 ! has specified reactant nitrile
+relationship: RXNO:0000424 CHEBI:278547 ! has specified reactant sodium azide
 
 [Term]
 id: RXNO:0000371
@@ -3506,10 +3574,11 @@ name: Eschweiler-Clarke methylation
 def: "N-methylation of a primary or secondary amine with formic acid and formaldehyde to yield a tertiary amine." [RSC:cb]
 synonym: "Eschweiler-Clarke reaction" EXACT []
 is_a: MOP:0002364 ! N-methylation
+is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000012 ! functional group oxidation
-relationship: has_product CHEBI:32876 ! tertiary amine
-relationship: has_reactant CHEBI:16842 ! formaldehyde
-relationship: has_reactant CHEBI:32952 ! amine
+relationship: RXNO:0000423 CHEBI:32876 ! has specified product tertiary amine
+relationship: RXNO:0000424 CHEBI:16842 ! has specified reactant formaldehyde
+relationship: RXNO:0000424 CHEBI:32952 ! has specified reactant amine
 
 [Term]
 id: RXNO:0000377
@@ -3593,8 +3662,8 @@ name: Seyferth-Gilbert aldehyde homologation
 def: "Reaction of an aldehyde with a dimethyl diazomethyl phosphonate under basic conditions to yield a terminal alkyne." [RSC:cb]
 is_a: RXNO:0000070 ! chain lengthening
 is_a: RXNO:0000387 ! Seyferth-Gilbert homologation
-relationship: has_product CHEBI:73477 ! terminal acetylenic compound
-relationship: has_reactant CHEBI:17478 ! aldehyde
+relationship: RXNO:0000423 CHEBI:73477 ! has specified product terminal acetylenic compound
+relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 
 [Term]
 id: RXNO:0000389
@@ -3602,7 +3671,7 @@ name: Seyferth-Gilbert ketone homologation
 def: "Reaction of a ketone with a dimethyl diazomethyl phosphonate under basic conditions to yield a terminal alkyne." [RSC:cb]
 is_a: RXNO:0000030 ! insertion reaction
 is_a: RXNO:0000387 ! Seyferth-Gilbert homologation
-relationship: has_product CHEBI:73477 ! terminal acetylenic compound
+relationship: RXNO:0000423 CHEBI:73477 ! has specified product terminal acetylenic compound
 
 [Term]
 id: RXNO:0000390
@@ -3612,7 +3681,7 @@ synonym: "Bestmann modification" EXACT []
 synonym: "Ohira-Bestmann modification" EXACT []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000395/
 is_a: RXNO:0000388 ! Seyferth-Gilbert aldehyde homologation
-relationship: has_reactant CHEBI:17478 ! aldehyde
+relationship: RXNO:0000423 CHEBI:17478 ! has specified product aldehyde
 
 [Term]
 id: RXNO:0000391
@@ -3627,14 +3696,18 @@ id: RXNO:0000392
 name: pyrazole synthesis
 def: "A reaction in which the intended product is a pyrazole that was not present in any of the reactants." [RSC:cb]
 is_a: RXNO:0000347 ! azacycle formation
-relationship: has_product CHEBI:26410 ! pyrazoles
+intersection_of: RXNO:0000347 ! azacycle formation
+intersection_of: RXNO:0000423 CHEBI:26410 ! has specified product pyrazoles
+relationship: RXNO:0000423 CHEBI:26410 ! has specified product pyrazoles
 
 [Term]
 id: RXNO:0000393
 name: quinoline synthesis
 def: "A reaction in which the intended product is a quinoline that was not present in any of the reactants." [RSC:cb]
 is_a: RXNO:0000052 ! fused-ring-system formation
-relationship: has_product CHEBI:26513 ! quinolines
+intersection_of: RXNO:0000052 ! fused-ring-system formation
+intersection_of: RXNO:0000423 CHEBI:26513 ! has specified product quinolines
+relationship: RXNO:0000423 CHEBI:26513 ! has specified product quinolines
 
 [Term]
 id: RXNO:0000394
@@ -3648,7 +3721,9 @@ id: RXNO:0000395
 name: indole synthesis
 def: "A reaction in which the intended product is an indole that was not present in any of the reactants." [RSC:cb]
 is_a: RXNO:0000052 ! fused-ring-system formation
-relationship: has_product CHEBI:24828 ! indoles
+intersection_of: RXNO:0000052 ! fused-ring-system formation
+intersection_of: RXNO:0000423 CHEBI:24828 ! has specified product indoles
+relationship: RXNO:0000423 CHEBI:24828 ! has specified product indoles
 
 [Term]
 id: RXNO:0000396
@@ -3658,7 +3733,7 @@ synonym: "Larock indolisation" EXACT []
 synonym: "Larock indolization" EXACT []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000250/
 is_a: RXNO:0000395 ! indole synthesis
-relationship: has_catalyst CHEBI:33363 ! palladium
+relationship: RXNO:0000425 CHEBI:33363 ! has_catalyst palladium
 
 [Term]
 id: RXNO:0000397
@@ -3672,7 +3747,7 @@ id: RXNO:0000398
 name: benzimidazole synthesis
 def: "A reaction in which the intended product is a benzimidazole that was not present in any of the reactants." [RSC:cb]
 is_a: RXNO:0000052 ! fused-ring-system formation
-relationship: has_product CHEBI:22715 ! benzimidazoles
+relationship: RXNO:0000423 CHEBI:22715 ! has specified product benzimidazoles
 
 [Term]
 id: RXNO:0000399
@@ -3687,14 +3762,14 @@ id: RXNO:0000400
 name: pyrimidine synthesis
 def: "A reaction in which the intended product is a pyrimidine that was not present in any of the reactants." [RSC:cb]
 is_a: RXNO:0000347 ! azacycle formation
-relationship: has_product CHEBI:39447 ! pyrimidines
+relationship: RXNO:0000423 CHEBI:39447 ! has specified product pyrimidines
 
 [Term]
 id: RXNO:0000401
 name: triazine synthesis
 def: "A reaction in which the intended product is a triazine that was not present in any of the reactants." [RSC:cb]
 is_a: RXNO:0000347 ! azacycle formation
-relationship: has_product CHEBI:26588 ! triazines
+relationship: RXNO:0000423 CHEBI:26588 ! has specified product triazines
 
 [Term]
 id: RXNO:0000402
@@ -3716,7 +3791,7 @@ name: oxa-Pictet-Spengler reaction
 def: "Cyclisation-condensation of a beta-arylethanol with an aldehyde to yield an ortho-,peri-fused aryl-oxacycle." [RSC:cb]
 is_a: RXNO:0000052 ! fused-ring-system formation
 is_a: RXNO:0000315 ! condensation step
-relationship: has_reactant CHEBI:17478 ! aldehyde
+relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 
 [Term]
 id: RXNO:0000405
@@ -3778,7 +3853,7 @@ is_a: RXNO:0000011 ! functional group modification
 [Term]
 id: RXNO:0000413
 name: Zincke nitration
-def: "Substitution of phenol ortho- or para-bromine or iodine atoms by a nitro group on treatment with nitrous acid or a nitrite in acetic acid." [https://www.rsc.org/Merck-Index/reaction/rxn1500000484/]
+def: "Substitution of phenol ortho- or para-bromo or iodo groups by a nitro group on treatment with nitrous acid or a nitrite in acetic acid." [https://www.rsc.org/Merck-Index/reaction/rxn1500000484/]
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000484/
 is_a: MOP:0000556 ! nitration
 is_a: RXNO:0000332 ! aromatic substitution step
@@ -3787,26 +3862,28 @@ is_a: RXNO:0000332 ! aromatic substitution step
 id: RXNO:0000414
 name: haloethanoate ester-aldehyde Darzens reaction
 def: "A coupling of an aldehyde with an alpha-haloethanoate ester to form the next homologous aldehyde." [RSC:cb]
+comment: These are not necessary-and-sufficient conditions because we can't say "one longer" in OWL.
 is_a: RXNO:0000070 ! chain lengthening
 is_a: RXNO:0000077 ! Darzens reaction
-relationship: has_product CHEBI:17478 ! aldehyde
-relationship: has_reactant CHEBI:17478 ! aldehyde
+relationship: RXNO:0000423 CHEBI:17478 ! has specified product aldehyde
+relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 
 [Term]
 id: RXNO:0000415
 name: haloethanoate ester-ketone Darzens reaction
 def: "A coupling of a ketone with an alpha-haloethanoate ester to replace the oxo group with a formyl group." [RSC:cb]
 is_a: RXNO:0000077 ! Darzens reaction
-relationship: has_product CHEBI:17478 ! aldehyde
-relationship: has_reactant CHEBI:17087 ! ketone
+relationship: RXNO:0000423 CHEBI:17478 ! has specified product aldehyde
+relationship: RXNO:0000424 CHEBI:17087 ! has specified reactant ketone
 
 [Term]
 id: RXNO:0000418
 name: phthalimide protection
 def: "Protection of a primary amino group by reaction with phthalic anhydride." [RSC:cb]
+is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000321 ! amino group protection
-relationship: has_reactant CHEBI:36605 ! phthalic anhydride
 relationship: RXNO:0000416 CHEBI:46882 ! protects amino group
+relationship: RXNO:0000424 CHEBI:36605 ! has specified reactant phthalic anhydride
 
 [Term]
 id: RXNO:0000419
@@ -3821,60 +3898,78 @@ name: Krohnke pyridine synthesis
 def: "Condensation of a 1,5-diketone with ammonium acetate in acetic acid to form a pyridine." [RSC:cb]
 xref: http://dx.doi.org/10.1039/SP543
 is_a: RXNO:0000347 ! azacycle formation
-relationship: has_product CHEBI:26421 ! pyridines
+relationship: RXNO:0000423 CHEBI:26421 ! has specified product pyridines
 
 [Term]
 id: RXNO:0000421
 name: Gattermann chlorination
 def: "A Gattermann halogenation where the aryl diazonium salt reacts with copper powder and hydrochloric acid to yield an aromatic chloride." [RSC:cc]
 is_a: RXNO:0000022 ! Gattermann halogenation
-relationship: has_reactant CHEBI:17883 ! hydrogen chloride
+relationship: RXNO:0000423 CHEBI:17883 ! has specified product hydrogen chloride
 
 [Term]
 id: RXNO:0000422
 name: Gattermann bromination
 def: "A Gattermann halogenation where the aryl diazonium salt reacts with copper powder and hydrobromic acid to yield an aromatic bromide." [RSC:cc]
 is_a: RXNO:0000022 ! Gattermann halogenation
-relationship: has_reactant CHEBI:47266 ! hydrogen bromide
+relationship: RXNO:0000423 CHEBI:47266 ! has specified product hydrogen bromide
+
+[Typedef]
+id: BFO:0000057
+name: has_participant
+
+[Typedef]
+id: BFO:0000077
+name: has participant beginning to exist
+is_a: BFO:0000057 ! has_participant
+
+[Typedef]
+id: BFO:0000078
+name: has participant ceasing to exist
+is_a: BFO:0000057 ! has_participant
 
 [Typedef]
 id: RXNO:0000416
 name: protects
 def: "The notion here is that a given reaction is meant to 'protect' a given group from reacting in a subsequent process and can be 'deprotected' later." [RSC:cb]
-comment: can we chain has_reactant and has_part ?
+comment: can we chain 'has specified reactant' (RXNO:0000424) and has_part ?
 domain: RXNO:0000078 ! protection reaction
 range: CHEBI:24433 ! group
+is_a: BFO:0000078 ! has participant ceasing to exist
 
 [Typedef]
 id: RXNO:0000417
 name: deprotects
 def: "If a reaction R deprotects a group G, then G is in the product where it wasn't in the reactant." [RSC:cb]
-comment: can we chain has_product and has_part ?
+comment: can we chain 'has specified product' (RXNO:0000423) and has_part ?
 domain: RXNO:0000203 ! deprotection reaction
 range: CHEBI:24433 ! group
+is_a: BFO:0000077 ! has participant beginning to exist
 
 [Typedef]
-id: has_catalyst
+id: RXNO:0000423
+name: has specified product
+comment: The difference between this and OBI's has_specified_output is that it is necessary that the participant starts to exist during the process.
+domain: RXNO:0000001 ! planned reaction step
+range: CHEBI:23367 ! molecular entity
+is_a: BFO:0000077 ! has participant beginning to exist
+
+[Typedef]
+id: RXNO:0000424
+name: has specified reactant
+comment: The difference between this and OBI's has_specified_output is that it is necessary that the reactant ceases to exist during the process.
+domain: RXNO:0000001 ! planned reaction step
+range: CHEBI:23367 ! molecular entity
+is_a: BFO:0000078 ! has participant ceasing to exist
+
+[Typedef]
+id: RXNO:0000425
 name: has_catalyst
-is_a: has_participant ! has_participant
+is_a: BFO:0000057 ! has_participant
 
 [Typedef]
 id: has_part
 name: has_part
-
-[Typedef]
-id: has_participant
-name: has_participant
-
-[Typedef]
-id: has_product
-name: has_product
-is_a: has_participant ! has_participant
-
-[Typedef]
-id: has_reactant
-name: has_reactant
-is_a: has_participant ! has_participant
 
 [Typedef]
 id: part_of
