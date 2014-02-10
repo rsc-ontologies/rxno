@@ -1,13 +1,17 @@
 format-version: 1.2
-data-version: rxno/releases/2014-02-07/rxno.owl
+data-version: rxno/releases/2014-02-10/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
 
 [Term]
+id: BFO:0000016
+name: disposition
+
+[Term]
 id: CHEBI:15734
 name: primary alcohol
-is_a: CHEBI:23367 ! molecular entity
+is_a: CHEBI:30879 ! alcohol
 
 [Term]
 id: CHEBI:16842
@@ -45,6 +49,16 @@ name: benzimidazoles
 is_a: CHEBI:23367 ! molecular entity
 
 [Term]
+id: CHEBI:22929
+name: bromoalkane
+is_a: CHEBI:24469 ! haloalkane
+
+[Term]
+id: CHEBI:23128
+name: chloroalkane
+is_a: CHEBI:24469 ! haloalkane
+
+[Term]
 id: CHEBI:23252
 name: cinnamic acids
 is_a: CHEBI:23367 ! molecular entity
@@ -68,6 +82,11 @@ name: chemical entity
 id: CHEBI:24433
 name: group
 is_a: CHEBI:24431 ! chemical entity
+
+[Term]
+id: CHEBI:24469
+name: haloalkane
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:24828
@@ -105,9 +124,19 @@ name: triazines
 is_a: CHEBI:23367 ! molecular entity
 
 [Term]
+id: CHEBI:26878
+name: tertiary alcohol
+is_a: CHEBI:30879 ! alcohol
+
+[Term]
 id: CHEBI:26961
 name: thiophenes
 is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:27385
+name: tetrachloromethane
+is_a: CHEBI:23128 ! chloroalkane
 
 [Term]
 id: CHEBI:278547
@@ -123,6 +152,11 @@ is_a: CHEBI:23367 ! molecular entity
 id: CHEBI:29785
 name: nitro group
 is_a: CHEBI:24433 ! group
+
+[Term]
+id: CHEBI:30879
+name: alcohol
+is_a: CHEBI:33822 ! organic hydroxy compound
 
 [Term]
 id: CHEBI:32876
@@ -180,6 +214,16 @@ name: olefin
 is_a: CHEBI:23367 ! molecular entity
 
 [Term]
+id: CHEBI:33822
+name: organic hydroxy compound
+is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:33823
+name: enol
+is_a: CHEBI:33822 ! organic hydroxy compound
+
+[Term]
 id: CHEBI:33855
 name: arenecarbaldehyde
 is_a: CHEBI:17478 ! aldehyde
@@ -192,7 +236,7 @@ is_a: CHEBI:23367 ! molecular entity
 [Term]
 id: CHEBI:35681
 name: secondary alcohol
-is_a: CHEBI:23367 ! molecular entity
+is_a: CHEBI:30879 ! alcohol
 
 [Term]
 id: CHEBI:35689
@@ -228,6 +272,11 @@ is_a: CHEBI:23367 ! molecular entity
 id: CHEBI:37602
 name: allenes
 is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:37757
+name: iodoalkane
+is_a: CHEBI:24469 ! haloalkane
 
 [Term]
 id: CHEBI:38269
@@ -476,6 +525,7 @@ id: MOP:0000572
 name: alcohol oxidation
 def: "An oxidation process where an alcohol is transformed into a carbonyl compound." [RSC:cb]
 is_a: MOP:0000568 ! oxidation
+relationship: BFO:0000078 CHEBI:30879 ! has participant ceasing to exist alcohol
 created_by: batchelorc
 creation_date: 2009-06-01T06:10:35Z
 
@@ -711,6 +761,29 @@ def: "A cycloaddition in which one participant contributes three electrons and t
 is_a: MOP:0000562 ! cycloaddition
 
 [Term]
+id: MOP:0000716
+name: enolisation
+def: "Molecular process in which an aldehyde or ketone tautomerises to form an enol." [RSC:cb]
+is_a: MOP:0000543 ! molecular process
+relationship: BFO:0000077 CHEBI:33823 ! has participant beginning to exist enol
+
+[Term]
+id: MOP:0000717
+name: enolisability
+def: "Disposition that is realised in the process of enolisation" [RSC:cb]
+is_a: BFO:0000016 ! disposition
+
+[Term]
+id: MOP:0000718
+name: enolisable carbonyl compound
+def: "A carbonyl compound that bears the disposition to be enolised." [RSC:cb]
+comment: this surely belongs in ChEBI but put it here pro tem
+is_a: CHEBI:36587 ! carbonyl compound
+intersection_of: CHEBI:36587 ! carbonyl compound
+intersection_of: BFO:0000162 MOP:0000717 ! has disposition at all times enolisability
+relationship: BFO:0000162 MOP:0000717 ! has disposition at all times enolisability
+
+[Term]
 id: MOP:0001458
 name: deorganylation
 def: "Breaking of a covalent bond between a substrate and an organyl group." [RSC:xp]
@@ -903,8 +976,8 @@ is_a: RXNO:0000010 ! functional modification
 id: RXNO:0000012
 name: functional group oxidation
 def: "A functional group modification reaction where a functional group is oxidised." [RSC:cb]
+is_a: MOP:0000568 ! oxidation
 is_a: RXNO:0000011 ! functional group modification
-relationship: has_part MOP:0000568 ! oxidation
 
 [Term]
 id: RXNO:0000013
@@ -1067,7 +1140,8 @@ name: Mannich reaction
 def: "A carbon-carbon coupling reaction where ammonia or an amine reacts with a non-enolisable aldehyde, often methanal, and an enolisable carbonyl compound to form a beta-amino carbonyl compound." [RSC:db]
 synonym: "[N:1].[C:2]=O.[C:3][C:4](=O)[C:5]>>[N:1][C:2][C:3][C:4](=O)[C:5]" SMIRKS []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000265/
-is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
+relationship: RXNO:0000424 MOP:0000718 ! has specified reactant enolisable carbonyl compound
 
 [Term]
 id: RXNO:0000033
@@ -1079,7 +1153,9 @@ is_a: RXNO:0000019 ! substitution reaction
 id: RXNO:0000034
 name: Mitsunobu reaction
 def: "A substitution where an alcohol is converted into something else. Typical reagents are a dialkyl azodicarboxylate and a triarylphosphine. The alcohol stereocentre is inverted." [RSC:cc, RSC:db]
+is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000019 ! substitution reaction
+relationship: RXNO:0000424 CHEBI:30879 ! has specified reactant alcohol
 
 [Term]
 id: RXNO:0000035
@@ -1443,7 +1519,9 @@ relationship: RXNO:0000423 CHEBI:38784 ! has specified product oxetanes
 id: RXNO:0000084
 name: Barbier reaction
 def: "A joining reaction between an aldehyde or ketone and an alkyl halide to give a secondary or tertiary alcohol." [RSC:cc, RSC:db]
-is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
+union_of: RXNO:0000426 ! aldehyde Barbier reaction
+union_of: RXNO:0000427 ! ketone Barbier reaction
 
 [Term]
 id: RXNO:0000085
@@ -1669,6 +1747,7 @@ def: "The reduction of an ester using sodium to give two alcohols." [RSC:cb, RSC
 synonym: "Bouveault-Blanc procedure" EXACT []
 synonym: "Bouveault-Blanc reduction" EXACT []
 is_a: RXNO:0000037 ! functional group reduction
+relationship: RXNO:0000423 CHEBI:30879 ! has specified product alcohol
 
 [Term]
 id: RXNO:0000120
@@ -1932,8 +2011,8 @@ is_a: RXNO:0000150 ! joining with rearrangement
 id: RXNO:0000154
 name: Swern oxidation
 def: "The oxidation of a primary alcohol or secondary alcohol to an aldehyde or ketone respectively. Does not work with allylic or benzylic alcohols." [RSC:cb, RSC:cc, RSC:db]
+is_a: MOP:0000572 ! alcohol oxidation
 is_a: RXNO:0000012 ! functional group oxidation
-relationship: has_part MOP:0000572 ! alcohol oxidation
 
 [Term]
 id: RXNO:0000155
@@ -2629,8 +2708,8 @@ id: RXNO:0000256
 name: Dess-Martin oxidation
 def: "The oxidation of a primary alcohol to an aldehyde or a secondary alcohol to a ketone using the Dess-Martin periodinane." [RSC:cb]
 synonym: "Dess-Martin periodinane oxidation" EXACT []
+is_a: MOP:0000572 ! alcohol oxidation
 is_a: RXNO:0000012 ! functional group oxidation
-relationship: has_part MOP:0000572 ! alcohol oxidation
 
 [Term]
 id: RXNO:0000257
@@ -2639,7 +2718,7 @@ def: "The oxidative cleavage of an alpha,beta-diol using lead tetraacetate to gi
 synonym: "Criegee glycol cleavage" EXACT []
 synonym: "Criegee reaction" EXACT []
 is_a: RXNO:0000073 ! cleaving reaction
-relationship: has_part RXNO:0000344 ! alkene oxidative cleavage
+is_a: RXNO:0000344 ! alkene oxidative cleavage
 
 [Term]
 id: RXNO:0000258
@@ -3788,27 +3867,33 @@ is_a: RXNO:0000005 ! ring formation reaction step
 [Term]
 id: RXNO:0000406
 name: Appel halogenation
-def: "Conversion of an alcohol to an alkyl chloride with triphenylphosphine and a halide source." [doi:10.1002/anie.197508011, RSC:cb]
+def: "Conversion of an alcohol to an alkyl halide with triphenylphosphine and a halide source." [doi:10.1002/anie.197508011, RSC:cb]
 synonym: "Appel reaction" EXACT []
 is_a: RXNO:0000364 ! alcohol to halide conversion
+relationship: RXNO:0000423 CHEBI:24469 ! has specified product haloalkane
+relationship: RXNO:0000424 CHEBI:30879 ! has specified reactant alcohol
 
 [Term]
 id: RXNO:0000407
 name: Appel iodination
 def: "Conversion of an alcohol to an alkyl iodide with triphenylphosphine and tetraiodomethane." [RSC:cb]
 is_a: RXNO:0000406 ! Appel halogenation
+relationship: RXNO:0000423 CHEBI:37757 ! has specified product iodoalkane
 
 [Term]
 id: RXNO:0000408
 name: Appel chlorination
-def: "Conversion of an alcohol to an alkyl iodide with triphenylphosphine and tetrachloromethane." [RSC:cb]
+def: "Conversion of an alcohol to an alkyl chloride with triphenylphosphine and tetrachloromethane." [RSC:cb]
 is_a: RXNO:0000406 ! Appel halogenation
+relationship: RXNO:0000423 CHEBI:23128 ! has specified product chloroalkane
+relationship: RXNO:0000424 CHEBI:27385 ! has specified reactant tetrachloromethane
 
 [Term]
 id: RXNO:0000409
 name: Appel bromination
-def: "Conversion of an alcohol to an alkyl iodide with triphenylphosphine and tetrabromomethane or bromine." [RSC:cb]
+def: "Conversion of an alcohol to an alkyl bromide with triphenylphosphine and tetrabromomethane or bromine." [RSC:cb]
 is_a: RXNO:0000406 ! Appel halogenation
+relationship: RXNO:0000423 CHEBI:22929 ! has specified product bromoalkane
 
 [Term]
 id: RXNO:0000410
@@ -3886,14 +3971,28 @@ id: RXNO:0000421
 name: Gattermann chlorination
 def: "A Gattermann halogenation where the aryl diazonium salt reacts with copper powder and hydrochloric acid to yield an aromatic chloride." [RSC:cc]
 is_a: RXNO:0000022 ! Gattermann halogenation
-relationship: RXNO:0000423 CHEBI:17883 ! has specified product hydrogen chloride
+relationship: RXNO:0000424 CHEBI:17883 ! has specified reactant hydrogen chloride
 
 [Term]
 id: RXNO:0000422
 name: Gattermann bromination
 def: "A Gattermann halogenation where the aryl diazonium salt reacts with copper powder and hydrobromic acid to yield an aromatic bromide." [RSC:cc]
 is_a: RXNO:0000022 ! Gattermann halogenation
-relationship: RXNO:0000423 CHEBI:47266 ! has specified product hydrogen bromide
+relationship: RXNO:0000424 CHEBI:47266 ! has specified reactant hydrogen bromide
+
+[Term]
+id: RXNO:0000426
+name: aldehyde Barbier reaction
+def: "A joining reaction between an aldehyde and an alkyl halide to give a secondary alcohol." [RSC:cc, RSC:db]
+is_a: RXNO:0000084 ! Barbier reaction
+relationship: RXNO:0000423 CHEBI:35681 ! has specified product secondary alcohol
+
+[Term]
+id: RXNO:0000427
+name: ketone Barbier reaction
+def: "A joining reaction between an ketone and an alkyl halide to give a tertiary alcohol." [RSC:cc, RSC:db]
+is_a: RXNO:0000084 ! Barbier reaction
+relationship: RXNO:0000423 CHEBI:26878 ! has specified product tertiary alcohol
 
 [Typedef]
 id: BFO:0000057
@@ -3908,6 +4007,10 @@ is_a: BFO:0000057 ! has_participant
 id: BFO:0000078
 name: has participant ceasing to exist
 is_a: BFO:0000057 ! has_participant
+
+[Typedef]
+id: BFO:0000162
+name: has disposition at all times
 
 [Typedef]
 id: RXNO:0000416
