@@ -15,10 +15,16 @@ beta-hydroxy nitroalkane: is_a C-nitro compound (CHEBI:35716)
 copper(I) halide: is_a inorganic halide (CHEBI:new).  copper(I) chloride (CHEBI:53472) is_a copper(I) halide
 copper(I) pseudohalide: is_a inorganic pseudohalide (CHEBI:new)
 copper(II) halide: is_a inorganic halide (CHEBI:new). copper(II) chloride (CHEBI:49553) is_a copper(II) halide
+diaminobiphenyl: 
 1,3-diene: is_a alkadiene (CHEBI:33646)
 1,4-diene: is_a alkadiene (CHEBI:33646)
 gamma-nitroalcohol: is_a C-nitro compound (CHEBI:35716)
 1,5-hexadiene: is_a alkadiene (CHEBI:33646)
+hydrazobenzene:
 3-hydroxy-1,5-hexadiene:
+organic azide: is_a azides (CHEBI:22680)
+organophosphazo compound: ?! (but looks like this R3P=NR')
+organoselenide: is_a organoselenium compound (CHEBI:25712)
 pseudohalide salt: salt (CHEBI:24866) and has_part pseudohalide anion (CHEBI:36828)
+selenoxide: is_a heterone (CHEBI:36598)
 5,6-unsaturated carbonyl compound:
