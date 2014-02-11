@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: rxno/releases/2014-02-10/rxno.owl
+data-version: rxno/releases/2014-02-11/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
@@ -91,6 +91,16 @@ is_a: CHEBI:23367 ! molecular entity
 [Term]
 id: CHEBI:24828
 name: indoles
+is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:25000
+name: lactone
+is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:25717
+name: organotin compound
 is_a: CHEBI:23367 ! molecular entity
 
 [Term]
@@ -209,6 +219,11 @@ name: platinum
 is_a: CHEBI:23367 ! molecular entity
 
 [Term]
+id: CHEBI:33575
+name: carboxylic acid
+is_a: CHEBI:36587 ! carbonyl compound
+
+[Term]
 id: CHEBI:33641
 name: olefin
 is_a: CHEBI:23367 ! molecular entity
@@ -241,6 +256,11 @@ is_a: CHEBI:30879 ! alcohol
 [Term]
 id: CHEBI:35689
 name: tetrazoles
+is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:35886
+name: tertiary phosphine
 is_a: CHEBI:23367 ! molecular entity
 
 [Term]
@@ -279,6 +299,11 @@ name: iodoalkane
 is_a: CHEBI:24469 ! haloalkane
 
 [Term]
+id: CHEBI:38104
+name: oxacycle
+is_a: CHEBI:5686 ! heterocyclic compound
+
+[Term]
 id: CHEBI:38269
 name: boronic acids
 is_a: CHEBI:23367 ! molecular entity
@@ -314,6 +339,11 @@ name: hydrogen bromide
 is_a: CHEBI:23367 ! molecular entity
 
 [Term]
+id: CHEBI:50784
+name: pivalate ester
+is_a: CHEBI:33308 ! carboxylic ester
+
+[Term]
 id: CHEBI:51080
 name: nitrate ester
 is_a: CHEBI:23367 ! molecular entity
@@ -342,6 +372,11 @@ is_a: CHEBI:36587 ! carbonyl compound
 id: CHEBI:55380
 name: beta-hydroxy ketone
 is_a: CHEBI:17087 ! ketone
+
+[Term]
+id: CHEBI:5686
+name: heterocyclic compound
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:73477
@@ -764,7 +799,11 @@ is_a: MOP:0000562 ! cycloaddition
 id: MOP:0000716
 name: enolisation
 def: "Molecular process in which an aldehyde or ketone tautomerises to form an enol." [RSC:cb]
+synonym: "enolization" EXACT []
 is_a: MOP:0000543 ! molecular process
+intersection_of: MOP:0000543 ! molecular process
+intersection_of: BFO:0000055 MOP:0000717 ! realizes enolisability
+relationship: BFO:0000055 MOP:0000717 ! realizes enolisability
 relationship: BFO:0000077 CHEBI:33823 ! has participant beginning to exist enol
 
 [Term]
@@ -1153,16 +1192,16 @@ is_a: RXNO:0000019 ! substitution reaction
 id: RXNO:0000034
 name: Mitsunobu reaction
 def: "A substitution where an alcohol is converted into something else. Typical reagents are a dialkyl azodicarboxylate and a triarylphosphine. The alcohol stereocentre is inverted." [RSC:cc, RSC:db]
-is_a: RXNO:0000001 ! planned reaction step
-is_a: RXNO:0000019 ! substitution reaction
+is_a: RXNO:0000331 ! substitution step
 relationship: RXNO:0000424 CHEBI:30879 ! has specified reactant alcohol
 
 [Term]
 id: RXNO:0000035
 name: Stille coupling
-def: "A carbon-carbon coupling reaction where an organostannane reacts with an organohalide or organotriflate." [RSC:db]
+def: "A carbon-carbon coupling reaction where a stannane reacts with an organohalide or organotriflate." [RSC:db]
 xref: NAMERXN:3.4
-is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
+relationship: RXNO:0000424 CHEBI:25717 ! has specified reactant organotin compound
 
 [Term]
 id: RXNO:0000036
@@ -1391,10 +1430,12 @@ is_a: RXNO:0000315 ! condensation step
 [Term]
 id: RXNO:0000066
 name: Staudinger reaction
-def: "A joining of an organic azide and a tertiary phosphine to give a phosphazo compound. Hydrolysis of the phosphazo compound gives the corresponding amine." [RSC:cc, RSC:db]
+def: "A joining of an organic azide and a tertiary phosphine to give a phosphazo compound." [RSC:cc, RSC:db]
+comment: Hydrolysis of the phosphazo compound gives the corresponding amine." [RSC:cc, RSC:db]
 synonym: "Staudinger ligation" EXACT []
 synonym: "Staudinger reduction" EXACT []
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
+relationship: RXNO:0000424 CHEBI:35886 ! has specified reactant tertiary phosphine
 
 [Term]
 id: RXNO:0000067
@@ -3086,6 +3127,9 @@ name: Mori-Ban indole synthesis
 def: "An intramolecular Heck reaction of an ortho-halo-aniline with an alkene, catalysed by palladium." [rsc:db]
 synonym: "Mori-Ban indole reaction" EXACT []
 is_a: RXNO:0000395 ! indole synthesis
+relationship: RXNO:0000423 CHEBI:24828 ! has specified product indoles
+relationship: RXNO:0000424 CHEBI:33641 ! has specified reactant olefin
+relationship: RXNO:0000425 CHEBI:33363 ! has_catalyst palladium
 
 [Term]
 id: RXNO:0000308
@@ -3093,6 +3137,8 @@ name: Yamaguchi lactonisation
 def: "The intramolecular esterification of a carboxylic acid group with an alcohol group using 2,4,6-trichlorobenzoyl chloride (Yamaguchi reagent) - an intramolecular Yamaguchi esterification." [rsc:db]
 synonym: "Yamaguchi lactonization" EXACT []
 is_a: RXNO:0000005 ! ring formation reaction step
+is_a: RXNO:0000309 ! Yamaguchi esterification
+relationship: RXNO:0000423 CHEBI:25000 ! has specified product lactone
 
 [Term]
 id: RXNO:0000309
@@ -3119,6 +3165,7 @@ name: Clauson-Kaas reaction
 def: "A ring rearrangement reaction where an amine reacts with a 2,5-dialkoxytetrahydrofuran to give a pyrrole." [http://www.clauson-kaas.com/cgi-files/mdmgfx/file-709-116554-7465.pdf]
 synonym: "Clauson-Kaas pyrrole synthesis" EXACT []
 is_a: RXNO:0000202 ! ring rearrangement
+relationship: RXNO:0000423 CHEBI:26455 ! has specified product pyrroles
 
 [Term]
 id: RXNO:0000313
@@ -3246,14 +3293,16 @@ is_a: OBI:0000011 ! planned process
 id: RXNO:0000330
 name: acetate protection
 def: "A hydroxyl group protection where the hydroxyl oxygen atom is protected by formation of an acetate ester." [RSC:cb]
+synonym: "O-Ac protection" EXACT []
 is_a: RXNO:0000323 ! hydroxyl group protection
 
 [Term]
 id: RXNO:0000331
 name: substitution step
 def: "A planned reaction step in which one singly-bonded substituent, but not a hydrogen, is replaced by another singly-bonded substituent." [RSC:cb]
-is_a: RXNO:0000010 ! functional modification
-relationship: has_part RXNO:0000019 ! substitution reaction
+is_a: RXNO:0000001 ! planned reaction step
+is_a: RXNO:0000019 ! substitution reaction
+relationship: part_of RXNO:0000329 ! planned synthesis
 
 [Term]
 id: RXNO:0000332
@@ -3379,6 +3428,7 @@ name: oxacycle formation
 def: "A ring formation reaction where the product contains an oxacycle that was not in any of the reactants." [RSC:cb]
 xref: NAMERXN:4.2
 is_a: RXNO:0000349 ! heterocycle formation
+relationship: BFO:0000077 CHEBI:38104 ! has participant beginning to exist oxacycle
 created_by: batchelorc
 creation_date: 2012-03-22T03:24:06Z
 
@@ -3406,6 +3456,7 @@ name: heterocycle formation
 def: "A ring formation reaction where the product contains a heterocycle that was not in any of the reactants." [RSC:cb]
 xref: NAMERXN:4
 is_a: RXNO:0000005 ! ring formation reaction step
+relationship: BFO:0000077 CHEBI:5686 ! has participant beginning to exist heterocyclic compound
 created_by: batchelorc
 creation_date: 2012-03-22T03:24:34Z
 
@@ -3993,6 +4044,43 @@ name: ketone Barbier reaction
 def: "A joining reaction between an ketone and an alkyl halide to give a tertiary alcohol." [RSC:cc, RSC:db]
 is_a: RXNO:0000084 ! Barbier reaction
 relationship: RXNO:0000423 CHEBI:26878 ! has specified product tertiary alcohol
+
+[Term]
+id: RXNO:0000428
+name: pivaloyl protection
+def: "Protection of a hydroxy group by reaction with pivaloyl chloride, resulting in formation of a pivaloyl ester." [RSC:cb]
+is_a: RXNO:0000323 ! hydroxyl group protection
+relationship: RXNO:0000423 CHEBI:50784 ! has specified product pivalate ester
+
+[Term]
+id: RXNO:0000429
+name: pivaloyl deprotection
+def: "A hydroxy group deprotection where a pivalate group is removed in acid or base conditions." [RSC:cb]
+is_a: RXNO:0000430 ! hydroxy group deprotection
+relationship: RXNO:0000417 CHEBI:43176 ! deprotects hydroxy group
+relationship: RXNO:0000424 CHEBI:50784 ! has specified reactant pivalate ester
+
+[Term]
+id: RXNO:0000430
+name: hydroxy group deprotection
+def: "A deprotection reaction where the reactive centre is an oxygen atom." [RSC:cb]
+synonym: "alcohol deprotection" EXACT []
+is_a: RXNO:0000203 ! deprotection reaction
+intersection_of: RXNO:0000203 ! deprotection reaction
+intersection_of: RXNO:0000417 CHEBI:43176 ! deprotects hydroxy group
+relationship: RXNO:0000417 CHEBI:43176 ! deprotects hydroxy group
+
+[Term]
+id: RXNO:0000431
+name: carboxylic acid to primary alcohol reduction
+def: "A carboxylic acid reduction where the product is the corresponding primary alcohol." [RSC:cb]
+is_a: MOP:0000569 ! reduction
+relationship: BFO:0000077 CHEBI:15734 ! has participant beginning to exist primary alcohol
+relationship: BFO:0000078 CHEBI:33575 ! has participant ceasing to exist carboxylic acid
+
+[Typedef]
+id: BFO:0000055
+name: realizes
 
 [Typedef]
 id: BFO:0000057
