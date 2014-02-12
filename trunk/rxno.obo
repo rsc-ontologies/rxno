@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: rxno/releases/2014-02-11/rxno.owl
+data-version: rxno/releases/2014-02-12/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
@@ -4077,6 +4077,43 @@ def: "A carboxylic acid reduction where the product is the corresponding primary
 is_a: MOP:0000569 ! reduction
 relationship: BFO:0000077 CHEBI:15734 ! has participant beginning to exist primary alcohol
 relationship: BFO:0000078 CHEBI:33575 ! has participant ceasing to exist carboxylic acid
+
+[Term]
+id: RXNO:0000432
+name: tert-butyl protection
+def: "A carboxy group protection where the product is a tert-butyl ester." [RSC:cb]
+is_a: RXNO:0000325 ! carboxylic acid protection
+relationship: RXNO:0000416 CHEBI:46883 ! protects carboxy group
+
+[Term]
+id: RXNO:0000433
+name: carboxy group deprotection
+def: "A deprotection reaction where the reactive centre is a carboxy oxygen atom." [RSC:cb]
+is_a: RXNO:0000203 ! deprotection reaction
+intersection_of: RXNO:0000203 ! deprotection reaction
+intersection_of: RXNO:0000417 CHEBI:46883 ! deprotects carboxy group
+relationship: RXNO:0000417 CHEBI:46883 ! deprotects carboxy group
+
+[Term]
+id: RXNO:0000434
+name: tert-butyl ester deprotection
+def: "A deprotection reaction where the reactant is a tert-butyl ester and the product is a carboxylic acid." [RSC:cb]
+is_a: RXNO:0000433 ! carboxy group deprotection
+relationship: RXNO:0000417 CHEBI:46883 ! deprotects carboxy group
+
+[Term]
+id: RXNO:0000435
+name: methyl ester deprotection
+def: "A deprotection reaction where the reactant is a methyl ester and the product is a carboxylic acid." [RSC:cb]
+is_a: RXNO:0000433 ! carboxy group deprotection
+relationship: RXNO:0000417 CHEBI:46883 ! deprotects carboxy group
+
+[Term]
+id: RXNO:0000436
+name: ethyl ester deprotection
+def: "A deprotection reaction where the reactant is an ethyl ester and the product is a carboxylic acid." [RSC:cb]
+is_a: RXNO:0000433 ! carboxy group deprotection
+relationship: RXNO:0000417 CHEBI:46883 ! deprotects carboxy group
 
 [Typedef]
 id: BFO:0000055
