@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: rxno/releases/2014-02-12/rxno.owl
+data-version: rxno/releases/2014-02-14/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
@@ -382,6 +382,11 @@ is_a: CHEBI:23367 ! molecular entity
 id: CHEBI:73477
 name: terminal acetylenic compound
 is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: IAO:0000005
+name: objective specification
+is_a: IAO:0000030 ! information content entity
 
 [Term]
 id: IAO:0000030
@@ -911,17 +916,17 @@ synonym: "coupling reaction" EXACT []
 is_a: RXNO:0000001 ! planned reaction step
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 intersection_of: RXNO:0000002 ! carbon-carbon coupling reaction
-intersection_of: part_of RXNO:0000329 ! planned synthesis
-relationship: part_of RXNO:0000329 ! planned synthesis
+intersection_of: OBI:0000417 RXNO:0000440 ! achieves_planned_objective molecular skeleton joining objective
+relationship: OBI:0000417 RXNO:0000440 ! achieves_planned_objective molecular skeleton joining objective
 
 [Term]
 id: RXNO:0000001
 name: planned reaction step
-def: "A molecular process which takes place as part of a planned synthesis." [RSC:cb]
-is_a: MOP:0000543 ! molecular process
+def: "A molecular process with which the experimenters aim to achieve a particular molecular transformation." [RSC:cb]
 is_a: OBI:0000011 ! planned process
-intersection_of: MOP:0000543 ! molecular process
-intersection_of: part_of RXNO:0000329 ! planned synthesis
+intersection_of: OBI:0000011 ! planned process
+intersection_of: OBI:0000417 RXNO:0000437 ! achieves_planned_objective molecular transformation objective
+relationship: OBI:0000417 RXNO:0000437 ! achieves_planned_objective molecular transformation objective
 relationship: part_of RXNO:0000329 ! planned synthesis
 
 [Term]
@@ -956,8 +961,8 @@ def: "A planned reaction step where the product contains a ring that was not in 
 is_a: MOP:0000561 ! cyclization
 is_a: RXNO:0000001 ! planned reaction step
 intersection_of: MOP:0000561 ! cyclization
-intersection_of: part_of RXNO:0000329 ! planned synthesis
-relationship: part_of RXNO:0000329 ! planned synthesis
+intersection_of: OBI:0000417 RXNO:0000439 ! achieves_planned_objective ring formation objective
+relationship: OBI:0000417 RXNO:0000439 ! achieves_planned_objective ring formation objective
 
 [Term]
 id: RXNO:0000006
@@ -1477,6 +1482,9 @@ id: RXNO:0000073
 name: cleaving reaction
 def: "A reaction where atoms are lost from the molecular skeleton." [RSC:cb]
 is_a: RXNO:0000001 ! planned reaction step
+intersection_of: RXNO:0000001 ! planned reaction step
+intersection_of: OBI:0000417 RXNO:0000438 ! achieves_planned_objective molecular skeleton cleaving objective
+relationship: OBI:0000417 RXNO:0000438 ! achieves_planned_objective molecular skeleton cleaving objective
 
 [Term]
 id: RXNO:0000074
@@ -3299,10 +3307,9 @@ is_a: RXNO:0000323 ! hydroxyl group protection
 [Term]
 id: RXNO:0000331
 name: substitution step
-def: "A planned reaction step in which one singly-bonded substituent, but not a hydrogen, is replaced by another singly-bonded substituent." [RSC:cb]
-is_a: RXNO:0000001 ! planned reaction step
+def: "A functional modification step in which one singly-bonded substituent, but not a hydrogen, is replaced by another singly-bonded substituent." [RSC:cb]
+is_a: RXNO:0000010 ! functional modification
 is_a: RXNO:0000019 ! substitution reaction
-relationship: part_of RXNO:0000329 ! planned synthesis
 
 [Term]
 id: RXNO:0000332
@@ -3664,9 +3671,10 @@ is_a: MOP:0002411 ! N-arylation
 [Term]
 id: RXNO:0000373
 name: functional group addition step
-def: "A planned reaction step in which a covalent bond is formed between the molecular skeleton and a functional group." [RSC:cb]
+def: "A planned reaction step in which a covalent bond is formed between the molecular skeleton and a functional group and where the skeletal bond order is unchanged." [RSC:cb]
+comment: this is not part of David's grand diagram - well spotted Roger
 xref: NAMERXN:10
-is_a: RXNO:0000001 ! planned reaction step
+is_a: RXNO:0000010 ! functional modification
 relationship: has_part MOP:0000566 ! formation of covalent bond with group
 
 [Term]
@@ -4115,6 +4123,42 @@ def: "A deprotection reaction where the reactant is an ethyl ester and the produ
 is_a: RXNO:0000433 ! carboxy group deprotection
 relationship: RXNO:0000417 CHEBI:46883 ! deprotects carboxy group
 
+[Term]
+id: RXNO:0000437
+name: molecular transformation objective
+def: "An objective specification that describes how a molecule's skeleton and substituents are to be transformed by a given experiment." [RSC:cb]
+is_a: IAO:0000005 ! objective specification
+
+[Term]
+id: RXNO:0000438
+name: molecular skeleton cleaving objective
+def: "A molecular transformation specification that specifies that atoms should be lost from the molecular skeleton." [RSC:db]
+is_a: RXNO:0000437 ! molecular transformation objective
+
+[Term]
+id: RXNO:0000439
+name: ring formation objective
+def: "A molecular transformation specification that specifies that the product should contain a ring that was not in any of the reactants." [RSC:db]
+is_a: RXNO:0000437 ! molecular transformation objective
+
+[Term]
+id: RXNO:0000440
+name: molecular skeleton joining objective
+def: "A molecular transformation specification that specifies that atoms should be added to the molecular skeleton." [RSC:db]
+is_a: RXNO:0000437 ! molecular transformation objective
+
+[Term]
+id: RXNO:0000441
+name: molecular rearrangement objective
+def: "A molecular transformation specification that specifies that the number of rings and number of skeletal atoms should be preserved and that one or more atoms or groups of atoms move from one atom to another." [RSC:db]
+is_a: RXNO:0000437 ! molecular transformation objective
+
+[Term]
+id: RXNO:0000442
+name: functional modification objective
+def: "A molecular transformation specification that specifies that the substituents of a molecule should be changed but the number of atoms in the skeleton and their connectivity, but not necessarily the bond orders, should remain the same." [RSC:db]
+is_a: RXNO:0000437 ! molecular transformation objective
+
 [Typedef]
 id: BFO:0000055
 name: realizes
@@ -4136,6 +4180,13 @@ is_a: BFO:0000057 ! has_participant
 [Typedef]
 id: BFO:0000162
 name: has disposition at all times
+
+[Typedef]
+id: OBI:0000417
+name: achieves_planned_objective
+def: "This relation obtains between a planned process and a objective specification when the criteria specified in the objective specification are met at the end of the planned process." [obi:AR, obi:BP, obi:PPPBbranch]
+domain: OBI:0000011 ! planned process
+range: IAO:0000005 ! objective specification
 
 [Typedef]
 id: RXNO:0000416
