@@ -1,4 +1,5 @@
 format-version: 1.2
+data-version: rxno/releases/2014-02-17/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
@@ -15,7 +16,7 @@ is_a: CHEBI:30879 ! alcohol
 [Term]
 id: CHEBI:16526
 name: carbon dioxide
-is_a: CHEBI:23367
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:16842
@@ -434,6 +435,14 @@ is_a: MOP:0000410 ! hydrocarbylation
 relationship: BFO:0000057 CHEBI:33338 ! has_participant aryl group
 
 [Term]
+id: MOP:0000422
+name: allylation
+def: "Formation of a covalent bond between a substrate and an allyl group." [RSC:xp]
+comment: has_participant: CHEBI:30361
+synonym: "allylation" EXACT []
+is_a: MOP:0000410 ! hydrocarbylation
+
+[Term]
 id: MOP:0000458
 name: organylation
 def: "Formation of a covalent bond between a substrate and an organyl group." [RSC:xp]
@@ -688,7 +697,7 @@ id: MOP:0000584
 name: primary alkene oxidation to carboxylic acid and carbon dioxide
 def: "An alkene oxidation process where the reactant is a primary alkene and the products are carboxylic acid and carbon dioxide. This can be achieved with a warm, acidic solution of potassium permanganate." [RSC:cb]
 is_a: RXNO:0000344 ! alkene oxidative cleavage
-relationship: BFO:0000077 CHEBI:16526
+relationship: BFO:0000077 CHEBI:16526 ! has participant beginning to exist carbon dioxide
 created_by: batchelorc
 creation_date: 2009-06-02T06:02:46Z
 
@@ -715,8 +724,8 @@ id: MOP:0000587
 name: secondary terminal alkene oxidation to ketone and carbon dioxide
 def: "An alkene oxidation process where the reactant is a secondary terminal alkene and the products are carbon dioxide and the corresponding ketone. This can be achieved by warm, acidic potassium permanganate solution." [RSC:cb]
 is_a: RXNO:0000344 ! alkene oxidative cleavage
+relationship: BFO:0000077 CHEBI:16526 ! has participant beginning to exist carbon dioxide
 relationship: BFO:0000077 CHEBI:17087 ! has participant beginning to exist ketone
-relationship: BFO:0000077 CHEBI:16526 ! has participant beginning to exist ketone
 created_by: batchelorc
 creation_date: 2009-06-02T06:07:44Z
 
@@ -837,13 +846,13 @@ relationship: BFO:0000162 MOP:0000717 ! has disposition at all times enolisabili
 id: MOP:0000719
 name: O-dealkylation
 def: "Breaking of a covalent bond between an alkyl group and an oxygen atom." [RSC:xp]
-is_a: MOP:0001369
+is_a: MOP:0001369 ! dealkylation
 
 [Term]
 id: MOP:0001369
 name: dealkylation
 def: "Breaking of a covalent bond between an alkyl group and a substrate." [RSC:xp]
-is_a: MOP:0001458
+is_a: MOP:0001458 ! deorganylation
 
 [Term]
 id: MOP:0001458
@@ -865,7 +874,7 @@ name: decarboxylation
 def: "Breaking of a covalent bond between a molecule and a carboxy group." [RSC:xp]
 is_a: MOP:0001458 ! deorganylation
 relationship: BFO:0000057 CHEBI:46883 ! has_participant carboxy group
-relationship: BFO:0000077 CHEBI:16526
+relationship: BFO:0000077 CHEBI:16526 ! has participant beginning to exist carbon dioxide
 
 [Term]
 id: MOP:0002364
@@ -922,6 +931,12 @@ name: O-sulfonylation
 def: "Formation of a covalent bond between an oxygen atom in a substrate and a sulfonyl group." [RSC:xp]
 comment: has_participant: CHEBI:29825
 is_a: MOP:0000539 ! sulfonylation
+
+[Term]
+id: MOP:0006369
+name: P-alkylation
+def: "The formation of a covalent bond between a phosphorus atom and an alkyl group." [RSC:xp]
+is_a: MOP:0000369 ! alkylation
 
 [Term]
 id: OBI:0000011
@@ -1409,14 +1424,8 @@ def: "The alkylation of a trialkyl phosphite with an alkyl halide or acyl halide
 synonym: "Michaelis-Arbuzov phosphonate synthesis" EXACT []
 synonym: "Michaelis-Arbuzov reaction" EXACT []
 is_a: RXNO:0000019 ! substitution reaction
-relationship: has_part MOP:0000719
-relationship: has_part MOP:0006369
-
-[Term]
-id: MOP:0006369
-name: P-alkylation
-def: "The formation of a covalent bond between a phosphorus atom and an alkyl group." [RSC:xp]
-is_a: MOP:0000369
+relationship: has_part MOP:0000719 ! O-dealkylation
+relationship: has_part MOP:0006369 ! P-alkylation
 
 [Term]
 id: RXNO:0000061
@@ -2275,33 +2284,33 @@ relationship: RXNO:0000423 CHEBI:22698 ! has specified product benzaldehydes
 id: RXNO:0000181
 name: Boyland-Sims oxidation
 def: "The oxidation of an aromatic amine to give a (predominantly ortho) amino aryl sulfate using potassium persulfate followed by hydrolysis to yield the corresponding aminophenol." [RSC:cb, RSC:cc, RSC:db]
-is_a: RXNO:0000020 ! aromatic substitution
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000059/
+is_a: RXNO:0000020 ! aromatic substitution
 
 [Term]
 id: RXNO:0000182
 name: Kolbe-Schmitt reaction
 def: "The (predominantly ortho) carboxylation of a phenoxide." [RSC:cb, RSC:cc, RSC:db]
-is_a: RXNO:0000002 ! carbon-carbon coupling reaction
-is_a: MOP:0000713
-relationship: BFO:0000078 CHEBI:16526
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000239/
+is_a: MOP:0000713 ! carboxylation
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+relationship: BFO:0000078 CHEBI:16526 ! has participant ceasing to exist carbon dioxide
 
 [Term]
 id: RXNO:0000183
 name: Perkow reaction
 def: "The reaction between an alpha-halocarbonyl compound and a trialkyl phosphite to give an enol phosphate." [RSC:cb, RSC:cc, RSC:db]
 comment: not clear why this is where it is and not a sibling of the Arbuzov reaction (2014-02-17)
-is_a: RXNO:0000000 ! molecular skeleton joining reaction
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000329/
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
 
 [Term]
 id: RXNO:0000184
 name: Pfitzner-Moffatt oxidation
 def: "The oxidation of a primary or secondary alcohol to the corresponding aldehyde or ketone respectively using dimethyl sulfoxide, 1,3-dicyclohexylcarbodiimide and acid. The reaction proceeds via an alkoxysulfonium ylide." [RSC:cb, RSC:cc, RSC:db]
 synonym: "Moffatt oxidation" EXACT []
-is_a: RXNO:0000012 ! functional group oxidation
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000335/
+is_a: RXNO:0000012 ! functional group oxidation
 
 [Term]
 id: RXNO:0000185
@@ -2313,31 +2322,31 @@ is_a: RXNO:0000011 ! functional group modification
 id: RXNO:0000186
 name: Willgerodt-Kindler reaction
 def: "The conversion of an aryl alkyl ketone to an amide using sulfur and dry ammonia or a primary or secondary amine. The amide carbonyl group is always at the end of the alkyl chain." [RSC:cb, RSC:cc, RSC:db]
-is_a: RXNO:0000011 ! functional group modification
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000466/
+is_a: RXNO:0000011 ! functional group modification
 
 [Term]
 id: RXNO:0000187
 name: Tishchenko reaction
 def: "The formation of an ester from two aldehydes via a disproportionation process using a metal alkoxide to oxidise one aldehyde and reduce the other." [RSC:cb, RSC:cc, RSC:db]
-is_a: RXNO:0000011 ! functional group modification
-relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
-relationship: RXNO:0000423 CHEBI:33308
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000433/
+is_a: RXNO:0000011 ! functional group modification
+relationship: RXNO:0000423 CHEBI:33308 ! has specified product carboxylic ester
+relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 
 [Term]
 id: RXNO:0000188
 name: Zimmermann reaction
 def: "The reaction between a methylene ketone and a polynitro aromatic compound." [RSC:cb, RSC:cc, RSC:db]
-is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000482/
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 
 [Term]
 id: RXNO:0000189
 name: Neber rearrangement
 def: "The rearrangement of the sulfonic ester of a ketoxime in base to give an alpha-amino ketone." [RSC:cb, RSC:cc, RSC:db]
-is_a: RXNO:0000025 ! rearrangement step
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000296/
+is_a: RXNO:0000025 ! rearrangement step
 
 [Term]
 id: RXNO:0000191
@@ -2488,31 +2497,31 @@ is_a: RXNO:0000019 ! substitution reaction
 id: RXNO:0000212
 name: Sakurai reaction, aldehyde or ketone
 def: "A carbon-carbon coupling reaction in which an aldehyde or ketone reacts with allyltrimethylsilane to form a homoallylic alcohol." [RSC:cb, RSC:cc, RSC:db]
-is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+is_a: RXNO:0000443 ! Sakurai reaction
 
 [Term]
 id: RXNO:0000213
 name: Sakurai reaction, enone
 def: "A carbon-carbon coupling reaction in which an enone reacts with allyltrimethylsilane to form a delta,epsilon-unsaturated carbonyl compound." [RSC:cb, RSC:cc, RSC:db]
-is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+is_a: RXNO:0000443 ! Sakurai reaction
 
 [Term]
 id: RXNO:0000214
 name: Sakurai reaction, acid chloride
 def: "A carbon-carbon coupling reaction in which an acid chloride reacts with allyltrimethylsilane to form a gamma,delta-unsaturated ketone." [RSC:cb, RSC:cc, RSC:db]
-is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+is_a: RXNO:0000443 ! Sakurai reaction
 
 [Term]
 id: RXNO:0000215
 name: Sakurai reaction, acetal or ketal
 def: "A carbon-carbon coupling reaction in which an acetal or ketal reacts with allyltrimethylsilane to form a homoallylic ether." [RSC:cb, RSC:cc, RSC:db]
-is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+is_a: RXNO:0000443 ! Sakurai reaction
 
 [Term]
 id: RXNO:0000216
 name: Sakurai reaction, iminium salt
 def: "A carbon-carbon coupling reaction in which an iminium salt reacts with allyltrimethylsilane to form a homoallylic amine." [RSC:cb, RSC:cc, RSC:db]
-is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+is_a: RXNO:0000443 ! Sakurai reaction
 
 [Term]
 id: RXNO:0000217
@@ -3204,6 +3213,7 @@ id: RXNO:0000311
 name: Tsuji-Trost reaction
 def: "A carbon-carbon coupling reaction in which a nucleophile reacts with an allyl acetate, allyl halide, allyl carbonate, allyl carbamate, allyl phosphate, allyl sulfone or allyl nitro compound to give an allyl compound. The reaction is catalsed by Pd(0)." [rsc:db]
 synonym: "Trost allylation" EXACT []
+is_a: MOP:0000422 ! allylation
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 
 [Term]
@@ -4197,6 +4207,19 @@ id: RXNO:0000442
 name: functional modification objective
 def: "A molecular transformation specification that specifies that the substituents of a molecule should be changed but the number of atoms in the skeleton and their connectivity, but not necessarily the bond orders, should remain the same." [RSC:db]
 is_a: RXNO:0000437 ! molecular transformation objective
+
+[Term]
+id: RXNO:0000443
+name: Sakurai reaction
+def: "Reaction of allyltrimethylsilane with a carbon electrophile to allylate the carbon electrophile." [RSC:cb]
+synonym: "Hosomi-Sakurai reaction" EXACT []
+is_a: MOP:0000422 ! allylation
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+union_of: RXNO:0000212 ! Sakurai reaction, aldehyde or ketone
+union_of: RXNO:0000213 ! Sakurai reaction, enone
+union_of: RXNO:0000214 ! Sakurai reaction, acid chloride
+union_of: RXNO:0000215 ! Sakurai reaction, acetal or ketal
+union_of: RXNO:0000216 ! Sakurai reaction, iminium salt
 
 [Typedef]
 id: BFO:0000055
