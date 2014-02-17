@@ -1,5 +1,4 @@
 format-version: 1.2
-data-version: rxno/releases/2014-02-14/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
@@ -1391,6 +1390,7 @@ synonym: "Michaelis-Arbuzov phosphonate synthesis" EXACT []
 synonym: "Michaelis-Arbuzov reaction" EXACT []
 is_a: RXNO:0000019 ! substitution reaction
 
+
 [Term]
 id: RXNO:0000061
 name: Mukaiyama aldol condensation
@@ -2498,7 +2498,7 @@ relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 [Term]
 id: RXNO:0000220
 name: Pummerer rearrangement
-def: "The conversion of a sulfoxide with an alpha-hydrogen to an alpha-subtituted thioether. The reaction is usually performed with an acid anhydride or acyl halide." [RSC:cc, RSC:cg, RSC:db]
+def: "The conversion of a sulfoxide with an alpha-hydrogen to an alpha-substituted thioether. The reaction is usually performed with an acid anhydride or acyl halide." [RSC:cc, RSC:cg, RSC:db]
 synonym: "Pummerer methyl sulfoxide rearrangement" EXACT []
 is_a: RXNO:0000011 ! functional group modification
 

@@ -27,4 +27,5 @@ organophosphazo compound: ?! (but looks like this R3P=NR')
 organoselenide: is_a organoselenium compound (CHEBI:25712)
 pseudohalide salt: salt (CHEBI:24866) and has_part pseudohalide anion (CHEBI:36828)
 selenoxide: is_a heterone (CHEBI:36598)
+RXNO:0000060: trialkyl phosphite: is_a organic phosphite (CHEBI:48135)
 5,6-unsaturated carbonyl compound:
