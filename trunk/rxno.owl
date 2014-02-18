@@ -11,7 +11,7 @@
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/rxno.obo.owl">
         <oboInOwl:hasOBOFormatVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2</oboInOwl:hasOBOFormatVersion>
         <oboInOwl:default-namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:default-namespace>
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/rxno.obo/rxno/releases/2014-02-17/rxno.owl/rxno.obo.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/rxno/releases/2014-02-18/rxno.owl"/>
     </owl:Ontology>
     
 
@@ -1066,6 +1066,17 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_42485 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_42485">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">formyl group</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24433"/>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:42485</oboInOwl:id>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_43176 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_43176">
@@ -1227,6 +1238,31 @@
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IAO:0000030</oboInOwl:id>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MOP_0000003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MOP_0000003">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">formylation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MOP_0000479"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000057"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_42485"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Formation of a covalent bond between a substrate and a formyl group.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MOP:0000003</oboInOwl:id>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">formylation</oboInOwl:hasExactSynonym>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Formation of a covalent bond between a substrate and a formyl group.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RSC:xp</oboInOwl:hasDbXref>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MOP_0000003"/>
+    </owl:Axiom>
     
 
 
@@ -1536,12 +1572,6 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">retrocycloaddition</oboInOwl:hasExactSynonym>
     </owl:Class>
     <owl:Axiom>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AU:C01506</oboInOwl:hasDbXref>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cycloreversion</owl:annotatedTarget>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MOP_0000564"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-    </owl:Axiom>
-    <owl:Axiom>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AU:R05372</oboInOwl:hasDbXref>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">retrocycloaddition</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MOP_0000564"/>
@@ -1553,6 +1583,12 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AU:C01501</oboInOwl:hasDbXref>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MOP_0000564"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AU:C01506</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cycloreversion</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MOP_0000564"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
     </owl:Axiom>
     
 
@@ -1684,14 +1720,14 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MOP_0000569"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000077"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15734"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000078"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17478"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000078"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17478"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000077"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15734"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009-06-01T06:07:02Z</oboInOwl:creation_date>
@@ -1774,14 +1810,14 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MOP_0000572"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000077"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17087"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000078"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35681"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000078"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35681"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000077"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17087"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009-06-01T06:11:31Z</oboInOwl:creation_date>
@@ -2400,14 +2436,14 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MOP_0000543"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000077"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33823"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000055"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MOP_0000717"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000055"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MOP_0000717"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000077"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33823"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MOP:0000716</oboInOwl:id>
@@ -2559,14 +2595,14 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MOP_0001458"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_46883"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000077"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_16526"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000077"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_16526"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000057"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_46883"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Breaking of a covalent bond between a molecule and a carboxy group.</obo:IAO_0000115>
@@ -2822,14 +2858,14 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000417"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000437"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/rxno.obo#part_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000329"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/rxno.obo#part_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000329"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000417"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000437"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A molecular process with which the experimenters aim to achieve a particular molecular transformation.</obo:IAO_0000115>
@@ -2871,12 +2907,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000017"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000423"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23252"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36606"/>
             </owl:Restriction>
@@ -2885,6 +2915,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33855"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000423"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23252"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An aldol condensation where an aryl aldehyde reacts with an acid anhydride to form a cinnamic acid.</obo:IAO_0000115>
@@ -3184,6 +3220,8 @@
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000015</oboInOwl:id>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wittig condensation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wittig olefination</oboInOwl:hasExactSynonym>
+        <rxno:SMIRKS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[C:1]=O.[C:3][P]&gt;&gt;[C:1]=[C:3]</rxno:SMIRKS>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000468/</oboInOwl:hasDbXref>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A carbon-carbon coupling reaction where a carbonyl compound reacts with a phosphonium ylide to give an alkene.</owl:annotatedTarget>
@@ -3211,6 +3249,7 @@
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000016</oboInOwl:id>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aldol reaction</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000004/</oboInOwl:hasDbXref>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A carbon-carbon coupling reaction where an enol or enolate reacts with a carbonyl compound to form a beta-hydroxy ketone. The name comes from aldehyde + alcohol.</owl:annotatedTarget>
@@ -3320,6 +3359,7 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An aromatic substitution reaction where an aryl diazonium salt reacts with a copper(I) halide or pseudohalide to form an aromatic halide or pseudohalide.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000021</oboInOwl:id>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000386/</oboInOwl:hasDbXref>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An aromatic substitution reaction where an aryl diazonium salt reacts with a copper(I) halide or pseudohalide to form an aromatic halide or pseudohalide.</owl:annotatedTarget>
@@ -3400,6 +3440,7 @@
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000024</oboInOwl:id>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This usually produces the trans-olefin rather than the cis-. ALSO Merck Index gives a non-terminal example.</rdfs:comment>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000192/</oboInOwl:hasDbXref>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A carbon-carbon coupling reaction where an organohalide or triflate couples to a terminal olefin to produce an internal olefin, catalysed by palladium. It is stereospecific.</owl:annotatedTarget>
@@ -3438,19 +3479,20 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000025"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000423"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_32988"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25750"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25750"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000423"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_32988"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A rearrangement where an oxime rearranges to form an amide. Often there is selective migration of one group.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000026</oboInOwl:id>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000029</oboInOwl:hasDbXref>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A rearrangement where an oxime rearranges to form an amide. Often there is selective migration of one group.</owl:annotatedTarget>
@@ -3481,6 +3523,7 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A [3,3]-sigmatropic rearrangement where a 1,5-hexadiene rearranges to form a 1,5-hexadiene.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000028</oboInOwl:id>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000086/</oboInOwl:hasDbXref>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A [3,3]-sigmatropic rearrangement where a 1,5-hexadiene rearranges to form a 1,5-hexadiene.</owl:annotatedTarget>
@@ -3499,6 +3542,7 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A [3,3]-sigmatropic rearrangement of a 3-hydroxy-1,5-hexadiene rearranges to form a 5,6-unsaturated carbonyl compound.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000029</oboInOwl:id>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000086/</oboInOwl:hasDbXref>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A [3,3]-sigmatropic rearrangement of a 3-hydroxy-1,5-hexadiene rearranges to form a 5,6-unsaturated carbonyl compound.</owl:annotatedTarget>
@@ -3538,14 +3582,14 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000030"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17087"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000423"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33308"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000423"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33308"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17087"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A reaction of a ketone to give an ester, in which an alkyl, benzyl or phenyl group migrates from one of the alpha-carbon centres to an adjacent oxygen, displacing an oxygen-based leaving group; the result is a formal insertion of an oxygen atom. The reaction also works with aldehydes, giving the corresponding carboxylic acid. The term &quot;Baeyer-Villiger rearrangement&quot; may occasionally be used in a mechanistic sense to refer specificially to the actual rearrangement step.</obo:IAO_0000115>
@@ -3629,6 +3673,7 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A substitution where an alcohol is converted into something else. Typical reagents are a dialkyl azodicarboxylate and a triarylphosphine. The alcohol stereocentre is inverted.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000034</oboInOwl:id>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000287/</oboInOwl:hasDbXref>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A substitution where an alcohol is converted into something else. Typical reagents are a dialkyl azodicarboxylate and a triarylphosphine. The alcohol stereocentre is inverted.</owl:annotatedTarget>
@@ -3655,6 +3700,8 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NAMERXN:3.4</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000035</oboInOwl:id>
+        <rxno:SMIRKS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[Sn][C:1].[C:2][Cl,Br,I:3]&gt;&gt;[C:1][C:2].[Sn][*:3]</rxno:SMIRKS>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000415/</oboInOwl:hasDbXref>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A carbon-carbon coupling reaction where a stannane reacts with an organohalide or organotriflate.</owl:annotatedTarget>
@@ -3686,6 +3733,8 @@
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000036</oboInOwl:id>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reformatskii reaction</oboInOwl:hasExactSynonym>
+        <rxno:SMIRKS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[C:1]=[O:2].[F,Cl,Br,I][C:3][C:4](=[O:5])[O:6][#6:7].[Zn:8]&gt;&gt;[O:2]-[C:1][C:3][C:4](=[O:5])[O:6][#6:7].[Zn:8]</rxno:SMIRKS>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000361/</oboInOwl:hasDbXref>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A carbon-carbon coupling reaction where an aldehyde or amine reacts with a alpha-halo ester and zinc to form a beta-hydroxy ester.</owl:annotatedTarget>
@@ -3722,6 +3771,8 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A functional group reduction where an aldehyde or ketone carbonyl group is reduced to a methylene with zinc-mercury amalgam and hydrochloric acid.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000038</oboInOwl:id>
+        <rxno:SMIRKS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[C:1]=O.[Zn].[Hg].[Cl]&gt;&gt;[C:1]</rxno:SMIRKS>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000082/</oboInOwl:hasDbXref>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A functional group reduction where an aldehyde or ketone carbonyl group is reduced to a methylene with zinc-mercury amalgam and hydrochloric acid.</owl:annotatedTarget>
@@ -3893,14 +3944,14 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000012"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35681"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000423"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17478"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000423"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17478"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35681"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An oxidation of a secondary alcohol to a ketone involving an equilibrium between the alcohol and a reagent ketone present in excess, catalysed by a metal alkoxide.</obo:IAO_0000115>
@@ -4622,14 +4673,14 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000321"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_32952"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000416"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_46882"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000416"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_46882"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_32952"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A protection reaction in which an amine is converted into a tert-butoxycarbonyl compound.</obo:IAO_0000115>
@@ -5818,14 +5869,14 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000037"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_37579"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000425"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33363"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000425"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33363"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_37579"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -7574,14 +7625,14 @@
     <!-- http://purl.obolibrary.org/obo/RXNO_0000216 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000216">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sakurai reaction, iminium salt</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">imine Sakurai reaction</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000443"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A carbon-carbon coupling reaction in which an iminium salt reacts with allyltrimethylsilane to form a homoallylic amine.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A carbon-carbon coupling reaction in which an imine reacts with allyltrimethylsilane to form a homoallylic amine.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000216</oboInOwl:id>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A carbon-carbon coupling reaction in which an iminium salt reacts with allyltrimethylsilane to form a homoallylic amine.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A carbon-carbon coupling reaction in which an imine reacts with allyltrimethylsilane to form a homoallylic amine.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RSC:cb</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RSC:cc</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RSC:db</oboInOwl:hasDbXref>
@@ -7596,6 +7647,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000217">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sakurai reaction, epoxide</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000205"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000443"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A ring-breaking reaction in which an epoxide reacts with allyltrimethylsilane to form a hydroxy alkene.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000217</oboInOwl:id>
@@ -7927,18 +7979,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000011"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000423"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_32952"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_32952"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17478"/>
             </owl:Restriction>
@@ -7947,6 +7987,18 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_38269"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_32952"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000423"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_32952"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
@@ -9062,14 +9114,15 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000288">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rosenmund-von Braun reaction</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000002"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A carbon-carbon coupling reaction where an aryl halide reacts with cuprous cyanide to give an aryl nitrile.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A carbon-carbon coupling reaction where an aryl halide reacts with copper(I) cyanide to give an aryl nitrile.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000288</oboInOwl:id>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rosenmund-von Braun synthesis</oboInOwl:hasExactSynonym>
+        <rxno:SMIRKS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[c:1][F,Cl,Br,I].[Cu][C:2]#[N:3]&gt;&gt;[c:1][C:2]#[N:3]</rxno:SMIRKS>
     </owl:Class>
     <owl:Axiom>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">:cg</oboInOwl:hasDbXref>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A carbon-carbon coupling reaction where an aryl halide reacts with cuprous cyanide to give an aryl nitrile.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A carbon-carbon coupling reaction where an aryl halide reacts with copper(I) cyanide to give an aryl nitrile.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rsc:cg</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rsc:db</oboInOwl:hasDbXref>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000288"/>
@@ -9090,8 +9143,8 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wohler synthesis</oboInOwl:hasExactSynonym>
     </owl:Class>
     <owl:Axiom>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">:cg</oboInOwl:hasDbXref>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The formation of urea from ammonium cyanate. Ammonium cyanate is unstable, and so is formed in situ from either (a) cyanic acid and ammonia, (b) a metal cyanate and an ammonium salt, or (c) a metal cyanate and ammonia.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rsc:cg</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rsc:db</oboInOwl:hasDbXref>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000289"/>
@@ -9110,8 +9163,8 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hydrosilation</oboInOwl:hasExactSynonym>
     </owl:Class>
     <owl:Axiom>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">:cg</oboInOwl:hasDbXref>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The addition of a hydrosilane across the double bond of an alkene or alkyne to give a more substituted silane. Addition to an aldehyde or ketone produces a silyl ether.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rsc:cg</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rsc:db</oboInOwl:hasDbXref>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000290"/>
@@ -9129,8 +9182,8 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The addition of the N-H bond of an amine across a double bond of an alkene or alkyne, to give a more substituted amine.</obo:IAO_0000115>
     </owl:Class>
     <owl:Axiom>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">:cg</oboInOwl:hasDbXref>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The addition of the N-H bond of an amine across a double bond of an alkene or alkyne, to give a more substituted amine.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rsc:cg</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rsc:db</oboInOwl:hasDbXref>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000291"/>
@@ -9148,9 +9201,9 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The addition of a boron hydride across a double bond of an alkene or alkyne. The boron usually adds to the less substituted carbon.</obo:IAO_0000115>
     </owl:Class>
     <owl:Axiom>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">:cg</oboInOwl:hasDbXref>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The addition of a boron hydride across a double bond of an alkene or alkyne. The boron usually adds to the less substituted carbon.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">XX:db</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rsc:cg</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rsc:db</oboInOwl:hasDbXref>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000292"/>
     </owl:Axiom>
@@ -9167,8 +9220,8 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The formal addition of water across a double bond of an alkene or alkyne by formation of an organoborane and in situ oxidation, typically with basic peroxide. The product is usually the less substituted alcohol.</obo:IAO_0000115>
     </owl:Class>
     <owl:Axiom>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">:cg</oboInOwl:hasDbXref>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The formal addition of water across a double bond of an alkene or alkyne by formation of an organoborane and in situ oxidation, typically with basic peroxide. The product is usually the less substituted alcohol.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rsc:cg</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rsc:db</oboInOwl:hasDbXref>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000293"/>
@@ -9187,8 +9240,8 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hydrometalation</oboInOwl:hasExactSynonym>
     </owl:Class>
     <owl:Axiom>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">:cg</oboInOwl:hasDbXref>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The reaction of any of a number of metal hydride species with an alkene or alkyne, to give an intermediate organometal species that can give various products after work-up.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rsc:cg</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rsc:db</oboInOwl:hasDbXref>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000294"/>
@@ -9206,8 +9259,8 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The reaction of a organozirconium hydride with an alkene or alkyne, to give an intermediate zirconium species that can give various products after work-up. The zirconium reagent used is typically Schwartz&apos;s reagent, Cp2ZrHCl.</obo:IAO_0000115>
     </owl:Class>
     <owl:Axiom>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">:cg</oboInOwl:hasDbXref>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The reaction of a organozirconium hydride with an alkene or alkyne, to give an intermediate zirconium species that can give various products after work-up. The zirconium reagent used is typically Schwartz&apos;s reagent, Cp2ZrHCl.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rsc:cg</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rsc:db</oboInOwl:hasDbXref>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000295"/>
@@ -9225,8 +9278,8 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The reaction of a organotin hydride with an alkene or alkyne, to give an intermediate tin species that can give various products after work-up.</obo:IAO_0000115>
     </owl:Class>
     <owl:Axiom>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">:cg</oboInOwl:hasDbXref>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The reaction of a organotin hydride with an alkene or alkyne, to give an intermediate tin species that can give various products after work-up.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rsc:cg</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rsc:db</oboInOwl:hasDbXref>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000296"/>
@@ -9244,8 +9297,8 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The reaction of a organotellurium hydride with an alkyne, to give a (usually (Z)-configured) vinyltellurium species.</obo:IAO_0000115>
     </owl:Class>
     <owl:Axiom>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">:cg</oboInOwl:hasDbXref>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The reaction of a organotellurium hydride with an alkyne, to give a (usually (Z)-configured) vinyltellurium species.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rsc:cg</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rsc:db</oboInOwl:hasDbXref>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000297"/>
@@ -9446,14 +9499,14 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000395"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33641"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000423"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24828"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000423"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24828"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33641"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -10810,13 +10863,19 @@
     <!-- http://purl.obolibrary.org/obo/RXNO_0000368 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000368">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crabbe homologation</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crabbé homologation</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MOP_0000581"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000070"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_32878"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000057"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_32952"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -10831,13 +10890,8 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_37602"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_32952"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-01-08T13:48:00Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crabbe homologation</oboInOwl:hasExactSynonym>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oxidation of an alkene to an allene by heating with formaldehyde, an amine and an inorganic salt.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000368</oboInOwl:id>
@@ -10889,6 +10943,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_278547"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_18379"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -10896,12 +10956,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000423"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35689"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_278547"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A functional group modification of a nitrile to a 1H-tetrazole by addition of sodium azide.</obo:IAO_0000115>
@@ -11015,6 +11069,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_16842"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_32952"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -11022,12 +11082,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000423"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_32876"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_16842"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eschweiler-Clarke reaction</oboInOwl:hasExactSynonym>
@@ -11111,13 +11165,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/rxno.obo#has_part"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000017"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MOP_0000561"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/rxno.obo#has_part"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MOP_0000561"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000017"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -11734,14 +11788,14 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000364"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000423"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24469"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_30879"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_30879"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000423"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24469"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Appel reaction</oboInOwl:hasExactSynonym>
@@ -11790,14 +11844,14 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000406"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27385"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000423"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23128"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000423"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23128"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27385"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conversion of an alcohol to an alkyl chloride with triphenylphosphine and tetrachloromethane.</obo:IAO_0000115>
@@ -12190,14 +12244,14 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000430"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000417"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_43176"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50784"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50784"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000417"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_43176"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A hydroxy group deprotection where a pivalate group is removed in acid or base conditions.</obo:IAO_0000115>
@@ -12256,14 +12310,14 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MOP_0000569"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000078"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33575"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000077"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15734"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000077"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15734"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000078"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33575"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A carboxylic acid reduction where the product is the corresponding primary alcohol.</obo:IAO_0000115>
@@ -12530,6 +12584,7 @@
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RXNO_0000214"/>
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RXNO_0000215"/>
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RXNO_0000216"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RXNO_0000217"/>
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -12545,6 +12600,90 @@
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaction of allyltrimethylsilane with a carbon electrophile to allylate the carbon electrophile.</owl:annotatedTarget>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000443"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RXNO_0000444 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000444">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fries rearrangement</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RXNO_0000445"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RXNO_0000446"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000025"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Can be promoted by heat or UV. The UV version (photo-Fries) involves a radical mechanism.</rdfs:comment>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000444</oboInOwl:id>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rearrangement of the acyl group in a phenolate ester to the ortho- and/or para-position. It is catalysed by a Lewis acid.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">photo-Fries rearrangement</oboInOwl:hasExactSynonym>
+    </owl:Class>
+    <owl:Axiom>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RSC:cb</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rearrangement of the acyl group in a phenolate ester to the ortho- and/or para-position. It is catalysed by a Lewis acid.</owl:annotatedTarget>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000444"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RXNO_0000445 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000445">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ortho-Fries rearrangement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000444"/>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000445</oboInOwl:id>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rearrangement of the acyl group in a phenolate ester to the ortho-position.</obo:IAO_0000115>
+    </owl:Class>
+    <owl:Axiom>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RSC:cb</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rearrangement of the acyl group in a phenolate ester to the ortho-position.</owl:annotatedTarget>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000445"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RXNO_0000446 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000446">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">para-Fries rearrangement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000444"/>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000446</oboInOwl:id>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rearrangement of the acyl group in a phenolate ester to the para-position.</obo:IAO_0000115>
+    </owl:Class>
+    <owl:Axiom>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RSC:cb</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rearrangement of the acyl group in a phenolate ester to the para-position.</owl:annotatedTarget>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000446"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RXNO_0000447 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000447">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duff reaction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MOP_0000003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000002"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Formylation of a phenol or aromatic amine with hexamethylenetetramine in acidic conditions.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000447</oboInOwl:id>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Formylation of a phenol or aromatic amine with hexamethylenetetramine in acidic conditions.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doi:10.1039/JR9450000276</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doi:10.1039/jr9410000547</oboInOwl:hasDbXref>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000447"/>
     </owl:Axiom>
 </rdf:RDF>
 

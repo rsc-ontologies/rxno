@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: rxno/releases/2014-02-17/rxno.owl
+data-version: rxno/releases/2014-02-18/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
@@ -324,6 +324,11 @@ name: pyrimidines
 is_a: CHEBI:23367 ! molecular entity
 
 [Term]
+id: CHEBI:42485
+name: formyl group
+is_a: CHEBI:24433 ! group
+
+[Term]
 id: CHEBI:43176
 name: hydroxy group
 is_a: CHEBI:24433 ! group
@@ -396,6 +401,14 @@ is_a: IAO:0000030 ! information content entity
 [Term]
 id: IAO:0000030
 name: information content entity
+
+[Term]
+id: MOP:0000003
+name: formylation
+def: "Formation of a covalent bond between a substrate and a formyl group." [RSC:xp]
+synonym: "formylation" EXACT []
+is_a: MOP:0000479 ! acylation
+relationship: BFO:0000057 CHEBI:42485 ! has_participant formyl group
 
 [Term]
 id: MOP:0000339
@@ -1078,8 +1091,10 @@ relationship: RXNO:0000424 CHEBI:51236 ! has specified reactant organomagnesium 
 id: RXNO:0000015
 name: Wittig reaction
 def: "A carbon-carbon coupling reaction where a carbonyl compound reacts with a phosphonium ylide to give an alkene." [RSC:cb, RSC:cc, RSC:db]
+synonym: "[C:1]=O.[C:3][P]>>[C:1]=[C:3]" SMIRKS []
 synonym: "Wittig condensation" EXACT []
 synonym: "Wittig olefination" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000468/
 xref: NAMERXN:3.8
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
 relationship: RXNO:0000423 CHEBI:33641 ! has specified product olefin
@@ -1090,6 +1105,7 @@ id: RXNO:0000016
 name: aldol addition
 def: "A carbon-carbon coupling reaction where an enol or enolate reacts with a carbonyl compound to form a beta-hydroxy ketone. The name comes from aldehyde + alcohol." [RSC:cb]
 synonym: "aldol reaction" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000004/
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
 relationship: RXNO:0000423 CHEBI:55380 ! has specified product beta-hydroxy ketone
 
@@ -1127,6 +1143,7 @@ is_a: RXNO:0000019 ! substitution reaction
 id: RXNO:0000021
 name: Sandmeyer reaction
 def: "An aromatic substitution reaction where an aryl diazonium salt reacts with a copper(I) halide or pseudohalide to form an aromatic halide or pseudohalide." [RSC:db]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000386/
 is_a: RXNO:0000332 ! aromatic substitution step
 union_of: RXNO:0000333 ! Sandmeyer halogenation
 union_of: RXNO:0000334 ! Sandmeyer pseudohalogenation
@@ -1155,6 +1172,7 @@ def: "A carbon-carbon coupling reaction where an organohalide or triflate couple
 comment: This usually produces the trans-olefin rather than the cis-. ALSO Merck Index gives a non-terminal example.
 synonym: "Heck-Mizoroki reaction" EXACT []
 synonym: "Mizoroki-Heck reaction" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000192/
 xref: NAMERXN:3.2
 is_a: RXNO:0000316 ! palladium-catalysed carbon-carbon coupling reaction
 relationship: RXNO:0000425 CHEBI:33363 ! has_catalyst palladium
@@ -1169,6 +1187,7 @@ is_a: RXNO:0000001 ! planned reaction step
 id: RXNO:0000026
 name: Beckmann rearrangement
 def: "A rearrangement where an oxime rearranges to form an amide. Often there is selective migration of one group." [RSC:cb]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000029
 is_a: RXNO:0000025 ! rearrangement step
 relationship: RXNO:0000423 CHEBI:32988 ! has specified product amide
 relationship: RXNO:0000424 CHEBI:25750 ! has specified reactant oxime
@@ -1183,12 +1202,14 @@ is_obsolete: true
 id: RXNO:0000028
 name: Cope rearrangement
 def: "A [3,3]-sigmatropic rearrangement where a 1,5-hexadiene rearranges to form a 1,5-hexadiene." [RSC:cb]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000086/
 is_a: RXNO:0000025 ! rearrangement step
 
 [Term]
 id: RXNO:0000029
 name: oxy-Cope rearrangement
 def: "A [3,3]-sigmatropic rearrangement of a 3-hydroxy-1,5-hexadiene rearranges to form a 5,6-unsaturated carbonyl compound." [RSC:cb, RSC:cc, RSC:db]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000086/
 is_a: RXNO:0000025 ! rearrangement step
 
 [Term]
@@ -1231,6 +1252,7 @@ is_a: RXNO:0000019 ! substitution reaction
 id: RXNO:0000034
 name: Mitsunobu reaction
 def: "A substitution where an alcohol is converted into something else. Typical reagents are a dialkyl azodicarboxylate and a triarylphosphine. The alcohol stereocentre is inverted." [RSC:cc, RSC:db]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000287/
 is_a: RXNO:0000331 ! substitution step
 relationship: RXNO:0000424 CHEBI:30879 ! has specified reactant alcohol
 
@@ -1238,6 +1260,8 @@ relationship: RXNO:0000424 CHEBI:30879 ! has specified reactant alcohol
 id: RXNO:0000035
 name: Stille coupling
 def: "A carbon-carbon coupling reaction where a stannane reacts with an organohalide or organotriflate." [RSC:db]
+synonym: "[Sn][C:1].[C:2][Cl,Br,I:3]>>[C:1][C:2].[Sn][*:3]" SMIRKS []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000415/
 xref: NAMERXN:3.4
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
 relationship: RXNO:0000424 CHEBI:25717 ! has specified reactant organotin compound
@@ -1246,7 +1270,9 @@ relationship: RXNO:0000424 CHEBI:25717 ! has specified reactant organotin compou
 id: RXNO:0000036
 name: Reformatsky reaction
 def: "A carbon-carbon coupling reaction where an aldehyde or amine reacts with a alpha-halo ester and zinc to form a beta-hydroxy ester." [RSC:cb]
+synonym: "[C:1]=[O:2].[F,Cl,Br,I][C:3][C:4](=[O:5])[O:6][#6:7].[Zn:8]>>[O:2]-[C:1][C:3][C:4](=[O:5])[O:6][#6:7].[Zn:8]" SMIRKS []
 synonym: "Reformatskii reaction" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000361/
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 relationship: has_part MOP:0000580 ! ketone reduction
 relationship: has_part MOP:0001550 ! dehalogenation
@@ -1261,6 +1287,8 @@ is_a: RXNO:0000011 ! functional group modification
 id: RXNO:0000038
 name: Clemmensen reduction
 def: "A functional group reduction where an aldehyde or ketone carbonyl group is reduced to a methylene with zinc-mercury amalgam and hydrochloric acid." [RSC:db]
+synonym: "[C:1]=O.[Zn].[Hg].[Cl]>>[C:1]" SMIRKS []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000082/
 is_a: RXNO:0000037 ! functional group reduction
 
 [Term]
@@ -2519,8 +2547,8 @@ is_a: RXNO:0000443 ! Sakurai reaction
 
 [Term]
 id: RXNO:0000216
-name: Sakurai reaction, iminium salt
-def: "A carbon-carbon coupling reaction in which an iminium salt reacts with allyltrimethylsilane to form a homoallylic amine." [RSC:cb, RSC:cc, RSC:db]
+name: imine Sakurai reaction
+def: "A carbon-carbon coupling reaction in which an imine reacts with allyltrimethylsilane to form a homoallylic amine." [RSC:cb, RSC:cc, RSC:db]
 is_a: RXNO:0000443 ! Sakurai reaction
 
 [Term]
@@ -2528,6 +2556,7 @@ id: RXNO:0000217
 name: Sakurai reaction, epoxide
 def: "A ring-breaking reaction in which an epoxide reacts with allyltrimethylsilane to form a hydroxy alkene." [RSC:cb, RSC:cc, RSC:db]
 is_a: RXNO:0000205 ! ring breaking
+is_a: RXNO:0000443 ! Sakurai reaction
 
 [Term]
 id: RXNO:0000218
@@ -3048,14 +3077,15 @@ relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 [Term]
 id: RXNO:0000288
 name: Rosenmund-von Braun reaction
-def: "A carbon-carbon coupling reaction where an aryl halide reacts with cuprous cyanide to give an aryl nitrile." [\:cg, rsc:db]
+def: "A carbon-carbon coupling reaction where an aryl halide reacts with copper(I) cyanide to give an aryl nitrile." [rsc:cg, rsc:db]
+synonym: "[c:1][F,Cl,Br,I].[Cu][C:2]#[N:3]>>[c:1][C:2]#[N:3]" SMIRKS []
 synonym: "Rosenmund-von Braun synthesis" EXACT []
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 
 [Term]
 id: RXNO:0000289
 name: Woehler reaction
-def: "The formation of urea from ammonium cyanate. Ammonium cyanate is unstable, and so is formed in situ from either (a) cyanic acid and ammonia, (b) a metal cyanate and an ammonium salt, or (c) a metal cyanate and ammonia." [\:cg, rsc:db]
+def: "The formation of urea from ammonium cyanate. Ammonium cyanate is unstable, and so is formed in situ from either (a) cyanic acid and ammonia, (b) a metal cyanate and an ammonium salt, or (c) a metal cyanate and ammonia." [rsc:cg, rsc:db]
 synonym: "Woehler synthesis" EXACT []
 synonym: "Wohler reaction" EXACT []
 synonym: "Wohler synthesis" EXACT []
@@ -3064,51 +3094,51 @@ is_a: RXNO:0000011 ! functional group modification
 [Term]
 id: RXNO:0000290
 name: hydrosilylation
-def: "The addition of a hydrosilane across the double bond of an alkene or alkyne to give a more substituted silane. Addition to an aldehyde or ketone produces a silyl ether." [\:cg, rsc:db]
+def: "The addition of a hydrosilane across the double bond of an alkene or alkyne to give a more substituted silane. Addition to an aldehyde or ketone produces a silyl ether." [rsc:cg, rsc:db]
 synonym: "hydrosilation" EXACT []
 is_a: RXNO:0000041 ! addition reaction
 
 [Term]
 id: RXNO:0000291
 name: hydroamination
-def: "The addition of the N-H bond of an amine across a double bond of an alkene or alkyne, to give a more substituted amine." [\:cg, rsc:db]
+def: "The addition of the N-H bond of an amine across a double bond of an alkene or alkyne, to give a more substituted amine." [rsc:cg, rsc:db]
 is_a: RXNO:0000041 ! addition reaction
 
 [Term]
 id: RXNO:0000292
 name: hydroboration
-def: "The addition of a boron hydride across a double bond of an alkene or alkyne. The boron usually adds to the less substituted carbon." [\:cg, XX:db]
+def: "The addition of a boron hydride across a double bond of an alkene or alkyne. The boron usually adds to the less substituted carbon." [rsc:cg, rsc:db]
 is_a: RXNO:0000041 ! addition reaction
 
 [Term]
 id: RXNO:0000293
 name: hydroboration-oxidation
-def: "The formal addition of water across a double bond of an alkene or alkyne by formation of an organoborane and in situ oxidation, typically with basic peroxide. The product is usually the less substituted alcohol." [\:cg, rsc:db]
+def: "The formal addition of water across a double bond of an alkene or alkyne by formation of an organoborane and in situ oxidation, typically with basic peroxide. The product is usually the less substituted alcohol." [rsc:cg, rsc:db]
 is_a: RXNO:0000041 ! addition reaction
 
 [Term]
 id: RXNO:0000294
 name: hydrometallation
-def: "The reaction of any of a number of metal hydride species with an alkene or alkyne, to give an intermediate organometal species that can give various products after work-up." [\:cg, rsc:db]
+def: "The reaction of any of a number of metal hydride species with an alkene or alkyne, to give an intermediate organometal species that can give various products after work-up." [rsc:cg, rsc:db]
 synonym: "hydrometalation" EXACT []
 is_a: RXNO:0000041 ! addition reaction
 
 [Term]
 id: RXNO:0000295
 name: hydrozirconation
-def: "The reaction of a organozirconium hydride with an alkene or alkyne, to give an intermediate zirconium species that can give various products after work-up. The zirconium reagent used is typically Schwartz's reagent, Cp2ZrHCl." [\:cg, rsc:db]
+def: "The reaction of a organozirconium hydride with an alkene or alkyne, to give an intermediate zirconium species that can give various products after work-up. The zirconium reagent used is typically Schwartz's reagent, Cp2ZrHCl." [rsc:cg, rsc:db]
 is_a: RXNO:0000294 ! hydrometallation
 
 [Term]
 id: RXNO:0000296
 name: hydrostannylation
-def: "The reaction of a organotin hydride with an alkene or alkyne, to give an intermediate tin species that can give various products after work-up." [\:cg, rsc:db]
+def: "The reaction of a organotin hydride with an alkene or alkyne, to give an intermediate tin species that can give various products after work-up." [rsc:cg, rsc:db]
 is_a: RXNO:0000294 ! hydrometallation
 
 [Term]
 id: RXNO:0000297
 name: hydrotelluration
-def: "The reaction of a organotellurium hydride with an alkyne, to give a (usually (Z)-configured) vinyltellurium species." [\:cg, rsc:db]
+def: "The reaction of a organotellurium hydride with an alkyne, to give a (usually (Z)-configured) vinyltellurium species." [rsc:cg, rsc:db]
 is_a: RXNO:0000294 ! hydrometallation
 
 [Term]
@@ -3672,9 +3702,10 @@ creation_date: 2012-03-22T05:17:03Z
 
 [Term]
 id: RXNO:0000368
-name: Crabbe homologation
+name: Crabbé homologation
 def: "Oxidation of an alkene to an allene by heating with formaldehyde, an amine and an inorganic salt." [doi:10.1039/c39790000859, RSC:cb]
 synonym: "[C:1]=[C:2].[C:3]=O>>[C:1]=[C:2]=[C:3]" SMIRKS []
+synonym: "Crabbe homologation" EXACT []
 is_a: MOP:0000581 ! alkene oxidation
 is_a: RXNO:0000070 ! chain lengthening
 relationship: BFO:0000057 CHEBI:32952 ! has_participant amine
@@ -4219,7 +4250,37 @@ union_of: RXNO:0000212 ! Sakurai reaction, aldehyde or ketone
 union_of: RXNO:0000213 ! Sakurai reaction, enone
 union_of: RXNO:0000214 ! Sakurai reaction, acid chloride
 union_of: RXNO:0000215 ! Sakurai reaction, acetal or ketal
-union_of: RXNO:0000216 ! Sakurai reaction, iminium salt
+union_of: RXNO:0000216 ! imine Sakurai reaction
+union_of: RXNO:0000217 ! Sakurai reaction, epoxide
+
+[Term]
+id: RXNO:0000444
+name: Fries rearrangement
+def: "Rearrangement of the acyl group in a phenolate ester to the ortho- and/or para-position. It is catalysed by a Lewis acid." [RSC:cb]
+comment: Can be promoted by heat or UV. The UV version (photo-Fries) involves a radical mechanism.
+synonym: "photo-Fries rearrangement" EXACT []
+is_a: RXNO:0000025 ! rearrangement step
+union_of: RXNO:0000445 ! ortho-Fries rearrangement
+union_of: RXNO:0000446 ! para-Fries rearrangement
+
+[Term]
+id: RXNO:0000445
+name: ortho-Fries rearrangement
+def: "Rearrangement of the acyl group in a phenolate ester to the ortho-position." [RSC:cb]
+is_a: RXNO:0000444 ! Fries rearrangement
+
+[Term]
+id: RXNO:0000446
+name: para-Fries rearrangement
+def: "Rearrangement of the acyl group in a phenolate ester to the para-position." [RSC:cb]
+is_a: RXNO:0000444 ! Fries rearrangement
+
+[Term]
+id: RXNO:0000447
+name: Duff reaction
+def: "Formylation of a phenol or aromatic amine with hexamethylenetetramine in acidic conditions." [doi:10.1039/jr9410000547, doi:10.1039/JR9450000276]
+is_a: MOP:0000003 ! formylation
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 
 [Typedef]
 id: BFO:0000055
