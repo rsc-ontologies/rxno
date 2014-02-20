@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: rxno/releases/2014-02-18/rxno.owl
+data-version: rxno/releases/2014-02-20/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
@@ -179,6 +179,11 @@ name: tertiary amine
 is_a: CHEBI:32952 ! amine
 
 [Term]
+id: CHEBI:32877
+name: primary amine
+is_a: CHEBI:32952 ! amine
+
+[Term]
 id: CHEBI:32878
 name: alkene
 is_a: CHEBI:23367 ! molecular entity
@@ -261,6 +266,11 @@ is_a: CHEBI:30879 ! alcohol
 [Term]
 id: CHEBI:35689
 name: tetrazoles
+is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:35715
+name: nitro compound
 is_a: CHEBI:23367 ! molecular entity
 
 [Term]
@@ -1008,8 +1018,8 @@ def: "A planned reaction step where the product contains a ring that was not in 
 is_a: MOP:0000561 ! cyclization
 is_a: RXNO:0000001 ! planned reaction step
 intersection_of: MOP:0000561 ! cyclization
-intersection_of: OBI:0000417 RXNO:0000439 ! achieves_planned_objective ring formation objective
-relationship: OBI:0000417 RXNO:0000439 ! achieves_planned_objective ring formation objective
+intersection_of: OBI:0000417 RXNO:0000439 ! achieves_planned_objective molecular ring formation objective
+relationship: OBI:0000417 RXNO:0000439 ! achieves_planned_objective molecular ring formation objective
 
 [Term]
 id: RXNO:0000006
@@ -1054,7 +1064,9 @@ id: RXNO:0000010
 name: functional modification
 def: "A reaction where the number of atoms in the skeleton, and their connectivity, remain the same." [RSC:cb]
 is_a: RXNO:0000001 ! planned reaction step
-relationship: part_of RXNO:0000329 ! planned synthesis
+intersection_of: RXNO:0000001 ! planned reaction step
+intersection_of: OBI:0000417 RXNO:0000442 ! achieves_planned_objective functional modification objective
+relationship: OBI:0000417 RXNO:0000442 ! achieves_planned_objective functional modification objective
 
 [Term]
 id: RXNO:0000011
@@ -1062,6 +1074,9 @@ name: functional group modification
 def: "A reaction in which a functional group undergoes a change that does not affect the number of atoms in (or connectivity of) the skeleton of the molecule." [rsc:db]
 xref: NAMERXN:9
 is_a: RXNO:0000010 ! functional modification
+intersection_of: RXNO:0000010 ! functional modification
+intersection_of: OBI:0000417 RXNO:0000453 ! achieves_planned_objective functional group modification objective
+relationship: OBI:0000417 RXNO:0000453 ! achieves_planned_objective functional group modification objective
 
 [Term]
 id: RXNO:0000012
@@ -1129,7 +1144,7 @@ is_a: MOP:0000562 ! cycloaddition
 [Term]
 id: RXNO:0000019
 name: substitution reaction
-def: "A reaction in which one singly-bonded substituent, but not the hydrogen atom, is replaced by another singly-bonded substituent." [RSC:cb]
+def: "A reaction in which one singly-bonded group, but not the hydrogen atom, is replaced by another singly-bonded group." [RSC:cb]
 comment: The Gold Book says hydrogen atoms count, but this differs from everyone's intuition. See http://goldbook.iupac.org/S06078.html
 is_a: MOP:0000543 ! molecular process
 
@@ -1154,6 +1169,7 @@ name: Gattermann halogenation
 def: "An aromatic substitution reaction where an aryl diazonium salt reacts with copper powder and hydrochloric acid or hydrobromic acid to form an aromatic chloride or bromide." [RSC:cc]
 comment: This is also sometimes known as the Gattermann reaction. Also doesn't work to make fluorides or iodides.
 synonym: "Gattermann reaction" RELATED []
+is_a: MOP:0000550 ! halogenation
 is_a: RXNO:0000332 ! aromatic substitution step
 union_of: RXNO:0000421 ! Gattermann chlorination
 union_of: RXNO:0000422 ! Gattermann bromination
@@ -1182,6 +1198,9 @@ id: RXNO:0000025
 name: rearrangement step
 def: "A reaction which preserves the number of rings and number of skeletal atoms and in which the molecule rearranges so that one or more atoms or groups of atoms move from one atom to another." [RSC:cb, RSC:cc, RSC:db]
 is_a: RXNO:0000001 ! planned reaction step
+intersection_of: RXNO:0000001 ! planned reaction step
+intersection_of: OBI:0000417 RXNO:0000441 ! achieves_planned_objective molecular rearrangement objective
+relationship: OBI:0000417 RXNO:0000441 ! achieves_planned_objective molecular rearrangement objective
 
 [Term]
 id: RXNO:0000026
@@ -1282,6 +1301,9 @@ id: RXNO:0000037
 name: functional group reduction
 def: "A functional group modification reaction where a functional group is reduced." [RSC:cb]
 is_a: RXNO:0000011 ! functional group modification
+intersection_of: RXNO:0000011 ! functional group modification
+intersection_of: OBI:0000417 RXNO:0000455 ! achieves_planned_objective functional reduction objective
+relationship: OBI:0000417 RXNO:0000455 ! achieves_planned_objective functional reduction objective
 
 [Term]
 id: RXNO:0000038
@@ -1305,15 +1327,18 @@ is_a: RXNO:0000039 ! carbon-carbon homocoupling reaction
 
 [Term]
 id: RXNO:0000041
-name: addition reaction
+name: addition reaction step
 def: "A reaction in which two or more groups of atoms are added to the molecule, resulting in a change of skeletal bond order." [RSC:cb]
-is_a: RXNO:0000010 ! functional modification
+is_a: RXNO:0000011 ! functional group modification
+intersection_of: RXNO:0000010 ! functional modification
+intersection_of: OBI:0000417 RXNO:0000456 ! achieves_planned_objective addition objective
+relationship: OBI:0000417 RXNO:0000456 ! achieves_planned_objective addition objective
 
 [Term]
 id: RXNO:0000042
 name: Birch reduction
 def: "A formal addition reaction where hydrogen atoms add to an arene to form a dihydroarene. It has a radical mechanism." [RSC:db]
-is_a: RXNO:0000041 ! addition reaction
+is_a: RXNO:0000041 ! addition reaction step
 
 [Term]
 id: RXNO:0000043
@@ -1334,6 +1359,7 @@ relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 id: RXNO:0000045
 name: Friedel-Crafts acylation
 def: "A carbon-carbon coupling reaction between an arene and a carbonyl compound (usually an acyl halide) to give an aryl ketone. The reaction is usually catalysed by a Lewis acid." [RSC:cc, RSC:db]
+synonym: "[c:1].[C:2]=[O:3]>>[c:1][C:2]=[O:3]" SMIRKS []
 is_a: RXNO:0000369 ! Friedel-Crafts reaction
 
 [Term]
@@ -1405,6 +1431,7 @@ id: RXNO:0000055
 name: Vilsmeier-Haack reaction
 def: "A formylation of an activated arene with a disubstituted formamide to give an aryl carboxaldehyde." [RSC:cc, RSC:db]
 synonym: "Vilsmeier-Haack formylation" EXACT []
+is_a: MOP:0000003 ! formylation
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 
 [Term]
@@ -1425,7 +1452,10 @@ is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 id: RXNO:0000057
 name: Horner reaction
 def: "A joining reaction between a phosphine oxide and a carbonyl compound to give an alkene." [RSC:cc, RSC:db]
-is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
+relationship: OBI:0000417 RXNO:0000440 ! achieves_planned_objective molecular skeleton joining objective
+relationship: RXNO:0000423 CHEBI:33641 ! has specified product olefin
+relationship: RXNO:0000424 CHEBI:36587 ! has specified reactant carbonyl compound
 
 [Term]
 id: RXNO:0000058
@@ -1475,7 +1505,10 @@ id: RXNO:0000063
 name: Arndt-Eistert reaction
 def: "A homologation reaction of a carboxylic acid to give the homologated carboxylic acid." [RSC:cc, RSC:db]
 comment: This is an insertion because the carbon atom is added between the R group and the carboxyl carbon in the starting material.
+synonym: "[#6:1]C(=O)O>>[#6:1][CH2]C(=O)O" SMIRKS []
 is_a: RXNO:0000030 ! insertion reaction
+relationship: RXNO:0000423 CHEBI:33575 ! has specified product carboxylic acid
+relationship: RXNO:0000424 CHEBI:33575 ! has specified reactant carboxylic acid
 
 [Term]
 id: RXNO:0000064
@@ -1527,18 +1560,24 @@ is_a: RXNO:0000202 ! ring rearrangement
 [Term]
 id: RXNO:0000070
 name: chain lengthening
+def: "A molecular skeleton joining reaction in which a chain part of a molecular skeleton is lengthened." [RSC:cb]
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
+intersection_of: RXNO:0000000 ! molecular skeleton joining reaction
+intersection_of: OBI:0000417 RXNO:0000448 ! achieves_planned_objective molecular chain lengthening objective
+relationship: OBI:0000417 RXNO:0000448 ! achieves_planned_objective molecular chain lengthening objective
 
 [Term]
 id: RXNO:0000071
 name: Edman degradation
 def: "A cleaving reaction in which a peptide is treated with phenylisothiocyanate, removing the terminal amino acid group, to form the chain-shortened amine and a phenylthiohydantoin. The latter can be used to identify the terminal amino acid, and the process repeated to enable peptide sequencing." [RSC:cc, RSC:db]
 is_a: RXNO:0000073 ! cleaving reaction
+relationship: RXNO:0000423 CHEBI:32952 ! has specified product amine
 
 [Term]
 id: RXNO:0000072
 name: Reimer-Tiemann reaction
 def: "A formylation reaction between an aromatic compound (for example, phenol, pyrrole or indole) and chloroform (for example, to form an ortho-formyl phenol)." [RSC:cc, RSC:db]
+is_a: MOP:0000003 ! formylation
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 
 [Term]
@@ -1773,6 +1812,9 @@ id: RXNO:0000105
 name: end-of-chain chain shortening
 def: "A reaction in which a single skeletal atom is removed from the end of a chain." [RSC:cb]
 is_a: RXNO:0000073 ! cleaving reaction
+intersection_of: RXNO:0000073 ! cleaving reaction
+intersection_of: OBI:0000417 RXNO:0000454 ! achieves_planned_objective end-of-chain chain shortening objective
+relationship: OBI:0000417 RXNO:0000454 ! achieves_planned_objective end-of-chain chain shortening objective
 
 [Term]
 id: RXNO:0000106
@@ -1794,6 +1836,9 @@ name: ring expansion
 def: "A reaction in which an existing ring is increased in size." [RSC:cb]
 synonym: "ring enlargement" EXACT []
 is_a: RXNO:0000001 ! planned reaction step
+intersection_of: RXNO:0000001 ! planned reaction step
+intersection_of: OBI:0000417 RXNO:0000457 ! achieves_planned_objective molecular ring expansion objective
+relationship: OBI:0000417 RXNO:0000457 ! achieves_planned_objective molecular ring expansion objective
 
 [Term]
 id: RXNO:0000109
@@ -2009,6 +2054,7 @@ id: RXNO:0000139
 name: Gattermann reaction
 def: "The formylation of an arene with hydrogen cyanide to give an aryl aldehyde or ketone." [RSC:cc, RSC:db]
 comment: This is essentially a variant of the Friedel-Crafts acylation.
+is_a: MOP:0000003 ! formylation
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 
 [Term]
@@ -2045,14 +2091,14 @@ name: Sharpless asymmetric dihydroxylation
 def: "The dihydroxylation of an alkene to give an alpha,beta-diol, with control of absolute stereochemistry at the two new stereocentres. The oxidising agent is osmium tetroxide, which is used catalytically with a stoichiometric oxidant and a chiral ligand. The reagents are available commercially as AD-mix." [RSC:cb, RSC:cc, RSC:db]
 synonym: "Sharpless bishydroxylation" EXACT []
 synonym: "Sharpless hydroxylation" EXACT []
-is_a: RXNO:0000041 ! addition reaction
+is_a: RXNO:0000041 ! addition reaction step
 
 [Term]
 id: RXNO:0000143
 name: Sharpless asymmetric aminohydroxylation
 def: "The aminohydroxylation of an alkene to give a beta-amino alcohol, with control of absolute stereochemistry at the two new stereocentres. The oxidising agent is an oxygen-containing osmium species and/or an amino derivative which can be used catalytically with a stoichiometric oxidant and a chiral ligand." [RSC:cb, RSC:cc, RSC:db]
 synonym: "Sharpless oxyamination" EXACT []
-is_a: RXNO:0000041 ! addition reaction
+is_a: RXNO:0000041 ! addition reaction step
 
 [Term]
 id: RXNO:0000144
@@ -2458,6 +2504,9 @@ id: RXNO:0000202
 name: ring rearrangement
 def: "A reaction in which the number of rings in a molecule stays the same but the connectivity of the atoms in at least one ring changes." [RSC:cb]
 is_a: RXNO:0000001 ! planned reaction step
+intersection_of: RXNO:0000001 ! planned reaction step
+intersection_of: OBI:0000417 RXNO:0000458 ! achieves_planned_objective molecular ring rearrangement objective
+relationship: OBI:0000417 RXNO:0000458 ! achieves_planned_objective molecular ring rearrangement objective
 
 [Term]
 id: RXNO:0000203
@@ -2478,14 +2527,20 @@ is_a: RXNO:0000000 ! molecular skeleton joining reaction
 [Term]
 id: RXNO:0000205
 name: ring breaking
-def: "A reaction where the product has fewer rings than the reactants." [RSC:cb]
+def: "A planned reaction step in which the product has fewer rings than the reactants." [RSC:cb]
 is_a: RXNO:0000001 ! planned reaction step
+intersection_of: RXNO:0000001 ! planned reaction step
+intersection_of: OBI:0000417 RXNO:0000449 ! achieves_planned_objective molecular ring breaking objective
+relationship: OBI:0000417 RXNO:0000449 ! achieves_planned_objective molecular ring breaking objective
 
 [Term]
 id: RXNO:0000206
 name: ring contraction
-def: "A reaction in which an existing ring is reduced in size." [RSC:cb]
+def: "A planned reaction step in which an existing ring is reduced in size." [RSC:cb]
 is_a: RXNO:0000001 ! planned reaction step
+intersection_of: RXNO:0000001 ! planned reaction step
+intersection_of: OBI:0000417 RXNO:0000450 ! achieves_planned_objective molecular ring contraction objective
+relationship: OBI:0000417 RXNO:0000450 ! achieves_planned_objective molecular ring contraction objective
 
 [Term]
 id: RXNO:0000207
@@ -2525,7 +2580,11 @@ is_a: RXNO:0000019 ! substitution reaction
 id: RXNO:0000212
 name: Sakurai reaction, aldehyde or ketone
 def: "A carbon-carbon coupling reaction in which an aldehyde or ketone reacts with allyltrimethylsilane to form a homoallylic alcohol." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
 is_a: RXNO:0000443 ! Sakurai reaction
+union_of: RXNO:0000451 ! aldehyde Sakurai reaction
+union_of: RXNO:0000452 ! ketone Sakurai reaction
+relationship: OBI:0000417 RXNO:0000440 ! achieves_planned_objective molecular skeleton joining objective
 
 [Term]
 id: RXNO:0000213
@@ -2732,7 +2791,7 @@ id: RXNO:0000242
 name: Noyori asymmetric hydrogenation, alkene
 def: "The homogeneous asymmetric catalytic hydrogenation of a C=C double bond using a ruthenium(II) BINAP catalyst." [RSC:cg]
 synonym: "Noyori hydrogenation, alkene" EXACT []
-is_a: RXNO:0000041 ! addition reaction
+is_a: RXNO:0000041 ! addition reaction step
 
 [Term]
 id: RXNO:0000243
@@ -2986,7 +3045,7 @@ is_a: RXNO:0000073 ! cleaving reaction
 id: RXNO:0000275
 name: Stork-Crabtree hydrogenation
 def: "A hydrogenation in which a metal-ligating group distant from the reacting alkene directs the attack of hydrogen, giving preferentially one stereoisomer of the product." [doi:10.1021/jo00364a007, rsc:db]
-is_a: RXNO:0000041 ! addition reaction
+is_a: RXNO:0000041 ! addition reaction step
 
 [Term]
 id: RXNO:0000276
@@ -3096,32 +3155,32 @@ id: RXNO:0000290
 name: hydrosilylation
 def: "The addition of a hydrosilane across the double bond of an alkene or alkyne to give a more substituted silane. Addition to an aldehyde or ketone produces a silyl ether." [rsc:cg, rsc:db]
 synonym: "hydrosilation" EXACT []
-is_a: RXNO:0000041 ! addition reaction
+is_a: RXNO:0000041 ! addition reaction step
 
 [Term]
 id: RXNO:0000291
 name: hydroamination
 def: "The addition of the N-H bond of an amine across a double bond of an alkene or alkyne, to give a more substituted amine." [rsc:cg, rsc:db]
-is_a: RXNO:0000041 ! addition reaction
+is_a: RXNO:0000041 ! addition reaction step
 
 [Term]
 id: RXNO:0000292
 name: hydroboration
 def: "The addition of a boron hydride across a double bond of an alkene or alkyne. The boron usually adds to the less substituted carbon." [rsc:cg, rsc:db]
-is_a: RXNO:0000041 ! addition reaction
+is_a: RXNO:0000041 ! addition reaction step
 
 [Term]
 id: RXNO:0000293
 name: hydroboration-oxidation
 def: "The formal addition of water across a double bond of an alkene or alkyne by formation of an organoborane and in situ oxidation, typically with basic peroxide. The product is usually the less substituted alcohol." [rsc:cg, rsc:db]
-is_a: RXNO:0000041 ! addition reaction
+is_a: RXNO:0000041 ! addition reaction step
 
 [Term]
 id: RXNO:0000294
 name: hydrometallation
 def: "The reaction of any of a number of metal hydride species with an alkene or alkyne, to give an intermediate organometal species that can give various products after work-up." [rsc:cg, rsc:db]
 synonym: "hydrometalation" EXACT []
-is_a: RXNO:0000041 ! addition reaction
+is_a: RXNO:0000041 ! addition reaction step
 
 [Term]
 id: RXNO:0000295
@@ -3400,14 +3459,14 @@ relationship: has_part RXNO:0000020 ! aromatic substitution
 [Term]
 id: RXNO:0000333
 name: Sandmeyer halogenation
-def: "An aromatic substitution reaction where an aryl diazonium salt reacts with a cuprous halide to form an aromatic halide." [RSC:db]
+def: "An aromatic substitution reaction where an aryl diazonium salt reacts with a copper(I) halide to form an aromatic halide." [RSC:db]
 is_a: RXNO:0000021 ! Sandmeyer reaction
 relationship: has_part MOP:0000550 ! halogenation
 
 [Term]
 id: RXNO:0000334
 name: Sandmeyer pseudohalogenation
-def: "An aromatic substitution reaction where an aryl diazonium salt reacts with a cuprous pseudohalide to form an aromatic pseudohalide." [RSC:db]
+def: "An aromatic substitution reaction where an aryl diazonium salt reacts with a copper(II) pseudohalide to form an aromatic pseudohalide." [RSC:db]
 is_a: RXNO:0000021 ! Sandmeyer reaction
 relationship: has_part MOP:0000596 ! pseudohalogenation
 
@@ -3432,9 +3491,17 @@ creation_date: 2012-03-22T12:22:59Z
 [Term]
 id: RXNO:0000337
 name: nitro reduction to amine
-def: "A reduction reaction where a nitro group is reduced to an amine." [RSC:cb]
+def: "A reduction reaction where a nitro group is reduced to an amino group." [RSC:cb]
+synonym: "[N:1](=O)O>>[N&X3;H2:1]" SMIRKS []
 xref: NAMERXN:7.1
 is_a: MOP:0000569 ! reduction
+is_a: RXNO:0000011 ! functional group modification
+intersection_of: MOP:0000569 ! reduction
+intersection_of: RXNO:0000423 CHEBI:32877 ! has specified product primary amine
+intersection_of: RXNO:0000424 CHEBI:35715 ! has specified reactant nitro compound
+relationship: OBI:0000417 RXNO:0000453 ! achieves_planned_objective functional group modification objective
+relationship: RXNO:0000423 CHEBI:32877 ! has specified product primary amine
+relationship: RXNO:0000424 CHEBI:35715 ! has specified reactant nitro compound
 created_by: batchelorc
 creation_date: 2012-03-22T12:28:47Z
 
@@ -3444,6 +3511,13 @@ name: amide reduction to amine
 def: "A reduction process where an amide is transformed into an amine." [RSC:cb]
 xref: NAMERXN:7.2
 is_a: MOP:0000569 ! reduction
+is_a: RXNO:0000011 ! functional group modification
+intersection_of: MOP:0000569 ! reduction
+intersection_of: RXNO:0000423 CHEBI:32952 ! has specified product amine
+intersection_of: RXNO:0000424 CHEBI:32988 ! has specified reactant amide
+relationship: OBI:0000417 RXNO:0000453 ! achieves_planned_objective functional group modification objective
+relationship: RXNO:0000423 CHEBI:32952 ! has specified product amine
+relationship: RXNO:0000424 CHEBI:32988 ! has specified reactant amide
 created_by: batchelorc
 creation_date: 2012-03-22T12:29:51Z
 
@@ -4099,8 +4173,9 @@ relationship: RXNO:0000417 CHEBI:46882 ! deprotects amino group
 
 [Term]
 id: RXNO:0000420
-name: Krohnke pyridine synthesis
+name: Kröhnke pyridine synthesis
 def: "Condensation of a 1,5-diketone with ammonium acetate in acetic acid to form a pyridine." [RSC:cb]
+synonym: "Krohnke pyridine synthesis" EXACT []
 xref: http://dx.doi.org/10.1039/SP543
 is_a: RXNO:0000347 ! azacycle formation
 relationship: RXNO:0000423 CHEBI:26421 ! has specified product pyridines
@@ -4217,7 +4292,7 @@ is_a: RXNO:0000437 ! molecular transformation objective
 
 [Term]
 id: RXNO:0000439
-name: ring formation objective
+name: molecular ring formation objective
 def: "A molecular transformation specification that specifies that the product should contain a ring that was not in any of the reactants." [RSC:db]
 is_a: RXNO:0000437 ! molecular transformation objective
 
@@ -4244,6 +4319,7 @@ id: RXNO:0000443
 name: Sakurai reaction
 def: "Reaction of allyltrimethylsilane with a carbon electrophile to allylate the carbon electrophile." [RSC:cb]
 synonym: "Hosomi-Sakurai reaction" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000383/
 is_a: MOP:0000422 ! allylation
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 union_of: RXNO:0000212 ! Sakurai reaction, aldehyde or ketone
@@ -4259,6 +4335,7 @@ name: Fries rearrangement
 def: "Rearrangement of the acyl group in a phenolate ester to the ortho- and/or para-position. It is catalysed by a Lewis acid." [RSC:cb]
 comment: Can be promoted by heat or UV. The UV version (photo-Fries) involves a radical mechanism.
 synonym: "photo-Fries rearrangement" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000160/
 is_a: RXNO:0000025 ! rearrangement step
 union_of: RXNO:0000445 ! ortho-Fries rearrangement
 union_of: RXNO:0000446 ! para-Fries rearrangement
@@ -4279,8 +4356,77 @@ is_a: RXNO:0000444 ! Fries rearrangement
 id: RXNO:0000447
 name: Duff reaction
 def: "Formylation of a phenol or aromatic amine with hexamethylenetetramine in acidic conditions." [doi:10.1039/jr9410000547, doi:10.1039/JR9450000276]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000119/
 is_a: MOP:0000003 ! formylation
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+
+[Term]
+id: RXNO:0000448
+name: molecular chain lengthening objective
+def: "A molecular skeleton joining adjective that is satisfied by a chain part of a molecular skeleton being lengthened." [RSC:xp]
+is_a: RXNO:0000440 ! molecular skeleton joining objective
+
+[Term]
+id: RXNO:0000449
+name: molecular ring breaking objective
+def: "A molecular skeleton transformation objective that is satisfied by a reaction where the product has fewer rings than the reactants." [RSC:xp]
+is_a: RXNO:0000437 ! molecular transformation objective
+
+[Term]
+id: RXNO:0000450
+name: molecular ring contraction objective
+def: "A molecular skeleton transformation objective that is satisfied by a reaction where an existing ring is reduced in size." [RSC:xp]
+is_a: RXNO:0000437 ! molecular transformation objective
+
+[Term]
+id: RXNO:0000451
+name: aldehyde Sakurai reaction
+def: "A carbon-carbon coupling reaction in which an aldehyde reacts with allyltrimethylsilane to form a homoallylic alcohol." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000212 ! Sakurai reaction, aldehyde or ketone
+relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
+
+[Term]
+id: RXNO:0000452
+name: ketone Sakurai reaction
+def: "A carbon-carbon coupling reaction in which a ketone reacts with allyltrimethylsilane to form a homoallylic alcohol." [RSC:cb, RSC:cc, RSC:db]
+is_a: RXNO:0000212 ! Sakurai reaction, aldehyde or ketone
+relationship: RXNO:0000424 CHEBI:17087 ! has specified reactant ketone
+
+[Term]
+id: RXNO:0000453
+name: functional group modification objective
+def: "A molecular skeleton transformation objective that is satisfied by a reaction in which a functional group undergoes a change that does not affect the number of atoms in (or connectivity of) the skeleton of the molecule." [RSC:xp]
+is_a: RXNO:0000442 ! functional modification objective
+
+[Term]
+id: RXNO:0000454
+name: end-of-chain chain shortening objective
+def: "A molecular skeleton transformation objective that is satisfied by a reaction in which a single skeletal atom is removed from the end of a chain." [RSC:xp]
+is_a: RXNO:0000438 ! molecular skeleton cleaving objective
+
+[Term]
+id: RXNO:0000455
+name: functional reduction objective
+def: "A functional group modification objective that is satisfied by a reaction in which a functional group is reduced." [RSC:xp]
+is_a: RXNO:0000453 ! functional group modification objective
+
+[Term]
+id: RXNO:0000456
+name: addition objective
+def: "A functional modification objective that is satisfied by a reaction in which two or more groups of atoms are added to the molecule, resulting in a change of skeletal bond order." [RSC:xp]
+is_a: RXNO:0000442 ! functional modification objective
+
+[Term]
+id: RXNO:0000457
+name: molecular ring expansion objective
+def: "A molecular transformation objective that is satisfied by a reaction in which an existing skeletal ring is increased in size." [RSC:xp]
+is_a: RXNO:0000437 ! molecular transformation objective
+
+[Term]
+id: RXNO:0000458
+name: molecular ring rearrangement objective
+def: "A molecular transformation objective that is satisfied by a reaction in which the number of skeletal rings in a molecule stays the same but the connectivity of the atoms in at least one ring changes." [RSC:xp]
+is_a: RXNO:0000437 ! molecular transformation objective
 
 [Typedef]
 id: BFO:0000055
