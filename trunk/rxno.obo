@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: rxno/releases/2014-02-20/rxno.owl
+data-version: rxno/releases/2014-02-21/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
@@ -382,6 +382,12 @@ is_a: CHEBI:23367 ! molecular entity
 id: CHEBI:51721
 name: alpha,beta-unsaturated ketone
 is_a: CHEBI:17087 ! ketone
+
+[Term]
+id: CHEBI:51849
+name: beta-ketoester
+is_a: CHEBI:17087 ! ketone
+is_a: CHEBI:33308 ! carboxylic ester
 
 [Term]
 id: CHEBI:52094
@@ -1661,8 +1667,11 @@ is_a: RXNO:0000020 ! aromatic substitution
 
 [Term]
 id: RXNO:0000083
-name: Paterno-Buchi reaction
+name: Paternò–Büchi reaction
 def: "A photochemical cycloaddition between an aldehyde or ketone and an alkene to give an oxetane." [RSC:cc, RSC:db]
+synonym: "[C:1]=[O:2].[C:3]=[C:4]>>[C:1]1[O:2][C:3][C:4]1" SMIRKS []
+synonym: "Paterno-Buchi reaction" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000319/
 is_a: MOP:0000562 ! cycloaddition
 is_a: RXNO:0000005 ! ring formation reaction step
 relationship: RXNO:0000423 CHEBI:38784 ! has specified product oxetanes
@@ -1679,7 +1688,11 @@ union_of: RXNO:0000427 ! ketone Barbier reaction
 id: RXNO:0000085
 name: acyloin condensation
 def: "A reductive coupling reaction between two esters to give an acyloin (an alpha-hydroxyketone)." [RSC:cc, RSC:db]
+synonym: "[C:1][C:2](=O)OC.[C:4][C:3](=O)OC>>[C:1][C:2](=O)[C:3](O)[C:4]" SMIRKS []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000002/
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+is_a: RXNO:0000315 ! condensation step
+relationship: RXNO:0000424 CHEBI:33308 ! has specified reactant carboxylic ester
 
 [Term]
 id: RXNO:0000086
@@ -1732,6 +1745,9 @@ id: RXNO:0000093
 name: extrusion reaction
 def: "A cleaving reaction in which a skeletal atom or group of atoms is removed from the middle of a molecule." [RSC:cb]
 is_a: RXNO:0000073 ! cleaving reaction
+intersection_of: RXNO:0000073 ! cleaving reaction
+intersection_of: OBI:0000417 RXNO:0000462 ! achieves_planned_objective molecular extrusion objective
+relationship: OBI:0000417 RXNO:0000462 ! achieves_planned_objective molecular extrusion objective
 
 [Term]
 id: RXNO:0000094
@@ -1828,7 +1844,11 @@ is_a: RXNO:0000105 ! end-of-chain chain shortening
 id: RXNO:0000107
 name: malonic ester synthesis
 def: "A carbon-carbon coupling reaction between a dialkyl malonate and an alkyl halide, to give a substituted acetic acid. The base/R'X treatment can be repeated to give a disubstituted product." [RSC:cb, RSC:cc, RSC:db]
-is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000264/
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
+relationship: OBI:0000417 RXNO:0000440 ! achieves_planned_objective molecular skeleton joining objective
+relationship: RXNO:0000423 CHEBI:33575 ! has specified product carboxylic acid
+relationship: RXNO:0000424 CHEBI:24469 ! has specified reactant haloalkane
 
 [Term]
 id: RXNO:0000108
@@ -1852,6 +1872,9 @@ id: RXNO:0000110
 name: fragmentation reaction
 def: "A reaction in which the parent molecule breaks up into three or more products." [RSC:cb]
 is_a: RXNO:0000073 ! cleaving reaction
+intersection_of: RXNO:0000073 ! cleaving reaction
+intersection_of: OBI:0000417 RXNO:0000463 ! achieves_planned_objective molecular fragmentation objective
+relationship: OBI:0000417 RXNO:0000463 ! achieves_planned_objective molecular fragmentation objective
 
 [Term]
 id: RXNO:0000111
@@ -1869,20 +1892,23 @@ is_a: RXNO:0000025 ! rearrangement step
 id: RXNO:0000114
 name: Nicholas reaction
 def: "The reaction of a propargylic cation (stabilised with dicobalt octacarbonyl) with a nucleophile to give a substituted alkyne." [RSC:cb, RSC:cc, RSC:db]
-comment: This term was obsoleted because it doesn't fit into the classification scheme.
-is_obsolete: true
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000303/
+is_a: RXNO:0000019 ! substitution reaction
+union_of: RXNO:0000115 ! Nicholas reaction, nucleophilic heteroatom centre
+union_of: RXNO:0000116 ! Nicholas reaction, nucleophilic carbon centre
 
 [Term]
 id: RXNO:0000115
 name: Nicholas reaction, nucleophilic heteroatom centre
 def: "The reaction of a propargylic cation (stabilised with dicobalt octacarbonyl) with a hydride or amine or enamine to give a substituted alkyne." [RSC:cb, RSC:cc, RSC:db]
-is_a: RXNO:0000019 ! substitution reaction
+is_a: RXNO:0000114 ! Nicholas reaction
 
 [Term]
 id: RXNO:0000116
 name: Nicholas reaction, nucleophilic carbon centre
 def: "The reaction of a propargylic cation (stabilised with dicobalt octacarbonyl) with a nucleophilic carbon centre (on e.g. enolates, allyl silanes, ketones, electron-rich aromatics, beta-dicarbonyl compounds) to give a substituted alkyne." [RSC:cb, RSC:cc, RSC:db]
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+is_a: RXNO:0000114 ! Nicholas reaction
 
 [Term]
 id: RXNO:0000117
@@ -4427,6 +4453,47 @@ id: RXNO:0000458
 name: molecular ring rearrangement objective
 def: "A molecular transformation objective that is satisfied by a reaction in which the number of skeletal rings in a molecule stays the same but the connectivity of the atoms in at least one ring changes." [RSC:xp]
 is_a: RXNO:0000437 ! molecular transformation objective
+
+[Term]
+id: RXNO:0000459
+name: acetoacetic ester synthesis
+def: "A carbon-carbon coupling reaction between a beta-ketoester and an alkyl halide to yield an alpha-alkylated ester." [RSC:cb]
+comment: Subsequent treatment with mild hydrolysis leads to a ketone; concentrated base produces a substituted ester.
+synonym: "C[C:2](=O)[C:1][C:3](=O)OC.[C:4][F,Cl,Br,I]>>C[C:2](=O)[C:1]([C:4])[C:3](=O)OC" SMIRKS []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000001/
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
+relationship: OBI:0000417 RXNO:0000440 ! achieves_planned_objective molecular skeleton joining objective
+relationship: RXNO:0000423 CHEBI:33308 ! has specified product carboxylic ester
+relationship: RXNO:0000424 CHEBI:24469 ! has specified reactant haloalkane
+relationship: RXNO:0000424 CHEBI:51849 ! has specified reactant beta-ketoester
+
+[Term]
+id: RXNO:0000460
+name: intramolecular acyloin condensation
+def: "A reductive coupling reaction between two ester groups in the same molecule to give an acyloin (an alpha-hydroxyketone)." [RSC:cc, RSC:db]
+is_a: RXNO:0000005 ! ring formation reaction step
+is_a: RXNO:0000085 ! acyloin condensation
+relationship: OBI:0000417 RXNO:0000439 ! achieves_planned_objective molecular ring formation objective
+
+[Term]
+id: RXNO:0000461
+name: intermolecular acyloin condensation
+def: "A reductive coupling reaction between two ester groups in different molecules to give an acyloin (an alpha-hydroxyketone)." [RSC:cc, RSC:db]
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
+is_a: RXNO:0000085 ! acyloin condensation
+relationship: OBI:0000417 RXNO:0000440 ! achieves_planned_objective molecular skeleton joining objective
+
+[Term]
+id: RXNO:0000462
+name: molecular extrusion objective
+def: "A molecular transformation objective that is satisfied by a cleaving reaction in which a skeletal atom or group of atoms is removed from the middle of a molecule." [RSC:xp]
+is_a: RXNO:0000438 ! molecular skeleton cleaving objective
+
+[Term]
+id: RXNO:0000463
+name: molecular fragmentation objective
+def: "A molecular transformation objective that is satisfied by a reaction in which the parent molecule breaks up into three or more products." [RSC:xp]
+is_a: RXNO:0000438 ! molecular skeleton cleaving objective
 
 [Typedef]
 id: BFO:0000055
