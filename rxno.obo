@@ -878,6 +878,12 @@ def: "Breaking of a covalent bond between an alkyl group and an oxygen atom." [R
 is_a: MOP:0001369 ! dealkylation
 
 [Term]
+id: MOP:0000720
+name: [2+2+1] cycloaddition
+def: "A cycloaddition in which two participants contribute two electrons and the other participant contributes one electron to the transformation of reactants to products." [RSC:cb]
+is_a: MOP:0000562 ! cycloaddition
+
+[Term]
 id: MOP:0001369
 name: dealkylation
 def: "Breaking of a covalent bond between an alkyl group and a substrate." [RSC:xp]
@@ -1035,7 +1041,7 @@ synonym: "[C:1]=[C:2][C:3]=[C:4].[C:5]=[C:6]>>[C:1]1[C:2]=[C:3][C:4][C:5][C:6]1"
 synonym: "Diels-Alder coupling" EXACT []
 synonym: "Diels-Alder cycloaddition" EXACT []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000109/
-is_a: MOP:0000562 ! cycloaddition
+is_a: MOP:0000565 ! [4+2] cycloaddition
 
 [Term]
 id: RXNO:0000007
@@ -1672,7 +1678,7 @@ def: "A photochemical cycloaddition between an aldehyde or ketone and an alkene 
 synonym: "[C:1]=[O:2].[C:3]=[C:4]>>[C:1]1[O:2][C:3][C:4]1" SMIRKS []
 synonym: "Paterno-Buchi reaction" EXACT []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000319/
-is_a: MOP:0000562 ! cycloaddition
+is_a: MOP:0000563 ! [2+2] cycloaddition
 is_a: RXNO:0000005 ! ring formation reaction step
 relationship: RXNO:0000423 CHEBI:38784 ! has specified product oxetanes
 
@@ -4494,6 +4500,13 @@ id: RXNO:0000463
 name: molecular fragmentation objective
 def: "A molecular transformation objective that is satisfied by a reaction in which the parent molecule breaks up into three or more products." [RSC:xp]
 is_a: RXNO:0000438 ! molecular skeleton cleaving objective
+
+[Term]
+id: RXNO:0000464
+name: Pauson-Khand reaction
+def: "A [2+2+1] cycloaddition between an alkyne, an alkene and carbon monoxide to form an alpha-beta-unsaturated cyclopentenone." [doi:10.1039/P19730000975]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000320/
+is_a: MOP:0000720 ! [2+2+1] cycloaddition
 
 [Typedef]
 id: BFO:0000055
