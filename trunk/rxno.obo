@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: rxno/releases/2014-02-21/rxno.owl
+data-version: rxno/releases/2014-02-25/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
@@ -12,6 +12,11 @@ name: disposition
 id: CHEBI:15734
 name: primary alcohol
 is_a: CHEBI:30879 ! alcohol
+
+[Term]
+id: CHEBI:16240
+name: hydrogen peroxide
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:16526
@@ -57,6 +62,11 @@ is_a: CHEBI:23367 ! molecular entity
 id: CHEBI:22929
 name: bromoalkane
 is_a: CHEBI:24469 ! haloalkane
+
+[Term]
+id: CHEBI:23086
+name: chalcones
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:23128
@@ -164,6 +174,11 @@ name: copper atom
 is_a: CHEBI:23367 ! molecular entity
 
 [Term]
+id: CHEBI:28802
+name: flavonols
+is_a: CHEBI:23367 ! molecular entity
+
+[Term]
 id: CHEBI:29785
 name: nitro group
 is_a: CHEBI:24433 ! group
@@ -247,6 +262,11 @@ is_a: CHEBI:23367 ! molecular entity
 id: CHEBI:33823
 name: enol
 is_a: CHEBI:33822 ! organic hydroxy compound
+
+[Term]
+id: CHEBI:33839
+name: macromolecule
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:33855
@@ -1420,6 +1440,9 @@ id: RXNO:0000052
 name: fused-ring-system formation
 def: "A reaction in which a fused ring system is present in a product that was not present in any of the reactants." [RSC:cb, RSC:cc, RSC:db]
 is_a: RXNO:0000005 ! ring formation reaction step
+intersection_of: RXNO:0000005 ! ring formation reaction step
+intersection_of: OBI:0000417 RXNO:0000465 ! achieves_planned_objective fused-ring-system formation objective
+relationship: OBI:0000417 RXNO:0000465 ! achieves_planned_objective fused-ring-system formation objective
 
 [Term]
 id: RXNO:0000053
@@ -2317,6 +2340,7 @@ id: RXNO:0000169
 name: Dakin reaction
 def: "The reaction of ortho- or para-phenolic (or ortho- or para-anilinic) aldehydes or ketones with hydrogen peroxide to form bisphenols (or hydroxy anilines) and carboxylic acids." [RSC:cb, RSC:cc, RSC:db]
 is_a: RXNO:0000073 ! cleaving reaction
+relationship: RXNO:0000424 CHEBI:16240 ! has specified reactant hydrogen peroxide
 
 [Term]
 id: RXNO:0000170
@@ -2599,6 +2623,7 @@ name: Fleming-Tamao oxidation
 def: "The stereospecific oxidation of a (phenyldimethylsilyl)alkane to the corresponding alcohol using bromine, usually generated in situ from potassium bromide and peracetic acid." [RSC:cb, RSC:cc, RSC:db]
 synonym: "Fleming oxidation" EXACT []
 synonym: "Tamao-Fleming oxidation" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000150/
 is_a: RXNO:0000019 ! substitution reaction
 
 [Term]
@@ -2606,7 +2631,11 @@ id: RXNO:0000211
 name: Tamao oxidation
 def: "The stereospecific oxidation of a (halosilyl)alkane to the corresponding alcohol using potassium fluoride and hydrogen peroxide." [RSC:cb, RSC:cc, RSC:db]
 synonym: "Tamao-Kumada oxidation" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000150/
 is_a: RXNO:0000019 ! substitution reaction
+is_a: RXNO:0000331 ! substitution step
+relationship: OBI:0000417 RXNO:0000468 ! achieves_planned_objective molecular substitution objective
+relationship: RXNO:0000424 CHEBI:16240 ! has specified reactant hydrogen peroxide
 
 [Term]
 id: RXNO:0000212
@@ -2853,11 +2882,16 @@ is_a: RXNO:0000005 ! ring formation reaction step
 [Term]
 id: RXNO:0000246
 name: polymerisation reaction
-def: "A joining reaction in which a large number of monomers react together to produce a polymer consisting of repeating units." [rsc:db]
+def: "A joining reaction, the objective of which is that a large number of monomers react together to produce a polymer consisting of repeating units." [rsc:db]
 synonym: "polymerisation" EXACT []
 synonym: "polymerization" EXACT []
 synonym: "polymerization reaction" EXACT []
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
+intersection_of: RXNO:0000000 ! molecular skeleton joining reaction
+intersection_of: OBI:0000417 RXNO:0000466 ! achieves_planned_objective polymerisation objective
+intersection_of: RXNO:0000423 CHEBI:33839 ! has specified product macromolecule
+relationship: OBI:0000417 RXNO:0000466 ! achieves_planned_objective polymerisation objective
+relationship: RXNO:0000423 CHEBI:33839 ! has specified product macromolecule
 
 [Term]
 id: RXNO:0000247
@@ -3479,7 +3513,9 @@ id: RXNO:0000331
 name: substitution step
 def: "A functional modification step in which one singly-bonded substituent, but not a hydrogen, is replaced by another singly-bonded substituent." [RSC:cb]
 is_a: RXNO:0000010 ! functional modification
-is_a: RXNO:0000019 ! substitution reaction
+intersection_of: RXNO:0000010 ! functional modification
+intersection_of: OBI:0000417 RXNO:0000468 ! achieves_planned_objective molecular substitution objective
+relationship: OBI:0000417 RXNO:0000468 ! achieves_planned_objective molecular substitution objective
 
 [Term]
 id: RXNO:0000332
@@ -3834,7 +3870,7 @@ union_of: RXNO:0000046 ! Friedel-Crafts alkylation
 id: RXNO:0000370
 name: Demko-Sharpless reaction
 def: "A functional group modification of a nitrile to a 1H-tetrazole by addition of sodium azide." [doi:10.1021/jo010635w, RSC:cb]
-synonym: "[#6,S,N;H0:1][C:2]#[N:3].[Na+].[N-:4]=[N+:5]=[N-:6]>>[*:1][C:2]=[N:3][N:4][N:5]=[N:6]1" SMIRKS []
+synonym: "[#6,S,N;H0:1][C:2]#[N:3].[Na+].[N-:4]=[N+:5]=[N-:6]>>[*:1][C:2]1=[N:3][N:4][N:5]=[N:6]1" SMIRKS []
 is_a: RXNO:0000011 ! functional group modification
 relationship: RXNO:0000423 CHEBI:35689 ! has specified product tetrazoles
 relationship: RXNO:0000424 CHEBI:18379 ! has specified reactant nitrile
@@ -4507,6 +4543,35 @@ name: Pauson-Khand reaction
 def: "A [2+2+1] cycloaddition between an alkyne, an alkene and carbon monoxide to form an alpha-beta-unsaturated cyclopentenone." [doi:10.1039/P19730000975]
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000320/
 is_a: MOP:0000720 ! [2+2+1] cycloaddition
+
+[Term]
+id: RXNO:0000465
+name: fused-ring-system formation objective
+def: "A molecular transformation objective that is satisfied by a reaction in which a fused ring system is present in a product that was not present in any of the reactants." [RSC:xp]
+is_a: RXNO:0000439 ! molecular ring formation objective
+
+[Term]
+id: RXNO:0000466
+name: polymerisation objective
+def: "A molecular transformation objective that is satisfied by a reaction in which a large number of monomers react together to product a polymer consisting of repeating units." [RSC:xp]
+is_a: RXNO:0000440 ! molecular skeleton joining objective
+
+[Term]
+id: RXNO:0000467
+name: Algar-Flynn-Oyamada reaction
+def: "A fused-ring-system formation reaction where a flavonol is produced by oxidation of a chalcone with alkaline hydrogen peroxide." [RSC:cb]
+comment: definition source Merck Index
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000005/
+is_a: RXNO:0000052 ! fused-ring-system formation
+relationship: RXNO:0000423 CHEBI:28802 ! has specified product flavonols
+relationship: RXNO:0000424 CHEBI:16240 ! has specified reactant hydrogen peroxide
+relationship: RXNO:0000424 CHEBI:23086 ! has specified reactant chalcones
+
+[Term]
+id: RXNO:0000468
+name: molecular substitution objective
+def: "A molecular transformation objective that is satisfied by a reaction in which one singly-bonded substituent, but not a hydrogen, is replaced by another singly-bonded substituent." [RSC:xp]
+is_a: RXNO:0000442 ! functional modification objective
 
 [Typedef]
 id: BFO:0000055
