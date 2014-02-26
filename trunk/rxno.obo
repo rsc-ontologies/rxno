@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: rxno/releases/2014-02-25/rxno.owl
+data-version: rxno/releases/2014-02-26/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
@@ -85,6 +85,11 @@ is_a: CHEBI:24431 ! chemical entity
 disjoint_from: CHEBI:24433 ! group
 
 [Term]
+id: CHEBI:24043
+name: flavones
+is_a: CHEBI:38104 ! oxacycle
+
+[Term]
 id: CHEBI:24129
 name: furans
 is_a: CHEBI:23367 ! molecular entity
@@ -121,6 +126,11 @@ is_a: CHEBI:23367 ! molecular entity
 [Term]
 id: CHEBI:25750
 name: oxime
+is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:25996
+name: phenylhydrazine
 is_a: CHEBI:23367 ! molecular entity
 
 [Term]
@@ -176,7 +186,7 @@ is_a: CHEBI:23367 ! molecular entity
 [Term]
 id: CHEBI:28802
 name: flavonols
-is_a: CHEBI:23367 ! molecular entity
+is_a: CHEBI:38104 ! oxacycle
 
 [Term]
 id: CHEBI:29785
@@ -314,6 +324,11 @@ name: acid anhydride
 is_a: CHEBI:23367 ! molecular entity
 
 [Term]
+id: CHEBI:36687
+name: acyl chloride
+is_a: CHEBI:37579 ! acyl halide
+
+[Term]
 id: CHEBI:36823
 name: pseudohalo group
 is_a: CHEBI:24433 ! group
@@ -342,6 +357,11 @@ is_a: CHEBI:5686 ! heterocyclic compound
 id: CHEBI:38269
 name: boronic acids
 is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:38757
+name: isoflavones
+is_a: CHEBI:38104 ! oxacycle
 
 [Term]
 id: CHEBI:38784
@@ -1538,20 +1558,24 @@ is_a: RXNO:0000315 ! condensation step
 [Term]
 id: RXNO:0000063
 name: Arndt-Eistert reaction
-def: "A homologation reaction of a carboxylic acid to give the homologated carboxylic acid." [RSC:cc, RSC:db]
+def: "A homologation reaction of a carboxylic acid to give the homologated carboxylic acid via acyl chloride and diazoketone intermediates." [RSC:cb, RSC:cc, RSC:db]
 comment: This is an insertion because the carbon atom is added between the R group and the carboxyl carbon in the starting material.
 synonym: "[#6:1]C(=O)O>>[#6:1][CH2]C(=O)O" SMIRKS []
+synonym: "Arndt-Eistert synthesis" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000010/
 is_a: RXNO:0000030 ! insertion reaction
 relationship: RXNO:0000423 CHEBI:33575 ! has specified product carboxylic acid
 relationship: RXNO:0000424 CHEBI:33575 ! has specified reactant carboxylic acid
+relationship: RXNO:0000469 CHEBI:36687 ! has_intermediate acyl chloride
 
 [Term]
 id: RXNO:0000064
 name: Fischer indole synthesis
-def: "A cyclisation of an aryl hydrazone of an aldehyde or ketone to give an indole." [RSC:cc, RSC:db]
+def: "Reaction of an aldehyde or ketone with a phenylhydrazine to give an indole." [RSC:cb, RSC:cc, RSC:db]
 synonym: "Fischer indolisation" EXACT []
 synonym: "Fischer indolization" EXACT []
 is_a: RXNO:0000395 ! indole synthesis
+relationship: RXNO:0000424 CHEBI:25996 ! has specified reactant phenylhydrazine
 
 [Term]
 id: RXNO:0000065
@@ -4055,6 +4079,7 @@ relationship: RXNO:0000423 CHEBI:26513 ! has specified product quinolines
 id: RXNO:0000394
 name: Knorr quinoline synthesis
 def: "Synthesis of an alpha-hydroxyquinoline by reaction of a beta-ketoester and an arylamine then dehydration with concentrated sulfuric acid." [RSC:cb]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000234/
 is_a: RXNO:0000393 ! quinoline synthesis
 relationship: has_part MOP:0000628 ! dehydration reaction
 
@@ -4573,6 +4598,51 @@ name: molecular substitution objective
 def: "A molecular transformation objective that is satisfied by a reaction in which one singly-bonded substituent, but not a hydrogen, is replaced by another singly-bonded substituent." [RSC:xp]
 is_a: RXNO:0000442 ! functional modification objective
 
+[Term]
+id: RXNO:0000470
+name: Allan-Robinson flavone synthesis
+def: "Reaction of ortho-hydroxyaryl ketones with aromatic carboxylic acid anhydrides to yield a flavone." [RSC:cb]
+is_a: RXNO:0000475 ! Allan-Robinson reaction
+relationship: RXNO:0000423 CHEBI:24043 ! has specified product flavones
+
+[Term]
+id: RXNO:0000471
+name: Allan-Robinson isoflavone synthesis
+def: "Reaction of ortho-hydroxyaryl ketones with aromatic carboxylic acid anhydrides to yield an isoflavone." [RSC:cb]
+is_a: RXNO:0000475 ! Allan-Robinson reaction
+relationship: RXNO:0000423 CHEBI:38757 ! has specified product isoflavones
+
+[Term]
+id: RXNO:0000472
+name: Amadori rearrangement
+def: "Rearrangement of an aldose N-glycoside to a ketose N-glycoside by acid or base catalysis." [RSC:cb]
+comment: definition source Merck Index
+is_a: RXNO:0000025 ! rearrangement step
+
+[Term]
+id: RXNO:0000473
+name: Arens-van Dorp synthesis
+def: "Reaction of a ketone with ethoxyacetylene to form an alkoxyethynyl alcohol." [RSC:cb]
+comment: definition source Merck Index
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
+
+[Term]
+id: RXNO:0000474
+name: Auwers synthesis
+def: "Ring expansion of a 2-bromo-2-(alpha-bromobenzyl)-1-benzofuran to a flavonol in alcoholic alkali." [RSC:cb]
+comment: definition source Merck Index
+is_a: RXNO:0000108 ! ring expansion
+relationship: RXNO:0000423 CHEBI:28802 ! has specified product flavonols
+
+[Term]
+id: RXNO:0000475
+name: Allan-Robinson reaction
+def: "Reaction of ortho-hydroxyaryl ketones with aromatic acid anhydrides to yield a flavone or isoflavone." [RSC:cb]
+comment: definition source Merck Index
+is_a: RXNO:0000052 ! fused-ring-system formation
+union_of: RXNO:0000470 ! Allan-Robinson flavone synthesis
+union_of: RXNO:0000471 ! Allan-Robinson isoflavone synthesis
+
 [Typedef]
 id: BFO:0000055
 name: realizes
@@ -4639,6 +4709,11 @@ is_a: BFO:0000078 ! has participant ceasing to exist
 [Typedef]
 id: RXNO:0000425
 name: has_catalyst
+is_a: BFO:0000057 ! has_participant
+
+[Typedef]
+id: RXNO:0000469
+name: has_intermediate
 is_a: BFO:0000057 ! has_participant
 
 [Typedef]
