@@ -30,8 +30,12 @@ RXNO:0000472 ketose N-glycosyl compound is_a N-glycosyl compound (CHEBI:21731)
 RXNO:0000469: ortho-hydroxyaryl ketone is_a ketone (CHEBI:17087)
 organic azide: is_a azides (CHEBI:22680)
 organophosphazo compound: ?! (but looks like this R3P=NR')
+RXNO:0000056: organophosphonate
 organoselenide: is_a organoselenium compound (CHEBI:25712)
+RXNO:0000476: propargyl alcohol is_a acetylenic compound CHEBI:73474
 pseudohalide salt: salt (CHEBI:24866) and has_part pseudohalide anion (CHEBI:36828)
 selenoxide: is_a heterone (CHEBI:36598)
+RXNO:0000106: silver carboxylate: is_a silver coordination entity (CHEBI:33967)
+RXNO:0000480: Tebbe reagent
 RXNO:0000060: trialkyl phosphite: is_a organic phosphite (CHEBI:48135)
 5,6-unsaturated carbonyl compound:
