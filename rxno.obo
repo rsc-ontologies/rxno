@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: rxno/releases/2014-02-26/rxno.owl
+data-version: rxno/releases/2014-02-27/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
@@ -442,6 +442,16 @@ is_a: CHEBI:17087 ! ketone
 [Term]
 id: CHEBI:5686
 name: heterocyclic compound
+is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:59656
+name: phosphine oxide
+is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:59831
+name: enyne
 is_a: CHEBI:23367 ! molecular entity
 
 [Term]
@@ -1163,7 +1173,7 @@ synonym: "Wittig condensation" EXACT []
 synonym: "Wittig olefination" EXACT []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000468/
 xref: NAMERXN:3.8
-is_a: RXNO:0000000 ! molecular skeleton joining reaction
+is_a: RXNO:0000479 ! olefination
 relationship: RXNO:0000423 CHEBI:33641 ! has specified product olefin
 relationship: RXNO:0000424 CHEBI:51154 ! has specified reactant phosphonium ylide
 
@@ -1492,25 +1502,32 @@ is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 [Term]
 id: RXNO:0000056
 name: Horner-Wadsworth-Emmons reaction
-def: "A carbon-carbon coupling reaction between a phosphonate and a carbonyl compound to give an alkene." [RSC:cc, RSC:db]
+def: "A carbon-carbon coupling reaction between a phosphonate and a carbonyl compound to give an olefin." [RSC:cc, RSC:db]
 synonym: "Emmons reaction" EXACT []
 synonym: "Horner-Emmons reaction" EXACT []
 synonym: "Horner-Emmons-Wadsworth reaction" EXACT []
+synonym: "Horner-Wadsworth-Emmons (HWE) olefination" EXACT []
+synonym: "Horner-Wadsworth-Emmons olefination" EXACT []
 synonym: "Horner-Wittig reaction" EXACT []
 synonym: "Wadsworth-Emmons olefination" EXACT []
 synonym: "Wadsworth-Emmons reaction" EXACT []
 synonym: "Wadsworth-Emmons-Horner reaction" EXACT []
 synonym: "Wittig-Horner reaction" EXACT []
-is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000468/
+is_a: RXNO:0000479 ! olefination
+relationship: RXNO:0000423 CHEBI:33641 ! has specified product olefin
+relationship: RXNO:0000424 CHEBI:36587 ! has specified reactant carbonyl compound
 
 [Term]
 id: RXNO:0000057
 name: Horner reaction
-def: "A joining reaction between a phosphine oxide and a carbonyl compound to give an alkene." [RSC:cc, RSC:db]
-is_a: RXNO:0000000 ! molecular skeleton joining reaction
+def: "A joining reaction between a phosphine oxide and a carbonyl compound to give an olefin." [RSC:cc, RSC:db]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000468/
+is_a: RXNO:0000479 ! olefination
 relationship: OBI:0000417 RXNO:0000440 ! achieves_planned_objective molecular skeleton joining objective
 relationship: RXNO:0000423 CHEBI:33641 ! has specified product olefin
 relationship: RXNO:0000424 CHEBI:36587 ! has specified reactant carbonyl compound
+relationship: RXNO:0000424 CHEBI:59656 ! has specified reactant phosphine oxide
 
 [Term]
 id: RXNO:0000058
@@ -1703,7 +1720,9 @@ id: RXNO:0000080
 name: Peterson olefination
 def: "A carbon-carbon coupling reaction in which an alpha-silyl carbanion reacts with an aldehyde or a ketone to give an alkene, proceeding via a beta-hydroxysilane. The stereochemistry of the alkene can be controlled by treating the intermediate with acid or base." [RSC:cc, RSC:db]
 synonym: "Peterson reaction" EXACT []
-is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000331/
+is_a: RXNO:0000479 ! olefination
+relationship: RXNO:0000423 CHEBI:33641 ! has specified product olefin
 
 [Term]
 id: RXNO:0000081
@@ -1891,6 +1910,7 @@ name: Hunsdiecker reaction
 def: "The decarboxylation of silver carboxylates with halogens to give organic halides." [RSC:cb, RSC:cc, RSC:db]
 synonym: "Borodin reaction" EXACT []
 synonym: "Borodine reaction" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000215/
 is_a: RXNO:0000105 ! end-of-chain chain shortening
 
 [Term]
@@ -1918,6 +1938,7 @@ id: RXNO:0000109
 name: Pfitzinger reaction
 def: "The reaction between isatin and an alpha-methylene carbonyl compound to give a substituted quinoline-4-carboxylic acid." [RSC:cb, RSC:cc, RSC:db]
 synonym: "Pfitzinger quinoline synthesis" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000334/
 is_a: RXNO:0000108 ! ring expansion
 
 [Term]
@@ -1968,7 +1989,9 @@ id: RXNO:0000117
 name: Julia olefination
 def: "A carbon-carbon coupling reaction between a phenyl sulfone and an aldehyde or ketone to give a (typically trans) alkene." [RSC:cb, RSC:cc, RSC:db]
 synonym: "Julia-Lythgoe olefination" EXACT []
-is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000224/
+is_a: RXNO:0000479 ! olefination
+relationship: RXNO:0000423 CHEBI:33641 ! has specified product olefin
 
 [Term]
 id: RXNO:0000118
@@ -2948,7 +2971,8 @@ is_a: RXNO:0000025 ! rearrangement step
 id: RXNO:0000251
 name: Stork-Wittig olefination
 def: "A carbon-carbon coupling reaction where an aldehyde reacts with a phosphonium salt to give a Z-iodoalkene. The reaction is mediated by sodium or potassium hexamethyldisilazide." [RSC:db]
-is_a: RXNO:0000000 ! molecular skeleton joining reaction
+is_a: RXNO:0000479 ! olefination
+relationship: RXNO:0000423 CHEBI:33641 ! has specified product olefin
 relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 
 [Term]
@@ -3339,7 +3363,8 @@ name: Julia-Kocienski olefination
 def: "A carbon-carbon coupling reaction between a tetrazole sulfone and an aldehyde or ketone to give a (typically trans) alkene." [rsc:db]
 synonym: "Julia-Kocienski coupling" EXACT []
 synonym: "Julia-Kocienski reaction" EXACT []
-is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+is_a: RXNO:0000479 ! olefination
+relationship: RXNO:0000423 CHEBI:33641 ! has specified product olefin
 
 [Term]
 id: RXNO:0000305
@@ -4617,6 +4642,7 @@ id: RXNO:0000472
 name: Amadori rearrangement
 def: "Rearrangement of an aldose N-glycoside to a ketose N-glycoside by acid or base catalysis." [RSC:cb]
 comment: definition source Merck Index
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000008/
 is_a: RXNO:0000025 ! rearrangement step
 
 [Term]
@@ -4624,6 +4650,7 @@ id: RXNO:0000473
 name: Arens-van Dorp synthesis
 def: "Reaction of a ketone with ethoxyacetylene to form an alkoxyethynyl alcohol." [RSC:cb]
 comment: definition source Merck Index
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000009/
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
 
 [Term]
@@ -4631,6 +4658,7 @@ id: RXNO:0000474
 name: Auwers synthesis
 def: "Ring expansion of a 2-bromo-2-(alpha-bromobenzyl)-1-benzofuran to a flavonol in alcoholic alkali." [RSC:cb]
 comment: definition source Merck Index
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000011/
 is_a: RXNO:0000108 ! ring expansion
 relationship: RXNO:0000423 CHEBI:28802 ! has specified product flavonols
 
@@ -4639,9 +4667,49 @@ id: RXNO:0000475
 name: Allan-Robinson reaction
 def: "Reaction of ortho-hydroxyaryl ketones with aromatic acid anhydrides to yield a flavone or isoflavone." [RSC:cb]
 comment: definition source Merck Index
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000006/
 is_a: RXNO:0000052 ! fused-ring-system formation
 union_of: RXNO:0000470 ! Allan-Robinson flavone synthesis
 union_of: RXNO:0000471 ! Allan-Robinson isoflavone synthesis
+
+[Term]
+id: RXNO:0000476
+name: Meyer-Schuster rearrangement
+def: "Rearrangement of a propargyl alcohol to an alpha,beta-unsaturated carbonyl compound via an allene intermediate to yield the gamma-substituted product." [doi:10.1039/b912099h]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000278/
+is_a: RXNO:0000025 ! rearrangement step
+relationship: RXNO:0000469 CHEBI:37602 ! has_intermediate allenes
+
+[Term]
+id: RXNO:0000477
+name: Rupe rearrangement
+def: "Rearrangement of a propargyl alcohol to an alpha,beta-unsaturated carbonyl compound via an enyne intermediate to yield the beta-substituted product." [doi:10.1039/b912099h]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000278/
+is_a: RXNO:0000025 ! rearrangement step
+
+[Term]
+id: RXNO:0000478
+name: Still-Gennari modification
+def: "A Horner-Wadsworth-Emmons reaction that uses phosphonates with electron-withdrawing groups and dissociating conditions to produce predominantly Z-olefins." [RSC:cb]
+synonym: "Still modification" EXACT []
+is_a: RXNO:0000056 ! Horner-Wadsworth-Emmons reaction
+
+[Term]
+id: RXNO:0000479
+name: olefination
+def: "A molecular skeleton joining reaction where the connection formed is a carbon-carbon double bond." [RSC:cb]
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
+intersection_of: RXNO:0000002 ! carbon-carbon coupling reaction
+intersection_of: RXNO:0000423 CHEBI:33641 ! has specified product olefin
+relationship: RXNO:0000423 CHEBI:33641 ! has specified product olefin
+
+[Term]
+id: RXNO:0000480
+name: Tebbe olefination
+def: "Reaction of an aldehyde or ketone or carboxylic ester or amide with the Tebbe reagent to yield an olefni or an enol ether or an enamine." [RSC:cb]
+comment: definition source Merck Index, heavily modified
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000428/
+is_a: RXNO:0000479 ! olefination
 
 [Typedef]
 id: BFO:0000055
