@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: rxno/releases/2014-02-27/rxno.owl
+data-version: rxno/releases/2014-02-28/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
@@ -934,6 +934,13 @@ def: "A cycloaddition in which two participants contribute two electrons and the
 is_a: MOP:0000562 ! cycloaddition
 
 [Term]
+id: MOP:0000721
+name: [3,3]-sigmatropic rearrangement
+alt_id: RXNO:0000027
+comment: This term was obsoleted from the RXNO namespace and transferred to MOP because it is a process identifiable by its mechanism rather than the intention of the experimenter.
+is_a: MOP:0000543 ! molecular process
+
+[Term]
 id: MOP:0001369
 name: dealkylation
 def: "Breaking of a covalent bond between an alkyl group and a substrate." [RSC:xp]
@@ -1146,6 +1153,9 @@ name: functional group oxidation
 def: "A functional group modification reaction where a functional group is oxidised." [RSC:cb]
 is_a: MOP:0000568 ! oxidation
 is_a: RXNO:0000011 ! functional group modification
+intersection_of: RXNO:0000011 ! functional group modification
+intersection_of: OBI:0000417 RXNO:0000490 ! achieves_planned_objective functional oxidation objective
+relationship: OBI:0000417 RXNO:0000490 ! achieves_planned_objective functional oxidation objective
 
 [Term]
 id: RXNO:0000013
@@ -1274,16 +1284,11 @@ relationship: RXNO:0000423 CHEBI:32988 ! has specified product amide
 relationship: RXNO:0000424 CHEBI:25750 ! has specified reactant oxime
 
 [Term]
-id: RXNO:0000027
-name: [3,3]-sigmatropic rearrangement
-comment: This term was obsoleted because it represents a mechanism rather than a reaction as such.
-is_obsolete: true
-
-[Term]
 id: RXNO:0000028
 name: Cope rearrangement
 def: "A [3,3]-sigmatropic rearrangement where a 1,5-hexadiene rearranges to form a 1,5-hexadiene." [RSC:cb]
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000086/
+is_a: MOP:0000721 ! [3,3]-sigmatropic rearrangement
 is_a: RXNO:0000025 ! rearrangement step
 
 [Term]
@@ -1291,13 +1296,17 @@ id: RXNO:0000029
 name: oxy-Cope rearrangement
 def: "A [3,3]-sigmatropic rearrangement of a 3-hydroxy-1,5-hexadiene rearranges to form a 5,6-unsaturated carbonyl compound." [RSC:cb, RSC:cc, RSC:db]
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000086/
+is_a: MOP:0000721 ! [3,3]-sigmatropic rearrangement
 is_a: RXNO:0000025 ! rearrangement step
 
 [Term]
 id: RXNO:0000030
-name: insertion reaction
+name: molecular skeleton insertion reaction
 def: "A joining reaction in which one or more atoms are added to the middle of a chain." [RSC:cb, RSC:cc, RSC:db]
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
+intersection_of: RXNO:0000000 ! molecular skeleton joining reaction
+intersection_of: OBI:0000417 RXNO:0000487 ! achieves_planned_objective molecular skeleton insertion objective
+relationship: OBI:0000417 RXNO:0000487 ! achieves_planned_objective molecular skeleton insertion objective
 
 [Term]
 id: RXNO:0000031
@@ -1310,7 +1319,7 @@ synonym: "Baeyer-Villiger oxidative rearrangement" EXACT []
 synonym: "Baeyer-Villiger reaction" EXACT []
 synonym: "Baeyer-Villiger rearrangement" RELATED []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000013/
-is_a: RXNO:0000030 ! insertion reaction
+is_a: RXNO:0000030 ! molecular skeleton insertion reaction
 relationship: RXNO:0000423 CHEBI:33308 ! has specified product carboxylic ester
 relationship: RXNO:0000424 CHEBI:17087 ! has specified reactant ketone
 
@@ -1580,7 +1589,7 @@ comment: This is an insertion because the carbon atom is added between the R gro
 synonym: "[#6:1]C(=O)O>>[#6:1][CH2]C(=O)O" SMIRKS []
 synonym: "Arndt-Eistert synthesis" EXACT []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000010/
-is_a: RXNO:0000030 ! insertion reaction
+is_a: RXNO:0000030 ! molecular skeleton insertion reaction
 relationship: RXNO:0000423 CHEBI:33575 ! has specified product carboxylic acid
 relationship: RXNO:0000424 CHEBI:33575 ! has specified reactant carboxylic acid
 relationship: RXNO:0000469 CHEBI:36687 ! has_intermediate acyl chloride
@@ -1704,8 +1713,11 @@ name: protection reaction
 def: "A reaction in which a functional group is modified by converting it into a protecting group, in order to make subsequent reactions more selective." [RSC:cb]
 xref: NAMERXN:5
 is_a: RXNO:0000010 ! functional modification
+intersection_of: RXNO:0000010 ! functional modification
+intersection_of: RXNO:0000416 CHEBI:24433 ! protects group
 disjoint_from: RXNO:0000203 ! deprotection reaction
 relationship: part_of RXNO:0000329 ! planned synthesis
+relationship: RXNO:0000416 CHEBI:24433 ! protects group
 
 [Term]
 id: RXNO:0000079
@@ -2013,37 +2025,48 @@ relationship: RXNO:0000423 CHEBI:30879 ! has specified product alcohol
 id: RXNO:0000120
 name: Payne rearrangement
 def: "A base-catalysed isomerisation of a 2,3-epoxyalcohol, with inversion of configuration at C2." [RSC:cb, RSC:cc, RSC:db]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000321/
 is_a: RXNO:0000202 ! ring rearrangement
 
 [Term]
 id: RXNO:0000121
 name: aza-Payne rearrangement
 def: "A base-catalysed isomerisation of a 2,3-epoxyamine to form a hydroxy aziridine, with inversion of configuration at C2." [RSC:cb, RSC:cc, RSC:db]
+xref: xref: https\://www.rsc.org/Merck-Index/reaction/rxn1500000321/
 is_a: RXNO:0000202 ! ring rearrangement
 
 [Term]
 id: RXNO:0000122
 name: Baker-Venkataraman rearrangement
-def: "The base-catalysed rearrangement of an o-acetoxyacetophenone to give a 1,3-diketone." [RSC:cb, RSC:cc, RSC:db]
+def: "The base-catalysed rearrangement of an o-acetoxyacetophenone to give a hydroxyphenyl-1,3-diketone." [RSC:cb, RSC:cc, RSC:db]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000014/
 is_a: RXNO:0000025 ! rearrangement step
 
 [Term]
 id: RXNO:0000123
-name: elimination reaction
+name: molecular skeleton elimination reaction
 def: "A reaction in which two or more groups of atoms are removed from the molecule, resulting in a change of skeletal bond order." [RSC:cb]
+comment: This is narrower in focus than elimination in general in that we're focussing on the aims of the chemist.
 is_a: RXNO:0000010 ! functional modification
+intersection_of: RXNO:0000010 ! functional modification
+intersection_of: OBI:0000417 RXNO:0000486 ! achieves_planned_objective molecular skeleton elimination objective
+relationship: OBI:0000417 RXNO:0000486 ! achieves_planned_objective molecular skeleton elimination objective
 
 [Term]
 id: RXNO:0000124
 name: Bamford-Stevens reaction
-def: "The reaction of a tosylhydrazone of an aldehyde or ketone with a strong base to give an alkene. This generally provides the more-substituted alkene as the thermodynamic product." [RSC:cb, RSC:cc, RSC:db]
-is_a: RXNO:0000123 ! elimination reaction
+def: "The reaction of a tosylhydrazone of an aldehyde or ketone with a strong base to give an alkene." [RSC:cb, RSC:cc, RSC:db]
+comment: This generally provides the more-substituted alkene as the thermodynamic product.
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000016/
+is_a: RXNO:0000123 ! molecular skeleton elimination reaction
 
 [Term]
 id: RXNO:0000125
 name: Shapiro reaction
-def: "The reaction of a tosylhydrazone of an aldehyde or ketone with an alkyllithium or Grignard reagent to give an alkene. This generally provides the less-substituted alkene as the kinetic product." [RSC:cb, RSC:cc, RSC:db]
-is_a: RXNO:0000123 ! elimination reaction
+def: "The reaction of a tosylhydrazone of an aldehyde or ketone with an alkyllithium or Grignard reagent to give an alkene." [RSC:cb, RSC:cc, RSC:db]
+comment: This generally provides the less-substituted alkene as the kinetic product.
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000016/
+is_a: RXNO:0000123 ! molecular skeleton elimination reaction
 
 [Term]
 id: RXNO:0000126
@@ -2231,41 +2254,55 @@ name: Emde degradation
 def: "A reduction of a quaternary ammonium salt containing at least one unsaturated substituent, to give a tertiary amine." [RSC:cb, RSC:cc, RSC:db]
 synonym: "Emde reaction" EXACT []
 synonym: "Emde reduction" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000127/
 is_a: RXNO:0000073 ! cleaving reaction
 
 [Term]
 id: RXNO:0000148
 name: Claisen rearrangement
 def: "The [3,3]-sigmatropic rearrangement of an allyl vinyl ether to give a gamma,delta-unsaturated carbonyl compound." [RSC:cb, RSC:cc, RSC:db]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000080/
+is_a: MOP:0000721 ! [3,3]-sigmatropic rearrangement
 is_a: RXNO:0000025 ! rearrangement step
 
 [Term]
 id: RXNO:0000149
 name: Ireland-Claisen rearrangement
 def: "The enolisation and subsequent [3,3]-sigmatropic rearrangement of an allylic acetate to give a gamma,delta-unsaturated carboxylic acid." [RSC:cb, RSC:cc, RSC:db]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000080/
+is_a: MOP:0000721 ! [3,3]-sigmatropic rearrangement
 is_a: RXNO:0000025 ! rearrangement step
 
 [Term]
 id: RXNO:0000150
 name: joining with rearrangement
+def: "A reaction in which one or more atoms are added to the molecular skeleton and a skeletal rearrangement occurs." [RSC:cb]
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
+intersection_of: RXNO:0000000 ! molecular skeleton joining reaction
+intersection_of: OBI:0000417 RXNO:0000488 ! achieves_planned_objective joining with rearrangement objective
+relationship: OBI:0000417 RXNO:0000488 ! achieves_planned_objective joining with rearrangement objective
 
 [Term]
 id: RXNO:0000151
 name: Bellus-Claisen rearrangement
 def: "The coupling and subsequent [3,3]-sigmatropic rearrangement of an allylic ether or allylic thioether or allylic amine and a ketene to give the corresponding gamma,delta-unsaturated carbonyl compound." [RSC:cb, RSC:cc, RSC:db]
+is_a: MOP:0000721 ! [3,3]-sigmatropic rearrangement
 is_a: RXNO:0000150 ! joining with rearrangement
 
 [Term]
 id: RXNO:0000152
 name: Eschenmoser-Claisen rearrangement
 def: "The coupling and subsequent [3,3]-sigmatropic rearrangement of an allylic alcohol and alpha,alpha-dialkoxy ethylamine to give a gamma,delta-unsaturated dialkyl amide." [RSC:cb, RSC:cc, RSC:db]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000080/
+is_a: MOP:0000721 ! [3,3]-sigmatropic rearrangement
 is_a: RXNO:0000150 ! joining with rearrangement
 
 [Term]
 id: RXNO:0000153
 name: Johnson-Claisen rearrangement
 def: "The coupling and subsequent [3,3]-sigmatropic rearrangement of an allylic alcohol and trimethyl orthoacetate to give a gamma,delta-unsaturated alkyl ester." [RSC:cb, RSC:cc, RSC:db]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000080/
+is_a: MOP:0000721 ! [3,3]-sigmatropic rearrangement
 is_a: RXNO:0000150 ! joining with rearrangement
 
 [Term]
@@ -2364,7 +2401,7 @@ synonym: "exhaustive methylation" EXACT []
 synonym: "Hofmann degradation" RELATED []
 synonym: "N1[C:2][C:3][C:4][C:5][C:6]1[C:7]>>[C:2]=[C:3][C:4][C:5][C:6]=[C:7]" SMIRKS []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000205/
-is_a: RXNO:0000123 ! elimination reaction
+is_a: RXNO:0000123 ! molecular skeleton elimination reaction
 
 [Term]
 id: RXNO:0000167
@@ -2399,19 +2436,19 @@ is_a: RXNO:0000105 ! end-of-chain chain shortening
 id: RXNO:0000171
 name: Schmidt rearrangement, ketone
 def: "The reaction of a ketone with hydrazoic acid with the insertion of an NH group between the carbonyl carbon and one of the R groups to form an amide." [RSC:cb, RSC:cc, RSC:db]
-is_a: RXNO:0000030 ! insertion reaction
+is_a: RXNO:0000030 ! molecular skeleton insertion reaction
 
 [Term]
 id: RXNO:0000172
 name: Schmidt rearrangement, tertiary alcohol
 def: "The reaction of a tertiary alcohol with hydrazoic acid with rearrangement to form an imide." [RSC:cb, RSC:cc, RSC:db]
-is_a: RXNO:0000030 ! insertion reaction
+is_a: RXNO:0000030 ! molecular skeleton insertion reaction
 
 [Term]
 id: RXNO:0000173
 name: Schmidt rearrangement, alkene
 def: "The reaction of an alkene with hydrazoic acid with rearrangement to form an imide." [RSC:cb, RSC:cc, RSC:db]
-is_a: RXNO:0000030 ! insertion reaction
+is_a: RXNO:0000030 ! molecular skeleton insertion reaction
 
 [Term]
 id: RXNO:0000174
@@ -2572,6 +2609,7 @@ is_a: RXNO:0000194 ! Stevens rearrangement
 id: RXNO:0000197
 name: aza-Cope rearrangement
 def: "A [3,3]-sigmatropic rearrangement where an aza-1,5-hexadiene rearranges to form an aza-1,5-hexadiene." [RSC:cb, RSC:cc, RSC:db]
+is_a: MOP:0000721 ! [3,3]-sigmatropic rearrangement
 is_a: RXNO:0000025 ! rearrangement step
 
 [Term]
@@ -2617,7 +2655,12 @@ name: deprotection reaction
 def: "A reaction in which a protecting group is modified by converting it into a functional group." [RSC:cb]
 xref: NAMERXN:6
 is_a: RXNO:0000010 ! functional modification
+intersection_of: RXNO:0000010 ! functional modification
+intersection_of: OBI:0000417 RXNO:0000484 ! achieves_planned_objective deprotection objective
+intersection_of: RXNO:0000417 CHEBI:24433 ! deprotects group
+relationship: OBI:0000417 RXNO:0000484 ! achieves_planned_objective deprotection objective
 relationship: part_of RXNO:0000329 ! planned synthesis
+relationship: RXNO:0000417 CHEBI:24433 ! deprotects group
 
 [Term]
 id: RXNO:0000204
@@ -2655,6 +2698,7 @@ is_a: RXNO:0000070 ! chain lengthening
 id: RXNO:0000208
 name: aromatic Claisen rearrangement
 def: "The [3,3]-sigmatropic rearrangement, and subsequent re-aromatisation, of an allyl aryl ether to give an ortho-allyl phenol." [RSC:cb, RSC:cc, RSC:db]
+is_a: MOP:0000721 ! [3,3]-sigmatropic rearrangement
 is_a: RXNO:0000025 ! rearrangement step
 
 [Term]
@@ -2828,6 +2872,7 @@ is_a: RXNO:0000000 ! molecular skeleton joining reaction
 id: RXNO:0000232
 name: Petasis reaction
 def: "The alkylation of an amine with a boronic acid and an aldehyde to give a substituted amine." [RSC:db]
+synonym: "Petasis three-component coupling" EXACT []
 is_a: RXNO:0000011 ! functional group modification
 relationship: RXNO:0000423 CHEBI:32952 ! has specified product amine
 relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
@@ -3945,8 +3990,11 @@ name: functional group addition step
 def: "A planned reaction step in which a covalent bond is formed between the molecular skeleton and a functional group and where the skeletal bond order is unchanged." [RSC:cb]
 comment: this is not part of David's grand diagram - well spotted Roger
 xref: NAMERXN:10
+is_a: MOP:0000566 ! formation of covalent bond with group
 is_a: RXNO:0000010 ! functional modification
-relationship: has_part MOP:0000566 ! formation of covalent bond with group
+intersection_of: RXNO:0000010 ! functional modification
+intersection_of: OBI:0000417 RXNO:0000489 ! achieves_planned_objective functional group addition objective
+relationship: OBI:0000417 RXNO:0000489 ! achieves_planned_objective functional group addition objective
 
 [Term]
 id: RXNO:0000374
@@ -4060,7 +4108,7 @@ relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 id: RXNO:0000389
 name: Seyferth-Gilbert ketone homologation
 def: "Reaction of a ketone with a dimethyl diazomethyl phosphonate under basic conditions to yield a terminal alkyne." [RSC:cb]
-is_a: RXNO:0000030 ! insertion reaction
+is_a: RXNO:0000030 ! molecular skeleton insertion reaction
 is_a: RXNO:0000387 ! Seyferth-Gilbert homologation
 relationship: RXNO:0000423 CHEBI:73477 ! has specified product terminal acetylenic compound
 
@@ -4069,6 +4117,7 @@ id: RXNO:0000390
 name: Seyferth-Gilbert-Bestmann homologation
 def: "Seyferth-Gilbert aldehyde homologation where the Seyferth-Gilbert reagent is generated in situ by reaction with methanol and potassium carbonate." [RSC:cb]
 synonym: "Bestmann modification" EXACT []
+synonym: "Ohira-Bestmann homologation" EXACT []
 synonym: "Ohira-Bestmann modification" EXACT []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000395/
 is_a: RXNO:0000388 ! Seyferth-Gilbert aldehyde homologation
@@ -4686,6 +4735,7 @@ name: Rupe rearrangement
 def: "Rearrangement of a propargyl alcohol to an alpha,beta-unsaturated carbonyl compound via an enyne intermediate to yield the beta-substituted product." [doi:10.1039/b912099h]
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000278/
 is_a: RXNO:0000025 ! rearrangement step
+relationship: RXNO:0000469 CHEBI:59831 ! has_intermediate enyne
 
 [Term]
 id: RXNO:0000478
@@ -4706,10 +4756,77 @@ relationship: RXNO:0000423 CHEBI:33641 ! has specified product olefin
 [Term]
 id: RXNO:0000480
 name: Tebbe olefination
-def: "Reaction of an aldehyde or ketone or carboxylic ester or amide with the Tebbe reagent to yield an olefni or an enol ether or an enamine." [RSC:cb]
+def: "Reaction of an aldehyde or ketone or carboxylic ester or amide with the Tebbe reagent to yield an olefin or an enol ether or an enamine." [RSC:cb]
 comment: definition source Merck Index, heavily modified
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000428/
 is_a: RXNO:0000479 ! olefination
+
+[Term]
+id: RXNO:0000481
+name: Myers-Saito cyclisation
+def: "Cyclization of a enynyl allene to yield a toluene biradical with radical centres on the methyl group and at the meta position." [doi:10.1039/b009965l, RSC:cb]
+synonym: "Myers-Saito cyclization" EXACT []
+synonym: "Myers-Saito process" EXACT []
+synonym: "Myers-Saito reaction" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000292/
+is_a: RXNO:0000005 ! ring formation reaction step
+
+[Term]
+id: RXNO:0000482
+name: Schmittel cyclisation
+def: "Cyclization of a enynyl allene to yield a 1-methyl-5-methylenecyclopenta-1,3-diene biradical with radical centres on the methyl group and methylene group." [doi:10.1039/b009965l, RSC:cb]
+synonym: "Schmittel cyclization" EXACT []
+is_a: RXNO:0000005 ! ring formation reaction step
+
+[Term]
+id: RXNO:0000483
+name: Baudisch reaction
+def: "Copper-catalysed reaction of benzene with a nitrosylating agent and hydrogen peroxide to form an o-nitrosophenol." [RSC:cb]
+xref: http://en.wikipedia.org/wiki/Baudisch_reaction
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000026/
+is_a: RXNO:0000373 ! functional group addition step
+
+[Term]
+id: RXNO:0000484
+name: deprotection objective
+def: "A functional modification objective that is satisfied by deprotecting some functional group." [RSC:xp]
+is_a: RXNO:0000442 ! functional modification objective
+
+[Term]
+id: RXNO:0000485
+name: protection objective
+def: "A functional modification objective that is satisfied by protecting some functional group." [RSC:xp]
+is_a: RXNO:0000442 ! functional modification objective
+
+[Term]
+id: RXNO:0000486
+name: molecular skeleton elimination objective
+def: "A functional modification objective that is satisfied by a reaction in which two or more groups of atoms are removed from the molecule, resulting in a change of skeletal bond order." [RSC:xp]
+is_a: RXNO:0000442 ! functional modification objective
+
+[Term]
+id: RXNO:0000487
+name: molecular skeleton insertion objective
+def: "A molecular skeleton joining objective that is satisfied by a reaction in which one or more atoms are added to the middle of a chain." [RSC:xp]
+is_a: RXNO:0000440 ! molecular skeleton joining objective
+
+[Term]
+id: RXNO:0000488
+name: joining with rearrangement objective
+def: "A molecular skeleton joining objective that is satisfied by a reaction in which one or more atoms are added to the molecular skeleton and a skeletal rearrangement occurs." [RSC:xp]
+is_a: RXNO:0000440 ! molecular skeleton joining objective
+
+[Term]
+id: RXNO:0000489
+name: functional group addition objective
+def: "A functional modification objective that is satisfied by a reaction in which a covalent bond is formed between the molecular skeleton and a functional group and where the skeletal bond order is unchanged." [RSC:xp]
+is_a: RXNO:0000442 ! functional modification objective
+
+[Term]
+id: RXNO:0000490
+name: functional oxidation objective
+def: "A functional group modification objective that is satisfied by a reaction in which a functional group is oxidised." [RSC:xp]
+is_a: RXNO:0000453 ! functional group modification objective
 
 [Typedef]
 id: BFO:0000055
