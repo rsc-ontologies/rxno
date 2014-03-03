@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: rxno/releases/2014-02-28/rxno.owl
+data-version: rxno/releases/2014-03-03/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
@@ -92,7 +92,7 @@ is_a: CHEBI:38104 ! oxacycle
 [Term]
 id: CHEBI:24129
 name: furans
-is_a: CHEBI:23367 ! molecular entity
+is_a: CHEBI:38104 ! oxacycle
 
 [Term]
 id: CHEBI:24431
@@ -111,7 +111,7 @@ is_a: CHEBI:23367 ! molecular entity
 [Term]
 id: CHEBI:24828
 name: indoles
-is_a: CHEBI:23367 ! molecular entity
+is_a: CHEBI:35293 ! fused compound
 
 [Term]
 id: CHEBI:25000
@@ -136,27 +136,27 @@ is_a: CHEBI:23367 ! molecular entity
 [Term]
 id: CHEBI:26410
 name: pyrazoles
-is_a: CHEBI:23367 ! molecular entity
+is_a: CHEBI:38101 ! azacycle
 
 [Term]
 id: CHEBI:26421
 name: pyridines
-is_a: CHEBI:23367 ! molecular entity
+is_a: CHEBI:38101 ! azacycle
 
 [Term]
 id: CHEBI:26455
 name: pyrroles
-is_a: CHEBI:23367 ! molecular entity
+is_a: CHEBI:38101 ! azacycle
 
 [Term]
 id: CHEBI:26513
 name: quinolines
-is_a: CHEBI:23367 ! molecular entity
+is_a: CHEBI:38101 ! azacycle
 
 [Term]
 id: CHEBI:26588
 name: triazines
-is_a: CHEBI:23367 ! molecular entity
+is_a: CHEBI:38101 ! azacycle
 
 [Term]
 id: CHEBI:26878
@@ -259,6 +259,11 @@ name: carboxylic acid
 is_a: CHEBI:36587 ! carbonyl compound
 
 [Term]
+id: CHEBI:33595
+name: cyclic compound
+is_a: CHEBI:23367 ! molecular entity
+
+[Term]
 id: CHEBI:33641
 name: olefin
 is_a: CHEBI:23367 ! molecular entity
@@ -289,6 +294,11 @@ name: aromatic amine
 is_a: CHEBI:23367 ! molecular entity
 
 [Term]
+id: CHEBI:35293
+name: fused compound
+is_a: CHEBI:33595 ! cyclic compound
+
+[Term]
 id: CHEBI:35681
 name: secondary alcohol
 is_a: CHEBI:30879 ! alcohol
@@ -296,7 +306,7 @@ is_a: CHEBI:30879 ! alcohol
 [Term]
 id: CHEBI:35689
 name: tetrazoles
-is_a: CHEBI:23367 ! molecular entity
+is_a: CHEBI:38101 ! azacycle
 
 [Term]
 id: CHEBI:35715
@@ -349,6 +359,11 @@ name: iodoalkane
 is_a: CHEBI:24469 ! haloalkane
 
 [Term]
+id: CHEBI:38101
+name: azacycle
+is_a: CHEBI:33595 ! cyclic compound
+
+[Term]
 id: CHEBI:38104
 name: oxacycle
 is_a: CHEBI:5686 ! heterocyclic compound
@@ -371,7 +386,7 @@ is_a: CHEBI:23367 ! molecular entity
 [Term]
 id: CHEBI:39447
 name: pyrimidines
-is_a: CHEBI:23367 ! molecular entity
+is_a: CHEBI:38101 ! azacycle
 
 [Term]
 id: CHEBI:42485
@@ -442,7 +457,7 @@ is_a: CHEBI:17087 ! ketone
 [Term]
 id: CHEBI:5686
 name: heterocyclic compound
-is_a: CHEBI:23367 ! molecular entity
+is_a: CHEBI:33595 ! cyclic compound
 
 [Term]
 id: CHEBI:59656
@@ -571,6 +586,9 @@ name: cyclization
 def: "Formation of a ring in a molecule from a chain by formation of a new bond." [AU:C01494]
 synonym: "cyclisation" EXACT []
 is_a: MOP:0000543 ! molecular process
+intersection_of: MOP:0000543 ! molecular process
+intersection_of: BFO:0000077 CHEBI:33595 ! has participant beginning to exist cyclic compound
+relationship: BFO:0000077 CHEBI:33595 ! has participant beginning to exist cyclic compound
 
 [Term]
 id: MOP:0000562
@@ -1086,9 +1104,10 @@ name: ring formation reaction step
 def: "A planned reaction step where the product contains a ring that was not in any of the reactants." [RSC:cb]
 is_a: MOP:0000561 ! cyclization
 is_a: RXNO:0000001 ! planned reaction step
-intersection_of: MOP:0000561 ! cyclization
-intersection_of: OBI:0000417 RXNO:0000439 ! achieves_planned_objective molecular ring formation objective
+intersection_of: MOP:0000543 ! molecular process
+intersection_of: RXNO:0000423 CHEBI:33595 ! has specified product cyclic compound
 relationship: OBI:0000417 RXNO:0000439 ! achieves_planned_objective molecular ring formation objective
+relationship: RXNO:0000423 CHEBI:33595 ! has specified product cyclic compound
 
 [Term]
 id: RXNO:0000006
@@ -1479,9 +1498,10 @@ id: RXNO:0000052
 name: fused-ring-system formation
 def: "A reaction in which a fused ring system is present in a product that was not present in any of the reactants." [RSC:cb, RSC:cc, RSC:db]
 is_a: RXNO:0000005 ! ring formation reaction step
-intersection_of: RXNO:0000005 ! ring formation reaction step
-intersection_of: OBI:0000417 RXNO:0000465 ! achieves_planned_objective fused-ring-system formation objective
+intersection_of: MOP:0000543 ! molecular process
+intersection_of: RXNO:0000423 CHEBI:35293 ! has specified product fused compound
 relationship: OBI:0000417 RXNO:0000465 ! achieves_planned_objective fused-ring-system formation objective
+relationship: RXNO:0000423 CHEBI:35293 ! has specified product fused compound
 
 [Term]
 id: RXNO:0000053
@@ -1763,7 +1783,7 @@ relationship: RXNO:0000423 CHEBI:38784 ! has specified product oxetanes
 [Term]
 id: RXNO:0000084
 name: Barbier reaction
-def: "A joining reaction between an aldehyde or ketone and an alkyl halide to give a secondary or tertiary alcohol." [RSC:cc, RSC:db]
+def: "A joining reaction between an aldehyde or ketone and an alkyl halide or aryl halide or vinyl halide or allyl halide in the presence of metal to give a secondary or tertiary alcohol." [RSC:cc, RSC:db]
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
 union_of: RXNO:0000426 ! aldehyde Barbier reaction
 union_of: RXNO:0000427 ! ketone Barbier reaction
@@ -1789,6 +1809,7 @@ is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 id: RXNO:0000087
 name: Barton reaction
 def: "The photolytic oxidation of a nitrate ester to give a gamma-nitroalcohol." [RSC:cc, RSC:db]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000024/
 is_a: RXNO:0000025 ! rearrangement step
 relationship: RXNO:0000424 CHEBI:51080 ! has specified reactant nitrate ester
 
@@ -2032,7 +2053,7 @@ is_a: RXNO:0000202 ! ring rearrangement
 id: RXNO:0000121
 name: aza-Payne rearrangement
 def: "A base-catalysed isomerisation of a 2,3-epoxyamine to form a hydroxy aziridine, with inversion of configuration at C2." [RSC:cb, RSC:cc, RSC:db]
-xref: xref: https\://www.rsc.org/Merck-Index/reaction/rxn1500000321/
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000321/
 is_a: RXNO:0000202 ! ring rearrangement
 
 [Term]
@@ -2134,6 +2155,7 @@ name: Barton-McCombie deoxygenation
 def: "The deoxygenation of an alcohol to the corresponding alkane using a thiochloroformate. It proceeds by a radical mechanism." [RSC:cb, RSC:cc, RSC:db]
 synonym: "Barton deoxygenation" EXACT []
 synonym: "Barton reduction" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000022/
 is_a: RXNO:0000037 ! functional group reduction
 
 [Term]
@@ -2141,6 +2163,7 @@ id: RXNO:0000135
 name: Barton decarboxylation
 def: "The decarboxylation of a carboxylic acid to the lower homologue alkane using a pyridine thione." [RSC:cb, RSC:cc, RSC:db]
 comment: The reaction proceeds by a radical mechanism.
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000021/
 is_a: RXNO:0000105 ! end-of-chain chain shortening
 
 [Term]
@@ -2238,6 +2261,7 @@ id: RXNO:0000145
 name: Barbier-Wieland degradation
 def: "The degradation of a carboxylic acid to its next lower homologous carboxylic acid." [RSC:cb, RSC:cc, RSC:db]
 synonym: "Barbier-Wieland procedure" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000018/
 is_a: RXNO:0000105 ! end-of-chain chain shortening
 
 [Term]
@@ -2365,6 +2389,7 @@ def: "The cyclisation of a 1,4-dicarbonyl compound with an acid catalyst to give
 synonym: "O=[C:1]-[C:2]-[C:3]-[C:4]=O>>o1[c:1][c:2][c:3][c:4]1" SMIRKS []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000315/
 is_a: RXNO:0000161 ! Paal-Knorr synthesis
+is_a: RXNO:0000346 ! oxacycle synthesis
 relationship: RXNO:0000423 CHEBI:24129 ! has specified product furans
 
 [Term]
@@ -2383,6 +2408,7 @@ comment: Merck Index says "ammonia or primary amines"
 synonym: "O=[C:1]-[C:2]-[C:3]-[C:4]=O.[N:5]>>[n:5]1[c:1][c:2][c:3][c:4]1" SMIRKS []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000316/
 is_a: RXNO:0000161 ! Paal-Knorr synthesis
+is_a: RXNO:0000497 ! pyrrole synthesis
 relationship: RXNO:0000423 CHEBI:26455 ! has specified product pyrroles
 
 [Term]
@@ -2644,8 +2670,8 @@ is_a: RXNO:0000025 ! rearrangement step
 id: RXNO:0000202
 name: ring rearrangement
 def: "A reaction in which the number of rings in a molecule stays the same but the connectivity of the atoms in at least one ring changes." [RSC:cb]
-is_a: RXNO:0000001 ! planned reaction step
-intersection_of: RXNO:0000001 ! planned reaction step
+is_a: RXNO:0000005 ! ring formation reaction step
+intersection_of: RXNO:0000005 ! ring formation reaction step
 intersection_of: OBI:0000417 RXNO:0000458 ! achieves_planned_objective molecular ring rearrangement objective
 relationship: OBI:0000417 RXNO:0000458 ! achieves_planned_objective molecular ring rearrangement objective
 
@@ -3240,6 +3266,7 @@ name: alkene metathesis
 def: "A joining reaction in which two carbon-carbon double bonds are redistributed among two fragments, i.e. two alkenes. It is typically catalysed by a metal carbenoid, and proceeds via two four-membered intermediates (metallacyclobutanes). The reaction is driven by release of a low-MW alkene." [rsc:db]
 synonym: "cross metathesis" EXACT []
 synonym: "cross-metathesis" EXACT []
+synonym: "Grubbs metathesis" EXACT []
 synonym: "Grubbs reaction" EXACT []
 synonym: "olefin metathesis" EXACT []
 synonym: "transalkylidenation" EXACT []
@@ -3471,6 +3498,7 @@ name: Clauson-Kaas reaction
 def: "A ring rearrangement reaction where an amine reacts with a 2,5-dialkoxytetrahydrofuran to give a pyrrole." [http://www.clauson-kaas.com/cgi-files/mdmgfx/file-709-116554-7465.pdf]
 synonym: "Clauson-Kaas pyrrole synthesis" EXACT []
 is_a: RXNO:0000202 ! ring rearrangement
+is_a: RXNO:0000497 ! pyrrole synthesis
 relationship: RXNO:0000423 CHEBI:26455 ! has specified product pyrroles
 
 [Term]
@@ -3746,39 +3774,46 @@ creation_date: 2012-03-22T03:22:27Z
 
 [Term]
 id: RXNO:0000346
-name: oxacycle formation
-def: "A ring formation reaction where the product contains an oxacycle that was not in any of the reactants." [RSC:cb]
+name: oxacycle synthesis
+def: "A ring formation reaction where the intended product contains an oxacycle that was not in any of the reactants." [RSC:cb]
 xref: NAMERXN:4.2
-is_a: RXNO:0000349 ! heterocycle formation
-relationship: BFO:0000077 CHEBI:38104 ! has participant beginning to exist oxacycle
+is_a: RXNO:0000349 ! heterocycle synthesis
+intersection_of: MOP:0000543 ! molecular process
+intersection_of: RXNO:0000423 CHEBI:38104 ! has specified product oxacycle
+relationship: RXNO:0000423 CHEBI:38104 ! has specified product oxacycle
 created_by: batchelorc
 creation_date: 2012-03-22T03:24:06Z
 
 [Term]
 id: RXNO:0000347
-name: azacycle formation
-def: "A ring formation reaction where the product contains an azacycle that was not in any of the reactants." [RSC:cb]
+name: azacycle synthesis
+def: "A ring formation reaction where the intended product contains an azacycle that was not in any of the reactants." [RSC:cb]
 xref: NAMERXN:4.1
-is_a: RXNO:0000349 ! heterocycle formation
+is_a: RXNO:0000005 ! ring formation reaction step
+intersection_of: MOP:0000543 ! molecular process
+intersection_of: RXNO:0000423 CHEBI:38101 ! has specified product azacycle
+relationship: RXNO:0000423 CHEBI:38101 ! has specified product azacycle
 created_by: batchelorc
 creation_date: 2012-03-22T03:24:12Z
 
 [Term]
 id: RXNO:0000348
-name: thiacycle formation
-def: "A ring formation reaction where the product contains an thiacycle that was not in any of the reactants." [RSC:cb]
+name: thiacycle synthesis
+def: "A ring formation reaction where the intended product contains an thiacycle that was not in any of the reactants." [RSC:cb]
 xref: NAMERXN:4.3
-is_a: RXNO:0000349 ! heterocycle formation
+is_a: RXNO:0000349 ! heterocycle synthesis
 created_by: batchelorc
 creation_date: 2012-03-22T03:24:23Z
 
 [Term]
 id: RXNO:0000349
-name: heterocycle formation
-def: "A ring formation reaction where the product contains a heterocycle that was not in any of the reactants." [RSC:cb]
+name: heterocycle synthesis
+def: "A ring formation reaction where the intended product contains a heterocycle that was not in any of the reactants." [RSC:cb]
 xref: NAMERXN:4
 is_a: RXNO:0000005 ! ring formation reaction step
-relationship: BFO:0000077 CHEBI:5686 ! has participant beginning to exist heterocyclic compound
+intersection_of: RXNO:0000005 ! ring formation reaction step
+intersection_of: RXNO:0000423 CHEBI:5686 ! has specified product heterocyclic compound
+relationship: RXNO:0000423 CHEBI:5686 ! has specified product heterocyclic compound
 created_by: batchelorc
 creation_date: 2012-03-22T03:24:34Z
 
@@ -3826,7 +3861,7 @@ creation_date: 2012-03-22T03:37:52Z
 [Term]
 id: RXNO:0000355
 name: allylic oxidation
-def: "An oxidation reaction where an allylic C-H bond is replaced by a C=O bond." [http:\://www.chemtube3d.com/ox_se_allylic.html, RSC:cb]
+def: "An oxidation reaction where an allylic C-H bond is replaced by a C=O bond." [http://www.chemtube3d.com/ox_se_allylic.html, RSC:cb]
 comment: This can be done with, for instance, selenium dioxide.
 is_a: MOP:0000568 ! oxidation
 created_by: batchelorc
@@ -3836,8 +3871,8 @@ creation_date: 2012-03-22T03:39:47Z
 id: RXNO:0000356
 name: Jones oxidation
 def: "An oxidation reaction where an alcohol is oxidized to the corresponding carbonyl compound by a dichromate ion." [http://www.chemtube3d.com/ox_jones_oxidation.html, RSC:cb]
+is_a: MOP:0000572 ! alcohol oxidation
 is_a: RXNO:0000012 ! functional group oxidation
-relationship: has_part MOP:0000572 ! alcohol oxidation
 created_by: batchelorc
 creation_date: 2012-03-22T03:39:47Z
 
@@ -4135,8 +4170,8 @@ is_a: RXNO:0000392 ! pyrazole synthesis
 id: RXNO:0000392
 name: pyrazole synthesis
 def: "A reaction in which the intended product is a pyrazole that was not present in any of the reactants." [RSC:cb]
-is_a: RXNO:0000347 ! azacycle formation
-intersection_of: RXNO:0000347 ! azacycle formation
+is_a: RXNO:0000347 ! azacycle synthesis
+intersection_of: RXNO:0000347 ! azacycle synthesis
 intersection_of: RXNO:0000423 CHEBI:26410 ! has specified product pyrazoles
 relationship: RXNO:0000423 CHEBI:26410 ! has specified product pyrazoles
 
@@ -4145,6 +4180,7 @@ id: RXNO:0000393
 name: quinoline synthesis
 def: "A reaction in which the intended product is a quinoline that was not present in any of the reactants." [RSC:cb]
 is_a: RXNO:0000052 ! fused-ring-system formation
+is_a: RXNO:0000347 ! azacycle synthesis
 intersection_of: RXNO:0000052 ! fused-ring-system formation
 intersection_of: RXNO:0000423 CHEBI:26513 ! has specified product quinolines
 relationship: RXNO:0000423 CHEBI:26513 ! has specified product quinolines
@@ -4162,7 +4198,7 @@ id: RXNO:0000395
 name: indole synthesis
 def: "A reaction in which the intended product is an indole that was not present in any of the reactants." [RSC:cb]
 is_a: RXNO:0000052 ! fused-ring-system formation
-intersection_of: RXNO:0000052 ! fused-ring-system formation
+intersection_of: MOP:0000543 ! molecular process
 intersection_of: RXNO:0000423 CHEBI:24828 ! has specified product indoles
 relationship: RXNO:0000423 CHEBI:24828 ! has specified product indoles
 
@@ -4202,14 +4238,14 @@ is_a: RXNO:0000398 ! benzimidazole synthesis
 id: RXNO:0000400
 name: pyrimidine synthesis
 def: "A reaction in which the intended product is a pyrimidine that was not present in any of the reactants." [RSC:cb]
-is_a: RXNO:0000347 ! azacycle formation
+is_a: RXNO:0000347 ! azacycle synthesis
 relationship: RXNO:0000423 CHEBI:39447 ! has specified product pyrimidines
 
 [Term]
 id: RXNO:0000401
 name: triazine synthesis
 def: "A reaction in which the intended product is a triazine that was not present in any of the reactants." [RSC:cb]
-is_a: RXNO:0000347 ! azacycle formation
+is_a: RXNO:0000347 ! azacycle synthesis
 relationship: RXNO:0000423 CHEBI:26588 ! has specified product triazines
 
 [Term]
@@ -4344,7 +4380,7 @@ name: Kröhnke pyridine synthesis
 def: "Condensation of a 1,5-diketone with ammonium acetate in acetic acid to form a pyridine." [RSC:cb]
 synonym: "Krohnke pyridine synthesis" EXACT []
 xref: http://dx.doi.org/10.1039/SP543
-is_a: RXNO:0000347 ! azacycle formation
+is_a: RXNO:0000347 ! azacycle synthesis
 relationship: RXNO:0000423 CHEBI:26421 ! has specified product pyridines
 
 [Term]
@@ -4364,14 +4400,14 @@ relationship: RXNO:0000424 CHEBI:47266 ! has specified reactant hydrogen bromide
 [Term]
 id: RXNO:0000426
 name: aldehyde Barbier reaction
-def: "A joining reaction between an aldehyde and an alkyl halide to give a secondary alcohol." [RSC:cc, RSC:db]
+def: "A joining reaction between an aldehyde and an alkyl halide or aryl halide or vinyl halide or allyl halide in the presence of metal to give a secondary alcohol." [RSC:cc, RSC:db]
 is_a: RXNO:0000084 ! Barbier reaction
 relationship: RXNO:0000423 CHEBI:35681 ! has specified product secondary alcohol
 
 [Term]
 id: RXNO:0000427
 name: ketone Barbier reaction
-def: "A joining reaction between an ketone and an alkyl halide to give a tertiary alcohol." [RSC:cc, RSC:db]
+def: "A joining reaction between an ketone and an alkyl halide or aryl halide or vinyl halide or allyl halide in the presence of metal to give a tertiary alcohol." [RSC:cc, RSC:db]
 is_a: RXNO:0000084 ! Barbier reaction
 relationship: RXNO:0000423 CHEBI:26878 ! has specified product tertiary alcohol
 
@@ -4662,6 +4698,7 @@ def: "A fused-ring-system formation reaction where a flavonol is produced by oxi
 comment: definition source Merck Index
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000005/
 is_a: RXNO:0000052 ! fused-ring-system formation
+is_a: RXNO:0000346 ! oxacycle synthesis
 relationship: RXNO:0000423 CHEBI:28802 ! has specified product flavonols
 relationship: RXNO:0000424 CHEBI:16240 ! has specified reactant hydrogen peroxide
 relationship: RXNO:0000424 CHEBI:23086 ! has specified reactant chalcones
@@ -4718,6 +4755,7 @@ def: "Reaction of ortho-hydroxyaryl ketones with aromatic acid anhydrides to yie
 comment: definition source Merck Index
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000006/
 is_a: RXNO:0000052 ! fused-ring-system formation
+is_a: RXNO:0000346 ! oxacycle synthesis
 union_of: RXNO:0000470 ! Allan-Robinson flavone synthesis
 union_of: RXNO:0000471 ! Allan-Robinson isoflavone synthesis
 
@@ -4770,6 +4808,8 @@ synonym: "Myers-Saito process" EXACT []
 synonym: "Myers-Saito reaction" EXACT []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000292/
 is_a: RXNO:0000005 ! ring formation reaction step
+created_by: batchelorc
+creation_date: 2014-02-28T09:00:00Z
 
 [Term]
 id: RXNO:0000482
@@ -4777,6 +4817,8 @@ name: Schmittel cyclisation
 def: "Cyclization of a enynyl allene to yield a 1-methyl-5-methylenecyclopenta-1,3-diene biradical with radical centres on the methyl group and methylene group." [doi:10.1039/b009965l, RSC:cb]
 synonym: "Schmittel cyclization" EXACT []
 is_a: RXNO:0000005 ! ring formation reaction step
+created_by: batchelorc
+creation_date: 2014-02-28T09:00:00Z
 
 [Term]
 id: RXNO:0000483
@@ -4785,48 +4827,167 @@ def: "Copper-catalysed reaction of benzene with a nitrosylating agent and hydrog
 xref: http://en.wikipedia.org/wiki/Baudisch_reaction
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000026/
 is_a: RXNO:0000373 ! functional group addition step
+created_by: batchelorc
+creation_date: 2014-02-28T09:00:00Z
 
 [Term]
 id: RXNO:0000484
 name: deprotection objective
 def: "A functional modification objective that is satisfied by deprotecting some functional group." [RSC:xp]
 is_a: RXNO:0000442 ! functional modification objective
+created_by: batchelorc
+creation_date: 2014-02-28T09:00:00Z
 
 [Term]
 id: RXNO:0000485
 name: protection objective
 def: "A functional modification objective that is satisfied by protecting some functional group." [RSC:xp]
 is_a: RXNO:0000442 ! functional modification objective
+created_by: batchelorc
+creation_date: 2014-02-28T09:00:00Z
 
 [Term]
 id: RXNO:0000486
 name: molecular skeleton elimination objective
 def: "A functional modification objective that is satisfied by a reaction in which two or more groups of atoms are removed from the molecule, resulting in a change of skeletal bond order." [RSC:xp]
 is_a: RXNO:0000442 ! functional modification objective
+created_by: batchelorc
+creation_date: 2014-02-28T09:00:00Z
 
 [Term]
 id: RXNO:0000487
 name: molecular skeleton insertion objective
 def: "A molecular skeleton joining objective that is satisfied by a reaction in which one or more atoms are added to the middle of a chain." [RSC:xp]
 is_a: RXNO:0000440 ! molecular skeleton joining objective
+created_by: batchelorc
+creation_date: 2014-02-28T09:00:00Z
 
 [Term]
 id: RXNO:0000488
 name: joining with rearrangement objective
 def: "A molecular skeleton joining objective that is satisfied by a reaction in which one or more atoms are added to the molecular skeleton and a skeletal rearrangement occurs." [RSC:xp]
 is_a: RXNO:0000440 ! molecular skeleton joining objective
+created_by: batchelorc
+creation_date: 2014-02-28T09:00:00Z
 
 [Term]
 id: RXNO:0000489
 name: functional group addition objective
 def: "A functional modification objective that is satisfied by a reaction in which a covalent bond is formed between the molecular skeleton and a functional group and where the skeletal bond order is unchanged." [RSC:xp]
 is_a: RXNO:0000442 ! functional modification objective
+created_by: batchelorc
+creation_date: 2014-02-28T09:00:00Z
 
 [Term]
 id: RXNO:0000490
 name: functional oxidation objective
 def: "A functional group modification objective that is satisfied by a reaction in which a functional group is oxidised." [RSC:xp]
 is_a: RXNO:0000453 ! functional group modification objective
+created_by: batchelorc
+creation_date: 2014-02-28T09:00:00Z
+
+[Term]
+id: RXNO:0000491
+name: interrupted Nazarov cyclisation
+def: "Cyclisation of a propargyl alpha,beta-unsaturated ketone where the reactant rearranges to an allenyl vinyl ketone, followed by a Nazarov cyclisation in which a nucleophile 'intercepts' the intermediate carbocation to yield a cyclopentenone substituted at the alpha position opposite the double bond." [doi:10.1039/c3cs60333d]
+synonym: "interrupted Nazarov cyclization" EXACT []
+is_a: RXNO:0000005 ! ring formation reaction step
+relationship: has_part RXNO:0000209 ! Nazarov cyclisation
+created_by: batchelorc
+creation_date: 2014-02-28T12:00:00Z
+
+[Term]
+id: RXNO:0000492
+name: Bamberger rearrangement
+def: "Rearrangement of an N-phenylhydroxamine in acid to yield a para-aminophenol." [RSC:cb]
+comment: definition source Merck Index
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000015/
+is_a: RXNO:0000025 ! rearrangement step
+created_by: batchelorc
+creation_date: 2014-03-03T09:00:00Z
+
+[Term]
+id: RXNO:0000493
+name: Bart reaction
+def: "Reaction of an aromatic diazonium compound with an alklai arsenite in the presence of copper or silver to yield an aromatic arsonic acid." [RSC:cb]
+comment: definition source Merck Index
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000019/
+is_a: RXNO:0000332 ! aromatic substitution step
+created_by: batchelorc
+creation_date: 2014-03-03T09:00:00Z
+
+[Term]
+id: RXNO:0000494
+name: Bartoli indole synthesis
+def: "Reaction of an ortho-substituted nitroarene with a vinyl Grignard reagent to yield a 7-substituted indole." [RSC:cb]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000019/
+is_a: RXNO:0000395 ! indole synthesis
+relationship: RXNO:0000423 CHEBI:24828 ! has specified product indoles
+created_by: batchelorc
+creation_date: 2014-03-03T09:00:00Z
+
+[Term]
+id: RXNO:0000495
+name: Barton olefination
+synonym: "Barton olefin synthesis" EXACT []
+synonym: "Reaction of an aldehyde or ketone with a thioaldehyde or thioketone via a 1,3-4,thiadiazoline intermediate to yield an olefin." RELATED [RSC:cb]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000023/
+is_a: RXNO:0000479 ! olefination
+created_by: batchelorc
+creation_date: 2014-03-03T09:00:00Z
+
+[Term]
+id: RXNO:0000496
+name: Barton-Zard reaction
+def: "Reaction of a nitroalkene with an alpha-isocyanoacetate to yield a substituted pyrrole." [RSC:cb]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000025/
+is_a: RXNO:0000497 ! pyrrole synthesis
+relationship: RXNO:0000423 CHEBI:26455 ! has specified product pyrroles
+created_by: batchelorc
+creation_date: 2014-03-03T09:00:00Z
+
+[Term]
+id: RXNO:0000497
+name: pyrrole synthesis
+def: "A reaction in which the intended product is a pyrrole that was not present in any of the reactants." [RSC:cb]
+is_a: RXNO:0000347 ! azacycle synthesis
+intersection_of: MOP:0000543 ! molecular process
+intersection_of: RXNO:0000423 CHEBI:26455 ! has specified product pyrroles
+relationship: RXNO:0000423 CHEBI:26455 ! has specified product pyrroles
+created_by: batchelorc
+creation_date: 2014-03-03T09:00:00Z
+
+[Term]
+id: RXNO:0000498
+name: Béchamp reduction
+def: "Reduction of an aromatic nitro compound to the corresponding arene by iron in some form in aqueous acid." [RSC:cb]
+synonym: "Bechamp reduction" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000028/
+is_a: RXNO:0000037 ! functional group reduction
+relationship: RXNO:0000423 CHEBI:33860 ! has specified product aromatic amine
+
+[Term]
+id: RXNO:0000499
+name: Beirut reaction
+def: "Reaction of a benzofurazan 1-oxide with an enamine or enolate to yield a quinoxaline-1,4-dioxide." [RSC:cb]
+comment: definition source Merck Index
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000030/
+is_a: RXNO:0000108 ! ring expansion
+
+[Term]
+id: RXNO:0000500
+name: Bénary reaction
+def: "Reaction of a beta-aminovinylketone with a Grignard reagent to yield a substituted alpha,beta-unsaturated carbonyl compound." [RSC:cb]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000031/
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
+
+[Term]
+id: RXNO:0000501
+name: Feist-Bénary synthesis
+def: "Reaction of an alpha-haloketone or alpha-haloether with a 1,3-dicarbonyl compound in the presence of pyridine to yield a substituted furan." [RSC:cb]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000138/
+is_a: RXNO:0000346 ! oxacycle synthesis
+relationship: RXNO:0000423 CHEBI:24129 ! has specified product furans
 
 [Typedef]
 id: BFO:0000055
