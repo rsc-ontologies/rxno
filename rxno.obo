@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: rxno/releases/2014-03-03/rxno.owl
+data-version: rxno/releases/2014-03-04/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
@@ -116,7 +116,7 @@ is_a: CHEBI:35293 ! fused compound
 [Term]
 id: CHEBI:25000
 name: lactone
-is_a: CHEBI:23367 ! molecular entity
+is_a: CHEBI:38104 ! oxacycle
 
 [Term]
 id: CHEBI:25717
@@ -221,7 +221,7 @@ is_a: CHEBI:23367 ! molecular entity
 [Term]
 id: CHEBI:32955
 name: epoxide
-is_a: CHEBI:23367 ! molecular entity
+is_a: CHEBI:38104 ! oxacycle
 
 [Term]
 id: CHEBI:32988
@@ -361,7 +361,7 @@ is_a: CHEBI:24469 ! haloalkane
 [Term]
 id: CHEBI:38101
 name: azacycle
-is_a: CHEBI:33595 ! cyclic compound
+is_a: CHEBI:5686 ! heterocyclic compound
 
 [Term]
 id: CHEBI:38104
@@ -381,7 +381,7 @@ is_a: CHEBI:38104 ! oxacycle
 [Term]
 id: CHEBI:38784
 name: oxetanes
-is_a: CHEBI:23367 ! molecular entity
+is_a: CHEBI:38104 ! oxacycle
 
 [Term]
 id: CHEBI:39447
@@ -412,6 +412,11 @@ is_a: CHEBI:24433 ! group
 id: CHEBI:47266
 name: hydrogen bromide
 is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:50075
+name: dihydropyridine
+is_a: CHEBI:38101 ! azacycle
 
 [Term]
 id: CHEBI:50784
@@ -1777,7 +1782,7 @@ synonym: "[C:1]=[O:2].[C:3]=[C:4]>>[C:1]1[O:2][C:3][C:4]1" SMIRKS []
 synonym: "Paterno-Buchi reaction" EXACT []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000319/
 is_a: MOP:0000563 ! [2+2] cycloaddition
-is_a: RXNO:0000005 ! ring formation reaction step
+is_a: RXNO:0000346 ! oxacycle synthesis
 relationship: RXNO:0000423 CHEBI:38784 ! has specified product oxetanes
 
 [Term]
@@ -1961,9 +1966,7 @@ id: RXNO:0000108
 name: ring expansion
 def: "A reaction in which an existing ring is increased in size." [RSC:cb]
 synonym: "ring enlargement" EXACT []
-is_a: RXNO:0000001 ! planned reaction step
-intersection_of: RXNO:0000001 ! planned reaction step
-intersection_of: OBI:0000417 RXNO:0000457 ! achieves_planned_objective molecular ring expansion objective
+is_a: RXNO:0000005 ! ring formation reaction step
 relationship: OBI:0000417 RXNO:0000457 ! achieves_planned_objective molecular ring expansion objective
 
 [Term]
@@ -2229,8 +2232,10 @@ synonym: "Katsuki-Sharpless epoxidation" EXACT []
 synonym: "Sharpless epoxidation" EXACT []
 synonym: "Sharpless-Katsuki asymmetric epoxidation" EXACT []
 synonym: "Sharpless-Katsuki epoxidation" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000397/
 is_a: MOP:0000671 ! epoxidation
-is_a: RXNO:0000005 ! ring formation reaction step
+is_a: RXNO:0000346 ! oxacycle synthesis
+relationship: RXNO:0000423 CHEBI:32955 ! has specified product epoxide
 relationship: RXNO:0000425 CHEBI:33341 ! has_catalyst titanium atom
 
 [Term]
@@ -2333,6 +2338,7 @@ is_a: RXNO:0000150 ! joining with rearrangement
 id: RXNO:0000154
 name: Swern oxidation
 def: "The oxidation of a primary alcohol or secondary alcohol to an aldehyde or ketone respectively. Does not work with allylic or benzylic alcohols." [RSC:cb, RSC:cc, RSC:db]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000426
 is_a: MOP:0000572 ! alcohol oxidation
 is_a: RXNO:0000012 ! functional group oxidation
 
@@ -2340,18 +2346,21 @@ is_a: RXNO:0000012 ! functional group oxidation
 id: RXNO:0000155
 name: Finkelstein reaction
 def: "The conversion of an alkyl chloride, alkyl bromide or alkyl sulfonate ester to an alkyl iodide by SN2 substitution. The reaction relies upon the equilibrium being pushed to completion by the precipitation." [RSC:cb, RSC:cc, RSC:db]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000141/
 is_a: RXNO:0000011 ! functional group modification
 
 [Term]
 id: RXNO:0000156
 name: Lossen rearrangement
 def: "The derivatisation (for example with tosyl chloride) and subsequent rearrangement of a hydroxamic acid to give an isocyanate." [RSC:cb, RSC:cc, RSC:db]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000259/
 is_a: RXNO:0000025 ! rearrangement step
 
 [Term]
 id: RXNO:0000157
 name: Nef reaction
 def: "The conversion of a primary nitroalkane or secondary nitroalkane to an aldehyde or ketone, respectively." [RSC:cb, RSC:cc, RSC:db]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000297/
 is_a: RXNO:0000011 ! functional group modification
 
 [Term]
@@ -2709,9 +2718,7 @@ relationship: OBI:0000417 RXNO:0000449 ! achieves_planned_objective molecular ri
 id: RXNO:0000206
 name: ring contraction
 def: "A planned reaction step in which an existing ring is reduced in size." [RSC:cb]
-is_a: RXNO:0000001 ! planned reaction step
-intersection_of: RXNO:0000001 ! planned reaction step
-intersection_of: OBI:0000417 RXNO:0000450 ! achieves_planned_objective molecular ring contraction objective
+is_a: RXNO:0000005 ! ring formation reaction step
 relationship: OBI:0000417 RXNO:0000450 ! achieves_planned_objective molecular ring contraction objective
 
 [Term]
@@ -3160,7 +3167,8 @@ id: RXNO:0000268
 name: Hantzsch pyridine synthesis
 def: "A ring-forming reaction between two equivalents of a beta-ketoester, an aldehyde and ammonia (or an ammonium salt), to give a dihydropyridine. The dihydropyridine can be oxidised to a pyridine using an oxidising agent." [rsc:db]
 synonym: "Hantzsch dihydropyridine synthesis" EXACT []
-is_a: RXNO:0000005 ! ring formation reaction step
+is_a: RXNO:0000347 ! azacycle synthesis
+relationship: RXNO:0000423 CHEBI:50075 ! has specified product dihydropyridine
 relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 
 [Term]
@@ -3468,8 +3476,8 @@ id: RXNO:0000308
 name: Yamaguchi lactonisation
 def: "The intramolecular esterification of a carboxylic acid group with an alcohol group using 2,4,6-trichlorobenzoyl chloride (Yamaguchi reagent) - an intramolecular Yamaguchi esterification." [rsc:db]
 synonym: "Yamaguchi lactonization" EXACT []
-is_a: RXNO:0000005 ! ring formation reaction step
 is_a: RXNO:0000309 ! Yamaguchi esterification
+is_a: RXNO:0000346 ! oxacycle synthesis
 relationship: RXNO:0000423 CHEBI:25000 ! has specified product lactone
 
 [Term]
@@ -3789,7 +3797,7 @@ id: RXNO:0000347
 name: azacycle synthesis
 def: "A ring formation reaction where the intended product contains an azacycle that was not in any of the reactants." [RSC:cb]
 xref: NAMERXN:4.1
-is_a: RXNO:0000005 ! ring formation reaction step
+is_a: RXNO:0000349 ! heterocycle synthesis
 intersection_of: MOP:0000543 ! molecular process
 intersection_of: RXNO:0000423 CHEBI:38101 ! has specified product azacycle
 relationship: RXNO:0000423 CHEBI:38101 ! has specified product azacycle
@@ -3811,7 +3819,7 @@ name: heterocycle synthesis
 def: "A ring formation reaction where the intended product contains a heterocycle that was not in any of the reactants." [RSC:cb]
 xref: NAMERXN:4
 is_a: RXNO:0000005 ! ring formation reaction step
-intersection_of: RXNO:0000005 ! ring formation reaction step
+intersection_of: MOP:0000543 ! molecular process
 intersection_of: RXNO:0000423 CHEBI:5686 ! has specified product heterocyclic compound
 relationship: RXNO:0000423 CHEBI:5686 ! has specified product heterocyclic compound
 created_by: batchelorc
@@ -4268,6 +4276,8 @@ name: oxa-Pictet-Spengler reaction
 def: "Cyclisation-condensation of a beta-arylethanol with an aldehyde to yield an ortho-,peri-fused aryl-oxacycle." [RSC:cb]
 is_a: RXNO:0000052 ! fused-ring-system formation
 is_a: RXNO:0000315 ! condensation step
+is_a: RXNO:0000346 ! oxacycle synthesis
+relationship: RXNO:0000423 CHEBI:38104 ! has specified product oxacycle
 relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 
 [Term]
@@ -4278,7 +4288,8 @@ synonym: "Prileschajew reaction" EXACT []
 synonym: "Prilezhaev reaction" EXACT []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000351/
 is_a: MOP:0000671 ! epoxidation
-is_a: RXNO:0000005 ! ring formation reaction step
+is_a: RXNO:0000346 ! oxacycle synthesis
+relationship: RXNO:0000423 CHEBI:32955 ! has specified product epoxide
 
 [Term]
 id: RXNO:0000406
@@ -4746,6 +4757,7 @@ def: "Ring expansion of a 2-bromo-2-(alpha-bromobenzyl)-1-benzofuran to a flavon
 comment: definition source Merck Index
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000011/
 is_a: RXNO:0000108 ! ring expansion
+is_a: RXNO:0000346 ! oxacycle synthesis
 relationship: RXNO:0000423 CHEBI:28802 ! has specified product flavonols
 
 [Term]
@@ -4965,6 +4977,8 @@ synonym: "Bechamp reduction" EXACT []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000028/
 is_a: RXNO:0000037 ! functional group reduction
 relationship: RXNO:0000423 CHEBI:33860 ! has specified product aromatic amine
+created_by: batchelorc
+creation_date: 2014-03-03T09:00:00Z
 
 [Term]
 id: RXNO:0000499
@@ -4973,6 +4987,8 @@ def: "Reaction of a benzofurazan 1-oxide with an enamine or enolate to yield a q
 comment: definition source Merck Index
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000030/
 is_a: RXNO:0000108 ! ring expansion
+created_by: batchelorc
+creation_date: 2014-03-03T09:00:00Z
 
 [Term]
 id: RXNO:0000500
@@ -4980,6 +4996,8 @@ name: Bénary reaction
 def: "Reaction of a beta-aminovinylketone with a Grignard reagent to yield a substituted alpha,beta-unsaturated carbonyl compound." [RSC:cb]
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000031/
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
+created_by: batchelorc
+creation_date: 2014-03-03T09:00:00Z
 
 [Term]
 id: RXNO:0000501
@@ -4988,6 +5006,72 @@ def: "Reaction of an alpha-haloketone or alpha-haloether with a 1,3-dicarbonyl c
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000138/
 is_a: RXNO:0000346 ! oxacycle synthesis
 relationship: RXNO:0000423 CHEBI:24129 ! has specified product furans
+created_by: batchelorc
+creation_date: 2014-03-03T09:00:00Z
+
+[Term]
+id: RXNO:0000502
+name: Boulton-Katritzky rearrangement
+def: "Rearrangement of a mancude eight-membered system containing a pentacycle into a different pentacycle where two of the ring atoms are ring atoms in the original molecule." [RSC:cb]
+is_a: RXNO:0000202 ! ring rearrangement
+union_of: RXNO:0000503 ! monocyclic Boulton-Katritzky rearrangement
+union_of: RXNO:0000504 ! bicyclic Boulton-Katritzky rearrangement
+created_by: batchelorc
+creation_date: 2014-03-04T09:00:00Z
+
+[Term]
+id: RXNO:0000503
+name: monocyclic Boulton-Katritzky rearrangement
+def: "Rearrangement of an azapentacycle containing a -N= system where there is an unsaturated three-heavy-atom substituent XYZ on the substituent double-bonded to the nitrogen, to a new azapentacycle where the pivotal nitrogen has broken its single bond and formed a new bond with atom Z." [doi:10.1039/j39670002005]
+comment: SMIRKS golf challenge
+is_a: RXNO:0000502 ! Boulton-Katritzky rearrangement
+created_by: batchelorc
+creation_date: 2014-03-04T09:00:00Z
+
+[Term]
+id: RXNO:0000504
+name: bicyclic Boulton-Katritzky rearrangement
+def: "Rearrangement of a mancude bicyclo[4.3.0] compound with an unsaturated two-heavy-atom substituent on the six-membered ring alpha to the bridgehead to form a new mancude bicyclo[4.3.0] compound where the five-membered ring has been formed from the two-heavy-atom substituent and the original five-membered ring has been broken." [doi:10.1039/j29660001004]
+comment: SMIRKS golf challenge
+is_a: RXNO:0000502 ! Boulton-Katritzky rearrangement
+created_by: batchelorc
+creation_date: 2014-03-04T09:00:00Z
+
+[Term]
+id: RXNO:0000505
+name: Mukaiyama-Hoshino method
+def: "Reaction of a primary nitro compound with phenyl isocynatate and triethylamine to yield a nitrile oxide." []
+xref: doi:10.1021/ja01505a017
+is_a: RXNO:0000011 ! functional group modification
+created_by: batchelorc
+creation_date: 2014-03-04T09:00:00Z
+
+[Term]
+id: RXNO:0000506
+name: Nef synthesis
+def: "Reaction of an aldehyde or ketone with a sodium acetylide to yield a propargyl alcohol." [RSC:cb]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000298/
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
+created_by: batchelorc
+creation_date: 2014-03-04T09:00:00Z
+
+[Term]
+id: RXNO:0000507
+name: Krapcho decarboxylation
+def: "Reaction of an ester with an electron-withdrawing group alpha- to the ester functionality with a metal halide or pseudohalide to yield the shorter homologous system." [RSC:cb]
+synonym: "Krapcho decarbalkoxylation" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000242/
+is_a: RXNO:0000105 ! end-of-chain chain shortening
+created_by: batchelorc
+creation_date: 2014-03-04T09:00:00Z
+
+[Term]
+id: RXNO:0000508
+name: Cadogan cyclization
+def: "Reaction of an aromatic nitro compound with an unsaturated substituent at the alpha-position to form a fused-ring nitrogen heterocycle." [RSC:cb]
+is_a: RXNO:0000052 ! fused-ring-system formation
+created_by: batchelorc
+creation_date: 2014-03-04T09:00:00Z
 
 [Typedef]
 id: BFO:0000055
