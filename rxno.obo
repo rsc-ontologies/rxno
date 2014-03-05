@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: rxno/releases/2014-03-04/rxno.owl
+data-version: rxno/releases/2014-03-05/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
@@ -412,6 +412,12 @@ is_a: CHEBI:24433 ! group
 id: CHEBI:47266
 name: hydrogen bromide
 is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:48513
+name: carbazoles
+is_a: CHEBI:35293 ! fused compound
+is_a: CHEBI:38101 ! azacycle
 
 [Term]
 id: CHEBI:50075
@@ -858,6 +864,7 @@ relationship: BFO:0000057 CHEBI:36823 ! has_participant pseudohalo group
 [Term]
 id: MOP:0000627
 name: condensation reaction
+alt_id: RXNO:0000315
 def: "A reaction in which two or more reactants or remote reactive sites within the same molecular entity yield a single main product with accompanying formation of a small molecule." [AU:C01238]
 is_a: MOP:0000543 ! molecular process
 created_by: batchelorc
@@ -865,7 +872,7 @@ creation_date: 2009-09-16T11:30:32Z
 
 [Term]
 id: MOP:0000628
-name: dehydration reaction
+name: molecular dehydration reaction
 def: "A condensation reaction where the small molecule produced is water." [RSC:cb]
 is_a: MOP:0000627 ! condensation reaction
 created_by: batchelorc
@@ -962,6 +969,23 @@ name: [3,3]-sigmatropic rearrangement
 alt_id: RXNO:0000027
 comment: This term was obsoleted from the RXNO namespace and transferred to MOP because it is a process identifiable by its mechanism rather than the intention of the experimenter.
 is_a: MOP:0000543 ! molecular process
+
+[Term]
+id: MOP:0000722
+name: decarboxylative condensation
+def: "A reaction in which two or more reactants or remote reactive sites within the same molecular entity yield a single main product with accompanying formation of a carbon dioxide molecule." [RSC:xp]
+is_a: MOP:0000627 ! condensation reaction
+relationship: has_part MOP:0001713 ! decarboxylation
+created_by: batchelorc
+creation_date: 2014-03-05T10:00:00Z
+
+[Term]
+id: MOP:0000723
+name: deethanolative condensation
+def: "A reaction in which two or more reactants or remote reactive sites within the same molecular entity yield a single main product with accompanying formation of an ethanol molecule." [RSC:xp]
+is_a: MOP:0000627 ! condensation reaction
+created_by: batchelorc
+creation_date: 2014-03-05T10:00:00Z
 
 [Term]
 id: MOP:0001369
@@ -1224,8 +1248,9 @@ relationship: RXNO:0000423 CHEBI:55380 ! has specified product beta-hydroxy keto
 id: RXNO:0000017
 name: aldol condensation
 def: "An aldol addition where an enol or enolate reacts with a carbonyl compound to form an alpha,beta-unsaturated ketone." [RSC:cc]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000004/
+is_a: MOP:0000628 ! molecular dehydration reaction
 is_a: RXNO:0000016 ! aldol addition
-is_a: RXNO:0000315 ! condensation step
 relationship: RXNO:0000423 CHEBI:51721 ! has specified product alpha,beta-unsaturated ketone
 
 [Term]
@@ -1418,6 +1443,7 @@ is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 id: RXNO:0000040
 name: Ullmann reaction
 def: "A carbon-carbon homocoupling reaction of an aryl halide mediated by copper." [RSC:cb]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000441/
 is_a: RXNO:0000039 ! carbon-carbon homocoupling reaction
 
 [Term]
@@ -1433,21 +1459,24 @@ relationship: OBI:0000417 RXNO:0000456 ! achieves_planned_objective addition obj
 id: RXNO:0000042
 name: Birch reduction
 def: "A formal addition reaction where hydrogen atoms add to an arene to form a dihydroarene. It has a radical mechanism." [RSC:db]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000044/
 is_a: RXNO:0000041 ! addition reaction step
 
 [Term]
 id: RXNO:0000043
 name: Claisen condensation
 def: "A carbon-carbon coupling reaction of an ester and a carbonyl compound to form a beta-keto ester." [RSC:cc]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000079/
+is_a: MOP:0000723 ! deethanolative condensation
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
-is_a: RXNO:0000315 ! condensation step
 
 [Term]
 id: RXNO:0000044
 name: Knoevenagel condensation
 def: "A carbon-carbon coupling reaction of an aldehyde and a methylene compound." [RSC:cb]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000230/
+is_a: MOP:0000722 ! decarboxylative condensation
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
-is_a: RXNO:0000315 ! condensation step
 relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 
 [Term]
@@ -1576,8 +1605,8 @@ def: "A condensation-cyclisation of a beta-phenethylamine with an aldehyde to gi
 synonym: "Pictet-Spengler isoquinoline synthesis" EXACT []
 synonym: "Pictet-Spengler tetrahydroisoquinoline synthesis" EXACT []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000338/
+is_a: MOP:0000627 ! condensation reaction
 is_a: RXNO:0000052 ! fused-ring-system formation
-is_a: RXNO:0000315 ! condensation step
 relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 
 [Term]
@@ -1603,8 +1632,10 @@ id: RXNO:0000062
 name: Skraup reaction
 def: "A condensation between an aromatic amine and glycerol to give a quinoline." [RSC:cc, RSC:db]
 synonym: "Skraup quinoline synthesis" EXACT []
-is_a: RXNO:0000052 ! fused-ring-system formation
-is_a: RXNO:0000315 ! condensation step
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000403/
+is_a: MOP:0000628 ! molecular dehydration reaction
+is_a: RXNO:0000393 ! quinoline synthesis
+relationship: RXNO:0000423 CHEBI:26513 ! has specified product quinolines
 
 [Term]
 id: RXNO:0000063
@@ -1636,8 +1667,9 @@ comment: This is the intramolecular version of the Claisen condensation.
 synonym: "Dieckmann condensation" EXACT []
 synonym: "Dieckmann cyclization" EXACT []
 synonym: "Dieckmann reaction" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000108/
+is_a: MOP:0000723 ! deethanolative condensation
 is_a: RXNO:0000005 ! ring formation reaction step
-is_a: RXNO:0000315 ! condensation step
 
 [Term]
 id: RXNO:0000066
@@ -1702,14 +1734,16 @@ relationship: OBI:0000417 RXNO:0000438 ! achieves_planned_objective molecular sk
 [Term]
 id: RXNO:0000074
 name: Wurtz reaction
-def: "A carbon-carbon homocoupling reaction of two molecules of an alkyl halide to give a symmetrical product." [RSC:cc, RSC:db]
+def: "A carbon-carbon homocoupling reaction of two molecules of an alkyl halide with sodium to give a symmetrical product." [RSC:cc, RSC:db]
 synonym: "Wurtz coupling" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000478/
 is_a: RXNO:0000039 ! carbon-carbon homocoupling reaction
 
 [Term]
 id: RXNO:0000075
 name: benzilic acid rearrangement
 def: "A rearrangement of a 1,2-diketone to an alpha-hydroxy carboxylic acid. It can also be applied to alpha-keto aldehydes. The first exmaple of this reaction was with benzil (PhC(=O)C(=O)Ph) to form benzilic acid, hence the name." [RSC:cc, RSC:db]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000034/
 is_a: RXNO:0000025 ! rearrangement step
 
 [Term]
@@ -1718,6 +1752,7 @@ name: Baylis-Hillman reaction
 def: "A carbon-carbon coupling of an aldehyde to an activated alkene in the presence of a nucleophilic base to give an alpha-hydroxyalkylated compound." [RSC:cb, RSC:cc, RSC:db]
 synonym: "MBH reaction" EXACT []
 synonym: "Morita-Baylis-Hillman reaction" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000027/
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
 relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 
@@ -1728,9 +1763,9 @@ def: "A coupling of an aldehyde or ketone with an alpha-halo ester to form an al
 synonym: "Darzens condensation" EXACT []
 synonym: "Darzens-Claisen reaction" EXACT []
 synonym: "glycidic ester condensation" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000101/
+is_a: MOP:0000722 ! decarboxylative condensation
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
-is_a: RXNO:0000315 ! condensation step
-relationship: has_part MOP:0001713 ! decarboxylation
 
 [Term]
 id: RXNO:0000078
@@ -1799,8 +1834,8 @@ name: acyloin condensation
 def: "A reductive coupling reaction between two esters to give an acyloin (an alpha-hydroxyketone)." [RSC:cc, RSC:db]
 synonym: "[C:1][C:2](=O)OC.[C:4][C:3](=O)OC>>[C:1][C:2](=O)[C:3](O)[C:4]" SMIRKS []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000002/
-is_a: RXNO:0000002 ! carbon-carbon coupling reaction
-is_a: RXNO:0000315 ! condensation step
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
+relationship: has_part MOP:0000627 ! condensation reaction
 relationship: RXNO:0000424 CHEBI:33308 ! has specified reactant carboxylic ester
 
 [Term]
@@ -2121,8 +2156,9 @@ def: "Reaction of a ketone or aldehyde, amine, isocyanide and carboxylic acid to
 synonym: "4CC" EXACT []
 synonym: "Ugi four-component condensation" EXACT []
 synonym: "Ugi-4CR" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000440/
+is_a: MOP:0000628 ! molecular dehydration reaction
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
-is_a: RXNO:0000315 ! condensation step
 
 [Term]
 id: RXNO:0000130
@@ -3057,10 +3093,11 @@ relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 id: RXNO:0000252
 name: Cadogan carbazole synthesis
 def: "The reduction of a 2-nitrobiaryl compound to give a carbazole." [doi:10.1039/JR9650004831, RSC:cg]
-synonym: "Cadogan reaction" EXACT []
-synonym: "Cadogan ring closure" EXACT []
-synonym: "Cadogan ring-closure" EXACT []
-is_a: RXNO:0000052 ! fused-ring-system formation
+is_a: RXNO:0000347 ! azacycle synthesis
+is_a: RXNO:0000508 ! Cadogan cyclization
+intersection_of: MOP:0000543 ! molecular process
+intersection_of: RXNO:0000423 CHEBI:48513 ! has specified product carbazoles
+relationship: RXNO:0000423 CHEBI:48513 ! has specified product carbazoles
 
 [Term]
 id: RXNO:0000253
@@ -3514,15 +3551,6 @@ id: RXNO:0000313
 name: hetero-Diels-Alder reaction
 def: "A [4+2] cycloaddition reaction where a diene (or heterocyclic analogue) reacts with a dienophile to form an unsaturated heterocyclic six-membered ring compound." [rsc:djb]
 is_a: RXNO:0000006 ! Diels-Alder reaction
-
-[Term]
-id: RXNO:0000315
-name: condensation step
-def: "A reaction where two moieties combine to produce a large molecule and a small molecule, typically water." [RSC:cb]
-comment: This is not part of David's grand diagram. The manual classification is pro tem and we shall try to move to a formal definition of it as a union of dehydrations, decarboxylations and so forth.
-is_a: RXNO:0000001 ! planned reaction step
-created_by: batchelorc
-creation_date: 2011-07-21T10:50:38Z
 
 [Term]
 id: RXNO:0000316
@@ -4171,7 +4199,7 @@ id: RXNO:0000391
 name: Knorr pyrazole synthesis
 def: "Synthesis of a pyrazole by condensation of a 1,3-dicarbonyl compound with a hydrazine, hydrazide, semicarbazide or aminoguanidine." [RSC:cb]
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000233/
-is_a: MOP:0000628 ! dehydration reaction
+is_a: MOP:0000628 ! molecular dehydration reaction
 is_a: RXNO:0000392 ! pyrazole synthesis
 
 [Term]
@@ -4199,7 +4227,7 @@ name: Knorr quinoline synthesis
 def: "Synthesis of an alpha-hydroxyquinoline by reaction of a beta-ketoester and an arylamine then dehydration with concentrated sulfuric acid." [RSC:cb]
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000234/
 is_a: RXNO:0000393 ! quinoline synthesis
-relationship: has_part MOP:0000628 ! dehydration reaction
+relationship: has_part MOP:0000628 ! molecular dehydration reaction
 
 [Term]
 id: RXNO:0000395
@@ -4261,7 +4289,7 @@ id: RXNO:0000402
 name: Pinner pyrimidine synthesis
 def: "Reaction of a 1,3-dicarbonyl compound with an amidine to yield a pyrimidine." [RSC:cb]
 is_a: RXNO:0000400 ! pyrimidine synthesis
-relationship: has_part MOP:0000628 ! dehydration reaction
+relationship: has_part MOP:0000628 ! molecular dehydration reaction
 
 [Term]
 id: RXNO:0000403
@@ -4274,8 +4302,8 @@ is_a: RXNO:0000401 ! triazine synthesis
 id: RXNO:0000404
 name: oxa-Pictet-Spengler reaction
 def: "Cyclisation-condensation of a beta-arylethanol with an aldehyde to yield an ortho-,peri-fused aryl-oxacycle." [RSC:cb]
+is_a: MOP:0000627 ! condensation reaction
 is_a: RXNO:0000052 ! fused-ring-system formation
-is_a: RXNO:0000315 ! condensation step
 is_a: RXNO:0000346 ! oxacycle synthesis
 relationship: RXNO:0000423 CHEBI:38104 ! has specified product oxacycle
 relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
@@ -4667,7 +4695,6 @@ relationship: OBI:0000417 RXNO:0000439 ! achieves_planned_objective molecular ri
 id: RXNO:0000461
 name: intermolecular acyloin condensation
 def: "A reductive coupling reaction between two ester groups in different molecules to give an acyloin (an alpha-hydroxyketone)." [RSC:cc, RSC:db]
-is_a: RXNO:0000000 ! molecular skeleton joining reaction
 is_a: RXNO:0000085 ! acyloin condensation
 relationship: OBI:0000417 RXNO:0000440 ! achieves_planned_objective molecular skeleton joining objective
 
@@ -5069,9 +5096,24 @@ creation_date: 2014-03-04T09:00:00Z
 id: RXNO:0000508
 name: Cadogan cyclization
 def: "Reaction of an aromatic nitro compound with an unsaturated substituent at the alpha-position to form a fused-ring nitrogen heterocycle." [RSC:cb]
+synonym: "Cadogan reaction" EXACT []
+synonym: "Cadogan ring closure" EXACT []
+synonym: "Cadogan ring-closure" EXACT []
 is_a: RXNO:0000052 ! fused-ring-system formation
 created_by: batchelorc
 creation_date: 2014-03-04T09:00:00Z
+
+[Term]
+id: RXNO:0000509
+name: Cadogan indole synthesis
+def: "A Cadogan cyclization that results in an indole." [RSC:cb]
+is_a: RXNO:0000395 ! indole synthesis
+is_a: RXNO:0000508 ! Cadogan cyclization
+intersection_of: RXNO:0000508 ! Cadogan cyclization
+intersection_of: RXNO:0000423 CHEBI:24828 ! has specified product indoles
+relationship: RXNO:0000423 CHEBI:24828 ! has specified product indoles
+created_by: batchelorc
+creation_date: 2014-03-05T09:00:00Z
 
 [Typedef]
 id: BFO:0000055
