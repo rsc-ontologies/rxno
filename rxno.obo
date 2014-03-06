@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: rxno/releases/2014-03-05/rxno.owl
+data-version: rxno/releases/2014-03-06/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
@@ -597,8 +597,6 @@ name: cyclization
 def: "Formation of a ring in a molecule from a chain by formation of a new bond." [AU:C01494]
 synonym: "cyclisation" EXACT []
 is_a: MOP:0000543 ! molecular process
-intersection_of: MOP:0000543 ! molecular process
-intersection_of: BFO:0000077 CHEBI:33595 ! has participant beginning to exist cyclic compound
 relationship: BFO:0000077 CHEBI:33595 ! has participant beginning to exist cyclic compound
 
 [Term]
@@ -1218,6 +1216,7 @@ relationship: RXNO:0000424 CHEBI:33860 ! has specified reactant aromatic amine
 id: RXNO:0000014
 name: Grignard reaction
 def: "A carbon-carbon coupling reaction where a Grignard reagent reacts with a compound containing an electrophilic carbon atom. A Grignard reagent is a magnesium-stabilised carbon nucleophile. An aldehyde leads to a secondary alcohol, a ketone leads to a tertiary alcohol, an ester leads to a ketone and a nitrile leads to a ketone." [RSC:db]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000177/
 xref: NAMERXN:3.7
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
 relationship: RXNO:0000424 CHEBI:51236 ! has specified reactant organomagnesium halide
@@ -1458,7 +1457,7 @@ relationship: OBI:0000417 RXNO:0000456 ! achieves_planned_objective addition obj
 [Term]
 id: RXNO:0000042
 name: Birch reduction
-def: "A formal addition reaction where hydrogen atoms add to an arene to form a dihydroarene. It has a radical mechanism." [RSC:db]
+def: "Addition of hydrogen atoms to aromatic rings by means of alkali metals in liquid ammonia." [RSC:cb]
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000044/
 is_a: RXNO:0000041 ! addition reaction step
 
@@ -1685,12 +1684,14 @@ relationship: RXNO:0000424 CHEBI:35886 ! has specified reactant tertiary phosphi
 id: RXNO:0000067
 name: benzidine rearrangement
 def: "A rearrangement of a hydrazobenzene to give a diaminobiphenyl compound." [RSC:cc, RSC:db]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000033/
 is_a: RXNO:0000093 ! extrusion reaction
 
 [Term]
 id: RXNO:0000068
 name: semidine rearrangement
 def: "A rearrangement of a p-substituted hydrazobenzene to give a p-aminodiphenylamine." [RSC:cc, RSC:db]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000033/
 is_a: RXNO:0000093 ! extrusion reaction
 
 [Term]
@@ -2995,11 +2996,12 @@ is_a: RXNO:0000025 ! rearrangement step
 [Term]
 id: RXNO:0000240
 name: Bergman cyclisation
-def: "The cyclisation of an ene-diyne to give a biradical. The biradical usually aromatises." [RSC:cg]
+def: "The cyclisation of an ene-diyne to give a 1,4-diradical cyclohexatriene. The diradical usually aromatises." [RSC:cg]
 synonym: "Bergman cyclization" EXACT []
 synonym: "Bergman reaction" EXACT []
 synonym: "Masamune-Bergman cyclisation" EXACT []
 synonym: "Masamune-Bergman cyclization" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000037/
 is_a: RXNO:0000005 ! ring formation reaction step
 
 [Term]
@@ -5114,6 +5116,17 @@ intersection_of: RXNO:0000423 CHEBI:24828 ! has specified product indoles
 relationship: RXNO:0000423 CHEBI:24828 ! has specified product indoles
 created_by: batchelorc
 creation_date: 2014-03-05T09:00:00Z
+
+[Term]
+id: RXNO:0000510
+name: Benkeser reduction
+def: "Addition of hydrogen atoms to unsaturated rings by means of alkali metals in low-molecular weight amines." [RSC:cb]
+synonym: "Benkeser reaction" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000032/
+is_a: MOP:0000589 ! hydrogenation
+is_a: RXNO:0000041 ! addition reaction step
+created_by: batchelorc
+creation_date: 2014-03-06T09:00:00Z
 
 [Typedef]
 id: BFO:0000055
