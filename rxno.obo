@@ -166,7 +166,7 @@ is_a: CHEBI:30879 ! alcohol
 [Term]
 id: CHEBI:26961
 name: thiophenes
-is_a: CHEBI:23367 ! molecular entity
+is_a: CHEBI:38106 ! organosulfur heterocyclic compound
 
 [Term]
 id: CHEBI:27385
@@ -371,6 +371,13 @@ is_a: CHEBI:5686 ! heterocyclic compound
 [Term]
 id: CHEBI:38104
 name: oxacycle
+is_a: CHEBI:5686 ! heterocyclic compound
+
+[Term]
+id: CHEBI:38106
+name: organosulfur heterocyclic compound
+comment: I think this is the same as a thiacycle but need to check.
+synonym: "thiacycle" EXACT []
 is_a: CHEBI:5686 ! heterocyclic compound
 
 [Term]
@@ -2449,6 +2456,7 @@ name: Paal-Knorr thiophene synthesis
 def: "The cyclisation of a 1,4-dicarbonyl compound with phosphorus pentasulfide to give a thiophene." [RSC:cb, RSC:cc]
 synonym: "O=[C:1]-[C:2]-[C:3]-[C:4]=O.S=P13SP2(=S)SP(=S)(S1)SP(=S)(S2)S3>>s1[c:1][c:2][c:3][c:4]1" SMIRKS []
 is_a: RXNO:0000161 ! Paal-Knorr synthesis
+is_a: RXNO:0000348 ! thiacycle synthesis
 relationship: RXNO:0000423 CHEBI:26961 ! has specified product thiophenes
 
 [Term]
@@ -3845,6 +3853,9 @@ name: thiacycle synthesis
 def: "A ring formation reaction where the intended product contains an thiacycle that was not in any of the reactants." [RSC:cb]
 xref: NAMERXN:4.3
 is_a: RXNO:0000349 ! heterocycle synthesis
+intersection_of: MOP:0000543 ! molecular process
+intersection_of: RXNO:0000423 CHEBI:38106 ! has specified product organosulfur heterocyclic compound
+relationship: RXNO:0000423 CHEBI:38106 ! has specified product organosulfur heterocyclic compound
 created_by: batchelorc
 creation_date: 2012-03-22T03:24:23Z
 
