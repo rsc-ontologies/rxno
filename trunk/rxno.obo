@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: rxno/releases/2014-03-06/rxno.owl
+data-version: rxno/releases/2014-03-07/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
@@ -297,6 +297,11 @@ is_a: CHEBI:23367 ! molecular entity
 id: CHEBI:35293
 name: fused compound
 is_a: CHEBI:33595 ! cyclic compound
+
+[Term]
+id: CHEBI:35636
+name: carboximides
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:35681
@@ -5127,6 +5132,49 @@ is_a: MOP:0000589 ! hydrogenation
 is_a: RXNO:0000041 ! addition reaction step
 created_by: batchelorc
 creation_date: 2014-03-06T09:00:00Z
+
+[Term]
+id: RXNO:0000511
+name: Madelung indole synthesis
+def: "Reaction of an N-(2-alkylphenyl)alkanamide with strong base to form an indole." [RSC:cb]
+synonym: "Madelung synthesis" EXACT []
+xref: http://en.wikipedia.org/wiki/Madelung_synthesis
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000261/
+is_a: MOP:0000628 ! molecular dehydration reaction
+is_a: RXNO:0000395 ! indole synthesis
+relationship: RXNO:0000423 CHEBI:24828 ! has specified product indoles
+created_by: batchelorc
+creation_date: 2014-03-07T09:00:00Z
+
+[Term]
+id: RXNO:0000512
+name: Smith indole synthesis
+def: "Reaction of a N-(2-alkylphenyl)-trimethylsilylamine with two equivalents of organolithium and an ester or carboxylic acid to form an indole." [RSC:cb]
+synonym: "Smith-modified Madelung synthesis" EXACT []
+xref: http://en.wikipedia.org/wiki/Madelung_synthesis
+is_a: RXNO:0000395 ! indole synthesis
+relationship: RXNO:0000423 CHEBI:24828 ! has specified product indoles
+created_by: batchelorc
+creation_date: 2014-03-07T09:00:00Z
+
+[Term]
+id: RXNO:0000513
+name: Mumm rearrangement
+def: "Rearrangement of an acyl imidate to form a carboximide." [RSC:cb]
+synonym: "[C:1][N:2]=[C:3]([C:4])[O:5][C:6](=[O:7])[C:8]>>[C:4][C:3](=[O:5])[N:2]([C:1])[C:6](=[O:7])[C:8]" SMIRKS []
+xref: http://en.wikipedia.org/wiki/Mumm_rearrangement
+is_a: RXNO:0000025 ! rearrangement step
+relationship: RXNO:0000423 CHEBI:35636 ! has specified product carboximides
+created_by: batchelorc
+creation_date: 2014-03-07T09:00:00Z
+
+[Term]
+id: RXNO:0000514
+name: Chapman rearrangement
+def: "Rearrangement of an aryl imino ether to yield an N,N-diaryl amide." [RSC:cb]
+is_a: RXNO:0000025 ! rearrangement step
+created_by: batchelorc
+creation_date: 2014-03-07T09:00:00Z
 
 [Typedef]
 id: BFO:0000055
