@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: rxno/releases/2014-03-07/rxno.owl
+data-version: rxno/releases/2014-03-10/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
@@ -5186,6 +5186,15 @@ def: "Rearrangement of an aryl imino ether to yield an N,N-diaryl amide." [RSC:c
 is_a: RXNO:0000025 ! rearrangement step
 created_by: batchelorc
 creation_date: 2014-03-07T09:00:00Z
+
+[Term]
+id: RXNO:0000515
+name: Bergmann azlactone peptide synthesis
+def: "Reaction of an acetylated amino acid with an aldehyde then with a second amino acid, then hydrogenation and hydrolysis to form a dipeptide. It proceeds via an azlactone intermediate." [RSC:cb]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000038/
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
+created_by: batchelorc
+creation_date: 2014-03-10T09:00:00Z
 
 [Typedef]
 id: BFO:0000055
