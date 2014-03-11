@@ -11,6 +11,7 @@ aromatic chloride: is_a aromatic halide (CHEBI:new)
 aromatic halide: organic aromatic compound (CHEBI:33659) and has_part halo group (CHEBI:47854)
 aromatic nitrile: is_a nitrile (CHEBI:18379)
 aromatic pseudohalide: organic aromatic compound (CHEBI:33659) and has_part pseudohalo group (CHEBI:36823)
+RXNO:0000515 azlactone
 beta-amino carbonyl compound: is_a amine (CHEBI:32952), is_a carbonyl compound (CHEBI:36587)
 beta-amino nitroalkane: is_a C-nitro compound (CHEBI:35716)
 beta-hydroxy nitroalkane: is_a C-nitro compound (CHEBI:35716)

@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: rxno/releases/2014-03-10/rxno.owl
+data-version: rxno/releases/2014-03-11/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
@@ -22,6 +22,11 @@ is_a: CHEBI:23367 ! molecular entity
 id: CHEBI:16526
 name: carbon dioxide
 is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:16670
+name: peptide
+is_a: CHEBI:37622 ! carboxamide
 
 [Term]
 id: CHEBI:16842
@@ -229,6 +234,11 @@ name: amide
 is_a: CHEBI:23367 ! molecular entity
 
 [Term]
+id: CHEBI:33256
+name: primary amide
+is_a: CHEBI:32988 ! amide
+
+[Term]
 id: CHEBI:33308
 name: carboxylic ester
 is_a: CHEBI:36587 ! carbonyl compound
@@ -357,6 +367,11 @@ is_a: CHEBI:23367 ! molecular entity
 id: CHEBI:37602
 name: allenes
 is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:37622
+name: carboxamide
+is_a: CHEBI:33256 ! primary amide
 
 [Term]
 id: CHEBI:37757
@@ -1724,9 +1739,12 @@ relationship: OBI:0000417 RXNO:0000448 ! achieves_planned_objective molecular ch
 [Term]
 id: RXNO:0000071
 name: Edman degradation
-def: "A cleaving reaction in which a peptide is treated with phenylisothiocyanate, removing the terminal amino acid group, to form the chain-shortened amine and a phenylthiohydantoin. The latter can be used to identify the terminal amino acid, and the process repeated to enable peptide sequencing." [RSC:cc, RSC:db]
-is_a: RXNO:0000073 ! cleaving reaction
+def: "A cleaving reaction in which a peptide is treated with phenylisothiocyanate, removing the terminal amino acid group, to form the chain-shortened amine and a phenylthiohydantoin." [RSC:cc, RSC:db]
+comment: The latter can be used to identify the terminal amino acid, and the process repeated to enable peptide sequencing."
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000122/
+is_a: RXNO:0000517 ! terminal amino-acid residue cleaving reaction
 relationship: RXNO:0000423 CHEBI:32952 ! has specified product amine
+relationship: RXNO:0000424 CHEBI:16670 ! has specified reactant peptide
 
 [Term]
 id: RXNO:0000072
@@ -5193,6 +5211,26 @@ name: Bergmann azlactone peptide synthesis
 def: "Reaction of an acetylated amino acid with an aldehyde then with a second amino acid, then hydrogenation and hydrolysis to form a dipeptide. It proceeds via an azlactone intermediate." [RSC:cb]
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000038/
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
+created_by: batchelorc
+creation_date: 2014-03-10T09:00:00Z
+
+[Term]
+id: RXNO:0000516
+name: Bergmann degradation
+def: "Removal of a terminal amino acid residue from a peptide by benzoylation, azidation, treatment with benzyl alcohol, hydrogenation and hydrolysis." [RSC:cb]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000039/
+is_a: RXNO:0000517 ! terminal amino-acid residue cleaving reaction
+relationship: RXNO:0000423 CHEBI:37622 ! has specified product carboxamide
+relationship: RXNO:0000424 CHEBI:16670 ! has specified reactant peptide
+created_by: batchelorc
+creation_date: 2014-03-11T09:00:00Z
+
+[Term]
+id: RXNO:0000517
+name: terminal amino-acid residue cleaving reaction
+def: "Removal of a terminal amino acid residue from a peptide." [RSC:cb]
+is_a: RXNO:0000073 ! cleaving reaction
+relationship: RXNO:0000424 CHEBI:16670 ! has specified reactant peptide
 created_by: batchelorc
 creation_date: 2014-03-10T09:00:00Z
 
