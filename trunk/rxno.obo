@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: rxno/releases/2014-03-11/rxno.owl
+data-version: rxno/releases/2014-03-12/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
@@ -12,6 +12,11 @@ name: disposition
 id: CHEBI:15734
 name: primary alcohol
 is_a: CHEBI:30879 ! alcohol
+
+[Term]
+id: CHEBI:16227
+name: pyridine
+is_a: CHEBI:26421 ! pyridines
 
 [Term]
 id: CHEBI:16240
@@ -52,6 +57,12 @@ is_a: CHEBI:23367 ! molecular entity
 id: CHEBI:18379
 name: nitrile
 is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:22213
+name: acridines
+is_a: CHEBI:35293 ! fused compound
+is_a: CHEBI:38101 ! azacycle
 
 [Term]
 id: CHEBI:22698
@@ -117,6 +128,7 @@ is_a: CHEBI:23367 ! molecular entity
 id: CHEBI:24828
 name: indoles
 is_a: CHEBI:35293 ! fused compound
+is_a: CHEBI:38101 ! azacycle
 
 [Term]
 id: CHEBI:25000
@@ -3126,10 +3138,7 @@ relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 id: RXNO:0000252
 name: Cadogan carbazole synthesis
 def: "The reduction of a 2-nitrobiaryl compound to give a carbazole." [doi:10.1039/JR9650004831, RSC:cg]
-is_a: RXNO:0000347 ! azacycle synthesis
-is_a: RXNO:0000508 ! Cadogan cyclization
-intersection_of: MOP:0000543 ! molecular process
-intersection_of: RXNO:0000423 CHEBI:48513 ! has specified product carbazoles
+is_a: RXNO:0000521 ! carbazole synthesis
 relationship: RXNO:0000423 CHEBI:48513 ! has specified product carbazoles
 
 [Term]
@@ -4270,6 +4279,7 @@ id: RXNO:0000395
 name: indole synthesis
 def: "A reaction in which the intended product is an indole that was not present in any of the reactants." [RSC:cb]
 is_a: RXNO:0000052 ! fused-ring-system formation
+is_a: RXNO:0000347 ! azacycle synthesis
 intersection_of: MOP:0000543 ! molecular process
 intersection_of: RXNO:0000423 CHEBI:24828 ! has specified product indoles
 relationship: RXNO:0000423 CHEBI:24828 ! has specified product indoles
@@ -4455,7 +4465,7 @@ name: Kröhnke pyridine synthesis
 def: "Condensation of a 1,5-diketone with ammonium acetate in acetic acid to form a pyridine." [RSC:cb]
 synonym: "Krohnke pyridine synthesis" EXACT []
 xref: http://dx.doi.org/10.1039/SP543
-is_a: RXNO:0000347 ! azacycle synthesis
+is_a: RXNO:0000520 ! pyridine synthesis
 relationship: RXNO:0000423 CHEBI:26421 ! has specified product pyridines
 
 [Term]
@@ -5068,6 +5078,7 @@ name: Feist-Bénary synthesis
 def: "Reaction of an alpha-haloketone or alpha-haloether with a 1,3-dicarbonyl compound in the presence of pyridine to yield a substituted furan." [RSC:cb]
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000138/
 is_a: RXNO:0000346 ! oxacycle synthesis
+relationship: BFO:0000057 CHEBI:16227 ! has_participant pyridine
 relationship: RXNO:0000423 CHEBI:24129 ! has specified product furans
 created_by: batchelorc
 creation_date: 2014-03-03T09:00:00Z
@@ -5232,7 +5243,55 @@ def: "Removal of a terminal amino acid residue from a peptide." [RSC:cb]
 is_a: RXNO:0000073 ! cleaving reaction
 relationship: RXNO:0000424 CHEBI:16670 ! has specified reactant peptide
 created_by: batchelorc
-creation_date: 2014-03-10T09:00:00Z
+creation_date: 2014-03-11T09:00:00Z
+
+[Term]
+id: RXNO:0000518
+name: acridine synthesis
+def: "Ring formation reaction where the intended product is an acridine." [RSC:xp]
+is_a: RXNO:0000052 ! fused-ring-system formation
+is_a: RXNO:0000347 ! azacycle synthesis
+intersection_of: MOP:0000543 ! molecular process
+intersection_of: RXNO:0000423 CHEBI:22213 ! has specified product acridines
+relationship: RXNO:0000423 CHEBI:22213 ! has specified product acridines
+created_by: batchelorc
+creation_date: 2014-03-12T09:00:00Z
+
+[Term]
+id: RXNO:0000519
+name: Bernthsen acridine synthesis
+def: "Reaction of a diarylamine in an organic acid or anhydride in the presence of zinc chloride to yield a 9-substituted acridine." [RSC:cb]
+comment: Definition source Merck Index, modified for errors.
+synonym: "Bernthsen reaction" EXACT []
+xref: doi:10.1039/b204243f
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000041/
+is_a: RXNO:0000518 ! acridine synthesis
+relationship: RXNO:0000423 CHEBI:22213 ! has specified product acridines
+created_by: batchelorc
+creation_date: 2014-03-12T09:00:00Z
+
+[Term]
+id: RXNO:0000520
+name: pyridine synthesis
+def: "Ring formation reaction where the intended product is a pyridine." [RSC:xp]
+is_a: RXNO:0000347 ! azacycle synthesis
+intersection_of: MOP:0000543 ! molecular process
+intersection_of: RXNO:0000423 CHEBI:26421 ! has specified product pyridines
+relationship: RXNO:0000423 CHEBI:26421 ! has specified product pyridines
+created_by: batchelorc
+creation_date: 2014-03-12T09:00:00Z
+
+[Term]
+id: RXNO:0000521
+name: carbazole synthesis
+def: "Ring formation reaction where the intended product is a carbazole." [RSC:xp]
+is_a: RXNO:0000052 ! fused-ring-system formation
+is_a: RXNO:0000347 ! azacycle synthesis
+intersection_of: MOP:0000543 ! molecular process
+intersection_of: RXNO:0000423 CHEBI:48513 ! has specified product carbazoles
+relationship: RXNO:0000423 CHEBI:48513 ! has specified product carbazoles
+created_by: batchelorc
+creation_date: 2014-03-12T09:00:00Z
 
 [Typedef]
 id: BFO:0000055
