@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: rxno/releases/2014-03-12/rxno.owl
+data-version: rxno/releases/2014-03-13/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
@@ -1582,6 +1582,7 @@ def: "A cyclodehydration of a beta-phenethylamide to give a 3,4-dihydroisoquinol
 synonym: "Bischler-Napieralski 3,4-dihydroisoquinoline synthesis" EXACT []
 synonym: "Bischler-Napieralski dihydroisoquinoline synthesis" EXACT []
 synonym: "Bischler-Napieralski isoquinoline synthesis" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000046/
 is_a: RXNO:0000052 ! fused-ring-system formation
 
 [Term]
@@ -3014,7 +3015,11 @@ is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 id: RXNO:0000236
 name: Biginelli reaction
 def: "A three-component coupling of a beta-keto ester, an aldehyde and urea to give a 3,4-dihydropyrimidinone." [RSC:db]
+synonym: "Biginelli condensation" EXACT []
 synonym: "Biginelli pyrimidone synthesis" EXACT []
+synonym: "Biginelli three-component reaction" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000043/
+is_a: MOP:0000628 ! molecular dehydration reaction
 is_a: RXNO:0000005 ! ring formation reaction step
 relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 
@@ -5292,6 +5297,31 @@ intersection_of: RXNO:0000423 CHEBI:48513 ! has specified product carbazoles
 relationship: RXNO:0000423 CHEBI:48513 ! has specified product carbazoles
 created_by: batchelorc
 creation_date: 2014-03-12T09:00:00Z
+
+[Term]
+id: RXNO:0000522
+name: Betti reaction
+def: "Reaction of a phenol, an aromatic aldehyde and a primary aromatic or heterocyclic amine to yield a Betti's base, also known as an alpha-aminobenzylphenol." [RSC:cb]
+synonym: "Betti synthesis" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000042/
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
+created_by: batchelorc
+creation_date: 2014-03-13T09:00:00Z
+
+[Term]
+id: RXNO:0000523
+name: Bischler-Möhlau indole synthesis
+def: "Reaction of a terminal hydroxyketone or terminal halogenoketone with an aromatic amine to yield a 2-substituted indole." [RSC:cb]
+comment: Originally this involved a solvent but this need not be the case, see for example doi:10.1039/b719641e
+synonym: "Bischler reaction" EXACT []
+synonym: "Bischler-Mohlau indole synthesis" EXACT []
+synonym: "Bischler-Mohlau reaction" EXACT []
+synonym: "Bischler-Möhlau reaction" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000045/
+is_a: RXNO:0000395 ! indole synthesis
+relationship: RXNO:0000423 CHEBI:24828 ! has specified product indoles
+created_by: batchelorc
+creation_date: 2014-03-13T09:00:00Z
 
 [Typedef]
 id: BFO:0000055
