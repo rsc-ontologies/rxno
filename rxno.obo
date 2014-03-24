@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: rxno/releases/2014-03-13/rxno.owl
+data-version: rxno/releases/2014-03-24/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
@@ -214,6 +214,12 @@ is_a: CHEBI:24433 ! group
 id: CHEBI:30879
 name: alcohol
 is_a: CHEBI:33822 ! organic hydroxy compound
+
+[Term]
+id: CHEBI:32816
+name: pyruvic acid
+is_a: CHEBI:33575 ! carboxylic acid
+is_a: CHEBI:33860 ! aromatic amine
 
 [Term]
 id: CHEBI:32876
@@ -2174,8 +2180,13 @@ is_a: RXNO:0000123 ! molecular skeleton elimination reaction
 [Term]
 id: RXNO:0000126
 name: Doebner reaction
-def: "The reaction between an aromatic amine, an aldehyde and pyruvic acid to give a quinoline 4-carboxylic acid (cinchoninic acid)." [RSC:cb, RSC:cc, RSC:db]
-is_a: RXNO:0000052 ! fused-ring-system formation
+def: "The reaction between an aromatic amine, an aldehyde and pyruvic acid on heating to give a quinoline 4-carboxylic acid (cinchoninic acid)." [RSC:cb, RSC:cc, RSC:db]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000114/
+is_a: RXNO:0000393 ! quinoline synthesis
+relationship: RXNO:0000423 CHEBI:26513 ! has specified product quinolines
+relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
+relationship: RXNO:0000424 CHEBI:32816 ! has specified reactant pyruvic acid
+relationship: RXNO:0000424 CHEBI:33860 ! has specified reactant aromatic amine
 
 [Term]
 id: RXNO:0000127
@@ -4267,7 +4278,7 @@ name: quinoline synthesis
 def: "A reaction in which the intended product is a quinoline that was not present in any of the reactants." [RSC:cb]
 is_a: RXNO:0000052 ! fused-ring-system formation
 is_a: RXNO:0000347 ! azacycle synthesis
-intersection_of: RXNO:0000052 ! fused-ring-system formation
+intersection_of: MOP:0000543 ! molecular process
 intersection_of: RXNO:0000423 CHEBI:26513 ! has specified product quinolines
 relationship: RXNO:0000423 CHEBI:26513 ! has specified product quinolines
 
@@ -5322,6 +5333,19 @@ is_a: RXNO:0000395 ! indole synthesis
 relationship: RXNO:0000423 CHEBI:24828 ! has specified product indoles
 created_by: batchelorc
 creation_date: 2014-03-13T09:00:00Z
+
+[Term]
+id: RXNO:0000524
+name: Camps quinoline synthesis
+def: "Cyclisation of an o-acylaminoacetophenone in alcoholic sodium hydroxide to form a substituted hydroxyquinoline." [RSC:cb]
+comment: The substituent on the amino nitrogen can drive the ratio of 1-hydroxy to 3-hydroxy products.
+synonym: "Camps cyclisation" EXACT []
+synonym: "Camps cyclization" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000070/
+is_a: RXNO:0000393 ! quinoline synthesis
+relationship: RXNO:0000423 CHEBI:26513 ! has specified product quinolines
+created_by: batchelorc
+creation_date: 2014-03-24T09:00:00Z
 
 [Typedef]
 id: BFO:0000055
