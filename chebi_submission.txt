@@ -8,15 +8,17 @@ RXNO:0000470 aromatic carboxylic anhydride: is_a carboxylic anhydride (CHEBI:358
 aromatic diazonium salt: salt (CHEBI:24866) and has_part aromatic diazonium ion (CHEBI:53507)
 aromatic bromide: is_a aromatic halide (CHEBI:new)
 aromatic chloride: is_a aromatic halide (CHEBI:new)
-aromatic halide: organic aromatic compound (CHEBI:33659) and has_part halo group (CHEBI:47854)
-aromatic nitrile: is_a nitrile (CHEBI:18379)
-aromatic pseudohalide: organic aromatic compound (CHEBI:33659) and has_part pseudohalo group (CHEBI:36823)
+RXNO:0000288: aromatic halide: organic aromatic compound (CHEBI:33659) and has_part halo group (CHEBI:47854)
+RXNO:0000288: aromatic nitrile: is_a nitrile (CHEBI:18379)
+RXNO:0000288: aromatic pseudohalide: organic aromatic compound (CHEBI:33659) and has_part pseudohalo group (CHEBI:36823)
 RXNO:0000515 azlactone
 beta-amino carbonyl compound: is_a amine (CHEBI:32952), is_a carbonyl compound (CHEBI:36587)
 beta-amino nitroalkane: is_a C-nitro compound (CHEBI:35716)
 beta-hydroxy nitroalkane: is_a C-nitro compound (CHEBI:35716)
+RXNO:0000525: copper(1+) acetylide is_a acetylide (CHEBI:73478)
 copper(I) halide: is_a inorganic halide (CHEBI:new).  copper(I) chloride (CHEBI:53472) is_a copper(I) halide
 copper(I) pseudohalide: is_a inorganic pseudohalide (CHEBI:new)
+RXNO:0000288: copper(1+) cyanide is_a copper(1+) pseudohalide (CHEBI:new), is_a cyanide salt (CHEBI:36572)
 copper(II) halide: is_a inorganic halide (CHEBI:new). copper(II) chloride (CHEBI:49553) is_a copper(II) halide
 RXNO:0000107: dialkyl malonate is_a malonate ester (CHEBI:38083)
 diaminobiphenyl: 
