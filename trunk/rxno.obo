@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: rxno/releases/2014-03-24/rxno.owl
+data-version: rxno/releases/2014-03-25/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
@@ -446,7 +446,7 @@ is_a: CHEBI:24433 ! group
 [Term]
 id: CHEBI:46882
 name: amino group
-is_a: CHEBI:24433 ! group
+is_a: CHEBI:51142 ! amino groups
 
 [Term]
 id: CHEBI:46883
@@ -480,6 +480,11 @@ name: nitrate ester
 is_a: CHEBI:23367 ! molecular entity
 
 [Term]
+id: CHEBI:51142
+name: amino groups
+is_a: CHEBI:24433 ! group
+
+[Term]
 id: CHEBI:51154
 name: phosphonium ylide
 is_a: CHEBI:23367 ! molecular entity
@@ -499,6 +504,11 @@ id: CHEBI:51849
 name: beta-ketoester
 is_a: CHEBI:17087 ! ketone
 is_a: CHEBI:33308 ! carboxylic ester
+
+[Term]
+id: CHEBI:51929
+name: arylacetylene
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:52094
@@ -920,6 +930,13 @@ def: "A condensation reaction where the small molecule produced is water." [RSC:
 is_a: MOP:0000627 ! condensation reaction
 created_by: batchelorc
 creation_date: 2009-09-16T11:32:33Z
+
+[Term]
+id: MOP:0000650
+name: amination
+def: "Formation of a covalent bond between a substrate and an amino group." [RSC:cb]
+is_a: MOP:0000566 ! formation of covalent bond with group
+relationship: has_participant CHEBI:51142 ! amino groups
 
 [Term]
 id: MOP:0000671
@@ -2897,15 +2914,21 @@ is_a: RXNO:0000443 ! Sakurai reaction
 [Term]
 id: RXNO:0000218
 name: Cannizzaro reaction
-def: "The disproportionation of a non-enolisable aldehyde to the corresponding carboxylic acid salt and alcohol. The reaction is base-catalysed." [RSC:cc, RSC:cg, RSC:db]
+def: "The disproportionation of a non-enolisable aldehyde to the corresponding carboxylic acid and alcohol. The reaction is base-catalysed." [RSC:cc, RSC:cg, RSC:db]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000071/
 is_a: RXNO:0000011 ! functional group modification
+relationship: RXNO:0000423 CHEBI:30879 ! has specified product alcohol
+relationship: RXNO:0000423 CHEBI:33575 ! has specified product carboxylic acid
 relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 
 [Term]
 id: RXNO:0000219
 name: crossed Cannizzaro reaction
-def: "The reaction between two different non-enolisable aldehydes to give a carboxylic acid salt and an alcohol. The reaction is base-catalysed." [RSC:cc, RSC:cg, RSC:db]
+def: "The reaction between two different non-enolisable aldehydes to give a carboxylic acid and an alcohol. The reaction is base-catalysed." [RSC:cc, RSC:cg, RSC:db]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000071/
 is_a: RXNO:0000011 ! functional group modification
+relationship: RXNO:0000423 CHEBI:30879 ! has specified product alcohol
+relationship: RXNO:0000423 CHEBI:33575 ! has specified product carboxylic acid
 relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 
 [Term]
@@ -3128,6 +3151,7 @@ id: RXNO:0000248
 name: Carroll rearrangement
 def: "An adaptation of the Claisen rearrangement that transforms a beta-keto allyl ester into a gamma,delta-allyl ketone. It uses base and high temperature or milder conditions with a ruthenium or palladium complex as catalyst." [RSC:db]
 synonym: "Kimel-Cope rearrangement" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000072/
 is_a: RXNO:0000025 ! rearrangement step
 
 [Term]
@@ -3428,6 +3452,7 @@ name: Rosenmund-von Braun reaction
 def: "A carbon-carbon coupling reaction where an aryl halide reacts with copper(I) cyanide to give an aryl nitrile." [rsc:cg, rsc:db]
 synonym: "[c:1][F,Cl,Br,I].[Cu][C:2]#[N:3]>>[c:1][C:2]#[N:3]" SMIRKS []
 synonym: "Rosenmund-von Braun synthesis" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000376/
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 
 [Term]
@@ -3760,6 +3785,7 @@ name: reductive amination
 def: "A functional group modification where a carbonyl oxygen is replaced by an amine." [rsc:cb]
 xref: NAMERXN:1.2
 is_a: RXNO:0000011 ! functional group modification
+is_a: MOP:0000650
 created_by: batchelorc
 creation_date: 2012-03-22T12:15:29Z
 
@@ -5228,6 +5254,7 @@ creation_date: 2014-03-07T09:00:00Z
 id: RXNO:0000514
 name: Chapman rearrangement
 def: "Rearrangement of an aryl imino ether to yield an N,N-diaryl amide." [RSC:cb]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000074/
 is_a: RXNO:0000025 ! rearrangement step
 created_by: batchelorc
 creation_date: 2014-03-07T09:00:00Z
@@ -5338,7 +5365,7 @@ creation_date: 2014-03-13T09:00:00Z
 id: RXNO:0000524
 name: Camps quinoline synthesis
 def: "Cyclisation of an o-acylaminoacetophenone in alcoholic sodium hydroxide to form a substituted hydroxyquinoline." [RSC:cb]
-comment: The substituent on the amino nitrogen can drive the ratio of 1-hydroxy to 3-hydroxy products.
+comment: The substituent on the amino nitrogen can affect the ratio of 1-hydroxy to 3-hydroxy products.
 synonym: "Camps cyclisation" EXACT []
 synonym: "Camps cyclization" EXACT []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000070/
@@ -5346,6 +5373,39 @@ is_a: RXNO:0000393 ! quinoline synthesis
 relationship: RXNO:0000423 CHEBI:26513 ! has specified product quinolines
 created_by: batchelorc
 creation_date: 2014-03-24T09:00:00Z
+
+[Term]
+id: RXNO:0000525
+name: Castro-Stephens coupling
+def: "Palladium-catalysed coupling of copper(I) acetylides with aryl halides to yield arylacetylenes." [RSC:cb]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000073/
+is_a: RXNO:0000001 ! planned reaction step
+is_a: RXNO:0000316 ! palladium-catalysed carbon-carbon coupling reaction
+relationship: RXNO:0000423 CHEBI:51929 ! has specified product arylacetylene
+relationship: RXNO:0000425 CHEBI:33363 ! has_catalyst palladium
+created_by: batchelorc
+creation_date: 2014-03-25T09:00:00Z
+
+[Term]
+id: RXNO:0000526
+name: Chichibabin pyridine synthesis
+def: "Reaction of carbonyl compounds with ammonia or an amine to yield a pyridine." [RSC:cb]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000075/
+is_a: RXNO:0000520 ! pyridine synthesis
+relationship: RXNO:0000423 CHEBI:26421 ! has specified product pyridines
+relationship: RXNO:0000424 CHEBI:36587 ! has specified reactant carbonyl compound
+created_by: batchelorc
+creation_date: 2014-03-25T09:00:00Z
+
+[Term]
+id: RXNO:0000527
+name: Chichibabin reaction
+def: "Reaction of an azacycle with an alkali-metal amide to yield an aminated azacyle." [RSC:cb]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000076/
+is_a: MOP:0000650 ! amination
+is_a: RXNO:0000019 ! substitution reaction
+created_by: batchelorc
+creation_date: 2014-03-25T09:00:00Z
 
 [Typedef]
 id: BFO:0000055
