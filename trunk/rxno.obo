@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: rxno/releases/2014-03-25/rxno.owl
+data-version: rxno/releases/2014-03-27/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
@@ -936,7 +936,13 @@ id: MOP:0000650
 name: amination
 def: "Formation of a covalent bond between a substrate and an amino group." [RSC:cb]
 is_a: MOP:0000566 ! formation of covalent bond with group
-relationship: has_participant CHEBI:51142 ! amino groups
+relationship: BFO:0000057 CHEBI:51142 ! has_participant amino groups
+
+[Term]
+id: MOP:0000656
+name: elimination reaction
+def: "A molecular process where two groups are lost with concomitant formation of an unsaturation in the molecule or formation of a new ring." [doi:10.1351/goldbook.E02038]
+is_a: MOP:0000543 ! molecular process
 
 [Term]
 id: MOP:0000671
@@ -2687,6 +2693,7 @@ is_a: RXNO:0000011 ! functional group modification
 id: RXNO:0000187
 name: Tishchenko reaction
 def: "The formation of an ester from two aldehydes via a disproportionation process using a metal alkoxide to oxidise one aldehyde and reduce the other." [RSC:cb, RSC:cc, RSC:db]
+synonym: "[C:1](=O).[C:2](=O)>>[C:1](=O)O[C:2]" SMIRKS []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000433/
 is_a: RXNO:0000011 ! functional group modification
 relationship: RXNO:0000423 CHEBI:33308 ! has specified product carboxylic ester
@@ -3784,8 +3791,8 @@ id: RXNO:0000335
 name: reductive amination
 def: "A functional group modification where a carbonyl oxygen is replaced by an amine." [rsc:cb]
 xref: NAMERXN:1.2
+is_a: MOP:0000650 ! amination
 is_a: RXNO:0000011 ! functional group modification
-is_a: MOP:0000650
 created_by: batchelorc
 creation_date: 2012-03-22T12:15:29Z
 
@@ -5379,7 +5386,7 @@ id: RXNO:0000525
 name: Castro-Stephens coupling
 def: "Palladium-catalysed coupling of copper(I) acetylides with aryl halides to yield arylacetylenes." [RSC:cb]
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000073/
-is_a: RXNO:0000001 ! planned reaction step
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
 is_a: RXNO:0000316 ! palladium-catalysed carbon-carbon coupling reaction
 relationship: RXNO:0000423 CHEBI:51929 ! has specified product arylacetylene
 relationship: RXNO:0000425 CHEBI:33363 ! has_catalyst palladium
@@ -5400,12 +5407,85 @@ creation_date: 2014-03-25T09:00:00Z
 [Term]
 id: RXNO:0000527
 name: Chichibabin reaction
-def: "Reaction of an azacycle with an alkali-metal amide to yield an aminated azacyle." [RSC:cb]
+def: "Reaction of an azacycle with an alkali-metal amide to yield an aminated azacycle." [RSC:cb]
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000076/
 is_a: MOP:0000650 ! amination
 is_a: RXNO:0000019 ! substitution reaction
 created_by: batchelorc
 creation_date: 2014-03-25T09:00:00Z
+
+[Term]
+id: RXNO:0000528
+name: Bodroux reaction
+def: "Reaction of a carboxylic ester with a magnesium iodide alkylamide to yield a carboxamide." [RSC:cb]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000052/
+is_a: RXNO:0000011 ! functional group modification
+relationship: RXNO:0000424 CHEBI:33308 ! has specified reactant carboxylic ester
+created_by: batchelorc
+creation_date: 2014-03-27T09:00:00Z
+
+[Term]
+id: RXNO:0000529
+name: Bogert-Cook synthesis
+def: "Condensation of beta-phenylethylmagnesium bromide with a cyclohexanone followed by cyclisation and dehydration in concentrated sulfuric acid to yield an octahydrophenanthrene." [RSC:cb]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000053/
+is_a: RXNO:0000052 ! fused-ring-system formation
+created_by: batchelorc
+creation_date: 2014-03-27T09:00:00Z
+
+[Term]
+id: RXNO:0000530
+name: Bohn-Schmidt reaction
+def: "Reaction of a hydroxylated anthraquinone with fuming sulfuric acid or sulfuric acid in boric acid in the presence of a mercury or selenium catalyst to form a more hydroxylated anthraquinone." [RSC:cb]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000054/
+is_a: RXNO:0000373 ! functional group addition step
+created_by: batchelorc
+creation_date: 2014-03-27T09:00:00Z
+
+[Term]
+id: RXNO:0000531
+name: Boord olefin synthesis
+def: "Etherification of an aldehyde followed by bromination and reaction with a Grignard reagent followed by treatment with zinc to eliminate the halogen and alkoxy groups to produce an olefin." [RSC:cb]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000055/
+is_a: RXNO:0000479 ! olefination
+relationship: has_part MOP:0000656 ! elimination reaction
+relationship: has_part RXNO:0000014 ! Grignard reaction
+relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
+created_by: batchelorc
+creation_date: 2014-03-27T09:00:00Z
+
+[Term]
+id: RXNO:0000532
+name: Borsche-Drechsel cyclisation
+def: "Rearrangement of a cyclohexanone phenylhydrazone followed by oxidation to yield a carbazole." [RSC:cb]
+synonym: "Borsche-Drechsel carbazole synthesis" EXACT []
+synonym: "Borsche-Drechsel cyclization" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000056/
+is_a: RXNO:0000521 ! carbazole synthesis
+relationship: RXNO:0000423 CHEBI:48513 ! has specified product carbazoles
+created_by: batchelorc
+creation_date: 2014-03-27T09:00:00Z
+
+[Term]
+id: RXNO:0000533
+name: Bouveault aldehyde synthesis
+def: "Reaction of an organomagnesium or organolithium compound with an N,N'-disubstituted formamide to yield the next homologous aldehyde." [RSC:cb]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000057/
+is_a: RXNO:0000070 ! chain lengthening
+relationship: RXNO:0000423 CHEBI:17478 ! has specified product aldehyde
+created_by: batchelorc
+creation_date: 2014-03-27T09:00:00Z
+
+[Term]
+id: RXNO:0000534
+name: Bradsher cyclisation
+def: "Diels-Alder reaction of a dienophile with a cationic aromatic azadiene to yield a bridged-ring system." [RSC:cb]
+synonym: "Bradsher cyclization" EXACT []
+synonym: "Bradsher cycloaddition" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000060/
+is_a: RXNO:0000052 ! fused-ring-system formation
+created_by: batchelorc
+creation_date: 2014-03-27T09:00:00Z
 
 [Typedef]
 id: BFO:0000055
