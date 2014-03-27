@@ -1,10 +1,6 @@
 format-version: 1.2
-date: 14:05:2010 14:36
-saved-by: batchelorc
-auto-generated-by: OBO-Edit 2.1-beta1
 synonymtypedef: FORMULA "FORMULA"
 synonymtypedef: IUPAC_NAME "IUPAC NAME"
-default-namespace: molecular process
 
 [Term]
 id: CHEBI:15378
@@ -5888,6 +5884,55 @@ id: MOP:0000706
 name: oxidation at nitrogen
 def: "An oxidation process where the oxidation state of at least one nitrogen atom increases." [RSC:cb]
 is_a: MOP:0000568 ! oxidation
+
+[Term]
+id: MOP:0000724
+name: tautomerisation
+def: "Isomerisation between tautomers." [AU:T06252]
+is_a: MOP:0000543
+
+[Term]
+id: MOP:0000725
+name: keto-enol tautomerisation
+def: "Isomerisation between the keto- and enol-forms of a molecule." [RSC:cb]
+is_a: MOP:0000727
+
+[Term]
+id: MOP:0000726
+name: ring-chain tautomerisation
+def: "Tautomerisation that involves the breaking of a ring in one direction and formation of a ring in the other." [RSC:cb]
+is_a: MOP:0000724
+
+[Term]
+id: MOP:0000727
+name: prototropy
+def: "A tautomerisation process where the leaving group is a proton." [AU:T06252]
+is_a: MOP:0000724
+
+[Term]
+id: MOP:0000728
+name: sigmatropic rearrangement
+def: "A molecular process that involves breaking a sigma bond, creating a sigma bond between two unconnected atoms and preserving the number of pi bonds in the system." [AU:S05660]
+is_a: MOP:0000543
+
+[Term]
+id: MOP:0000721
+name: [3,3]-sigmatropic rearrangement
+alt_id: RXNO:0000027
+def: "A sigmatropic rearrangement where the intermediate consists of two three-electron fragments." [RSC:cb]
+comment: This term was obsoleted from the RXNO namespace and transferred to MOP because it is a process identifiable by its mechanism rather than the intention of the experimenter.
+is_a: MOP:0000728
+
+[Term]
+id: MOP:0000729
+name: valence tautomerisation
+def: "A reversible molecular process that involves the breaking or formation of single or double bonds without migrating atoms or groups." [AU:V06591]
+is_a: MOP:0000543
+
+[Term]
+id: MOP:0000730
+name: 6-endo-dig cyclization
+is_a: MOP:0000562
 
 [Term]
 id: MOP:0001000
