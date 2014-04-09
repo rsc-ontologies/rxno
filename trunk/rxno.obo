@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: rxno/releases/2014-03-27/rxno.owl
+data-version: rxno/releases/2014-04-09/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
@@ -427,6 +427,26 @@ is_a: CHEBI:38104 ! oxacycle
 id: CHEBI:38784
 name: oxetanes
 is_a: CHEBI:38104 ! oxacycle
+
+[Term]
+id: CHEBI:39141
+name: Brønsted acid
+is_a: BFO:0000016 ! disposition
+
+[Term]
+id: CHEBI:39142
+name: Brønsted base
+is_a: BFO:0000016 ! disposition
+
+[Term]
+id: CHEBI:39143
+name: Lewis acid
+is_a: BFO:0000016 ! disposition
+
+[Term]
+id: CHEBI:39144
+name: Lewis base
+is_a: BFO:0000016 ! disposition
 
 [Term]
 id: CHEBI:39447
@@ -1052,6 +1072,83 @@ def: "A reaction in which two or more reactants or remote reactive sites within 
 is_a: MOP:0000627 ! condensation reaction
 created_by: batchelorc
 creation_date: 2014-03-05T10:00:00Z
+
+[Term]
+id: MOP:0000730
+name: Brønsted acid catalysis
+is_a: MOP:0000543 ! molecular process
+created_by: batchelorc
+creation_date: 2014-04-09T10:00:00Z
+
+[Term]
+id: MOP:0000731
+name: base catalysis
+is_a: MOP:0000543 ! molecular process
+union_of: MOP:0000735 ! Lewis base catalysis
+union_of: MOP:0000736 ! Brønsted base catalysis
+created_by: batchelorc
+creation_date: 2014-04-09T10:00:00Z
+
+[Term]
+id: MOP:0000732
+name: hydron donation
+is_a: MOP:0000543 ! molecular process
+relationship: BFO:0000055 CHEBI:39141 ! realizes Brønsted acid
+created_by: batchelorc
+creation_date: 2014-04-09T10:00:00Z
+
+[Term]
+id: MOP:0000733
+name: accepting an electron pair in Lewis adduct formation
+is_a: MOP:0000543 ! molecular process
+relationship: BFO:0000055 CHEBI:39143 ! realizes Lewis acid
+created_by: batchelorc
+creation_date: 2014-04-09T10:00:00Z
+
+[Term]
+id: MOP:0000734
+name: Lewis acid catalysis
+is_a: MOP:0000543 ! molecular process
+created_by: batchelorc
+creation_date: 2014-04-09T10:00:00Z
+
+[Term]
+id: MOP:0000735
+name: Lewis base catalysis
+is_a: MOP:0000731 ! base catalysis
+created_by: batchelorc
+creation_date: 2014-04-09T10:00:00Z
+
+[Term]
+id: MOP:0000736
+name: Brønsted base catalysis
+is_a: MOP:0000731 ! base catalysis
+relationship: has_part MOP:0000737 ! accepting a hydron
+created_by: batchelorc
+creation_date: 2014-04-09T10:00:00Z
+
+[Term]
+id: MOP:0000737
+name: accepting a hydron
+is_a: MOP:0000543 ! molecular process
+relationship: BFO:0000055 CHEBI:39142 ! realizes Brønsted base
+created_by: batchelorc
+creation_date: 2014-04-09T10:00:00Z
+
+[Term]
+id: MOP:0000738
+name: electron pair donation in Lewis adduct formation
+is_a: MOP:0000543 ! molecular process
+relationship: BFO:0000055 CHEBI:39144 ! realizes Lewis base
+created_by: batchelorc
+creation_date: 2014-04-09T10:00:00Z
+
+[Term]
+id: MOP:0000739
+name: Lewis adduct formation
+is_a: MOP:0000543 ! molecular process
+relationship: has_part MOP:0000733 ! accepting an electron pair in Lewis adduct formation
+relationship: has_part MOP:0000738 ! electron pair donation in Lewis adduct formation
 
 [Term]
 id: MOP:0001369
@@ -2103,7 +2200,8 @@ is_a: RXNO:0000110 ! fragmentation reaction
 [Term]
 id: RXNO:0000113
 name: Brook rearrangement
-def: "The rearrangement of an alpha-, beta- or gamma-hydroxy silane to give a silyl ether." [RSC:cb, RSC:cc, RSC:db]
+def: "The rearrangement of an alpha-, beta- or gamma-hydroxy silane to give a silyl ether. It is catalysed by a base." [RSC:cb, RSC:cc, RSC:db]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000062/
 is_a: RXNO:0000025 ! rearrangement step
 
 [Term]
@@ -5486,6 +5584,24 @@ xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000060/
 is_a: RXNO:0000052 ! fused-ring-system formation
 created_by: batchelorc
 creation_date: 2014-03-27T09:00:00Z
+
+[Term]
+id: RXNO:0000535
+name: Bradsher reaction
+def: "Reaction of an ortho-acyldiarylmethane, catalysed by acid, to yield an anthracene." [RSC:cb]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000061/
+is_a: RXNO:0000052 ! fused-ring-system formation
+created_by: batchelorc
+creation_date: 2014-04-08T09:00:00Z
+
+[Term]
+id: RXNO:0000536
+name: Parham cyclisation
+def: "Reaction of a bromoarene that has an electrophilic group at the para-position with lithium bromide or lithium iodide followed by intramolecular cyclisation to yield a fused-ring system." [RSC:cb]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000317/
+is_a: RXNO:0000052 ! fused-ring-system formation
+created_by: batchelorc
+creation_date: 2014-04-08T09:00:00Z
 
 [Typedef]
 id: BFO:0000055
