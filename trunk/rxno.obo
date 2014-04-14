@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: rxno/releases/2014-04-09/rxno.owl
+data-version: rxno/releases/2014-04-14/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
@@ -2428,6 +2428,8 @@ synonym: "Suzuki coupling reaction" EXACT []
 synonym: "Suzuki cross-coupling" EXACT []
 synonym: "Suzuki cross-coupling reaction" EXACT []
 synonym: "Suzuki reaction" EXACT []
+synonym: "Suzuki-Miyaura coupling" EXACT []
+synonym: "Suzuki-Miyaura coupling reaction" EXACT []
 synonym: "Suzuki-Miyaura cross-coupling" EXACT []
 synonym: "Suzuki-Miyaura cross-coupling reaction" EXACT []
 synonym: "Suzuki-Miyaura reaction" EXACT []
@@ -3709,6 +3711,7 @@ relationship: RXNO:0000423 CHEBI:25000 ! has specified product lactone
 id: RXNO:0000309
 name: Yamaguchi esterification
 def: "The esterification of a carboxylic acid with an alcohol using 2,4,6-trichlorobenzoyl chloride (Yamaguchi reagent)." [rsc:db]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000479/
 is_a: RXNO:0000019 ! substitution reaction
 
 [Term]
@@ -5602,6 +5605,35 @@ xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000317/
 is_a: RXNO:0000052 ! fused-ring-system formation
 created_by: batchelorc
 creation_date: 2014-04-08T09:00:00Z
+
+[Term]
+id: RXNO:0000537
+name: Quelet reaction
+def: "Reaction of an aliphatic aldehyde with a phenolic ether and hydrochloric acid to yield an alpha-chloroalkylphenolic ether." [RSC:cb]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000357/
+is_a: RXNO:0000373 ! functional group addition step
+created_by: batchelorc
+creation_date: 2014-04-14T09:00:00Z
+
+[Term]
+id: RXNO:0000538
+name: Chugaev reaction
+def: "Elimination of a water molecule from a secondary alcohol to yield an olefin." [RSC:cb]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000077/
+is_a: RXNO:0000123 ! molecular skeleton elimination reaction
+relationship: RXNO:0000423 CHEBI:33641 ! has specified product olefin
+created_by: batchelorc
+creation_date: 2014-04-14T09:00:00Z
+
+[Term]
+id: RXNO:0000539
+name: Cope elimination
+def: "Elimination of a hydroxylamine from an amine oxide by pyrolysis to yield an olefin." [RSC:cb]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000085/
+is_a: RXNO:0000123 ! molecular skeleton elimination reaction
+relationship: RXNO:0000423 CHEBI:33641 ! has specified product olefin
+created_by: batchelorc
+creation_date: 2014-04-14T09:00:00Z
 
 [Typedef]
 id: BFO:0000055
