@@ -12,6 +12,7 @@ RXNO:0000288: aromatic halide: organic aromatic compound (CHEBI:33659) and has_p
 RXNO:0000288: aromatic nitrile: is_a nitrile (CHEBI:18379)
 RXNO:0000288: aromatic pseudohalide: organic aromatic compound (CHEBI:33659) and has_part pseudohalo group (CHEBI:36823)
 RXNO:0000515 azlactone
+RXNO:0000136: barium sulfate is_a barium salt (CHEBI:63320)
 beta-amino carbonyl compound: is_a amine (CHEBI:32952), is_a carbonyl compound (CHEBI:36587)
 beta-amino nitroalkane: is_a C-nitro compound (CHEBI:35716)
 beta-hydroxy nitroalkane: is_a C-nitro compound (CHEBI:35716)
@@ -30,6 +31,7 @@ gamma-nitroalcohol: is_a C-nitro compound (CHEBI:35716)
 hydrazobenzene:
 3-hydroxy-1,5-hexadiene:
 RXNO:0000472 ketose N-glycosyl compound is_a N-glycosyl compound (CHEBI:21731)
+RXNO:0000047 metal alkoxide is_a salt (CHEBI:36572)
 RXNO:0000469: ortho-hydroxyaryl ketone is_a ketone (CHEBI:17087)
 organic azide: is_a azides (CHEBI:22680)
 organophosphazo compound: ?! (but looks like this R3P=NR')
@@ -42,3 +44,4 @@ RXNO:0000106: silver carboxylate: is_a silver coordination entity (CHEBI:33967)
 RXNO:0000480: Tebbe reagent
 RXNO:0000060: trialkyl phosphite: is_a organic phosphite (CHEBI:48135)
 5,6-unsaturated carbonyl compound:
+RXNO:0000050: vicinal diol :is_a diol (CHEBI:23824)
