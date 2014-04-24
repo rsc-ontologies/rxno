@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: rxno/releases/2014-04-15/rxno.owl
+data-version: rxno/releases/2014-04-24/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
@@ -206,6 +206,11 @@ name: tetrachloromethane
 is_a: CHEBI:23128 ! chloroalkane
 
 [Term]
+id: CHEBI:27539
+name: isatin
+is_a: CHEBI:24828 ! indoles
+
+[Term]
 id: CHEBI:278547
 name: sodium azide
 is_a: CHEBI:23367 ! molecular entity
@@ -345,6 +350,11 @@ is_a: CHEBI:23367 ! molecular entity
 id: CHEBI:35293
 name: fused compound
 is_a: CHEBI:33595 ! cyclic compound
+
+[Term]
+id: CHEBI:35403
+name: chromium coordination entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:35636
@@ -497,6 +507,11 @@ is_a: CHEBI:24433 ! group
 id: CHEBI:47266
 name: hydrogen bromide
 is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:48420
+name: chromium trioxide
+is_a: CHEBI:35403 ! chromium coordination entity
 
 [Term]
 id: CHEBI:48513
@@ -1486,6 +1501,7 @@ is_a: RXNO:0000019 ! substitution reaction
 id: RXNO:0000021
 name: Sandmeyer reaction
 def: "An aromatic substitution reaction where an aryl diazonium salt reacts with a copper(I) halide or pseudohalide to form an aromatic halide or pseudohalide." [RSC:db]
+xref: http://en.wikipedia.org/wiki/Sandmeyer_reaction
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000386/
 is_a: RXNO:0000332 ! aromatic substitution step
 union_of: RXNO:0000333 ! Sandmeyer halogenation
@@ -1780,6 +1796,7 @@ id: RXNO:0000055
 name: Vilsmeier-Haack reaction
 def: "A formylation of an activated arene with a disubstituted formamide to give an aryl carboxaldehyde." [RSC:cc, RSC:db]
 synonym: "Vilsmeier-Haack formylation" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000444/
 is_a: MOP:0000003 ! formylation
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 
@@ -1816,8 +1833,11 @@ relationship: RXNO:0000424 CHEBI:59656 ! has specified reactant phosphine oxide
 [Term]
 id: RXNO:0000058
 name: Ritter reaction
-def: "A reaction between an alcohol or alkene and a nitrile to give an amide, catalysed by acid and proceeding by an SN1 mechanism." [RSC:cc, RSC:db]
+def: "A reaction between an alcohol or alkene and a nitrile to give an amide, catalysed by a Bronsted acid." [RSC:cc, RSC:db]
+comment: Proceeds by an SN1 mechanism.
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000372/
 is_a: RXNO:0000011 ! functional group modification
+relationship: has_part MOP:0000730 ! Brønsted acid catalysis
 
 [Term]
 id: RXNO:0000059
@@ -3006,6 +3026,8 @@ is_a: RXNO:0000000 ! molecular skeleton joining reaction
 id: RXNO:0000205
 name: ring breaking
 def: "A planned reaction step in which the product has fewer rings than the reactants." [RSC:cb]
+synonym: "ring opening" EXACT []
+synonym: "selective ring opening" EXACT []
 is_a: RXNO:0000001 ! planned reaction step
 intersection_of: RXNO:0000001 ! planned reaction step
 intersection_of: OBI:0000417 RXNO:0000449 ! achieves_planned_objective molecular ring breaking objective
@@ -5758,6 +5780,77 @@ is_a: RXNO:0000123 ! molecular skeleton elimination reaction
 relationship: RXNO:0000423 CHEBI:33641 ! has specified product olefin
 created_by: batchelorc
 creation_date: 2014-04-15T11:00:00Z
+
+[Term]
+id: RXNO:0000544
+name: Saegusa oxidation
+def: "Reaction of silyl enol ethers with palladium acetate in acetonitrile to yield an alpha,beta-unsaturated ketone." [doi:10.1021/jo00399a052]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000382/
+is_a: RXNO:0000123 ! molecular skeleton elimination reaction
+created_by: batchelorc
+creation_date: 2014-04-22T16:00:00Z
+
+[Term]
+id: RXNO:0000545
+name: Sandmeyer diphenylurea isatin synthesis
+def: "Reaction of diphenylthiourea with lead carbonate and potassium cyanide to form a cyanoformidine followed by ring closure and acid hydrolysis to yield isatin." [RSC:cb]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000384/
+is_a: RXNO:0000395 ! indole synthesis
+relationship: RXNO:0000423 CHEBI:27539 ! has specified product isatin
+created_by: batchelorc
+creation_date: 2014-04-24T15:00:00Z
+
+[Term]
+id: RXNO:0000546
+name: Sandmeyer isonitrosoacetanilide isatin synthesis
+def: "Reaction of aniline, hydroxylamine and chloral hydrate to form an aniline intermediate followed by cyclization in acid and hydrolysis to yield isatin." [RSC:cb]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000385/
+is_a: RXNO:0000395 ! indole synthesis
+relationship: RXNO:0000423 CHEBI:27539 ! has specified product isatin
+created_by: batchelorc
+creation_date: 2014-04-24T15:00:00Z
+
+[Term]
+id: RXNO:0000547
+name: Sarett oxidation
+def: "Oxidation of an alcohol with a pyridine-chromium trioxide complex to yield a carbonyl compound." [RSC:cb]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000387/
+is_a: MOP:0000572 ! alcohol oxidation
+is_a: RXNO:0000012 ! functional group oxidation
+union_of: RXNO:0000548 ! Sarett primary alcohol oxidation
+union_of: RXNO:0000549 ! Sarett secondary alcohol oxidation
+relationship: RXNO:0000424 CHEBI:48420 ! has specified reactant chromium trioxide
+created_by: batchelorc
+creation_date: 2014-04-24T15:00:00Z
+
+[Term]
+id: RXNO:0000548
+name: Sarett primary alcohol oxidation
+def: "Oxidation of a primary alcohol with a pyridine-chromium trioxide complex to yield an aldehyde." [RSC:cb]
+is_a: MOP:0000573 ! primary alcohol oxidation to aldehyde
+is_a: RXNO:0000547 ! Sarett oxidation
+created_by: batchelorc
+creation_date: 2014-04-24T15:00:00Z
+
+[Term]
+id: RXNO:0000549
+name: Sarett secondary alcohol oxidation
+def: "Oxidation of a secondary alcohol with a pyridine-chromium trioxide complex to yield a ketone." [RSC:cb]
+is_a: MOP:0000574 ! secondary alcohol oxidation to ketone
+is_a: RXNO:0000547 ! Sarett oxidation
+created_by: batchelorc
+creation_date: 2014-04-24T15:00:00Z
+
+[Term]
+id: RXNO:0000550
+name: Collins oxidation
+def: "Oxidation of a primary alcohol with a pyridine-chromium trioxide complex in dichloromethane to yield an aldehyde." [RSC:cb]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000387/
+is_a: MOP:0000572 ! alcohol oxidation
+is_a: RXNO:0000012 ! functional group oxidation
+relationship: RXNO:0000424 CHEBI:48420 ! has specified reactant chromium trioxide
+created_by: batchelorc
+creation_date: 2014-04-24T15:00:00Z
 
 [Typedef]
 id: BFO:0000055
