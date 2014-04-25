@@ -1,11 +1,26 @@
 format-version: 1.2
+data-version: releases/2014-04-24
 synonymtypedef: FORMULA "FORMULA"
 synonymtypedef: IUPAC_NAME "IUPAC NAME"
+ontology: mop
+
+[Term]
+id: BFO:0000144
+name: process profile
 
 [Term]
 id: CHEBI:15378
 name: hydron
 is_a: CHEBI:36342 ! subatomic particle
+
+[Term]
+id: CHEBI:18379
+name: nitrile
+is_a: CHEBI:36357 ! polyatomic entity
+
+[Term]
+id: CHEBI:24431
+name: chemical entity
 
 [Term]
 id: CHEBI:24433
@@ -17,6 +32,7 @@ synonym: "grupo" RELATED [IUPAC:]
 synonym: "grupos" RELATED [IUPAC:]
 synonym: "Gruppe" RELATED [ChEBI:]
 synonym: "Rest" RELATED [ChEBI:]
+is_a: CHEBI:24431 ! chemical entity
 
 [Term]
 id: CHEBI:24636
@@ -59,8 +75,23 @@ synonym: "OCN-" RELATED [IUPAC:]
 is_a: CHEBI:36823 ! pseudohalo groups
 
 [Term]
+id: CHEBI:32877
+name: primary amine
+is_a: CHEBI:36357 ! polyatomic entity
+
+[Term]
 id: CHEBI:32955
 name: epoxide
+is_a: CHEBI:36357 ! polyatomic entity
+
+[Term]
+id: CHEBI:33595
+name: cyclic compound
+is_a: CHEBI:36357 ! polyatomic entity
+
+[Term]
+id: CHEBI:33641
+name: olefin
 is_a: CHEBI:36357 ! polyatomic entity
 
 [Term]
@@ -77,11 +108,13 @@ is_a: CHEBI:36357 ! polyatomic entity
 [Term]
 id: CHEBI:36342
 name: subatomic particle
+is_a: CHEBI:24431 ! chemical entity
 
 [Term]
 id: CHEBI:36357
 name: polyatomic entity
 def: "Any molecular entity consisting of more than one atom." []
+is_a: CHEBI:24431 ! chemical entity
 
 [Term]
 id: CHEBI:36586
@@ -169,6 +202,11 @@ name: nitrogen group
 is_a: CHEBI:24433 ! group
 
 [Term]
+id: CHEBI:52845
+name: cyclic organic group
+is_a: CHEBI:24433 ! group
+
+[Term]
 id: CHEBI:53310
 name: co-polymer
 is_a: CHEBI:33839 ! macromolecule
@@ -222,6 +260,11 @@ is_a: CHEBI:53310 ! co-polymer
 id: CHEBI:53522
 name: tactic polymer
 is_a: CHEBI:33839 ! macromolecule
+
+[Term]
+id: CHEBI:73474
+name: acetylenic compound
+is_a: CHEBI:36357 ! polyatomic entity
 
 [Term]
 id: MOP:0000000
@@ -1537,8 +1580,9 @@ is_a: MOP:0000162 ! glycosylation
 [Term]
 id: MOP:0000164
 name: beta-D-galactosylation
+alt_id: MOP:0000168
 def: "Formation of a covalent bond between a substrate and a beta-D-galactosyl group." [RSC:xp]
-comment: has_participant: CHEBI:22778
+comment: has_participant: CHEBI:16289
 synonym: "beta-D-galactosylation" EXACT []
 is_a: MOP:0000163 ! galactosylation
 
@@ -1567,16 +1611,9 @@ synonym: "alpha-N-acetylneuraminyl-2,8-alpha-N-acetylneuraminyl-2,3-beta-D-galac
 is_a: MOP:0000164 ! beta-D-galactosylation
 
 [Term]
-id: MOP:0000168
-name: beta-D-galactosylation
-def: "Formation of a covalent bond between a substrate and a beta-D-galactosyl group." [RSC:xp]
-comment: has_participant: CHEBI:16289
-synonym: "beta-D-galactosylation" EXACT []
-is_a: MOP:0000164 ! beta-D-galactosylation
-
-[Term]
 id: MOP:0000169
 name: glucosylation
+alt_id: MOP:0000172
 def: "Formation of a covalent bond between a substrate and a glucosyl group." [RSC:xp]
 comment: has_participant: CHEBI:24281
 synonym: "glucosylation" EXACT []
@@ -1588,7 +1625,7 @@ name: D-galactosyl-1,3-beta-D-galactosyl-1,4-beta-D-glucosylation
 def: "Formation of a covalent bond between a substrate and a D-galactosyl-1,3-beta-D-galactosyl-1,4-beta-D-glucosyl group." [RSC:xp]
 comment: has_participant: CHEBI:17227
 synonym: "D-galactosyl-1,3-beta-D-galactosyl-1,4-beta-D-glucosylation" EXACT []
-is_a: MOP:0000169 ! glucosylation
+is_a: MOP:0000162 ! glycosylation
 
 [Term]
 id: MOP:0000171
@@ -1596,15 +1633,7 @@ name: D-galactosyl-1,4beta-D-glucosylation
 def: "Formation of a covalent bond between a substrate and a D-galactosyl-1,4beta-D-glucosyl group." [RSC:xp]
 comment: has_participant: CHEBI:20966
 synonym: "D-galactosyl-1,4beta-D-glucosylation" EXACT []
-is_a: MOP:0000169 ! glucosylation
-
-[Term]
-id: MOP:0000172
-name: glucosylation
-def: "Formation of a covalent bond between a substrate and a glucosyl group." [RSC:xp]
-comment: has_participant: CHEBI:24280
-synonym: "glucosylation" EXACT []
-is_a: MOP:0000169 ! glucosylation
+is_a: MOP:0000162 ! glycosylation
 
 [Term]
 id: MOP:0000173
@@ -1612,7 +1641,7 @@ name: alpha-glucosylation
 def: "Formation of a covalent bond between a substrate and an alpha-glucosyl group." [RSC:xp]
 comment: has_participant: CHEBI:30684
 synonym: "alpha-glucosylation" EXACT []
-is_a: MOP:0000172 ! glucosylation
+is_a: MOP:0000169 ! glucosylation
 
 [Term]
 id: MOP:0000174
@@ -1620,7 +1649,7 @@ name: beta-glucosylation
 def: "Formation of a covalent bond between a substrate and a beta-glucosyl group." [RSC:xp]
 comment: has_participant: CHEBI:30697
 synonym: "beta-glucosylation" EXACT []
-is_a: MOP:0000172 ! glucosylation
+is_a: MOP:0000169 ! glucosylation
 
 [Term]
 id: MOP:0000175
@@ -1873,6 +1902,7 @@ is_a: MOP:0000162 ! glycosylation
 [Term]
 id: MOP:0000206
 name: mannosylation
+alt_id: MOP:0000209
 def: "Formation of a covalent bond between a substrate and a mannosyl group." [RSC:xp]
 comment: has_participant: CHEBI:25171
 synonym: "mannosylation" EXACT []
@@ -1895,20 +1925,12 @@ synonym: "alpha-D-mannosyl-1,3-(r1)-beta-D-mannosylation" EXACT []
 is_a: MOP:0000206 ! mannosylation
 
 [Term]
-id: MOP:0000209
-name: mannosylation
-def: "Formation of a covalent bond between a substrate and a mannosyl group." [RSC:xp]
-comment: has_participant: CHEBI:25170
-synonym: "mannosylation" EXACT []
-is_a: MOP:0000206 ! mannosylation
-
-[Term]
 id: MOP:0000210
 name: alpha-mannosylation
 def: "Formation of a covalent bond between a substrate and an alpha-mannosyl group." [RSC:xp]
 comment: has_participant: CHEBI:30689
 synonym: "alpha-mannosylation" EXACT []
-is_a: MOP:0000209 ! mannosylation
+is_a: MOP:0000206 ! mannosylation
 
 [Term]
 id: MOP:0000211
@@ -1977,6 +1999,7 @@ is_a: MOP:0000162 ! glycosylation
 [Term]
 id: MOP:0000219
 name: ribosylation
+alt_id: MOP:0000221
 def: "Formation of a covalent bond between a substrate and a ribosyl group." [RSC:xp]
 comment: has_participant: CHEBI:26566
 synonym: "ribosylation" EXACT []
@@ -1988,14 +2011,6 @@ name: adenosinediphosphoribosylation
 def: "Formation of a covalent bond between a substrate and an adenosinediphosphoribosyl group." [RSC:xp]
 comment: has_participant: CHEBI:22259
 synonym: "adenosinediphosphoribosylation" EXACT []
-is_a: MOP:0000219 ! ribosylation
-
-[Term]
-id: MOP:0000221
-name: ribosylation
-def: "Formation of a covalent bond between a substrate and a ribosyl group." [RSC:xp]
-comment: has_participant: CHEBI:26565
-synonym: "ribosylation" EXACT []
 is_a: MOP:0000219 ! ribosylation
 
 [Term]
@@ -3625,11 +3640,11 @@ is_a: MOP:0000420 ! alkenylation
 [Term]
 id: MOP:0000425
 name: prenylation
+alt_id: MOP:0000427
 def: "Formation of a covalent bond between a substrate and a prenyl group." [RSC:xp]
 comment: has_participant: CHEBI:26248
 synonym: "prenylation" EXACT []
 is_a: MOP:0000420 ! alkenylation
-is_a: MOP:0000427 ! prenylation
 
 [Term]
 id: MOP:0000426
@@ -3640,20 +3655,12 @@ synonym: "phytylation" EXACT []
 is_a: MOP:0000420 ! alkenylation
 
 [Term]
-id: MOP:0000427
-name: prenylation
-def: "Formation of a covalent bond between a substrate and a prenyl group." [RSC:xp]
-comment: has_participant: CHEBI:26249
-synonym: "prenylation" EXACT []
-is_a: MOP:0000410 ! hydrocarbylation
-
-[Term]
 id: MOP:0000428
 name: polyprenylation
 def: "Formation of a covalent bond between a substrate and a polyprenyl group." [RSC:xp]
 comment: has_participant: CHEBI:26201
 synonym: "polyprenylation" EXACT []
-is_a: MOP:0000427 ! prenylation
+is_a: MOP:0000425 ! prenylation
 
 [Term]
 id: MOP:0000429
@@ -3685,7 +3692,7 @@ name: retinylation
 def: "Formation of a covalent bond between a substrate and a retinyl group." [RSC:xp]
 comment: has_participant: CHEBI:26541
 synonym: "retinylation" EXACT []
-is_a: MOP:0000427 ! prenylation
+is_a: MOP:0000425 ! prenylation
 
 [Term]
 id: MOP:0000433
@@ -4086,7 +4093,6 @@ name: organosilylation
 def: "Formation of a covalent bond between a substrate and an organosilyl group." [RSC:xp]
 comment: has_participant: CHEBI:33478
 synonym: "organosilylation" EXACT []
-synonym: "silylation" EXACT []
 is_a: MOP:0000480 ! organoheterylation
 
 [Term]
@@ -4167,7 +4173,7 @@ name: thiocarbonylation
 def: "Formation of a covalent bond between a substrate and a thiocarbonyl group." [RSC:xp]
 comment: has_participant: CHEBI:30256
 synonym: "thiocarbonylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000458 ! organylation
 
 [Term]
 id: MOP:0000493
@@ -4175,7 +4181,7 @@ name: (fluoren-9-ylmethoxy)carbonylation
 def: "Formation of a covalent bond between a substrate and a (fluoren-9-ylmethoxy)carbonyl group." [RSC:xp]
 comment: has_participant: CHEBI:48605
 synonym: "(fluoren-9-ylmethoxy)carbonylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000458 ! organylation
 
 [Term]
 id: MOP:0000494
@@ -4183,7 +4189,7 @@ name: carbonylation
 def: "Formation of a covalent bond between a substrate and a carbonyl group." [RSC:xp]
 comment: has_participant: CHEBI:23019
 synonym: "carbonylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000458 ! organylation
 
 [Term]
 id: MOP:0000495
@@ -4191,7 +4197,7 @@ name: cytosin-1-ylation
 def: "Formation of a covalent bond between a substrate and a cytosin-1-yl group." [RSC:xp]
 comment: has_participant: CHEBI:30758
 synonym: "cytosin-1-ylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000480 ! organoheterylation
 
 [Term]
 id: MOP:0000496
@@ -4199,7 +4205,7 @@ name: thymin-1-ylation
 def: "Formation of a covalent bond between a substrate and a thymin-1-yl group." [RSC:xp]
 comment: has_participant: CHEBI:30757
 synonym: "thymin-1-ylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000480 ! organoheterylation
 
 [Term]
 id: MOP:0000497
@@ -4207,7 +4213,7 @@ name: uracil-1-ylation
 def: "Formation of a covalent bond between a substrate and an uracil-1-yl group." [RSC:xp]
 comment: has_participant: CHEBI:30759
 synonym: "uracil-1-ylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000480 ! organoheterylation
 
 [Term]
 id: MOP:0000498
@@ -4570,7 +4576,7 @@ def: "A process in which at least one of the participants is a molecule." [RSC:c
 [Term]
 id: MOP:0000544
 name: indolylamination
-def: "Formation of a covalent bond between a substrate and an indolyl group." [rsc:xp, RSC:xp]
+def: "Formation of a covalent bond between a substrate and an indolyl group." [RSC:xp, rsc:xp]
 comment: has_participant: CHEBI:51609
 is_a: MOP:0000460 ! heteroarylation
 
@@ -4693,12 +4699,13 @@ name: cyclization
 def: "Formation of a ring in a molecule from a chain by formation of a new bond." [AU:C01494]
 synonym: "cyclisation" EXACT []
 is_a: MOP:0000543 ! molecular process
+relationship: BFO:0000077 CHEBI:52845 ! has participant beginning to exist cyclic organic group
 
 [Term]
 id: MOP:0000562
 name: cycloaddition
 def: "A molecular process where two or more unsaturated molecules or parts of the same molecule combine to form a cyclic adduct in which there is a net reduction of bond multiplicity." [AU:C01496]
-is_a: MOP:0000561 ! cyclization
+is_a: MOP:0000543 ! molecular process
 
 [Term]
 id: MOP:0000563
@@ -4725,7 +4732,7 @@ is_a: MOP:0000562 ! cycloaddition
 id: MOP:0000566
 name: formation of covalent bond with group
 def: "Formation of a covalent bond between a substrate and a group." [RSC:cb]
-is_a: MOP:0000543 ! molecular process
+is_a: MOP:0000739 ! formation of covalent bond
 created_by: batchelorc
 creation_date: 2009-04-22T10:01:32Z
 
@@ -4733,7 +4740,7 @@ creation_date: 2009-04-22T10:01:32Z
 id: MOP:0000567
 name: breaking of covalent bond with group
 def: "Breaking of a covalent bond between a substrate and a group." [RSC:cb]
-is_a: MOP:0000543 ! molecular process
+is_a: MOP:0000740 ! breaking of covalent bond
 created_by: batchelorc
 creation_date: 2009-04-30T02:24:32Z
 
@@ -4871,45 +4878,12 @@ created_by: batchelorc
 creation_date: 2009-06-02T05:46:52Z
 
 [Term]
-id: MOP:0000707
-name: oxidative cleavage
-def: "A bond-breaking process where the oxidation states of the reactive centres increase." [RSC:cb]
-is_a: MOP:0000568
-
-[Term]
-id: MOP:0000708
-name: alkene oxidative cleavage
-def: "Oxidative cleavage of an alkene". [RSC:cb]
-is_a: MOP:0000707
-is_a: MOP:0000581 ! alkene oxidation
-
-[Term]
-id: MOP:0000709
-name: allylic oxidation
-def: "Oxidation of an allyl compound to an allylic alcohol." [RSC:cb]
-is_a: MOP:0000568
-
-[Term]
-id: MOP:0000710
-name: benzylic oxidation
-def: "Oxidation of an benzyl compound to an benzylic alcohol." [RSC:cb]
-is_a: MOP:0000568
-
-[Term]
-id: MOP:0000711
-name: nitrile reduction
-def: "Reduction of a nitrile to the corresponding primary amine." [RSC:cb]
-is_a: MOP:0000569 ! reduction
-relationship: has_reactant CHEBI:18379 ! nitrile
-relationship: has_product CHEBI:32877 ! primary amine
-
-[Term]
 id: MOP:0000583
 name: alkene ozonolysis
 def: "An alkene oxidation where the reagent is ozone and the product is the corresponding ozonide." [RSC:cb]
 synonym: "ozonolysis of alkene" EXACT []
 synonym: "ozonolysis of alkenes" EXACT []
-is_a: MOP:0000708
+is_a: MOP:0000708 ! alkene oxidative cleavage
 created_by: batchelorc
 creation_date: 2009-06-02T05:48:42Z
 
@@ -4918,7 +4892,7 @@ id: MOP:0000584
 name: primary alkene oxidation to carboxylic acid and carbon dioxide
 def: "An alkene oxidation process where the reactant is a primary alkene and the products are carboxylic acid and carbon dioxide. This can be achieved with a warm, acidic solution of potassium permanganate." [RSC:cb]
 is_a: MOP:0000581 ! alkene oxidation
-is_a: MOP:0000707
+is_a: MOP:0000707 ! oxidative cleavage
 created_by: batchelorc
 creation_date: 2009-06-02T06:02:46Z
 
@@ -4927,7 +4901,7 @@ id: MOP:0000585
 name: tertiary alkene oxidation to carboxylic acid and ketone
 def: "An alkene oxidation where the reactant is a tertiary alkene and the products are the corresponding carboxylic acid and ketone. This can be achieved with a warm, acidic solution of potassium permanganate." [RSC:cb]
 is_a: MOP:0000581 ! alkene oxidation
-is_a: MOP:0000707
+is_a: MOP:0000707 ! oxidative cleavage
 created_by: batchelorc
 creation_date: 2009-06-02T06:04:14Z
 
@@ -4936,7 +4910,7 @@ id: MOP:0000586
 name: secondary, non-terminal alkene oxidation to aldehydes
 def: "An alkene oxidation process where the reactant is a secondary alkene and the products are the corresponding aldehydes. This can be achieved with warm, acidic potassium permanganate." [RSC:cb]
 is_a: MOP:0000581 ! alkene oxidation
-is_a: MOP:0000707
+is_a: MOP:0000707 ! oxidative cleavage
 created_by: batchelorc
 creation_date: 2009-06-02T06:06:23Z
 
@@ -4944,8 +4918,8 @@ creation_date: 2009-06-02T06:06:23Z
 id: MOP:0000587
 name: secondary terminal alkene oxidation to ketone and carbon dioxide
 def: "An alkene oxidation process where the reactant is a secondary terminal alkene and the products are carbon dioxide and the corresponding ketone. This can be achieved by warm, acidic potassium permanganate solution." [RSC:cb]
-is_a: MOP:0000707
 is_a: MOP:0000581 ! alkene oxidation
+is_a: MOP:0000707 ! oxidative cleavage
 created_by: batchelorc
 creation_date: 2009-06-02T06:07:44Z
 
@@ -4954,7 +4928,7 @@ id: MOP:0000588
 name: quaternary alkene oxidation to ketones
 def: "An alkene oxidation process where the reactant is a quaternary alkene and the products are the corresponding ketones." [RSC:cb]
 is_a: MOP:0000581 ! alkene oxidation
-is_a: MOP:0000707
+is_a: MOP:0000707 ! oxidative cleavage
 created_by: batchelorc
 creation_date: 2009-06-02T06:09:24Z
 
@@ -4965,18 +4939,6 @@ def: "A reduction process that involves addition of hydrogen atoms across a doub
 is_a: MOP:0000569 ! reduction
 created_by: batchelorc
 creation_date: 2009-06-05T04:53:34Z
-
-[Term]
-id: MOP:0000712
-name: olefin reduction
-def: "Hydrogenation of an olefin to a paraffin." [RSC:cb]
-is_a: MOP:0000589
-relationship: has_reactant CHEBI:33641
-
-[Term]
-id: MOP:0000713
-name: acetylene reduction
-is_a: MOP:0000589
 
 [Term]
 id: MOP:0000590
@@ -5032,61 +4994,61 @@ id: MOP:0000596
 name: pseudohalogenation
 def: "Formation of a covalent bond between a substrate and a pseudohalo group." [RSC:xp]
 is_a: MOP:0000566 ! formation of covalent bond with group
-relationship: has_participant CHEBI:36823 ! pseudohalo groups
+relationship: BFO:0000057 CHEBI:36823 ! has_participant pseudohalo groups
 
 [Term]
 id: MOP:0000597
 name: cyanation
 def: "Formation of a covalent bond between a substrate and a cyano group." [RSC:xp]
 is_a: MOP:0000596 ! pseudohalogenation
-relationship: has_participant CHEBI:48819 ! cyano group
+relationship: BFO:0000057 CHEBI:48819 ! has_participant cyano group
 
 [Term]
 id: MOP:0000598
 name: azidation
 def: "Formation of a covalent bond between a substrate and a azido group." [RSC:xp]
 is_a: MOP:0000596 ! pseudohalogenation
-relationship: has_participant CHEBI:36825 ! azido group
+relationship: BFO:0000057 CHEBI:36825 ! has_participant azido group
 
 [Term]
 id: MOP:0000599
 name: isocyanation
 def: "Formation of a covalent bond between a substrate and an isocyano group." [RSC:xp]
 is_a: MOP:0000596 ! pseudohalogenation
-relationship: has_participant CHEBI:36826 ! isocyano group
+relationship: BFO:0000057 CHEBI:36826 ! has_participant isocyano group
 
 [Term]
 id: MOP:0000600
 name: isocyanatation
 def: "Formation of a covalent bond between a substrate and an isocyanato group." [RSC:xp]
 is_a: MOP:0000596 ! pseudohalogenation
-relationship: has_participant CHEBI:29810 ! isocyanato group
+relationship: BFO:0000057 CHEBI:29810 ! has_participant isocyanato group
 
 [Term]
 id: MOP:0000601
 name: isothiocyanatation
 def: "Formation of a covalent bond between a substrate and an isothiocyanate group." [RSC:xp]
 is_a: MOP:0000596 ! pseudohalogenation
-relationship: has_participant CHEBI:29441 ! isothiocyanato group
+relationship: BFO:0000057 CHEBI:29441 ! has_participant isothiocyanato group
 
 [Term]
 id: MOP:0000602
 name: isoselenocyanatation
 def: "Formation of a covalent bond between a substrate and an isoselenocyanate group." [RSC:xp]
 is_a: MOP:0000596 ! pseudohalogenation
-relationship: has_participant CHEBI:29444 ! isoselenocyanato group
+relationship: BFO:0000057 CHEBI:29444 ! has_participant isoselenocyanato group
 
 [Term]
 id: MOP:0000603
 name: isotellurocyanatation
 def: "Formation of a covalent bond between a substrate and an isotellurocyanate group." [RSC:xp]
 is_a: MOP:0000596 ! pseudohalogenation
-relationship: has_participant CHEBI:36827 ! isotellurocyanato group
+relationship: BFO:0000057 CHEBI:36827 ! has_participant isotellurocyanato group
 
 [Term]
 id: MOP:0000604
 name: metal chelation
-def: "The formation of at least two single bonds between a metal atom and a ligand." [AU:C01012 "modified to refer to occurrent", RSC:cb]
+def: "The formation of at least two single bonds between a metal atom and a ligand." [AU:C01012, RSC:cb]
 synonym: "metal ion chelation" NARROW []
 is_a: MOP:0000543 ! molecular process
 created_by: batchelorc
@@ -5199,7 +5161,7 @@ creation_date: 2009-09-15T04:31:22Z
 [Term]
 id: MOP:0000618
 name: solvolysis
-def: "A molecular process where a molecule is broken up by reaction with a molecule that is part of the solvent material. It may be the primary constituent molecule of the solvent material (for example water, ethanol, ammonia) or its lyonium ion or lyate ion." [AU:S05762, RSC:cb "distinguished between solvent material and solvent molecule"]
+def: "A molecular process where a molecule is broken up by reaction with a molecule that is part of the solvent material. It may be the primary constituent molecule of the solvent material (for example water, ethanol, ammonia) or its lyonium ion or lyate ion." [AU:S05762, RSC:cb]
 is_a: MOP:0000543 ! molecular process
 created_by: batchelorc
 creation_date: 2009-09-16T11:11:24Z
@@ -5272,7 +5234,7 @@ creation_date: 2009-09-16T11:22:36Z
 [Term]
 id: MOP:0000627
 name: condensation reaction
-def: "A reaction in which two or more reactants or remote reactive sites within the same molecular entity yield a single main product with accompanying formation of a small molecule." [AU:C01238]
+def: "A reaction in which two or more reactants or remote reactive sites within the same molecular entity yield a single main product with accompanying formation of a small molecule." [doi:10.1351/goldbook.C01238]
 is_a: MOP:0000543 ! molecular process
 created_by: batchelorc
 creation_date: 2009-09-16T11:30:32Z
@@ -5290,8 +5252,10 @@ id: MOP:0000629
 name: polymerisation
 def: "The process of converting a monomer mixture of monomers into a polymer." [doi:10.1351/goldbook.P04740]
 synonym: "polymerization" EXACT []
+is_a: MOP:0000543 ! molecular process
 intersection_of: MOP:0000543 ! molecular process
-intersection_of: has_product CHEBI:33839 ! macromolecule
+intersection_of: BFO:0000077 CHEBI:33839 ! has participant beginning to exist macromolecule
+relationship: BFO:0000077 CHEBI:33839 ! has participant beginning to exist macromolecule
 
 [Term]
 id: MOP:0000630
@@ -5305,34 +5269,44 @@ id: MOP:0000631
 name: copolymerisation
 def: "A polymerisation in which a copolymer is formed." [doi:10.1351/goldbook.C01336]
 synonym: "copolymerization" EXACT []
+is_a: MOP:0000629 ! polymerisation
 intersection_of: MOP:0000543 ! molecular process
-intersection_of: has_product CHEBI:53310 ! co-polymer
+intersection_of: BFO:0000077 CHEBI:53310 ! has participant beginning to exist co-polymer
+relationship: BFO:0000077 CHEBI:53310 ! has participant beginning to exist co-polymer
 
 [Term]
 id: MOP:0000632
 name: condensation polymerisation
 def: "Polymerisation by a repeated condensation process." [doi:10.1351/goldbook.C01237]
 synonym: "condensation polymerization" EXACT []
-intersection_of: MOP:0000543 ! molecular process
-intersection_of: has_part MOP:0000627 ! condensation reaction
-intersection_of: has_product CHEBI:33839 ! macromolecule
+is_a: MOP:0000629 ! polymerisation
+intersection_of: MOP:0000629 ! polymerisation
+intersection_of: BFO:0000077 CHEBI:33839 ! has participant beginning to exist macromolecule
+intersection_of: BFO:0000117 MOP:0000627 ! has occurrent part condensation reaction
+relationship: BFO:0000077 CHEBI:33839 ! has participant beginning to exist macromolecule
+relationship: BFO:0000117 MOP:0000627 ! has occurrent part condensation reaction
 
 [Term]
 id: MOP:0000633
 name: homopolymerisation
 def: "Polymerisation in which a homopolymer is formed." [doi:10.1351/goldbook.H02855]
 synonym: "homopolymerization" EXACT []
+is_a: MOP:0000629 ! polymerisation
 intersection_of: MOP:0000629 ! polymerisation
-intersection_of: has_product CHEBI:37997 ! homopolymer
+intersection_of: BFO:0000077 CHEBI:37997 ! has participant beginning to exist homopolymer
+relationship: BFO:0000077 CHEBI:37997 ! has participant beginning to exist homopolymer
 
 [Term]
 id: MOP:0000634
 name: chain polymerisation
 def: "A chain reaction in which the growth of a polymer chain proceeds exclusively by reaction(s) between monomer(s) and reactive site(s) on the polymer chain with regeneration of the reactive site(s) at the end of each growth step." [doi:10.1351/goldbook.C00958]
 comment: has_part only some particular polymerisation step rather than some other polymerisation step.
+is_a: MOP:0000629 ! polymerisation
+is_a: MOP:0000635 ! chain reaction
 intersection_of: MOP:0000635 ! chain reaction
-intersection_of: has_product CHEBI:33839 ! macromolecule
-relationship: has_part MOP:0000640 ! chain initiation
+intersection_of: BFO:0000077 CHEBI:33839 ! has participant beginning to exist macromolecule
+relationship: BFO:0000077 CHEBI:33839 ! has participant beginning to exist macromolecule
+relationship: BFO:0000117 MOP:0000640 ! has occurrent part chain initiation
 
 [Term]
 id: MOP:0000635
@@ -5375,7 +5349,7 @@ id: MOP:0000640
 name: chain initiation
 def: "A molecular process in which an initiating species adds to a monomer to form a chain carrier." [doi:10.1351/goldbook.C00955]
 is_a: MOP:0000543 ! molecular process
-relationship: part_of MOP:0000634
+relationship: BFO:0000132 MOP:0000634 ! part of occurrent chain polymerisation
 
 [Term]
 id: MOP:0000641
@@ -5394,22 +5368,30 @@ is_a: MOP:0000543 ! molecular process
 id: MOP:0000643
 name: polyaddition
 def: "An all-degree polymerisation that proceeds by addition reactions." [doi:10.1351/goldbook.P04720]
+is_a: MOP:0000641 ! all-degree polymerisation
 intersection_of: MOP:0000641 ! all-degree polymerisation
-intersection_of: has_part MOP:0000642 ! addition reaction
+intersection_of: BFO:0000117 MOP:0000642 ! has occurrent part addition reaction
+relationship: BFO:0000117 MOP:0000642 ! has occurrent part addition reaction
 
 [Term]
 id: MOP:0000644
 name: polycondensation
 def: "An all-degree polymerisation that proceeds by condensation reactions." [doi:10.1351/goldbook.P04722]
+is_a: MOP:0000632 ! condensation polymerisation
+is_a: MOP:0000641 ! all-degree polymerisation
 intersection_of: MOP:0000641 ! all-degree polymerisation
-intersection_of: has_part MOP:0000627 ! condensation reaction
+intersection_of: BFO:0000117 MOP:0000627 ! has occurrent part condensation reaction
+relationship: BFO:0000117 MOP:0000627 ! has occurrent part condensation reaction
 
 [Term]
 id: MOP:0000645
 name: condensative chain polymerisation
 def: "A chain polymerisation that proceeds by condensation steps." [doi:10.1351/goldbook.C01239]
+is_a: MOP:0000632 ! condensation polymerisation
+is_a: MOP:0000634 ! chain polymerisation
 intersection_of: MOP:0000634 ! chain polymerisation
-intersection_of: has_part MOP:0000627 ! condensation reaction
+intersection_of: BFO:0000117 MOP:0000627 ! has occurrent part condensation reaction
+relationship: BFO:0000117 MOP:0000627 ! has occurrent part condensation reaction
 
 [Term]
 id: MOP:0000646
@@ -5423,8 +5405,11 @@ id: MOP:0000647
 name: ionic copolymerisation
 def: "An ionic polymerisation where the product is a copolymer." [RSC:cb]
 synonym: "ionic copolymerization" EXACT []
+is_a: MOP:0000631 ! copolymerisation
+is_a: MOP:0000637 ! ionic polymerisation
 intersection_of: MOP:0000637 ! ionic polymerisation
-intersection_of: has_product CHEBI:53310 ! co-polymer
+intersection_of: BFO:0000077 CHEBI:53310 ! has participant beginning to exist co-polymer
+relationship: BFO:0000077 CHEBI:53310 ! has participant beginning to exist co-polymer
 
 [Term]
 id: MOP:0000648
@@ -5433,29 +5418,35 @@ def: "A radical polymerisation where the product is a copolymer." [RSC:cb]
 synonym: "free radical copolymerisation" EXACT []
 synonym: "free radical copolymerization" EXACT []
 synonym: "radical copolymerization" EXACT []
+is_a: MOP:0000631 ! copolymerisation
+is_a: MOP:0000639 ! radical polymerisation
 intersection_of: MOP:0000639 ! radical polymerisation
-intersection_of: has_product CHEBI:53310 ! co-polymer
+intersection_of: BFO:0000077 CHEBI:53310 ! has participant beginning to exist co-polymer
+relationship: BFO:0000077 CHEBI:53310 ! has participant beginning to exist co-polymer
 
 [Term]
 id: MOP:0000649
 name: living copolymerisation
 def: "A living polymerisation where the product is a copolymer." [RSC:cb]
+is_a: MOP:0000631 ! copolymerisation
+is_a: MOP:0000646 ! living polymerisation
 intersection_of: MOP:0000646 ! living polymerisation
-intersection_of: has_product CHEBI:53310 ! co-polymer
+intersection_of: BFO:0000077 CHEBI:53310 ! has participant beginning to exist co-polymer
+relationship: BFO:0000077 CHEBI:53310 ! has participant beginning to exist co-polymer
 
 [Term]
 id: MOP:0000650
 name: amination
 def: "Formation of a covalent bond between a substrate and an amino group." [RSC:cb]
 is_a: MOP:0000566 ! formation of covalent bond with group
-relationship: has_participant CHEBI:51142 ! amino groups
+relationship: BFO:0000057 CHEBI:51142 ! has_participant amino groups
 
 [Term]
 id: MOP:0000651
 name: deamination
 def: "Breaking of a covalent bond between a substrate and an amino group." [RSC:cb]
 is_a: MOP:0000567 ! breaking of covalent bond with group
-relationship: has_participant CHEBI:51142 ! amino groups
+relationship: BFO:0000057 CHEBI:51142 ! has_participant amino groups
 
 [Term]
 id: MOP:0000652
@@ -5613,24 +5604,29 @@ is_a: MOP:0000642 ! addition reaction
 id: MOP:0000671
 name: epoxidation
 def: "A molecular process that results in the formation of an epoxide." [RSC:cb]
+is_a: MOP:0000543 ! molecular process
 intersection_of: MOP:0000543 ! molecular process
-intersection_of: has_product CHEBI:32955 ! epoxide
+intersection_of: BFO:0000077 CHEBI:32955 ! has participant beginning to exist epoxide
+relationship: BFO:0000077 CHEBI:32955 ! has participant beginning to exist epoxide
 
 [Term]
 id: MOP:0000672
 name: enolization
 def: "A molecular process where a carbonyl compound is converted an enol. Usually this is a reversible tautomerization but it can be irreversible." [RSC:cb]
 synonym: "enolisation" EXACT []
-intersection_of: MOP:0000543 ! molecular process
-intersection_of: has_product CHEBI:33823 ! enol
-intersection_of: has_reactant CHEBI:36586 ! carbonyl compound
+is_a: MOP:0000724 ! tautomerisation
+intersection_of: MOP:0000724 ! tautomerisation
+intersection_of: BFO:0000077 CHEBI:33823 ! has participant beginning to exist enol
+intersection_of: BFO:0000078 CHEBI:36586 ! has participant ceasing to exist carbonyl compound
+relationship: BFO:0000077 CHEBI:33823 ! has participant beginning to exist enol
+relationship: BFO:0000078 CHEBI:36586 ! has participant ceasing to exist carbonyl compound
 
 [Term]
 id: MOP:0000673
 name: hydroxylation
 def: "Formation of a covalent bond between a substrate and a hydroxy group." [RSC:cb]
 is_a: MOP:0000566 ! formation of covalent bond with group
-relationship: has_participant CHEBI:43176 ! hydroxy group
+relationship: BFO:0000057 CHEBI:43176 ! has_participant hydroxy group
 
 [Term]
 id: MOP:0000674
@@ -5661,30 +5657,33 @@ id: MOP:0000677
 name: transmetallation
 def: "Transfer of a metal atom from one substrate to another." [RSC:cb]
 is_a: MOP:0000543 ! molecular process
-relationship: has_part MOP:0000674 ! metallation
-relationship: has_part MOP:0000676 ! demetallation
+relationship: BFO:0000117 MOP:0000674 ! has occurrent part metallation
+relationship: BFO:0000117 MOP:0000676 ! has occurrent part demetallation
 
 [Term]
 id: MOP:0000678
 name: cyanosilylation
 def: "1/2/addition across a double bond of a cyano group and a silyl group." [RSC:cb]
+is_a: MOP:0000665 ! 1/2/addition reaction
 intersection_of: MOP:0000665 ! 1/2/addition reaction
-intersection_of: has_part MOP:0000482 ! organosilylation
-intersection_of: has_part MOP:0000597 ! cyanation
+intersection_of: BFO:0000117 MOP:0000482 ! has occurrent part organosilylation
+intersection_of: BFO:0000117 MOP:0000597 ! has occurrent part cyanation
+relationship: BFO:0000117 MOP:0000482 ! has occurrent part organosilylation
+relationship: BFO:0000117 MOP:0000597 ! has occurrent part cyanation
 
 [Term]
 id: MOP:0000679
 name: electron pair transfer
 def: "A process where an electron pair is transferred from one molecular entity or part of a molecular entity to a different molecular entity or part of the same molecular entity." [RSC:cb]
 is_a: MOP:0000543 ! molecular process
-relationship: has_part MOP:0000615 ! electron transfer
+relationship: BFO:0000117 MOP:0000615 ! has occurrent part electron transfer
 
 [Term]
 id: MOP:0000680
 name: proton transfer
 def: "A process where a proton is transferred from one binding site to another." [doi:10.1351/goldbook.P04915]
 is_a: MOP:0000682 ! hydron transfer
-relationship: has_participant CHEBI:24636 ! proton
+relationship: BFO:0000057 CHEBI:24636 ! has_participant proton
 
 [Term]
 id: MOP:0000681
@@ -5697,14 +5696,14 @@ id: MOP:0000682
 name: hydron transfer
 def: "A process where a hydron is transferred from one binding site to another." [RSC:cb]
 is_a: MOP:0000543 ! molecular process
-relationship: has_participant CHEBI:15378 ! hydron
+relationship: BFO:0000057 CHEBI:15378 ! has_participant hydron
 
 [Term]
 id: MOP:0000683
 name: deuteron transfer
 def: "A process where a hydron is transferred from one binding site to another." [RSC:cb]
 is_a: MOP:0000682 ! hydron transfer
-relationship: has_participant CHEBI:29233 ! deuteron
+relationship: BFO:0000057 CHEBI:29233 ! has_participant deuteron
 
 [Term]
 id: MOP:0000684
@@ -5720,8 +5719,10 @@ name: ring-opening metathesis polymerisation
 def: "A ring-opening polymerisation that proceeds by metathesis steps." [RSC:cb]
 synonym: "ring-opening metathesis polymerisation" EXACT []
 synonym: "ROMP" EXACT []
+is_a: MOP:0000686 ! ring-opening polymerisation
 intersection_of: MOP:0000686 ! ring-opening polymerisation
-intersection_of: has_part MOP:0000687 ! metathesis
+intersection_of: BFO:0000117 MOP:0000687 ! has occurrent part metathesis
+relationship: BFO:0000117 MOP:0000687 ! has occurrent part metathesis
 
 [Term]
 id: MOP:0000686
@@ -5742,12 +5743,15 @@ id: MOP:0000688
 name: ring-opening copolymerisation
 def: "A ring-opening polymerisation where the product is a copolymer." [RSC:cb]
 synonym: "ring-opening copolymerization" EXACT []
+is_a: MOP:0000631 ! copolymerisation
+is_a: MOP:0000686 ! ring-opening polymerisation
 intersection_of: MOP:0000686 ! ring-opening polymerisation
-intersection_of: has_product CHEBI:53310 ! co-polymer
+intersection_of: BFO:0000077 CHEBI:53310 ! has participant beginning to exist co-polymer
+relationship: BFO:0000077 CHEBI:53310 ! has participant beginning to exist co-polymer
 
 [Term]
 id: MOP:0000689
-name: reversible addition--fragmentation chain transfer polymerisation
+name: reversible addition-fragmentation chain transfer polymerisation
 def: "A living polymerisation process where a transfer agent AX, reacts reversibly with an initiating radical R. or a propagating radical R(M)[n]. to give another transfer agent RX or R(M)[n]X and a species capable of initiating polymerisation." [doi:10.1021/ma9804951]
 synonym: "RAFT polymerisation" EXACT []
 synonym: "RAFT polymerization" EXACT []
@@ -5784,94 +5788,114 @@ id: MOP:0000693
 name: alternating copolymerisation
 def: "A copolymerisation in which an alternating copolymer is formed." [doi:10.1351/goldbook.A00251]
 synonym: "alternating copolymerization" EXACT []
+is_a: MOP:0000631 ! copolymerisation
 intersection_of: MOP:0000631 ! copolymerisation
-intersection_of: has_product CHEBI:53517 ! alternating copolymer
+intersection_of: BFO:0000077 CHEBI:53517 ! has participant beginning to exist alternating copolymer
+relationship: BFO:0000077 CHEBI:53517 ! has participant beginning to exist alternating copolymer
 
 [Term]
 id: MOP:0000694
 name: graft copolymerisation
 def: "A copolymerisation in which a graft copolymer is formed." [doi:10.1351/goldbook.G02676]
 synonym: "graft copolymerization" EXACT []
+is_a: MOP:0000631 ! copolymerisation
 intersection_of: MOP:0000631 ! copolymerisation
-intersection_of: has_product CHEBI:53519 ! graft copolymer
+intersection_of: BFO:0000077 CHEBI:53519 ! has participant beginning to exist graft copolymer
+relationship: BFO:0000077 CHEBI:53519 ! has participant beginning to exist graft copolymer
 
 [Term]
 id: MOP:0000695
 name: periodic copolymerisation
 def: "A copolymerisation in which a periodic copolymer is formed." [doi:10.1351/goldbook.P04495]
 synonym: "periodic copolymerization" EXACT []
+is_a: MOP:0000631 ! copolymerisation
 intersection_of: MOP:0000631 ! copolymerisation
-intersection_of: has_product CHEBI:53520 ! periodic copolymer
+intersection_of: BFO:0000077 CHEBI:53520 ! has participant beginning to exist periodic copolymer
+relationship: BFO:0000077 CHEBI:53520 ! has participant beginning to exist periodic copolymer
 
 [Term]
 id: MOP:0000696
 name: random copolymerisation
 def: "A copolymerisation in which a random copolymer is formed." [doi:10.1351/goldbook.R05127]
 synonym: "random copolymerization" EXACT []
+is_a: MOP:0000631 ! copolymerisation
 intersection_of: MOP:0000631 ! copolymerisation
-intersection_of: has_product CHEBI:53521 ! random copolymer
+intersection_of: BFO:0000077 CHEBI:53521 ! has participant beginning to exist random copolymer
+relationship: BFO:0000077 CHEBI:53521 ! has participant beginning to exist random copolymer
 
 [Term]
 id: MOP:0000697
 name: statistical copolymerisation
 def: "A copolymerisation in which a statistical copolymer is formed." [doi:10.1351/goldbook.S05956]
 synonym: "statistical copolymerization" EXACT []
+is_a: MOP:0000631 ! copolymerisation
 intersection_of: MOP:0000631 ! copolymerisation
-intersection_of: has_product CHEBI:53516 ! statistical copolymer
+intersection_of: BFO:0000077 CHEBI:53516 ! has participant beginning to exist statistical copolymer
+relationship: BFO:0000077 CHEBI:53516 ! has participant beginning to exist statistical copolymer
 
 [Term]
 id: MOP:0000698
 name: stereospecific copolymerisation
 def: "A copolymerisation in which a tactic copolymer is formed." [doi:10.1351/goldbook.R05127]
 synonym: "stereospecific copolymerization" EXACT []
+is_a: MOP:0000631 ! copolymerisation
 intersection_of: MOP:0000631 ! copolymerisation
-intersection_of: has_product CHEBI:53522 ! tactic polymer
+intersection_of: BFO:0000077 CHEBI:53522 ! has participant beginning to exist tactic polymer
+relationship: BFO:0000077 CHEBI:53522 ! has participant beginning to exist tactic polymer
 
 [Term]
 id: MOP:0000699
 name: block copolymerisation
 def: "A copolymerisation in which a block copolymer is formed." [RSC:cb]
 synonym: "block copolymerization" EXACT []
+is_a: MOP:0000631 ! copolymerisation
 intersection_of: MOP:0000631 ! copolymerisation
-intersection_of: has_product CHEBI:53511 ! block copolymer
+intersection_of: BFO:0000077 CHEBI:53511 ! has participant beginning to exist block copolymer
+relationship: BFO:0000077 CHEBI:53511 ! has participant beginning to exist block copolymer
 
 [Term]
 id: MOP:0000700
 name: diblock copolymerisation
 def: "A copolymerisation in which a diblock copolymer is formed." [RSC:cb]
 synonym: "diblock copolymerization" EXACT []
+is_a: MOP:0000699 ! block copolymerisation
 intersection_of: MOP:0000631 ! copolymerisation
-intersection_of: has_product CHEBI:53511 ! block copolymer
+intersection_of: BFO:0000077 CHEBI:53512 ! has participant beginning to exist diblock copolymer
+relationship: BFO:0000077 CHEBI:53512 ! has participant beginning to exist diblock copolymer
 
 [Term]
 id: MOP:0000701
 name: triblock copolymerisation
 def: "A copolymerisation in which a triblock copolymer is formed." [RSC:cb]
 synonym: "triblock copolymerization" EXACT []
+is_a: MOP:0000699 ! block copolymerisation
 intersection_of: MOP:0000631 ! copolymerisation
-intersection_of: has_product CHEBI:53511 ! block copolymer
+intersection_of: BFO:0000077 CHEBI:53513 ! has participant beginning to exist triblock copolymer
+relationship: BFO:0000077 CHEBI:53513 ! has participant beginning to exist triblock copolymer
 
 [Term]
 id: MOP:0000702
 name: graft polymerisation
 def: "A polymerisation in which a graft polymer is formed." [RSC:cb]
 synonym: "graft polymerization" EXACT []
+is_a: MOP:0000629 ! polymerisation
 intersection_of: MOP:0000629 ! polymerisation
-intersection_of: has_product CHEBI:53518 ! graft polymer
+intersection_of: BFO:0000077 CHEBI:53518 ! has participant beginning to exist graft polymer
+relationship: BFO:0000077 CHEBI:53518 ! has participant beginning to exist graft polymer
 
 [Term]
 id: MOP:0000703
 name: N-deacetylation
 def: "A molecular process where a bond between an acetyl group and a nitrogen atom is broken." [RSC:cb]
 is_a: MOP:0001030 ! deacetylation
-relationship: has_participant CHEBI:40574 ! acetyl group
+relationship: BFO:0000057 CHEBI:40574 ! has_participant acetyl group
 
 [Term]
 id: MOP:0000704
 name: O-deacetylation
 def: "A molecular process where a bond between an acetyl group and an oxygen atom is broken." [RSC:cb]
 is_a: MOP:0001030 ! deacetylation
-relationship: has_participant CHEBI:40574 ! acetyl group
+relationship: BFO:0000057 CHEBI:40574 ! has_participant acetyl group
 
 [Term]
 id: MOP:0000705
@@ -5886,34 +5910,49 @@ def: "An oxidation process where the oxidation state of at least one nitrogen at
 is_a: MOP:0000568 ! oxidation
 
 [Term]
-id: MOP:0000724
-name: tautomerisation
-def: "Isomerisation between tautomers." [AU:T06252]
-is_a: MOP:0000543
+id: MOP:0000707
+name: oxidative cleavage
+def: "A bond-breaking process where the oxidation states of the reactive centres increase." [RSC:cb]
+is_a: MOP:0000568 ! oxidation
 
 [Term]
-id: MOP:0000725
-name: keto-enol tautomerisation
-def: "Isomerisation between the keto- and enol-forms of a molecule." [RSC:cb]
-is_a: MOP:0000727
+id: MOP:0000708
+name: alkene oxidative cleavage
+def: "Oxidative cleavage of an alkene." [RSC:cb]
+is_a: MOP:0000581 ! alkene oxidation
+is_a: MOP:0000707 ! oxidative cleavage
 
 [Term]
-id: MOP:0000726
-name: ring-chain tautomerisation
-def: "Tautomerisation that involves the breaking of a ring in one direction and formation of a ring in the other." [RSC:cb]
-is_a: MOP:0000724
+id: MOP:0000709
+name: allylic oxidation
+def: "Oxidation of an allyl compound to an allylic alcohol." [RSC:cb]
+is_a: MOP:0000568 ! oxidation
 
 [Term]
-id: MOP:0000727
-name: prototropy
-def: "A tautomerisation process where the leaving group is a proton." [AU:T06252]
-is_a: MOP:0000724
+id: MOP:0000710
+name: benzylic oxidation
+def: "Oxidation of an benzyl compound to an benzylic alcohol." [RSC:cb]
+is_a: MOP:0000568 ! oxidation
 
 [Term]
-id: MOP:0000728
-name: sigmatropic rearrangement
-def: "A molecular process that involves breaking a sigma bond, creating a sigma bond between two unconnected atoms and preserving the number of pi bonds in the system." [AU:S05660]
-is_a: MOP:0000543
+id: MOP:0000711
+name: nitrile reduction
+def: "Reduction of a nitrile to the corresponding primary amine." [RSC:cb]
+is_a: MOP:0000569 ! reduction
+relationship: BFO:0000077 CHEBI:32877 ! has participant beginning to exist primary amine
+relationship: BFO:0000078 CHEBI:18379 ! has participant ceasing to exist nitrile
+
+[Term]
+id: MOP:0000712
+name: olefin reduction
+def: "Hydrogenation of an olefin to a paraffin." [RSC:cb]
+is_a: MOP:0000589 ! hydrogenation
+relationship: BFO:0000078 CHEBI:33641 ! has participant ceasing to exist olefin
+
+[Term]
+id: MOP:0000713
+name: acetylene reduction
+is_a: MOP:0000589 ! hydrogenation
 
 [Term]
 id: MOP:0000721
@@ -5921,18 +5960,293 @@ name: [3,3]-sigmatropic rearrangement
 alt_id: RXNO:0000027
 def: "A sigmatropic rearrangement where the intermediate consists of two three-electron fragments." [RSC:cb]
 comment: This term was obsoleted from the RXNO namespace and transferred to MOP because it is a process identifiable by its mechanism rather than the intention of the experimenter.
-is_a: MOP:0000728
+is_a: MOP:0000728 ! sigmatropic rearrangement
+
+[Term]
+id: MOP:0000724
+name: tautomerisation
+def: "Isomerisation between tautomers." [AU:T06252]
+is_a: MOP:0000543 ! molecular process
+
+[Term]
+id: MOP:0000725
+name: keto-enol tautomerisation
+def: "Isomerisation between the keto- and enol-forms of a molecule." [RSC:cb]
+is_a: MOP:0000727 ! prototropy
+
+[Term]
+id: MOP:0000726
+name: ring-chain tautomerisation
+def: "Tautomerisation that involves the breaking of a ring in one direction and formation of a ring in the other." [RSC:cb]
+is_a: MOP:0000724 ! tautomerisation
+
+[Term]
+id: MOP:0000727
+name: prototropy
+def: "A tautomerisation process where the leaving group is a proton." [AU:T06252]
+is_a: MOP:0000724 ! tautomerisation
+
+[Term]
+id: MOP:0000728
+name: sigmatropic rearrangement
+def: "A molecular process that involves breaking a sigma bond, creating a sigma bond between two unconnected atoms and preserving the number of pi bonds in the system." [AU:S05660]
+is_a: MOP:0000543 ! molecular process
 
 [Term]
 id: MOP:0000729
 name: valence tautomerisation
 def: "A reversible molecular process that involves the breaking or formation of single or double bonds without migrating atoms or groups." [AU:V06591]
-is_a: MOP:0000543
+is_a: MOP:0000543 ! molecular process
 
 [Term]
 id: MOP:0000730
 name: 6-endo-dig cyclization
-is_a: MOP:0000562
+is_a: MOP:0000731 ! endocyclization
+relationship: BFO:0000117 MOP:0000735 ! has occurrent part bond formation to digonal centre
+relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000731
+name: endocyclization
+def: "A cyclization where there is a reduction in bond order of a bond that ends up within the newly-formed ring." [RSC:cb]
+is_a: MOP:0000561 ! cyclization
+
+[Term]
+id: MOP:0000732
+name: exocyclization
+def: "A cyclization where there is a reduction in bond order of a bond that ends up outside the newly-formed ring." [RSC:cb]
+is_a: MOP:0000561 ! cyclization
+
+[Term]
+id: MOP:0000733
+name: Baldwin-favoured profile
+def: "Profile of a cyclization that is favoured according to Baldwin's empirical rules. These apply best to neutral systems consisting of first-row atoms." [RSC:cb]
+is_a: BFO:0000144 ! process profile
+relationship: BFO:0000133 MOP:0000561 ! process profile of cyclization
+
+[Term]
+id: MOP:0000734
+name: Baldwin-disfavoured profile
+def: "Profile of a cyclization that is disfavoured according to Baldwin's empirical rules. These apply best to neutral systems consisting of first-row atoms." [RSC:cb]
+is_a: BFO:0000144 ! process profile
+relationship: BFO:0000133 MOP:0000561 ! process profile of cyclization
+
+[Term]
+id: MOP:0000735
+name: bond formation to digonal centre
+def: "A covalent bond formation where the active centre has sp hybridization." [RSC:cb]
+is_a: MOP:0000739 ! formation of covalent bond
+
+[Term]
+id: MOP:0000736
+name: bond formation to trigonal centre
+def: "A bond formation where the active centre has sp2 hybridization." [RSC:cb]
+is_a: MOP:0000739 ! formation of covalent bond
+
+[Term]
+id: MOP:0000737
+name: bond formation to tetragonal centre
+def: "A bond formation where the active centre has sp3 hybridization." [RSC:cb]
+is_a: MOP:0000739 ! formation of covalent bond
+
+[Term]
+id: MOP:0000738
+name: 3-exo-tet cyclization
+is_a: MOP:0000732 ! exocyclization
+relationship: BFO:0000117 MOP:0000737 ! has occurrent part bond formation to tetragonal centre
+relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000739
+name: formation of covalent bond
+is_a: MOP:0000543 ! molecular process
+
+[Term]
+id: MOP:0000740
+name: breaking of covalent bond
+is_a: MOP:0000543 ! molecular process
+
+[Term]
+id: MOP:0000741
+name: 4-exo-tet cyclization
+is_a: MOP:0000732 ! exocyclization
+relationship: BFO:0000117 MOP:0000737 ! has occurrent part bond formation to tetragonal centre
+relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000742
+name: 5-exo-tet cyclization
+is_a: MOP:0000732 ! exocyclization
+relationship: BFO:0000117 MOP:0000737 ! has occurrent part bond formation to tetragonal centre
+relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000743
+name: 6-exo-tet cyclization
+is_a: MOP:0000732 ! exocyclization
+relationship: BFO:0000117 MOP:0000737 ! has occurrent part bond formation to tetragonal centre
+relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000744
+name: 7-exo-tet cyclization
+is_a: MOP:0000732 ! exocyclization
+relationship: BFO:0000117 MOP:0000737 ! has occurrent part bond formation to tetragonal centre
+relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000745
+name: 5-endo-tet cyclization
+is_a: MOP:0000731 ! endocyclization
+relationship: BFO:0000117 MOP:0000737 ! has occurrent part bond formation to tetragonal centre
+relationship: BFO:0000119 MOP:0000734 ! has profile Baldwin-disfavoured profile
+
+[Term]
+id: MOP:0000746
+name: 6-endo-tet cyclization
+is_a: MOP:0000731 ! endocyclization
+relationship: BFO:0000117 MOP:0000737 ! has occurrent part bond formation to tetragonal centre
+relationship: BFO:0000119 MOP:0000734 ! has profile Baldwin-disfavoured profile
+
+[Term]
+id: MOP:0000747
+name: 7-endo-tet cyclization
+is_a: MOP:0000731 ! endocyclization
+relationship: BFO:0000117 MOP:0000737 ! has occurrent part bond formation to tetragonal centre
+relationship: BFO:0000119 MOP:0000734 ! has profile Baldwin-disfavoured profile
+
+[Term]
+id: MOP:0000748
+name: 3-exo-trig cyclization
+is_a: MOP:0000732 ! exocyclization
+relationship: BFO:0000117 MOP:0000736 ! has occurrent part bond formation to trigonal centre
+relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000749
+name: 3-exo-dig cyclization
+is_a: MOP:0000732 ! exocyclization
+relationship: BFO:0000117 MOP:0000735 ! has occurrent part bond formation to digonal centre
+relationship: BFO:0000119 MOP:0000734 ! has profile Baldwin-disfavoured profile
+
+[Term]
+id: MOP:0000750
+name: 3-endo-dig cyclization
+is_a: MOP:0000731 ! endocyclization
+relationship: BFO:0000117 MOP:0000735 ! has occurrent part bond formation to digonal centre
+relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000751
+name: 3-endo-trig cyclization
+is_a: MOP:0000731 ! endocyclization
+relationship: BFO:0000117 MOP:0000736 ! has occurrent part bond formation to trigonal centre
+relationship: BFO:0000119 MOP:0000734 ! has profile Baldwin-disfavoured profile
+
+[Term]
+id: MOP:0000752
+name: 4-exo-trig cyclization
+is_a: MOP:0000732 ! exocyclization
+relationship: BFO:0000117 MOP:0000736 ! has occurrent part bond formation to trigonal centre
+relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000753
+name: 4-endo-trig cyclization
+is_a: MOP:0000731 ! endocyclization
+relationship: BFO:0000117 MOP:0000736 ! has occurrent part bond formation to trigonal centre
+relationship: BFO:0000119 MOP:0000734 ! has profile Baldwin-disfavoured profile
+
+[Term]
+id: MOP:0000754
+name: 4-endo-dig cyclization
+is_a: MOP:0000731 ! endocyclization
+relationship: BFO:0000117 MOP:0000735 ! has occurrent part bond formation to digonal centre
+relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000755
+name: 5-exo-trig cyclization
+is_a: MOP:0000732 ! exocyclization
+relationship: BFO:0000117 MOP:0000736 ! has occurrent part bond formation to trigonal centre
+relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000756
+name: 5-exo-dig cyclization
+is_a: MOP:0000732 ! exocyclization
+relationship: BFO:0000117 MOP:0000735 ! has occurrent part bond formation to digonal centre
+relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000757
+name: 5-endo-trig cyclization
+is_a: MOP:0000731 ! endocyclization
+relationship: BFO:0000117 MOP:0000736 ! has occurrent part bond formation to trigonal centre
+relationship: BFO:0000119 MOP:0000734 ! has profile Baldwin-disfavoured profile
+
+[Term]
+id: MOP:0000758
+name: 5-endo-dig cyclization
+is_a: MOP:0000731 ! endocyclization
+relationship: BFO:0000117 MOP:0000735 ! has occurrent part bond formation to digonal centre
+relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000759
+name: 6-endo-trig cyclization
+is_a: MOP:0000731 ! endocyclization
+relationship: BFO:0000117 MOP:0000736 ! has occurrent part bond formation to trigonal centre
+relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000760
+name: 7-endo-trig cyclization
+is_a: MOP:0000731 ! endocyclization
+relationship: BFO:0000117 MOP:0000736 ! has occurrent part bond formation to trigonal centre
+relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000761
+name: 7-endo-dig cyclization
+is_a: MOP:0000731 ! endocyclization
+relationship: BFO:0000117 MOP:0000735 ! has occurrent part bond formation to digonal centre
+relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000762
+name: 4-exo-dig cyclization
+is_a: MOP:0000732 ! exocyclization
+relationship: BFO:0000117 MOP:0000735 ! has occurrent part bond formation to digonal centre
+relationship: BFO:0000119 MOP:0000734 ! has profile Baldwin-disfavoured profile
+
+[Term]
+id: MOP:0000763
+name: 6-exo-dig cyclization
+is_a: MOP:0000732 ! exocyclization
+relationship: BFO:0000117 MOP:0000735 ! has occurrent part bond formation to digonal centre
+relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000764
+name: 7-exo-dig cyclization
+is_a: MOP:0000732 ! exocyclization
+relationship: BFO:0000117 MOP:0000735 ! has occurrent part bond formation to digonal centre
+relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000765
+name: 6-exo-trig cyclization
+is_a: MOP:0000732 ! exocyclization
+relationship: BFO:0000117 MOP:0000736 ! has occurrent part bond formation to trigonal centre
+relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000766
+name: 7-exo-trig cyclization
+is_a: MOP:0000732 ! exocyclization
+relationship: BFO:0000117 MOP:0000736 ! has occurrent part bond formation to trigonal centre
+relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
 
 [Term]
 id: MOP:0001000
@@ -7085,6 +7399,7 @@ is_a: MOP:0001162 ! deglycosylation
 [Term]
 id: MOP:0001164
 name: de-beta-D-galactosylation
+alt_id: MOP:0001168
 def: "Breaking of a covalent bond between a substrate and a beta-D-galactosyl group." [RSC:xp]
 comment: has_participant: CHEBI:22778
 is_a: MOP:0001163 ! degalactosylation
@@ -7111,15 +7426,9 @@ comment: has_participant: CHEBI:17483
 is_a: MOP:0001164 ! de-beta-D-galactosylation
 
 [Term]
-id: MOP:0001168
-name: de-beta-D-galactosylation
-def: "Breaking of a covalent bond between a substrate and a beta-D-galactosyl group." [RSC:xp]
-comment: has_participant: CHEBI:16289
-is_a: MOP:0001164 ! de-beta-D-galactosylation
-
-[Term]
 id: MOP:0001169
 name: deglucosylation
+alt_id: MOP:0001172
 def: "Breaking of a covalent bond between a substrate and a glucosyl group." [RSC:xp]
 comment: has_participant: CHEBI:24281
 is_a: MOP:0001162 ! deglycosylation
@@ -7139,25 +7448,18 @@ comment: has_participant: CHEBI:20966
 is_a: MOP:0001169 ! deglucosylation
 
 [Term]
-id: MOP:0001172
-name: deglucosylation
-def: "Breaking of a covalent bond between a substrate and a glucosyl group." [RSC:xp]
-comment: has_participant: CHEBI:24280
-is_a: MOP:0001169 ! deglucosylation
-
-[Term]
 id: MOP:0001173
 name: de-alpha-glucosylation
 def: "Breaking of a covalent bond between a substrate and an alpha-glucosyl group." [RSC:xp]
 comment: has_participant: CHEBI:30684
-is_a: MOP:0001172 ! deglucosylation
+is_a: MOP:0001169 ! deglucosylation
 
 [Term]
 id: MOP:0001174
 name: de-beta-glucosylation
 def: "Breaking of a covalent bond between a substrate and a beta-glucosyl group." [RSC:xp]
 comment: has_participant: CHEBI:30697
-is_a: MOP:0001172 ! deglucosylation
+is_a: MOP:0001169 ! deglucosylation
 
 [Term]
 id: MOP:0001175
@@ -7379,6 +7681,7 @@ is_a: MOP:0001162 ! deglycosylation
 [Term]
 id: MOP:0001206
 name: demannosylation
+alt_id: MOP:0001209
 def: "Breaking of a covalent bond between a substrate and a mannosyl group." [RSC:xp]
 comment: has_participant: CHEBI:25171
 is_a: MOP:0001162 ! deglycosylation
@@ -7398,18 +7701,11 @@ comment: has_participant: CHEBI:22406
 is_a: MOP:0001206 ! demannosylation
 
 [Term]
-id: MOP:0001209
-name: demannosylation
-def: "Breaking of a covalent bond between a substrate and a mannosyl group." [RSC:xp]
-comment: has_participant: CHEBI:25170
-is_a: MOP:0001206 ! demannosylation
-
-[Term]
 id: MOP:0001210
 name: de-alpha-mannosylation
 def: "Breaking of a covalent bond between a substrate and an alpha-mannosyl group." [RSC:xp]
 comment: has_participant: CHEBI:30689
-is_a: MOP:0001209 ! demannosylation
+is_a: MOP:0001206 ! demannosylation
 
 [Term]
 id: MOP:0001211
@@ -7470,6 +7766,7 @@ is_a: MOP:0001162 ! deglycosylation
 [Term]
 id: MOP:0001219
 name: deribosylation
+alt_id: MOP:0001221
 def: "Breaking of a covalent bond between a substrate and a ribosyl group." [RSC:xp]
 comment: has_participant: CHEBI:26566
 is_a: MOP:0001162 ! deglycosylation
@@ -7479,13 +7776,6 @@ id: MOP:0001220
 name: deadenosinediphosphoribosylation
 def: "Breaking of a covalent bond between a substrate and an adenosinediphosphoribosyl group." [RSC:xp]
 comment: has_participant: CHEBI:22259
-is_a: MOP:0001219 ! deribosylation
-
-[Term]
-id: MOP:0001221
-name: deribosylation
-def: "Breaking of a covalent bond between a substrate and a ribosyl group." [RSC:xp]
-comment: has_participant: CHEBI:26565
 is_a: MOP:0001219 ! deribosylation
 
 [Term]
@@ -8913,10 +9203,10 @@ is_a: MOP:0001420 ! dealkenylation
 [Term]
 id: MOP:0001425
 name: deprenylation
+alt_id: MOP:0001427
 def: "Breaking of a covalent bond between a substrate and a prenyl group." [RSC:xp]
 comment: has_participant: CHEBI:26248
 is_a: MOP:0001420 ! dealkenylation
-is_a: MOP:0001427 ! deprenylation
 
 [Term]
 id: MOP:0001426
@@ -8926,18 +9216,11 @@ comment: has_participant: CHEBI:26126
 is_a: MOP:0001420 ! dealkenylation
 
 [Term]
-id: MOP:0001427
-name: deprenylation
-def: "Breaking of a covalent bond between a substrate and a prenyl group." [RSC:xp]
-comment: has_participant: CHEBI:26249
-is_a: MOP:0001410 ! dehydrocarbylation
-
-[Term]
 id: MOP:0001428
 name: depolyprenylation
 def: "Breaking of a covalent bond between a substrate and a polyprenyl group." [RSC:xp]
 comment: has_participant: CHEBI:26201
-is_a: MOP:0001427 ! deprenylation
+is_a: MOP:0001425 ! deprenylation
 
 [Term]
 id: MOP:0001429
@@ -8965,7 +9248,7 @@ id: MOP:0001432
 name: deretinylation
 def: "Breaking of a covalent bond between a substrate and a retinyl group." [RSC:xp]
 comment: has_participant: CHEBI:26541
-is_a: MOP:0001427 ! deprenylation
+is_a: MOP:0001425 ! deprenylation
 
 [Term]
 id: MOP:0001433
@@ -9608,9 +9891,10 @@ is_a: MOP:0000567 ! breaking of covalent bond with group
 [Term]
 id: MOP:0001524
 name: desulfonylation
+alt_id: MOP:0001539
 def: "Breaking of a covalent bond between a substrate and a sulfonyl group." [RSC:xp]
 comment: has_participant: CHEBI:29825
-is_a: MOP:0001539 ! desulfonylation
+is_a: MOP:0000567 ! breaking of covalent bond with group
 
 [Term]
 id: MOP:0001525
@@ -9711,37 +9995,30 @@ comment: has_participant: CHEBI:29829
 is_a: MOP:0000567 ! breaking of covalent bond with group
 
 [Term]
-id: MOP:0001539
-name: desulfonylation
-def: "Breaking of a covalent bond between a substrate and a sulfonyl group." [RSC:xp]
-comment: has_participant: CHEBI:51100
-is_a: MOP:0000567 ! breaking of covalent bond with group
-
-[Term]
 id: MOP:0001540
 name: detosylation
 def: "Breaking of a covalent bond between a substrate and a tosyl group." [RSC:xp]
 comment: has_participant: CHEBI:51094
-is_a: MOP:0001539 ! desulfonylation
+is_a: MOP:0001524 ! desulfonylation
 
 [Term]
 id: MOP:0001541
 name: debrosylation
 def: "Breaking of a covalent bond between a substrate and a brosyl group." [RSC:xp]
 comment: has_participant: CHEBI:51101
-is_a: MOP:0001539 ! desulfonylation
+is_a: MOP:0001524 ! desulfonylation
 
 [Term]
 id: MOP:0001542
 name: denosylation
 def: "Breaking of a covalent bond between a substrate and a nosyl group." [RSC:xp]
 comment: has_participant: CHEBI:51102
-is_a: MOP:0001539 ! desulfonylation
+is_a: MOP:0001524 ! desulfonylation
 
 [Term]
 id: MOP:0001544
 name: deindolylamination
-def: "Breaking of a covalent bond between a substrate and an indolyl group." [rsc:xp, RSC:xp]
+def: "Breaking of a covalent bond between a substrate and an indolyl group." [RSC:xp, rsc:xp]
 comment: has_participant: CHEBI:51609
 is_a: MOP:0001460 ! deheteroarylation
 
@@ -11008,6 +11285,7 @@ is_a: MOP:0000163 ! galactosylation
 [Term]
 id: MOP:0002164
 name: N-beta-D-galactosylation
+alt_id: MOP:0002168
 def: "Formation of a covalent bond between a nitrogen atom in a substrate and a beta-D-galactosyl group." [RSC:xp]
 comment: has_participant: CHEBI:22778
 is_a: MOP:0000164 ! beta-D-galactosylation
@@ -11034,15 +11312,9 @@ comment: has_participant: CHEBI:17483
 is_a: MOP:0000167 ! alpha-N-acetylneuraminyl-2,8-alpha-N-acetylneuraminyl-2,3-beta-D-galactosylation
 
 [Term]
-id: MOP:0002168
-name: N-beta-D-galactosylation
-def: "Formation of a covalent bond between a nitrogen atom in a substrate and a beta-D-galactosyl group." [RSC:xp]
-comment: has_participant: CHEBI:16289
-is_a: MOP:0000168 ! beta-D-galactosylation
-
-[Term]
 id: MOP:0002169
 name: N-glucosylation
+alt_id: MOP:0002172
 def: "Formation of a covalent bond between a nitrogen atom in a substrate and a glucosyl group." [RSC:xp]
 comment: has_participant: CHEBI:24281
 is_a: MOP:0000169 ! glucosylation
@@ -11060,13 +11332,6 @@ name: N-D-galactosyl-1,4beta-D-glucosylation
 def: "Formation of a covalent bond between a nitrogen atom in a substrate and a D-galactosyl-1,4beta-D-glucosyl group." [RSC:xp]
 comment: has_participant: CHEBI:20966
 is_a: MOP:0000171 ! D-galactosyl-1,4beta-D-glucosylation
-
-[Term]
-id: MOP:0002172
-name: N-glucosylation
-def: "Formation of a covalent bond between a nitrogen atom in a substrate and a glucosyl group." [RSC:xp]
-comment: has_participant: CHEBI:24280
-is_a: MOP:0000172 ! glucosylation
 
 [Term]
 id: MOP:0002173
@@ -11302,6 +11567,7 @@ is_a: MOP:0000205 ! 5'-inosinylation
 [Term]
 id: MOP:0002206
 name: N-mannosylation
+alt_id: MOP:0002209
 def: "Formation of a covalent bond between a nitrogen atom in a substrate and a mannosyl group." [RSC:xp]
 comment: has_participant: CHEBI:25171
 is_a: MOP:0000206 ! mannosylation
@@ -11319,13 +11585,6 @@ name: N-alpha-D-mannosyl-1,3-(r1)-beta-D-mannosylation
 def: "Formation of a covalent bond between a nitrogen atom in a substrate and an alpha-D-mannosyl-1,3-(r1)-beta-D-mannosyl group." [RSC:xp]
 comment: has_participant: CHEBI:22406
 is_a: MOP:0000208 ! alpha-D-mannosyl-1,3-(r1)-beta-D-mannosylation
-
-[Term]
-id: MOP:0002209
-name: N-mannosylation
-def: "Formation of a covalent bond between a nitrogen atom in a substrate and a mannosyl group." [RSC:xp]
-comment: has_participant: CHEBI:25170
-is_a: MOP:0000209 ! mannosylation
 
 [Term]
 id: MOP:0002210
@@ -11393,6 +11652,7 @@ is_a: MOP:0000218 ! neuraminoylation
 [Term]
 id: MOP:0002219
 name: N-ribosylation
+alt_id: MOP:0002221
 def: "Formation of a covalent bond between a nitrogen atom in a substrate and a ribosyl group." [RSC:xp]
 comment: has_participant: CHEBI:26566
 is_a: MOP:0000219 ! ribosylation
@@ -11403,13 +11663,6 @@ name: N-adenosinediphosphoribosylation
 def: "Formation of a covalent bond between a nitrogen atom in a substrate and an adenosinediphosphoribosyl group." [RSC:xp]
 comment: has_participant: CHEBI:22259
 is_a: MOP:0000220 ! adenosinediphosphoribosylation
-
-[Term]
-id: MOP:0002221
-name: N-ribosylation
-def: "Formation of a covalent bond between a nitrogen atom in a substrate and a ribosyl group." [RSC:xp]
-comment: has_participant: CHEBI:26565
-is_a: MOP:0000221 ! ribosylation
 
 [Term]
 id: MOP:0002222
@@ -12835,6 +13088,7 @@ is_a: MOP:0000424 ! vinylation
 [Term]
 id: MOP:0002425
 name: N-prenylation
+alt_id: MOP:0002427
 def: "Formation of a covalent bond between a nitrogen atom in a substrate and a prenyl group." [RSC:xp]
 comment: has_participant: CHEBI:26248
 is_a: MOP:0000425 ! prenylation
@@ -12845,13 +13099,6 @@ name: N-phytylation
 def: "Formation of a covalent bond between a nitrogen atom in a substrate and a phytyl group." [RSC:xp]
 comment: has_participant: CHEBI:26126
 is_a: MOP:0000426 ! phytylation
-
-[Term]
-id: MOP:0002427
-name: N-prenylation
-def: "Formation of a covalent bond between a nitrogen atom in a substrate and a prenyl group." [RSC:xp]
-comment: has_participant: CHEBI:26249
-is_a: MOP:0000427 ! prenylation
 
 [Term]
 id: MOP:0002428
@@ -13528,6 +13775,7 @@ is_a: MOP:0000523 ! fluorosylation
 [Term]
 id: MOP:0002524
 name: N-sulfonylation
+alt_id: MOP:0002539
 def: "Formation of a covalent bond between a nitrogen atom in a substrate and a sulfonyl group." [RSC:xp]
 comment: has_participant: CHEBI:29825
 is_a: MOP:0000539 ! sulfonylation
@@ -13631,13 +13879,6 @@ comment: has_participant: CHEBI:29829
 is_a: MOP:0000538 ! sulfinimidoylation
 
 [Term]
-id: MOP:0002539
-name: N-sulfonylation
-def: "Formation of a covalent bond between a nitrogen atom in a substrate and a sulfonyl group." [RSC:xp]
-comment: has_participant: CHEBI:51100
-is_a: MOP:0000539 ! sulfonylation
-
-[Term]
 id: MOP:0002540
 name: N-tosylation
 def: "Formation of a covalent bond between a nitrogen atom in a substrate and a tosyl group." [RSC:xp]
@@ -13661,7 +13902,7 @@ is_a: MOP:0000542 ! nosylation
 [Term]
 id: MOP:0002544
 name: N-indolylamination
-def: "Formation of a covalent bond between a nitrogen atom in a substrate and an indolyl group." [rsc:xp, RSC:xp]
+def: "Formation of a covalent bond between a nitrogen atom in a substrate and an indolyl group." [RSC:xp, rsc:xp]
 comment: has_participant: CHEBI:51609
 is_a: MOP:0000544 ! indolylamination
 
@@ -14928,6 +15169,7 @@ is_a: MOP:0000163 ! galactosylation
 [Term]
 id: MOP:0003164
 name: O-beta-D-galactosylation
+alt_id: MOP:0003168
 def: "Formation of a covalent bond between an oxygen atom in a substrate and a beta-D-galactosyl group." [RSC:xp]
 comment: has_participant: CHEBI:22778
 is_a: MOP:0000164 ! beta-D-galactosylation
@@ -14954,15 +15196,9 @@ comment: has_participant: CHEBI:17483
 is_a: MOP:0000167 ! alpha-N-acetylneuraminyl-2,8-alpha-N-acetylneuraminyl-2,3-beta-D-galactosylation
 
 [Term]
-id: MOP:0003168
-name: O-beta-D-galactosylation
-def: "Formation of a covalent bond between an oxygen atom in a substrate and a beta-D-galactosyl group." [RSC:xp]
-comment: has_participant: CHEBI:16289
-is_a: MOP:0000168 ! beta-D-galactosylation
-
-[Term]
 id: MOP:0003169
 name: O-glucosylation
+alt_id: MOP:0003172
 def: "Formation of a covalent bond between an oxygen atom in a substrate and a glucosyl group." [RSC:xp]
 comment: has_participant: CHEBI:24281
 is_a: MOP:0000169 ! glucosylation
@@ -14980,13 +15216,6 @@ name: O-D-galactosyl-1,4beta-D-glucosylation
 def: "Formation of a covalent bond between an oxygen atom in a substrate and a D-galactosyl-1,4beta-D-glucosyl group." [RSC:xp]
 comment: has_participant: CHEBI:20966
 is_a: MOP:0000171 ! D-galactosyl-1,4beta-D-glucosylation
-
-[Term]
-id: MOP:0003172
-name: O-glucosylation
-def: "Formation of a covalent bond between an oxygen atom in a substrate and a glucosyl group." [RSC:xp]
-comment: has_participant: CHEBI:24280
-is_a: MOP:0000172 ! glucosylation
 
 [Term]
 id: MOP:0003173
@@ -15222,6 +15451,7 @@ is_a: MOP:0000205 ! 5'-inosinylation
 [Term]
 id: MOP:0003206
 name: O-mannosylation
+alt_id: MOP:0003209
 def: "Formation of a covalent bond between an oxygen atom in a substrate and a mannosyl group." [RSC:xp]
 comment: has_participant: CHEBI:25171
 is_a: MOP:0000206 ! mannosylation
@@ -15239,13 +15469,6 @@ name: O-alpha-D-mannosyl-1,3-(r1)-beta-D-mannosylation
 def: "Formation of a covalent bond between an oxygen atom in a substrate and an alpha-D-mannosyl-1,3-(r1)-beta-D-mannosyl group." [RSC:xp]
 comment: has_participant: CHEBI:22406
 is_a: MOP:0000208 ! alpha-D-mannosyl-1,3-(r1)-beta-D-mannosylation
-
-[Term]
-id: MOP:0003209
-name: O-mannosylation
-def: "Formation of a covalent bond between an oxygen atom in a substrate and a mannosyl group." [RSC:xp]
-comment: has_participant: CHEBI:25170
-is_a: MOP:0000209 ! mannosylation
 
 [Term]
 id: MOP:0003210
@@ -15313,6 +15536,7 @@ is_a: MOP:0000218 ! neuraminoylation
 [Term]
 id: MOP:0003219
 name: O-ribosylation
+alt_id: MOP:0003221
 def: "Formation of a covalent bond between an oxygen atom in a substrate and a ribosyl group." [RSC:xp]
 comment: has_participant: CHEBI:26566
 is_a: MOP:0000219 ! ribosylation
@@ -15323,13 +15547,6 @@ name: O-adenosinediphosphoribosylation
 def: "Formation of a covalent bond between an oxygen atom in a substrate and an adenosinediphosphoribosyl group." [RSC:xp]
 comment: has_participant: CHEBI:22259
 is_a: MOP:0000220 ! adenosinediphosphoribosylation
-
-[Term]
-id: MOP:0003221
-name: O-ribosylation
-def: "Formation of a covalent bond between an oxygen atom in a substrate and a ribosyl group." [RSC:xp]
-comment: has_participant: CHEBI:26565
-is_a: MOP:0000221 ! ribosylation
 
 [Term]
 id: MOP:0003222
@@ -16755,6 +16972,7 @@ is_a: MOP:0000424 ! vinylation
 [Term]
 id: MOP:0003425
 name: O-prenylation
+alt_id: MOP:0003427
 def: "Formation of a covalent bond between an oxygen atom in a substrate and a prenyl group." [RSC:xp]
 comment: has_participant: CHEBI:26248
 is_a: MOP:0000425 ! prenylation
@@ -16765,13 +16983,6 @@ name: O-phytylation
 def: "Formation of a covalent bond between an oxygen atom in a substrate and a phytyl group." [RSC:xp]
 comment: has_participant: CHEBI:26126
 is_a: MOP:0000426 ! phytylation
-
-[Term]
-id: MOP:0003427
-name: O-prenylation
-def: "Formation of a covalent bond between an oxygen atom in a substrate and a prenyl group." [RSC:xp]
-comment: has_participant: CHEBI:26249
-is_a: MOP:0000427 ! prenylation
 
 [Term]
 id: MOP:0003428
@@ -17448,6 +17659,7 @@ is_a: MOP:0000523 ! fluorosylation
 [Term]
 id: MOP:0003524
 name: O-sulfonylation
+alt_id: MOP:0003539
 def: "Formation of a covalent bond between an oxygen atom in a substrate and a sulfonyl group." [RSC:xp]
 comment: has_participant: CHEBI:29825
 is_a: MOP:0000539 ! sulfonylation
@@ -17551,13 +17763,6 @@ comment: has_participant: CHEBI:29829
 is_a: MOP:0000538 ! sulfinimidoylation
 
 [Term]
-id: MOP:0003539
-name: O-sulfonylation
-def: "Formation of a covalent bond between an oxygen atom in a substrate and a sulfonyl group." [RSC:xp]
-comment: has_participant: CHEBI:51100
-is_a: MOP:0000539 ! sulfonylation
-
-[Term]
 id: MOP:0003540
 name: O-tosylation
 def: "Formation of a covalent bond between an oxygen atom in a substrate and a tosyl group." [RSC:xp]
@@ -17581,7 +17786,7 @@ is_a: MOP:0000542 ! nosylation
 [Term]
 id: MOP:0003544
 name: O-indolylamination
-def: "Formation of a covalent bond between an oxygen atom in a substrate and an indolyl group." [rsc:xp, RSC:xp]
+def: "Formation of a covalent bond between an oxygen atom in a substrate and an indolyl group." [RSC:xp, rsc:xp]
 comment: has_participant: CHEBI:51609
 is_a: MOP:0000544 ! indolylamination
 
@@ -18848,6 +19053,7 @@ is_a: MOP:0000163 ! galactosylation
 [Term]
 id: MOP:0004164
 name: S-beta-D-galactosylation
+alt_id: MOP:0004168
 def: "Formation of a covalent bond between a sulfur atom in a substrate and a beta-D-galactosyl group." [RSC:xp]
 comment: has_participant: CHEBI:22778
 is_a: MOP:0000164 ! beta-D-galactosylation
@@ -18874,15 +19080,9 @@ comment: has_participant: CHEBI:17483
 is_a: MOP:0000167 ! alpha-N-acetylneuraminyl-2,8-alpha-N-acetylneuraminyl-2,3-beta-D-galactosylation
 
 [Term]
-id: MOP:0004168
-name: S-beta-D-galactosylation
-def: "Formation of a covalent bond between a sulfur atom in a substrate and a beta-D-galactosyl group." [RSC:xp]
-comment: has_participant: CHEBI:16289
-is_a: MOP:0000168 ! beta-D-galactosylation
-
-[Term]
 id: MOP:0004169
 name: S-glucosylation
+alt_id: MOP:0004172
 def: "Formation of a covalent bond between a sulfur atom in a substrate and a glucosyl group." [RSC:xp]
 comment: has_participant: CHEBI:24281
 is_a: MOP:0000169 ! glucosylation
@@ -18900,13 +19100,6 @@ name: S-D-galactosyl-1,4beta-D-glucosylation
 def: "Formation of a covalent bond between a sulfur atom in a substrate and a D-galactosyl-1,4beta-D-glucosyl group." [RSC:xp]
 comment: has_participant: CHEBI:20966
 is_a: MOP:0000171 ! D-galactosyl-1,4beta-D-glucosylation
-
-[Term]
-id: MOP:0004172
-name: S-glucosylation
-def: "Formation of a covalent bond between a sulfur atom in a substrate and a glucosyl group." [RSC:xp]
-comment: has_participant: CHEBI:24280
-is_a: MOP:0000172 ! glucosylation
 
 [Term]
 id: MOP:0004173
@@ -19142,6 +19335,7 @@ is_a: MOP:0000205 ! 5'-inosinylation
 [Term]
 id: MOP:0004206
 name: S-mannosylation
+alt_id: MOP:0004209
 def: "Formation of a covalent bond between a sulfur atom in a substrate and a mannosyl group." [RSC:xp]
 comment: has_participant: CHEBI:25171
 is_a: MOP:0000206 ! mannosylation
@@ -19159,13 +19353,6 @@ name: S-alpha-D-mannosyl-1,3-(r1)-beta-D-mannosylation
 def: "Formation of a covalent bond between a sulfur atom in a substrate and an alpha-D-mannosyl-1,3-(r1)-beta-D-mannosyl group." [RSC:xp]
 comment: has_participant: CHEBI:22406
 is_a: MOP:0000208 ! alpha-D-mannosyl-1,3-(r1)-beta-D-mannosylation
-
-[Term]
-id: MOP:0004209
-name: S-mannosylation
-def: "Formation of a covalent bond between a sulfur atom in a substrate and a mannosyl group." [RSC:xp]
-comment: has_participant: CHEBI:25170
-is_a: MOP:0000209 ! mannosylation
 
 [Term]
 id: MOP:0004210
@@ -19233,6 +19420,7 @@ is_a: MOP:0000218 ! neuraminoylation
 [Term]
 id: MOP:0004219
 name: S-ribosylation
+alt_id: MOP:0004221
 def: "Formation of a covalent bond between a sulfur atom in a substrate and a ribosyl group." [RSC:xp]
 comment: has_participant: CHEBI:26566
 is_a: MOP:0000219 ! ribosylation
@@ -19243,13 +19431,6 @@ name: S-adenosinediphosphoribosylation
 def: "Formation of a covalent bond between a sulfur atom in a substrate and an adenosinediphosphoribosyl group." [RSC:xp]
 comment: has_participant: CHEBI:22259
 is_a: MOP:0000220 ! adenosinediphosphoribosylation
-
-[Term]
-id: MOP:0004221
-name: S-ribosylation
-def: "Formation of a covalent bond between a sulfur atom in a substrate and a ribosyl group." [RSC:xp]
-comment: has_participant: CHEBI:26565
-is_a: MOP:0000221 ! ribosylation
 
 [Term]
 id: MOP:0004222
@@ -20675,6 +20856,7 @@ is_a: MOP:0000424 ! vinylation
 [Term]
 id: MOP:0004425
 name: S-prenylation
+alt_id: MOP:0004427
 def: "Formation of a covalent bond between a sulfur atom in a substrate and a prenyl group." [RSC:xp]
 comment: has_participant: CHEBI:26248
 is_a: MOP:0000425 ! prenylation
@@ -20685,13 +20867,6 @@ name: S-phytylation
 def: "Formation of a covalent bond between a sulfur atom in a substrate and a phytyl group." [RSC:xp]
 comment: has_participant: CHEBI:26126
 is_a: MOP:0000426 ! phytylation
-
-[Term]
-id: MOP:0004427
-name: S-prenylation
-def: "Formation of a covalent bond between a sulfur atom in a substrate and a prenyl group." [RSC:xp]
-comment: has_participant: CHEBI:26249
-is_a: MOP:0000427 ! prenylation
 
 [Term]
 id: MOP:0004428
@@ -21368,6 +21543,7 @@ is_a: MOP:0000523 ! fluorosylation
 [Term]
 id: MOP:0004524
 name: S-sulfonylation
+alt_id: MOP:0004539
 def: "Formation of a covalent bond between a sulfur atom in a substrate and a sulfonyl group." [RSC:xp]
 comment: has_participant: CHEBI:29825
 is_a: MOP:0000539 ! sulfonylation
@@ -21471,13 +21647,6 @@ comment: has_participant: CHEBI:29829
 is_a: MOP:0000538 ! sulfinimidoylation
 
 [Term]
-id: MOP:0004539
-name: S-sulfonylation
-def: "Formation of a covalent bond between a sulfur atom in a substrate and a sulfonyl group." [RSC:xp]
-comment: has_participant: CHEBI:51100
-is_a: MOP:0000539 ! sulfonylation
-
-[Term]
 id: MOP:0004540
 name: S-tosylation
 def: "Formation of a covalent bond between a sulfur atom in a substrate and a tosyl group." [RSC:xp]
@@ -21501,7 +21670,7 @@ is_a: MOP:0000542 ! nosylation
 [Term]
 id: MOP:0004544
 name: S-indolylamination
-def: "Formation of a covalent bond between a sulfur atom in a substrate and an indolyl group." [rsc:xp, RSC:xp]
+def: "Formation of a covalent bond between a sulfur atom in a substrate and an indolyl group." [RSC:xp, rsc:xp]
 comment: has_participant: CHEBI:51609
 is_a: MOP:0000544 ! indolylamination
 
@@ -22768,6 +22937,7 @@ is_a: MOP:0000163 ! galactosylation
 [Term]
 id: MOP:0005164
 name: C-beta-D-galactosylation
+alt_id: MOP:0005168
 def: "Formation of a covalent bond between a carbon atom in a substrate and a beta-D-galactosyl group." [RSC:xp]
 comment: has_participant: CHEBI:22778
 is_a: MOP:0000164 ! beta-D-galactosylation
@@ -22794,15 +22964,9 @@ comment: has_participant: CHEBI:17483
 is_a: MOP:0000167 ! alpha-N-acetylneuraminyl-2,8-alpha-N-acetylneuraminyl-2,3-beta-D-galactosylation
 
 [Term]
-id: MOP:0005168
-name: C-beta-D-galactosylation
-def: "Formation of a covalent bond between a carbon atom in a substrate and a beta-D-galactosyl group." [RSC:xp]
-comment: has_participant: CHEBI:16289
-is_a: MOP:0000168 ! beta-D-galactosylation
-
-[Term]
 id: MOP:0005169
 name: C-glucosylation
+alt_id: MOP:0005172
 def: "Formation of a covalent bond between a carbon atom in a substrate and a glucosyl group." [RSC:xp]
 comment: has_participant: CHEBI:24281
 is_a: MOP:0000169 ! glucosylation
@@ -22820,13 +22984,6 @@ name: C-D-galactosyl-1,4beta-D-glucosylation
 def: "Formation of a covalent bond between a carbon atom in a substrate and a D-galactosyl-1,4beta-D-glucosyl group." [RSC:xp]
 comment: has_participant: CHEBI:20966
 is_a: MOP:0000171 ! D-galactosyl-1,4beta-D-glucosylation
-
-[Term]
-id: MOP:0005172
-name: C-glucosylation
-def: "Formation of a covalent bond between a carbon atom in a substrate and a glucosyl group." [RSC:xp]
-comment: has_participant: CHEBI:24280
-is_a: MOP:0000172 ! glucosylation
 
 [Term]
 id: MOP:0005173
@@ -23062,6 +23219,7 @@ is_a: MOP:0000205 ! 5'-inosinylation
 [Term]
 id: MOP:0005206
 name: C-mannosylation
+alt_id: MOP:0005209
 def: "Formation of a covalent bond between a carbon atom in a substrate and a mannosyl group." [RSC:xp]
 comment: has_participant: CHEBI:25171
 is_a: MOP:0000206 ! mannosylation
@@ -23079,13 +23237,6 @@ name: C-alpha-D-mannosyl-1,3-(r1)-beta-D-mannosylation
 def: "Formation of a covalent bond between a carbon atom in a substrate and an alpha-D-mannosyl-1,3-(r1)-beta-D-mannosyl group." [RSC:xp]
 comment: has_participant: CHEBI:22406
 is_a: MOP:0000208 ! alpha-D-mannosyl-1,3-(r1)-beta-D-mannosylation
-
-[Term]
-id: MOP:0005209
-name: C-mannosylation
-def: "Formation of a covalent bond between a carbon atom in a substrate and a mannosyl group." [RSC:xp]
-comment: has_participant: CHEBI:25170
-is_a: MOP:0000209 ! mannosylation
 
 [Term]
 id: MOP:0005210
@@ -23153,6 +23304,7 @@ is_a: MOP:0000218 ! neuraminoylation
 [Term]
 id: MOP:0005219
 name: C-ribosylation
+alt_id: MOP:0005221
 def: "Formation of a covalent bond between a carbon atom in a substrate and a ribosyl group." [RSC:xp]
 comment: has_participant: CHEBI:26566
 is_a: MOP:0000219 ! ribosylation
@@ -23163,13 +23315,6 @@ name: C-adenosinediphosphoribosylation
 def: "Formation of a covalent bond between a carbon atom in a substrate and an adenosinediphosphoribosyl group." [RSC:xp]
 comment: has_participant: CHEBI:22259
 is_a: MOP:0000220 ! adenosinediphosphoribosylation
-
-[Term]
-id: MOP:0005221
-name: C-ribosylation
-def: "Formation of a covalent bond between a carbon atom in a substrate and a ribosyl group." [RSC:xp]
-comment: has_participant: CHEBI:26565
-is_a: MOP:0000221 ! ribosylation
 
 [Term]
 id: MOP:0005222
@@ -24595,6 +24740,7 @@ is_a: MOP:0000424 ! vinylation
 [Term]
 id: MOP:0005425
 name: C-prenylation
+alt_id: MOP:0005427
 def: "Formation of a covalent bond between a carbon atom in a substrate and a prenyl group." [RSC:xp]
 comment: has_participant: CHEBI:26248
 is_a: MOP:0000425 ! prenylation
@@ -24605,13 +24751,6 @@ name: C-phytylation
 def: "Formation of a covalent bond between a carbon atom in a substrate and a phytyl group." [RSC:xp]
 comment: has_participant: CHEBI:26126
 is_a: MOP:0000426 ! phytylation
-
-[Term]
-id: MOP:0005427
-name: C-prenylation
-def: "Formation of a covalent bond between a carbon atom in a substrate and a prenyl group." [RSC:xp]
-comment: has_participant: CHEBI:26249
-is_a: MOP:0000427 ! prenylation
 
 [Term]
 id: MOP:0005428
@@ -25287,8 +25426,8 @@ is_a: MOP:0000523 ! fluorosylation
 
 [Term]
 id: MOP:0005524
-alt-id: MOP:0005539
 name: C-sulfonylation
+alt_id: MOP:0005539
 def: "Formation of a covalent bond between a carbon atom in a substrate and a sulfonyl group." [RSC:xp]
 comment: has_participant: CHEBI:29825
 is_a: MOP:0000539 ! sulfonylation
@@ -25415,7 +25554,7 @@ is_a: MOP:0000542 ! nosylation
 [Term]
 id: MOP:0005544
 name: C-indolylamination
-def: "Formation of a covalent bond between a carbon atom in a substrate and an indolyl group." [rsc:xp, RSC:xp]
+def: "Formation of a covalent bond between a carbon atom in a substrate and an indolyl group." [RSC:xp, rsc:xp]
 comment: has_participant: CHEBI:51609
 is_a: MOP:0000544 ! indolylamination
 
@@ -25532,28 +25671,40 @@ comment: has_participant: CHEBI:29923
 is_a: MOP:0000560 ! selenonation
 
 [Typedef]
-id: has_part
-name: has_part
+id: BFO:0000055
+name: realizes
 
 [Typedef]
-id: has_participant
+id: BFO:0000057
 name: has_participant
 
 [Typedef]
-id: has_product
-name: has_product
-is_a: has_participant ! has_participant
-created_by: batchelorc
-creation_date: 2009-10-19T10:21:24Z
+id: BFO:0000077
+name: has participant beginning to exist
+is_a: BFO:0000057 ! has_participant
 
 [Typedef]
-id: has_reactant
-name: has_reactant
-is_a: has_participant ! has_participant
-created_by: batchelorc
-creation_date: 2009-10-19T10:21:01Z
+id: BFO:0000078
+name: has participant ceasing to exist
+is_a: BFO:0000057 ! has_participant
 
 [Typedef]
-id: part_of
-name: part_of
+id: BFO:0000117
+name: has occurrent part
+
+[Typedef]
+id: BFO:0000119
+name: has profile
+
+[Typedef]
+id: BFO:0000132
+name: part of occurrent
+
+[Typedef]
+id: BFO:0000133
+name: process profile of
+
+[Typedef]
+id: BFO:0000162
+name: has disposition at all times
 
