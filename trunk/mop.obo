@@ -6249,6 +6249,20 @@ relationship: BFO:0000117 MOP:0000736 ! has occurrent part bond formation to tri
 relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
 
 [Term]
+id: MOP:0000767
+alt_id: REX:0000368
+name: endothermic reaction
+def: "A reaction for which the overall standard enthalpy change is positive." [doi:10.1351/goldbook.E02095]
+is_a: MOP:0000543
+
+[Term]
+id: MOP:0000768
+alt_id: REX:0000369
+name: exothermic reaction
+def: "A reaction for which the overall standard enthalpy change is positive." [doi:10.1351/goldbook.E02269]
+is_a: MOP:0000543
+
+[Term]
 id: MOP:0001000
 name: deborylation
 def: "Breaking of a covalent bond between a substrate and a boryl group (-BR'R')." [RSC:cb]
