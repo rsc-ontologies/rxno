@@ -1,6 +1,8 @@
 format-version: 1.2
 data-version: rxno/releases/2014-04-24/rxno.owl
 synonymtypedef: SMIRKS "SMIRKS" RELATED
+synonymtypedef: SMILESEXAMPLE "SMILESEXAMPLE" RELATED
+synonymtypedef: SMILESCOUNTEREXAMPLE "SMILECOUNTEREXAMPLE" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
 
@@ -5393,6 +5395,7 @@ def: "Reaction of an ester with an electron-withdrawing group alpha- to the este
 synonym: "Krapcho decarbalkoxylation" EXACT []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000242/
 is_a: RXNO:0000105 ! end-of-chain chain shortening
+is_a: RXNO:0001713
 created_by: batchelorc
 creation_date: 2014-03-04T09:00:00Z
 
