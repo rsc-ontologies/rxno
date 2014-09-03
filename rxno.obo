@@ -1,10 +1,19 @@
 format-version: 1.2
-data-version: rxno/releases/2014-04-24/rxno.owl
-synonymtypedef: SMIRKS "SMIRKS" RELATED
-synonymtypedef: SMILESEXAMPLE "SMILESEXAMPLE" RELATED
+data-version: rxno/releases/2014-09-03/rxno.owl
 synonymtypedef: SMILESCOUNTEREXAMPLE "SMILECOUNTEREXAMPLE" RELATED
+synonymtypedef: SMILESEXAMPLE "SMILESEXAMPLE" RELATED
+synonymtypedef: SMIRKS "SMIRKS" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
+
+[Term]
+id: BFO:0000007
+name: process
+is_a: BFO:0000015
+
+[Term]
+id: BFO:0000015
+name: processual entity
 
 [Term]
 id: BFO:0000016
@@ -703,6 +712,8 @@ is_a: MOP:0000566 ! formation of covalent bond with group
 id: MOP:0000543
 name: molecular process
 def: "A process in which at least one of the participants is a molecule." [RSC:cb]
+comment: TODO: needs work, formal definition, etc.
+is_a: BFO:0000007
 
 [Term]
 id: MOP:0000550
@@ -1211,6 +1222,53 @@ union_of: MOP:0000730 ! Brønsted acid catalysis
 union_of: MOP:0000734 ! Lewis acid catalysis
 
 [Term]
+id: MOP:0000790
+name: substitution reaction
+alt_id: RXNO:0000019
+def: "A reaction in which one singly-bonded group, but not the hydrogen atom, is replaced by another singly-bonded group." [RSC:cb]
+comment: The Gold Book says hydrogen atoms count, but this differs from everyone's intuition. See http://goldbook.iupac.org/S06078.html
+is_a: MOP:0000543 ! molecular process
+
+[Term]
+id: MOP:0000791
+name: aromatic substitution
+alt_id: RXNO:0000020
+def: "A substitution reaction in which one singly-bonded substituent on an aromatic skeleton is replaced by another singly-bonded substituent." [RSC:cb]
+is_a: MOP:0000790 ! substitution reaction
+
+[Term]
+id: MOP:0000792
+name: allylic rearrangement
+alt_id: RXNO:0000033
+def: "A substitution reaction in an allylic system with concomitant migration of the allyl double bond." [RSC:cb, RSC:cc, RSC:db]
+is_a: MOP:0000790 ! substitution reaction
+
+[Term]
+id: MOP:0000793
+name: N-substitution
+alt_id: RXNO:0000319
+def: "A substitution reaction where the reactive centre is a nitrogen atom." [RSC:cb]
+is_a: MOP:0000790 ! substitution reaction
+
+[Term]
+id: MOP:0000794
+name: O-substitution
+alt_id: RXNO:0000318
+def: "A substitution reaction where the reactive centre is an oxygen atom." [RSC:cb]
+xref: NAMERXN:1.7
+is_a: MOP:0000790 ! substitution reaction
+
+[Term]
+id: MOP:0000795
+name: S-substitution
+alt_id: RXNO:0000336
+def: "A substitution reaction where the reactive centre is a sulfur atom." [RSC:cb]
+xref: NAMERXN:1.8
+is_a: MOP:0000790 ! substitution reaction
+created_by: batchelorc
+creation_date: 2012-03-22T12:22:59Z
+
+[Term]
 id: MOP:0001369
 name: dealkylation
 def: "Breaking of a covalent bond between an alkyl group and a substrate." [RSC:xp]
@@ -1487,19 +1545,6 @@ synonym: "Huisgen's 1,3-dipolar cycloaddition" NARROW []
 is_a: MOP:0000562 ! cycloaddition
 
 [Term]
-id: RXNO:0000019
-name: substitution reaction
-def: "A reaction in which one singly-bonded group, but not the hydrogen atom, is replaced by another singly-bonded group." [RSC:cb]
-comment: The Gold Book says hydrogen atoms count, but this differs from everyone's intuition. See http://goldbook.iupac.org/S06078.html
-is_a: MOP:0000543 ! molecular process
-
-[Term]
-id: RXNO:0000020
-name: aromatic substitution
-def: "A substitution reaction in which one singly-bonded substituent on an aromatic skeleton is replaced by another singly-bonded substituent." [RSC:cb]
-is_a: RXNO:0000019 ! substitution reaction
-
-[Term]
 id: RXNO:0000021
 name: Sandmeyer reaction
 def: "An aromatic substitution reaction where an aryl diazonium salt reacts with a copper(I) halide or pseudohalide to form an aromatic halide or pseudohalide." [RSC:db]
@@ -1605,12 +1650,6 @@ synonym: "[N:1].[C:2]=O.[C:3][C:4](=O)[C:5]>>[N:1][C:2][C:3][C:4](=O)[C:5]" SMIR
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000265/
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
 relationship: RXNO:0000424 MOP:0000718 ! has specified reactant enolisable carbonyl compound
-
-[Term]
-id: RXNO:0000033
-name: allylic rearrangement
-def: "A substitution reaction in an allylic system with concomitant migration of the allyl double bond." [RSC:cb, RSC:cc, RSC:db]
-is_a: RXNO:0000019 ! substitution reaction
 
 [Term]
 id: RXNO:0000034
@@ -1859,7 +1898,7 @@ alt_id: RXNO:0000112
 def: "The alkylation of a trialkyl phosphite with an alkyl halide or acyl halide to give an alkyl phosphonate." [RSC:cb, RSC:cc, RSC:db]
 synonym: "Michaelis-Arbuzov phosphonate synthesis" EXACT []
 synonym: "Michaelis-Arbuzov reaction" EXACT []
-is_a: RXNO:0000019 ! substitution reaction
+is_a: RXNO:0000331 ! substitution step
 relationship: has_part MOP:0000719 ! O-dealkylation
 relationship: has_part MOP:0006369 ! P-alkylation
 
@@ -2049,13 +2088,13 @@ id: RXNO:0000081
 name: Ullmann condensation
 def: "A coupling reaction in which a phenol is coupled to an aryl halide to give a diaryl ether in the presence of a copper compound." [RSC:cc, RSC:db]
 synonym: "Ullmann ether synthesis" EXACT []
-is_a: RXNO:0000020 ! aromatic substitution
+is_a: RXNO:0000332 ! aromatic substitution step
 
 [Term]
 id: RXNO:0000082
 name: Goldberg reaction
 def: "A coupling reaction in which an acetanilide is coupled to an aryl halide to give an N-acetyl diaryl amine in the presence of a copper compound." [RSC:cc, RSC:db]
-is_a: RXNO:0000020 ! aromatic substitution
+is_a: RXNO:0000332 ! aromatic substitution step
 
 [Term]
 id: RXNO:0000083
@@ -2119,7 +2158,7 @@ id: RXNO:0000090
 name: Williamson ether synthesis
 def: "The reaction between an alkyl halide or alkyl sulfate and a metal alkoxide to give an ether." [RSC:cc, RSC:db]
 synonym: "Williamson etherification" EXACT []
-is_a: RXNO:0000019 ! substitution reaction
+is_a: RXNO:0000331 ! substitution step
 
 [Term]
 id: RXNO:0000091
@@ -2208,13 +2247,13 @@ is_a: RXNO:0000335 ! reductive amination
 id: RXNO:0000103
 name: Gabriel synthesis
 def: "The reaction of primary alkyl halides with sodium or potassium phthalimide, followed by hydrolysis, to give the corresponding primary amine." [RSC:cb, RSC:cc, RSC:db]
-is_a: RXNO:0000019 ! substitution reaction
+is_a: RXNO:0000331 ! substitution step
 
 [Term]
 id: RXNO:0000104
 name: Ing-Manske procedure
 def: "The reaction of primary alkyl halides with sodium or potassium phthalimide, followed by treatment with hydrazine, to give the corresponding primary amine." [RSC:cb, RSC:cc, RSC:db]
-is_a: RXNO:0000019 ! substitution reaction
+is_a: RXNO:0000331 ! substitution step
 
 [Term]
 id: RXNO:0000105
@@ -2287,7 +2326,7 @@ id: RXNO:0000114
 name: Nicholas reaction
 def: "The reaction of a propargylic cation (stabilised with dicobalt octacarbonyl) with a nucleophile to give a substituted alkyne." [RSC:cb, RSC:cc, RSC:db]
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000303/
-is_a: RXNO:0000019 ! substitution reaction
+is_a: RXNO:0000331 ! substitution step
 union_of: RXNO:0000115 ! Nicholas reaction, nucleophilic heteroatom centre
 union_of: RXNO:0000116 ! Nicholas reaction, nucleophilic carbon centre
 
@@ -2742,7 +2781,7 @@ name: Schotten-Baumann reaction
 def: "The coupling of an alcohol or amine with an acyl chloride to give an ester or amide. A two-phase solvent system is often used, to enable the acid generated during the reaction to be neutralised by the aqueous base, while the starting materials and products remain in the organic phase." [RSC:cb, RSC:cc, RSC:db]
 synonym: "[C:1][N,O].[C:2](=[O:3])Cl>>[O:3]=[C:2]O[C:1]" SMIRKS []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000392/
-is_a: RXNO:0000019 ! substitution reaction
+is_a: RXNO:0000331 ! substitution step
 
 [Term]
 id: RXNO:0000166
@@ -2761,7 +2800,7 @@ id: RXNO:0000167
 name: Fischer-Speier esterification
 def: "The esterification of a carboxylic acid with an alcohol. Various Lewis acids or Bronsted acids may be used as catalyst." [RSC:cb, RSC:cc, RSC:db]
 synonym: "Fischer esterification" EXACT []
-is_a: RXNO:0000019 ! substitution reaction
+is_a: RXNO:0000331 ! substitution step
 
 [Term]
 id: RXNO:0000168
@@ -2832,13 +2871,13 @@ is_a: RXNO:0000070 ! chain lengthening
 id: RXNO:0000178
 name: Kharasch-Sosnovsky reaction
 def: "The allylic oxidation of an alkene with a peroxy ester or a peroxide to give the corresponding allylic alcohol derivative. The catalyst is a copper compound." [RSC:cb, RSC:cc, RSC:db]
-is_a: RXNO:0000019 ! substitution reaction
+is_a: RXNO:0000331 ! substitution step
 
 [Term]
 id: RXNO:0000179
 name: Elbs persulfate oxidation, phenol variant
 def: "The oxidation of a phenol to give a (predominantly para) diphenol using potassium persulfate." [RSC:cb, RSC:cc, RSC:db]
-is_a: RXNO:0000020 ! aromatic substitution
+is_a: RXNO:0000332 ! aromatic substitution step
 
 [Term]
 id: RXNO:0000180
@@ -2852,7 +2891,7 @@ id: RXNO:0000181
 name: Boyland-Sims oxidation
 def: "The oxidation of an aromatic amine to give a (predominantly ortho) amino aryl sulfate using potassium persulfate followed by hydrolysis to yield the corresponding aminophenol." [RSC:cb, RSC:cc, RSC:db]
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000059/
-is_a: RXNO:0000020 ! aromatic substitution
+is_a: RXNO:0000332 ! aromatic substitution step
 
 [Term]
 id: RXNO:0000182
@@ -2931,7 +2970,7 @@ id: RXNO:0000192
 name: Buchwald-Hartwig amination
 def: "A reaction in which an aryl halide or aryl triflate reacts with a primary or secondary amine in the presence of base to give a secondary or tertiary amine. It is catalysed by a palladium catalyst." [RSC:cb, RSC:cc, RSC:db]
 synonym: "Buchwald-Hartwig reaction" EXACT []
-is_a: RXNO:0000020 ! aromatic substitution
+is_a: RXNO:0000332 ! aromatic substitution step
 relationship: RXNO:0000425 CHEBI:33363 ! has_catalyst palladium
 
 [Term]
@@ -3071,7 +3110,7 @@ def: "The stereospecific oxidation of a (phenyldimethylsilyl)alkane to the corre
 synonym: "Fleming oxidation" EXACT []
 synonym: "Tamao-Fleming oxidation" EXACT []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000150/
-is_a: RXNO:0000019 ! substitution reaction
+is_a: RXNO:0000331 ! substitution step
 
 [Term]
 id: RXNO:0000211
@@ -3079,7 +3118,6 @@ name: Tamao oxidation
 def: "The stereospecific oxidation of a (halosilyl)alkane to the corresponding alcohol using potassium fluoride and hydrogen peroxide." [RSC:cb, RSC:cc, RSC:db]
 synonym: "Tamao-Kumada oxidation" EXACT []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000150/
-is_a: RXNO:0000019 ! substitution reaction
 is_a: RXNO:0000331 ! substitution step
 relationship: OBI:0000417 RXNO:0000468 ! achieves_planned_objective molecular substitution objective
 relationship: RXNO:0000424 CHEBI:16240 ! has specified reactant hydrogen peroxide
@@ -3281,7 +3319,7 @@ is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 id: RXNO:0000238
 name: Katritzky pyrylium-pyridinium method
 def: "The substitution of an amine with a nucleophile using a pyrylium salt." [RSC:cg]
-is_a: RXNO:0000019 ! substitution reaction
+is_a: RXNO:0000331 ! substitution step
 
 [Term]
 id: RXNO:0000239
@@ -3819,7 +3857,7 @@ id: RXNO:0000309
 name: Yamaguchi esterification
 def: "The esterification of a carboxylic acid with an alcohol using 2,4,6-trichlorobenzoyl chloride (Yamaguchi reagent)." [rsc:db]
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000479/
-is_a: RXNO:0000019 ! substitution reaction
+is_a: RXNO:0000331 ! substitution step
 
 [Term]
 id: RXNO:0000310
@@ -3867,19 +3905,6 @@ is_a: MOP:0000627 ! condensation reaction
 intersection_of: MOP:0000627 ! condensation reaction
 intersection_of: BFO:0000077 CHEBI:33308 ! has participant beginning to exist carboxylic ester
 relationship: BFO:0000077 CHEBI:33308 ! has participant beginning to exist carboxylic ester
-
-[Term]
-id: RXNO:0000318
-name: O-substitution
-def: "A substitution reaction where the reactive centre is an oxygen atom." [RSC:cb]
-xref: NAMERXN:1.7
-is_a: RXNO:0000019 ! substitution reaction
-
-[Term]
-id: RXNO:0000319
-name: N-substitution
-def: "A substitution reaction where the reactive centre is a nitrogen atom." [RSC:cb]
-is_a: RXNO:0000019 ! substitution reaction
 
 [Term]
 id: RXNO:0000320
@@ -3978,7 +4003,7 @@ id: RXNO:0000332
 name: aromatic substitution step
 def: "A substitution step where one singly-bonded substituent on an aromatic skeleton is replaced by another singly-bonded substituent." [RSC:cb]
 is_a: RXNO:0000331 ! substitution step
-relationship: has_part RXNO:0000020 ! aromatic substitution
+relationship: has_part MOP:0000791 ! aromatic substitution
 
 [Term]
 id: RXNO:0000333
@@ -4003,15 +4028,6 @@ is_a: MOP:0000650 ! amination
 is_a: RXNO:0000011 ! functional group modification
 created_by: batchelorc
 creation_date: 2012-03-22T12:15:29Z
-
-[Term]
-id: RXNO:0000336
-name: S-substitution
-def: "A substitution reaction where the reactive centre is a sulfur atom." [RSC:cb]
-xref: NAMERXN:1.8
-is_a: RXNO:0000019 ! substitution reaction
-created_by: batchelorc
-creation_date: 2012-03-22T12:22:59Z
 
 [Term]
 id: RXNO:0000337
@@ -4436,10 +4452,10 @@ is_a: RXNO:0000025 ! rearrangement step
 id: RXNO:0000382
 name: Demjanov rearrangement
 def: "Substitution reaction of a primary amine via deazotisation to yield a mixture of the corresponding primary alcohol and secondary alcohol." [RSC:cb]
-comment: Not *entirely* sure how we classify this. Have given it multiple parentage for the now.
+comment: TODO: Not *entirely* sure how we classify this. Have given it multiple parentage for the now.
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000106/
-is_a: RXNO:0000019 ! substitution reaction
 is_a: RXNO:0000025 ! rearrangement step
+is_a: RXNO:0000331 ! substitution step
 
 [Term]
 id: RXNO:0000384
@@ -5394,8 +5410,8 @@ name: Krapcho decarboxylation
 def: "Reaction of an ester with an electron-withdrawing group alpha- to the ester functionality with a metal halide or pseudohalide to yield the shorter homologous system." [RSC:cb]
 synonym: "Krapcho decarbalkoxylation" EXACT []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000242/
+is_a: MOP:0001713 ! decarboxylation
 is_a: RXNO:0000105 ! end-of-chain chain shortening
-is_a: RXNO:0001713
 created_by: batchelorc
 creation_date: 2014-03-04T09:00:00Z
 
@@ -5621,7 +5637,7 @@ name: Chichibabin reaction
 def: "Reaction of an azacycle with an alkali-metal amide to yield an aminated azacycle." [RSC:cb]
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000076/
 is_a: MOP:0000650 ! amination
-is_a: RXNO:0000019 ! substitution reaction
+is_a: RXNO:0000331 ! substitution step
 created_by: batchelorc
 creation_date: 2014-03-25T09:00:00Z
 
