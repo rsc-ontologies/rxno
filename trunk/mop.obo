@@ -1,8 +1,21 @@
 format-version: 1.2
-data-version: releases/2014-04-24
+data-version: releases/2014-09-03
 synonymtypedef: FORMULA "FORMULA"
 synonymtypedef: IUPAC_NAME "IUPAC NAME"
 ontology: mop
+
+[Term]
+id: BFO:0000007
+name: process
+is_a: BFO:0000015 ! processual entity
+
+[Term]
+id: BFO:0000015
+name: processual entity
+
+[Term]
+id: BFO:0000016
+name: disposition
 
 [Term]
 id: BFO:0000144
@@ -17,6 +30,11 @@ is_a: CHEBI:36342 ! subatomic particle
 id: CHEBI:18379
 name: nitrile
 is_a: CHEBI:36357 ! polyatomic entity
+
+[Term]
+id: CHEBI:23367
+name: molecular entity
+is_a: CHEBI:24431 ! chemical entity
 
 [Term]
 id: CHEBI:24431
@@ -38,6 +56,11 @@ is_a: CHEBI:24431 ! chemical entity
 id: CHEBI:24636
 name: proton
 is_a: CHEBI:15378 ! hydron
+
+[Term]
+id: CHEBI:26519
+name: radical
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:29233
@@ -114,7 +137,7 @@ is_a: CHEBI:24431 ! chemical entity
 id: CHEBI:36357
 name: polyatomic entity
 def: "Any molecular entity consisting of more than one atom." []
-is_a: CHEBI:24431 ! chemical entity
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:36586
@@ -164,6 +187,26 @@ id: CHEBI:37997
 name: homopolymer
 def: "A macromolecule derived from one species of (real, implicit or hypothetical) monomer." []
 is_a: CHEBI:33839 ! macromolecule
+
+[Term]
+id: CHEBI:39141
+name: Brønsted acid
+is_a: BFO:0000016 ! disposition
+
+[Term]
+id: CHEBI:39142
+name: Brønsted base
+is_a: BFO:0000016 ! disposition
+
+[Term]
+id: CHEBI:39143
+name: Lewis acid
+is_a: BFO:0000016 ! disposition
+
+[Term]
+id: CHEBI:39144
+name: Lewis base
+is_a: BFO:0000016 ! disposition
 
 [Term]
 id: CHEBI:40574
@@ -4572,6 +4615,8 @@ is_a: MOP:0000539 ! sulfonylation
 id: MOP:0000543
 name: molecular process
 def: "A process in which at least one of the participants is a molecule." [RSC:cb]
+comment: TODO: needs work, formal definition, etc.
+is_a: BFO:0000007 ! process
 
 [Term]
 id: MOP:0000544
@@ -4732,7 +4777,7 @@ is_a: MOP:0000562 ! cycloaddition
 id: MOP:0000566
 name: formation of covalent bond with group
 def: "Formation of a covalent bond between a substrate and a group." [RSC:cb]
-is_a: MOP:0000739 ! formation of covalent bond
+is_a: MOP:0000779 ! formation of covalent bond
 created_by: batchelorc
 creation_date: 2009-04-22T10:01:32Z
 
@@ -4740,7 +4785,7 @@ creation_date: 2009-04-22T10:01:32Z
 id: MOP:0000567
 name: breaking of covalent bond with group
 def: "Breaking of a covalent bond between a substrate and a group." [RSC:cb]
-is_a: MOP:0000740 ! breaking of covalent bond
+is_a: MOP:0000780 ! breaking of covalent bond
 created_by: batchelorc
 creation_date: 2009-04-30T02:24:32Z
 
@@ -5270,7 +5315,7 @@ name: copolymerisation
 def: "A polymerisation in which a copolymer is formed." [doi:10.1351/goldbook.C01336]
 synonym: "copolymerization" EXACT []
 is_a: MOP:0000629 ! polymerisation
-intersection_of: MOP:0000543 ! molecular process
+intersection_of: MOP:0000629 ! polymerisation
 intersection_of: BFO:0000077 CHEBI:53310 ! has participant beginning to exist co-polymer
 relationship: BFO:0000077 CHEBI:53310 ! has participant beginning to exist co-polymer
 
@@ -5614,8 +5659,8 @@ id: MOP:0000672
 name: enolization
 def: "A molecular process where a carbonyl compound is converted an enol. Usually this is a reversible tautomerization but it can be irreversible." [RSC:cb]
 synonym: "enolisation" EXACT []
-is_a: MOP:0000724 ! tautomerisation
-intersection_of: MOP:0000724 ! tautomerisation
+is_a: MOP:0000725 ! keto-enol tautomerisation
+intersection_of: MOP:0000725 ! keto-enol tautomerisation
 intersection_of: BFO:0000077 CHEBI:33823 ! has participant beginning to exist enol
 intersection_of: BFO:0000078 CHEBI:36586 ! has participant ceasing to exist carbonyl compound
 relationship: BFO:0000077 CHEBI:33823 ! has participant beginning to exist enol
@@ -5642,6 +5687,7 @@ name: cyclometallation
 def: "Formation of two bonds between a metal atom and a substrate, resulting in a metallacycle." [RSC:cb]
 comment: has_participant metal atom when ChEBI get round to renaming those.
 synonym: "cyclometalation" EXACT []
+is_a: MOP:0000561 ! cyclization
 is_a: MOP:0000674 ! metallation
 
 [Term]
@@ -5966,7 +6012,7 @@ is_a: MOP:0000728 ! sigmatropic rearrangement
 id: MOP:0000724
 name: tautomerisation
 def: "Isomerisation between tautomers." [AU:T06252]
-is_a: MOP:0000543 ! molecular process
+is_a: MOP:0000789 ! isomerisation
 
 [Term]
 id: MOP:0000725
@@ -6000,267 +6046,473 @@ is_a: MOP:0000543 ! molecular process
 
 [Term]
 id: MOP:0000730
-name: 6-endo-dig cyclization
-is_a: MOP:0000731 ! endocyclization
-relationship: BFO:0000117 MOP:0000735 ! has occurrent part bond formation to digonal centre
-relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
+name: Brønsted acid catalysis
+is_a: MOP:0000740 ! acid catalysis
+created_by: batchelorc
+creation_date: 2014-04-09T10:00:00Z
 
 [Term]
 id: MOP:0000731
+name: base catalysis
+is_a: MOP:0000781 ! catalysis
+union_of: MOP:0000735 ! Lewis base catalysis
+union_of: MOP:0000736 ! Brønsted base catalysis
+created_by: batchelorc
+creation_date: 2014-04-09T10:00:00Z
+
+[Term]
+id: MOP:0000732
+name: hydron donation
+is_a: MOP:0000543 ! molecular process
+relationship: BFO:0000055 CHEBI:39141 ! realizes Brønsted acid
+created_by: batchelorc
+creation_date: 2014-04-09T10:00:00Z
+
+[Term]
+id: MOP:0000733
+name: accepting an electron pair in Lewis adduct formation
+is_a: MOP:0000543 ! molecular process
+relationship: BFO:0000055 CHEBI:39143 ! realizes Lewis acid
+created_by: batchelorc
+creation_date: 2014-04-09T10:00:00Z
+
+[Term]
+id: MOP:0000734
+name: Lewis acid catalysis
+is_a: MOP:0000740 ! acid catalysis
+created_by: batchelorc
+creation_date: 2014-04-09T10:00:00Z
+
+[Term]
+id: MOP:0000735
+name: Lewis base catalysis
+is_a: MOP:0000731 ! base catalysis
+created_by: batchelorc
+creation_date: 2014-04-09T10:00:00Z
+
+[Term]
+id: MOP:0000736
+name: Brønsted base catalysis
+is_a: MOP:0000731 ! base catalysis
+relationship: BFO:0000117 MOP:0000737 ! has occurrent part accepting a hydron
+created_by: batchelorc
+creation_date: 2014-04-09T10:00:00Z
+
+[Term]
+id: MOP:0000737
+name: accepting a hydron
+is_a: MOP:0000543 ! molecular process
+relationship: BFO:0000055 CHEBI:39142 ! realizes Brønsted base
+created_by: batchelorc
+creation_date: 2014-04-09T10:00:00Z
+
+[Term]
+id: MOP:0000738
+name: electron pair donation in Lewis adduct formation
+is_a: MOP:0000543 ! molecular process
+relationship: BFO:0000055 CHEBI:39144 ! realizes Lewis base
+created_by: batchelorc
+creation_date: 2014-04-09T10:00:00Z
+
+[Term]
+id: MOP:0000739
+name: Lewis adduct formation
+is_a: MOP:0000543 ! molecular process
+relationship: BFO:0000117 MOP:0000733 ! has occurrent part accepting an electron pair in Lewis adduct formation
+relationship: BFO:0000117 MOP:0000738 ! has occurrent part electron pair donation in Lewis adduct formation
+
+[Term]
+id: MOP:0000740
+name: acid catalysis
+def: "Catalysis of a reaction where the catalyst either donates a hydron or accepts an electron pair." [RSC:cb]
+is_a: MOP:0000781 ! catalysis
+union_of: MOP:0000730 ! Brønsted acid catalysis
+union_of: MOP:0000734 ! Lewis acid catalysis
+
+[Term]
+id: MOP:0000741
+name: 4-exo-tet cyclization
+is_a: MOP:0000772 ! exocyclization
+relationship: BFO:0000117 MOP:0000777 ! has occurrent part bond formation to tetragonal centre
+relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000742
+name: 5-exo-tet cyclization
+is_a: MOP:0000772 ! exocyclization
+relationship: BFO:0000117 MOP:0000777 ! has occurrent part bond formation to tetragonal centre
+relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000743
+name: 6-exo-tet cyclization
+is_a: MOP:0000772 ! exocyclization
+relationship: BFO:0000117 MOP:0000777 ! has occurrent part bond formation to tetragonal centre
+relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000744
+name: 7-exo-tet cyclization
+is_a: MOP:0000772 ! exocyclization
+relationship: BFO:0000117 MOP:0000777 ! has occurrent part bond formation to tetragonal centre
+relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000745
+name: 5-endo-tet cyclization
+is_a: MOP:0000771 ! endocyclization
+relationship: BFO:0000117 MOP:0000777 ! has occurrent part bond formation to tetragonal centre
+relationship: BFO:0000119 MOP:0000774 ! has profile Baldwin-disfavoured profile
+
+[Term]
+id: MOP:0000746
+name: 6-endo-tet cyclization
+is_a: MOP:0000771 ! endocyclization
+relationship: BFO:0000117 MOP:0000777 ! has occurrent part bond formation to tetragonal centre
+relationship: BFO:0000119 MOP:0000774 ! has profile Baldwin-disfavoured profile
+
+[Term]
+id: MOP:0000747
+name: 7-endo-tet cyclization
+is_a: MOP:0000771 ! endocyclization
+relationship: BFO:0000117 MOP:0000777 ! has occurrent part bond formation to tetragonal centre
+relationship: BFO:0000119 MOP:0000774 ! has profile Baldwin-disfavoured profile
+
+[Term]
+id: MOP:0000748
+name: 3-exo-trig cyclization
+is_a: MOP:0000772 ! exocyclization
+relationship: BFO:0000117 MOP:0000776 ! has occurrent part bond formation to trigonal centre
+relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000749
+name: 3-exo-dig cyclization
+is_a: MOP:0000772 ! exocyclization
+relationship: BFO:0000117 MOP:0000775 ! has occurrent part bond formation to digonal centre
+relationship: BFO:0000119 MOP:0000774 ! has profile Baldwin-disfavoured profile
+
+[Term]
+id: MOP:0000750
+name: 3-endo-dig cyclization
+is_a: MOP:0000771 ! endocyclization
+relationship: BFO:0000117 MOP:0000775 ! has occurrent part bond formation to digonal centre
+relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000751
+name: 3-endo-trig cyclization
+is_a: MOP:0000771 ! endocyclization
+relationship: BFO:0000117 MOP:0000776 ! has occurrent part bond formation to trigonal centre
+relationship: BFO:0000119 MOP:0000774 ! has profile Baldwin-disfavoured profile
+
+[Term]
+id: MOP:0000752
+name: 4-exo-trig cyclization
+is_a: MOP:0000772 ! exocyclization
+relationship: BFO:0000117 MOP:0000776 ! has occurrent part bond formation to trigonal centre
+relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000753
+name: 4-endo-trig cyclization
+is_a: MOP:0000771 ! endocyclization
+relationship: BFO:0000117 MOP:0000776 ! has occurrent part bond formation to trigonal centre
+relationship: BFO:0000119 MOP:0000774 ! has profile Baldwin-disfavoured profile
+
+[Term]
+id: MOP:0000754
+name: 4-endo-dig cyclization
+is_a: MOP:0000771 ! endocyclization
+relationship: BFO:0000117 MOP:0000775 ! has occurrent part bond formation to digonal centre
+relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000755
+name: 5-exo-trig cyclization
+is_a: MOP:0000772 ! exocyclization
+relationship: BFO:0000117 MOP:0000776 ! has occurrent part bond formation to trigonal centre
+relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000756
+name: 5-exo-dig cyclization
+is_a: MOP:0000772 ! exocyclization
+relationship: BFO:0000117 MOP:0000775 ! has occurrent part bond formation to digonal centre
+relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000757
+name: 5-endo-trig cyclization
+is_a: MOP:0000771 ! endocyclization
+relationship: BFO:0000117 MOP:0000776 ! has occurrent part bond formation to trigonal centre
+relationship: BFO:0000119 MOP:0000774 ! has profile Baldwin-disfavoured profile
+
+[Term]
+id: MOP:0000758
+name: 5-endo-dig cyclization
+is_a: MOP:0000771 ! endocyclization
+relationship: BFO:0000117 MOP:0000775 ! has occurrent part bond formation to digonal centre
+relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000759
+name: 6-endo-trig cyclization
+is_a: MOP:0000771 ! endocyclization
+relationship: BFO:0000117 MOP:0000776 ! has occurrent part bond formation to trigonal centre
+relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000760
+name: 7-endo-trig cyclization
+is_a: MOP:0000771 ! endocyclization
+relationship: BFO:0000117 MOP:0000776 ! has occurrent part bond formation to trigonal centre
+relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000761
+name: 7-endo-dig cyclization
+is_a: MOP:0000771 ! endocyclization
+relationship: BFO:0000117 MOP:0000775 ! has occurrent part bond formation to digonal centre
+relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000762
+name: 4-exo-dig cyclization
+is_a: MOP:0000772 ! exocyclization
+relationship: BFO:0000117 MOP:0000775 ! has occurrent part bond formation to digonal centre
+relationship: BFO:0000119 MOP:0000774 ! has profile Baldwin-disfavoured profile
+
+[Term]
+id: MOP:0000763
+name: 6-exo-dig cyclization
+is_a: MOP:0000772 ! exocyclization
+relationship: BFO:0000117 MOP:0000775 ! has occurrent part bond formation to digonal centre
+relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000764
+name: 7-exo-dig cyclization
+is_a: MOP:0000772 ! exocyclization
+relationship: BFO:0000117 MOP:0000775 ! has occurrent part bond formation to digonal centre
+relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000765
+name: 6-exo-trig cyclization
+is_a: MOP:0000772 ! exocyclization
+relationship: BFO:0000117 MOP:0000776 ! has occurrent part bond formation to trigonal centre
+relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000766
+name: 7-exo-trig cyclization
+is_a: MOP:0000772 ! exocyclization
+relationship: BFO:0000117 MOP:0000776 ! has occurrent part bond formation to trigonal centre
+relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000767
+name: endothermic reaction
+alt_id: REX:0000368
+def: "A reaction for which the overall standard enthalpy change is positive." [doi:10.1351/goldbook.E02095]
+is_a: MOP:0000543 ! molecular process
+
+[Term]
+id: MOP:0000768
+name: exothermic reaction
+alt_id: REX:0000369
+def: "A reaction for which the overall standard enthalpy change is positive." [doi:10.1351/goldbook.E02269]
+is_a: MOP:0000543 ! molecular process
+
+[Term]
+id: MOP:0000770
+name: 6-endo-dig cyclization
+is_a: MOP:0000771 ! endocyclization
+relationship: BFO:0000117 MOP:0000775 ! has occurrent part bond formation to digonal centre
+relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
+
+[Term]
+id: MOP:0000771
 name: endocyclization
 def: "A cyclization where there is a reduction in bond order of a bond that ends up within the newly-formed ring." [RSC:cb]
 is_a: MOP:0000561 ! cyclization
 
 [Term]
-id: MOP:0000732
+id: MOP:0000772
 name: exocyclization
 def: "A cyclization where there is a reduction in bond order of a bond that ends up outside the newly-formed ring." [RSC:cb]
 is_a: MOP:0000561 ! cyclization
 
 [Term]
-id: MOP:0000733
+id: MOP:0000773
 name: Baldwin-favoured profile
 def: "Profile of a cyclization that is favoured according to Baldwin's empirical rules. These apply best to neutral systems consisting of first-row atoms." [RSC:cb]
 is_a: BFO:0000144 ! process profile
 relationship: BFO:0000133 MOP:0000561 ! process profile of cyclization
 
 [Term]
-id: MOP:0000734
+id: MOP:0000774
 name: Baldwin-disfavoured profile
 def: "Profile of a cyclization that is disfavoured according to Baldwin's empirical rules. These apply best to neutral systems consisting of first-row atoms." [RSC:cb]
 is_a: BFO:0000144 ! process profile
 relationship: BFO:0000133 MOP:0000561 ! process profile of cyclization
 
 [Term]
-id: MOP:0000735
+id: MOP:0000775
 name: bond formation to digonal centre
 def: "A covalent bond formation where the active centre has sp hybridization." [RSC:cb]
-is_a: MOP:0000739 ! formation of covalent bond
+is_a: MOP:0000779 ! formation of covalent bond
 
 [Term]
-id: MOP:0000736
+id: MOP:0000776
 name: bond formation to trigonal centre
 def: "A bond formation where the active centre has sp2 hybridization." [RSC:cb]
-is_a: MOP:0000739 ! formation of covalent bond
+is_a: MOP:0000779 ! formation of covalent bond
 
 [Term]
-id: MOP:0000737
+id: MOP:0000777
 name: bond formation to tetragonal centre
 def: "A bond formation where the active centre has sp3 hybridization." [RSC:cb]
-is_a: MOP:0000739 ! formation of covalent bond
+is_a: MOP:0000779 ! formation of covalent bond
 
 [Term]
-id: MOP:0000738
+id: MOP:0000778
 name: 3-exo-tet cyclization
-is_a: MOP:0000732 ! exocyclization
-relationship: BFO:0000117 MOP:0000737 ! has occurrent part bond formation to tetragonal centre
-relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
+is_a: MOP:0000772 ! exocyclization
+relationship: BFO:0000117 MOP:0000777 ! has occurrent part bond formation to tetragonal centre
+relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
 
 [Term]
-id: MOP:0000739
+id: MOP:0000779
 name: formation of covalent bond
 is_a: MOP:0000543 ! molecular process
 
 [Term]
-id: MOP:0000740
+id: MOP:0000780
 name: breaking of covalent bond
 is_a: MOP:0000543 ! molecular process
 
 [Term]
-id: MOP:0000741
-name: 4-exo-tet cyclization
-is_a: MOP:0000732 ! exocyclization
-relationship: BFO:0000117 MOP:0000737 ! has occurrent part bond formation to tetragonal centre
-relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
+id: MOP:0000781
+name: catalysis
+def: "A molecular process resulting in the rate of another molecular process being increased without modifying the other process's overall Gibbs standard energy change." [http://dx.doi.org/10.1351/goldbook.C00876]
+is_a: MOP:0000543 ! molecular process
+intersection_of: MOP:0000543 ! molecular process
+intersection_of: MOP:0000769 MOP:0000543 ! is_catalysis_of molecular process
+relationship: MOP:0000769 MOP:0000543 ! is_catalysis_of molecular process
 
 [Term]
-id: MOP:0000742
-name: 5-exo-tet cyclization
-is_a: MOP:0000732 ! exocyclization
-relationship: BFO:0000117 MOP:0000737 ! has occurrent part bond formation to tetragonal centre
-relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
+id: MOP:0000782
+name: general acid catalysis
+def: "A Brønsted acid catalysis where all species that can contribute protons contribute to the increase in reaction rate." [http://dx.doi.org/10.1359/goldbook.G02609]
+is_a: MOP:0000730 ! Brønsted acid catalysis
+created_by: batchelorc
+creation_date: 2014-09-02T13:15:00Z
 
 [Term]
-id: MOP:0000743
-name: 6-exo-tet cyclization
-is_a: MOP:0000732 ! exocyclization
-relationship: BFO:0000117 MOP:0000737 ! has occurrent part bond formation to tetragonal centre
-relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
+id: MOP:0000783
+name: specific acid catalysis
+def: "A Brønsted acid catalysis where the reaction rate is proportional to the concentration of protonated solvent molecules." [http://dx.doi.org/10.1359/goldbook.S05796]
+is_a: MOP:0000782 ! general acid catalysis
+created_by: batchelorc
+creation_date: 2014-09-02T13:15:00Z
 
 [Term]
-id: MOP:0000744
-name: 7-exo-tet cyclization
-is_a: MOP:0000732 ! exocyclization
-relationship: BFO:0000117 MOP:0000737 ! has occurrent part bond formation to tetragonal centre
-relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
+id: MOP:0000784
+name: general base catalysis
+def: "A Brønsted base catalysis where the reaction rate is proportional to the concentration of hydroxide ions." [http://dx.doi.org/10.1359/goldbook.G02610]
+is_a: MOP:0000736 ! Brønsted base catalysis
+created_by: batchelorc
+creation_date: 2014-09-02T13:15:00Z
 
 [Term]
-id: MOP:0000745
-name: 5-endo-tet cyclization
-is_a: MOP:0000731 ! endocyclization
-relationship: BFO:0000117 MOP:0000737 ! has occurrent part bond formation to tetragonal centre
-relationship: BFO:0000119 MOP:0000734 ! has profile Baldwin-disfavoured profile
+id: MOP:0000785
+name: specific base catalysis
+def: "A Brønsted base catalysis where the reaction rate is proportional to the concentration of hydron acceptors." [http://dx.doi.org/10.1359/goldbook.S05796]
+is_a: MOP:0000784 ! general base catalysis
+created_by: batchelorc
+creation_date: 2014-09-02T13:15:00Z
 
 [Term]
-id: MOP:0000746
-name: 6-endo-tet cyclization
-is_a: MOP:0000731 ! endocyclization
-relationship: BFO:0000117 MOP:0000737 ! has occurrent part bond formation to tetragonal centre
-relationship: BFO:0000119 MOP:0000734 ! has profile Baldwin-disfavoured profile
+id: MOP:0000786
+name: radical formation
+def: "A molecular process in which a molecular entity possessing an unpaired electron is formed." [RSC:xp]
+is_a: MOP:0000543 ! molecular process
+intersection_of: MOP:0000543 ! molecular process
+intersection_of: BFO:0000077 CHEBI:26519 ! has participant beginning to exist radical
+relationship: BFO:0000077 CHEBI:26519 ! has participant beginning to exist radical
 
 [Term]
-id: MOP:0000747
-name: 7-endo-tet cyclization
-is_a: MOP:0000731 ! endocyclization
-relationship: BFO:0000117 MOP:0000737 ! has occurrent part bond formation to tetragonal centre
-relationship: BFO:0000119 MOP:0000734 ! has profile Baldwin-disfavoured profile
+id: MOP:0000787
+name: transesterification
+def: "An alcoholysis reaction of an ester which produces a different alcohol and a different ester." [RSC:cb]
+is_a: MOP:0000620 ! alcoholysis
 
 [Term]
-id: MOP:0000748
-name: 3-exo-trig cyclization
-is_a: MOP:0000732 ! exocyclization
-relationship: BFO:0000117 MOP:0000736 ! has occurrent part bond formation to trigonal centre
-relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
+id: MOP:0000788
+name: phosphorolysis
+def: "A covalent-bond-breaking reaction where the attacking group is a phosphate ion." [RSC:cb]
+is_a: MOP:0000780 ! breaking of covalent bond
 
 [Term]
-id: MOP:0000749
-name: 3-exo-dig cyclization
-is_a: MOP:0000732 ! exocyclization
-relationship: BFO:0000117 MOP:0000735 ! has occurrent part bond formation to digonal centre
-relationship: BFO:0000119 MOP:0000734 ! has profile Baldwin-disfavoured profile
+id: MOP:0000789
+name: isomerisation
+def: "A molecular process where the product is an isomer of the reactant." [doi:10.1359/goldbook.I03295]
+is_a: MOP:0000543 ! molecular process
 
 [Term]
-id: MOP:0000750
-name: 3-endo-dig cyclization
-is_a: MOP:0000731 ! endocyclization
-relationship: BFO:0000117 MOP:0000735 ! has occurrent part bond formation to digonal centre
-relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
+id: MOP:0000790
+name: substitution reaction
+alt_id: RXNO:0000019
+def: "A reaction in which one singly-bonded group, but not the hydrogen atom, is replaced by another singly-bonded group." [RSC:cb]
+comment: The Gold Book says hydrogen atoms count, but this differs from everyone's intuition. See http://goldbook.iupac.org/S06078.html
+is_a: MOP:0000543 ! molecular process
 
 [Term]
-id: MOP:0000751
-name: 3-endo-trig cyclization
-is_a: MOP:0000731 ! endocyclization
-relationship: BFO:0000117 MOP:0000736 ! has occurrent part bond formation to trigonal centre
-relationship: BFO:0000119 MOP:0000734 ! has profile Baldwin-disfavoured profile
+id: MOP:0000791
+name: aromatic substitution
+alt_id: RXNO:0000020
+def: "A substitution reaction in which one singly-bonded substituent on an aromatic skeleton is replaced by another singly-bonded substituent." [RSC:cb]
+is_a: MOP:0000790 ! substitution reaction
 
 [Term]
-id: MOP:0000752
-name: 4-exo-trig cyclization
-is_a: MOP:0000732 ! exocyclization
-relationship: BFO:0000117 MOP:0000736 ! has occurrent part bond formation to trigonal centre
-relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
+id: MOP:0000792
+name: allylic rearrangement
+alt_id: RXNO:0000033
+def: "A substitution reaction in an allylic system with concomitant migration of the allyl double bond." [RSC:cb, RSC:cc, RSC:db]
+is_a: MOP:0000790 ! substitution reaction
 
 [Term]
-id: MOP:0000753
-name: 4-endo-trig cyclization
-is_a: MOP:0000731 ! endocyclization
-relationship: BFO:0000117 MOP:0000736 ! has occurrent part bond formation to trigonal centre
-relationship: BFO:0000119 MOP:0000734 ! has profile Baldwin-disfavoured profile
+id: MOP:0000793
+name: N-substitution
+alt_id: RXNO:0000319
+def: "A substitution reaction where the reactive centre is a nitrogen atom." [RSC:cb]
+is_a: MOP:0000790 ! substitution reaction
 
 [Term]
-id: MOP:0000754
-name: 4-endo-dig cyclization
-is_a: MOP:0000731 ! endocyclization
-relationship: BFO:0000117 MOP:0000735 ! has occurrent part bond formation to digonal centre
-relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
+id: MOP:0000794
+name: O-substitution
+alt_id: RXNO:0000318
+def: "A substitution reaction where the reactive centre is an oxygen atom." [RSC:cb]
+xref: NAMERXN:1.7
+is_a: MOP:0000790 ! substitution reaction
 
 [Term]
-id: MOP:0000755
-name: 5-exo-trig cyclization
-is_a: MOP:0000732 ! exocyclization
-relationship: BFO:0000117 MOP:0000736 ! has occurrent part bond formation to trigonal centre
-relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
+id: MOP:0000795
+name: S-substitution
+alt_id: RXNO:0000336
+def: "A substitution reaction where the reactive centre is a sulfur atom." [RSC:cb]
+xref: NAMERXN:1.8
+is_a: MOP:0000790 ! substitution reaction
+created_by: batchelorc
+creation_date: 2012-03-22T12:22:59Z
 
 [Term]
-id: MOP:0000756
-name: 5-exo-dig cyclization
-is_a: MOP:0000732 ! exocyclization
-relationship: BFO:0000117 MOP:0000735 ! has occurrent part bond formation to digonal centre
-relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
-
-[Term]
-id: MOP:0000757
-name: 5-endo-trig cyclization
-is_a: MOP:0000731 ! endocyclization
-relationship: BFO:0000117 MOP:0000736 ! has occurrent part bond formation to trigonal centre
-relationship: BFO:0000119 MOP:0000734 ! has profile Baldwin-disfavoured profile
-
-[Term]
-id: MOP:0000758
-name: 5-endo-dig cyclization
-is_a: MOP:0000731 ! endocyclization
-relationship: BFO:0000117 MOP:0000735 ! has occurrent part bond formation to digonal centre
-relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
-
-[Term]
-id: MOP:0000759
-name: 6-endo-trig cyclization
-is_a: MOP:0000731 ! endocyclization
-relationship: BFO:0000117 MOP:0000736 ! has occurrent part bond formation to trigonal centre
-relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
-
-[Term]
-id: MOP:0000760
-name: 7-endo-trig cyclization
-is_a: MOP:0000731 ! endocyclization
-relationship: BFO:0000117 MOP:0000736 ! has occurrent part bond formation to trigonal centre
-relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
-
-[Term]
-id: MOP:0000761
-name: 7-endo-dig cyclization
-is_a: MOP:0000731 ! endocyclization
-relationship: BFO:0000117 MOP:0000735 ! has occurrent part bond formation to digonal centre
-relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
-
-[Term]
-id: MOP:0000762
-name: 4-exo-dig cyclization
-is_a: MOP:0000732 ! exocyclization
-relationship: BFO:0000117 MOP:0000735 ! has occurrent part bond formation to digonal centre
-relationship: BFO:0000119 MOP:0000734 ! has profile Baldwin-disfavoured profile
-
-[Term]
-id: MOP:0000763
-name: 6-exo-dig cyclization
-is_a: MOP:0000732 ! exocyclization
-relationship: BFO:0000117 MOP:0000735 ! has occurrent part bond formation to digonal centre
-relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
-
-[Term]
-id: MOP:0000764
-name: 7-exo-dig cyclization
-is_a: MOP:0000732 ! exocyclization
-relationship: BFO:0000117 MOP:0000735 ! has occurrent part bond formation to digonal centre
-relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
-
-[Term]
-id: MOP:0000765
-name: 6-exo-trig cyclization
-is_a: MOP:0000732 ! exocyclization
-relationship: BFO:0000117 MOP:0000736 ! has occurrent part bond formation to trigonal centre
-relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
-
-[Term]
-id: MOP:0000766
-name: 7-exo-trig cyclization
-is_a: MOP:0000732 ! exocyclization
-relationship: BFO:0000117 MOP:0000736 ! has occurrent part bond formation to trigonal centre
-relationship: BFO:0000119 MOP:0000733 ! has profile Baldwin-favoured profile
-
-[Term]
-id: MOP:0000767
-alt_id: REX:0000368
-name: endothermic reaction
-def: "A reaction for which the overall standard enthalpy change is positive." [doi:10.1351/goldbook.E02095]
-is_a: MOP:0000543
-
-[Term]
-id: MOP:0000768
-alt_id: REX:0000369
-name: exothermic reaction
-def: "A reaction for which the overall standard enthalpy change is positive." [doi:10.1351/goldbook.E02269]
-is_a: MOP:0000543
+id: MOP:0000796
+name: chloro- to hydroxy- aromatic substitution
+def: "An aromatic substitution reaction where a chloro substituent is replaced by a hydroxy substituent." [RSC:cb]
+is_a: MOP:0000791 ! aromatic substitution
 
 [Term]
 id: MOP:0001000
@@ -25721,4 +25973,15 @@ name: process profile of
 [Typedef]
 id: BFO:0000162
 name: has disposition at all times
+
+[Typedef]
+id: MOP:0000769
+name: is_catalysis_of
+def: "x is_catalysis_of y if and only if x positively_regulates y and the positive regulation works by providing a more kinetically-favourable route across the energy landscape from the reactants of y to the products of y." [RSC:cb]
+is_a: RO:0002213 ! positively_regulates
+
+[Typedef]
+id: RO:0002213
+name: positively_regulates
+def: "x positively regulates y if and only if the progression of x increases the frequency, rate or extent of y" []
 
