@@ -547,9 +547,10 @@ is_a: MOP:0000800 ! formation of covalent bond with carbon centre
 id: MOP:0000028
 name: carboacylation
 def: "Formation of a covalent bond between a substrate and a carboacyl group." [RSC:xp]
-comment: has_participant: CHEBI:37838
 synonym: "carboacylation" EXACT []
 is_a: MOP:0000479 ! acylation
+is_a: MOP:0000800 ! formation of covalent bond with carbon centre
+relationship: has_participant CHEBI:37838
 
 [Term]
 id: MOP:0000029
@@ -557,7 +558,7 @@ name: univalent carboacylation
 def: "Formation of a covalent bond between a substrate and an univalent carboacyl group." [RSC:xp]
 comment: has_participant: CHEBI:27207
 synonym: "univalent carboacylation" EXACT []
-is_a: MOP:0000028 ! carboacylation
+is_a: MOP:0000458 ! carboacylation
 
 [Term]
 id: MOP:0000030
@@ -2481,7 +2482,7 @@ name: ornithylation
 def: "Formation of a covalent bond between a substrate and an ornithyl group." [RSC:xp]
 comment: has_participant: CHEBI:46929
 synonym: "ornithylation" EXACT []
-is_a: MOP:0000800 ! formation of covalent bond with carbon centre
+is_a: MOP:0000029 ! formation of covalent bond with carbon centre
 
 [Term]
 id: MOP:0000274
@@ -3983,7 +3984,7 @@ name: 4,4'-dimethoxytriphenylmethylation
 def: "Formation of a covalent bond between a substrate and a 4,4'-dimethoxytriphenylmethyl group." [RSC:xp]
 comment: has_participant: CHEBI:51095
 synonym: "4,4'-dimethoxytriphenylmethylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000458 ! organylation
 
 [Term]
 id: MOP:0000462
@@ -3991,7 +3992,7 @@ name: taurylation
 def: "Formation of a covalent bond between a substrate and a tauryl group." [RSC:xp]
 comment: has_participant: CHEBI:26861
 synonym: "taurylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000798 ! formation of covalent bond with sulfur centre
 
 [Term]
 id: MOP:0000463
@@ -3999,7 +4000,7 @@ name: triflylation
 def: "Formation of a covalent bond between a substrate and a triflyl group." [RSC:xp]
 comment: has_participant: CHEBI:48548
 synonym: "triflylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000798 ! formation of covalent bond with sulfur centre
 
 [Term]
 id: MOP:0000464
@@ -4015,7 +4016,7 @@ name: sulfanylmethylation
 def: "Formation of a covalent bond between a substrate and a sulfanylmethyl group." [RSC:xp]
 comment: has_participant: CHEBI:50326
 synonym: "sulfanylmethylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000458 ! organylation
 
 [Term]
 id: MOP:0000466
@@ -4023,7 +4024,7 @@ name: selanylmethylation
 def: "Formation of a covalent bond between a substrate and a selanylmethyl group." [RSC:xp]
 comment: has_participant: CHEBI:50327
 synonym: "selanylmethylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000458 ! organylation
 
 [Term]
 id: MOP:0000467
@@ -4031,7 +4032,7 @@ name: 2-carboxyethylation
 def: "Formation of a covalent bond between a substrate and a 2-carboxyethyl group." [RSC:xp]
 comment: has_participant: CHEBI:50329
 synonym: "2-carboxyethylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000458 ! organylation
 
 [Term]
 id: MOP:0000468
@@ -4039,7 +4040,7 @@ name: 2-amino-2-oxoethylation
 def: "Formation of a covalent bond between a substrate and a 2-amino-2-oxoethyl group." [RSC:xp]
 comment: has_participant: CHEBI:50330
 synonym: "2-amino-2-oxoethylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000458 ! organylation
 
 [Term]
 id: MOP:0000469
@@ -4047,7 +4048,7 @@ name: 3-amino-3-oxopropylation
 def: "Formation of a covalent bond between a substrate and a 3-amino-3-oxopropyl group." [RSC:xp]
 comment: has_participant: CHEBI:50331
 synonym: "3-amino-3-oxopropylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000458 ! organylation
 
 [Term]
 id: MOP:0000470
@@ -4055,7 +4056,7 @@ name: 2-(methylsulfanyl)ethylation
 def: "Formation of a covalent bond between a substrate and a 2-(methylsulfanyl)ethyl group." [RSC:xp]
 comment: has_participant: CHEBI:50332
 synonym: "2-(methylsulfanyl)ethylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000458 ! organylation
 
 [Term]
 id: MOP:0000471
@@ -4063,7 +4064,7 @@ name: 4-hydroxybenzylation
 def: "Formation of a covalent bond between a substrate and a 4-hydroxybenzyl group." [RSC:xp]
 comment: has_participant: CHEBI:50336
 synonym: "4-hydroxybenzylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000458 ! organylation
 
 [Term]
 id: MOP:0000472
@@ -4071,7 +4072,7 @@ name: 1H-indol-3-ylmethylation
 def: "Formation of a covalent bond between a substrate and a 1H-indol-3-ylmethyl group." [RSC:xp]
 comment: has_participant: CHEBI:50337
 synonym: "1H-indol-3-ylmethylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000458 ! organylation
 
 [Term]
 id: MOP:0000473
@@ -4079,7 +4080,7 @@ name: 1H-imidazol-4-ylmethylation
 def: "Formation of a covalent bond between a substrate and a 1H-imidazol-4-ylmethyl group." [RSC:xp]
 comment: has_participant: CHEBI:50338
 synonym: "1H-imidazol-4-ylmethylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000458 ! organylation
 
 [Term]
 id: MOP:0000474
@@ -4087,7 +4088,7 @@ name: 3-carbamimidamidopropylation
 def: "Formation of a covalent bond between a substrate and a 3-carbamimidamidopropyl group." [RSC:xp]
 comment: has_participant: CHEBI:50340
 synonym: "3-carbamimidamidopropylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000458 ! organylation
 
 [Term]
 id: MOP:0000475
@@ -4095,7 +4096,7 @@ name: hydroxymethylation
 def: "Formation of a covalent bond between a substrate and a hydroxymethyl group." [RSC:xp]
 comment: has_participant: CHEBI:24712
 synonym: "hydroxymethylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000458 ! organylation
 
 [Term]
 id: MOP:0000476
@@ -4103,7 +4104,7 @@ name: 1-hydroxyethylation
 def: "Formation of a covalent bond between a substrate and a 1-hydroxyethyl group." [RSC:xp]
 comment: has_participant: CHEBI:50341
 synonym: "1-hydroxyethylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000458 ! organylation
 
 [Term]
 id: MOP:0000477
@@ -4125,9 +4126,10 @@ is_a: MOP:0000458 ! organylation
 id: MOP:0000479
 name: acylation
 def: "Formation of a covalent bond between a substrate and an acyl group." [RSC:xp]
-comment: has_participant: CHEBI:22221
+comment: you probably want "carboacylation", MOP:0000028, here
 synonym: "acylation" EXACT []
 is_a: MOP:0000566 ! formation of covalent bond with group
+relationship: has_participant CHEBI:22221
 
 [Term]
 id: MOP:0000480
@@ -4223,7 +4225,7 @@ name: carbonimidoylation
 def: "Formation of a covalent bond between a substrate and a carbonimidoyl group." [RSC:xp]
 comment: has_participant: CHEBI:29815
 synonym: "carbonimidoylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000458 ! organylation
 
 [Term]
 id: MOP:0000492
@@ -4279,7 +4281,7 @@ name: morpholin-4-ylsulfonylation
 def: "Formation of a covalent bond between a substrate and a morpholin-4-ylsulfonyl group." [RSC:xp]
 comment: has_participant: CHEBI:45701
 synonym: "morpholin-4-ylsulfonylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000798 ! formation of covalent bond with sulfur centre
 
 [Term]
 id: MOP:0000499
@@ -4287,7 +4289,7 @@ name: acetohydrazonoylation
 def: "Formation of a covalent bond between a substrate and an acetohydrazonoyl group." [RSC:xp]
 comment: has_participant: CHEBI:48054
 synonym: "acetohydrazonoylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000458 ! organylation
 
 [Term]
 id: MOP:0000500
@@ -4295,7 +4297,7 @@ name: 2-hydroxyethylation
 def: "Formation of a covalent bond between a substrate and a 2-hydroxyethyl group." [RSC:xp]
 comment: has_participant: CHEBI:44730
 synonym: "2-hydroxyethylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000458 ! organylation
 
 [Term]
 id: MOP:0000501
@@ -4311,7 +4313,7 @@ name: disiloxanylation
 def: "Formation of a covalent bond between a substrate and a disiloxanyl group." [RSC:xp]
 comment: has_participant: CHEBI:48142
 synonym: "disiloxanylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000810 ! formation of covalent bond with silicon centre
 
 [Term]
 id: MOP:0000503
@@ -4319,7 +4321,7 @@ name: disiloxane-1,3-diylation
 def: "Formation of a covalent bond between a substrate and a disiloxane-1,3-diyl group." [RSC:xp]
 comment: has_participant: CHEBI:48143
 synonym: "disiloxane-1,3-diylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000810 ! formation of covalent bond with silicon centre
 
 [Term]
 id: MOP:0000504
@@ -4327,7 +4329,7 @@ name: azinoylation
 def: "Formation of a covalent bond between a substrate and an azinoyl group." [RSC:xp]
 comment: has_participant: CHEBI:29771
 synonym: "azinoylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000802 ! formation of covalent bond with nitrogen centre
 
 [Term]
 id: MOP:0000505
@@ -4343,7 +4345,7 @@ name: phosphorothioylation
 def: "Formation of a covalent bond between a substrate and a phosphorothioyl group." [RSC:xp]
 comment: has_participant: CHEBI:32412
 synonym: "phosphorothioylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000806 ! formation of covalent bond with phosphorus centre
 
 [Term]
 id: MOP:0000507
@@ -4351,7 +4353,7 @@ name: phosphonothioylation
 def: "Formation of a covalent bond between a substrate and a phosphonothioyl group." [RSC:xp]
 comment: has_participant: CHEBI:32413
 synonym: "phosphonothioylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000806 ! formation of covalent bond with phosphorus centre
 
 [Term]
 id: MOP:0000508
@@ -4359,7 +4361,7 @@ name: arsonoylation
 def: "Formation of a covalent bond between a substrate and an arsonoyl group." [RSC:xp]
 comment: has_participant: CHEBI:29848
 synonym: "arsonoylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000807 ! formation of covalent bond with arsenic centre
 
 [Term]
 id: MOP:0000509
@@ -4367,7 +4369,7 @@ name: arsinoylation
 def: "Formation of a covalent bond between a substrate and an arsinoyl group." [RSC:xp]
 comment: has_participant: CHEBI:30277
 synonym: "arsinoylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000807 ! formation of covalent bond with arsenic centre
 
 [Term]
 id: MOP:0000510
@@ -4375,7 +4377,7 @@ name: stiborylation
 def: "Formation of a covalent bond between a substrate and a stiboryl group." [RSC:xp]
 comment: has_participant: CHEBI:48439
 synonym: "stiborylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000808 ! formation of covalent bond with antimony centre
 
 [Term]
 id: MOP:0000511
@@ -4503,7 +4505,7 @@ name: sulfinothioylation
 def: "Formation of a covalent bond between a substrate and a sulfinothioyl group." [RSC:xp]
 comment: has_participant: CHEBI:29827
 synonym: "sulfinothioylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000798 ! formation of covalent bond with sulfur centre
 
 [Term]
 id: MOP:0000528
@@ -4511,7 +4513,7 @@ name: sulfonodithioylation
 def: "Formation of a covalent bond between a substrate and a sulfonodithioyl group." [RSC:xp]
 comment: has_participant: CHEBI:29835
 synonym: "sulfonodithioylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000798 ! formation of covalent bond with sulfur centre
 
 [Term]
 id: MOP:0000529
@@ -4519,7 +4521,7 @@ name: trioxidanylation
 def: "Formation of a covalent bond between a substrate and a trioxidanyl group." [RSC:xp]
 comment: has_participant: CHEBI:29791
 synonym: "trioxidanylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000803 ! formation of covalent bond with oxygen centre
 
 [Term]
 id: MOP:0000530
@@ -4527,7 +4529,7 @@ name: trioxidanediylation
 def: "Formation of a covalent bond between a substrate and a trioxidanediyl group." [RSC:xp]
 comment: has_participant: CHEBI:30493
 synonym: "trioxidanediylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000803 ! formation of covalent bond with oxygen centre
 
 [Term]
 id: MOP:0000531
@@ -4543,7 +4545,7 @@ name: phosphoramidochloridoylation
 def: "Formation of a covalent bond between a substrate and a phosphoramidochloridoyl group." [RSC:xp]
 comment: has_participant: CHEBI:48229
 synonym: "phosphoramidochloridoylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000806 ! formation of covalent bond with phosphorus centre
 
 [Term]
 id: MOP:0000533
@@ -4567,7 +4569,7 @@ name: sulfinylation
 def: "Formation of a covalent bond between a substrate and a sulfinyl group." [RSC:xp]
 comment: has_participant: CHEBI:29822
 synonym: "sulfinylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000798 ! formation of covalent bond with sulfur centre
 
 [Term]
 id: MOP:0000536
@@ -4575,7 +4577,7 @@ name: arsorylation
 def: "Formation of a covalent bond between a substrate and an arsoryl group." [RSC:xp]
 comment: has_participant: CHEBI:30274
 synonym: "arsorylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000807 ! formation of covalent bond with arsenic centre
 
 [Term]
 id: MOP:0000537
@@ -4583,7 +4585,7 @@ name: azanediidylation
 def: "Formation of a covalent bond between a substrate and an azanediidyl group." [RSC:xp]
 comment: has_participant: CHEBI:30227
 synonym: "azanediidylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000802 ! formation of covalent bond with nitrogen centre
 
 [Term]
 id: MOP:0000538
@@ -4591,16 +4593,18 @@ name: sulfinimidoylation
 def: "Formation of a covalent bond between a substrate and a sulfinimidoyl group." [RSC:xp]
 comment: has_participant: CHEBI:29829
 synonym: "sulfinimidoylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000798 ! formation of covalent bond with sulfur centre
 
 [Term]
 id: MOP:0000539
 name: sulfonylation
 alt_id: MOP:0000524
 def: "Formation of a covalent bond between a substrate and a sulfonyl group." [RSC:xp]
-comment: MERGED COMMENT:\nTARGET COMMENT: has_participant: CHEBI:51100\n--------------------\nSOURCE COMMENT: has_participant: CHEBI:29825
 synonym: "sulfonylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000798 ! formation of covalent bond with sulfur centre
+intersection_of: MOP:0000798 ! formation of covalent bond with sulfur centre
+intersection_of: has_participant CHEBI:51100
+relationship: has_participant CHEBI:51100
 
 [Term]
 id: MOP:0000540
@@ -4680,7 +4684,7 @@ id: MOP:0000550
 name: halogenation
 def: "Formation of a covalent bond between a substrate and a halo group." [RSC:xp]
 comment: has_participant: CHEBI:47854
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000820 ! formation of covalent bond with halogen centre
 
 [Term]
 id: MOP:0000551
@@ -4715,28 +4719,28 @@ id: MOP:0000555
 name: imination
 def: "Formation of a covalent bond between a substrate and an imino group." [RSC:xp]
 comment: has_participant: CHEBI:29342
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000802 ! formation of covalent bond with nitrogen centre
 
 [Term]
 id: MOP:0000556
 name: nitration
 def: "Formation of a covalent bond between a substrate and a nitro group." [RSC:xp]
 comment: has_participant: CHEBI:29785
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000802 ! formation of covalent bond with nitrogen centre
 
 [Term]
 id: MOP:0000557
 name: hydroxyamination
 def: "Formation of a covalent bond between a substrate and a hydroxyamino group." [RSC:xp]
 comment: has_participant: CHEBI:29769
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000802 ! formation of covalent bond with nitrogen centre
 
 [Term]
 id: MOP:0000558
 name: thioxonation
 def: "Formation of a covalent bond between a substrate and a thioxo group." [RSC:xp]
 comment: has_participant: CHEBI:29833
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000798 ! formation of covalent bond with sulfur centre
 
 [Term]
 id: MOP:0000559
@@ -4744,14 +4748,14 @@ name: sulfonation
 def: "Formation of a covalent bond between a substrate and a sulfo group." [RSC:xp]
 comment: has_participant: CHEBI:29922
 synonym: "hydroxysulfonylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000798 ! formation of covalent bond with sulfur centre
 
 [Term]
 id: MOP:0000560
 name: selenonation
 def: "Formation of a covalent bond between a substrate and a selenono group." [RSC:xp]
 comment: has_participant: CHEBI:29923
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000804 ! formation of covalent bond with selenium centre
 
 [Term]
 id: MOP:0000561
@@ -5498,7 +5502,7 @@ relationship: BFO:0000077 CHEBI:53310 ! has participant beginning to exist co-po
 id: MOP:0000650
 name: amination
 def: "Formation of a covalent bond between a substrate and an amino group." [RSC:cb]
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000802 ! formation of covalent bond with nitrogen centre
 relationship: BFO:0000057 CHEBI:51142 ! has_participant amino groups
 
 [Term]
@@ -6545,7 +6549,7 @@ is_a: MOP:0000566 ! formation of covalent bond with group
 id: MOP:0000799
 name: formation of covalent bond with chlorine centre
 def: "Formation of a covalent bond with a group where the free valence is on a chlorine centre." [RSC:cb]
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000820 ! formation of covalent bond with halogen centre
 
 [Term]
 id: MOP:0000800
@@ -6653,19 +6657,37 @@ is_a: MOP:0000566 ! formation of covalent bond with group
 id: MOP:0000817
 name: formation of covalent bond with bromine centre
 def: "Formation of a covalent bond with a group where the free valence is on a bromine centre." [RSC:cb]
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000820 ! formation of covalent bond with halogen centre
 
 [Term]
 id: MOP:0000818
 name: formation of covalent bond with iodine centre
 def: "Formation of a covalent bond with a group where the free valence is on an iodine centre." [RSC:cb]
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000820 ! formation of covalent bond with halogen centre
 
 [Term]
 id: MOP:0000819
 name: formation of covalent bond with fluorine centre
 def: "Formation of a covalent bond with a group where the free valence is on a fluorine centre." [RSC:cb]
 is_a: MOP:0000566 ! formation of covalent bond with group
+
+[Term]
+id: MOP:0000820
+name: formation of covalent bond with halogen centre
+def: "Formation of a covalent bond with a group where the free valence is on a halogen centre." [RSC:cb]
+is_a: MOP:0000566 ! formation of covalent bond with group
+
+[Term]
+id: MOP:0000821
+name: metal nitrosylation
+def: "Formation of a covalent bond between a metal atom and a nitrosyl group." [RSC:cb]
+is_a: MOP:0000797
+
+[Term]
+id: MOP:0000822
+name: iron nitrosylation
+def: "Formation of a covalent bond between an iron atom and a nitrosyl group." [RSC:cb]
+is_a: MOP:0000821
 
 [Term]
 id: MOP:0001000
