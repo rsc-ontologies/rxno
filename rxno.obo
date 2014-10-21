@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: rxno/releases/2014-09-03/rxno.owl
+data-version: rxno/releases/2014-10-21/rxno.owl
 synonymtypedef: SMILESCOUNTEREXAMPLE "SMILECOUNTEREXAMPLE" RELATED
 synonymtypedef: SMILESEXAMPLE "SMILESEXAMPLE" RELATED
 synonymtypedef: SMIRKS "SMIRKS" RELATED
@@ -9,7 +9,7 @@ ontology: rxno.obo
 [Term]
 id: BFO:0000007
 name: process
-is_a: BFO:0000015
+is_a: BFO:0000015 ! processual entity
 
 [Term]
 id: BFO:0000015
@@ -242,6 +242,11 @@ name: flavonols
 is_a: CHEBI:38104 ! oxacycle
 
 [Term]
+id: CHEBI:29224
+name: dibromine
+is_a: CHEBI:23367 ! molecular entity
+
+[Term]
 id: CHEBI:29785
 name: nitro group
 is_a: CHEBI:24433 ! group
@@ -398,6 +403,11 @@ name: carbonyl compound
 is_a: CHEBI:23367 ! molecular entity
 
 [Term]
+id: CHEBI:36601
+name: triphenylphosphane oxide
+is_a: CHEBI:23367 ! molecular entity
+
+[Term]
 id: CHEBI:36605
 name: phthalic anhydride
 is_a: CHEBI:23367 ! molecular entity
@@ -517,6 +527,11 @@ is_a: CHEBI:24433 ! group
 [Term]
 id: CHEBI:47266
 name: hydrogen bromide
+is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:47875
+name: tetrabromomethane
 is_a: CHEBI:23367 ! molecular entity
 
 [Term]
@@ -713,7 +728,7 @@ id: MOP:0000543
 name: molecular process
 def: "A process in which at least one of the participants is a molecule." [RSC:cb]
 comment: TODO: needs work, formal definition, etc.
-is_a: BFO:0000007
+is_a: BFO:0000007 ! process
 
 [Term]
 id: MOP:0000550
@@ -721,6 +736,13 @@ name: halogenation
 def: "Formation of a covalent bond between a substrate and a halo group." [RSC:xp]
 comment: has_participant: CHEBI:47854
 is_a: MOP:0000566 ! formation of covalent bond with group
+
+[Term]
+id: MOP:0000555
+name: imination
+def: "Formation of a covalent bond between a substrate and an imino group." [RSC:xp]
+comment: has_participant: CHEBI:29342
+is_a: MOP:0000802 ! formation of covalent bond with nitrogen centre
 
 [Term]
 id: MOP:0000556
@@ -1018,7 +1040,7 @@ creation_date: 2009-09-16T11:32:33Z
 id: MOP:0000650
 name: amination
 def: "Formation of a covalent bond between a substrate and an amino group." [RSC:cb]
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000802 ! formation of covalent bond with nitrogen centre
 relationship: BFO:0000057 CHEBI:51142 ! has_participant amino groups
 
 [Term]
@@ -1267,6 +1289,12 @@ xref: NAMERXN:1.8
 is_a: MOP:0000790 ! substitution reaction
 created_by: batchelorc
 creation_date: 2012-03-22T12:22:59Z
+
+[Term]
+id: MOP:0000802
+name: formation of covalent bond with nitrogen centre
+def: "Formation of a covalent bond with a group where the free valence is on a nitrogen centre." [RSC:cb]
+is_a: MOP:0000566 ! formation of covalent bond with group
 
 [Term]
 id: MOP:0001369
@@ -2235,6 +2263,8 @@ id: RXNO:0000101
 name: Leuckart reaction
 def: "The reductive amination of ketones or aldehydes with an ammonium formate or formamide to form an amine." [RSC:cb, RSC:cc, RSC:db]
 is_a: RXNO:0000335 ! reductive amination
+union_of: RXNO:0000552 ! Leuckart aldehyde reaction
+union_of: RXNO:0000553 ! Leuckart ketone reaction
 
 [Term]
 id: RXNO:0000102
@@ -2627,9 +2657,14 @@ is_a: RXNO:0000105 ! end-of-chain chain shortening
 id: RXNO:0000146
 name: Corey-Fuchs reaction
 def: "A homologation reaction of an aldehyde to yield a terminal alkyne. The reagents are tetrabromomethane, triphenylphosphine, butyllithium and water." [RSC:cb, RSC:cc, RSC:db]
+synonym: "Ramirez-Corey-Fuchs reaction" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000089/
 is_a: RXNO:0000070 ! chain lengthening
+relationship: has_part RXNO:0000250 ! Fritsch-Buttenberg-Wiechell rearrangement
+relationship: has_part RXNO:0000556 ! Corey-Fuchs terminal dibromoolefination
 relationship: RXNO:0000423 CHEBI:73477 ! has specified product terminal acetylenic compound
 relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
+relationship: RXNO:0000424 CHEBI:47875 ! has specified reactant tetrabromomethane
 
 [Term]
 id: RXNO:0000147
@@ -4647,6 +4682,7 @@ synonym: "Appel reaction" EXACT []
 is_a: RXNO:0000364 ! alcohol to halide conversion
 relationship: RXNO:0000423 CHEBI:24469 ! has specified product haloalkane
 relationship: RXNO:0000424 CHEBI:30879 ! has specified reactant alcohol
+relationship: RXNO:0000424 CHEBI:36601 ! has specified reactant triphenylphosphane oxide
 
 [Term]
 id: RXNO:0000407
@@ -4668,6 +4704,8 @@ id: RXNO:0000409
 name: Appel bromination
 def: "Conversion of an alcohol to an alkyl bromide with triphenylphosphine and tetrabromomethane or bromine." [RSC:cb]
 is_a: RXNO:0000406 ! Appel halogenation
+union_of: RXNO:0000554 ! Appel bromination with tetrabromomethane
+union_of: RXNO:0000555 ! Appel bromination with bromine
 relationship: RXNO:0000423 CHEBI:22929 ! has specified product bromoalkane
 
 [Term]
@@ -5870,6 +5908,51 @@ is_a: RXNO:0000012 ! functional group oxidation
 relationship: RXNO:0000424 CHEBI:48420 ! has specified reactant chromium trioxide
 created_by: batchelorc
 creation_date: 2014-04-24T15:00:00Z
+
+[Term]
+id: RXNO:0000551
+name: reductive imination
+def: "A functional group modification where a carbonyl oxygen is replaced by an imine." [RSC:cb]
+is_a: MOP:0000555 ! imination
+is_a: RXNO:0000011 ! functional group modification
+
+[Term]
+id: RXNO:0000552
+name: Leuckart aldehyde reaction
+def: "Reductive amination of an aldehyde with ammonium formate or formamide to form an amine." [RSC:cb]
+is_a: RXNO:0000101 ! Leuckart reaction
+relationship: BFO:0000078 CHEBI:17478 ! has participant ceasing to exist aldehyde
+
+[Term]
+id: RXNO:0000553
+name: Leuckart ketone reaction
+def: "Reductive amination of a ketone with ammonium formate or formamide to form an amine." [RSC:cb]
+is_a: RXNO:0000101 ! Leuckart reaction
+relationship: BFO:0000078 CHEBI:17087 ! has participant ceasing to exist ketone
+
+[Term]
+id: RXNO:0000554
+name: Appel bromination with tetrabromomethane
+def: "Conversion of an alcohol to an alkyl bromide with triphenylphosphine and tetrabromomethane." [RSC:cb]
+is_a: RXNO:0000409 ! Appel bromination
+relationship: RXNO:0000424 CHEBI:47875 ! has specified reactant tetrabromomethane
+
+[Term]
+id: RXNO:0000555
+name: Appel bromination with bromine
+def: "Conversion of an alcohol to an alkyl bromide with triphenylphosphine and bromine." [RSC:cb]
+is_a: RXNO:0000409 ! Appel bromination
+relationship: RXNO:0000424 CHEBI:29224 ! has specified reactant dibromine
+
+[Term]
+id: RXNO:0000556
+name: Corey-Fuchs terminal dibromoolefination
+def: "Reaction of an aldehyde with tetrabromomethane and triphenylphosphine to yield a terminal dibromoolefin." [RSC:cb]
+comment: This is the first step of the Corey-Fuchs reaction. The second step is the Fritsch-Buttenberg-Wiechell rearrangement.
+synonym: "Corey-Fuchs reaction step 1" NARROW []
+is_a: RXNO:0000479 ! olefination
+relationship: RXNO:0000424 CHEBI:36601 ! has specified reactant triphenylphosphane oxide
+relationship: RXNO:0000424 CHEBI:47875 ! has specified reactant tetrabromomethane
 
 [Typedef]
 id: BFO:0000055
