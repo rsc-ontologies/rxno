@@ -558,7 +558,7 @@ name: univalent carboacylation
 def: "Formation of a covalent bond between a substrate and an univalent carboacyl group." [RSC:xp]
 comment: has_participant: CHEBI:27207
 synonym: "univalent carboacylation" EXACT []
-is_a: MOP:0000458 ! carboacylation
+is_a: MOP:0000458 ! organylation
 
 [Term]
 id: MOP:0000030
@@ -2482,7 +2482,7 @@ name: ornithylation
 def: "Formation of a covalent bond between a substrate and an ornithyl group." [RSC:xp]
 comment: has_participant: CHEBI:46929
 synonym: "ornithylation" EXACT []
-is_a: MOP:0000029 ! formation of covalent bond with carbon centre
+is_a: MOP:0000029 ! univalent carboacylation
 
 [Term]
 id: MOP:0000274
@@ -4128,7 +4128,7 @@ name: acylation
 def: "Formation of a covalent bond between a substrate and an acyl group." [RSC:xp]
 comment: you probably want "carboacylation", MOP:0000028, here
 synonym: "acylation" EXACT []
-is_a: MOP:0000566 ! formation of covalent bond with group
+is_a: MOP:0000800 ! formation of covalent bond with group
 relationship: has_participant CHEBI:22221
 
 [Term]
@@ -6681,13 +6681,25 @@ is_a: MOP:0000566 ! formation of covalent bond with group
 id: MOP:0000821
 name: metal nitrosylation
 def: "Formation of a covalent bond between a metal atom and a nitrosyl group." [RSC:cb]
-is_a: MOP:0000797
+is_a: MOP:0000797 ! coordination
 
 [Term]
 id: MOP:0000822
 name: iron nitrosylation
 def: "Formation of a covalent bond between an iron atom and a nitrosyl group." [RSC:cb]
-is_a: MOP:0000821
+is_a: MOP:0000821 ! metal nitrosylation
+
+[Term]
+id: MOP:0000823
+name: propargylation
+def: "Formation of a covalent bond with a propargyl group." [RSC:cb]
+is_a: MOP:0000824 ! alkynylation
+
+[Term]
+id: MOP:0000824
+name: alkynylation
+def: "Formation of a covalent bond with an alkynyl group." [RSC:cb]
+is_a: MOP:0000410 ! hydrocarbylation
 
 [Term]
 id: MOP:0001000

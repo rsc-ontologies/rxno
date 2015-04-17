@@ -1609,8 +1609,52 @@ synonym: "Heck-Mizoroki reaction" EXACT []
 synonym: "Mizoroki-Heck reaction" EXACT []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000192/
 xref: NAMERXN:3.2
-is_a: RXNO:0000316 ! palladium-catalysed carbon-carbon coupling reaction
-relationship: RXNO:0000425 CHEBI:33363 ! has_catalyst palladium
+intersection_of: RXNO:0000557
+intersection_of: RXNO:0000425 CHEBI:33363 ! has_catalyst palladium
+
+[Term]
+id: RXNO:0000557
+name: Heck-type reaction
+def: "A carbon-carbon coupling reaction where an organohalide or triflate couples to a terminal olefin to produce an internal olefin." [RSC:cb, RSC:db]
+is_a: RXNO:0000002
+
+[Term]
+id: RXNO:0000558
+name: bromo Heck reaction
+def: "A Heck reaction where an organobromide couples to a terminal olefin to produce an internal olefin, catalysed by palladium." [RSC:cb, RSC:db]
+is_a: RXNO:0000024
+is_a: RXNO:0000562
+
+[Term]
+id: RXNO:0000559
+name: chloro Heck reaction
+def: "A Heck reaction where an organochloride couples to a terminal olefin to produce an internal olefin, catalysed by palladium." [RSC:cb, RSC:db]
+is_a: RXNO:0000024
+is_a: RXNO:0000563
+
+[Term]
+id: RXNO:0000560
+name: iodo Heck reaction
+def: "A Heck reaction where an organoiodide couples to a terminal olefin to produce an internal olefin, catalysed by palladium." [RSC:cb, RSC:db]
+is_a: RXNO:0000024
+
+[Term]
+id: RXNO:0000561
+name: triflyloxy Heck reaction
+def: "A Heck reaction where an organotriflate couples to a terminal olefin to produce an internal olefin, catalysed by palladium." [RSC:cb, RSC:db]
+is_a: RXNO:0000024
+
+[Term]
+id: RXNO:0000562
+name: bromo Heck-type reaction
+def: "A Heck-type reaction where an organobromide couples to a terminal olefin to produce an internal olefin." [RSC:cb, RSC:db]
+is_a: RXNO:00000557
+
+[Term]
+id: RXNO:0000563
+name: chloro Heck-type reaction
+def: "A Heck-type reaction where an organochloride couples to a terminal olefin to produce an internal olefin." [RSC:cb, RSC:db]
+is_a: RXNO:00000557
 
 [Term]
 id: RXNO:0000025
@@ -1859,15 +1903,40 @@ def: "A rearrangement of an acyl azide to give an isocyanate by pyrolysis, with 
 synonym: "Curtius reaction" EXACT []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000097/
 is_a: RXNO:0000025 ! rearrangement step
+relationship: RXNO:0000423 CHEBI:53212
+relationship: RXNO:0000424 CHEBI:22680
+
+[Term]
+id: CHEBI:53212
+name: isocyanates
+
+[Term]
+id: CHEBI:22680
+name: azide
 
 [Term]
 id: RXNO:0000055
 name: Vilsmeier-Haack reaction
-def: "A formylation of an activated arene with a disubstituted formamide to give an aryl carboxaldehyde." [RSC:cc, RSC:db]
+def: "A formylation of an activated arene with a disubstituted formamide to give an arenecarbaldehyde." [RSC:cc, RSC:db]
 synonym: "Vilsmeier-Haack formylation" EXACT []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000444/
 is_a: MOP:0000003 ! formylation
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+relationship: RXNO:0000423 CHEBI:33855
+relationship: RXNO:0000424 CHEBI:33658
+relationship: RXNO:0000424 CHEBI:24079
+
+[Term]
+id: CHEBI:24079
+name: formamides
+
+[Term]
+id: CHEBI:33855
+name: arenecarbaldehyde
+
+[Term]
+id: CHEBI:33658
+name: arene
 
 [Term]
 id: RXNO:0000056
@@ -2009,6 +2078,7 @@ is_a: RXNO:0000093 ! extrusion reaction
 id: RXNO:0000069
 name: Dimroth rearrangement
 def: "A rearrangement of a heterocyclic compound in which endocyclic and exocyclic heteroatoms swap places." [RSC:cc, RSC:db]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000111/
 is_a: RXNO:0000202 ! ring rearrangement
 
 [Term]
@@ -2033,9 +2103,16 @@ relationship: RXNO:0000424 CHEBI:16670 ! has specified reactant peptide
 [Term]
 id: RXNO:0000072
 name: Reimer-Tiemann reaction
-def: "A formylation reaction between an aromatic compound (for example, phenol, pyrrole or indole) and chloroform (for example, to form an ortho-formyl phenol)." [RSC:cc, RSC:db]
+def: "A formylation reaction between a phenol and chloroform (for example, to form an ortho-formyl phenol)." [RSC:cc, RSC:db]
 is_a: MOP:0000003 ! formylation
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000362/
+relationship: RXNO:0000423 CHEBI:33853
+relationship: RXNO:0000424 CHEBI:35255
+
+[Term]
+id: CHEBI:33853
+name: phenols
 
 [Term]
 id: RXNO:0000073
@@ -3452,6 +3529,8 @@ id: RXNO:0000250
 name: Fritsch-Buttenberg-Wiechell rearrangement
 def: "The rearrangement of a 2-bromoalkene into an alkyne, mediated by strong base." [RSC:db]
 is_a: RXNO:0000025 ! rearrangement step
+relationship: RXNO:0000423 CHEBI:73474
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000161/
 
 [Term]
 id: RXNO:0000251
@@ -3508,6 +3587,13 @@ id: RXNO:0000258
 name: Simmons-Smith reaction
 def: "A ring formation reaction where an alkene reacts with a dihalomethane in the presence of a metal atom or metal complexes to form a cyclopropane. The traditional reaction uses a zinc-copper couple and diiodomethane." [RSC:cb, RSC:cg, RSC:db]
 is_a: RXNO:0000005 ! ring formation reaction step
+relationship: RXNO:0000423 CHEBI:51454
+relationship: RXNO:0000424 CHEBI:33641
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000400/
+
+[Term]
+id: CHEBI:51454
+name: cyclopropanes
 
 [Term]
 id: RXNO:0000259
@@ -3522,6 +3608,8 @@ def: "A base-mediated 1,2-sigmatropic rearrangement of an ether to give an alcoh
 synonym: "1,2-Wittig rearrangement" EXACT []
 synonym: "[1,2] Wittig rearrangement" EXACT []
 is_a: RXNO:0000259 ! Wittig rearrangement
+relationship: RXNO:0000423 CHEBI:30879
+relationship: RXNO:0000424 CHEBI:25698
 
 [Term]
 id: RXNO:0000261
@@ -3538,6 +3626,8 @@ def: "A base-mediated 1,2-sigmatropic rearrangement of a tertiary amine to give 
 synonym: "1,2-aza-Wittig rearrangement" EXACT []
 synonym: "[1,2] aza-Wittig rearrangement" EXACT []
 is_a: RXNO:0000259 ! Wittig rearrangement
+relationship: RXNO:0000423 CHEBI:32863
+relationship: RXNO:0000424 CHEBI:32876
 
 [Term]
 id: RXNO:0000263
@@ -3595,6 +3685,9 @@ synonym: "Huisgen reaction" BROAD []
 synonym: "Huisgen's 1,3-dipolar cycloaddition" BROAD []
 is_a: MOP:0000715 ! [3+2] cycloaddition
 is_a: RXNO:0000018 ! 1,3-dipolar cycloaddition
+relationship: RXNO:0000424 CHEBI:22680
+relationship: RXNO:0000424 CHEBI:73474
+relationship: RXNO:0000423 CHEBI:35562
 
 [Term]
 id: RXNO:0000270
@@ -3609,6 +3702,13 @@ synonym: "copper(I)-catalyzed azide-alkyne click reaction" EXACT []
 synonym: "copper(I)-catalyzed azide-alkyne cycloaddition" EXACT []
 synonym: "CuAAC" EXACT []
 is_a: MOP:0000715 ! [3+2] cycloaddition
+relationship: RXNO:0000424 CHEBI:22680
+relationship: RXNO:0000424 CHEBI:73474
+relationship: RXNO:0000423 CHEBI:35562
+
+[Term]
+id: CHEBI:35562
+name: 1,2,3-triazole
 
 [Term]
 id: RXNO:0000271
@@ -3631,6 +3731,11 @@ name: retro-Diels-Alder reaction
 def: "The reverse of a [4+2] cycloaddition reaction, in which an unsaturated six-membered ring compound fragments to give a diene and a compound containing a double or triple bond (a dienophile)." [rsc:db]
 synonym: "retro Diels-Alder reaction" EXACT []
 is_a: RXNO:0000205 ! ring breaking
+relationship: RXNO:0000424 CHEBI:37613
+
+[Term]
+id: CHEBI:37613
+name: cyclohexadiene
 
 [Term]
 id: RXNO:0000274
