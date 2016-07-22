@@ -1,5 +1,4 @@
 format-version: 1.2
-data-version: rxno/releases/2014-10-21/rxno.owl
 synonymtypedef: SMILESCOUNTEREXAMPLE "SMILECOUNTEREXAMPLE" RELATED
 synonymtypedef: SMILESEXAMPLE "SMILESEXAMPLE" RELATED
 default-namespace: RXNO
@@ -1965,7 +1964,6 @@ id: RXNO:0000063
 name: Arndt-Eistert reaction
 def: "A homologation reaction of a carboxylic acid to give the homologated carboxylic acid via acyl chloride and diazoketone intermediates." [RSC:cb, RSC:cc, RSC:db]
 comment: This is an insertion because the carbon atom is added between the R group and the carboxyl carbon in the starting material.
-synonym: "[#6:1]C(=O)O>>[#6:1][CH2]C(=O)O" SMIRKS []
 synonym: "Arndt-Eistert synthesis" EXACT []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000010/
 is_a: RXNO:0000030 ! molecular skeleton insertion reaction
@@ -2150,7 +2148,6 @@ is_a: RXNO:0000332 ! aromatic substitution step
 id: RXNO:0000083
 name: Paternò–Büchi reaction
 def: "A photochemical cycloaddition between an aldehyde or ketone and an alkene to give an oxetane." [RSC:cc, RSC:db]
-synonym: "[C:1]=[O:2].[C:3]=[C:4]>>[C:1]1[O:2][C:3][C:4]1" SMIRKS []
 synonym: "Paterno-Buchi reaction" EXACT []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000319/
 is_a: MOP:0000563 ! [2+2] cycloaddition
@@ -2169,7 +2166,6 @@ union_of: RXNO:0000427 ! ketone Barbier reaction
 id: RXNO:0000085
 name: acyloin condensation
 def: "A reductive coupling reaction between two esters to give an acyloin (an alpha-hydroxyketone)." [RSC:cc, RSC:db]
-synonym: "[C:1][C:2](=O)OC.[C:4][C:3](=O)OC>>[C:1][C:2](=O)[C:3](O)[C:4]" SMIRKS []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000002/
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
 relationship: has_part MOP:0000627 ! condensation reaction
@@ -2211,12 +2207,16 @@ id: RXNO:0000088
 name: Negishi coupling
 def: "A carbon-carbon coupling reaction between an organohalide or organotriflate and an organozinc compound. The reaction is catalysed by palladium or nickel." [RSC:cc, RSC:db]
 synonym: "Negishi cross-coupling" EXACT []
+xref: https://en.wikipedia.org/wiki/Negishi_coupling
+xref: https://www.rsc.org/Merck-Index/reaction/r299/
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 
 [Term]
 id: RXNO:0000089
 name: Meerwein-Ponndorf-Verley reduction
 def: "A reduction of an aldehyde or ketone to an alcohol involving an equilibrium between the aldehyde or ketone and a reagent alcohol present in excess, catalysed by a metal alkoxide. This reaction is the reverse of the Oppenauer oxidation (RXNO:0000047)." [RSC:cc, RSC:db]
+xref: https://en.wikipedia.org/wiki/Meerwein%E2%80%93Ponndorf%E2%80%93Verley_reduction
+xref: https://www.rsc.org/Merck-Index/reaction/r272/
 is_a: RXNO:0000037 ! functional group reduction
 
 [Term]
@@ -2236,6 +2236,13 @@ is_a: RXNO:0000015 ! Wittig reaction
 id: RXNO:0000092
 name: aza-Diels-Alder reaction
 def: "A Diels-Alder reaction between a diene and an imine or an azadiene and an alkene to give a six-membered nitrogen-containing ring compound." [RSC:cc, RSC:db]
+synonym: "aza-Diels-Alder cycloaddition" EXACT []
+synonym: "aza Diels-Alder cycloaddition" EXACT []
+synonym: "azo-Diels-Alder cycloaddition" EXACT []
+synonym: "azo Diels-Alder cycloaddition" EXACT []
+synonym: "aza Diels-Alder reaction" EXACT []
+synonym: "azo-Diels-Alder reaction" EXACT []
+synonym: "azo Diels-Alder reaction" EXACT []
 is_a: RXNO:0000313 ! hetero-Diels-Alder reaction
 
 [Term]
@@ -2822,7 +2829,6 @@ is_a: RXNO:0000005 ! ring formation reaction step
 id: RXNO:0000162
 name: Paal-Knorr furan synthesis
 def: "The cyclisation of a 1,4-dicarbonyl compound with an acid catalyst to give a furan." [RSC:cb, RSC:cc]
-synonym: "O=[C:1]-[C:2]-[C:3]-[C:4]=O>>o1[c:1][c:2][c:3][c:4]1" SMIRKS []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000315/
 is_a: RXNO:0000161 ! Paal-Knorr synthesis
 is_a: RXNO:0000346 ! oxacycle synthesis
@@ -2832,7 +2838,6 @@ relationship: RXNO:0000423 CHEBI:24129 ! has specified product furans
 id: RXNO:0000163
 name: Paal-Knorr thiophene synthesis
 def: "The cyclisation of a 1,4-dicarbonyl compound with phosphorus pentasulfide to give a thiophene." [RSC:cb, RSC:cc]
-synonym: "O=[C:1]-[C:2]-[C:3]-[C:4]=O.S=P13SP2(=S)SP(=S)(S1)SP(=S)(S2)S3>>s1[c:1][c:2][c:3][c:4]1" SMIRKS []
 is_a: RXNO:0000161 ! Paal-Knorr synthesis
 is_a: RXNO:0000348 ! thiacycle synthesis
 relationship: RXNO:0000423 CHEBI:26961 ! has specified product thiophenes
@@ -2842,7 +2847,6 @@ id: RXNO:0000164
 name: Paal-Knorr pyrrole synthesis
 def: "The cyclisation of a 1,4-dicarbonyl compound with an amine to give a pyrrole." [RSC:cb, RSC:cc]
 comment: Merck Index says "ammonia or primary amines"
-synonym: "O=[C:1]-[C:2]-[C:3]-[C:4]=O.[N:5]>>[n:5]1[c:1][c:2][c:3][c:4]1" SMIRKS []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000316/
 is_a: RXNO:0000161 ! Paal-Knorr synthesis
 is_a: RXNO:0000497 ! pyrrole synthesis
@@ -2852,7 +2856,6 @@ relationship: RXNO:0000423 CHEBI:26455 ! has specified product pyrroles
 id: RXNO:0000165
 name: Schotten-Baumann reaction
 def: "The coupling of an alcohol or amine with an acyl chloride to give an ester or amide. A two-phase solvent system is often used, to enable the acid generated during the reaction to be neutralised by the aqueous base, while the starting materials and products remain in the organic phase." [RSC:cb, RSC:cc, RSC:db]
-synonym: "[C:1][N,O].[C:2](=[O:3])Cl>>[O:3]=[C:2]O[C:1]" SMIRKS []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000392/
 is_a: RXNO:0000331 ! substitution step
 
@@ -2862,7 +2865,6 @@ name: Hofmann elimination
 def: "The elimination of a methylated amine from an alkylamine to form an olefin. The reaction proceeds via the quaternary ammonium salt." [RSC:cb, RSC:cc, RSC:db]
 synonym: "exhaustive methylation" EXACT []
 synonym: "Hofmann degradation" RELATED []
-synonym: "N1[C:2][C:3][C:4][C:5][C:6]1[C:7]>>[C:2]=[C:3][C:4][C:5][C:6]=[C:7]" SMIRKS []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000205/
 is_a: RXNO:0000123 ! molecular skeleton elimination reaction
 relationship: RXNO:0000423 CHEBI:33641 ! has specified product olefin
@@ -3008,7 +3010,6 @@ is_a: RXNO:0000011 ! functional group modification
 id: RXNO:0000187
 name: Tishchenko reaction
 def: "The formation of an ester from two aldehydes via a disproportionation process using a metal alkoxide to oxidise one aldehyde and reduce the other." [RSC:cb, RSC:cc, RSC:db]
-synonym: "[C:1](=O).[C:2](=O)>>[C:1](=O)O[C:2]" SMIRKS []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000433/
 is_a: RXNO:0000011 ! functional group modification
 relationship: RXNO:0000423 CHEBI:33308 ! has specified product carboxylic ester
@@ -3811,7 +3812,6 @@ relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 id: RXNO:0000288
 name: Rosenmund-von Braun reaction
 def: "A carbon-carbon coupling reaction where an aryl halide reacts with copper(I) cyanide to give an aryl nitrile." [rsc:cg, rsc:db]
-synonym: "[c:1][F,Cl,Br,I].[Cu][C:2]#[N:3]>>[c:1][C:2]#[N:3]" SMIRKS []
 synonym: "Rosenmund-von Braun synthesis" EXACT []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000376/
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
@@ -3972,6 +3972,13 @@ is_a: RXNO:0000331 ! substitution step
 id: RXNO:0000310
 name: oxa-Diels-Alder reaction
 def: "A Diels-Alder reaction between a diene and an aldehyde or ketone to give a six-membered oxygen-containing ring compound." [rsc:db]
+synonym: "oxa-Diels-Alder cycloaddition" EXACT []
+synonym: "oxa Diels-Alder cycloaddition" EXACT []
+synonym: "oxo-Diels-Alder cycloaddition" EXACT []
+synonym: "oxo Diels-Alder cycloaddition" EXACT []
+synonym: "oxo-Diels-Alder reaction" EXACT []
+synonym: "oxo Diels-Alder reaction" EXACT []
+synonym: "oxa Diels-Alder reaction" EXACT []
 is_a: RXNO:0000313 ! hetero-Diels-Alder reaction
 
 [Term]
@@ -4142,7 +4149,6 @@ creation_date: 2012-03-22T12:15:29Z
 id: RXNO:0000337
 name: nitro reduction to amine
 def: "A reduction reaction where a nitro group is reduced to an amino group." [RSC:cb]
-synonym: "[N:1](=O)O>>[N&X3;H2:1]" SMIRKS []
 xref: NAMERXN:7.1
 is_a: MOP:0000569 ! reduction
 is_a: RXNO:0000011 ! functional group modification
@@ -4438,7 +4444,6 @@ creation_date: 2012-03-22T05:17:03Z
 id: RXNO:0000368
 name: Crabbé homologation
 def: "Oxidation of an alkene to an allene by heating with formaldehyde, an amine and an inorganic salt." [doi:10.1039/c39790000859, RSC:cb]
-synonym: "[C:1]=[C:2].[C:3]=O>>[C:1]=[C:2]=[C:3]" SMIRKS []
 synonym: "Crabbe homologation" EXACT []
 is_a: MOP:0000581 ! alkene oxidation
 is_a: RXNO:0000070 ! chain lengthening
@@ -4462,7 +4467,6 @@ union_of: RXNO:0000046 ! Friedel-Crafts alkylation
 id: RXNO:0000370
 name: Demko-Sharpless reaction
 def: "A functional group modification of a nitrile to a 1H-tetrazole by addition of sodium azide." [doi:10.1021/jo010635w, RSC:cb]
-synonym: "[#6,S,N;H0:1][C:2]#[N:3].[Na+].[N-:4]=[N+:5]=[N-:6]>>[*:1][C:2]1=[N:3][N:4][N:5]=[N:6]1" SMIRKS []
 is_a: RXNO:0000011 ! functional group modification
 relationship: RXNO:0000423 CHEBI:35689 ! has specified product tetrazoles
 relationship: RXNO:0000424 CHEBI:18379 ! has specified reactant nitrile
@@ -4520,7 +4524,6 @@ relationship: RXNO:0000424 CHEBI:32952 ! has specified reactant amine
 id: RXNO:0000377
 name: Scholl reaction
 def: "Coupling of two aromatic rings in the presence of a Lewis acid catalyst." [RSC:cb]
-synonym: "[c:1].[c:2]>>[c:1][c:2]" SMIRKS []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000390/
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 relationship: has_part MOP:0000734 ! Lewis acid catalysis
@@ -5108,7 +5111,6 @@ id: RXNO:0000459
 name: acetoacetic ester synthesis
 def: "A carbon-carbon coupling reaction between a beta-ketoester and an alkyl halide to yield an alpha-alkylated ester." [RSC:cb]
 comment: Subsequent treatment with mild hydrolysis leads to a ketone; concentrated base produces a substituted ester.
-synonym: "C[C:2](=O)[C:1][C:3](=O)OC.[C:4][F,Cl,Br,I]>>C[C:2](=O)[C:1]([C:4])[C:3](=O)OC" SMIRKS []
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000001/
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
 relationship: OBI:0000417 RXNO:0000440 ! achieves_planned_objective molecular skeleton joining objective
@@ -5484,7 +5486,6 @@ creation_date: 2014-03-04T09:00:00Z
 id: RXNO:0000503
 name: monocyclic Boulton-Katritzky rearrangement
 def: "Rearrangement of an azapentacycle containing a -N= system where there is an unsaturated three-heavy-atom substituent XYZ on the substituent double-bonded to the nitrogen, to a new azapentacycle where the pivotal nitrogen has broken its single bond and formed a new bond with atom Z." [doi:10.1039/j39670002005]
-comment: SMIRKS golf challenge
 is_a: RXNO:0000502 ! Boulton-Katritzky rearrangement
 created_by: batchelorc
 creation_date: 2014-03-04T09:00:00Z
@@ -5493,7 +5494,6 @@ creation_date: 2014-03-04T09:00:00Z
 id: RXNO:0000504
 name: bicyclic Boulton-Katritzky rearrangement
 def: "Rearrangement of a mancude bicyclo[4.3.0] compound with an unsaturated two-heavy-atom substituent on the six-membered ring alpha to the bridgehead to form a new mancude bicyclo[4.3.0] compound where the five-membered ring has been formed from the two-heavy-atom substituent and the original five-membered ring has been broken." [doi:10.1039/j29660001004]
-comment: SMIRKS golf challenge
 is_a: RXNO:0000502 ! Boulton-Katritzky rearrangement
 created_by: batchelorc
 creation_date: 2014-03-04T09:00:00Z
@@ -5589,7 +5589,6 @@ creation_date: 2014-03-07T09:00:00Z
 id: RXNO:0000513
 name: Mumm rearrangement
 def: "Rearrangement of an acyl imidate to form a carboximide." [RSC:cb]
-synonym: "[C:1][N:2]=[C:3]([C:4])[O:5][C:6](=[O:7])[C:8]>>[C:4][C:3](=[O:5])[N:2]([C:1])[C:6](=[O:7])[C:8]" SMIRKS []
 xref: http://en.wikipedia.org/wiki/Mumm_rearrangement
 is_a: RXNO:0000025 ! rearrangement step
 relationship: RXNO:0000423 CHEBI:35636 ! has specified product carboximides
@@ -6482,4 +6481,3 @@ name: has_part
 [Typedef]
 id: part_of
 name: part_of
-
