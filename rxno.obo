@@ -6396,6 +6396,66 @@ def: "Reaction of a sulfur ylide with a thione to produce a thiirane." [RSC:cb]
 is_a: RXNO:0000348
 
 [Term]
+id: RXNO:0000603
+name: cross-coupling
+def: "A joining reaction where a carbon-carbon bond is formed between unlike moieties." [RSC:cb]
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
+
+[Term]
+id: RXNO:0000604
+name: Liebeskind-Srogl coupling
+def: "A cross-coupling reaction where a thioester and a boronic acid react to form a ketone. It uses a metal catalyst." [RSC:cb]
+is_a: RXNO:0000603 ! cross-coupling
+
+[Term]
+id: RXNO:0000605
+name: Fukuyama coupling
+def: "A cross-coupling reaction where a thioester and an organozinc halide react to form a ketone. It uses a palladium catalyst." [RSC:cb]
+is_a: RXNO:0000603 ! cross-coupling
+
+[Term]
+id: RXNO:0000606
+name: chloride Finkelstein reaction
+def: "The conversion of an alkyl chloride to an alkyl iodide by SN2 substitution.The reaction relies upon the equilibrium being pushed to completion by precipitation." [RSC:cb]
+is_a: RXNO:0000155 ! Finkelstein reaction
+
+[Term]
+id: RXNO:0000607
+name: bromide Finkelstein reaction
+def: "The conversion of an alkyl bromide to an alkyl iodide by SN2 substitution.The reaction relies upon the equilibrium being pushed to completion by precipitation." [RSC:cb]
+is_a: RXNO:0000155 ! Finkelstein reaction
+
+[Term]
+id: RXNO:0000608
+name: sulfonate ester Finkelstein reaction
+def: "The conversion of an alkyl sulfonate ester to an alkyl iodide by SN2 substitution.The reaction relies upon the equilibrium being pushed to completion by precipitation." [RSC:cb]
+is_a: RXNO:0000155 ! Finkelstein reaction
+
+[Term]
+id: RXNO:0000609
+name: Sandmeyer fluorination
+def: "An aromatic substitution reaction where an aryl diazonium salt reacts with a copper(I) fluoride to form an aromatic fluoride." [RSC:cb]
+is_a: RXNO:0000333 ! Sandmeyer halogenation
+
+[Term]
+id: RXNO:0000610
+name: Sandmeyer chlorination
+def: "An aromatic substitution reaction where an aryl diazonium salt reacts with a copper(I) chloride to form an aromatic chloride." [RSC:cb]
+is_a: RXNO:0000333 ! Sandmeyer halogenation
+
+[Term]
+id: RXNO:0000611
+name: Sandmeyer bromination
+def: "An aromatic substitution reaction where an aryl diazonium salt reacts with a copper(I) bromide to form an aromatic bromide." [RSC:cb]
+is_a: RXNO:0000333 ! Sandmeyer halogenation
+
+[Term]
+id: RXNO:0000612
+name: Sandmeyer iodination
+def: "An aromatic substitution reaction where an aryl diazonium salt reacts with a copper(I) iodide to form an aromatic iodide." [RSC:cb]
+is_a: RXNO:0000333 ! Sandmeyer halogenation
+
+[Term]
 id: MOP:0000825
 name: dealcoholative condensation
 def: "A reaction in which two or more reactants or remote reactive sites within the same molecular entity yield a single main product with accompanying formation of an alcohol molecule." [RSC:cb]
