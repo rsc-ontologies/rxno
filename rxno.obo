@@ -1,6 +1,4 @@
 format-version: 1.2
-synonymtypedef: SMILESCOUNTEREXAMPLE "SMILECOUNTEREXAMPLE" RELATED
-synonymtypedef: SMILESEXAMPLE "SMILESEXAMPLE" RELATED
 default-namespace: RXNO
 ontology: rxno.obo
 
@@ -1598,7 +1596,7 @@ synonym: "Heck-Mizoroki reaction" EXACT []
 synonym: "Mizoroki-Heck reaction" EXACT []
 xref: https://www.rsc.org/Merck-Index/reaction/r192/
 xref: NAMERXN:3.2
-intersection_of: RXNO:0000557
+intersection_of: RXNO:0000624
 intersection_of: RXNO:0000425 CHEBI:33363 ! has_catalyst palladium
 
 [Term]
@@ -6125,124 +6123,105 @@ relationship: RXNO:0000424 CHEBI:47875 ! has specified reactant tetrabromomethan
 
 [Term]
 id: RXNO:0000557
-name: Heck-type reaction
-def: "A carbon-carbon coupling reaction where an organohalide or triflate couples to a terminal olefin to produce an internal olefin." [http://orcid.org/0000-0001-5985-7429, RSC:db]
-is_a: RXNO:0000002
+name: Heck-type reaction/cross-coupling
+comment: This term has been obsoleted because the ID was inadvertently reused for two classes. See RXNO:0000624 for Heck-type reaction and RXNO:0000603 for cross-coupling.
+is_obsolete: true
 
 [Term]
 id: RXNO:0000558
-name: bromo Heck reaction
-def: "A Heck reaction where an organobromide couples to a terminal olefin to produce an internal olefin, catalysed by palladium." [http://orcid.org/0000-0001-5985-7429, RSC:db]
-is_a: RXNO:0000024
-is_a: RXNO:0000562
+name: bromo Heck reaction/Liebeskind-Srogl coupling
+comment: This term has been obsoleted because the ID was inadvertently reused for two classes. See RXNO:0000625 for the bromo Heck reaction and RXNO:0000604 for Liebeskind-Srogl coupling.
+is_obsolete: true
 
 [Term]
 id: RXNO:0000559
-name: chloro Heck reaction
-def: "A Heck reaction where an organochloride couples to a terminal olefin to produce an internal olefin, catalysed by palladium." [http://orcid.org/0000-0001-5985-7429, RSC:db]
-is_a: RXNO:0000024
-is_a: RXNO:0000563
+name: chloro Heck reaction/Fukuyama coupling
+comment: This term has been obsoleted because the ID was inadvertently reused for two classes. See RXNO:0000626 for the chloro Heck reaction and RXNO:0000605 for Fukuyama coupling.
+is_obsolete: true
 
 [Term]
 id: RXNO:0000560
-name: iodo Heck reaction
-def: "A Heck reaction where an organoiodide couples to a terminal olefin to produce an internal olefin, catalysed by palladium." [http://orcid.org/0000-0001-5985-7429, RSC:db]
-is_a: RXNO:0000024
+name: iodo Heck reaction/chloride Finkelstein reaction
+comment: This term has been obsoleted because the ID was inadvertently reused for two classes. See RXNO:0000627 for the iodo Heck reaction and RXNO:0000606 for the chloride Finkelstein reaction.
+is_obsolete: true
 
 [Term]
 id: RXNO:0000561
-name: triflyloxy Heck reaction
-def: "A Heck reaction where an organotriflate couples to a terminal olefin to produce an internal olefin, catalysed by palladium." [http://orcid.org/0000-0001-5985-7429, RSC:db]
-is_a: RXNO:0000024
+name: triflyloxy Heck reaction/bromide Finkelstein reaction
+comment: This term has been obsoleted because the ID was inadvertently reused for two classes. See RXNO:0000628 for the triflyloxy Heck reaction and RXNO:0000607 for the bromide Finkelstein reaction.
+is_obsolete: true
 
 [Term]
 id: RXNO:0000562
-name: bromo Heck-type reaction
-def: "A Heck-type reaction where an organobromide couples to a terminal olefin to produce an internal olefin." [http://orcid.org/0000-0001-5985-7429, RSC:db]
-is_a: RXNO:0000557
+name: bromo Heck-type reaction/sulfonate ester Finkelstein reaction
+comment: This term has been obsoleted because the ID was inadvertently reused for two classes. See RXNO:0000629 for the bromo Heck-type reaction and RXNO:0000608 for the sulfonate ester Finkelstein reaction.
+is_obsolete: true
 
 [Term]
 id: RXNO:0000563
-name: chloro Heck-type reaction
-def: "A Heck-type reaction where an organochloride couples to a terminal olefin to produce an internal olefin." [http://orcid.org/0000-0001-5985-7429, RSC:db]
-is_a: RXNO:0000557
+name: chloro Heck-type reaction/Sandmeyer fluorination
+comment: This term has been obsoleted because the ID was inadvertently reused for two classes. See RXNO:0000630 for the chloro Heck-type reaction and RXNO:0000609 for Sandmeyer fluorination.
+is_obsolete: true
 
 [Term]
 id: RXNO:0000564
-name: acyclic Beckmann rearrangement
-xref: NAMERXN:2.8.1
-is_a: RXNO:0000026 ! Beckman rearrangement
-!is_a: ??? ! name reaction
+name: acyclic Beckmann rearrangement/Sandmeyer chlorination
+comment: This term has been obsoleted because the ID was inadvertently reused for two classes. See RXNO:0000631 for acyclic Beckmann rearrangement and RXNO:0000610 for Sandmeyer chlorination.
+is_obsolete: true
 
 [Term]
 id: RXNO:0000565
-name: Baeyer–Emmerling indole synthesis
-xref: https://en.wikipedia.org/wiki/Baeyer-Emmerling_indole_synthesis
-xref: NAMERXN:4.1.41
-is_a: RXNO:0000395 ! indole synthesis
-!is_a: ??? ! name reaction
+name: Baeyer–Emmerling indole synthesis/Sandmeyer bromination
+comment: This term has been obsoleted because the ID was inadvertently reused for two classes. See RXNO:0000632 for Baeyer-Emmerling indole synthesis and RXNO:0000611 for Sandmeyer bromination.
+is_obsolete: true
 
 [Term]
 id: RXNO:0000566
-name: bromo Sonogashira coupling
-synonym: "Bromo Sonogashira coupling" EXACT []
-xref: NAMERXN:3.3.2
-is_a: RXNO:0000137 ! Sonogashira coupling
+name: bromo Sonogashira coupling/Sandmeyer iodination
+comment: This term has been obsoleted because the ID was inadvertently reused for two classes. See RXNO:0000633 for bromo Sonogashira coupling and RXNO:0000612 for Sandmeyer iodination.
+is_obsolete: true
 
 [Term]
 id: RXNO:0000567
-name: bromo Suzuki coupling
-synonym: "Bromo Suzuki coupling" EXACT []
-synonym: "bromo Suzuki-Miyaura coupling" EXACT []
-xref: NAMERXN:3.1.1
-is_a: RXNO:0000140 ! Suzuki-Miyaura coupling
-is_a: RXNO:0000568 ! bromo Suzuki-type coupling
+name: bromo Suzuki coupling/iodo Heck reaction
+comment: This term has been obsoleted because the ID was inadvertently reused for two classes. See RXNO:0000634 for bromo Suzuki coupling and RXNO:0000613 for the iodo Heck reaction.
+is_obsolete: true
 
 [Term]
 id: RXNO:0000568
-name: bromo Suzuki-type coupling
-synonym: "Bromo Suzuki-type coupling" EXACT []
-synonym: "bromo Suzuki-Miyaura-type coupling" EXACT []
-xref: NAMERXN:3.1.5
-is_a: RXNO:0000592 ! Suzuki-type coupling
+name: bromo Suzuki-type coupling/triflyloxy Heck reaction 
+comment: This term has been obsoleted because the ID was inadvertently reused for two classes. See RXNO:0000635 for bromo Suzuki-type coupling and RXNO:0000628 for the triflyloxy Heck reaction.
+is_obsolete: true
 
 [Term]
 id: RXNO:0000569
-name: bromolactonization
-synonym: "bromolactonisation" EXACT []
-xref: NAMERXN:4.2.13
-is_a: RXNO:0000593 ! halolactonization
+name: bromolactonization/bromo Heck-type reaction
+comment: This term has been obsoleted because the ID was inadvertently reused for two classes. See RXNO:0000636 for bromolactonization and RXNO:0000629 for the bromo Heck-type reaction.
+is_obsolete: true
 
 [Term]
 id: RXNO:0000570
-name: chloro Sonogashira coupling
-synonym: "Chloro Sonogashira coupling" EXACT []
-xref: NAMERXN:3.3.3
-is_a: RXNO:0000137 ! Sonogashira coupling
+name: chloro Sonogashira coupling/chloro Heck-type reaction
+comment: This term has been obsoleted because the ID was inadvertently reused for two classes. See RXNO:0000637 for chloro Sonogashira coupling and RXNO:0000630 for the chloro Heck-type reaction.
+is_obsolete: true
 
 [Term]
 id: RXNO:0000571
-name: chloro Suzuki coupling
-synonym: "Chloro Suzuki coupling" EXACT []
-synonym: "chloro Suzuki-Miyaura coupling" EXACT []
-xref: NAMERXN:3.1.2
-is_a: RXNO:0000140 ! Suzuki-Miyaura coupling
-is_a: RXNO:0000572 ! chloro Suzuki-type coupling
+name: chloro Suzuki coupling/Heck-type reaction
+comment: This term has been obsoleted because the ID was inadvertently reused for two classes. See RXNO:0000638 for chloro Suzuki coupling and RXNO:0000624 for the Heck-type reaction.
+is_obsolete: true
 
 [Term]
 id: RXNO:0000572
-name: chloro Suzuki-type coupling
-synonym: "Chloro Suzuki-type coupling" EXACT []
-synonym: "chloro Suzuki-Miyaura-type coupling" EXACT []
-xref: NAMERXN:3.1.6
-is_a: RXNO:0000592 ! Suzuki-type coupling
+name: chloro Suzuki-type coupling/bromo Heck reaction
+comment: This term has been obsoleted because the ID was inadvertently reused for two classes. See RXNO:0000639 for chloro Suzuki-type coupling and RXNO:0000625 for the bromo Heck reaction.
+is_obsolete: true
 
 [Term]
 id: RXNO:0000573
-name: chlorolactonization
-synonym: "chlorolactonisation" EXACT []
-xref: NAMERXN:4.2.14
-is_a: RXNO:0000593 ! halolactonization
+name: chlorolactonization/chloro Heck reaction
+comment: This term has been obsoleted because the ID was inadvertently reused for two classes. See RXNO:0000640 for chlorolactonization and RXNO:0000626 for the chloro Heck reaction.
+is_obsolete: true
 
 [Term]
 id: RXNO:0000574
@@ -6635,6 +6614,128 @@ is_a: RXNO:0000037
 is_a: RXNO:0000089
 relationship: RXNO:0000424 CHEBI:17087
 relationship: RXNO:0000423 CHEBI:35681
+
+[Term]
+id: RXNO:0000624
+name: Heck-type reaction
+def: "A carbon-carbon coupling reaction where an organohalide or triflate couples to a terminal olefin to produce an internal olefin." [http://orcid.org/0000-0001-5985-7429, RSC:db]
+is_a: RXNO:0000002
+
+[Term]
+id: RXNO:0000625
+name: bromo Heck reaction
+def: "A Heck reaction where an organobromide couples to a terminal olefin to produce an internal olefin, catalysed by palladium." [http://orcid.org/0000-0001-5985-7429, RSC:db]
+is_a: RXNO:0000024
+is_a: RXNO:0000629
+is_obsolete: true
+
+[Term]
+id: RXNO:0000626
+name: chloro Heck reaction
+def: "A Heck reaction where an organochloride couples to a terminal olefin to produce an internal olefin, catalysed by palladium." [http://orcid.org/0000-0001-5985-7429, RSC:db]
+is_a: RXNO:0000024
+is_a: RXNO:0000630
+
+[Term]
+id: RXNO:0000627
+name: iodo Heck reaction
+def: "A Heck reaction where an organoiodide couples to a terminal olefin to produce an internal olefin, catalysed by palladium." [http://orcid.org/0000-0001-5985-7429, RSC:db]
+is_a: RXNO:0000024
+
+[Term]
+id: RXNO:0000628
+name: triflyloxy Heck reaction
+def: "A Heck reaction where an organotriflate couples to a terminal olefin to produce an internal olefin, catalysed by palladium." [http://orcid.org/0000-0001-5985-7429, RSC:db]
+is_a: RXNO:0000024
+
+[Term]
+id: RXNO:0000629
+name: bromo Heck-type reaction
+def: "A Heck-type reaction where an organobromide couples to a terminal olefin to produce an internal olefin." [http://orcid.org/0000-0001-5985-7429, RSC:db]
+is_a: RXNO:0000624
+
+[Term]
+id: RXNO:0000630
+name: chloro Heck-type reaction
+def: "A Heck-type reaction where an organochloride couples to a terminal olefin to produce an internal olefin." [http://orcid.org/0000-0001-5985-7429, RSC:db]
+is_a: RXNO:0000624
+
+[Term]
+id: RXNO:0000631
+name: acyclic Beckmann rearrangement
+xref: NAMERXN:2.8.1
+is_a: RXNO:0000026 ! Beckman rearrangement
+!is_a: ??? ! name reaction
+
+[Term]
+id: RXNO:0000632
+name: Baeyer–Emmerling indole synthesis
+xref: https://en.wikipedia.org/wiki/Baeyer-Emmerling_indole_synthesis
+xref: NAMERXN:4.1.41
+is_a: RXNO:0000395 ! indole synthesis
+!is_a: ??? ! name reaction
+
+[Term]
+id: RXNO:0000633
+name: bromo Sonogashira coupling
+synonym: "Bromo Sonogashira coupling" EXACT []
+xref: NAMERXN:3.3.2
+is_a: RXNO:0000137 ! Sonogashira coupling
+
+[Term]
+id: RXNO:0000634
+name: bromo Suzuki coupling
+synonym: "Bromo Suzuki coupling" EXACT []
+synonym: "bromo Suzuki-Miyaura coupling" EXACT []
+xref: NAMERXN:3.1.1
+is_a: RXNO:0000140 ! Suzuki-Miyaura coupling
+is_a: RXNO:0000635 ! bromo Suzuki-type coupling
+
+[Term]
+id: RXNO:0000635
+name: bromo Suzuki-type coupling
+synonym: "Bromo Suzuki-type coupling" EXACT []
+synonym: "bromo Suzuki-Miyaura-type coupling" EXACT []
+xref: NAMERXN:3.1.5
+is_a: RXNO:0000592 ! Suzuki-type coupling
+
+[Term]
+id: RXNO:0000636
+name: bromolactonization
+synonym: "bromolactonisation" EXACT []
+xref: NAMERXN:4.2.13
+is_a: RXNO:0000593 ! halolactonization
+
+[Term]
+id: RXNO:0000637
+name: chloro Sonogashira coupling
+synonym: "Chloro Sonogashira coupling" EXACT []
+xref: NAMERXN:3.3.3
+is_a: RXNO:0000137 ! Sonogashira coupling
+
+[Term]
+id: RXNO:0000638
+name: chloro Suzuki coupling
+synonym: "Chloro Suzuki coupling" EXACT []
+synonym: "chloro Suzuki-Miyaura coupling" EXACT []
+xref: NAMERXN:3.1.2
+is_a: RXNO:0000140 ! Suzuki-Miyaura coupling
+is_a: RXNO:0000639 ! chloro Suzuki-type coupling
+
+[Term]
+id: RXNO:0000639
+name: chloro Suzuki-type coupling
+synonym: "Chloro Suzuki-type coupling" EXACT []
+synonym: "chloro Suzuki-Miyaura-type coupling" EXACT []
+xref: NAMERXN:3.1.6
+is_a: RXNO:0000592 ! Suzuki-type coupling
+
+[Term]
+id: RXNO:0000640
+name: chlorolactonization
+synonym: "chlorolactonisation" EXACT []
+xref: NAMERXN:4.2.14
+is_a: RXNO:0000593 ! halolactonization
 
 [Term]
 id: MOP:0000825
