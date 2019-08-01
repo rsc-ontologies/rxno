@@ -344,11 +344,6 @@ name: macromolecule
 is_a: CHEBI:23367 ! molecular entity
 
 [Term]
-id: CHEBI:33855
-name: arenecarbaldehyde
-is_a: CHEBI:17478 ! aldehyde
-
-[Term]
 id: CHEBI:33860
 name: aromatic amine
 is_a: CHEBI:32952
@@ -1875,6 +1870,7 @@ is_a: CHEBI:35636
 [Term]
 id: CHEBI:33855
 name: arenecarbaldehyde
+is_a: CHEBI:17478 ! aldehyde
 is_a: CHEBI:33658 ! arene
 
 [Term]
@@ -2344,6 +2340,7 @@ id: RXNO:0000103
 name: Gabriel synthesis
 def: "The reaction of primary alkyl halides with sodium or potassium phthalimide, followed by hydrolysis, to give the corresponding primary amine." [http://orcid.org/0000-0001-5985-7429, http://orcid.org/0000-0002-4077-4719, RSC:db]
 is_a: RXNO:0000331 ! substitution step
+relationship: has_part MOP:0000619
 
 [Term]
 id: RXNO:0000104
@@ -2992,6 +2989,7 @@ def: "The oxidation of an aromatic amine to give a (predominantly ortho) amino a
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000059/
 is_a: RXNO:0000332 ! aromatic substitution step
 relationship: RXNO:0000424 CHEBI:33860
+relationship: has_part MOP:0000619
 
 [Term]
 id: RXNO:0000182
@@ -3185,6 +3183,7 @@ id: RXNO:0000207
 name: Strecker reaction
 def: "An addition reaction between a carbonyl compound, an inorganic cyanide and an ammonium salt, followed by hydrolysis, to give an alpha-amino carboxylic acid." [http://orcid.org/0000-0001-5985-7429, http://orcid.org/0000-0002-4077-4719, RSC:db]
 is_a: RXNO:0000070 ! chain lengthening
+relationship: has_part MOP:0000619
 
 [Term]
 id: RXNO:0000208
@@ -5683,6 +5682,7 @@ name: Bergmann azlactone peptide synthesis
 def: "Reaction of an acetylated amino acid with an aldehyde then with a second amino acid, then hydrogenation and hydrolysis to form a dipeptide. It proceeds via an azlactone intermediate." [http://orcid.org/0000-0001-5985-7429]
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000038/
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
+relationship: has_part MOP:0000619
 created_by: batchelorc
 creation_date: 2014-03-10T09:00:00Z
 
@@ -5694,6 +5694,7 @@ xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000039/
 is_a: RXNO:0000517 ! terminal amino-acid residue cleaving reaction
 relationship: RXNO:0000423 CHEBI:37622 ! has specified product carboxamide
 relationship: RXNO:0000424 CHEBI:16670 ! has specified reactant peptide
+relationship: has_part MOP:0000619
 created_by: batchelorc
 creation_date: 2014-03-11T09:00:00Z
 
@@ -6019,6 +6020,7 @@ def: "Reaction of diphenylthiourea with lead carbonate and potassium cyanide to 
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000384/
 is_a: RXNO:0000395 ! indole synthesis
 relationship: RXNO:0000423 CHEBI:27539 ! has specified product isatin
+relationship: has_part MOP:0000619
 created_by: batchelorc
 creation_date: 2014-04-24T15:00:00Z
 
@@ -6028,6 +6030,7 @@ name: Sandmeyer isonitrosoacetanilide isatin synthesis
 def: "Reaction of aniline, hydroxylamine and chloral hydrate to form an aniline intermediate followed by cyclization in acid and hydrolysis to yield isatin." [http://orcid.org/0000-0001-5985-7429]
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000385/
 is_a: RXNO:0000395 ! indole synthesis
+relationship: has_part MOP:0000619
 relationship: RXNO:0000423 CHEBI:27539 ! has specified product isatin
 created_by: batchelorc
 creation_date: 2014-04-24T15:00:00Z
@@ -6405,22 +6408,9 @@ is_a: MOP:0000628
 
 [Term]
 id: RXNO:0000596
-name: Combes quinoline synthesis
-def: "Reaction of a beta-diketone with a primary arylamine to yield a quinoline. It is acid-catalysed." [http://orcid.org/0000-0001-5985-7429]
-xref: https://en.wikipedia.org/wiki/Combes_quinoline_synthesis
-xref: https://www.rsc.org/Merck-Index/reaction/r83/
-is_a: RXNO:0000393
-is_a: MOP:0000628
-
-[Term]
-id: RXNO:0000596
-name: Conrad-Limpach cyclisation
-def: "Reaction of an arylamine wtih a beta-ketoester to yield a 4-hydroxyquinoline." [http://orcid.org/0000-0001-5985-7429]
-synonym: "Conrad-Limpach synthesis" EXACT []
-synonym: "Conrad-Limpach cyclization" EXACT []
-xref: https://en.wikipedia.org/wiki/Conrad%E2%80%93Limpach_synthesis
-xref: https://www.rsc.org/Merck-Index/reaction/r84/
-is_a: MOP:0000825 ! dealcoholative condensation reaction
+name: Combes quinoline synthesis/Conrad%E2%80%93Limpach_synthesis
+comment: this ID has been obsoleted because it was used for two different classes.
+is_obsolete: true
 
 [Term]
 id: RXNO:0000597
@@ -6593,11 +6583,6 @@ name: phosphorus atom
 is_a: CHEBI:33250
 
 [Term]
-id: CHEBI:29224
-name: dibromine
-is_a: CHEBI:23367
-
-[Term]
 id: RXNO:0000622
 name: Meerwein-Ponndorf-Verley reduction of an aldehyde
 def: "Meerwein-Ponndorf-Verley reduction of an aldehyde to the corresponding primary alcohol." [http://orcid.org/0000-0001-5985-7429]
@@ -6736,6 +6721,41 @@ name: chlorolactonization
 synonym: "chlorolactonisation" EXACT []
 xref: NAMERXN:4.2.14
 is_a: RXNO:0000593 ! halolactonization
+
+[Term]
+id: RXNO:0000641
+name: Conrad-Limpach cyclisation
+def: "Reaction of an arylamine wtih a beta-ketoester to yield a 4-hydroxyquinoline." [http://orcid.org/0000-0001-5985-7429]
+synonym: "Conrad-Limpach synthesis" EXACT []
+synonym: "Conrad-Limpach cyclization" EXACT []
+xref: https://en.wikipedia.org/wiki/Conrad%E2%80%93Limpach_synthesis
+xref: https://www.rsc.org/Merck-Index/reaction/r84/
+is_a: MOP:0000825 ! dealcoholative condensation reaction
+
+[Term]
+id: RXNO:0000642
+name: Combes quinoline synthesis
+def: "Reaction of a beta-diketone with a primary arylamine to yield a quinoline. It is acid-catalysed." [http://orcid.org/0000-0001-5985-7429]
+xref: https://en.wikipedia.org/wiki/Combes_quinoline_synthesis
+xref: https://www.rsc.org/Merck-Index/reaction/r83/
+is_a: RXNO:0000393
+is_a: MOP:0000628
+
+[Term]
+id: MOP:0000618
+name: solvolysis
+def: "A molecular process where a molecule is broken up by reaction with a molecule that is part of the solvent material. It may be the primary constituent molecule of the solvent material (for example water, ethanol, ammonia) or its lyonium ion or lyate ion." [AU:S05762, RSC:cb]
+is_a: MOP:0000543 ! molecular process
+created_by: batchelorc
+creation_date: 2009-09-16T11:11:24Z
+
+[Term]
+id: MOP:0000619
+name: hydrolysis
+def: "A solvolysis reaction where the solvent material is water." [RSC:cb]
+is_a: MOP:0000618 ! solvolysis
+created_by: batchelorc
+creation_date: 2009-09-16T11:13:21Z
 
 [Term]
 id: MOP:0000825
