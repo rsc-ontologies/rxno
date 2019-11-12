@@ -3,6 +3,9 @@ data-version: releases/2014-09-03
 synonymtypedef: FORMULA "FORMULA"
 synonymtypedef: IUPAC_NAME "IUPAC NAME"
 ontology: mop
+property_value: http://purl.org/dc/elements/1.1/description "MOP is the molecular process ontology. It contains the molecular processes that underlie the name reaction ontology RXNO, for example cyclization, methylation and demethylation." xsd:string
+property_value: http://purl.org/dc/elements/1.1/title "MOP" xsd:string
+property_value: http://purl.org/dc/terms/license http://creativecommons.org/licenses/by/4.0/
 
 [Term]
 id: BFO:0000007
@@ -323,7 +326,7 @@ is_a: CHEBI:36357 ! polyatomic entity
 [Term]
 id: MOP:0000000
 name: borylation
-def: "Formation of a covalent bond between a substrate and a boryl group (-BR'R')." [RSC:cb]
+def: "Formation of a covalent bond between a substrate and a boryl group (-BR'R')." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000801 ! formation of covalent bond with boron centre
 relationship: has_participant CHEBI:51870 ! boryl group
 
@@ -4633,7 +4636,7 @@ is_a: MOP:0000539 ! sulfonylation
 [Term]
 id: MOP:0000543
 name: molecular process
-def: "A process in which at least one of the participants is a molecule." [RSC:cb]
+def: "A process in which at least one of the participants is a molecule." [https://orcid.org/0000-0001-5985-7429]
 comment: TODO: needs work, formal definition, etc.
 is_a: BFO:0000007 ! process
 
@@ -4760,7 +4763,7 @@ is_a: MOP:0000804 ! formation of covalent bond with selenium centre
 [Term]
 id: MOP:0000561
 name: cyclization
-def: "Formation of a ring in a molecule from a chain by formation of a new bond." [AU:C01494]
+def: "Formation of a ring in a molecule from a chain by formation of a new bond." [https://doi.org/10.1351/goldbook.C01494]
 synonym: "cyclisation" EXACT []
 is_a: MOP:0000543 ! molecular process
 relationship: BFO:0000077 CHEBI:52845 ! has participant beginning to exist cyclic organic group
@@ -4768,34 +4771,34 @@ relationship: BFO:0000077 CHEBI:52845 ! has participant beginning to exist cycli
 [Term]
 id: MOP:0000562
 name: cycloaddition
-def: "A molecular process where two or more unsaturated molecules or parts of the same molecule combine to form a cyclic adduct in which there is a net reduction of bond multiplicity." [AU:C01496]
+def: "A molecular process where two or more unsaturated molecules or parts of the same molecule combine to form a cyclic adduct in which there is a net reduction of bond multiplicity." [https://doi.org/10.1351/goldbook.C01496]
 is_a: MOP:0000543 ! molecular process
 
 [Term]
 id: MOP:0000563
 name: [2+2] cycloaddition
-def: "A cycloaddition in which each participant contributes two electrons to the transformation of reactants to products." [RSC:cb]
+def: "A cycloaddition in which each participant contributes two electrons to the transformation of reactants to products." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000562 ! cycloaddition
 
 [Term]
 id: MOP:0000564
 name: cycloelimination
-def: "A molecular process in which a cyclic system decomposes into two or more unsaturated molecules or parts of the same molecule and there is a net increase in bond multiplicity." [AU:C01496, AU:C01501]
-synonym: "cycloreversion" EXACT [AU:C01506]
+def: "A molecular process in which a cyclic system decomposes into two or more unsaturated molecules or parts of the same molecule and there is a net increase in bond multiplicity." [https://doi.org/10.1351/goldbook.C01496, https://doi.org/10.1351/goldbook.C01501]
+synonym: "cycloreversion" EXACT [https://doi.org/10.1351/goldbook.C01506]
 synonym: "retro-addition" EXACT []
-synonym: "retrocycloaddtion" EXACT [AU:R05372]
+synonym: "retrocycloaddtion" EXACT [https://doi.org/10.1351/goldbook.R05372]
 is_a: MOP:0000543 ! molecular process
 
 [Term]
 id: MOP:0000565
 name: [4+2] cycloaddition
-def: "A cycloaddition in which one participant contributes four electrons and the other participant contributes two electrons to the transformation of reactants to products." [RSC:cb]
+def: "A cycloaddition in which one participant contributes four electrons and the other participant contributes two electrons to the transformation of reactants to products." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000562 ! cycloaddition
 
 [Term]
 id: MOP:0000566
 name: formation of covalent bond with group
-def: "Formation of a covalent bond between a substrate and a group." [RSC:cb]
+def: "Formation of a covalent bond between a substrate and a group." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000779 ! formation of covalent bond
 created_by: batchelorc
 creation_date: 2009-04-22T10:01:32Z
@@ -4803,7 +4806,7 @@ creation_date: 2009-04-22T10:01:32Z
 [Term]
 id: MOP:0000567
 name: breaking of covalent bond with group
-def: "Breaking of a covalent bond between a substrate and a group." [RSC:cb]
+def: "Breaking of a covalent bond between a substrate and a group." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000780 ! breaking of covalent bond
 created_by: batchelorc
 creation_date: 2009-04-30T02:24:32Z
@@ -4811,7 +4814,7 @@ creation_date: 2009-04-30T02:24:32Z
 [Term]
 id: MOP:0000568
 name: oxidation
-def: "The complete, net removal of one or mole electrons from a molecular entity, corresponding to an increase in the oxidation number of any atom within any substrate." [AU:O04362]
+def: "The complete, net removal of one or mole electrons from a molecular entity, corresponding to an increase in the oxidation number of any atom within any substrate." [https://doi.org/10.1351/goldbook.O04362]
 synonym: "de-electronation" EXACT []
 is_a: MOP:0000543 ! molecular process
 created_by: batchelorc
@@ -4820,7 +4823,7 @@ creation_date: 2009-06-01T06:01:47Z
 [Term]
 id: MOP:0000569
 name: reduction
-def: "The complete transfer of one or more electrons to a molecular entity." [AU:R05222]
+def: "The complete transfer of one or more electrons to a molecular entity." [https://doi.org/10.1351/goldbook.R05222]
 synonym: "electronation" EXACT []
 is_a: MOP:0000543 ! molecular process
 created_by: batchelorc
@@ -4829,7 +4832,7 @@ creation_date: 2009-06-01T06:04:18Z
 [Term]
 id: MOP:0000570
 name: electron attachment
-def: "The transfer of an electron to a molecular entity, resulting in a molecular entity of increased negative charge." [AU:E01979]
+def: "The transfer of an electron to a molecular entity, resulting in a molecular entity of increased negative charge." [https://doi.org/10.1351/goldbook.E01979]
 is_a: MOP:0000569 ! reduction
 created_by: batchelorc
 creation_date: 2009-06-01T06:06:19Z
@@ -4837,7 +4840,7 @@ creation_date: 2009-06-01T06:06:19Z
 [Term]
 id: MOP:0000571
 name: aldehyde reduction
-def: "A reduction in which an aldehyde is reduced to form a primary alcohol." [RSC:cb]
+def: "A reduction in which an aldehyde is reduced to form a primary alcohol." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000569 ! reduction
 created_by: batchelorc
 creation_date: 2009-06-01T06:07:02Z
@@ -4845,7 +4848,7 @@ creation_date: 2009-06-01T06:07:02Z
 [Term]
 id: MOP:0000572
 name: alcohol oxidation
-def: "An oxidation process where an alcohol is transformed into a carbonyl compound." [RSC:cb]
+def: "An oxidation process where an alcohol is transformed into a carbonyl compound." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000568 ! oxidation
 created_by: batchelorc
 creation_date: 2009-06-01T06:10:35Z
@@ -4853,7 +4856,7 @@ creation_date: 2009-06-01T06:10:35Z
 [Term]
 id: MOP:0000573
 name: primary alcohol oxidation
-def: "An oxidation process where a primary alcohol is transformed into an aldehyde." [RSC:cb]
+def: "An oxidation process where a primary alcohol is transformed into an aldehyde." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000572 ! alcohol oxidation
 created_by: batchelorc
 creation_date: 2009-06-01T06:10:59Z
@@ -4861,7 +4864,7 @@ creation_date: 2009-06-01T06:10:59Z
 [Term]
 id: MOP:0000574
 name: secondary alcohol oxidation
-def: "An oxidation process where a secondary alcohol is transformed into a ketone." [RSC:cb]
+def: "An oxidation process where a secondary alcohol is transformed into a ketone." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000572 ! alcohol oxidation
 created_by: batchelorc
 creation_date: 2009-06-01T06:11:31Z
@@ -4869,7 +4872,7 @@ creation_date: 2009-06-01T06:11:31Z
 [Term]
 id: MOP:0000575
 name: amine oxidation
-def: "An oxidation process where an amine is transformed into an imine." [RSC:cb]
+def: "An oxidation process where an amine is transformed into an imine." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000568 ! oxidation
 created_by: batchelorc
 creation_date: 2009-06-01T06:15:40Z
@@ -4877,7 +4880,7 @@ creation_date: 2009-06-01T06:15:40Z
 [Term]
 id: MOP:0000576
 name: imine reduction
-def: "A reduction process where an imine is transformed into an amine." [RSC:cb]
+def: "A reduction process where an imine is transformed into an amine." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000569 ! reduction
 created_by: batchelorc
 creation_date: 2009-06-01T06:19:21Z
@@ -4885,7 +4888,7 @@ creation_date: 2009-06-01T06:19:21Z
 [Term]
 id: MOP:0000577
 name: ester reduction
-def: "A reduction process where the oxidation state carbonyl carbon in the ester functionality is reduced." [RSC:cb]
+def: "A reduction process where the oxidation state carbonyl carbon in the ester functionality is reduced." [https://orcid.org/0000-0001-5985-7429]
 synonym: "reduction of ester" EXACT []
 is_a: MOP:0000569 ! reduction
 created_by: batchelorc
@@ -4894,7 +4897,7 @@ creation_date: 2009-06-02T05:30:48Z
 [Term]
 id: MOP:0000578
 name: ester reduction to aldehyde
-def: "An ester reduction where the product is the corresponding aldehyde." [RSC:cb]
+def: "An ester reduction where the product is the corresponding aldehyde." [https://orcid.org/0000-0001-5985-7429]
 synonym: "reduction of ester to aldehyde" EXACT []
 synonym: "reduction of esters to aldehyde" EXACT []
 is_a: MOP:0000577 ! ester reduction
@@ -4904,7 +4907,7 @@ creation_date: 2009-06-02T05:31:49Z
 [Term]
 id: MOP:0000579
 name: ester reduction to primary alcohol
-def: "An ester reduction where the product is the corresponding primary alcohol." [RSC:cb]
+def: "An ester reduction where the product is the corresponding primary alcohol." [https://orcid.org/0000-0001-5985-7429]
 synonym: "reduction of ester to primary alcohol" EXACT []
 synonym: "reduction of esters to primary alcohol" EXACT []
 is_a: MOP:0000577 ! ester reduction
@@ -4914,7 +4917,7 @@ creation_date: 2009-06-02T05:32:37Z
 [Term]
 id: MOP:0000580
 name: ketone reduction
-def: "A reduction process where a ketone is reduced to a secondary alcohol." [RSC:cb]
+def: "A reduction process where a ketone is reduced to a secondary alcohol." [https://orcid.org/0000-0001-5985-7429]
 synonym: "reduction of ketone" EXACT []
 synonym: "reduction of ketones" EXACT []
 is_a: MOP:0000569 ! reduction
@@ -4924,7 +4927,7 @@ creation_date: 2009-06-02T05:35:42Z
 [Term]
 id: MOP:0000581
 name: alkene oxidation
-def: "An oxidation process where the oxidation state of at least one doubly-bonded carbon atom increases." [RSC:cb]
+def: "An oxidation process where the oxidation state of at least one doubly-bonded carbon atom increases." [https://orcid.org/0000-0001-5985-7429]
 synonym: "olefin oxidation" EXACT []
 is_a: MOP:0000568 ! oxidation
 created_by: batchelorc
@@ -4933,7 +4936,7 @@ creation_date: 2009-06-02T05:45:30Z
 [Term]
 id: MOP:0000582
 name: alkene oxidation to 1,2-diol
-def: "An alkene oxidation where the product is the corresponding 1,2-diol." [RSC:cb]
+def: "An alkene oxidation where the product is the corresponding 1,2-diol." [https://orcid.org/0000-0001-5985-7429]
 synonym: "alkene oxidation to glycol" EXACT []
 synonym: "oxidation of alkene to 1,2-diol" EXACT []
 synonym: "oxidation of alkenes to 1,2-diol" EXACT []
@@ -4944,7 +4947,7 @@ creation_date: 2009-06-02T05:46:52Z
 [Term]
 id: MOP:0000583
 name: alkene ozonolysis
-def: "An alkene oxidation where the reagent is ozone and the product is the corresponding ozonide." [RSC:cb]
+def: "An alkene oxidation where the reagent is ozone and the product is the corresponding ozonide." [https://orcid.org/0000-0001-5985-7429]
 synonym: "ozonolysis of alkene" EXACT []
 synonym: "ozonolysis of alkenes" EXACT []
 is_a: MOP:0000708 ! alkene oxidative cleavage
@@ -4954,7 +4957,7 @@ creation_date: 2009-06-02T05:48:42Z
 [Term]
 id: MOP:0000584
 name: primary alkene oxidation to carboxylic acid and carbon dioxide
-def: "An alkene oxidation process where the reactant is a primary alkene and the products are carboxylic acid and carbon dioxide. This can be achieved with a warm, acidic solution of potassium permanganate." [RSC:cb]
+def: "An alkene oxidation process where the reactant is a primary alkene and the products are carboxylic acid and carbon dioxide. This can be achieved with a warm, acidic solution of potassium permanganate." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000581 ! alkene oxidation
 is_a: MOP:0000707 ! oxidative cleavage
 created_by: batchelorc
@@ -4963,7 +4966,7 @@ creation_date: 2009-06-02T06:02:46Z
 [Term]
 id: MOP:0000585
 name: tertiary alkene oxidation to carboxylic acid and ketone
-def: "An alkene oxidation where the reactant is a tertiary alkene and the products are the corresponding carboxylic acid and ketone. This can be achieved with a warm, acidic solution of potassium permanganate." [RSC:cb]
+def: "An alkene oxidation where the reactant is a tertiary alkene and the products are the corresponding carboxylic acid and ketone. This can be achieved with a warm, acidic solution of potassium permanganate." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000581 ! alkene oxidation
 is_a: MOP:0000707 ! oxidative cleavage
 created_by: batchelorc
@@ -4972,7 +4975,7 @@ creation_date: 2009-06-02T06:04:14Z
 [Term]
 id: MOP:0000586
 name: secondary, non-terminal alkene oxidation to aldehydes
-def: "An alkene oxidation process where the reactant is a secondary alkene and the products are the corresponding aldehydes. This can be achieved with warm, acidic potassium permanganate." [RSC:cb]
+def: "An alkene oxidation process where the reactant is a secondary alkene and the products are the corresponding aldehydes. This can be achieved with warm, acidic potassium permanganate." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000581 ! alkene oxidation
 is_a: MOP:0000707 ! oxidative cleavage
 created_by: batchelorc
@@ -4981,7 +4984,7 @@ creation_date: 2009-06-02T06:06:23Z
 [Term]
 id: MOP:0000587
 name: secondary terminal alkene oxidation to ketone and carbon dioxide
-def: "An alkene oxidation process where the reactant is a secondary terminal alkene and the products are carbon dioxide and the corresponding ketone. This can be achieved by warm, acidic potassium permanganate solution." [RSC:cb]
+def: "An alkene oxidation process where the reactant is a secondary terminal alkene and the products are carbon dioxide and the corresponding ketone. This can be achieved by warm, acidic potassium permanganate solution." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000581 ! alkene oxidation
 is_a: MOP:0000707 ! oxidative cleavage
 created_by: batchelorc
@@ -4990,7 +4993,7 @@ creation_date: 2009-06-02T06:07:44Z
 [Term]
 id: MOP:0000588
 name: quaternary alkene oxidation to ketones
-def: "An alkene oxidation process where the reactant is a quaternary alkene and the products are the corresponding ketones." [RSC:cb]
+def: "An alkene oxidation process where the reactant is a quaternary alkene and the products are the corresponding ketones." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000581 ! alkene oxidation
 is_a: MOP:0000707 ! oxidative cleavage
 created_by: batchelorc
@@ -4999,7 +5002,7 @@ creation_date: 2009-06-02T06:09:24Z
 [Term]
 id: MOP:0000589
 name: hydrogenation
-def: "A reduction process that involves addition of hydrogen atoms across a double bond." [RSC:cb]
+def: "A reduction process that involves addition of hydrogen atoms across a double bond." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000569 ! reduction
 created_by: batchelorc
 creation_date: 2009-06-05T04:53:34Z
@@ -5007,7 +5010,7 @@ creation_date: 2009-06-05T04:53:34Z
 [Term]
 id: MOP:0000590
 name: dehydrogenation
-def: "An oxidation process that involves the removal of adjacent hydrogen atoms, resulting in an increase of bond order." [RSC:cb]
+def: "An oxidation process that involves the removal of adjacent hydrogen atoms, resulting in an increase of bond order." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000568 ! oxidation
 created_by: batchelorc
 creation_date: 2009-06-05T04:54:48Z
@@ -5112,7 +5115,7 @@ relationship: BFO:0000057 CHEBI:36827 ! has_participant isotellurocyanato group
 [Term]
 id: MOP:0000604
 name: metal chelation
-def: "The formation of at least two single bonds between a metal atom and a ligand." [AU:C01012, RSC:cb]
+def: "The formation of at least two single bonds between a metal atom and a ligand." [https://doi.org/10.1351/goldbook.C01012, https://orcid.org/0000-0001-5985-7429]
 synonym: "metal ion chelation" NARROW []
 is_a: MOP:0000797 ! coordination
 created_by: batchelorc
@@ -5121,7 +5124,7 @@ creation_date: 2009-08-14T09:55:35Z
 [Term]
 id: MOP:0000605
 name: iron chelation
-def: "Metal chelation where the metal atom is an iron atom." [RSC:cb]
+def: "Metal chelation where the metal atom is an iron atom." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000604 ! metal chelation
 created_by: batchelorc
 creation_date: 2009-08-14T09:57:15Z
@@ -5129,7 +5132,7 @@ creation_date: 2009-08-14T09:57:15Z
 [Term]
 id: MOP:0000606
 name: iron(2+) chelation
-def: "Iron chelation where the iron atom has a charge of +2." [RSC:cb]
+def: "Iron chelation where the iron atom has a charge of +2." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000605 ! iron chelation
 created_by: batchelorc
 creation_date: 2009-08-14T09:59:38Z
@@ -5137,7 +5140,7 @@ creation_date: 2009-08-14T09:59:38Z
 [Term]
 id: MOP:0000607
 name: iron(3+) chelation
-def: "Iron chelation where the iron atom has a charge of +3." [RSC:cb]
+def: "Iron chelation where the iron atom has a charge of +3." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000605 ! iron chelation
 created_by: batchelorc
 creation_date: 2009-08-14T10:00:03Z
@@ -5145,7 +5148,7 @@ creation_date: 2009-08-14T10:00:03Z
 [Term]
 id: MOP:0000608
 name: copper chelation
-def: "Metal chelation where the metal atom is a copper atom." [RSC:cb]
+def: "Metal chelation where the metal atom is a copper atom." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000604 ! metal chelation
 created_by: batchelorc
 creation_date: 2009-08-14T10:11:34Z
@@ -5153,7 +5156,7 @@ creation_date: 2009-08-14T10:11:34Z
 [Term]
 id: MOP:0000609
 name: zinc chelation
-def: "Metal chelation where the metal atom is a zinc atom." [RSC:cb]
+def: "Metal chelation where the metal atom is a zinc atom." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000604 ! metal chelation
 created_by: batchelorc
 creation_date: 2009-08-14T10:12:01Z
@@ -5161,7 +5164,7 @@ creation_date: 2009-08-14T10:12:01Z
 [Term]
 id: MOP:0000610
 name: lead chelation
-def: "Metal chelation where the metal atom is a lead atom." [RSC:cb]
+def: "Metal chelation where the metal atom is a lead atom." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000604 ! metal chelation
 created_by: batchelorc
 creation_date: 2009-08-14T10:13:11Z
@@ -5169,7 +5172,7 @@ creation_date: 2009-08-14T10:13:11Z
 [Term]
 id: MOP:0000611
 name: cobalt chelation
-def: "Metal chelation where the metal atom is a cobalt atom." [RSC:cb]
+def: "Metal chelation where the metal atom is a cobalt atom." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000604 ! metal chelation
 created_by: batchelorc
 creation_date: 2009-08-14T10:14:05Z
@@ -5177,7 +5180,7 @@ creation_date: 2009-08-14T10:14:05Z
 [Term]
 id: MOP:0000612
 name: aluminium chelation
-def: "Metal chelation where the metal atom is an aluminium atom." [RSC:cb]
+def: "Metal chelation where the metal atom is an aluminium atom." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000604 ! metal chelation
 created_by: batchelorc
 creation_date: 2009-08-14T10:14:29Z
@@ -5185,7 +5188,7 @@ creation_date: 2009-08-14T10:14:29Z
 [Term]
 id: MOP:0000613
 name: molybdenum chelation
-def: "Metal chelation where the metal atom is a molybdenum atom." [RSC:cb]
+def: "Metal chelation where the metal atom is a molybdenum atom." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000604 ! metal chelation
 created_by: batchelorc
 creation_date: 2009-08-14T10:17:50Z
@@ -5193,7 +5196,7 @@ creation_date: 2009-08-14T10:17:50Z
 [Term]
 id: MOP:0000614
 name: plutonium chelation
-def: "Metal chelation where the metal atom is a plutonium atom." [RSC:cb]
+def: "Metal chelation where the metal atom is a plutonium atom." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000604 ! metal chelation
 created_by: batchelorc
 creation_date: 2009-08-14T10:24:18Z
@@ -5201,7 +5204,7 @@ creation_date: 2009-08-14T10:24:18Z
 [Term]
 id: MOP:0000615
 name: electron transfer
-def: "A process where an electron is transferred from one molecular entity or part of a molecular entity to a different molecular entity or part of the same molecular entity." [AU:E02011]
+def: "A process where an electron is transferred from one molecular entity or part of a molecular entity to a different molecular entity or part of the same molecular entity." [https://doi.org/10.1351/goldbook.E02011]
 is_a: MOP:0000543 ! molecular process
 created_by: batchelorc
 creation_date: 2009-09-15T03:55:41Z
@@ -5217,7 +5220,7 @@ creation_date: 2009-09-15T04:27:03Z
 [Term]
 id: MOP:0000617
 name: irreversible electron transfer
-def: "An electron transfer reaction that involves a large change in free energy compared to kT. The product distribution of an equilibrium corresponding to this reaction will mainly consist of the product." [RSC:cb]
+def: "An electron transfer reaction that involves a large change in free energy compared to kT. The product distribution of an equilibrium corresponding to this reaction will mainly consist of the product." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000615 ! electron transfer
 created_by: batchelorc
 creation_date: 2009-09-15T04:31:22Z
@@ -5225,7 +5228,7 @@ creation_date: 2009-09-15T04:31:22Z
 [Term]
 id: MOP:0000618
 name: solvolysis
-def: "A molecular process where a molecule is broken up by reaction with a molecule that is part of the solvent material. It may be the primary constituent molecule of the solvent material (for example water, ethanol, ammonia) or its lyonium ion or lyate ion." [AU:S05762, RSC:cb]
+def: "A molecular process where a molecule is broken up by reaction with a molecule that is part of the solvent material. It may be the primary constituent molecule of the solvent material (for example water, ethanol, ammonia) or its lyonium ion or lyate ion." [https://doi.org/10.1351/goldbook.S05762, https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000543 ! molecular process
 created_by: batchelorc
 creation_date: 2009-09-16T11:11:24Z
@@ -5233,7 +5236,7 @@ creation_date: 2009-09-16T11:11:24Z
 [Term]
 id: MOP:0000619
 name: hydrolysis
-def: "A solvolysis reaction where the solvent material is water." [RSC:cb]
+def: "A solvolysis reaction where the solvent material is water." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000618 ! solvolysis
 created_by: batchelorc
 creation_date: 2009-09-16T11:13:21Z
@@ -5241,7 +5244,7 @@ creation_date: 2009-09-16T11:13:21Z
 [Term]
 id: MOP:0000620
 name: alcoholysis
-def: "A solvolysis reaction where the solvent material is an alcohol." [RSC:cb]
+def: "A solvolysis reaction where the solvent material is an alcohol." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000618 ! solvolysis
 created_by: batchelorc
 creation_date: 2009-09-16T11:14:18Z
@@ -5249,7 +5252,7 @@ creation_date: 2009-09-16T11:14:18Z
 [Term]
 id: MOP:0000621
 name: aminolysis
-def: "A solvolysis reaction where the solvent material is an amine." [RSC:cb]
+def: "A solvolysis reaction where the solvent material is an amine." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000618 ! solvolysis
 created_by: batchelorc
 creation_date: 2009-09-16T11:15:07Z
@@ -5257,7 +5260,7 @@ creation_date: 2009-09-16T11:15:07Z
 [Term]
 id: MOP:0000622
 name: ammonolysis
-def: "A solvolysis reaction where the solvent material is ammonia." [RSC:cb]
+def: "A solvolysis reaction where the solvent material is ammonia." [https://orcid.org/0000-0001-5985-7429]
 synonym: "ammoniolysis" EXACT []
 is_a: MOP:0000618 ! solvolysis
 created_by: batchelorc
@@ -5266,7 +5269,7 @@ creation_date: 2009-09-16T11:17:31Z
 [Term]
 id: MOP:0000623
 name: methanolysis
-def: "An alcoholysis reaction where the solvent alcohol is methanol." [RSC:cb]
+def: "An alcoholysis reaction where the solvent alcohol is methanol." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000620 ! alcoholysis
 created_by: batchelorc
 creation_date: 2009-09-16T11:21:09Z
@@ -5274,7 +5277,7 @@ creation_date: 2009-09-16T11:21:09Z
 [Term]
 id: MOP:0000624
 name: ethanolysis
-def: "An alcoholysis reaction where the solvent alcohol is ethanol." [RSC:cb]
+def: "An alcoholysis reaction where the solvent alcohol is ethanol." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000620 ! alcoholysis
 created_by: batchelorc
 creation_date: 2009-09-16T11:21:36Z
@@ -5282,7 +5285,7 @@ creation_date: 2009-09-16T11:21:36Z
 [Term]
 id: MOP:0000625
 name: propanolysis
-def: "An alcoholysis reaction where the solvent alcohol is a propanol." [RSC:cb]
+def: "An alcoholysis reaction where the solvent alcohol is a propanol." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000620 ! alcoholysis
 created_by: batchelorc
 creation_date: 2009-09-16T11:22:06Z
@@ -5290,7 +5293,7 @@ creation_date: 2009-09-16T11:22:06Z
 [Term]
 id: MOP:0000626
 name: butanolysis
-def: "An alcoholysis reaction where the solvent alcohol is a butanol." [RSC:cb]
+def: "An alcoholysis reaction where the solvent alcohol is a butanol." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000620 ! alcoholysis
 created_by: batchelorc
 creation_date: 2009-09-16T11:22:36Z
@@ -5298,7 +5301,7 @@ creation_date: 2009-09-16T11:22:36Z
 [Term]
 id: MOP:0000627
 name: condensation reaction
-def: "A reaction in which two or more reactants or remote reactive sites within the same molecular entity yield a single main product with accompanying formation of a small molecule." [doi:10.1351/goldbook.C01238]
+def: "A reaction in which two or more reactants or remote reactive sites within the same molecular entity yield a single main product with accompanying formation of a small molecule." [https://doi.org/10.1351/goldbook.C01238]
 is_a: MOP:0000543 ! molecular process
 created_by: batchelorc
 creation_date: 2009-09-16T11:30:32Z
@@ -5306,7 +5309,7 @@ creation_date: 2009-09-16T11:30:32Z
 [Term]
 id: MOP:0000628
 name: dehydration reaction
-def: "A condensation reaction where the small molecule produced is water." [RSC:cb]
+def: "A condensation reaction where the small molecule produced is water." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000627 ! condensation reaction
 created_by: batchelorc
 creation_date: 2009-09-16T11:32:33Z
@@ -5314,7 +5317,7 @@ creation_date: 2009-09-16T11:32:33Z
 [Term]
 id: MOP:0000629
 name: polymerisation
-def: "The process of converting a monomer mixture of monomers into a polymer." [doi:10.1351/goldbook.P04740]
+def: "The process of converting a monomer mixture of monomers into a polymer." [https://doi.org/10.1351/goldbook.P04740]
 synonym: "polymerization" EXACT []
 is_a: MOP:0000543 ! molecular process
 intersection_of: MOP:0000543 ! molecular process
@@ -5324,14 +5327,14 @@ relationship: BFO:0000077 CHEBI:33839 ! has participant beginning to exist macro
 [Term]
 id: MOP:0000630
 name: depolymerisation
-def: "The process of converting a polymer into a monomer or mixture of monomers." [doi:10.1351/goldbook.D01600]
+def: "The process of converting a polymer into a monomer or mixture of monomers." [https://doi.org/10.1351/goldbook.D01600]
 synonym: "depolymerization" EXACT []
 is_a: MOP:0000543 ! molecular process
 
 [Term]
 id: MOP:0000631
 name: copolymerisation
-def: "A polymerisation in which a copolymer is formed." [doi:10.1351/goldbook.C01336]
+def: "A polymerisation in which a copolymer is formed." [https://doi.org/10.1351/goldbook.C01336]
 synonym: "copolymerization" EXACT []
 is_a: MOP:0000629 ! polymerisation
 intersection_of: MOP:0000629 ! polymerisation
@@ -5341,7 +5344,7 @@ relationship: BFO:0000077 CHEBI:53310 ! has participant beginning to exist co-po
 [Term]
 id: MOP:0000632
 name: condensation polymerisation
-def: "Polymerisation by a repeated condensation process." [doi:10.1351/goldbook.C01237]
+def: "Polymerisation by a repeated condensation process." [https://doi.org/10.1351/goldbook.C01237]
 synonym: "condensation polymerization" EXACT []
 is_a: MOP:0000629 ! polymerisation
 intersection_of: MOP:0000629 ! polymerisation
@@ -5353,7 +5356,7 @@ relationship: BFO:0000117 MOP:0000627 ! has occurrent part condensation reaction
 [Term]
 id: MOP:0000633
 name: homopolymerisation
-def: "Polymerisation in which a homopolymer is formed." [doi:10.1351/goldbook.H02855]
+def: "Polymerisation in which a homopolymer is formed." [https://doi.org/10.1351/goldbook.H02855]
 synonym: "homopolymerization" EXACT []
 is_a: MOP:0000629 ! polymerisation
 intersection_of: MOP:0000629 ! polymerisation
@@ -5363,7 +5366,7 @@ relationship: BFO:0000077 CHEBI:37997 ! has participant beginning to exist homop
 [Term]
 id: MOP:0000634
 name: chain polymerisation
-def: "A chain reaction in which the growth of a polymer chain proceeds exclusively by reaction(s) between monomer(s) and reactive site(s) on the polymer chain with regeneration of the reactive site(s) at the end of each growth step." [doi:10.1351/goldbook.C00958]
+def: "A chain reaction in which the growth of a polymer chain proceeds exclusively by reaction(s) between monomer(s) and reactive site(s) on the polymer chain with regeneration of the reactive site(s) at the end of each growth step." [https://doi.org/10.1351/goldbook.C00958]
 comment: has_part only some particular polymerisation step rather than some other polymerisation step.
 is_a: MOP:0000629 ! polymerisation
 is_a: MOP:0000635 ! chain reaction
@@ -5375,34 +5378,34 @@ relationship: BFO:0000117 MOP:0000640 ! has occurrent part chain initiation
 [Term]
 id: MOP:0000635
 name: chain reaction
-def: "A reaction in which one or more reactive reaction intermediates (frequently radicals) are continuously regenerated, usually through a repetitive cycle of elementary steps (the 'propagation step')." [doi:10.1351/goldbook.C00960]
+def: "A reaction in which one or more reactive reaction intermediates (frequently radicals) are continuously regenerated, usually through a repetitive cycle of elementary steps (the 'propagation step')." [https://doi.org/10.1351/goldbook.C00960]
 is_a: MOP:0000543 ! molecular process
 
 [Term]
 id: MOP:0000636
 name: anionic polymerisation
-def: "An ionic polymerisation in which the active centres are anionic." [doi:10.1351/goldbook.A00361]
+def: "An ionic polymerisation in which the active centres are anionic." [https://doi.org/10.1351/goldbook.A00361]
 synonym: "anionic polymerization" EXACT []
 is_a: MOP:0000637 ! ionic polymerisation
 
 [Term]
 id: MOP:0000637
 name: ionic polymerisation
-def: "A chain polymerisation in which the active centres are ions or ion pairs." [doi:10.1351/goldbook.I03178]
+def: "A chain polymerisation in which the active centres are ions or ion pairs." [https://doi.org/10.1351/goldbook.I03178]
 synonym: "ionic polymerization" EXACT []
 is_a: MOP:0000634 ! chain polymerisation
 
 [Term]
 id: MOP:0000638
 name: cationic polymerisation
-def: "An ionic polymerisation in which the active centres are cationic." [doi:10.1351/goldbook.C00910]
+def: "An ionic polymerisation in which the active centres are cationic." [https://doi.org/10.1351/goldbook.C00910]
 synonym: "cationic polymerization" EXACT []
 is_a: MOP:0000637 ! ionic polymerisation
 
 [Term]
 id: MOP:0000639
 name: radical polymerisation
-def: "A chain polymerisation in which the active centres are radicals. Usually the growing chain end bears an unpaired electron." [doi:10.1351/goldbook.R05075]
+def: "A chain polymerisation in which the active centres are radicals. Usually the growing chain end bears an unpaired electron." [https://doi.org/10.1351/goldbook.R05075]
 synonym: "free radical polymerisation" EXACT []
 synonym: "free radical polymerization" EXACT []
 synonym: "radical polymerization" EXACT []
@@ -5411,27 +5414,27 @@ is_a: MOP:0000634 ! chain polymerisation
 [Term]
 id: MOP:0000640
 name: chain initiation
-def: "A molecular process in which an initiating species adds to a monomer to form a chain carrier." [doi:10.1351/goldbook.C00955]
+def: "A molecular process in which an initiating species adds to a monomer to form a chain carrier." [https://doi.org/10.1351/goldbook.C00955]
 is_a: MOP:0000543 ! molecular process
 relationship: BFO:0000132 MOP:0000634 ! part of occurrent chain polymerisation
 
 [Term]
 id: MOP:0000641
 name: all-degree polymerisation
-def: "A polymerisation where the growth of polymer chains proceeds by reactions between all degrees of polymerisation." [RSC:cb]
+def: "A polymerisation where the growth of polymer chains proceeds by reactions between all degrees of polymerisation." [https://orcid.org/0000-0001-5985-7429]
 synonym: "all-degree polymerization" EXACT []
 is_a: MOP:0000629 ! polymerisation
 
 [Term]
 id: MOP:0000642
 name: addition reaction
-def: "A reaction of two or more reacting molecular entities resulting in a single reaction product containing all atoms of all components with formation of two chemical bonds and a net reduction in bond multiplicity." [doi:10.1351/goldbook.A00133]
+def: "A reaction of two or more reacting molecular entities resulting in a single reaction product containing all atoms of all components with formation of two chemical bonds and a net reduction in bond multiplicity." [https://doi.org/10.1351/goldbook.A00133]
 is_a: MOP:0000543 ! molecular process
 
 [Term]
 id: MOP:0000643
 name: polyaddition
-def: "An all-degree polymerisation that proceeds by addition reactions." [doi:10.1351/goldbook.P04720]
+def: "An all-degree polymerisation that proceeds by addition reactions." [https://doi.org/10.1351/goldbook.P04720]
 is_a: MOP:0000641 ! all-degree polymerisation
 intersection_of: MOP:0000641 ! all-degree polymerisation
 intersection_of: BFO:0000117 MOP:0000642 ! has occurrent part addition reaction
@@ -5440,7 +5443,7 @@ relationship: BFO:0000117 MOP:0000642 ! has occurrent part addition reaction
 [Term]
 id: MOP:0000644
 name: polycondensation
-def: "An all-degree polymerisation that proceeds by condensation reactions." [doi:10.1351/goldbook.P04722]
+def: "An all-degree polymerisation that proceeds by condensation reactions." [https://doi.org/10.1351/goldbook.P04722]
 is_a: MOP:0000632 ! condensation polymerisation
 is_a: MOP:0000641 ! all-degree polymerisation
 intersection_of: MOP:0000641 ! all-degree polymerisation
@@ -5450,7 +5453,7 @@ relationship: BFO:0000117 MOP:0000627 ! has occurrent part condensation reaction
 [Term]
 id: MOP:0000645
 name: condensative chain polymerisation
-def: "A chain polymerisation that proceeds by condensation steps." [doi:10.1351/goldbook.C01239]
+def: "A chain polymerisation that proceeds by condensation steps." [https://doi.org/10.1351/goldbook.C01239]
 is_a: MOP:0000632 ! condensation polymerisation
 is_a: MOP:0000634 ! chain polymerisation
 intersection_of: MOP:0000634 ! chain polymerisation
@@ -5460,14 +5463,14 @@ relationship: BFO:0000117 MOP:0000627 ! has occurrent part condensation reaction
 [Term]
 id: MOP:0000646
 name: living polymerisation
-def: "A chain polymerisation that consists only of chain initiation and chain propagation steps." [doi:10.1351/goldbook.L03597]
+def: "A chain polymerisation that consists only of chain initiation and chain propagation steps." [https://doi.org/10.1351/goldbook.L03597]
 synonym: "living polymerization" EXACT []
 is_a: MOP:0000634 ! chain polymerisation
 
 [Term]
 id: MOP:0000647
 name: ionic copolymerisation
-def: "An ionic polymerisation where the product is a copolymer." [RSC:cb]
+def: "An ionic polymerisation where the product is a copolymer." [https://orcid.org/0000-0001-5985-7429]
 synonym: "ionic copolymerization" EXACT []
 is_a: MOP:0000631 ! copolymerisation
 is_a: MOP:0000637 ! ionic polymerisation
@@ -5478,7 +5481,7 @@ relationship: BFO:0000077 CHEBI:53310 ! has participant beginning to exist co-po
 [Term]
 id: MOP:0000648
 name: radical copolymerisation
-def: "A radical polymerisation where the product is a copolymer." [RSC:cb]
+def: "A radical polymerisation where the product is a copolymer." [https://orcid.org/0000-0001-5985-7429]
 synonym: "free radical copolymerisation" EXACT []
 synonym: "free radical copolymerization" EXACT []
 synonym: "radical copolymerization" EXACT []
@@ -5491,7 +5494,7 @@ relationship: BFO:0000077 CHEBI:53310 ! has participant beginning to exist co-po
 [Term]
 id: MOP:0000649
 name: living copolymerisation
-def: "A living polymerisation where the product is a copolymer." [RSC:cb]
+def: "A living polymerisation where the product is a copolymer." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000631 ! copolymerisation
 is_a: MOP:0000646 ! living polymerisation
 intersection_of: MOP:0000646 ! living polymerisation
@@ -5501,51 +5504,51 @@ relationship: BFO:0000077 CHEBI:53310 ! has participant beginning to exist co-po
 [Term]
 id: MOP:0000650
 name: amination
-def: "Formation of a covalent bond between a substrate and an amino group." [RSC:cb]
+def: "Formation of a covalent bond between a substrate and an amino group." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000802 ! formation of covalent bond with nitrogen centre
 relationship: BFO:0000057 CHEBI:51142 ! has_participant amino groups
 
 [Term]
 id: MOP:0000651
 name: deamination
-def: "Breaking of a covalent bond between a substrate and an amino group." [RSC:cb]
+def: "Breaking of a covalent bond between a substrate and an amino group." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000567 ! breaking of covalent bond with group
 relationship: BFO:0000057 CHEBI:51142 ! has_participant amino groups
 
 [Term]
 id: MOP:0000652
 name: N-amination
-def: "Formation of a covalent bond between a nitrogen atom in a substrate and an amino group." [RSC:cb]
+def: "Formation of a covalent bond between a nitrogen atom in a substrate and an amino group." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000650 ! amination
 
 [Term]
 id: MOP:0000653
 name: O-amination
-def: "Formation of a covalent bond between an oxygen atom in a substrate and an amino group." [RSC:cb]
+def: "Formation of a covalent bond between an oxygen atom in a substrate and an amino group." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000650 ! amination
 
 [Term]
 id: MOP:0000654
 name: C-amination
-def: "Formation of a covalent bond between a carbon atom in a substrate and an amino group." [RSC:cb]
+def: "Formation of a covalent bond between a carbon atom in a substrate and an amino group." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000650 ! amination
 
 [Term]
 id: MOP:0000655
 name: S-amination
-def: "Formation of a covalent bond between a sulfur atom in a substrate and an amino group." [RSC:cb]
+def: "Formation of a covalent bond between a sulfur atom in a substrate and an amino group." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000650 ! amination
 
 [Term]
 id: MOP:0000656
 name: elimination reaction
-def: "A molecular process where two groups are lost with concomitant formation of an unsaturation in the molecule or formation of a new ring." [doi:10.1351/goldbook.E02038]
+def: "A molecular process where two groups are lost with concomitant formation of an unsaturation in the molecule or formation of a new ring." [https://doi.org/10.1351/goldbook.E02038]
 is_a: MOP:0000543 ! molecular process
 
 [Term]
 id: MOP:0000657
 name: 1/1/elimination reaction
-def: "An elimination reaction where both groups are lost from the same atom." [RSC:cb]
+def: "An elimination reaction where both groups are lost from the same atom." [https://orcid.org/0000-0001-5985-7429]
 synonym: "1,1-elimination" EXACT []
 synonym: "1,1-elimination reaction" EXACT []
 synonym: "alpha-elimination" EXACT []
@@ -5554,7 +5557,7 @@ is_a: MOP:0000656 ! elimination reaction
 [Term]
 id: MOP:0000658
 name: 1/2/elimination reaction
-def: "An elimination reaction where the groups are lost from adjacent atoms." [RSC:cb]
+def: "An elimination reaction where the groups are lost from adjacent atoms." [https://orcid.org/0000-0001-5985-7429]
 synonym: "1,2-elimination" EXACT []
 synonym: "1,2-elimination reaction" EXACT []
 synonym: "beta-elimination" EXACT []
@@ -5563,7 +5566,7 @@ is_a: MOP:0000656 ! elimination reaction
 [Term]
 id: MOP:0000659
 name: 1/3/elimination reaction
-def: "An elimination reaction where the groups are lost from atoms that are 1,3- to each other." [RSC:cb]
+def: "An elimination reaction where the groups are lost from atoms that are 1,3- to each other." [https://orcid.org/0000-0001-5985-7429]
 synonym: "1,3-elimination" EXACT []
 synonym: "1,3-elimination reaction" EXACT []
 synonym: "gamma-elimination" EXACT []
@@ -5572,7 +5575,7 @@ is_a: MOP:0000656 ! elimination reaction
 [Term]
 id: MOP:0000660
 name: 1/4/elimination reaction
-def: "An elimination reaction where the groups are lost from atoms that are 1,4- to each other." [RSC:cb]
+def: "An elimination reaction where the groups are lost from atoms that are 1,4- to each other." [https://orcid.org/0000-0001-5985-7429]
 synonym: "1,4-elimination" EXACT []
 synonym: "1,4-elimination reaction" EXACT []
 synonym: "delta-elimination" EXACT []
@@ -5581,7 +5584,7 @@ is_a: MOP:0000656 ! elimination reaction
 [Term]
 id: MOP:0000661
 name: 1/5/elimination reaction
-def: "An elimination reaction where the groups are lost from atoms that are 1,5- to each other." [RSC:cb]
+def: "An elimination reaction where the groups are lost from atoms that are 1,5- to each other." [https://orcid.org/0000-0001-5985-7429]
 synonym: "1,5-elimination" EXACT []
 synonym: "1,5-elimination reaction" EXACT []
 synonym: "epsilon-elimination" EXACT []
@@ -5590,7 +5593,7 @@ is_a: MOP:0000656 ! elimination reaction
 [Term]
 id: MOP:0000662
 name: 1/6/elimination reaction
-def: "An elimination reaction where the groups are lost from atoms that are 1,6- to each other." [RSC:cb]
+def: "An elimination reaction where the groups are lost from atoms that are 1,6- to each other." [https://orcid.org/0000-0001-5985-7429]
 synonym: "1,6-elimination" EXACT []
 synonym: "1,6-elimination reaction" EXACT []
 is_a: MOP:0000656 ! elimination reaction
@@ -5598,7 +5601,7 @@ is_a: MOP:0000656 ! elimination reaction
 [Term]
 id: MOP:0000663
 name: 1/8/elimination reaction
-def: "An elimination reaction where the groups are lost from atoms that are 1,8- to each other." [RSC:cb]
+def: "An elimination reaction where the groups are lost from atoms that are 1,8- to each other." [https://orcid.org/0000-0001-5985-7429]
 synonym: "1,8-elimination" EXACT []
 synonym: "1,8-elimination reaction" EXACT []
 is_a: MOP:0000656 ! elimination reaction
@@ -5606,7 +5609,7 @@ is_a: MOP:0000656 ! elimination reaction
 [Term]
 id: MOP:0000664
 name: 1/1/addition reaction
-def: "An addition reaction where the groups both add to the same atom." [RSC:cb]
+def: "An addition reaction where the groups both add to the same atom." [https://orcid.org/0000-0001-5985-7429]
 synonym: "1,1-addition" EXACT []
 synonym: "1,1-addition reaction" EXACT []
 synonym: "alpha-addition" EXACT []
@@ -5615,7 +5618,7 @@ is_a: MOP:0000642 ! addition reaction
 [Term]
 id: MOP:0000665
 name: 1/2/addition reaction
-def: "An addition reaction where the groups add to adjacent atoms." [RSC:cb]
+def: "An addition reaction where the groups add to adjacent atoms." [https://orcid.org/0000-0001-5985-7429]
 synonym: "1,2-addition" EXACT []
 synonym: "1,2-addition reaction" EXACT []
 synonym: "beta-addition" EXACT []
@@ -5624,7 +5627,7 @@ is_a: MOP:0000642 ! addition reaction
 [Term]
 id: MOP:0000666
 name: 1/3/addition reaction
-def: "An addition reaction where the groups add to atoms that are 1,3- to each other." [RSC:cb]
+def: "An addition reaction where the groups add to atoms that are 1,3- to each other." [https://orcid.org/0000-0001-5985-7429]
 synonym: "1,3-addition" EXACT []
 synonym: "1,3-addition reaction" EXACT []
 synonym: "gamma-addition" EXACT []
@@ -5633,7 +5636,7 @@ is_a: MOP:0000642 ! addition reaction
 [Term]
 id: MOP:0000667
 name: 1/4/addition reaction
-def: "An addition reaction where the groups add to atoms that are 1,4- to each other." [RSC:cb]
+def: "An addition reaction where the groups add to atoms that are 1,4- to each other." [https://orcid.org/0000-0001-5985-7429]
 synonym: "1,4-addition" EXACT []
 synonym: "1,4-addition reaction" EXACT []
 synonym: "delta-addition" EXACT []
@@ -5642,7 +5645,7 @@ is_a: MOP:0000642 ! addition reaction
 [Term]
 id: MOP:0000668
 name: 1/5/addition reaction
-def: "An addition reaction where the groups add to atoms that are 1,5- to each other." [RSC:cb]
+def: "An addition reaction where the groups add to atoms that are 1,5- to each other." [https://orcid.org/0000-0001-5985-7429]
 synonym: "1,5-addition" EXACT []
 synonym: "1,5-addition reaction" EXACT []
 synonym: "epsilon-addition" EXACT []
@@ -5651,7 +5654,7 @@ is_a: MOP:0000642 ! addition reaction
 [Term]
 id: MOP:0000669
 name: 1/6/addition reaction
-def: "An addition reaction where the groups add to atoms that are 1,6- to each other." [RSC:cb]
+def: "An addition reaction where the groups add to atoms that are 1,6- to each other." [https://orcid.org/0000-0001-5985-7429]
 synonym: "1,6-addition" EXACT []
 synonym: "1,6-addition reaction" EXACT []
 is_a: MOP:0000642 ! addition reaction
@@ -5659,7 +5662,7 @@ is_a: MOP:0000642 ! addition reaction
 [Term]
 id: MOP:0000670
 name: 1/8/addition reaction
-def: "An addition reaction where the groups add to atoms that are 1,8- to each other." [RSC:cb]
+def: "An addition reaction where the groups add to atoms that are 1,8- to each other." [https://orcid.org/0000-0001-5985-7429]
 synonym: "1,8-addition" EXACT []
 synonym: "1,8-addition reaction" EXACT []
 is_a: MOP:0000642 ! addition reaction
@@ -5667,7 +5670,7 @@ is_a: MOP:0000642 ! addition reaction
 [Term]
 id: MOP:0000671
 name: epoxidation
-def: "A molecular process that results in the formation of an epoxide." [RSC:cb]
+def: "A molecular process that results in the formation of an epoxide." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000543 ! molecular process
 intersection_of: MOP:0000543 ! molecular process
 intersection_of: BFO:0000077 CHEBI:32955 ! has participant beginning to exist epoxide
@@ -5676,7 +5679,7 @@ relationship: BFO:0000077 CHEBI:32955 ! has participant beginning to exist epoxi
 [Term]
 id: MOP:0000672
 name: enolization
-def: "A molecular process where a carbonyl compound is converted an enol. Usually this is a reversible tautomerization but it can be irreversible." [RSC:cb]
+def: "A molecular process where a carbonyl compound is converted an enol. Usually this is a reversible tautomerization but it can be irreversible." [https://orcid.org/0000-0001-5985-7429]
 synonym: "enolisation" EXACT []
 is_a: MOP:0000725 ! keto-enol tautomerisation
 intersection_of: MOP:0000725 ! keto-enol tautomerisation
@@ -5688,14 +5691,14 @@ relationship: BFO:0000078 CHEBI:36586 ! has participant ceasing to exist carbony
 [Term]
 id: MOP:0000673
 name: hydroxylation
-def: "Formation of a covalent bond between a substrate and a hydroxy group." [RSC:cb]
+def: "Formation of a covalent bond between a substrate and a hydroxy group." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000566 ! formation of covalent bond with group
 relationship: BFO:0000057 CHEBI:43176 ! has_participant hydroxy group
 
 [Term]
 id: MOP:0000674
 name: metallation
-def: "Formation of a bond between a substrate and a metal atom." [RSC:cb]
+def: "Formation of a bond between a substrate and a metal atom." [https://orcid.org/0000-0001-5985-7429]
 comment: has_participant metal atom when ChEBI get round to renaming those.
 synonym: "metalation" EXACT []
 is_a: MOP:0000543 ! molecular process
@@ -5703,7 +5706,7 @@ is_a: MOP:0000543 ! molecular process
 [Term]
 id: MOP:0000675
 name: cyclometallation
-def: "Formation of two bonds between a metal atom and a substrate, resulting in a metallacycle." [RSC:cb]
+def: "Formation of two bonds between a metal atom and a substrate, resulting in a metallacycle." [https://orcid.org/0000-0001-5985-7429]
 comment: has_participant metal atom when ChEBI get round to renaming those.
 synonym: "cyclometalation" EXACT []
 is_a: MOP:0000561 ! cyclization
@@ -5712,7 +5715,7 @@ is_a: MOP:0000674 ! metallation
 [Term]
 id: MOP:0000676
 name: demetallation
-def: "Breaking of a bond between a substrate and a metal atom." [RSC:cb]
+def: "Breaking of a bond between a substrate and a metal atom." [https://orcid.org/0000-0001-5985-7429]
 comment: has_participant metal atom when ChEBI get round to renaming those.
 synonym: "demetalation" EXACT []
 is_a: MOP:0000543 ! molecular process
@@ -5720,7 +5723,7 @@ is_a: MOP:0000543 ! molecular process
 [Term]
 id: MOP:0000677
 name: transmetallation
-def: "Transfer of a metal atom from one substrate to another." [RSC:cb]
+def: "Transfer of a metal atom from one substrate to another." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000543 ! molecular process
 relationship: BFO:0000117 MOP:0000674 ! has occurrent part metallation
 relationship: BFO:0000117 MOP:0000676 ! has occurrent part demetallation
@@ -5728,7 +5731,7 @@ relationship: BFO:0000117 MOP:0000676 ! has occurrent part demetallation
 [Term]
 id: MOP:0000678
 name: cyanosilylation
-def: "1/2/addition across a double bond of a cyano group and a silyl group." [RSC:cb]
+def: "1/2/addition across a double bond of a cyano group and a silyl group." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000665 ! 1/2/addition reaction
 intersection_of: MOP:0000665 ! 1/2/addition reaction
 intersection_of: BFO:0000117 MOP:0000482 ! has occurrent part organosilylation
@@ -5739,41 +5742,41 @@ relationship: BFO:0000117 MOP:0000597 ! has occurrent part cyanation
 [Term]
 id: MOP:0000679
 name: electron pair transfer
-def: "A process where an electron pair is transferred from one molecular entity or part of a molecular entity to a different molecular entity or part of the same molecular entity." [RSC:cb]
+def: "A process where an electron pair is transferred from one molecular entity or part of a molecular entity to a different molecular entity or part of the same molecular entity." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000543 ! molecular process
 relationship: BFO:0000117 MOP:0000615 ! has occurrent part electron transfer
 
 [Term]
 id: MOP:0000680
 name: proton transfer
-def: "A process where a proton is transferred from one binding site to another." [doi:10.1351/goldbook.P04915]
+def: "A process where a proton is transferred from one binding site to another." [https://doi.org/10.1351/goldbook.P04915]
 is_a: MOP:0000682 ! hydron transfer
 relationship: BFO:0000057 CHEBI:24636 ! has_participant proton
 
 [Term]
 id: MOP:0000681
 name: autoprotolysis
-def: "A proton transfer reaction between two identical molecules, one acting as a Broensted acid and the other as a Broensted base." [doi:10.1351/goldbook.A00351]
+def: "A proton transfer reaction between two identical molecules, one acting as a Broensted acid and the other as a Broensted base." [https://doi.org/10.1351/goldbook.A00351]
 is_a: MOP:0000680 ! proton transfer
 
 [Term]
 id: MOP:0000682
 name: hydron transfer
-def: "A process where a hydron is transferred from one binding site to another." [RSC:cb]
+def: "A process where a hydron is transferred from one binding site to another." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000543 ! molecular process
 relationship: BFO:0000057 CHEBI:15378 ! has_participant hydron
 
 [Term]
 id: MOP:0000683
 name: deuteron transfer
-def: "A process where a hydron is transferred from one binding site to another." [RSC:cb]
+def: "A process where a deuteron is transferred from one binding site to another." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000682 ! hydron transfer
 relationship: BFO:0000057 CHEBI:29233 ! has_participant deuteron
 
 [Term]
 id: MOP:0000684
 name: atom-transfer radical polymerisation
-def: "A living polymerisation process where the chain initiation and chain propagation steps are atom transfer radical addition reactions. Often the atom transfer is a radical halogen atom and the reaction is catalysed by a transition metal species." [doi:10.1021/ja00125a035]
+def: "A living polymerisation process where the chain initiation and chain propagation steps are atom transfer radical addition reactions. Often the atom transfer is a radical halogen atom and the reaction is catalysed by a transition metal species." [https://doi.org/10.1021/ja00125a035]
 synonym: "atom-transfer radical polymerisation" EXACT []
 synonym: "ATRP" EXACT []
 is_a: MOP:0000646 ! living polymerisation
@@ -5781,7 +5784,7 @@ is_a: MOP:0000646 ! living polymerisation
 [Term]
 id: MOP:0000685
 name: ring-opening metathesis polymerisation
-def: "A ring-opening polymerisation that proceeds by metathesis steps." [RSC:cb]
+def: "A ring-opening polymerisation that proceeds by metathesis steps." [https://orcid.org/0000-0001-5985-7429]
 synonym: "ring-opening metathesis polymerisation" EXACT []
 synonym: "ROMP" EXACT []
 is_a: MOP:0000686 ! ring-opening polymerisation
@@ -5792,21 +5795,21 @@ relationship: BFO:0000117 MOP:0000687 ! has occurrent part metathesis
 [Term]
 id: MOP:0000686
 name: ring-opening polymerisation
-def: "A polymerisation in which a cyclic monomer yields a monomeric unit which is acyclic or contains fewer cycles than the monomer. If the monomer is polycyclic, the opening of a single ring is sufficient to classify the reaction as a ring-opening polymerisation." [doi:10.1351/goldbook.R05396]
+def: "A polymerisation in which a cyclic monomer yields a monomeric unit which is acyclic or contains fewer cycles than the monomer. If the monomer is polycyclic, the opening of a single ring is sufficient to classify the reaction as a ring-opening polymerisation." [https://doi.org/10.1351/goldbook.R05396]
 synonym: "ring-opening polymerization" EXACT []
 is_a: MOP:0000629 ! polymerisation
 
 [Term]
 id: MOP:0000687
 name: metathesis
-def: "A molecular process involving the exchange of a bond or bonds between similar interacting chemical species so that the bonding affiliations in the products are identical or closely similar to those in the reactants. An example is where RCH=CHR reacts with R'CH=CHR' to form 2RCH=CHR'." [doi:10.1351/goldbook.M03878]
+def: "A molecular process involving the exchange of a bond or bonds between similar interacting chemical species so that the bonding affiliations in the products are identical or closely similar to those in the reactants. An example is where RCH=CHR reacts with R'CH=CHR' to form 2RCH=CHR'." [https://doi.org/10.1351/goldbook.M03878]
 synonym: "metathesis reaction" EXACT []
 is_a: MOP:0000543 ! molecular process
 
 [Term]
 id: MOP:0000688
 name: ring-opening copolymerisation
-def: "A ring-opening polymerisation where the product is a copolymer." [RSC:cb]
+def: "A ring-opening polymerisation where the product is a copolymer." [https://orcid.org/0000-0001-5985-7429]
 synonym: "ring-opening copolymerization" EXACT []
 is_a: MOP:0000631 ! copolymerisation
 is_a: MOP:0000686 ! ring-opening polymerisation
@@ -5817,7 +5820,7 @@ relationship: BFO:0000077 CHEBI:53310 ! has participant beginning to exist co-po
 [Term]
 id: MOP:0000689
 name: reversible addition-fragmentation chain transfer polymerisation
-def: "A living polymerisation process where a transfer agent AX, reacts reversibly with an initiating radical R. or a propagating radical R(M)[n]. to give another transfer agent RX or R(M)[n]X and a species capable of initiating polymerisation." [doi:10.1021/ma9804951]
+def: "A living polymerisation process where a transfer agent AX, reacts reversibly with an initiating radical R. or a propagating radical R(M)[n]. to give another transfer agent RX or R(M)[n]X and a species capable of initiating polymerisation." [https://doi.org/10.1021/ma9804951]
 synonym: "RAFT polymerisation" EXACT []
 synonym: "RAFT polymerization" EXACT []
 synonym: "reversible addition--fragmentation chain transfer polymerization" EXACT []
@@ -5828,7 +5831,7 @@ is_a: MOP:0000646 ! living polymerisation
 [Term]
 id: MOP:0000690
 name: nitroxide-mediated polymerisation
-def: "A living polymerisation process where the rate is controlled by a nitroxide (originally TEMPO) reacting with growing radicals to form an unreactive alkoxyamine." [RSC:cb]
+def: "A living polymerisation process where the rate is controlled by a nitroxide (originally TEMPO) reacting with growing radicals to form an unreactive alkoxyamine." [https://orcid.org/0000-0001-5985-7429]
 synonym: "nitroxide mediated polymerisation" EXACT []
 synonym: "nitroxide-mediated polymerisation" EXACT []
 synonym: "nitroxide-mediated polymerization" EXACT []
@@ -5837,21 +5840,21 @@ is_a: MOP:0000646 ! living polymerisation
 [Term]
 id: MOP:0000691
 name: enzymatic polymerisation
-def: "A polymerisation process that is catalysed by an enzyme." [RSC:cb]
+def: "A polymerisation process that is catalysed by an enzyme." [https://orcid.org/0000-0001-5985-7429]
 synonym: "enzymatic polymerization" EXACT []
 is_a: MOP:0000629 ! polymerisation
 
 [Term]
 id: MOP:0000692
 name: liquid-phase polymerisation
-def: "A polymerisation process that takes place in the liquid phase." [RSC:cb]
+def: "A polymerisation process that takes place in the liquid phase." [https://orcid.org/0000-0001-5985-7429]
 synonym: "liquid-phase polymerization" EXACT []
 is_a: MOP:0000629 ! polymerisation
 
 [Term]
 id: MOP:0000693
 name: alternating copolymerisation
-def: "A copolymerisation in which an alternating copolymer is formed." [doi:10.1351/goldbook.A00251]
+def: "A copolymerisation in which an alternating copolymer is formed." [https://doi.org/10.1351/goldbook.A00251]
 synonym: "alternating copolymerization" EXACT []
 is_a: MOP:0000631 ! copolymerisation
 intersection_of: MOP:0000631 ! copolymerisation
@@ -5861,7 +5864,7 @@ relationship: BFO:0000077 CHEBI:53517 ! has participant beginning to exist alter
 [Term]
 id: MOP:0000694
 name: graft copolymerisation
-def: "A copolymerisation in which a graft copolymer is formed." [doi:10.1351/goldbook.G02676]
+def: "A copolymerisation in which a graft copolymer is formed." [https://doi.org/10.1351/goldbook.G02676]
 synonym: "graft copolymerization" EXACT []
 is_a: MOP:0000631 ! copolymerisation
 intersection_of: MOP:0000631 ! copolymerisation
@@ -5871,7 +5874,7 @@ relationship: BFO:0000077 CHEBI:53519 ! has participant beginning to exist graft
 [Term]
 id: MOP:0000695
 name: periodic copolymerisation
-def: "A copolymerisation in which a periodic copolymer is formed." [doi:10.1351/goldbook.P04495]
+def: "A copolymerisation in which a periodic copolymer is formed." [https://doi.org/10.1351/goldbook.P04495]
 synonym: "periodic copolymerization" EXACT []
 is_a: MOP:0000631 ! copolymerisation
 intersection_of: MOP:0000631 ! copolymerisation
@@ -5881,7 +5884,7 @@ relationship: BFO:0000077 CHEBI:53520 ! has participant beginning to exist perio
 [Term]
 id: MOP:0000696
 name: random copolymerisation
-def: "A copolymerisation in which a random copolymer is formed." [doi:10.1351/goldbook.R05127]
+def: "A copolymerisation in which a random copolymer is formed." [https://doi.org/10.1351/goldbook.R05127]
 synonym: "random copolymerization" EXACT []
 is_a: MOP:0000631 ! copolymerisation
 intersection_of: MOP:0000631 ! copolymerisation
@@ -5891,7 +5894,7 @@ relationship: BFO:0000077 CHEBI:53521 ! has participant beginning to exist rando
 [Term]
 id: MOP:0000697
 name: statistical copolymerisation
-def: "A copolymerisation in which a statistical copolymer is formed." [doi:10.1351/goldbook.S05956]
+def: "A copolymerisation in which a statistical copolymer is formed." [https://doi.org/10.1351/goldbook.S05956]
 synonym: "statistical copolymerization" EXACT []
 is_a: MOP:0000631 ! copolymerisation
 intersection_of: MOP:0000631 ! copolymerisation
@@ -5901,7 +5904,7 @@ relationship: BFO:0000077 CHEBI:53516 ! has participant beginning to exist stati
 [Term]
 id: MOP:0000698
 name: stereospecific copolymerisation
-def: "A copolymerisation in which a tactic copolymer is formed." [doi:10.1351/goldbook.R05127]
+def: "A copolymerisation in which a tactic copolymer is formed." [https://doi.org/10.1351/goldbook.R05127]
 synonym: "stereospecific copolymerization" EXACT []
 is_a: MOP:0000631 ! copolymerisation
 intersection_of: MOP:0000631 ! copolymerisation
@@ -5911,7 +5914,7 @@ relationship: BFO:0000077 CHEBI:53522 ! has participant beginning to exist tacti
 [Term]
 id: MOP:0000699
 name: block copolymerisation
-def: "A copolymerisation in which a block copolymer is formed." [RSC:cb]
+def: "A copolymerisation in which a block copolymer is formed." [https://orcid.org/0000-0001-5985-7429]
 synonym: "block copolymerization" EXACT []
 is_a: MOP:0000631 ! copolymerisation
 intersection_of: MOP:0000631 ! copolymerisation
@@ -5921,7 +5924,7 @@ relationship: BFO:0000077 CHEBI:53511 ! has participant beginning to exist block
 [Term]
 id: MOP:0000700
 name: diblock copolymerisation
-def: "A copolymerisation in which a diblock copolymer is formed." [RSC:cb]
+def: "A copolymerisation in which a diblock copolymer is formed." [https://orcid.org/0000-0001-5985-7429]
 synonym: "diblock copolymerization" EXACT []
 is_a: MOP:0000699 ! block copolymerisation
 intersection_of: MOP:0000631 ! copolymerisation
@@ -5931,7 +5934,7 @@ relationship: BFO:0000077 CHEBI:53512 ! has participant beginning to exist diblo
 [Term]
 id: MOP:0000701
 name: triblock copolymerisation
-def: "A copolymerisation in which a triblock copolymer is formed." [RSC:cb]
+def: "A copolymerisation in which a triblock copolymer is formed." [https://orcid.org/0000-0001-5985-7429]
 synonym: "triblock copolymerization" EXACT []
 is_a: MOP:0000699 ! block copolymerisation
 intersection_of: MOP:0000631 ! copolymerisation
@@ -5941,7 +5944,7 @@ relationship: BFO:0000077 CHEBI:53513 ! has participant beginning to exist tribl
 [Term]
 id: MOP:0000702
 name: graft polymerisation
-def: "A polymerisation in which a graft polymer is formed." [RSC:cb]
+def: "A polymerisation in which a graft polymer is formed." [https://orcid.org/0000-0001-5985-7429]
 synonym: "graft polymerization" EXACT []
 is_a: MOP:0000629 ! polymerisation
 intersection_of: MOP:0000629 ! polymerisation
@@ -5951,58 +5954,58 @@ relationship: BFO:0000077 CHEBI:53518 ! has participant beginning to exist graft
 [Term]
 id: MOP:0000703
 name: N-deacetylation
-def: "A molecular process where a bond between an acetyl group and a nitrogen atom is broken." [RSC:cb]
+def: "A molecular process where a bond between an acetyl group and a nitrogen atom is broken." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0001030 ! deacetylation
 relationship: BFO:0000057 CHEBI:40574 ! has_participant acetyl group
 
 [Term]
 id: MOP:0000704
 name: O-deacetylation
-def: "A molecular process where a bond between an acetyl group and an oxygen atom is broken." [RSC:cb]
+def: "A molecular process where a bond between an acetyl group and an oxygen atom is broken." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0001030 ! deacetylation
 relationship: BFO:0000057 CHEBI:40574 ! has_participant acetyl group
 
 [Term]
 id: MOP:0000705
 name: oxidation at sulfur
-def: "An oxidation process where the oxidation state of at least one sulfur atom increases." [RSC:cb]
+def: "An oxidation process where the oxidation state of at least one sulfur atom increases." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000568 ! oxidation
 
 [Term]
 id: MOP:0000706
 name: oxidation at nitrogen
-def: "An oxidation process where the oxidation state of at least one nitrogen atom increases." [RSC:cb]
+def: "An oxidation process where the oxidation state of at least one nitrogen atom increases." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000568 ! oxidation
 
 [Term]
 id: MOP:0000707
 name: oxidative cleavage
-def: "A bond-breaking process where the oxidation states of the reactive centres increase." [RSC:cb]
+def: "A bond-breaking process where the oxidation states of the reactive centres increase." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000568 ! oxidation
 
 [Term]
 id: MOP:0000708
 name: alkene oxidative cleavage
-def: "Oxidative cleavage of an alkene." [RSC:cb]
+def: "Oxidative cleavage of an alkene." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000581 ! alkene oxidation
 is_a: MOP:0000707 ! oxidative cleavage
 
 [Term]
 id: MOP:0000709
 name: allylic oxidation
-def: "Oxidation of an allyl compound to an allylic alcohol." [RSC:cb]
+def: "Oxidation of an allyl compound to an allylic alcohol." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000568 ! oxidation
 
 [Term]
 id: MOP:0000710
 name: benzylic oxidation
-def: "Oxidation of an benzyl compound to an benzylic alcohol." [RSC:cb]
+def: "Oxidation of an benzyl compound to an benzylic alcohol." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000568 ! oxidation
 
 [Term]
 id: MOP:0000711
 name: nitrile reduction
-def: "Reduction of a nitrile to the corresponding primary amine." [RSC:cb]
+def: "Reduction of a nitrile to the corresponding primary amine." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000569 ! reduction
 relationship: BFO:0000077 CHEBI:32877 ! has participant beginning to exist primary amine
 relationship: BFO:0000078 CHEBI:18379 ! has participant ceasing to exist nitrile
@@ -6010,62 +6013,64 @@ relationship: BFO:0000078 CHEBI:18379 ! has participant ceasing to exist nitrile
 [Term]
 id: MOP:0000712
 name: olefin reduction
-def: "Hydrogenation of an olefin to a paraffin." [RSC:cb]
+def: "Hydrogenation of an olefin to a paraffin." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000589 ! hydrogenation
 relationship: BFO:0000078 CHEBI:33641 ! has participant ceasing to exist olefin
 
 [Term]
 id: MOP:0000713
 name: acetylene reduction
+def: "Hydrogenation of an acetylene to an olefin." 
 is_a: MOP:0000589 ! hydrogenation
 
 [Term]
 id: MOP:0000721
 name: [3,3]-sigmatropic rearrangement
 alt_id: RXNO:0000027
-def: "A sigmatropic rearrangement where the intermediate consists of two three-electron fragments." [RSC:cb]
+def: "A sigmatropic rearrangement where the intermediate consists of two three-electron fragments." [https://orcid.org/0000-0001-5985-7429]
 comment: This term was obsoleted from the RXNO namespace and transferred to MOP because it is a process identifiable by its mechanism rather than the intention of the experimenter.
 is_a: MOP:0000728 ! sigmatropic rearrangement
 
 [Term]
 id: MOP:0000724
 name: tautomerisation
-def: "Isomerisation between tautomers." [AU:T06252]
+def: "Isomerisation between tautomers." [https://doi.org/10.1351/goldbook.T06252]
 is_a: MOP:0000789 ! isomerisation
 
 [Term]
 id: MOP:0000725
 name: keto-enol tautomerisation
-def: "Isomerisation between the keto- and enol-forms of a molecule." [RSC:cb]
+def: "Isomerisation between the keto- and enol-forms of a molecule." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000727 ! prototropy
 
 [Term]
 id: MOP:0000726
 name: ring-chain tautomerisation
-def: "Tautomerisation that involves the breaking of a ring in one direction and formation of a ring in the other." [RSC:cb]
+def: "Tautomerisation that involves the breaking of a ring in one direction and formation of a ring in the other." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000724 ! tautomerisation
 
 [Term]
 id: MOP:0000727
 name: prototropy
-def: "A tautomerisation process where the leaving group is a proton." [AU:T06252]
+def: "A tautomerisation process where the leaving group is a proton." [https://doi.org/10.1351/goldbook.T06252]
 is_a: MOP:0000724 ! tautomerisation
 
 [Term]
 id: MOP:0000728
 name: sigmatropic rearrangement
-def: "A molecular process that involves breaking a sigma bond, creating a sigma bond between two unconnected atoms and preserving the number of pi bonds in the system." [AU:S05660]
+def: "A molecular process that involves breaking a sigma bond, creating a sigma bond between two unconnected atoms and preserving the number of pi bonds in the system." [https://doi.org/10.1351/goldbook.S05660]
 is_a: MOP:0000543 ! molecular process
 
 [Term]
 id: MOP:0000729
 name: valence tautomerisation
-def: "A reversible molecular process that involves the breaking or formation of single or double bonds without migrating atoms or groups." [AU:V06591]
+def: "A reversible molecular process that involves the breaking or formation of single or double bonds without migrating atoms or groups." [https://doi.org/10.1351/goldbook.V06591]
 is_a: MOP:0000543 ! molecular process
 
 [Term]
 id: MOP:0000730
 name: Brønsted acid catalysis
+def: "Catalysis where the catalyst is a Brønsted acid." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000740 ! acid catalysis
 created_by: batchelorc
 creation_date: 2014-04-09T10:00:00Z
@@ -6073,6 +6078,7 @@ creation_date: 2014-04-09T10:00:00Z
 [Term]
 id: MOP:0000731
 name: base catalysis
+def: "Catalysis where the catalyst is a base." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000781 ! catalysis
 union_of: MOP:0000735 ! Lewis base catalysis
 union_of: MOP:0000736 ! Brønsted base catalysis
@@ -6082,6 +6088,7 @@ creation_date: 2014-04-09T10:00:00Z
 [Term]
 id: MOP:0000732
 name: hydron donation
+def: "A molecular process where a Brønsted acid donates a hydron to a Brønsted base." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000543 ! molecular process
 relationship: BFO:0000055 CHEBI:39141 ! realizes Brønsted acid
 created_by: batchelorc
@@ -6090,6 +6097,7 @@ creation_date: 2014-04-09T10:00:00Z
 [Term]
 id: MOP:0000733
 name: accepting an electron pair in Lewis adduct formation
+def: "A molecular process where a Lewis acid accepts an electron pair from a Lewis base." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000543 ! molecular process
 relationship: BFO:0000055 CHEBI:39143 ! realizes Lewis acid
 created_by: batchelorc
@@ -6098,6 +6106,7 @@ creation_date: 2014-04-09T10:00:00Z
 [Term]
 id: MOP:0000734
 name: Lewis acid catalysis
+def: "Catalysis where the catalyst is a Lewis acid." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000740 ! acid catalysis
 created_by: batchelorc
 creation_date: 2014-04-09T10:00:00Z
@@ -6105,6 +6114,7 @@ creation_date: 2014-04-09T10:00:00Z
 [Term]
 id: MOP:0000735
 name: Lewis base catalysis
+def: "Catalysis where the catalyst is a Lewis base." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000731 ! base catalysis
 created_by: batchelorc
 creation_date: 2014-04-09T10:00:00Z
@@ -6112,6 +6122,7 @@ creation_date: 2014-04-09T10:00:00Z
 [Term]
 id: MOP:0000736
 name: Brønsted base catalysis
+def: "Catalysis where the catalyst is a Brønsted base." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000731 ! base catalysis
 relationship: BFO:0000117 MOP:0000737 ! has occurrent part accepting a hydron
 created_by: batchelorc
@@ -6120,6 +6131,7 @@ creation_date: 2014-04-09T10:00:00Z
 [Term]
 id: MOP:0000737
 name: accepting a hydron
+def: "A molecular process where a Brønsted base accepts a hydron from a Brønsted acid." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000543 ! molecular process
 relationship: BFO:0000055 CHEBI:39142 ! realizes Brønsted base
 created_by: batchelorc
@@ -6128,6 +6140,7 @@ creation_date: 2014-04-09T10:00:00Z
 [Term]
 id: MOP:0000738
 name: electron pair donation in Lewis adduct formation
+def: "A molecular process where a Lewis base donates an electron pair to a Lewis acid." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000543 ! molecular process
 relationship: BFO:0000055 CHEBI:39144 ! realizes Lewis base
 created_by: batchelorc
@@ -6136,6 +6149,7 @@ creation_date: 2014-04-09T10:00:00Z
 [Term]
 id: MOP:0000739
 name: Lewis adduct formation
+def: "A molecular process where a Lewis adduct is formed from a Lewis acid and a Lewis base." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000543 ! molecular process
 relationship: BFO:0000117 MOP:0000733 ! has occurrent part accepting an electron pair in Lewis adduct formation
 relationship: BFO:0000117 MOP:0000738 ! has occurrent part electron pair donation in Lewis adduct formation
@@ -6143,7 +6157,7 @@ relationship: BFO:0000117 MOP:0000738 ! has occurrent part electron pair donatio
 [Term]
 id: MOP:0000740
 name: acid catalysis
-def: "Catalysis of a reaction where the catalyst either donates a hydron or accepts an electron pair." [RSC:cb]
+def: "Catalysis of a reaction where the catalyst either donates a hydron or accepts an electron pair." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000781 ! catalysis
 union_of: MOP:0000730 ! Brønsted acid catalysis
 union_of: MOP:0000734 ! Lewis acid catalysis
@@ -6151,6 +6165,8 @@ union_of: MOP:0000734 ! Lewis acid catalysis
 [Term]
 id: MOP:0000741
 name: 4-exo-tet cyclization
+def: "An exocyclization where a four-membered ring is formed with bond formation at a tetragonal centre." [https://orcid.org/0000-0001-5985-7429]
+synonym: "4-exo-tet cyclisation" EXACT []
 is_a: MOP:0000772 ! exocyclization
 relationship: BFO:0000117 MOP:0000777 ! has occurrent part bond formation to tetragonal centre
 relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
@@ -6158,6 +6174,8 @@ relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
 [Term]
 id: MOP:0000742
 name: 5-exo-tet cyclization
+def: "An exocyclization where a five-membered ring is formed with bond formation at a tetragonal centre." [https://orcid.org/0000-0001-5985-7429]
+synonym: "5-exo-tet cyclisation" EXACT []
 is_a: MOP:0000772 ! exocyclization
 relationship: BFO:0000117 MOP:0000777 ! has occurrent part bond formation to tetragonal centre
 relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
@@ -6165,6 +6183,8 @@ relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
 [Term]
 id: MOP:0000743
 name: 6-exo-tet cyclization
+def: "An exocyclization where a six-membered ring is formed with bond formation at a tetragonal centre." [https://orcid.org/0000-0001-5985-7429]
+synonym: "6-exo-tet cyclisation" EXACT []
 is_a: MOP:0000772 ! exocyclization
 relationship: BFO:0000117 MOP:0000777 ! has occurrent part bond formation to tetragonal centre
 relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
@@ -6172,6 +6192,8 @@ relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
 [Term]
 id: MOP:0000744
 name: 7-exo-tet cyclization
+def: "An exocyclization where a seven-membered ring is formed with bond formation at a tetragonal centre." [https://orcid.org/0000-0001-5985-7429]
+synonym: "7-exo-tet cyclisation" EXACT []
 is_a: MOP:0000772 ! exocyclization
 relationship: BFO:0000117 MOP:0000777 ! has occurrent part bond formation to tetragonal centre
 relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
@@ -6179,6 +6201,8 @@ relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
 [Term]
 id: MOP:0000745
 name: 5-endo-tet cyclization
+def: "An endocyclization where a five-membered ring is formed with bond formation at a tetragonal centre." [https://orcid.org/0000-0001-5985-7429]
+synonym: "5-endo-tet cyclisation" EXACT []
 is_a: MOP:0000771 ! endocyclization
 relationship: BFO:0000117 MOP:0000777 ! has occurrent part bond formation to tetragonal centre
 relationship: BFO:0000119 MOP:0000774 ! has profile Baldwin-disfavoured profile
@@ -6186,6 +6210,8 @@ relationship: BFO:0000119 MOP:0000774 ! has profile Baldwin-disfavoured profile
 [Term]
 id: MOP:0000746
 name: 6-endo-tet cyclization
+def: "An endocyclization where a six-membered ring is formed with bond formation at a tetragonal centre." [https://orcid.org/0000-0001-5985-7429]
+synonym: "6-endo-tet cyclisation" EXACT []
 is_a: MOP:0000771 ! endocyclization
 relationship: BFO:0000117 MOP:0000777 ! has occurrent part bond formation to tetragonal centre
 relationship: BFO:0000119 MOP:0000774 ! has profile Baldwin-disfavoured profile
@@ -6193,6 +6219,8 @@ relationship: BFO:0000119 MOP:0000774 ! has profile Baldwin-disfavoured profile
 [Term]
 id: MOP:0000747
 name: 7-endo-tet cyclization
+def: "An endocyclization where a seven-membered ring is formed with bond formation at a tetragonal centre." [https://orcid.org/0000-0001-5985-7429]
+synonym: "7-endo-tet cyclisation" EXACT []
 is_a: MOP:0000771 ! endocyclization
 relationship: BFO:0000117 MOP:0000777 ! has occurrent part bond formation to tetragonal centre
 relationship: BFO:0000119 MOP:0000774 ! has profile Baldwin-disfavoured profile
@@ -6200,6 +6228,8 @@ relationship: BFO:0000119 MOP:0000774 ! has profile Baldwin-disfavoured profile
 [Term]
 id: MOP:0000748
 name: 3-exo-trig cyclization
+def: "An exocyclization where a three-membered ring is formed with bond formation at a trigonal centre." [https://orcid.org/0000-0001-5985-7429]
+synonym: "3-exo-trig cyclisation" EXACT []
 is_a: MOP:0000772 ! exocyclization
 relationship: BFO:0000117 MOP:0000776 ! has occurrent part bond formation to trigonal centre
 relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
@@ -6207,6 +6237,8 @@ relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
 [Term]
 id: MOP:0000749
 name: 3-exo-dig cyclization
+def: "An exocyclization where a three-membered ring is formed with bond formation at a digonal centre." [https://orcid.org/0000-0001-5985-7429]
+synonym: "3-exo-dig cyclisation" EXACT []
 is_a: MOP:0000772 ! exocyclization
 relationship: BFO:0000117 MOP:0000775 ! has occurrent part bond formation to digonal centre
 relationship: BFO:0000119 MOP:0000774 ! has profile Baldwin-disfavoured profile
@@ -6214,6 +6246,8 @@ relationship: BFO:0000119 MOP:0000774 ! has profile Baldwin-disfavoured profile
 [Term]
 id: MOP:0000750
 name: 3-endo-dig cyclization
+def: "An endocyclization where a three-membered ring is formed with bond formation at a digonal centre." [https://orcid.org/0000-0001-5985-7429]
+synonym: "3-endo-dig cyclisation" EXACT []
 is_a: MOP:0000771 ! endocyclization
 relationship: BFO:0000117 MOP:0000775 ! has occurrent part bond formation to digonal centre
 relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
@@ -6221,6 +6255,8 @@ relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
 [Term]
 id: MOP:0000751
 name: 3-endo-trig cyclization
+def: "An endocyclization where a three-membered ring is formed with bond formation at a trigonal centre." [https://orcid.org/0000-0001-5985-7429]
+synonym: "3-endo-trig cyclisation" EXACT []
 is_a: MOP:0000771 ! endocyclization
 relationship: BFO:0000117 MOP:0000776 ! has occurrent part bond formation to trigonal centre
 relationship: BFO:0000119 MOP:0000774 ! has profile Baldwin-disfavoured profile
@@ -6228,6 +6264,8 @@ relationship: BFO:0000119 MOP:0000774 ! has profile Baldwin-disfavoured profile
 [Term]
 id: MOP:0000752
 name: 4-exo-trig cyclization
+def: "An exocyclization where a four-membered ring is formed with bond formation at a trigonal centre." [https://orcid.org/0000-0001-5985-7429]
+synonym: "4-exo-trig cyclisation" EXACT []
 is_a: MOP:0000772 ! exocyclization
 relationship: BFO:0000117 MOP:0000776 ! has occurrent part bond formation to trigonal centre
 relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
@@ -6235,6 +6273,8 @@ relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
 [Term]
 id: MOP:0000753
 name: 4-endo-trig cyclization
+def: "An endocyclization where a four-membered ring is formed with bond formation at a trigonal centre." [https://orcid.org/0000-0001-5985-7429]
+synonym: "4-endo-trig cyclisation" EXACT []
 is_a: MOP:0000771 ! endocyclization
 relationship: BFO:0000117 MOP:0000776 ! has occurrent part bond formation to trigonal centre
 relationship: BFO:0000119 MOP:0000774 ! has profile Baldwin-disfavoured profile
@@ -6242,6 +6282,8 @@ relationship: BFO:0000119 MOP:0000774 ! has profile Baldwin-disfavoured profile
 [Term]
 id: MOP:0000754
 name: 4-endo-dig cyclization
+def: "An endocyclization where a four-membered ring is formed with bond formation at a digonal centre." [https://orcid.org/0000-0001-5985-7429]
+synonym: "4-endo-dig cyclisation" EXACT []
 is_a: MOP:0000771 ! endocyclization
 relationship: BFO:0000117 MOP:0000775 ! has occurrent part bond formation to digonal centre
 relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
@@ -6249,6 +6291,8 @@ relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
 [Term]
 id: MOP:0000755
 name: 5-exo-trig cyclization
+def: "An exocyclization where a five-membered ring is formed with bond formation at a trigonal centre." [https://orcid.org/0000-0001-5985-7429]
+synonym: "5-exo-trig cyclisation" EXACT []
 is_a: MOP:0000772 ! exocyclization
 relationship: BFO:0000117 MOP:0000776 ! has occurrent part bond formation to trigonal centre
 relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
@@ -6256,6 +6300,8 @@ relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
 [Term]
 id: MOP:0000756
 name: 5-exo-dig cyclization
+def: "An exocyclization where a five-membered ring is formed with bond formation at a digonal centre." [https://orcid.org/0000-0001-5985-7429]
+synonym: "5-exo-dig cyclisation" EXACT []
 is_a: MOP:0000772 ! exocyclization
 relationship: BFO:0000117 MOP:0000775 ! has occurrent part bond formation to digonal centre
 relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
@@ -6263,6 +6309,8 @@ relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
 [Term]
 id: MOP:0000757
 name: 5-endo-trig cyclization
+def: "An endocyclization where a five-membered ring is formed with bond formation at a trigonal centre." [https://orcid.org/0000-0001-5985-7429]
+synonym: "5-endo-trig cyclisation" EXACT []
 is_a: MOP:0000771 ! endocyclization
 relationship: BFO:0000117 MOP:0000776 ! has occurrent part bond formation to trigonal centre
 relationship: BFO:0000119 MOP:0000774 ! has profile Baldwin-disfavoured profile
@@ -6270,6 +6318,8 @@ relationship: BFO:0000119 MOP:0000774 ! has profile Baldwin-disfavoured profile
 [Term]
 id: MOP:0000758
 name: 5-endo-dig cyclization
+def: "An endocyclization where a five-membered ring is formed with bond formation at a digonal centre." [https://orcid.org/0000-0001-5985-7429]
+synonym: "5-endo-dig cyclisation" EXACT []
 is_a: MOP:0000771 ! endocyclization
 relationship: BFO:0000117 MOP:0000775 ! has occurrent part bond formation to digonal centre
 relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
@@ -6277,6 +6327,8 @@ relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
 [Term]
 id: MOP:0000759
 name: 6-endo-trig cyclization
+def: "An endocyclization where a six-membered ring is formed with bond formation at a trigonal centre." [https://orcid.org/0000-0001-5985-7429]
+synonym: "6-endo-trig cyclisation" EXACT []
 is_a: MOP:0000771 ! endocyclization
 relationship: BFO:0000117 MOP:0000776 ! has occurrent part bond formation to trigonal centre
 relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
@@ -6284,6 +6336,8 @@ relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
 [Term]
 id: MOP:0000760
 name: 7-endo-trig cyclization
+def: "An endocyclization where a seven-membered ring is formed with bond formation at a trigonal centre." [https://orcid.org/0000-0001-5985-7429]
+synonym: "7-endo-trig cyclisation" EXACT []
 is_a: MOP:0000771 ! endocyclization
 relationship: BFO:0000117 MOP:0000776 ! has occurrent part bond formation to trigonal centre
 relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
@@ -6291,6 +6345,8 @@ relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
 [Term]
 id: MOP:0000761
 name: 7-endo-dig cyclization
+def: "An endocyclization where a seven-membered ring is formed with bond formation at a digonal centre." [https://orcid.org/0000-0001-5985-7429]
+synonym: "7-endo-dig cyclisation" EXACT []
 is_a: MOP:0000771 ! endocyclization
 relationship: BFO:0000117 MOP:0000775 ! has occurrent part bond formation to digonal centre
 relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
@@ -6298,6 +6354,8 @@ relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
 [Term]
 id: MOP:0000762
 name: 4-exo-dig cyclization
+def: "An exocyclization where a four-membered ring is formed with bond formation at a digonal centre." [https://orcid.org/0000-0001-5985-7429]
+synonym: "4-exo-dig cyclisation" EXACT []
 is_a: MOP:0000772 ! exocyclization
 relationship: BFO:0000117 MOP:0000775 ! has occurrent part bond formation to digonal centre
 relationship: BFO:0000119 MOP:0000774 ! has profile Baldwin-disfavoured profile
@@ -6305,6 +6363,8 @@ relationship: BFO:0000119 MOP:0000774 ! has profile Baldwin-disfavoured profile
 [Term]
 id: MOP:0000763
 name: 6-exo-dig cyclization
+def: "An exocyclization where a six-membered ring is formed with bond formation at a digonal centre." [https://orcid.org/0000-0001-5985-7429]
+synonym: "6-exo-dig cyclisation" EXACT []
 is_a: MOP:0000772 ! exocyclization
 relationship: BFO:0000117 MOP:0000775 ! has occurrent part bond formation to digonal centre
 relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
@@ -6312,6 +6372,8 @@ relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
 [Term]
 id: MOP:0000764
 name: 7-exo-dig cyclization
+def: "An exocyclization where a seven-membered ring is formed with bond formation at a digonal centre." [https://orcid.org/0000-0001-5985-7429]
+synonym: "7-exo-dig cyclisation" EXACT []
 is_a: MOP:0000772 ! exocyclization
 relationship: BFO:0000117 MOP:0000775 ! has occurrent part bond formation to digonal centre
 relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
@@ -6319,6 +6381,8 @@ relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
 [Term]
 id: MOP:0000765
 name: 6-exo-trig cyclization
+def: "An exocyclization where a six-membered ring is formed with bond formation at a trigonal centre." [https://orcid.org/0000-0001-5985-7429]
+synonym: "6-exo-trig cyclisation" EXACT []
 is_a: MOP:0000772 ! exocyclization
 relationship: BFO:0000117 MOP:0000776 ! has occurrent part bond formation to trigonal centre
 relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
@@ -6326,6 +6390,8 @@ relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
 [Term]
 id: MOP:0000766
 name: 7-exo-trig cyclization
+def: "An exocyclization where a seven-membered ring is formed with bond formation at a trigonal centre." [https://orcid.org/0000-0001-5985-7429]
+synonym: "7-exo-trig cyclisation" EXACT []
 is_a: MOP:0000772 ! exocyclization
 relationship: BFO:0000117 MOP:0000776 ! has occurrent part bond formation to trigonal centre
 relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
@@ -6334,19 +6400,21 @@ relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
 id: MOP:0000767
 name: endothermic reaction
 alt_id: REX:0000368
-def: "A reaction for which the overall standard enthalpy change is positive." [doi:10.1351/goldbook.E02095]
+def: "A reaction for which the overall standard enthalpy change is positive." [https://doi.org/10.1351/goldbook.E02095]
 is_a: MOP:0000543 ! molecular process
 
 [Term]
 id: MOP:0000768
 name: exothermic reaction
 alt_id: REX:0000369
-def: "A reaction for which the overall standard enthalpy change is positive." [doi:10.1351/goldbook.E02269]
+def: "A reaction for which the overall standard enthalpy change is negative." [https://doi.org/10.1351/goldbook.E02269]
 is_a: MOP:0000543 ! molecular process
 
 [Term]
 id: MOP:0000770
 name: 6-endo-dig cyclization
+def: "An endocyclization where a six-membered ring is formed with bond formation at a digonal centre." [https://orcid.org/0000-0001-5985-7429]
+synonym: "6-endo-dig cyclisation" EXACT []
 is_a: MOP:0000771 ! endocyclization
 relationship: BFO:0000117 MOP:0000775 ! has occurrent part bond formation to digonal centre
 relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
@@ -6354,50 +6422,54 @@ relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
 [Term]
 id: MOP:0000771
 name: endocyclization
-def: "A cyclization where there is a reduction in bond order of a bond that ends up within the newly-formed ring." [RSC:cb]
+def: "A cyclization where there is a reduction in bond order of a bond that ends up within the newly-formed ring." [https://orcid.org/0000-0001-5985-7429]
+synonym: "endocyclisation" EXACT []
 is_a: MOP:0000561 ! cyclization
 
 [Term]
 id: MOP:0000772
 name: exocyclization
-def: "A cyclization where there is a reduction in bond order of a bond that ends up outside the newly-formed ring." [RSC:cb]
+def: "A cyclization where there is a reduction in bond order of a bond that ends up outside the newly-formed ring." [https://orcid.org/0000-0001-5985-7429]
+synonym: "exocyclisation" EXACT []
 is_a: MOP:0000561 ! cyclization
 
 [Term]
 id: MOP:0000773
 name: Baldwin-favoured profile
-def: "Profile of a cyclization that is favoured according to Baldwin's empirical rules. These apply best to neutral systems consisting of first-row atoms." [RSC:cb]
+def: "Profile of a cyclization that is favoured according to Baldwin's empirical rules. These apply best to neutral systems consisting of first-row atoms." [https://orcid.org/0000-0001-5985-7429]
 is_a: BFO:0000144 ! process profile
 relationship: BFO:0000133 MOP:0000561 ! process profile of cyclization
 
 [Term]
 id: MOP:0000774
 name: Baldwin-disfavoured profile
-def: "Profile of a cyclization that is disfavoured according to Baldwin's empirical rules. These apply best to neutral systems consisting of first-row atoms." [RSC:cb]
+def: "Profile of a cyclization that is disfavoured according to Baldwin's empirical rules. These apply best to neutral systems consisting of first-row atoms." [https://orcid.org/0000-0001-5985-7429]
 is_a: BFO:0000144 ! process profile
 relationship: BFO:0000133 MOP:0000561 ! process profile of cyclization
 
 [Term]
 id: MOP:0000775
 name: bond formation to digonal centre
-def: "A covalent bond formation where the active centre has sp hybridization." [RSC:cb]
+def: "A covalent bond formation where the active centre has sp hybridization." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000779 ! formation of covalent bond
 
 [Term]
 id: MOP:0000776
 name: bond formation to trigonal centre
-def: "A bond formation where the active centre has sp2 hybridization." [RSC:cb]
+def: "A bond formation where the active centre has sp2 hybridization." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000779 ! formation of covalent bond
 
 [Term]
 id: MOP:0000777
 name: bond formation to tetragonal centre
-def: "A bond formation where the active centre has sp3 hybridization." [RSC:cb]
+def: "A bond formation where the active centre has sp3 hybridization." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000779 ! formation of covalent bond
 
 [Term]
 id: MOP:0000778
 name: 3-exo-tet cyclization
+def: "An exocyclization where a three-membered ring is formed with bond formation at a tetragonal centre." [https://orcid.org/0000-0001-5985-7429]
+synonym: "3-exo-tet cyclisation" EXACT []
 is_a: MOP:0000772 ! exocyclization
 relationship: BFO:0000117 MOP:0000777 ! has occurrent part bond formation to tetragonal centre
 relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
@@ -6405,11 +6477,13 @@ relationship: BFO:0000119 MOP:0000773 ! has profile Baldwin-favoured profile
 [Term]
 id: MOP:0000779
 name: formation of covalent bond
+def: "A molecular process in which a covalent bond is formed." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000543 ! molecular process
 
 [Term]
 id: MOP:0000780
 name: breaking of covalent bond
+def: "A molecular process in which a covalent bond is broken." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000543 ! molecular process
 
 [Term]
@@ -6465,26 +6539,26 @@ relationship: BFO:0000077 CHEBI:26519 ! has participant beginning to exist radic
 [Term]
 id: MOP:0000787
 name: transesterification
-def: "An alcoholysis reaction of an ester which produces a different alcohol and a different ester." [RSC:cb]
+def: "An alcoholysis reaction of an ester which produces a different alcohol and a different ester." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000620 ! alcoholysis
 
 [Term]
 id: MOP:0000788
 name: phosphorolysis
-def: "A covalent-bond-breaking reaction where the attacking group is a phosphate ion." [RSC:cb]
+def: "A covalent-bond-breaking reaction where the attacking group is a phosphate ion." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000780 ! breaking of covalent bond
 
 [Term]
 id: MOP:0000789
 name: isomerisation
-def: "A molecular process where the product is an isomer of the reactant." [doi:10.1359/goldbook.I03295]
+def: "A molecular process where the product is an isomer of the reactant." [https://doi.org/10.1359/goldbook.I03295]
 is_a: MOP:0000543 ! molecular process
 
 [Term]
 id: MOP:0000790
 name: substitution reaction
 alt_id: RXNO:0000019
-def: "A reaction in which one singly-bonded group, but not the hydrogen atom, is replaced by another singly-bonded group." [RSC:cb]
+def: "A reaction in which one singly-bonded group, but not the hydrogen atom, is replaced by another singly-bonded group." [https://orcid.org/0000-0001-5985-7429]
 comment: The Gold Book says hydrogen atoms count, but this differs from everyone's intuition. See http://goldbook.iupac.org/S06078.html
 is_a: MOP:0000543 ! molecular process
 
@@ -6492,28 +6566,28 @@ is_a: MOP:0000543 ! molecular process
 id: MOP:0000791
 name: aromatic substitution
 alt_id: RXNO:0000020
-def: "A substitution reaction in which one singly-bonded substituent on an aromatic skeleton is replaced by another singly-bonded substituent." [RSC:cb]
+def: "A substitution reaction in which one singly-bonded substituent on an aromatic skeleton is replaced by another singly-bonded substituent." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000790 ! substitution reaction
 
 [Term]
 id: MOP:0000792
 name: allylic rearrangement
 alt_id: RXNO:0000033
-def: "A substitution reaction in an allylic system with concomitant migration of the allyl double bond." [RSC:cb, RSC:cc, RSC:db]
+def: "A substitution reaction in an allylic system with concomitant migration of the allyl double bond." [https://orcid.org/0000-0001-5985-7429, RSC:cc, RSC:db]
 is_a: MOP:0000790 ! substitution reaction
 
 [Term]
 id: MOP:0000793
 name: N-substitution
 alt_id: RXNO:0000319
-def: "A substitution reaction where the reactive centre is a nitrogen atom." [RSC:cb]
+def: "A substitution reaction where the reactive centre is a nitrogen atom." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000790 ! substitution reaction
 
 [Term]
 id: MOP:0000794
 name: O-substitution
 alt_id: RXNO:0000318
-def: "A substitution reaction where the reactive centre is an oxygen atom." [RSC:cb]
+def: "A substitution reaction where the reactive centre is an oxygen atom." [https://orcid.org/0000-0001-5985-7429]
 xref: NAMERXN:1.7
 is_a: MOP:0000790 ! substitution reaction
 
@@ -6521,7 +6595,7 @@ is_a: MOP:0000790 ! substitution reaction
 id: MOP:0000795
 name: S-substitution
 alt_id: RXNO:0000336
-def: "A substitution reaction where the reactive centre is a sulfur atom." [RSC:cb]
+def: "A substitution reaction where the reactive centre is a sulfur atom." [https://orcid.org/0000-0001-5985-7429]
 xref: NAMERXN:1.8
 is_a: MOP:0000790 ! substitution reaction
 created_by: batchelorc
@@ -6530,181 +6604,181 @@ creation_date: 2012-03-22T12:22:59Z
 [Term]
 id: MOP:0000796
 name: chloro- to hydroxy- aromatic substitution
-def: "An aromatic substitution reaction where a chloro substituent is replaced by a hydroxy substituent." [RSC:cb]
+def: "An aromatic substitution reaction where a chloro substituent is replaced by a hydroxy substituent." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000791 ! aromatic substitution
 
 [Term]
 id: MOP:0000797
 name: coordination
-def: "Formation of a covalent bond where the two shared electrons have come from only one of the reactants." [doi:10.1351/goldbook.C01329]
+def: "Formation of a covalent bond where the two shared electrons have come from only one of the reactants." [https://doi.org/10.1351/goldbook.C01329]
 is_a: MOP:0000779 ! formation of covalent bond
 
 [Term]
 id: MOP:0000798
 name: formation of covalent bond with sulfur centre
-def: "Formation of a covalent bond with a group where the free valence is on a sulfur centre." [RSC:cb]
+def: "Formation of a covalent bond with a group where the free valence is on a sulfur centre." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000566 ! formation of covalent bond with group
 
 [Term]
 id: MOP:0000799
 name: formation of covalent bond with chlorine centre
-def: "Formation of a covalent bond with a group where the free valence is on a chlorine centre." [RSC:cb]
+def: "Formation of a covalent bond with a group where the free valence is on a chlorine centre." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000820 ! formation of covalent bond with halogen centre
 
 [Term]
 id: MOP:0000800
 name: formation of covalent bond with carbon centre
-def: "Formation of a covalent bond with a group where the free valence is on a carbon centre." [RSC:cb]
+def: "Formation of a covalent bond with a group where the free valence is on a carbon centre." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000566 ! formation of covalent bond with group
 
 [Term]
 id: MOP:0000801
 name: formation of covalent bond with boron centre
-def: "Formation of a covalent bond with a group where the free valence is on a boron centre." [RSC:cb]
+def: "Formation of a covalent bond with a group where the free valence is on a boron centre." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000566 ! formation of covalent bond with group
 
 [Term]
 id: MOP:0000802
 name: formation of covalent bond with nitrogen centre
-def: "Formation of a covalent bond with a group where the free valence is on a nitrogen centre." [RSC:cb]
+def: "Formation of a covalent bond with a group where the free valence is on a nitrogen centre." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000566 ! formation of covalent bond with group
 
 [Term]
 id: MOP:0000803
 name: formation of covalent bond with oxygen centre
-def: "Formation of a covalent bond with a group where the free valence is on a oxygen centre." [RSC:cb]
+def: "Formation of a covalent bond with a group where the free valence is on a oxygen centre." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000566 ! formation of covalent bond with group
 
 [Term]
 id: MOP:0000804
 name: formation of covalent bond with selenium centre
-def: "Formation of a covalent bond with a group where the free valence is on a selenium centre." [RSC:cb]
+def: "Formation of a covalent bond with a group where the free valence is on a selenium centre." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000566 ! formation of covalent bond with group
 
 [Term]
 id: MOP:0000805
 name: formation of covalent bond with tellurium centre
-def: "Formation of a covalent bond with a group where the free valence is on a tellurium centre." [RSC:cb]
+def: "Formation of a covalent bond with a group where the free valence is on a tellurium centre." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000566 ! formation of covalent bond with group
 
 [Term]
 id: MOP:0000806
 name: formation of covalent bond with phosphorus centre
-def: "Formation of a covalent bond with a group where the free valence is on a phosphorus centre." [RSC:cb]
+def: "Formation of a covalent bond with a group where the free valence is on a phosphorus centre." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000566 ! formation of covalent bond with group
 
 [Term]
 id: MOP:0000807
 name: formation of covalent bond with arsenic centre
-def: "Formation of a covalent bond with a group where the free valence is on a arsenic centre." [RSC:cb]
+def: "Formation of a covalent bond with a group where the free valence is on a arsenic centre." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000566 ! formation of covalent bond with group
 
 [Term]
 id: MOP:0000808
 name: formation of covalent bond with antimony centre
-def: "Formation of a covalent bond with a group where the free valence is on a antimony centre." [RSC:cb]
+def: "Formation of a covalent bond with a group where the free valence is on a antimony centre." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000566 ! formation of covalent bond with group
 
 [Term]
 id: MOP:0000809
 name: formation of covalent bond with germanium centre
-def: "Formation of a covalent bond with a group where the free valence is on a germanium centre." [RSC:cb]
+def: "Formation of a covalent bond with a group where the free valence is on a germanium centre." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000566 ! formation of covalent bond with group
 
 [Term]
 id: MOP:0000810
 name: formation of covalent bond with silicon centre
-def: "Formation of a covalent bond with a group where the free valence is on a silicon centre." [RSC:cb]
+def: "Formation of a covalent bond with a group where the free valence is on a silicon centre." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000566 ! formation of covalent bond with group
 
 [Term]
 id: MOP:0000811
 name: formation of covalent bond with aluminium centre
-def: "Formation of a covalent bond with a group where the free valence is on an aluminium centre." [RSC:cb]
+def: "Formation of a covalent bond with a group where the free valence is on an aluminium centre." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000566 ! formation of covalent bond with group
 
 [Term]
 id: MOP:0000812
 name: formation of covalent bond with tin centre
-def: "Formation of a covalent bond with a group where the free valence is on a tin centre." [RSC:cb]
+def: "Formation of a covalent bond with a group where the free valence is on a tin centre." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000566 ! formation of covalent bond with group
 
 [Term]
 id: MOP:0000813
 name: formation of covalent bond with lead centre
-def: "Formation of a covalent bond with a group where the free valence is on a lead centre." [RSC:cb]
+def: "Formation of a covalent bond with a group where the free valence is on a lead centre." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000566 ! formation of covalent bond with group
 
 [Term]
 id: MOP:0000814
 name: formation of covalent bond with gallium centre
-def: "Formation of a covalent bond with a group where the free valence is on a gallium centre." [RSC:cb]
+def: "Formation of a covalent bond with a group where the free valence is on a gallium centre." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000566 ! formation of covalent bond with group
 
 [Term]
 id: MOP:0000815
 name: formation of covalent bond with indium centre
-def: "Formation of a covalent bond with a group where the free valence is on an indium centre." [RSC:cb]
+def: "Formation of a covalent bond with a group where the free valence is on an indium centre." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000566 ! formation of covalent bond with group
 
 [Term]
 id: MOP:0000816
 name: formation of covalent bond with thallium centre
-def: "Formation of a covalent bond with a group where the free valence is on a thallium centre." [RSC:cb]
+def: "Formation of a covalent bond with a group where the free valence is on a thallium centre." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000566 ! formation of covalent bond with group
 
 [Term]
 id: MOP:0000817
 name: formation of covalent bond with bromine centre
-def: "Formation of a covalent bond with a group where the free valence is on a bromine centre." [RSC:cb]
+def: "Formation of a covalent bond with a group where the free valence is on a bromine centre." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000820 ! formation of covalent bond with halogen centre
 
 [Term]
 id: MOP:0000818
 name: formation of covalent bond with iodine centre
-def: "Formation of a covalent bond with a group where the free valence is on an iodine centre." [RSC:cb]
+def: "Formation of a covalent bond with a group where the free valence is on an iodine centre." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000820 ! formation of covalent bond with halogen centre
 
 [Term]
 id: MOP:0000819
 name: formation of covalent bond with fluorine centre
-def: "Formation of a covalent bond with a group where the free valence is on a fluorine centre." [RSC:cb]
+def: "Formation of a covalent bond with a group where the free valence is on a fluorine centre." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000566 ! formation of covalent bond with group
 
 [Term]
 id: MOP:0000820
 name: formation of covalent bond with halogen centre
-def: "Formation of a covalent bond with a group where the free valence is on a halogen centre." [RSC:cb]
+def: "Formation of a covalent bond with a group where the free valence is on a halogen centre." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000566 ! formation of covalent bond with group
 
 [Term]
 id: MOP:0000821
 name: metal nitrosylation
-def: "Formation of a covalent bond between a metal atom and a nitrosyl group." [RSC:cb]
+def: "Formation of a covalent bond between a metal atom and a nitrosyl group." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000797 ! coordination
 
 [Term]
 id: MOP:0000822
 name: iron nitrosylation
-def: "Formation of a covalent bond between an iron atom and a nitrosyl group." [RSC:cb]
+def: "Formation of a covalent bond between an iron atom and a nitrosyl group." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000821 ! metal nitrosylation
 
 [Term]
 id: MOP:0000823
 name: propargylation
-def: "Formation of a covalent bond with a propargyl group." [RSC:cb]
+def: "Formation of a covalent bond with a propargyl group." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000824 ! alkynylation
 
 [Term]
 id: MOP:0000824
 name: alkynylation
-def: "Formation of a covalent bond with an alkynyl group." [RSC:cb]
+def: "Formation of a covalent bond with an alkynyl group." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000410 ! hydrocarbylation
 
 [Term]
 id: MOP:0001000
 name: deborylation
-def: "Breaking of a covalent bond between a substrate and a boryl group (-BR'R')." [RSC:cb]
+def: "Breaking of a covalent bond between a substrate and a boryl group (-BR'R')." [https://orcid.org/0000-0001-5985-7429]
 comment: Submitted to ChEBI
 is_a: MOP:0000567 ! breaking of covalent bond with group
 
@@ -10590,7 +10664,7 @@ is_a: MOP:0000567 ! breaking of covalent bond with group
 [Term]
 id: MOP:0002000
 name: N-borylation
-def: "Formation of a covalent bond between a nitrogen atom in a substrate and a boryl group (-BR'R')." [RSC:cb]
+def: "Formation of a covalent bond between a nitrogen atom in a substrate and a boryl group (-BR'R')." [https://orcid.org/0000-0001-5985-7429]
 comment: Submitted to ChEBI
 is_a: MOP:0000000 ! borylation
 
@@ -14474,7 +14548,7 @@ is_a: MOP:0000560 ! selenonation
 [Term]
 id: MOP:0003000
 name: O-borylation
-def: "Formation of a covalent bond between an oxygen atom in a substrate and a boryl group (-BR'R')." [RSC:cb]
+def: "Formation of a covalent bond between an oxygen atom in a substrate and a boryl group (-BR'R')." [https://orcid.org/0000-0001-5985-7429]
 comment: Submitted to ChEBI
 is_a: MOP:0000000 ! borylation
 
@@ -18358,7 +18432,7 @@ is_a: MOP:0000560 ! selenonation
 [Term]
 id: MOP:0004000
 name: S-borylation
-def: "Formation of a covalent bond between a sulfur atom in a substrate and a boryl group (-BR'R')." [RSC:cb]
+def: "Formation of a covalent bond between a sulfur atom in a substrate and a boryl group (-BR'R')." [https://orcid.org/0000-0001-5985-7429]
 comment: Submitted to ChEBI
 is_a: MOP:0000000 ! borylation
 
@@ -22242,7 +22316,7 @@ is_a: MOP:0000560 ! selenonation
 [Term]
 id: MOP:0005000
 name: C-borylation
-def: "Formation of a covalent bond between a carbon atom in a substrate and a boryl group (-BR'R')." [RSC:cb]
+def: "Formation of a covalent bond between a carbon atom in a substrate and a boryl group (-BR'R')." [https://orcid.org/0000-0001-5985-7429]
 comment: Submitted to ChEBI
 is_a: MOP:0000000 ! borylation
 
@@ -26164,7 +26238,7 @@ name: has disposition at all times
 [Typedef]
 id: MOP:0000769
 name: is_catalysis_of
-def: "x is_catalysis_of y if and only if x positively_regulates y and the positive regulation works by providing a more kinetically-favourable route across the energy landscape from the reactants of y to the products of y." [RSC:cb]
+def: "x is_catalysis_of y if and only if x positively_regulates y and the positive regulation works by providing a more kinetically-favourable route across the energy landscape from the reactants of y to the products of y." [https://orcid.org/0000-0001-5985-7429]
 is_a: RO:0002213 ! positively_regulates
 
 [Typedef]
