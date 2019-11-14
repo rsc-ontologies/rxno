@@ -558,7 +558,12 @@
 
     <!-- http://purl.obolibrary.org/obo/CHEBI_22495 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_22495"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_22495">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17478"/>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:22495</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">arenecarbaldehyde</rdfs:label>
+    </owl:Class>
     
 
 
@@ -1281,13 +1286,7 @@
 
     <!-- http://purl.obolibrary.org/obo/CHEBI_33855 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_33855">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17478"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33658"/>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:33855</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">arenecarbaldehyde</rdfs:label>
-    </owl:Class>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_33855"/>
     
 
 
@@ -4344,7 +4343,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33855"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_22495"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -19396,8 +19395,6 @@
     <!-- http://purl.obolibrary.org/obo/RXNO_0000625 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000625">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000024"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000629"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Heck reaction where an organobromide couples to a terminal olefin to produce an internal olefin, catalysed by palladium.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000625</oboInOwl:id>

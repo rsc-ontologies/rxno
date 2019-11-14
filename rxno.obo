@@ -1416,7 +1416,7 @@ def: "An aldol condensation where an aryl aldehyde reacts with an acid anhydride
 xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000327/
 is_a: RXNO:0000017 ! aldol condensation
 relationship: RXNO:0000423 CHEBI:23252 ! has specified product cinnamic acids
-relationship: RXNO:0000424 CHEBI:33855 ! has specified reactant arenecarbaldehyde
+relationship: RXNO:0000424 CHEBI:22495 ! has specified reactant arenecarbaldehyde
 relationship: RXNO:0000424 CHEBI:36606 ! has specified reactant acid anhydride
 
 [Term]
@@ -1869,12 +1869,6 @@ relationship: RXNO:0000424 CHEBI:24079
 id: CHEBI:24079
 name: formamides
 is_a: CHEBI:35636
-
-[Term]
-id: CHEBI:33855
-name: arenecarbaldehyde
-is_a: CHEBI:17478 ! aldehyde
-is_a: CHEBI:33658 ! arene
 
 [Term]
 id: CHEBI:33658
@@ -6317,6 +6311,11 @@ is_a: RXNO:0000347 ! azacycle synthesis
 relationship: RXNO:0000424 CHEBI:22495 ! has specified reactant arenecarbaldehyde
 
 [Term]
+id: CHEBI:22495
+name: arenecarbaldehyde
+is_a: CHEBI:17478
+
+[Term]
 id: RXNO:0000584
 name: Niementowski quinoline synthesis
 def: "A quinoline synthesis where the product is a gamma-hydroxyquinoline and the reactants are a 2-aminobenzoic acid and an aldehyde or ketone." [https://orcid.org/0000-0001-5985-7429]
@@ -6621,8 +6620,6 @@ is_a: RXNO:0000002
 id: RXNO:0000625
 name: obsolete: bromo Heck reaction
 def: "A Heck reaction where an organobromide couples to a terminal olefin to produce an internal olefin, catalysed by palladium." [https://orcid.org/0000-0001-5985-7429, RSC:db]
-is_a: RXNO:0000024
-is_a: RXNO:0000629
 is_obsolete: true
 
 [Term]

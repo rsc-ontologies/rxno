@@ -324,11 +324,16 @@ name: acetylenic compound
 is_a: CHEBI:36357 ! polyatomic entity
 
 [Term]
+id: CHEBI:51870
+name: boryl group
+is_a: CHEBI:24433
+
+[Term]
 id: MOP:0000000
 name: borylation
 def: "Formation of a covalent bond between a substrate and a boryl group (-BR'R')." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000801 ! formation of covalent bond with boron centre
-relationship: has_participant CHEBI:51870 ! boryl group
+relationship: BFO:0000057 CHEBI:51870 ! boryl group
 
 [Term]
 id: MOP:0000001
@@ -553,7 +558,22 @@ def: "Formation of a covalent bond between a substrate and a carboacyl group." [
 synonym: "carboacylation" EXACT []
 is_a: MOP:0000479 ! acylation
 is_a: MOP:0000800 ! formation of covalent bond with carbon centre
-relationship: has_participant CHEBI:37838
+relationship: BFO:0000057 CHEBI:37838
+
+[Term]
+id: CHEBI:37838
+name: carboacyl group
+is_a: CHEBI:22221 ! acyl group
+
+[Term]
+id: CHEBI:22221
+name: acyl group
+is_a: CHEBI:33247 ! organic group
+
+[Term]
+id: CHEBI:33247
+name: organic group
+is_a: CHEBI:24433
 
 [Term]
 id: MOP:0000029
@@ -4132,7 +4152,7 @@ def: "Formation of a covalent bond between a substrate and an acyl group." [RSC:
 comment: you probably want "carboacylation", MOP:0000028, here
 synonym: "acylation" EXACT []
 is_a: MOP:0000800 ! formation of covalent bond with group
-relationship: has_participant CHEBI:22221
+relationship: BFO:0000057 CHEBI:22221
 
 [Term]
 id: MOP:0000480
@@ -4606,8 +4626,13 @@ def: "Formation of a covalent bond between a substrate and a sulfonyl group." [R
 synonym: "sulfonylation" EXACT []
 is_a: MOP:0000798 ! formation of covalent bond with sulfur centre
 intersection_of: MOP:0000798 ! formation of covalent bond with sulfur centre
-intersection_of: has_participant CHEBI:51100
-relationship: has_participant CHEBI:51100
+intersection_of: BFO:0000057 CHEBI:51100
+relationship: BFO:0000057 CHEBI:51100
+
+[Term]
+id: CHEBI:51100
+name: sulfonyl groups
+is_a: CHEBI:24433
 
 [Term]
 id: MOP:0000540
@@ -6489,7 +6514,7 @@ is_a: MOP:0000543 ! molecular process
 [Term]
 id: MOP:0000781
 name: catalysis
-def: "A molecular process resulting in the rate of another molecular process being increased without modifying the other process's overall Gibbs standard energy change." [http://dx.doi.org/10.1351/goldbook.C00876]
+def: "A molecular process resulting in the rate of another molecular process being increased without modifying the other process's overall Gibbs standard energy change." [https://doi.org//10.1351/goldbook.C00876]
 is_a: MOP:0000543 ! molecular process
 intersection_of: MOP:0000543 ! molecular process
 intersection_of: MOP:0000769 MOP:0000543 ! is_catalysis_of molecular process
@@ -6498,7 +6523,7 @@ relationship: MOP:0000769 MOP:0000543 ! is_catalysis_of molecular process
 [Term]
 id: MOP:0000782
 name: general acid catalysis
-def: "A Brønsted acid catalysis where all species that can contribute protons contribute to the increase in reaction rate." [http://dx.doi.org/10.1359/goldbook.G02609]
+def: "A Brønsted acid catalysis where all species that can contribute protons contribute to the increase in reaction rate." [https://doi.org//10.1359/goldbook.G02609]
 is_a: MOP:0000730 ! Brønsted acid catalysis
 created_by: batchelorc
 creation_date: 2014-09-02T13:15:00Z
@@ -6506,7 +6531,7 @@ creation_date: 2014-09-02T13:15:00Z
 [Term]
 id: MOP:0000783
 name: specific acid catalysis
-def: "A Brønsted acid catalysis where the reaction rate is proportional to the concentration of protonated solvent molecules." [http://dx.doi.org/10.1359/goldbook.S05796]
+def: "A Brønsted acid catalysis where the reaction rate is proportional to the concentration of protonated solvent molecules." [https://doi.org//10.1359/goldbook.S05796]
 is_a: MOP:0000782 ! general acid catalysis
 created_by: batchelorc
 creation_date: 2014-09-02T13:15:00Z
@@ -6514,7 +6539,7 @@ creation_date: 2014-09-02T13:15:00Z
 [Term]
 id: MOP:0000784
 name: general base catalysis
-def: "A Brønsted base catalysis where the reaction rate is proportional to the concentration of hydroxide ions." [http://dx.doi.org/10.1359/goldbook.G02610]
+def: "A Brønsted base catalysis where the reaction rate is proportional to the concentration of hydroxide ions." [https://doi.org//10.1359/goldbook.G02610]
 is_a: MOP:0000736 ! Brønsted base catalysis
 created_by: batchelorc
 creation_date: 2014-09-02T13:15:00Z
@@ -6522,7 +6547,7 @@ creation_date: 2014-09-02T13:15:00Z
 [Term]
 id: MOP:0000785
 name: specific base catalysis
-def: "A Brønsted base catalysis where the reaction rate is proportional to the concentration of hydron acceptors." [http://dx.doi.org/10.1359/goldbook.S05796]
+def: "A Brønsted base catalysis where the reaction rate is proportional to the concentration of hydron acceptors." [https://doi.org//10.1359/goldbook.S05796]
 is_a: MOP:0000784 ! general base catalysis
 created_by: batchelorc
 creation_date: 2014-09-02T13:15:00Z
