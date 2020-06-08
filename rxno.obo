@@ -1445,7 +1445,6 @@ def: "A [4+2] cycloaddition reaction where a diene reacts with a compound contai
 synonym: "Diels-Alder coupling" EXACT []
 synonym: "Diels-Alder cycloaddition" EXACT []
 xref: https://www.rsc.org/Merck-Index/reaction/r109/
-xref: https://en.wikipedia.org/wiki/Diels-Alder_reaction
 xref: https://www.wikidata.org/wiki/Q375669
 xref: NAMERXN:3.11.3
 is_a: MOP:0000565 ! [4+2] cycloaddition
@@ -1454,7 +1453,8 @@ is_a: MOP:0000565 ! [4+2] cycloaddition
 id: RXNO:0000007
 name: ene reaction
 def: "A joining reaction where an alkene with an allylic hydrogen reacts with a compound containing a multiple bond (an enophile) to form a substituted alkene." [https://orcid.org/0000-0001-5985-7429]
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000129/
+xref: https://www.rsc.org/Merck-Index/reaction/r129/
+xref: https://www.wikidata.org/wiki/Q26469
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
 
 [Term]
@@ -1462,7 +1462,7 @@ id: RXNO:0000008
 name: conjugate addition
 def: "A joining reaction where a nucleophile adds to the beta-carbon of an alpha,beta-unsaturated system (or an activated carbon-carbon bond)." [https://orcid.org/0000-0002-4077-4719, rsc:db]
 synonym: "nucleophilic conjugate addition" EXACT []
-xref: http://en.wikipedia.org/wiki/Nucleophilic_conjugate_addition
+xref: https://www.wikidata.org/wiki/Q2181524
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
 
 [Term]
@@ -1470,8 +1470,8 @@ id: RXNO:0000009
 name: Michael addition
 def: "A conjugate addition reaction where a carbon nucleophile adds to the beta-carbon of an alpha,beta-unsaturated system (or an activated carbon-carbon bond)." [RSC:db]
 synonym: "Michael reaction" EXACT []
-xref: http://en.wikipedia.org/wiki/Michael_reaction
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000281/
+xref: https://www.wikidata.org/wiki/Q642233
+xref: https://www.rsc.org/Merck-Index/reaction/r281/
 is_a: RXNO:0000008 ! conjugate addition
 
 [Term]
@@ -1515,7 +1515,8 @@ relationship: RXNO:0000424 CHEBI:33860 ! has specified reactant aromatic amine
 id: RXNO:0000014
 name: Grignard reaction
 def: "A carbon-carbon coupling reaction where a Grignard reagent reacts with a compound containing an electrophilic carbon atom. A Grignard reagent is a magnesium-stabilised carbon nucleophile. An aldehyde leads to a secondary alcohol, a ketone leads to a tertiary alcohol, an ester leads to a ketone and a nitrile leads to a ketone." [RSC:db]
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000177/
+xref: https://www.rsc.org/Merck-Index/reaction/r177/
+xref: https://www.wikidata.org/wiki/Q337748
 xref: NAMERXN:3.7
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
 relationship: RXNO:0000424 CHEBI:51236 ! has specified reactant organomagnesium halide
@@ -1567,7 +1568,7 @@ is_a: MOP:0000562 ! cycloaddition
 id: RXNO:0000021
 name: Sandmeyer reaction
 def: "An aromatic substitution reaction where an aryl diazonium salt reacts with a copper(I) halide or pseudohalide to form an aromatic halide or pseudohalide." [RSC:db]
-xref: http://en.wikipedia.org/wiki/Sandmeyer_reaction
+xref: https://www.wikidata.org/wiki/Q898821
 xref: https://www.rsc.org/Merck-Index/reaction/r386/
 is_a: RXNO:0000332 ! aromatic substitution step
 union_of: RXNO:0000333 ! Sandmeyer halogenation
@@ -1599,6 +1600,7 @@ comment: This usually produces the trans-olefin rather than the cis-. ALSO Merck
 synonym: "Heck-Mizoroki reaction" EXACT []
 synonym: "Mizoroki-Heck reaction" EXACT []
 xref: https://www.rsc.org/Merck-Index/reaction/r192/
+xref: https://www.wikidata.org/wiki/Q899916
 xref: NAMERXN:3.2
 intersection_of: RXNO:0000624
 intersection_of: RXNO:0000425 CHEBI:33363 ! has_catalyst palladium
@@ -2192,14 +2194,6 @@ xref: https://www.rsc.org/Merck-Index/reaction/r196/
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 
 [Term]
-id: RXNO:0000087
-name: Barton reaction
-def: "The photolytic oxidation of a nitrate ester to give a gamma-nitroalcohol." [https://orcid.org/0000-0002-4077-4719, RSC:db]
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000024/
-is_a: RXNO:0000025 ! rearrangement step
-relationship: RXNO:0000424 CHEBI:51080 ! has specified reactant nitrate ester
-
-[Term]
 id: CHEBI:32863
 name: secondary amine
 is_a: CHEBI:32952
@@ -2220,11 +2214,19 @@ name: organic molecule
 is_a: CHEBI:23367
 
 [Term]
+id: RXNO:0000087
+name: Barton reaction
+def: "The photolytic oxidation of a nitrate ester to give a gamma-nitroalcohol." [https://orcid.org/0000-0002-4077-4719, RSC:db]
+xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000024/
+is_a: RXNO:0000025 ! rearrangement step
+relationship: RXNO:0000424 CHEBI:51080 ! has specified reactant nitrate ester
+
+[Term]
 id: RXNO:0000088
 name: Negishi coupling
 def: "A carbon-carbon coupling reaction between an organohalide or organotriflate and an organozinc compound. The reaction is catalysed by palladium or nickel." [https://orcid.org/0000-0002-4077-4719, RSC:db]
 synonym: "Negishi cross-coupling" EXACT []
-xref: https://en.wikipedia.org/wiki/Negishi_coupling
+xref: https://www.wikidata.org/wiki/Q902756
 xref: https://www.rsc.org/Merck-Index/reaction/r299/
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 
@@ -2232,7 +2234,7 @@ is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 id: RXNO:0000089
 name: Meerwein-Ponndorf-Verley reduction
 def: "A reduction of an aldehyde or ketone to an alcohol involving an equilibrium between the aldehyde or ketone and a reagent alcohol present in excess, catalysed by a metal alkoxide. This reaction is the reverse of the Oppenauer oxidation (RXNO:0000047)." [https://orcid.org/0000-0002-4077-4719, RSC:db]
-xref: https://en.wikipedia.org/wiki/Meerwein%E2%80%93Ponndorf%E2%80%93Verley_reduction
+xref: https://www.wikidata.org/wiki/Q903026
 xref: https://www.rsc.org/Merck-Index/reaction/r272/
 is_a: RXNO:0000037
 union_of: RXNO:0000622
@@ -2305,6 +2307,7 @@ name: Glaser coupling
 def: "A coupling reaction between two molecules of a terminal alkyne catalysed by Cu(I) salts." [https://orcid.org/0000-0001-5985-7429, https://orcid.org/0000-0002-4077-4719, RSC:db]
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
 is_a: RXNO:0000039 ! carbon-carbon homocoupling reaction
+xref: https://www.rsc.org/Merck-Index/reaction/r169/
 relationship: RXNO:0000424 CHEBI:73477 ! has specified reactant terminal acetylenic compound
 
 [Term]
@@ -2312,6 +2315,7 @@ id: RXNO:0000099
 name: Eglinton reaction
 def: "A coupling reaction between two molecules of a terminal alkyne using stoichiometric Cu(II) salts." [https://orcid.org/0000-0001-5985-7429, https://orcid.org/0000-0002-4077-4719, RSC:db]
 synonym: "Eglinton coupling" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/r169/
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
 is_a: RXNO:0000039 ! carbon-carbon homocoupling reaction
 relationship: RXNO:0000424 CHEBI:73477 ! has specified reactant terminal acetylenic compound
@@ -2320,6 +2324,7 @@ relationship: RXNO:0000424 CHEBI:73477 ! has specified reactant terminal acetyle
 id: RXNO:0000100
 name: Cadiot-Chodkiewicz coupling
 def: "A coupling reaction between a terminal alkyne and an alkynyl halide catalysed by Cu(I) salts." [https://orcid.org/0000-0001-5985-7429, https://orcid.org/0000-0002-4077-4719, RSC:db]
+xref: https://www.rsc.org/Merck-Index/reaction/r169/
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
 relationship: RXNO:0000424 CHEBI:73477 ! has specified reactant terminal acetylenic compound
 
@@ -2336,6 +2341,7 @@ id: RXNO:0000102
 name: Leuckart-Wallach reaction
 def: "The reductive amination of ketones or aldehydes with an amine and formic acid to form amines." [https://orcid.org/0000-0001-5985-7429, https://orcid.org/0000-0002-4077-4719, RSC:db]
 synonym: "Wallach reaction" EXACT []
+xref: https://www.wikidata.org/wiki/Q726513
 is_a: RXNO:0000335 ! reductive amination
 
 [Term]
@@ -2343,6 +2349,7 @@ id: RXNO:0000103
 name: Gabriel synthesis
 def: "The reaction of primary alkyl halides with sodium or potassium phthalimide, followed by hydrolysis, to give the corresponding primary amine." [https://orcid.org/0000-0001-5985-7429, https://orcid.org/0000-0002-4077-4719, RSC:db]
 is_a: RXNO:0000331 ! substitution step
+xref: https://www.wikidata.org/wiki/Q123422
 relationship: has_part MOP:0000619
 
 [Term]
@@ -2366,14 +2373,16 @@ name: Hunsdiecker reaction
 def: "The decarboxylation of silver carboxylates with halogens to give organic halides." [https://orcid.org/0000-0001-5985-7429, https://orcid.org/0000-0002-4077-4719, RSC:db]
 synonym: "Borodin reaction" EXACT []
 synonym: "Borodine reaction" EXACT []
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000215/
+xref: https://www.rsc.org/Merck-Index/reaction/r215/
+xref: https://www.wikidata.org/wiki/Q902216
 is_a: RXNO:0000105 ! end-of-chain chain shortening
 
 [Term]
 id: RXNO:0000107
 name: malonic ester synthesis
 def: "A carbon-carbon coupling reaction between a dialkyl malonate and an alkyl halide, to give a substituted acetic acid. The base/R'X treatment can be repeated to give a disubstituted product." [https://orcid.org/0000-0001-5985-7429, https://orcid.org/0000-0002-4077-4719, RSC:db]
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000264/
+xref: https://www.rsc.org/Merck-Index/reaction/r264/
+xref: https://www.wikidata.org/wiki/Q902284
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
 relationship: OBI:0000417 RXNO:0000440 ! achieves_planned_objective molecular skeleton joining objective
 relationship: RXNO:0000423 CHEBI:33575 ! has specified product carboxylic acid
@@ -2520,7 +2529,8 @@ relationship: RXNO:0000423 CHEBI:33641 ! has specified product olefin
 id: RXNO:0000126
 name: Doebner reaction
 def: "The reaction between an aromatic amine, an aldehyde and pyruvic acid on heating to give a quinoline 4-carboxylic acid (cinchoninic acid)." [https://orcid.org/0000-0001-5985-7429, https://orcid.org/0000-0002-4077-4719, RSC:db]
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000114/
+xref: https://www.rsc.org/Merck-Index/reaction/r114/
+xref: https://www.wikidata.org/wiki/Q3772250
 is_a: RXNO:0000393 ! quinoline synthesis
 relationship: RXNO:0000423 CHEBI:26513 ! has specified product quinolines
 relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
@@ -2532,7 +2542,8 @@ id: RXNO:0000127
 name: Balz-Schiemann reaction
 def: "The conversion of an aromatic amine to the corresponding fluoride via the diazonium fluoroborate." [https://orcid.org/0000-0001-5985-7429, https://orcid.org/0000-0002-4077-4719, RSC:db]
 synonym: "Schiemann reaction" EXACT []
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000388/
+xref: https://www.rsc.org/Merck-Index/reaction/r388/
+xref: https://www.wikidata.org/wiki/Q572113
 is_a: RXNO:0000332 ! aromatic substitution step
 relationship: RXNO:0000423 CHEBI:50888 ! has specified product fluoroarene
 relationship: RXNO:0000424 CHEBI:33860 ! has specified reactant aromatic amine
@@ -2544,8 +2555,11 @@ def: "The decarboxylation and coupling of a carboxylate or mixture of carboxylat
 synonym: "Kolbe electrolytic synthesis" EXACT []
 synonym: "Kolbe electrosynthesis" EXACT []
 synonym: "Kolbe reaction" EXACT []
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000238
+synonym: "Crum-Brown-Walker reaction" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/r238/
+xref: https://www.wikidata.org/wiki/Q901771
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+relationship: RXNO:0000424 CHEBI:33860 ! has specified reactant 
 
 [Term]
 id: RXNO:0000129
@@ -2554,7 +2568,8 @@ def: "Reaction of a ketone or aldehyde, amine, an isocyanide and carboxylic acid
 synonym: "4CC" EXACT []
 synonym: "Ugi four-component condensation" EXACT []
 synonym: "Ugi-4CR" EXACT []
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000440/
+xref: https://www.rsc.org/Merck-Index/reaction/r440/
+xref: https://www.wikidata.org/wiki/Q2002373
 is_a: MOP:0000628 ! molecular dehydration reaction
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
 relationship: RXNO:0000424 CHEBI:32877 ! has specified reactant primary amine
@@ -2566,7 +2581,7 @@ name: Wacker-Tsuji oxidation
 def: "The oxidation of a terminal alkene or ethene to a methyl ketone or acetaldehyde, catalysed by PdCl2 and CuCl2, and using molecular oxygen as the oxidant." [https://orcid.org/0000-0001-5985-7429, https://orcid.org/0000-0002-4077-4719, RSC:db]
 synonym: "Wacker oxidation" EXACT []
 synonym: "Wacker reaction" EXACT []
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000452/
+xref: https://www.rsc.org/Merck-Index/reaction/r452/
 is_a: RXNO:0000012 ! functional group oxidation
 relationship: RXNO:0000424 CHEBI:15379 ! has specified reactant dioxygen
 relationship: RXNO:0000425 CHEBI:49553 ! has_catalyst copper(II) chloride
@@ -3521,7 +3536,8 @@ name: Fritsch-Buttenberg-Wiechell rearrangement
 def: "The rearrangement of a 2-bromoalkene into an alkyne, mediated by strong base." [RSC:db]
 is_a: RXNO:0000025 ! rearrangement step
 relationship: RXNO:0000423 CHEBI:73474
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000161/
+xref: https://www.wikidata.org/wiki/Q573664
+xref: https://www.rsc.org/Merck-Index/reaction/r161/
 
 [Term]
 id: RXNO:0000251
@@ -3561,6 +3577,8 @@ id: RXNO:0000256
 name: Dess-Martin oxidation
 def: "The oxidation of a primary alcohol to an aldehyde or a secondary alcohol to a ketone using the Dess-Martin periodinane." [https://orcid.org/0000-0001-5985-7429]
 synonym: "Dess-Martin periodinane oxidation" EXACT []
+xref: https://www.rsc.org/Merck-Index/reaction/r107/
+xref: https://www.wikidata.org/wiki/Q28455131
 is_a: MOP:0000572 ! alcohol oxidation
 is_a: RXNO:0000012 ! functional group oxidation
 
@@ -3570,6 +3588,8 @@ name: Criegee oxidation
 def: "The oxidative cleavage of an alpha,beta-diol using lead tetraacetate to give the corresponding carbonyl compounds." [https://orcid.org/0000-0001-5985-7429]
 synonym: "Criegee glycol cleavage" EXACT []
 synonym: "Criegee reaction" EXACT []
+xref: https://www.wikidata.org/wiki/Q30693026
+xref: https://www.rsc.org/Merck-Index/reaction/r96/
 is_a: RXNO:0000073 ! cleaving reaction
 is_a: RXNO:0000344 ! alkene oxidative cleavage
 
@@ -3577,10 +3597,12 @@ is_a: RXNO:0000344 ! alkene oxidative cleavage
 id: RXNO:0000258
 name: Simmons-Smith reaction
 def: "A ring formation reaction where an alkene reacts with a dihalomethane in the presence of a metal atom or metal complexes to form a cyclopropane. The traditional reaction uses a zinc-copper couple and diiodomethane." [https://orcid.org/0000-0001-5985-7429, https://orcid.org/0000-0002-4077-4719, RSC:db]
+synonym: "Simmons-Smith cyclopropanation" EXACT []
 is_a: RXNO:0000005 ! ring formation reaction step
 relationship: RXNO:0000423 CHEBI:51454
 relationship: RXNO:0000424 CHEBI:33641
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000400/
+xref: https://www.rsc.org/Merck-Index/reaction/r400/
+xref: https://www.wikidata.org/wiki/Q903776
 
 [Term]
 id: CHEBI:51454
@@ -3656,9 +3678,12 @@ is_a: RXNO:0000367 ! carbonyl compound to imine conversion
 id: RXNO:0000266
 name: Fenton reaction
 alt_id: RXNO:0000267
-def: "Either: (a) The oxidation of a 1,2-glycol with Fenton's reagent (hydrogen peroxide and iron salts) to give an alpha-hydroxy aldehyde;  (b) The oxidation of an alpha-hydroxy carboxylic acid with Fenton's reagent to give an alpha-keto carboxylic acid; or (c) the reaction of the components of Fenton's reagent, viz. reduction of hydrogen peroxide by Fe(II) , producing an hydroxyl radical." [rsc:db]
+def: "An oxidation reaction involving Fenton's reagent." [https://orcid.org/0000-0001-5985-7429]
 synonym: "Fenton's reaction" EXACT []
 is_a: RXNO:0000012 ! functional group oxidation
+union_of: RXNO:0000651
+union_of: RXNO:0000652
+union_of: RXNO:0000653
 
 [Term]
 id: RXNO:0000268
@@ -3879,7 +3904,7 @@ id: RXNO:0000288
 name: Rosenmund-von Braun reaction
 def: "A carbon-carbon coupling reaction where an aryl halide reacts with copper(I) cyanide to give an aryl nitrile." [https://orcid.org/0000-0002-4077-4719, rsc:db]
 synonym: "Rosenmund-von Braun synthesis" EXACT []
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000376/
+xref: https://www.rsc.org/Merck-Index/reaction/r376/
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 
 [Term]
@@ -4290,7 +4315,7 @@ creation_date: 2012-03-22T03:13:12Z
 [Term]
 id: RXNO:0000344
 name: alkene oxidative cleavage
-def: "An alkene oxidation where the carbon--carbon double bond is cleaved." [https://orcid.org/0000-0001-5985-7429]
+def: "An alkene oxidation where the carbon-carbon double bond is cleaved." [https://orcid.org/0000-0001-5985-7429]
 xref: NAMERXN:1.6
 is_a: MOP:0000581 ! alkene oxidation
 created_by: batchelorc
@@ -4801,7 +4826,7 @@ is_a: RXNO:0000401 ! triazine synthesis
 [Term]
 id: RXNO:0000404
 name: oxa-Pictet-Spengler reaction
-def: "Cyclisation-condensation of a beta-arylethanol with an aldehyde to yield an ortho-,peri-fused aryl-oxacycle." [https://orcid.org/0000-0001-5985-7429]
+def: "Cyclisation-condensation of a beta-arylethanol with an aldehyde to yield an ortho,peri-fused aryl-oxacycle." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000627 ! condensation reaction
 is_a: RXNO:0000052 ! fused-ring-system formation
 is_a: RXNO:0000346 ! oxacycle synthesis
@@ -4873,13 +4898,15 @@ relationship: has_part RXNO:0000410 ! Hofmann rearrangement
 id: RXNO:0000412
 name: Newman-Kwart rearrangement
 def: "Rearrangement of an O-aryl thiocarbamate to an S-aryl thiocarbamate by migration of the aryl group." [https://orcid.org/0000-0001-5985-7429]
+xref: https://www.wikidata.org/wiki/Q909753
 is_a: RXNO:0000011 ! functional group modification
 
 [Term]
 id: RXNO:0000413
 name: Zincke nitration
-def: "Substitution of phenol ortho- or para-bromo or iodo groups by a nitro group on treatment with nitrous acid or a nitrite in acetic acid." [https://www.rsc.org/Merck-Index/reaction/rxn1500000484/]
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000484/
+def: "Substitution of phenol ortho- or para-bromo or iodo groups by a nitro group on treatment with nitrous acid or a nitrite in acetic acid." [https://www.rsc.org/Merck-Index/reaction/r484/]
+xref: https://www.rsc.org/Merck-Index/reaction/r484/
+xref: https://www.wikidata.org/wiki/Q1061336
 is_a: MOP:0000556 ! nitration
 is_a: RXNO:0000332 ! aromatic substitution step
 
@@ -4922,6 +4949,7 @@ name: Kröhnke pyridine synthesis
 def: "Condensation of a 1,5-diketone with ammonium acetate in acetic acid to form a pyridine." [https://orcid.org/0000-0001-5985-7429]
 synonym: "Krohnke pyridine synthesis" EXACT []
 xref: http://dx.doi.org/10.1039/SP543
+xref: https://www.wikidata.org/wiki/Q2144364
 is_a: RXNO:0000520 ! pyridine synthesis
 relationship: RXNO:0000423 CHEBI:26421 ! has specified product pyridines
 
@@ -5064,7 +5092,8 @@ id: RXNO:0000443
 name: Sakurai reaction
 def: "Reaction of allyltrimethylsilane with a carbon electrophile to allylate the carbon electrophile." [https://orcid.org/0000-0001-5985-7429]
 synonym: "Hosomi-Sakurai reaction" EXACT []
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000383/
+xref: https://www.rsc.org/Merck-Index/reaction/r383/
+xref: https://www.wikidata.org/wiki/Q903031
 is_a: MOP:0000422 ! allylation
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 union_of: RXNO:0000212 ! Sakurai reaction, aldehyde or ketone
@@ -5080,7 +5109,8 @@ name: Fries rearrangement
 def: "Rearrangement of the acyl group in a phenolate ester to the ortho- and/or para-position. It is catalysed by a Lewis acid." [https://orcid.org/0000-0001-5985-7429]
 comment: Can be promoted by heat or UV. The UV version (photo-Fries) involves a radical mechanism.
 synonym: "photo-Fries rearrangement" EXACT []
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000160/
+xref: https://www.rsc.org/Merck-Index/reaction/r160/
+xref: https://www.wikidata.org/wiki/Q574893
 is_a: RXNO:0000025 ! rearrangement step
 union_of: RXNO:0000445 ! ortho-Fries rearrangement
 union_of: RXNO:0000446 ! para-Fries rearrangement
@@ -5101,8 +5131,9 @@ is_a: RXNO:0000444 ! Fries rearrangement
 [Term]
 id: RXNO:0000447
 name: Duff reaction
-def: "Formylation of a phenol or aromatic amine with hexamethylenetetramine in acidic conditions." [doi:10.1039/jr9410000547, doi:10.1039/JR9450000276]
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000119/
+def: "Formylation of a phenol or aromatic amine with hexamethylenetetramine in acidic conditions." [https://doi.org/10.1039/jr9410000547, https://doi.org/10.1039/JR9450000276]
+xref: https://www.rsc.org/Merck-Index/reaction/r119/
+xref: https://www.wikidata.org/wiki/Q903217
 is_a: MOP:0000003 ! formylation
 is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 relationship: RXNO:0000424 CHEBI:33860
@@ -5180,7 +5211,8 @@ id: RXNO:0000459
 name: acetoacetic ester synthesis
 def: "A carbon-carbon coupling reaction between a beta-ketoester and an alkyl halide to yield an alpha-alkylated ester." [https://orcid.org/0000-0001-5985-7429]
 comment: Subsequent treatment with mild hydrolysis leads to a ketone; concentrated base produces a substituted ester.
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000001/
+xref: https://www.rsc.org/Merck-Index/reaction/r1/
+xref: https://www.wikidata.org/wiki/Q1017086
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
 relationship: OBI:0000417 RXNO:0000440 ! achieves_planned_objective molecular skeleton joining objective
 relationship: RXNO:0000423 CHEBI:33308 ! has specified product carboxylic ester
@@ -5218,7 +5250,8 @@ is_a: RXNO:0000438 ! molecular skeleton cleaving objective
 id: RXNO:0000464
 name: Pauson-Khand reaction
 def: "A [2+2+1] cycloaddition between an alkyne, an alkene and carbon monoxide to form an alpha-beta-unsaturated cyclopentenone." [doi:10.1039/P19730000975]
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000320/
+xref: https://www.rsc.org/Merck-Index/reaction/r320/
+xref: https://www.wikidata.org/wiki/Q903694
 is_a: MOP:0000720 ! [2+2+1] cycloaddition
 
 [Term]
@@ -5238,7 +5271,8 @@ id: RXNO:0000467
 name: Algar-Flynn-Oyamada reaction
 def: "A fused-ring-system formation reaction where a flavonol is produced by oxidation of a chalcone with alkaline hydrogen peroxide." [https://orcid.org/0000-0001-5985-7429]
 comment: definition source Merck Index
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000005/
+xref: https://www.rsc.org/Merck-Index/reaction/r5/
+xref: https://www.wikidata.org/wiki/Q903717
 is_a: RXNO:0000052 ! fused-ring-system formation
 is_a: RXNO:0000346 ! oxacycle synthesis
 relationship: RXNO:0000423 CHEBI:28802 ! has specified product flavonols
@@ -5277,23 +5311,24 @@ id: RXNO:0000472
 name: Amadori rearrangement
 def: "Rearrangement of an aldose N-glycoside to a ketose N-glycoside by acid or base catalysis." [https://orcid.org/0000-0001-5985-7429]
 comment: definition source Merck Index
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000008/
+xref: https://www.rsc.org/Merck-Index/reaction/r8/
+xref: https://www.wikidata.org/wiki/Q452196
 is_a: RXNO:0000025 ! rearrangement step
 
 [Term]
 id: RXNO:0000473
 name: Arens-van Dorp synthesis
-def: "Reaction of a ketone with ethoxyacetylene to form an alkoxyethynyl alcohol." [https://orcid.org/0000-0001-5985-7429]
-comment: definition source Merck Index
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000009/
+def: "Reaction of a ketone with ethoxyacetylene to form an alkoxyethynyl alcohol." [https://orcid.org/0000-0001-5985-7429, https://www.rsc.org/Merck-Index/reaction/r9/]
+xref: https://www.rsc.org/Merck-Index/reaction/r9/
+xref: https://www.wikidata.org/wiki/Q16624458
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
 
 [Term]
 id: RXNO:0000474
 name: Auwers synthesis
-def: "Ring expansion of a 2-bromo-2-(alpha-bromobenzyl)-1-benzofuran to a flavonol in alcoholic alkali." [https://orcid.org/0000-0001-5985-7429]
-comment: definition source Merck Index
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000011/
+def: "Ring expansion of a 2-bromo-2-(alpha-bromobenzyl)-1-benzofuran to a flavonol in alcoholic alkali." [https://orcid.org/0000-0001-5985-7429, https://www.rsc.org/Merck-Index/reaction/r11/]
+xref: https://www.rsc.org/Merck-Index/reaction/r11/
+xref: https://www.wikidata.org/wiki/Q3115850
 is_a: RXNO:0000108 ! ring expansion
 is_a: RXNO:0000346 ! oxacycle synthesis
 relationship: RXNO:0000423 CHEBI:28802 ! has specified product flavonols
@@ -5301,9 +5336,9 @@ relationship: RXNO:0000423 CHEBI:28802 ! has specified product flavonols
 [Term]
 id: RXNO:0000475
 name: Allan-Robinson reaction
-def: "Reaction of ortho-hydroxyaryl ketones with aromatic acid anhydrides to yield a flavone or isoflavone." [https://orcid.org/0000-0001-5985-7429]
-comment: definition source Merck Index
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000006/
+def: "Reaction of ortho-hydroxyaryl ketones with aromatic acid anhydrides to yield a flavone or isoflavone." [https://orcid.org/0000-0001-5985-7429, https://www.rsc.org/Merck-Index/reaction/r6/]
+xref: https://www.rsc.org/Merck-Index/reaction/r6/
+xref: https://www.wikidata.org/wiki/Q3046015
 is_a: RXNO:0000052 ! fused-ring-system formation
 is_a: RXNO:0000346 ! oxacycle synthesis
 union_of: RXNO:0000470 ! Allan-Robinson flavone synthesis
@@ -5312,16 +5347,17 @@ union_of: RXNO:0000471 ! Allan-Robinson isoflavone synthesis
 [Term]
 id: RXNO:0000476
 name: Meyer-Schuster rearrangement
-def: "Rearrangement of a propargyl alcohol to an alpha,beta-unsaturated carbonyl compound via an allene intermediate to yield the gamma-substituted product." [doi:10.1039/b912099h]
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000278/
+def: "Rearrangement of a propargyl alcohol to an alpha,beta-unsaturated carbonyl compound via an allene intermediate to yield the gamma-substituted product." [https://doi.org/10.1039/b912099h]
+xref: https://www.rsc.org/Merck-Index/reaction/r278/
+xref: https://www.wikidata.org/wiki/Q902668
 is_a: RXNO:0000025 ! rearrangement step
 relationship: RXNO:0000469 CHEBI:37602 ! has_intermediate allenes
 
 [Term]
 id: RXNO:0000477
 name: Rupe rearrangement
-def: "Rearrangement of a propargyl alcohol to an alpha,beta-unsaturated carbonyl compound via an enyne intermediate to yield the beta-substituted product." [doi:10.1039/b912099h]
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000278/
+def: "Rearrangement of a propargyl alcohol to an alpha,beta-unsaturated carbonyl compound via an enyne intermediate to yield the beta-substituted product." [https://doi.org/10.1039/b912099h]
+xref: https://www.rsc.org/Merck-Index/reaction/r278/
 is_a: RXNO:0000025 ! rearrangement step
 relationship: RXNO:0000469 CHEBI:59831 ! has_intermediate enyne
 
@@ -5344,19 +5380,19 @@ relationship: RXNO:0000423 CHEBI:33641 ! has specified product olefin
 [Term]
 id: RXNO:0000480
 name: Tebbe olefination
-def: "Reaction of an aldehyde or ketone or carboxylic ester or amide with the Tebbe reagent to yield an olefin or an enol ether or an enamine." [https://orcid.org/0000-0001-5985-7429]
-comment: definition source Merck Index, heavily modified
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000428/
+def: "Reaction of an aldehyde or ketone or carboxylic ester or amide with the Tebbe reagent to yield an olefin or an enol ether or an enamine." [https://orcid.org/0000-0001-5985-7429, https://www.rsc.org/Merck-Index/reaction/r428/]
+xref: https://www.rsc.org/Merck-Index/reaction/r428/
 is_a: RXNO:0000479 ! olefination
 
 [Term]
 id: RXNO:0000481
 name: Myers-Saito cyclisation
-def: "Cyclization of a enynyl allene to yield a toluene biradical with radical centres on the methyl group and at the meta position." [doi:10.1039/b009965l, https://orcid.org/0000-0001-5985-7429]
+def: "Cyclization of a enynyl allene to yield a toluene biradical with radical centres on the methyl group and at the meta position." [https://doi.org/10.1039/b009965l, https://orcid.org/0000-0001-5985-7429]
 synonym: "Myers-Saito cyclization" EXACT []
 synonym: "Myers-Saito process" EXACT []
 synonym: "Myers-Saito reaction" EXACT []
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000292/
+xref: https://www.rsc.org/Merck-Index/reaction/r292/
+xref: https://www.wikidata.org/wiki/Q89925623
 is_a: RXNO:0000005 ! ring formation reaction step
 created_by: batchelorc
 creation_date: 2014-02-28T09:00:00Z
@@ -5364,7 +5400,7 @@ creation_date: 2014-02-28T09:00:00Z
 [Term]
 id: RXNO:0000482
 name: Schmittel cyclisation
-def: "Cyclization of a enynyl allene to yield a 1-methyl-5-methylenecyclopenta-1,3-diene biradical with radical centres on the methyl group and methylene group." [doi:10.1039/b009965l, https://orcid.org/0000-0001-5985-7429]
+def: "Cyclization of a enynyl allene to yield a 1-methyl-5-methylenecyclopenta-1,3-diene biradical with radical centres on the methyl group and methylene group." [https://doi.org/10.1039/b009965l, https://orcid.org/0000-0001-5985-7429]
 synonym: "Schmittel cyclization" EXACT []
 is_a: RXNO:0000005 ! ring formation reaction step
 created_by: batchelorc
@@ -5374,8 +5410,8 @@ creation_date: 2014-02-28T09:00:00Z
 id: RXNO:0000483
 name: Baudisch reaction
 def: "Copper-catalysed reaction of benzene with a nitrosylating agent and hydrogen peroxide to form an o-nitrosophenol." [https://orcid.org/0000-0001-5985-7429]
-xref: http://en.wikipedia.org/wiki/Baudisch_reaction
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000026/
+xref: https://www.wikidata.org/wiki/Q3536586
+xref: https://www.rsc.org/Merck-Index/reaction/r26/
 is_a: RXNO:0000373 ! functional group addition step
 created_by: batchelorc
 creation_date: 2014-02-28T09:00:00Z
@@ -5449,9 +5485,9 @@ creation_date: 2014-02-28T12:00:00Z
 [Term]
 id: RXNO:0000492
 name: Bamberger rearrangement
-def: "Rearrangement of an N-phenylhydroxamine in acid to yield a para-aminophenol." [https://orcid.org/0000-0001-5985-7429]
-comment: definition source Merck Index
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000015/
+def: "Rearrangement of an N-phenylhydroxamine in acid to yield a para-aminophenol." [https://orcid.org/0000-0001-5985-7429, https://www.rsc.org/Merck-Index/reaction/r15/]
+xref: https://www.rsc.org/Merck-Index/reaction/r15/
+xref: https://www.wikidata.org/wiki/Q139251
 is_a: RXNO:0000025 ! rearrangement step
 created_by: batchelorc
 creation_date: 2014-03-03T09:00:00Z
@@ -5459,9 +5495,8 @@ creation_date: 2014-03-03T09:00:00Z
 [Term]
 id: RXNO:0000493
 name: Bart reaction
-def: "Reaction of an aromatic diazonium compound with an alklai arsenite in the presence of copper or silver to yield an aromatic arsonic acid." [https://orcid.org/0000-0001-5985-7429]
-comment: definition source Merck Index
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000019/
+def: "Reaction of an aromatic diazonium compound with an alkali arsenite in the presence of copper or silver to yield an aromatic arsonic acid." [https://orcid.org/0000-0001-5985-7429, https://www.rsc.org/Merck-Index/reaction/r19/]
+xref: https://www.rsc.org/Merck-Index/reaction/r19/
 is_a: RXNO:0000332 ! aromatic substitution step
 created_by: batchelorc
 creation_date: 2014-03-03T09:00:00Z
@@ -5470,7 +5505,8 @@ creation_date: 2014-03-03T09:00:00Z
 id: RXNO:0000494
 name: Bartoli indole synthesis
 def: "Reaction of an ortho-substituted nitroarene with a vinyl Grignard reagent to yield a 7-substituted indole." [https://orcid.org/0000-0001-5985-7429]
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000019/
+xref: https://www.rsc.org/Merck-Index/reaction/r20/
+xref: https://www.wikidata.org/wiki/Q3508929
 is_a: RXNO:0000395 ! indole synthesis
 relationship: RXNO:0000423 CHEBI:24828 ! has specified product indoles
 created_by: batchelorc
@@ -5480,8 +5516,8 @@ creation_date: 2014-03-03T09:00:00Z
 id: RXNO:0000495
 name: Barton olefination
 synonym: "Barton olefin synthesis" EXACT []
-def: "Reaction of an aldehyde or ketone with a thioaldehyde or thioketone via a 1,3-4,thiadiazoline intermediate to yield an olefin." [https://orcid.org/0000-0001-5985-7429]
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000023/
+def: "Reaction of an aldehyde or ketone with a thioaldehyde or thioketone via a 1,3,4-thiadiazoline intermediate to yield an olefin." [https://orcid.org/0000-0001-5985-7429]
+xref: https://www.rsc.org/Merck-Index/reaction/r23/
 is_a: RXNO:0000479 ! olefination
 created_by: batchelorc
 creation_date: 2014-03-03T09:00:00Z
@@ -5490,7 +5526,9 @@ creation_date: 2014-03-03T09:00:00Z
 id: RXNO:0000496
 name: Barton-Zard reaction
 def: "Reaction of a nitroalkene with an alpha-isocyanoacetate to yield a substituted pyrrole." [https://orcid.org/0000-0001-5985-7429]
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000025/
+xref: https://www.rsc.org/Merck-Index/reaction/r25/
+xref: https://www.wikidata.org/wiki/Q4865733
+synonym: "Barton-Zard synthesis" EXACT []
 is_a: RXNO:0000497 ! pyrrole synthesis
 relationship: RXNO:0000423 CHEBI:26455 ! has specified product pyrroles
 created_by: batchelorc
@@ -5512,7 +5550,8 @@ id: RXNO:0000498
 name: Béchamp reduction
 def: "Reduction of an aromatic nitro compound to the corresponding arene by iron in some form in aqueous acid." [https://orcid.org/0000-0001-5985-7429]
 synonym: "Bechamp reduction" EXACT []
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000028/
+xref: https://www.rsc.org/Merck-Index/reaction/r28/
+xref: https://www.wikidata.org/wiki/Q906075
 is_a: RXNO:0000037 ! functional group reduction
 relationship: RXNO:0000423 CHEBI:33860 ! has specified product aromatic amine
 created_by: batchelorc
@@ -5523,7 +5562,7 @@ id: RXNO:0000499
 name: Beirut reaction
 def: "Reaction of a benzofurazan 1-oxide with an enamine or enolate to yield a quinoxaline-1,4-dioxide." [https://orcid.org/0000-0001-5985-7429]
 comment: definition source Merck Index
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000030/
+xref: https://www.rsc.org/Merck-Index/reaction/r30/
 is_a: RXNO:0000108 ! ring expansion
 created_by: batchelorc
 creation_date: 2014-03-03T09:00:00Z
@@ -5532,7 +5571,9 @@ creation_date: 2014-03-03T09:00:00Z
 id: RXNO:0000500
 name: Bénary reaction
 def: "Reaction of a beta-aminovinylketone with a Grignard reagent to yield a substituted alpha,beta-unsaturated carbonyl compound." [https://orcid.org/0000-0001-5985-7429]
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000031/
+xref: https://www.rsc.org/Merck-Index/reaction/r31/
+xref: https://www.wikidata.org/wiki/Q816687
+synonym: "Benary reaction" EXACT []
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
 created_by: batchelorc
 creation_date: 2014-03-03T09:00:00Z
@@ -5541,7 +5582,8 @@ creation_date: 2014-03-03T09:00:00Z
 id: RXNO:0000501
 name: Feist-Bénary synthesis
 def: "Reaction of an alpha-haloketone or alpha-haloether with a 1,3-dicarbonyl compound in the presence of pyridine to yield a substituted furan." [https://orcid.org/0000-0001-5985-7429]
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000138/
+xref: https://www.rsc.org/Merck-Index/reaction/r138/
+xref: https://www.wikidata.org/wiki/Q5441589
 is_a: RXNO:0000346 ! oxacycle synthesis
 relationship: BFO:0000057 CHEBI:16227 ! has_participant pyridine
 relationship: RXNO:0000423 CHEBI:24129 ! has specified product furans
@@ -5553,6 +5595,7 @@ id: RXNO:0000502
 name: Boulton-Katritzky rearrangement
 def: "Rearrangement of a mancude eight-membered system containing a pentacycle into a different pentacycle where two of the ring atoms are ring atoms in the original molecule." [https://orcid.org/0000-0001-5985-7429]
 is_a: RXNO:0000202 ! ring rearrangement
+xref: https://www.wikidata.org/wiki/Q56298381
 union_of: RXNO:0000503 ! monocyclic Boulton-Katritzky rearrangement
 union_of: RXNO:0000504 ! bicyclic Boulton-Katritzky rearrangement
 created_by: batchelorc
@@ -5561,7 +5604,7 @@ creation_date: 2014-03-04T09:00:00Z
 [Term]
 id: RXNO:0000503
 name: monocyclic Boulton-Katritzky rearrangement
-def: "Rearrangement of an azapentacycle containing a -N= system where there is an unsaturated three-heavy-atom substituent XYZ on the substituent double-bonded to the nitrogen, to a new azapentacycle where the pivotal nitrogen has broken its single bond and formed a new bond with atom Z." [doi:10.1039/j39670002005]
+def: "Rearrangement of an azapentacycle containing a -N= system where there is an unsaturated three-heavy-atom substituent XYZ on the substituent double-bonded to the nitrogen, to a new azapentacycle where the pivotal nitrogen has broken its single bond and formed a new bond with atom Z." [https://doi.org/10.1039/j39670002005]
 is_a: RXNO:0000502 ! Boulton-Katritzky rearrangement
 created_by: batchelorc
 creation_date: 2014-03-04T09:00:00Z
@@ -5569,7 +5612,7 @@ creation_date: 2014-03-04T09:00:00Z
 [Term]
 id: RXNO:0000504
 name: bicyclic Boulton-Katritzky rearrangement
-def: "Rearrangement of a mancude bicyclo[4.3.0] compound with an unsaturated two-heavy-atom substituent on the six-membered ring alpha to the bridgehead to form a new mancude bicyclo[4.3.0] compound where the five-membered ring has been formed from the two-heavy-atom substituent and the original five-membered ring has been broken." [doi:10.1039/j29660001004]
+def: "Rearrangement of a mancude bicyclo[4.3.0] compound with an unsaturated two-heavy-atom substituent on the six-membered ring alpha to the bridgehead to form a new mancude bicyclo[4.3.0] compound where the five-membered ring has been formed from the two-heavy-atom substituent and the original five-membered ring has been broken." [https://doi.org/10.1039/j29660001004]
 is_a: RXNO:0000502 ! Boulton-Katritzky rearrangement
 created_by: batchelorc
 creation_date: 2014-03-04T09:00:00Z
@@ -5577,8 +5620,7 @@ creation_date: 2014-03-04T09:00:00Z
 [Term]
 id: RXNO:0000505
 name: Mukaiyama-Hoshino method
-def: "Reaction of a primary nitro compound with phenyl isocynatate and triethylamine to yield a nitrile oxide." [https://orcid.org/0000-0001-5985-7429]
-xref: doi:10.1021/ja01505a017
+def: "Reaction of a primary nitro compound with phenyl isocynatate and triethylamine to yield a nitrile oxide." [https://orcid.org/0000-0001-5985-7429, https://doi.org/10.1021/ja01505a017]
 is_a: RXNO:0000011 ! functional group modification
 created_by: batchelorc
 creation_date: 2014-03-04T09:00:00Z
@@ -5587,7 +5629,8 @@ creation_date: 2014-03-04T09:00:00Z
 id: RXNO:0000506
 name: Nef synthesis
 def: "Reaction of an aldehyde or ketone with a sodium acetylide to yield a propargyl alcohol." [https://orcid.org/0000-0001-5985-7429]
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000298/
+xref: https://www.rsc.org/Merck-Index/reaction/r298/
+xref: https://www.wikidata.org/wiki/Q16930708
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
 created_by: batchelorc
 creation_date: 2014-03-04T09:00:00Z
@@ -5597,7 +5640,8 @@ id: RXNO:0000507
 name: Krapcho decarboxylation
 def: "Reaction of an ester with an electron-withdrawing group alpha- to the ester functionality with a metal halide or pseudohalide to yield the shorter homologous system." [https://orcid.org/0000-0001-5985-7429]
 synonym: "Krapcho decarbalkoxylation" EXACT []
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000242/
+xref: https://www.rsc.org/Merck-Index/reaction/r242/
+xref: https://www.wikidata.org/wiki/Q4597398
 is_a: MOP:0001713 ! decarboxylation
 is_a: RXNO:0000105 ! end-of-chain chain shortening
 created_by: batchelorc
@@ -5631,7 +5675,7 @@ id: RXNO:0000510
 name: Benkeser reduction
 def: "Addition of hydrogen atoms to unsaturated rings by means of alkali metals in low-molecular weight amines." [https://orcid.org/0000-0001-5985-7429]
 synonym: "Benkeser reaction" EXACT []
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000032/
+xref: https://www.rsc.org/Merck-Index/reaction/r32/
 is_a: MOP:0000589 ! hydrogenation
 is_a: RXNO:0000041 ! addition reaction step
 created_by: batchelorc
@@ -5642,8 +5686,8 @@ id: RXNO:0000511
 name: Madelung indole synthesis
 def: "Reaction of an N-(2-alkylphenyl)alkanamide with strong base to form an indole." [https://orcid.org/0000-0001-5985-7429]
 synonym: "Madelung synthesis" EXACT []
-xref: http://en.wikipedia.org/wiki/Madelung_synthesis
-xref: https://www.rsc.org/Merck-Index/reaction/rxn1500000261/
+xref: https://www.wikidata.org/wiki/Q2632831
+xref: https://www.rsc.org/Merck-Index/reaction/r261/
 is_a: MOP:0000628 ! molecular dehydration reaction
 is_a: RXNO:0000395 ! indole synthesis
 relationship: RXNO:0000423 CHEBI:24828 ! has specified product indoles
@@ -5655,7 +5699,6 @@ id: RXNO:0000512
 name: Smith indole synthesis
 def: "Reaction of a N-(2-alkylphenyl)-trimethylsilylamine with two equivalents of organolithium and an ester or carboxylic acid to form an indole." [https://orcid.org/0000-0001-5985-7429]
 synonym: "Smith-modified Madelung synthesis" EXACT []
-xref: http://en.wikipedia.org/wiki/Madelung_synthesis
 is_a: RXNO:0000395 ! indole synthesis
 relationship: RXNO:0000423 CHEBI:24828 ! has specified product indoles
 created_by: batchelorc
@@ -5665,7 +5708,7 @@ creation_date: 2014-03-07T09:00:00Z
 id: RXNO:0000513
 name: Mumm rearrangement
 def: "Rearrangement of an acyl imidate to form a carboximide." [https://orcid.org/0000-0001-5985-7429]
-xref: http://en.wikipedia.org/wiki/Mumm_rearrangement
+xref: https://www.wikidata.org/wiki/Q723311
 is_a: RXNO:0000025 ! rearrangement step
 relationship: RXNO:0000423 CHEBI:35636 ! has specified product carboximides
 created_by: batchelorc
@@ -5962,7 +6005,7 @@ id: RXNO:0000539
 name: Cope elimination
 def: "Elimination of a hydroxylamine from an amine oxide by pyrolysis to yield an olefin." [https://orcid.org/0000-0001-5985-7429]
 xref: https://www.rsc.org/Merck-Index/reaction/r85/
-xref: https://en.wikipedia.org/wiki/Cope_reaction
+xref: https://www.wikidata.org/wiki/Q900370
 synonym: "Cope reaction" EXACT []
 is_a: RXNO:0000123 ! molecular skeleton elimination reaction
 relationship: RXNO:0000423 CHEBI:33641 ! has specified product olefin
@@ -6056,6 +6099,7 @@ creation_date: 2014-04-24T15:00:00Z
 id: RXNO:0000548
 name: Sarett primary alcohol oxidation
 def: "Oxidation of a primary alcohol with a pyridine-chromium trioxide complex to yield an aldehyde." [https://orcid.org/0000-0001-5985-7429]
+xref: https://www.wikidata.org/wiki/Q2227511
 is_a: MOP:0000573 ! primary alcohol oxidation to aldehyde
 is_a: RXNO:0000547 ! Sarett oxidation
 created_by: batchelorc
@@ -6261,7 +6305,7 @@ def: "Synthesis of a quinoline by reaction of a 2-aminobenzaldehyde with a keton
 synonym: "Friedländer synthesis" EXACT []
 synonym: "Friedlander synthesis" EXACT []
 synonym: "Friedlaender synthesis" EXACT []
-xref: https://en.wikipedia.org/wiki/Friedländer_synthesis
+xref: https://www.wikidata.org/wiki/Q1058388
 xref: NAMERXN:4.1.29
 is_a: RXNO:0000393 ! quinoline synthesis
 
@@ -6270,7 +6314,7 @@ id: RXNO:0000578
 name: Gewald reaction
 def: "Reaction of an aldehyde or ketone with an alpha-cyanoester to form a 2-aminothiophene." [https://orcid.org/0000-0001-5985-7429]
 synonym: "Gewald thiophene synthesis" EXACT []
-xref: https://en.wikipedia.org/wiki/Gewald_reaction
+xref: https://www.wikidata.org/wiki/Q240091
 xref: NAMERXN:4.3.4
 is_a: RXNO:0000348 ! thiacycle synthesis
 
@@ -6303,7 +6347,7 @@ id: RXNO:0000582
 name: iodolactonization
 def: "A halolactionization where the halide is an iodide." [https://orcid.org/0000-0001-5985-7429]
 synonym: "iodolactonisation" EXACT []
-xref: https://en.wikipedia.org/wiki/Iodolactonization
+xref: https://www.wikidata.org/wiki/Q6062283
 xref: NAMERXN:4.2.15
 is_a: RXNO:0000593 ! halolactonization
 
@@ -6311,7 +6355,7 @@ is_a: RXNO:0000593 ! halolactonization
 id: RXNO:0000583
 name: Niementowski quinazoline synthesis
 def: "An azacycle synthesis where the product is a 4-oxo-3,4-dihydroquinazoline and the reactants are a 2-aminobenzoic acid and an amide." [https://orcid.org/0000-0001-5985-7429]
-xref: https://en.wikipedia.org/wiki/Niementowski_quinazoline_synthesis
+xref: https://www.wikidata.org/wiki/Q1059542
 xref: NAMERXN:4.1.30
 is_a: RXNO:0000347 ! azacycle synthesis
 relationship: RXNO:0000424 CHEBI:22495 ! has specified reactant arenecarbaldehyde
@@ -6325,7 +6369,7 @@ is_a: CHEBI:17478
 id: RXNO:0000584
 name: Niementowski quinoline synthesis
 def: "A quinoline synthesis where the product is a gamma-hydroxyquinoline and the reactants are a 2-aminobenzoic acid and an aldehyde or ketone." [https://orcid.org/0000-0001-5985-7429]
-xref: https://en.wikipedia.org/wiki/Niementowski_quinoline_synthesis
+xref: https://www.wikidata.org/wiki/Q2733837
 xref: NAMERXN:4.1.31
 is_a: RXNO:0000393 ! quinoline synthesis
 
@@ -6335,7 +6379,7 @@ name: Pomeranz–Fritsch reaction
 def: "An azacycle synthesis where the product is an isoquinoline and the reactants are a benzaldehyde and a 2,2-dialkoxyethylamine." [https://orcid.org/0000-0001-5985-7429]
 synonym: "Pomeranz–Fritsch cyclization" EXACT []
 synonym: "Pomeranz–Fritsch isoquinoline synthesis" EXACT []
-xref: https://en.wikipedia.org/wiki/Pomeranz-Fritsch_reaction
+xref: https://www.wikidata.org/wiki/Q18217151
 xref: NAMERXN:4.1.65
 is_a: RXNO:0000347 ! azacycle synthesis
 
@@ -6343,7 +6387,7 @@ is_a: RXNO:0000347 ! azacycle synthesis
 id: RXNO:0000586
 name: Steglich esterification
 def: "An O-acylation to ester where dicyclohexylcarbodiimide is used as a coupling reagent and 4-dimethylaminopyridine as a catalyst." [https://orcid.org/0000-0001-5985-7429]
-xref: https://en.wikipedia.org/wiki/Steglich_esterification
+xref: https://www.wikidata.org/wiki/Q695687
 xref: NAMERXN:2.6.9
 is_a: RXNO:0000360 ! O-acylation to ester -> esterification
 
@@ -6379,7 +6423,7 @@ id: RXNO:0000590
 name: Wenker synthesis
 def: "Synthesis of an aziridine by dehydrating a beta aminoalcohol with sulfuric acid." [https://orcid.org/0000-0001-5985-7429]
 synonym: "Wenker aziridine synthesis" EXACT []
-xref: https://en.wikipedia.org/wiki/Wenker_synthesis
+xref: https://www.wikidata.org/wiki/Q900233
 xref: NAMERXN:4.1.66
 xref: https://doi.org/10.1021/ja01314a504
 is_a: RXNO:0000347 ! azacycle synthesis
@@ -6390,7 +6434,7 @@ id: RXNO:0000591
 name: Hinsberg thiophene synthesis
 def: "Reaction of an alpha-diketone with a dialkyl thiodiacetate to form a thiophene dicarboxylic acid." [https://orcid.org/0000-0001-5985-7429]
 xref: https://www.rsc.org/Merck-Index/reaction/r202/
-xref: https://de.wikipedia.org/wiki/Hinsberg-Thiophensynthese
+xref: https://www.wikidata.org/wiki/Q18020904
 is_a: RXNO:0000348 ! thiacycle synthesis
 
 [Term]
@@ -6403,7 +6447,6 @@ is_a: RXNO:0000002 ! carbon-carbon coupling reaction
 id: RXNO:0000593
 name: halolactonization
 def: "Addition of a carboxylic acid oxygen and halogen across a carbon-carbon double bond to form a lactone." [https://orcid.org/0000-0001-5985-7429]
-xref: https://en.wikipedia.org/wiki/Iodolactonization
 synonym: "halolactonisation" EXACT []
 is_a: RXNO:0000346
 
@@ -6413,13 +6456,14 @@ name: Ciamician-Dennstedt rearrangement
 def: "Expansion of a pyrrole ring by heating with a halogeno compond to form a 3-halogenopyridine." [https://orcid.org/0000-0001-5985-7429]
 is_a: RXNO:0000108
 xref: https://www.rsc.org/Merck-Index/reaction/r78/
-xref: https://es.wikipedia.org/wiki/Transposici%C3%B3n_de_Ciamician-Dennstedt
+xref: https://www.wikidata.org/wiki/Q6151790
 
 [Term]
 id: RXNO:0000595
 name: Claisen-Schmidt condensation
 def: "Condensation of an aromatic aldehyde with an aliphatic aldehyde or ketone in the presence of a relatively strong base to from an alpha,beta-unsaturated aldehyde or ketone." [https://orcid.org/0000-0001-5985-7429]
 xref: https://www.rsc.org/Merck-Index/reaction/r81/
+xref: https://www.wikidata.org/wiki/Q56298266
 is_a: MOP:0000628
 
 [Term]
@@ -6433,6 +6477,8 @@ id: RXNO:0000597
 name: Corey-Bakshi-Shibata reduction
 def: "Enantioselective reduction of a ketone to an alcohol with a chiral oxazaborolidine." [https://orcid.org/0000-0001-5985-7429]
 xref: https://www.rsc.org/Merck-Index/reaction/r87/
+xref: https://www.wikidata.org/wiki/Q903598
+synonym: "Corey-Itsuno reduction" EXACT []
 is_a: MOP:0000580
 
 [Term]
@@ -6440,7 +6486,7 @@ id: RXNO:0000598
 name: Johnson-Corey-Chaykovsky reaction
 def: "Reaction of a sulfur ylide with a double-bond to produce a three-membered ring." [https://orcid.org/0000-0001-5985-7429]
 synonym: "Corey-Chaykovsky reaction" EXACT []
-xref: https://en.wikipedia.org/wiki/Johnson%E2%80%93Corey%E2%80%93Chaykovsky_reaction
+xref: https://www.wikidata.org/wiki/Q1582682
 xref: https://www.rsc.org/Merck-Index/reaction/r88/
 is_a: RXNO:0000005
 union_of: RXNO:0000599
@@ -6476,18 +6522,21 @@ is_a: RXNO:0000348
 id: RXNO:0000603
 name: cross-coupling
 def: "A joining reaction where a carbon-carbon bond is formed between unlike moieties." [https://orcid.org/0000-0001-5985-7429]
+xref: https://www.wikidata.org/wiki/Q7127709
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
 
 [Term]
 id: RXNO:0000604
 name: Liebeskind-Srogl coupling
 def: "A cross-coupling reaction where a thioester and a boronic acid react to form a ketone. It uses a metal catalyst." [https://orcid.org/0000-0001-5985-7429]
+xref: https://www.wikidata.org/wiki/Q6543886
 is_a: RXNO:0000603 ! cross-coupling
 
 [Term]
 id: RXNO:0000605
 name: Fukuyama coupling
 def: "A cross-coupling reaction where a thioester and an organozinc halide react to form a ketone. It uses a palladium catalyst." [https://orcid.org/0000-0001-5985-7429]
+xref: https://www.wikidata.org/wiki/Q5507762
 is_a: RXNO:0000603 ! cross-coupling
 
 [Term]
@@ -6567,6 +6616,8 @@ id: RXNO:0000618
 name: Hofmann-Löffler-Freytag reaction
 def: "An azacycle synthesis in which pyrrolidines or piperidines are formed by decomposition of protonated N-haloamines." [https://www.rsc.org/Merck-Index/reaction/r207/hofmann-löffler-freytag%20reaction]
 xref: https://www.rsc.org/Merck-Index/reaction/r207/
+xref: https://www.wikidata.org/wiki/Q5876831
+synonym: "Hofmann-Löffler reaction" EXACT []
 is_a: RXNO:0000347
 union_of: RXNO:0000619
 union_of: RXNO:0000620
@@ -6588,7 +6639,9 @@ id: RXNO:0000621
 name: Hell-Volhard-Zelinsky reaction
 def: "An alpha-halogenation reaction where a carboxylic acid reacts with dibromine to form an alpha-bromocarboxylic acid." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000550
+synonym: "Hell-Volhard-Zelinsky halogenation" EXACT []
 xref: https://www.rsc.org/Merck-Index/reaction/r194
+xref: https://www.wikidata.org/wiki/Q902219
 relationship: RXNO:0000424 CHEBI:33575
 relationship: RXNO:0000424 CHEBI:29224
 relationship: RXNO:0000425 CHEBI:28659
@@ -6670,7 +6723,7 @@ is_a: RXNO:0000026 ! Beckman rearrangement
 id: RXNO:0000632
 name: Baeyer–Emmerling indole synthesis
 def: "An indole synthesis where an ortho-nitrocinnamic acid reacts with iron powder in a basic solution to form an indole." [https://orcid.org/0000-0001-5985-7429]
-xref: https://en.wikipedia.org/wiki/Baeyer-Emmerling_indole_synthesis
+xref: https://www.wikidata.org/wiki/Q3159940
 xref: NAMERXN:4.1.41
 is_a: RXNO:0000395 ! indole synthesis
 xref: https://doi.org/10.1002/cber.186900201268
@@ -6807,9 +6860,44 @@ synonym: "aza-Wacker cyclization" EXACT []
 is_a: RXNO:0000018
 
 [Term]
+id: RXNO:0000649
+name: Lemieux-Johnson oxidation
+def: "A cleaving reaction where an olefin is dihydroxylated with osmium tetroxide and undergoes a Malaprade reaction to yield two aldehydes, two ketones, or an aldehyde and a ketone." [https://orcid.org/0000-0001-5985-7429, https://doi.org/10.1021/jo01110a606]
+is_a: RXNO:0000073
+is_a: RXNO:0000344 ! alkene oxidative cleavage
+relationship: has_part RXNO:0000650
+xref: https://www.wikidata.org/wiki/Q6521154
+
+[Term]
+id: RXNO:0000650
+name: Malaprade reaction
+def: "A cleaving reaction of a 1,2-diol using periodic acid to give the corresponding carbonyl compounds." [https://orcid.org/0000-0001-5985-7429, https://doi.org/10.1039/C8CC09208G]
+is_a: RXNO:0000073
+is_a: RXNO:0000344 ! alkene oxidative cleavage
+xref: https://www.wikidata.org/wiki/Q10851620
+
+[Term]
+id: RXNO:0000651
+name: Fenton 1,2-glycol oxidation
+def: "The oxidation of a 1,2-glycol with Fenton's reagent (hydrogen peroxide and iron salts) to give an alpha-hydroxy aldehyde." [rsc:db]
+is_a: RXNO:0000012 ! functional group oxidation
+
+[Term]
+id: RXNO:0000652
+name: Fenton alpha-hydroxy carboxylic acid oxidation
+def: "The oxidation of an alpha-hydroxy carboxylic acid with Fenton's reagent to give an alpha-keto carboxylic acid." [RSC:db]
+is_a: RXNO:0000012 ! functional group oxidation
+
+[Term]
+id: RXNO:0000653
+name: Fenton hydrogen peroxide reduction
+def: "The reaction of the components of Fenton's reagent, viz. reduction of hydrogen peroxide by Fe(II) , producing an hydroxyl radical." [RSC:db]
+is_a: RXNO:0000012 ! functional group oxidation
+
+[Term]
 id: MOP:0000618
 name: solvolysis
-def: "A molecular process where a molecule is broken up by reaction with a molecule that is part of the solvent material. It may be the primary constituent molecule of the solvent material (for example water, ethanol, ammonia) or its lyonium ion or lyate ion." [AU:S05762, RSC:cb]
+def: "A molecular process where a molecule is broken up by reaction with a molecule that is part of the solvent material. It may be the primary constituent molecule of the solvent material (for example water, ethanol, ammonia) or its lyonium ion or lyate ion." [AU:S05762, https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000543 ! molecular process
 created_by: batchelorc
 creation_date: 2009-09-16T11:11:24Z
@@ -6817,7 +6905,7 @@ creation_date: 2009-09-16T11:11:24Z
 [Term]
 id: MOP:0000619
 name: hydrolysis
-def: "A solvolysis reaction where the solvent material is water." [RSC:cb]
+def: "A solvolysis reaction where the solvent material is water." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000618 ! solvolysis
 created_by: batchelorc
 creation_date: 2009-09-16T11:13:21Z

@@ -3142,7 +3142,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A molecular process where a molecule is broken up by reaction with a molecule that is part of the solvent material. It may be the primary constituent molecule of the solvent material (for example water, ethanol, ammonia) or its lyonium ion or lyate ion.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AU:S05762</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RSC:cb</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-5985-7429</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -3162,7 +3162,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MOP_0000619"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A solvolysis reaction where the solvent material is water.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RSC:cb</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-5985-7429</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -4439,7 +4439,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MOP_0000565"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A [4+2] cycloaddition reaction where a diene reacts with a compound containing a double or triple bond (a dienophile) to form an unsaturated six-membered ring compound.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NAMERXN:3.11.3</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Diels-Alder_reaction</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r109/</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q375669</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diels-Alder coupling</oboInOwl:hasExactSynonym>
@@ -4462,7 +4461,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000007">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000000"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A joining reaction where an alkene with an allylic hydrogen reacts with a compound containing a multiple bond (an enophile) to form a substituted alkene.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000129/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r129/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q26469</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000007</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ene reaction</rdfs:label>
@@ -4481,7 +4481,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000008">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000000"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A joining reaction where a nucleophile adds to the beta-carbon of an alpha,beta-unsaturated system (or an activated carbon-carbon bond).</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Nucleophilic_conjugate_addition</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q2181524</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nucleophilic conjugate addition</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000008</oboInOwl:id>
@@ -4502,8 +4502,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000009">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000008"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A conjugate addition reaction where a carbon nucleophile adds to the beta-carbon of an alpha,beta-unsaturated system (or an activated carbon-carbon bond).</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Michael_reaction</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000281/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r281/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q642233</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michael reaction</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000009</oboInOwl:id>
@@ -4662,7 +4662,8 @@
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A carbon-carbon coupling reaction where a Grignard reagent reacts with a compound containing an electrophilic carbon atom. A Grignard reagent is a magnesium-stabilised carbon nucleophile. An aldehyde leads to a secondary alcohol, a ketone leads to a tertiary alcohol, an ester leads to a ketone and a nitrile leads to a ketone.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NAMERXN:3.7</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000177/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r177/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q337748</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000014</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grignard reaction</rdfs:label>
@@ -4822,8 +4823,8 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000332"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An aromatic substitution reaction where an aryl diazonium salt reacts with a copper(I) halide or pseudohalide to form an aromatic halide or pseudohalide.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Sandmeyer_reaction</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r386/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q898821</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000021</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sandmeyer reaction</rdfs:label>
@@ -4907,6 +4908,7 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A carbon-carbon coupling reaction where an organohalide or triflate couples to a terminal olefin to produce an internal olefin, catalysed by palladium. It is stereospecific.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NAMERXN:3.2</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r192/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q899916</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heck-Mizoroki reaction</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mizoroki-Heck reaction</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
@@ -6703,8 +6705,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000088">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000002"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A carbon-carbon coupling reaction between an organohalide or organotriflate and an organozinc compound. The reaction is catalysed by palladium or nickel.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Negishi_coupling</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r299/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q902756</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Negishi cross-coupling</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000088</oboInOwl:id>
@@ -6739,8 +6741,8 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A reduction of an aldehyde or ketone to an alcohol involving an equilibrium between the aldehyde or ketone and a reagent alcohol present in excess, catalysed by a metal alkoxide. This reaction is the reverse of the Oppenauer oxidation (RXNO:0000047).</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Meerwein%E2%80%93Ponndorf%E2%80%93Verley_reduction</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r272/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q903026</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000089</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meerwein-Ponndorf-Verley reduction</rdfs:label>
@@ -6942,6 +6944,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A coupling reaction between two molecules of a terminal alkyne catalysed by Cu(I) salts.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r169/</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000098</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glaser coupling</rdfs:label>
@@ -6969,6 +6972,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A coupling reaction between two molecules of a terminal alkyne using stoichiometric Cu(II) salts.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r169/</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eglinton coupling</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000099</oboInOwl:id>
@@ -6996,6 +7000,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A coupling reaction between a terminal alkyne and an alkynyl halide catalysed by Cu(I) salts.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r169/</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000100</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cadiot-Chodkiewicz coupling</rdfs:label>
@@ -7044,6 +7049,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000102">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000335"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The reductive amination of ketones or aldehydes with an amine and formic acid to form amines.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q726513</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wallach reaction</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000102</oboInOwl:id>
@@ -7071,6 +7077,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The reaction of primary alkyl halides with sodium or potassium phthalimide, followed by hydrolysis, to give the corresponding primary amine.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q123422</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000103</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gabriel synthesis</rdfs:label>
@@ -7146,7 +7153,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000106">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000105"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The decarboxylation of silver carboxylates with halogens to give organic halides.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000215/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r215/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q902216</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Borodin reaction</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Borodine reaction</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
@@ -7187,7 +7195,8 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A carbon-carbon coupling reaction between a dialkyl malonate and an alkyl halide, to give a substituted acetic acid. The base/R&apos;X treatment can be repeated to give a disubstituted product.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000264/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r264/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q902284</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000107</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">malonic ester synthesis</rdfs:label>
@@ -7685,7 +7694,8 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The reaction between an aromatic amine, an aldehyde and pyruvic acid on heating to give a quinoline 4-carboxylic acid (cinchoninic acid).</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000114/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r114/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q3772250</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000126</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Doebner reaction</rdfs:label>
@@ -7718,7 +7728,8 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The conversion of an aromatic amine to the corresponding fluoride via the diazonium fluoroborate.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000388/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r388/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q572113</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schiemann reaction</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000127</oboInOwl:id>
@@ -7739,8 +7750,16 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000128">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000002"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33860"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The decarboxylation and coupling of a carboxylate or mixture of carboxylates to give a dimer.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000238</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r238/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q901771</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crum-Brown-Walker reaction</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kolbe electrolytic synthesis</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kolbe electrosynthesis</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kolbe reaction</oboInOwl:hasExactSynonym>
@@ -7777,7 +7796,8 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaction of a ketone or aldehyde, amine, an isocyanide and carboxylic acid to form a bisamide.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000440/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r440/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q2002373</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4CC</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ugi four-component condensation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ugi-4CR</oboInOwl:hasExactSynonym>
@@ -7819,7 +7839,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The oxidation of a terminal alkene or ethene to a methyl ketone or acetaldehyde, catalysed by PdCl2 and CuCl2, and using molecular oxygen as the oxidant.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000452/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r452/</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wacker oxidation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wacker reaction</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
@@ -10769,7 +10789,8 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The rearrangement of a 2-bromoalkene into an alkyne, mediated by strong base.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000161/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r161/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q573664</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000250</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fritsch-Buttenberg-Wiechell rearrangement</rdfs:label>
@@ -10901,6 +10922,8 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MOP_0000572"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000012"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The oxidation of a primary alcohol to an aldehyde or a secondary alcohol to a ketone using the Dess-Martin periodinane.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r107/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q28455131</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dess-Martin periodinane oxidation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000256</oboInOwl:id>
@@ -10921,6 +10944,8 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000073"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000344"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The oxidative cleavage of an alpha,beta-diol using lead tetraacetate to give the corresponding carbonyl compounds.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r96/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q30693026</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Criegee glycol cleavage</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Criegee reaction</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
@@ -10953,7 +10978,9 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A ring formation reaction where an alkene reacts with a dihalomethane in the presence of a metal atom or metal complexes to form a cyclopropane. The traditional reaction uses a zinc-copper couple and diiodomethane.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000400/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r400/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q903776</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simmons-Smith cyclopropanation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000258</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simmons-Smith reaction</rdfs:label>
@@ -11133,8 +11160,17 @@
     <!-- http://purl.obolibrary.org/obo/RXNO_0000266 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000266">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RXNO_0000651"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RXNO_0000652"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RXNO_0000653"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000012"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Either: (a) The oxidation of a 1,2-glycol with Fenton&apos;s reagent (hydrogen peroxide and iron salts) to give an alpha-hydroxy aldehyde;  (b) The oxidation of an alpha-hydroxy carboxylic acid with Fenton&apos;s reagent to give an alpha-keto carboxylic acid; or (c) the reaction of the components of Fenton&apos;s reagent, viz. reduction of hydrogen peroxide by Fe(II) , producing an hydroxyl radical.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An oxidation reaction involving Fenton&apos;s reagent.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000267</oboInOwl:hasAlternativeId>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fenton&apos;s reaction</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
@@ -11144,8 +11180,8 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000266"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Either: (a) The oxidation of a 1,2-glycol with Fenton&apos;s reagent (hydrogen peroxide and iron salts) to give an alpha-hydroxy aldehyde;  (b) The oxidation of an alpha-hydroxy carboxylic acid with Fenton&apos;s reagent to give an alpha-keto carboxylic acid; or (c) the reaction of the components of Fenton&apos;s reagent, viz. reduction of hydrogen peroxide by Fe(II) , producing an hydroxyl radical.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rsc:db</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An oxidation reaction involving Fenton&apos;s reagent.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-5985-7429</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -11643,7 +11679,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000288">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000002"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A carbon-carbon coupling reaction where an aryl halide reacts with copper(I) cyanide to give an aryl nitrile.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000376/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r376/</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rosenmund-von Braun synthesis</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000288</oboInOwl:id>
@@ -12946,7 +12982,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000344">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MOP_0000581"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An alkene oxidation where the carbon--carbon double bond is cleaved.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An alkene oxidation where the carbon-carbon double bond is cleaved.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">batchelorc</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-03-22T03:15:25Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NAMERXN:1.6</oboInOwl:hasDbXref>
@@ -12957,7 +12993,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000344"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An alkene oxidation where the carbon--carbon double bond is cleaved.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An alkene oxidation where the carbon-carbon double bond is cleaved.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-5985-7429</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -14445,7 +14481,7 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17478"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cyclisation-condensation of a beta-arylethanol with an aldehyde to yield an ortho-,peri-fused aryl-oxacycle.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cyclisation-condensation of a beta-arylethanol with an aldehyde to yield an ortho,peri-fused aryl-oxacycle.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000404</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oxa-Pictet-Spengler reaction</rdfs:label>
@@ -14453,7 +14489,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000404"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cyclisation-condensation of a beta-arylethanol with an aldehyde to yield an ortho-,peri-fused aryl-oxacycle.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cyclisation-condensation of a beta-arylethanol with an aldehyde to yield an ortho,peri-fused aryl-oxacycle.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-5985-7429</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -14661,6 +14697,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000412">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000011"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rearrangement of an O-aryl thiocarbamate to an S-aryl thiocarbamate by migration of the aryl group.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q909753</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000412</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Newman-Kwart rearrangement</rdfs:label>
@@ -14680,7 +14717,8 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MOP_0000556"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000332"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Substitution of phenol ortho- or para-bromo or iodo groups by a nitro group on treatment with nitrous acid or a nitrite in acetic acid.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000484/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r484/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q1061336</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000413</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zincke nitration</rdfs:label>
@@ -14689,7 +14727,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000413"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Substitution of phenol ortho- or para-bromo or iodo groups by a nitro group on treatment with nitrous acid or a nitrite in acetic acid.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000484/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r484/</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -14822,6 +14860,7 @@
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Condensation of a 1,5-diketone with ammonium acetate in acetic acid to form a pyridine.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dx.doi.org/10.1039/SP543</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q2144364</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Krohnke pyridine synthesis</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000420</oboInOwl:id>
@@ -15311,7 +15350,8 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MOP_0000422"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000002"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaction of allyltrimethylsilane with a carbon electrophile to allylate the carbon electrophile.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000383/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r383/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q903031</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hosomi-Sakurai reaction</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000443</oboInOwl:id>
@@ -15345,7 +15385,8 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rearrangement of the acyl group in a phenolate ester to the ortho- and/or para-position. It is catalysed by a Lewis acid.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000160/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r160/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q574893</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">photo-Fries rearrangement</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000444</oboInOwl:id>
@@ -15409,7 +15450,8 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Formylation of a phenol or aromatic amine with hexamethylenetetramine in acidic conditions.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000119/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r119/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q903217</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000447</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duff reaction</rdfs:label>
@@ -15418,8 +15460,8 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000447"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Formylation of a phenol or aromatic amine with hexamethylenetetramine in acidic conditions.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doi:10.1039/JR9450000276</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doi:10.1039/jr9410000547</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1039/JR9450000276</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1039/jr9410000547</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -15667,7 +15709,8 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A carbon-carbon coupling reaction between a beta-ketoester and an alkyl halide to yield an alpha-alkylated ester.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000001/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r1/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q1017086</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000459</oboInOwl:id>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subsequent treatment with mild hydrolysis leads to a ketone; concentrated base produces a substituted ester.</rdfs:comment>
@@ -15774,7 +15817,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000464">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MOP_0000720"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A [2+2+1] cycloaddition between an alkyne, an alkene and carbon monoxide to form an alpha-beta-unsaturated cyclopentenone.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000320/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r320/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q903694</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000464</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pauson-Khand reaction</rdfs:label>
@@ -15848,7 +15892,8 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fused-ring-system formation reaction where a flavonol is produced by oxidation of a chalcone with alkaline hydrogen peroxide.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000005/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r5/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q903717</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000467</oboInOwl:id>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">definition source Merck Index</rdfs:comment>
@@ -15946,7 +15991,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000472">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000025"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rearrangement of an aldose N-glycoside to a ketose N-glycoside by acid or base catalysis.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000008/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r8/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q452196</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000472</oboInOwl:id>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">definition source Merck Index</rdfs:comment>
@@ -15966,10 +16012,10 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000473">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000000"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaction of a ketone with ethoxyacetylene to form an alkoxyethynyl alcohol.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000009/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r9/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q16624458</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000473</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">definition source Merck Index</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arens-van Dorp synthesis</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -15977,6 +16023,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaction of a ketone with ethoxyacetylene to form an alkoxyethynyl alcohol.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-5985-7429</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r9/</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -15993,10 +16040,10 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ring expansion of a 2-bromo-2-(alpha-bromobenzyl)-1-benzofuran to a flavonol in alcoholic alkali.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000011/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r11/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q3115850</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000474</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">definition source Merck Index</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Auwers synthesis</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -16004,6 +16051,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ring expansion of a 2-bromo-2-(alpha-bromobenzyl)-1-benzofuran to a flavonol in alcoholic alkali.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-5985-7429</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r11/</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -16022,10 +16070,10 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000052"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000346"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaction of ortho-hydroxyaryl ketones with aromatic acid anhydrides to yield a flavone or isoflavone.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000006/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r6/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q3046015</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000475</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">definition source Merck Index</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allan-Robinson reaction</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -16033,6 +16081,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaction of ortho-hydroxyaryl ketones with aromatic acid anhydrides to yield a flavone or isoflavone.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-5985-7429</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r6/</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -16048,7 +16097,8 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rearrangement of a propargyl alcohol to an alpha,beta-unsaturated carbonyl compound via an allene intermediate to yield the gamma-substituted product.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000278/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r278/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q902668</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000476</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meyer-Schuster rearrangement</rdfs:label>
@@ -16057,7 +16107,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000476"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rearrangement of a propargyl alcohol to an alpha,beta-unsaturated carbonyl compound via an allene intermediate to yield the gamma-substituted product.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doi:10.1039/b912099h</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1039/b912099h</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -16073,7 +16123,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rearrangement of a propargyl alcohol to an alpha,beta-unsaturated carbonyl compound via an enyne intermediate to yield the beta-substituted product.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000278/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r278/</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000477</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rupe rearrangement</rdfs:label>
@@ -16082,7 +16132,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000477"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rearrangement of a propargyl alcohol to an alpha,beta-unsaturated carbonyl compound via an enyne intermediate to yield the beta-substituted product.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doi:10.1039/b912099h</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1039/b912099h</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -16146,10 +16196,9 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000480">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000479"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaction of an aldehyde or ketone or carboxylic ester or amide with the Tebbe reagent to yield an olefin or an enol ether or an enamine.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000428/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r428/</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000480</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">definition source Merck Index, heavily modified</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tebbe olefination</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -16157,6 +16206,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaction of an aldehyde or ketone or carboxylic ester or amide with the Tebbe reagent to yield an olefin or an enol ether or an enamine.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-5985-7429</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r428/</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -16168,7 +16218,8 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cyclization of a enynyl allene to yield a toluene biradical with radical centres on the methyl group and at the meta position.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">batchelorc</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-02-28T09:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000292/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r292/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q89925623</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Myers-Saito cyclization</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Myers-Saito process</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Myers-Saito reaction</oboInOwl:hasExactSynonym>
@@ -16180,7 +16231,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000481"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cyclization of a enynyl allene to yield a toluene biradical with radical centres on the methyl group and at the meta position.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doi:10.1039/b009965l</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1039/b009965l</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-5985-7429</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -16202,7 +16253,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000482"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cyclization of a enynyl allene to yield a 1-methyl-5-methylenecyclopenta-1,3-diene biradical with radical centres on the methyl group and methylene group.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doi:10.1039/b009965l</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1039/b009965l</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-5985-7429</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -16215,8 +16266,8 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Copper-catalysed reaction of benzene with a nitrosylating agent and hydrogen peroxide to form an o-nitrosophenol.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">batchelorc</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-02-28T09:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Baudisch_reaction</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000026/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r26/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q3536586</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000483</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baudisch reaction</rdfs:label>
@@ -16404,10 +16455,10 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rearrangement of an N-phenylhydroxamine in acid to yield a para-aminophenol.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">batchelorc</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-03-03T09:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000015/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r15/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q139251</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000492</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">definition source Merck Index</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bamberger rearrangement</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -16415,6 +16466,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rearrangement of an N-phenylhydroxamine in acid to yield a para-aminophenol.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-5985-7429</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r15/</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -16423,20 +16475,20 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000493">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000332"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaction of an aromatic diazonium compound with an alklai arsenite in the presence of copper or silver to yield an aromatic arsonic acid.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaction of an aromatic diazonium compound with an alkali arsenite in the presence of copper or silver to yield an aromatic arsonic acid.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">batchelorc</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-03-03T09:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000019/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r19/</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000493</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">definition source Merck Index</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bart reaction</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000493"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaction of an aromatic diazonium compound with an alklai arsenite in the presence of copper or silver to yield an aromatic arsonic acid.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaction of an aromatic diazonium compound with an alkali arsenite in the presence of copper or silver to yield an aromatic arsonic acid.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-5985-7429</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r19/</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -16454,7 +16506,8 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaction of an ortho-substituted nitroarene with a vinyl Grignard reagent to yield a 7-substituted indole.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">batchelorc</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-03-03T09:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000019/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r20/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q3508929</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000494</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bartoli indole synthesis</rdfs:label>
@@ -16472,10 +16525,10 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000495">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000479"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaction of an aldehyde or ketone with a thioaldehyde or thioketone via a 1,3-4,thiadiazoline intermediate to yield an olefin.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaction of an aldehyde or ketone with a thioaldehyde or thioketone via a 1,3,4-thiadiazoline intermediate to yield an olefin.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">batchelorc</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-03-03T09:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000023/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r23/</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barton olefin synthesis</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000495</oboInOwl:id>
@@ -16484,7 +16537,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000495"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaction of an aldehyde or ketone with a thioaldehyde or thioketone via a 1,3-4,thiadiazoline intermediate to yield an olefin.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaction of an aldehyde or ketone with a thioaldehyde or thioketone via a 1,3,4-thiadiazoline intermediate to yield an olefin.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-5985-7429</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -16503,7 +16556,9 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaction of a nitroalkene with an alpha-isocyanoacetate to yield a substituted pyrrole.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">batchelorc</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-03-03T09:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000025/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r25/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q4865733</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barton-Zard synthesis</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000496</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barton-Zard reaction</rdfs:label>
@@ -16567,7 +16622,8 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reduction of an aromatic nitro compound to the corresponding arene by iron in some form in aqueous acid.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">batchelorc</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-03-03T09:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000028/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r28/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q906075</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bechamp reduction</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000498</oboInOwl:id>
@@ -16589,7 +16645,7 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaction of a benzofurazan 1-oxide with an enamine or enolate to yield a quinoxaline-1,4-dioxide.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">batchelorc</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-03-03T09:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000030/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r30/</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000499</oboInOwl:id>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">definition source Merck Index</rdfs:comment>
@@ -16611,7 +16667,9 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaction of a beta-aminovinylketone with a Grignard reagent to yield a substituted alpha,beta-unsaturated carbonyl compound.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">batchelorc</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-03-03T09:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000031/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r31/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q816687</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Benary reaction</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000500</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bénary reaction</rdfs:label>
@@ -16644,7 +16702,8 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaction of an alpha-haloketone or alpha-haloether with a 1,3-dicarbonyl compound in the presence of pyridine to yield a substituted furan.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">batchelorc</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-03-03T09:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000138/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r138/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q5441589</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000501</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Feist-Bénary synthesis</rdfs:label>
@@ -16673,6 +16732,7 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rearrangement of a mancude eight-membered system containing a pentacycle into a different pentacycle where two of the ring atoms are ring atoms in the original molecule.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">batchelorc</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-03-04T09:00:00Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q56298381</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000502</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boulton-Katritzky rearrangement</rdfs:label>
@@ -16701,7 +16761,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000503"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rearrangement of an azapentacycle containing a -N= system where there is an unsaturated three-heavy-atom substituent XYZ on the substituent double-bonded to the nitrogen, to a new azapentacycle where the pivotal nitrogen has broken its single bond and formed a new bond with atom Z.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doi:10.1039/j39670002005</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1039/j39670002005</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -16721,7 +16781,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000504"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rearrangement of a mancude bicyclo[4.3.0] compound with an unsaturated two-heavy-atom substituent on the six-membered ring alpha to the bridgehead to form a new mancude bicyclo[4.3.0] compound where the five-membered ring has been formed from the two-heavy-atom substituent and the original five-membered ring has been broken.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doi:10.1039/j29660001004</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1039/j29660001004</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -16733,7 +16793,6 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaction of a primary nitro compound with phenyl isocynatate and triethylamine to yield a nitrile oxide.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">batchelorc</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-03-04T09:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doi:10.1021/ja01505a017</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000505</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mukaiyama-Hoshino method</rdfs:label>
@@ -16742,6 +16801,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000505"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaction of a primary nitro compound with phenyl isocynatate and triethylamine to yield a nitrile oxide.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1021/ja01505a017</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-5985-7429</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -16754,7 +16814,8 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaction of an aldehyde or ketone with a sodium acetylide to yield a propargyl alcohol.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">batchelorc</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-03-04T09:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000298/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r298/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q16930708</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000506</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nef synthesis</rdfs:label>
@@ -16776,7 +16837,8 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaction of an ester with an electron-withdrawing group alpha- to the ester functionality with a metal halide or pseudohalide to yield the shorter homologous system.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">batchelorc</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-03-04T09:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000242/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r242/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q4597398</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Krapcho decarbalkoxylation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000507</oboInOwl:id>
@@ -16860,7 +16922,7 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Addition of hydrogen atoms to unsaturated rings by means of alkali metals in low-molecular weight amines.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">batchelorc</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-03-06T09:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000032/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r32/</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Benkeser reaction</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000510</oboInOwl:id>
@@ -16889,8 +16951,8 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaction of an N-(2-alkylphenyl)alkanamide with strong base to form an indole.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">batchelorc</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-03-07T09:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Madelung_synthesis</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/rxn1500000261/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r261/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q2632831</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Madelung synthesis</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000511</oboInOwl:id>
@@ -16918,7 +16980,6 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaction of a N-(2-alkylphenyl)-trimethylsilylamine with two equivalents of organolithium and an ester or carboxylic acid to form an indole.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">batchelorc</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-03-07T09:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Madelung_synthesis</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smith-modified Madelung synthesis</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000512</oboInOwl:id>
@@ -16946,7 +17007,7 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rearrangement of an acyl imidate to form a carboximide.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">batchelorc</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-03-07T09:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Mumm_rearrangement</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q723311</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000513</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mumm rearrangement</rdfs:label>
@@ -17691,8 +17752,8 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elimination of a hydroxylamine from an amine oxide by pyrolysis to yield an olefin.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">batchelorc</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-04-14T09:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Cope_reaction</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r85/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q900370</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cope reaction</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000539</oboInOwl:id>
@@ -17944,6 +18005,7 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oxidation of a primary alcohol with a pyridine-chromium trioxide complex to yield an aldehyde.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">batchelorc</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-04-24T15:00:00Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q2227511</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000548</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sarett primary alcohol oxidation</rdfs:label>
@@ -18423,7 +18485,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000393"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Synthesis of a quinoline by reaction of a 2-aminobenzaldehyde with a ketone.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NAMERXN:4.1.29</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Friedländer_synthesis</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q1058388</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Friedlaender synthesis</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Friedlander synthesis</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Friedländer synthesis</oboInOwl:hasExactSynonym>
@@ -18446,7 +18508,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000348"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaction of an aldehyde or ketone with an alpha-cyanoester to form a 2-aminothiophene.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NAMERXN:4.3.4</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Gewald_reaction</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q240091</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gewald thiophene synthesis</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000578</oboInOwl:id>
@@ -18527,7 +18589,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000593"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A halolactionization where the halide is an iodide.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NAMERXN:4.2.15</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Iodolactonization</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q6062283</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iodolactonisation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000582</oboInOwl:id>
@@ -18554,7 +18616,7 @@
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An azacycle synthesis where the product is a 4-oxo-3,4-dihydroquinazoline and the reactants are a 2-aminobenzoic acid and an amide.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NAMERXN:4.1.30</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Niementowski_quinazoline_synthesis</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q1059542</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000583</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Niementowski quinazoline synthesis</rdfs:label>
@@ -18574,7 +18636,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000393"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quinoline synthesis where the product is a gamma-hydroxyquinoline and the reactants are a 2-aminobenzoic acid and an aldehyde or ketone.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NAMERXN:4.1.31</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Niementowski_quinoline_synthesis</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q2733837</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000584</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Niementowski quinoline synthesis</rdfs:label>
@@ -18594,7 +18656,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000347"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An azacycle synthesis where the product is an isoquinoline and the reactants are a benzaldehyde and a 2,2-dialkoxyethylamine.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NAMERXN:4.1.65</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Pomeranz-Fritsch_reaction</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q18217151</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pomeranz–Fritsch cyclization</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pomeranz–Fritsch isoquinoline synthesis</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
@@ -18616,7 +18678,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000360"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An O-acylation to ester where dicyclohexylcarbodiimide is used as a coupling reagent and 4-dimethylaminopyridine as a catalyst.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NAMERXN:2.6.9</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Steglich_esterification</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q695687</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000586</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Steglich esterification</rdfs:label>
@@ -18701,7 +18763,7 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Synthesis of an aziridine by dehydrating a beta aminoalcohol with sulfuric acid.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NAMERXN:4.1.66</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1021/ja01314a504</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Wenker_synthesis</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q900233</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wenker aziridine synthesis</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000590</oboInOwl:id>
@@ -18721,8 +18783,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000591">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000348"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaction of an alpha-diketone with a dialkyl thiodiacetate to form a thiophene dicarboxylic acid.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://de.wikipedia.org/wiki/Hinsberg-Thiophensynthese</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r202/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q18020904</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000591</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hinsberg thiophene synthesis</rdfs:label>
@@ -18759,7 +18821,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000593">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000346"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Addition of a carboxylic acid oxygen and halogen across a carbon-carbon double bond to form a lactone.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Iodolactonization</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">halolactonisation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000593</oboInOwl:id>
@@ -18779,8 +18840,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000594">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000108"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Expansion of a pyrrole ring by heating with a halogeno compond to form a 3-halogenopyridine.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://es.wikipedia.org/wiki/Transposici%C3%B3n_de_Ciamician-Dennstedt</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r78/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q6151790</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000594</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ciamician-Dennstedt rearrangement</rdfs:label>
@@ -18800,6 +18861,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MOP_0000628"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Condensation of an aromatic aldehyde with an aliphatic aldehyde or ketone in the presence of a relatively strong base to from an alpha,beta-unsaturated aldehyde or ketone.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r81/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q56298266</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000595</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Claisen-Schmidt condensation</rdfs:label>
@@ -18831,6 +18893,8 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MOP_0000580"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Enantioselective reduction of a ketone to an alcohol with a chiral oxazaborolidine.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r87/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q903598</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corey-Itsuno reduction</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000597</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corey-Bakshi-Shibata reduction</rdfs:label>
@@ -18859,8 +18923,8 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000005"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaction of a sulfur ylide with a double-bond to produce a three-membered ring.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Johnson%E2%80%93Corey%E2%80%93Chaykovsky_reaction</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r88/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q1582682</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corey-Chaykovsky reaction</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000598</oboInOwl:id>
@@ -18952,6 +19016,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000603">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000000"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A joining reaction where a carbon-carbon bond is formed between unlike moieties.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q7127709</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000603</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cross-coupling</rdfs:label>
@@ -18970,6 +19035,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000604">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000603"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cross-coupling reaction where a thioester and a boronic acid react to form a ketone. It uses a metal catalyst.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q6543886</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000604</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liebeskind-Srogl coupling</rdfs:label>
@@ -18988,6 +19054,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000605">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000603"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cross-coupling reaction where a thioester and an organozinc halide react to form a ketone. It uses a palladium catalyst.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q5507762</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000605</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fukuyama coupling</rdfs:label>
@@ -19231,6 +19298,8 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000347"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An azacycle synthesis in which pyrrolidines or piperidines are formed by decomposition of protonated N-haloamines.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r207/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q5876831</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hofmann-Löffler reaction</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000618</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hofmann-Löffler-Freytag reaction</rdfs:label>
@@ -19304,6 +19373,8 @@
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An alpha-halogenation reaction where a carboxylic acid reacts with dibromine to form an alpha-bromocarboxylic acid.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r194</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q902219</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hell-Volhard-Zelinsky halogenation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000621</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hell-Volhard-Zelinsky reaction</rdfs:label>
@@ -19539,7 +19610,7 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An indole synthesis where an ortho-nitrocinnamic acid reacts with iron powder in a basic solution to form an indole.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NAMERXN:4.1.41</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1002/cber.186900201268</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Baeyer-Emmerling_indole_synthesis</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q3159940</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000632</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baeyer–Emmerling indole synthesis</rdfs:label>
@@ -19876,6 +19947,108 @@
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cyclisation where an amino group acts as the nucleophile in a Wacker-Tsuji oxidation accompanied by beta-hydride elimination, forming a ring.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://organicreactions.org/index.php/Wacker_oxidation</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-5985-7429</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RXNO_0000649 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000649">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000073"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000344"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/rxno.obo#has_part"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000650"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cleaving reaction where an olefin is dihydroxylated with osmium tetroxide and undergoes a Malaprade reaction to yield two aldehydes, two ketones, or an aldehyde and a ketone.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q6521154</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000649</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lemieux-Johnson oxidation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000649"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cleaving reaction where an olefin is dihydroxylated with osmium tetroxide and undergoes a Malaprade reaction to yield two aldehydes, two ketones, or an aldehyde and a ketone.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1021/jo01110a606</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-5985-7429</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RXNO_0000650 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000650">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000073"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000344"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cleaving reaction of a 1,2-diol using periodic acid to give the corresponding carbonyl compounds.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q10851620</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000650</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Malaprade reaction</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000650"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cleaving reaction of a 1,2-diol using periodic acid to give the corresponding carbonyl compounds.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1039/C8CC09208G</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-5985-7429</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RXNO_0000651 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000651">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000012"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The oxidation of a 1,2-glycol with Fenton&apos;s reagent (hydrogen peroxide and iron salts) to give an alpha-hydroxy aldehyde.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000651</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fenton 1,2-glycol oxidation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000651"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The oxidation of a 1,2-glycol with Fenton&apos;s reagent (hydrogen peroxide and iron salts) to give an alpha-hydroxy aldehyde.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rsc:db</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RXNO_0000652 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000652">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000012"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The oxidation of an alpha-hydroxy carboxylic acid with Fenton&apos;s reagent to give an alpha-keto carboxylic acid.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000652</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fenton alpha-hydroxy carboxylic acid oxidation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000652"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The oxidation of an alpha-hydroxy carboxylic acid with Fenton&apos;s reagent to give an alpha-keto carboxylic acid.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RSC:db</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RXNO_0000653 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000653">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000012"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The reaction of the components of Fenton&apos;s reagent, viz. reduction of hydrogen peroxide by Fe(II) , producing an hydroxyl radical.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000653</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fenton hydrogen peroxide reduction</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000653"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The reaction of the components of Fenton&apos;s reagent, viz. reduction of hydrogen peroxide by Fe(II) , producing an hydroxyl radical.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RSC:db</oboInOwl:hasDbXref>
     </owl:Axiom>
 </rdf:RDF>
 
