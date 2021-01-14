@@ -10,11 +10,6 @@ property_value: http://purl.org/dc/terms/license http://creativecommons.org/lice
 [Term]
 id: BFO:0000007
 name: process
-is_a: BFO:0000015 ! processual entity
-
-[Term]
-id: BFO:0000015
-name: processual entity
 
 [Term]
 id: BFO:0000016
@@ -23,7 +18,7 @@ name: disposition
 [Term]
 id: BFO:0000144
 name: process profile
-is_a: BFO:0000015 ! processual entity
+is_a: BFO:0000007 ! process
 
 [Term]
 id: CHEBI:15378
