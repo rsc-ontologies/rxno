@@ -8,7 +8,7 @@ property_value: http://purl.org/dc/elements/1.1/title "MOP" xsd:string
 property_value: http://purl.org/dc/terms/license http://creativecommons.org/licenses/by/4.0/
 
 [Term]
-id: BFO:0000007
+id: BFO:0000015
 name: process
 
 [Term]
@@ -18,7 +18,7 @@ name: disposition
 [Term]
 id: BFO:0000144
 name: process profile
-is_a: BFO:0000007 ! process
+is_a: BFO:0000015 ! process
 
 [Term]
 id: CHEBI:15378
@@ -4658,7 +4658,7 @@ id: MOP:0000543
 name: molecular process
 def: "A process in which at least one of the participants is a molecule." [https://orcid.org/0000-0001-5985-7429]
 comment: TODO: needs work, formal definition, etc.
-is_a: BFO:0000007 ! process
+is_a: BFO:0000015 ! process
 
 [Term]
 id: MOP:0000544

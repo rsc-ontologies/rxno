@@ -11,11 +11,13 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/rxno.obo.owl">
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/rxno.obo/2021-01-21/rxno.obo.owl"/>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO is the name reaction ontology. It contains more than 500 classes representing organic reactions such as the Diels–Alder cyclization.</dc:description>
         <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</dc:title>
         <terms:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18:01:2021 12:00</oboInOwl:date>
         <oboInOwl:default-namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:default-namespace>
-        <oboInOwl:hasOBOFormatVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2</oboInOwl:hasOBOFormatVersion>
+        <oboInOwl:hasOBOFormatVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.4</oboInOwl:hasOBOFormatVersion>
     </owl:Ontology>
     
 
@@ -60,6 +62,12 @@
     <!-- http://www.geneontology.org/formats/oboInOwl#creation_date -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#creation_date"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#date -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#date"/>
     
 
 

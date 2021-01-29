@@ -1,6 +1,8 @@
-format-version: 1.2
+format-version: 1.4
 default-namespace: RXNO
 ontology: rxno.obo
+data-version: 2021-01-21
+date: 18:01:2021 12:00
 property_value: http://purl.org/dc/elements/1.1/description "RXNO is the name reaction ontology. It contains more than 500 classes representing organic reactions such as the Diels–Alder cyclization." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "RXNO" xsd:string
 property_value: http://purl.org/dc/terms/license http://creativecommons.org/licenses/by/4.0/
