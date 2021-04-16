@@ -26,6 +26,6 @@ jobs:
       - name: report artifact
         uses: actions/upload-artifact@v2
         with:
-          name: robot_report
+          name: rxno_robot_report
           path: report.txt
 
