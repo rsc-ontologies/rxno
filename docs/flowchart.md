@@ -105,3 +105,7 @@ Y: FUNCTIONAL GROUP OXIDATION
 Version 11
 DJB
 10th Oct 2008
+
+
+
+![](flowchart_reaction.svg)
