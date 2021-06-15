@@ -9,7 +9,7 @@ Both ontologies are stored as .obo and .owl files, both of which can be read by 
 You can browse the terms here: http://www.ebi.ac.uk/ols/ontologies/rxno and here: http://www.ebi.ac.uk/ols/ontologies/mop
 
 ## Instructions for contribution
-Follow the instructions in the documentation folder (https://github.com/rsc-ontologies/rxno/tree/master/docs) and use the flowcharts provided there to add new reactions.
+Follow the instructions in the [documentation folder](/docs) and use the flowcharts provided there to add new reactions.
 
 ## Steps for release
 
