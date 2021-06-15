@@ -1,5 +1,7 @@
-1. Are any bonds involved other than those in protection/deprotection?
-N: PROTECTION/DEPROTECTION
+![](flowchart_reaction.svg)
+
+1. Are any bonds involved other than those in protection or deprotection?
+N: PROTECTION or DEPROTECTION
 Y: 2
 
 2. Is a polymer formed?
@@ -10,7 +12,7 @@ Y: POLYMERISATION
 N: 8
 Y: 4
 
-4. Is a fused ring system necessarily created (including when resulting from changes to existing rings)?
+4. Is a fused ring system necessarily created (incl. when resulting from changes to existing rings)?
 N: 5
 Y: FUSED-RING SYSTEM FORMATION
 
@@ -38,25 +40,29 @@ Y: 10
 N: 17
 Y: 11
 
-11. Does the reaction involve the redistribution of 2 multiple bonds amongst 2 fragments via a 4-membered metallacyclic intermediate?
+11. Does the reaction involve the redistribution of two multiple bonds among two fragments in a four-centred metallacyclic intermediate?
 N: 12
-Y: MULTIPLE BOND METATHESIS
+Y: MULTIPLE-BOND METATHESIS
 
 12. Is a single carbon atom added to the end of a chain?
 N: 13
 Y: END-OF-CHAIN HOMOLOGATION
 
+13. Are one or more atoms added in the middle of a chain?
+N: 14
+Y: INSERTION
+
 14. Does a rearrangement take place?
 N: 15
 Y: JOINING WITH REARRANGEMENT
 
-15. Does the increase in number of skeletal atoms result from the formation of just one (single or multiple) C-C bond?
-N: JOINING
+15. Does the increase in number of skeletal atoms result from the formation of just one (single or multiple) carbon-carbon bond?
+N: SKELETON JOINING
 Y: 16
 
 16. Does the reaction necessarily involve the joining of two identical components to form a symmetrical product?
-N: C-C COUPLING
-Y: C-C HOMOCOUPLING
+N: CARBON-CARBON COUPLING
+Y: CARBON-CARBON HOMOCOUPLING
 
 17. Is a single skeletal carbon atom removed from the end of a chain?
 N: 18
@@ -66,11 +72,11 @@ Y: END-OF-CHAIN CHAIN SHORTENING
 N: 19
 Y: EXTRUSION
 
-19. Is the skeleton split into 3 or more fragments?
+19. Is the skeleton split into three or more fragments?
 N: CLEAVING
 Y: FRAGMENTATION
 
-20. Does the molecule rearrange so that one or more (groups of) atoms move from one atom to another?
+20. Does the molecule rearrange so that one or more atoms move from one atom to another?
 N: 21
 Y: REARRANGEMENT
 
@@ -83,29 +89,25 @@ N: ADDITION
 Y: ELIMINATION
 
 23. Does just one functional group undergo a change?
-N: FUNCTIONAL GROUP MODIFICATION
-Y: 24
+N: 24
+Y: FUNCTIONAL-GROUP MODIFICATION
 
 24. Is the functional group displaced by one or more H atoms?
 N: 25
-Y: FUNCTIONAL GROUP REDUCTION
+Y: FUNCTIONAL-GROUP REDUCTION
 
 25. Is one singly-bonded substituent replaced by another singly-bonded substituent?
 N: 26
 Y: SUBSTITUTION
 
-26. Are at least some of the atoms of the functional group retained during the reaction, with a concomitant change in their oxidation state?
-N: FUNCTIONAL GROUP MODIFICATION
-Y: 27
+26. Are at least some of the atoms of the functional group retained during the reaction?
+N: 27
+Y: FUNCTIONAL-GROUP MODIFICATION
 
 27. Is the functional group oxidised?
-N: FUNCTIONAL GROUP REDUCTION
-Y: FUNCTIONAL GROUP OXIDATION
+N: FUNCTIONAL-GROUP REDUCTION
+Y: FUNCTIONAL-GROUP OXIDATION
 
 Version 11
 DJB
 10th Oct 2008
-
-
-
-![](flowchart_reaction.svg)
