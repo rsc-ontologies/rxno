@@ -8,6 +8,9 @@ Both ontologies are stored as .obo and .owl files, both of which can be read by 
 
 You can browse the terms here: http://www.ebi.ac.uk/ols/ontologies/rxno and here: http://www.ebi.ac.uk/ols/ontologies/mop
 
+## Instructions for contribution
+Follow the instructions in the documentation folder (https://github.com/rsc-ontologies/rxno/tree/master/docs) and use the flowcharts provided there to add new reactions.
+
 ## Steps for release
 
 1. You will need to obtain a tool to convert OBO to OWL (or _vice versa_ if you're editing the OWL), for example ROBOT, which is available here: http://robot.obolibrary.org/
