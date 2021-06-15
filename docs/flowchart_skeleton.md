@@ -31,3 +31,5 @@ Version 11
 DJB
 10th Oct 2008
 
+
+![](flowchart_skeleton.svg)
