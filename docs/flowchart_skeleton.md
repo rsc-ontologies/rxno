@@ -1,7 +1,11 @@
 Flowchart for determination of skeleton
 
-* A single starting material must always be defined in order for these rules to work.
+![](flowchart_skeleton.svg)
+
+Notes:
+* A single starting material must always be defined in order for these rules to work. In the case of several "equal" reaction partners, take the one that contributes the larger number of atoms to the part of the product of interest.
 * To determine the skeleton in the product in cases where it is not obvious, imagine the reaction being run in reverse, and follow the flowchart as usual.
+* Only apply the rules of the scheme to the product if it is difficult to determine the skeleton from the starting material.
 * X = heteroatom group (where heteroatom = any non-metal or metalloid element other than C or H).
 
 1. Do any heteroatoms (or linear chains of heteroatoms) form part of a ring?
@@ -30,4 +34,3 @@ Flowchart for determination of skeleton
 Version 11
 DJB
 10th Oct 2008
-
