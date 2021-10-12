@@ -19992,6 +19992,7 @@
     <!-- http://purl.obolibrary.org/obo/RXNO_0000646 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000646">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000052"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cycloaddition where a fullerene reacts with diethyl bromomalonate to form a methanofullerene.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q1054818</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
