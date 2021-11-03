@@ -31,6 +31,11 @@ name: nitrile
 is_a: CHEBI:36357 ! polyatomic entity
 
 [Term]
+id: CHEBI:22221
+name: acyl group
+is_a: CHEBI:33247 ! organic group
+
+[Term]
 id: CHEBI:23367
 name: molecular entity
 is_a: CHEBI:24431 ! chemical entity
@@ -112,6 +117,11 @@ name: inorganic group
 is_a: CHEBI:24433 ! group
 
 [Term]
+id: CHEBI:33247
+name: organic group
+is_a: CHEBI:24433 ! group
+
+[Term]
 id: CHEBI:33595
 name: cyclic compound
 is_a: CHEBI:36357 ! polyatomic entity
@@ -187,6 +197,11 @@ synonym: "TeCN-" RELATED [IUPAC:]
 is_a: CHEBI:36823 ! pseudohalo groups
 
 [Term]
+id: CHEBI:37838
+name: carboacyl group
+is_a: CHEBI:22221 ! acyl group
+
+[Term]
 id: CHEBI:37997
 name: homopolymer
 def: "A macromolecule derived from one species of (real, implicit or hypothetical) monomer." []
@@ -239,6 +254,11 @@ xref: MSDchem:CN "MSDchem"
 is_a: CHEBI:36823 ! pseudohalo groups
 
 [Term]
+id: CHEBI:51100
+name: sulfonyl groups
+is_a: CHEBI:24433 ! group
+
+[Term]
 id: CHEBI:51142
 name: amino groups
 is_a: CHEBI:51144 ! nitrogen group
@@ -251,7 +271,18 @@ is_a: CHEBI:24433 ! group
 [Term]
 id: CHEBI:51870
 name: boryl group
+is_a: CHEBI:24433 ! group
 is_a: CHEBI:33246 ! inorganic group
+
+[Term]
+id: CHEBI:52214
+name: ligand
+namespace: chebi_ontology
+def: "Any molecule or ion capable of binding to a central metal atom to form coordination complexes." []
+subset: 3_STAR
+synonym: "ligands" RELATED [ChEBI]
+xref: Wikipedia:Ligand
+is_a: CHEBI:36357 ! polyatomic entity
 
 [Term]
 id: CHEBI:52845
@@ -319,16 +350,11 @@ name: acetylenic compound
 is_a: CHEBI:36357 ! polyatomic entity
 
 [Term]
-id: CHEBI:51870
-name: boryl group
-is_a: CHEBI:24433
-
-[Term]
 id: MOP:0000000
 name: borylation
 def: "Formation of a covalent bond between a substrate and a boryl group (-BR'R')." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000801 ! formation of covalent bond with boron centre
-relationship: BFO:0000057 CHEBI:51870 ! boryl group
+relationship: BFO:0000057 CHEBI:51870 ! has_participant boryl group
 
 [Term]
 id: MOP:0000001
@@ -553,22 +579,7 @@ def: "Formation of a covalent bond between a substrate and a carboacyl group." [
 synonym: "carboacylation" EXACT []
 is_a: MOP:0000479 ! acylation
 is_a: MOP:0000800 ! formation of covalent bond with carbon centre
-relationship: BFO:0000057 CHEBI:37838
-
-[Term]
-id: CHEBI:37838
-name: carboacyl group
-is_a: CHEBI:22221 ! acyl group
-
-[Term]
-id: CHEBI:22221
-name: acyl group
-is_a: CHEBI:33247 ! organic group
-
-[Term]
-id: CHEBI:33247
-name: organic group
-is_a: CHEBI:24433
+relationship: BFO:0000057 CHEBI:37838 ! has_participant carboacyl group
 
 [Term]
 id: MOP:0000029
@@ -4146,8 +4157,8 @@ name: acylation
 def: "Formation of a covalent bond between a substrate and an acyl group." [RSC:xp]
 comment: you probably want "carboacylation", MOP:0000028, here
 synonym: "acylation" EXACT []
-is_a: MOP:0000800 ! formation of covalent bond with group
-relationship: BFO:0000057 CHEBI:22221
+is_a: MOP:0000800 ! formation of covalent bond with carbon centre
+relationship: BFO:0000057 CHEBI:22221 ! has_participant acyl group
 
 [Term]
 id: MOP:0000480
@@ -4621,13 +4632,8 @@ def: "Formation of a covalent bond between a substrate and a sulfonyl group." [R
 synonym: "sulfonylation" EXACT []
 is_a: MOP:0000798 ! formation of covalent bond with sulfur centre
 intersection_of: MOP:0000798 ! formation of covalent bond with sulfur centre
-intersection_of: BFO:0000057 CHEBI:51100
-relationship: BFO:0000057 CHEBI:51100
-
-[Term]
-id: CHEBI:51100
-name: sulfonyl groups
-is_a: CHEBI:24433
+intersection_of: BFO:0000057 CHEBI:51100 ! has_participant sulfonyl groups
+relationship: BFO:0000057 CHEBI:51100 ! has_participant sulfonyl groups
 
 [Term]
 id: MOP:0000540
@@ -6040,8 +6046,19 @@ relationship: BFO:0000078 CHEBI:33641 ! has participant ceasing to exist olefin
 [Term]
 id: MOP:0000713
 name: acetylene reduction
-def: "Hydrogenation of an acetylene to an olefin." 
+def: "Hydrogenation of an acetylene to an olefin." []
 is_a: MOP:0000589 ! hydrogenation
+
+[Term]
+id: MOP:0000714
+name: ligand exchange reaction
+def: "In a ligand exchange reaction, one or more ligands around a metal ion are replaced by other ligands without changing the oxidation state at the metal center. Typically, weakly bound ligands are replaced by more strongly bound ones, so that the resulting complex becomes thermodynamically more stable." [DOI:10.1093/oso/9780195301007.003.0005]
+comment: A definition of this term in the Gold Book was not yet available at the time of addition. However, inclusion in the Gold Book was requested in October 2021.
+synonym: "ligand substitution reaction" EXACT []
+is_a: MOP:0000543 ! molecular process
+relationship: BFO:0000057 CHEBI:52214 ! has_participant ligand
+created_by: http://orcid.org/0000-0002-4378-6061
+creation_date: 2021-11-03T09:13:45Z
 
 [Term]
 id: MOP:0000721
