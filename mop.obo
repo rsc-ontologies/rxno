@@ -254,6 +254,16 @@ name: boryl group
 is_a: CHEBI:33246 ! inorganic group
 
 [Term]
+id: CHEBI:52214
+name: ligand
+namespace: chebi_ontology
+def: "Any molecule or ion capable of binding to a central metal atom to form coordination complexes." []
+subset: 3_STAR
+synonym: "ligands" RELATED [ChEBI]
+xref: Wikipedia:Ligand
+is_a: CHEBI:36357 ! polyatomic entity
+
+[Term]
 id: CHEBI:52845
 name: cyclic organic group
 is_a: CHEBI:24433 ! group
@@ -6042,6 +6052,17 @@ id: MOP:0000713
 name: acetylene reduction
 def: "Hydrogenation of an acetylene to an olefin." 
 is_a: MOP:0000589 ! hydrogenation
+
+[Term]
+id: MOP:0000714
+name: ligand exchange reaction
+def: "A ligand exchange reaction is a molecular process, in which one or more ligands around a metal ion are replaced by other ligands without changing the oxidation state of the metal atom." [https://doi.org/10.1093/oso/9780195301007.003.0005] {comment="A definition of this term in the Gold Book was not yet available at the time of addition. However, inclusion in the Gold Book was requested in October 2021."}
+comment: Typically, weakly bound ligands are replaced by more strongly bound ones, so that the resulting complex becomes thermodynamically more stable.
+synonym: "ligand substitution reaction" EXACT []
+is_a: MOP:0000543 ! molecular process
+relationship: BFO:0000057 CHEBI:52214 ! has_participant ligand
+created_by: http://orcid.org/0000-0002-4378-6061
+creation_date: 2021-11-03T09:13:45Z
 
 [Term]
 id: MOP:0000721
