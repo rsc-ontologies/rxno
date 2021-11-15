@@ -1,8 +1,8 @@
 format-version: 1.2
-data-version: 2021-01-21
-date: 18:01:2021 12:00
+data-version: rxno.obo/2021-11-215
+date: 15:11:2021 13:00
 default-namespace: RXNO
-ontology: rxno.obo
+ontology: rxno
 property_value: http://purl.org/dc/elements/1.1/description "RXNO is the name reaction ontology. It contains more than 500 classes representing organic reactions such as the Diels–Alder cyclization." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "RXNO" xsd:string
 property_value: http://purl.org/dc/terms/license http://creativecommons.org/licenses/by/4.0/
@@ -20,6 +20,15 @@ name: disposition
 id: CHEBI:13759
 name: alkylamine
 is_a: CHEBI:32877 ! primary amine
+
+[Term]
+id: CHEBI:139588
+name: alpha-hydroxy ketone
+namespace: chebi_ontology
+def: "An alpha-oxyketone that has a hydroxy group as the alpha-oxy moiety." []
+subset: 3_STAR
+is_a: CHEBI:52395 ! oxyketone
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/205/chebi.owl xsd:string
 
 [Term]
 id: CHEBI:15379
@@ -308,6 +317,14 @@ name: phenylhydrazine
 is_a: CHEBI:23367 ! molecular entity
 
 [Term]
+id: CHEBI:26407
+name: pyrans
+namespace: chebi_ontology
+subset: 3_STAR
+is_a: CHEBI:38104 ! oxacycle
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/205/chebi.owl xsd:string
+
+[Term]
 id: CHEBI:26410
 name: pyrazoles
 is_a: CHEBI:38101 ! azacycle
@@ -326,6 +343,15 @@ is_a: CHEBI:38101 ! azacycle
 id: CHEBI:26513
 name: quinolines
 is_a: CHEBI:38101 ! azacycle
+
+[Term]
+id: CHEBI:26519
+name: radical
+namespace: chebi_ontology
+def: "A molecular entity possessing an unpaired electron." []
+subset: 3_STAR
+is_a: CHEBI:23367 ! molecular entity
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/205/chebi.owl xsd:string
 
 [Term]
 id: CHEBI:26588
@@ -666,6 +692,22 @@ name: pseudohalo group
 is_a: CHEBI:24433 ! group
 
 [Term]
+id: CHEBI:36871
+name: inorganic radical
+namespace: chebi_ontology
+subset: 3_STAR
+is_a: CHEBI:26519 ! radical
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/205/chebi.owl xsd:string
+
+[Term]
+id: CHEBI:36872
+name: organic radical
+namespace: chebi_ontology
+subset: 3_STAR
+is_a: CHEBI:26519 ! radical
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/205/chebi.owl xsd:string
+
+[Term]
 id: CHEBI:36963
 name: organooxygen compound
 is_a: CHEBI:23367 ! molecular entity
@@ -705,6 +747,15 @@ is_a: CHEBI:33256 ! primary amide
 id: CHEBI:37757
 name: iodoalkane
 is_a: CHEBI:24469 ! haloalkane
+
+[Term]
+id: CHEBI:37963
+name: pyranone
+namespace: chebi_ontology
+def: "Any of a class of cyclic chemical compounds that contain an unsaturated six-membered ring with one ring oxygen atom and an oxo substituent." []
+subset: 3_STAR
+is_a: CHEBI:26407 ! pyrans
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/205/chebi.owl xsd:string
 
 [Term]
 id: CHEBI:38101
@@ -769,6 +820,15 @@ name: pyrimidines
 is_a: CHEBI:38101 ! azacycle
 
 [Term]
+id: CHEBI:39477
+name: aminoxyls
+namespace: chebi_ontology
+def: "Radicals derived from hydroxylamines by removal of the hydrogen atom from the hydroxy group. The synonymous terms nitroxyl radicals and nitroxides erroneously suggest the presence of a nitro group." []
+subset: 3_STAR
+is_a: CHEBI:36872 ! organic radical
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/205/chebi.owl xsd:string
+
+[Term]
 id: CHEBI:42485
 name: formyl group
 is_a: CHEBI:24433 ! group
@@ -808,6 +868,24 @@ name: tetrabromomethane
 is_a: CHEBI:23367 ! molecular entity
 
 [Term]
+id: CHEBI:47985
+name: enol ether
+namespace: chebi_ontology
+def: "Ethers ROR' where R has a double bond adjacent to the oxygen of the ether linkage." []
+subset: 3_STAR
+is_a: CHEBI:25698 ! ether
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/205/chebi.owl xsd:string
+
+[Term]
+id: CHEBI:47986
+name: silyl enol ether
+namespace: chebi_ontology
+def: "Enol ethers ROR' where R' has the structure SiR''R'''R''''." []
+subset: 3_STAR
+is_a: CHEBI:47985 ! enol ether
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/205/chebi.owl xsd:string
+
+[Term]
 id: CHEBI:48420
 name: chromium trioxide
 is_a: CHEBI:35403 ! chromium coordination entity
@@ -827,6 +905,16 @@ is_a: CHEBI:23367 ! molecular entity
 id: CHEBI:50075
 name: dihydropyridine
 is_a: CHEBI:38101 ! azacycle
+
+[Term]
+id: CHEBI:50413
+name: hydroxyaldehyde
+namespace: chebi_ontology
+alt_id: CHEBI:24671
+alt_id: CHEBI:5798
+subset: 3_STAR
+is_a: CHEBI:17478 ! aldehyde
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/205/chebi.owl xsd:string
 
 [Term]
 id: CHEBI:50784
@@ -930,6 +1018,15 @@ name: peroxy acid
 is_a: CHEBI:36587 ! carbonyl compound
 
 [Term]
+id: CHEBI:52395
+name: oxyketone
+namespace: chebi_ontology
+def: "A compound with the general formula R2C=O (R=/=H) where one or more of the R groups contains an oxy (-O-) group." []
+subset: 3_STAR
+is_a: CHEBI:17087 ! ketone
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/205/chebi.owl xsd:string
+
+[Term]
 id: CHEBI:53212
 name: isocyanates
 is_a: CHEBI:35352 ! organonitrogen compound
@@ -942,7 +1039,7 @@ is_a: CHEBI:23367 ! molecular entity
 [Term]
 id: CHEBI:55380
 name: beta-hydroxy ketone
-is_a: CHEBI:17087 ! ketone
+is_a: CHEBI:52395 ! oxyketone
 
 [Term]
 id: CHEBI:5653
@@ -6853,10 +6950,12 @@ is_obsolete: true
 id: RXNO:0000597
 name: Corey-Bakshi-Shibata reduction
 def: "Enantioselective reduction of a ketone to an alcohol with a chiral oxazaborolidine." [https://orcid.org/0000-0001-5985-7429]
+synonym: "CBS reduction" EXACT []
 synonym: "Corey-Itsuno reduction" EXACT []
 xref: https://www.rsc.org/Merck-Index/reaction/r87/
 xref: https://www.wikidata.org/wiki/Q903598
 is_a: MOP:0000580 ! ketone reduction
+is_a: RXNO:0000037 ! functional group reduction
 
 [Term]
 id: RXNO:0000598
@@ -7375,6 +7474,100 @@ relationship: RXNO:0000424 CHEBI:44864 ! has specified reactant propane-1,3-dith
 relationship: RXNO:0000424 CHEBI:51469 ! has specified reactant butyllithium
 property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
 property_value: http://purl.org/dc/elements/1.1/date 2021-11-05T07:51:22Z xsd:dateTime
+
+[Term]
+id: RXNO:0000663
+name: nitroxide exchange reaction
+def: "Nitroxide exchange reactions are based on thermal C–O bond homolysis of alkoxyamines, which leads to transient carbon-centred radicals and persistent nitroxide radicals. Usually these carbon centred radicals are quickly trapped by the nitroxide radicals and reform the alkoxyamines." [https://doi.org/10.1039/C6RA06510D]
+comment: IUPAC does not recommend the use of the often synonymously used terms "nitroxyl radicals" or "nitroxides" for the class of "aminoxyl radicals". {xref="https://doi.org/10.1351/goldbook.N04171", xref="https://doi.org/10.1351/goldbook.A00285"}
+is_a: RXNO:0000011 ! functional group modification
+relationship: RXNO:0000423 CHEBI:39477 ! has specified product aminoxyls
+relationship: RXNO:0000424 CHEBI:39477 ! has specified reactant aminoxyls
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
+property_value: http://purl.org/dc/elements/1.1/date 2021-11-12T08:28:13Z xsd:dateTime
+
+[Term]
+id: RXNO:0000664
+name: Baeyer pyridine synthesis
+def: "The conversion of pyran or pyrone (pyranone) derivatives to the corresponding pyridine derivative." [https://doi.org/10.1021/cr60130a004]
+is_a: RXNO:0000011 ! functional group modification
+relationship: RXNO:0000423 CHEBI:26421 ! has specified product pyridines
+relationship: RXNO:0000424 CHEBI:26407 ! has specified reactant pyrans
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
+property_value: http://purl.org/dc/elements/1.1/date 2021-11-12T09:25:38Z xsd:dateTime
+
+[Term]
+id: RXNO:0000665
+name: Corey-Kim oxidation
+def: "Oxidation of primary and secondary alcohols via their alkoxysulfonium salts. Upon the addition of base, the salt rearranges intramolecularly to aldehydes and ketones, respectively." [https://www.rsc.org/Merck-Index/reaction/r90/corey-kim%20oxidation]
+synonym: "Corey-Kim reaction" RELATED []
+is_a: RXNO:0000012 ! functional group oxidation
+relationship: RXNO:0000423 CHEBI:17087 ! has specified product ketone
+relationship: RXNO:0000423 CHEBI:17478 ! has specified product aldehyde
+relationship: RXNO:0000424 CHEBI:15734 ! has specified reactant primary alcohol
+relationship: RXNO:0000424 CHEBI:35681 ! has specified reactant secondary alcohol
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
+property_value: http://purl.org/dc/elements/1.1/date 2021-11-15T08:58:15Z xsd:dateTime
+
+[Term]
+id: RXNO:0000666
+name: Corey-Suggs oxidation
+def: "Oxidation of primary and secondary alcohols to aldehydes and ketones, respectively, through the use of pyridinium chlorochromate (PCC)." [https://www.rsc.org/Merck-Index/reaction/r92/corey-suggs%20pcc%20oxidation]
+synonym: "PCC oxidation" RELATED []
+is_a: RXNO:0000012 ! functional group oxidation
+relationship: RXNO:0000423 CHEBI:17087 ! has specified product ketone
+relationship: RXNO:0000423 CHEBI:17478 ! has specified product aldehyde
+relationship: RXNO:0000424 CHEBI:15734 ! has specified reactant primary alcohol
+relationship: RXNO:0000424 CHEBI:35681 ! has specified reactant secondary alcohol
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
+property_value: http://purl.org/dc/elements/1.1/date 2021-11-15T09:09:31Z xsd:dateTime
+
+[Term]
+id: RXNO:0000667
+name: Corey-Schmidt oxidation
+def: "Oxidation of primary and secondary alcohols to aldehydes and ketones, respectively, through the use of pyridinium dichromate (PDC)." [https://second.wiki/wiki/corey-schmidt-oxidation]
+synonym: "PDC oxidation" RELATED []
+is_a: RXNO:0000012 ! functional group oxidation
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
+property_value: http://purl.org/dc/elements/1.1/date 2021-11-15T09:20:03Z xsd:dateTime
+
+[Term]
+id: RXNO:0000668
+name: Albright-Goldman oxidation
+def: "A particularly mild oxidation method in which, for example, dimethyl sulfoxide and acetic anhydride can be used as oxidizing agents to selectively produce aldehydes from primary alcohols without further oxidation to carboxylic acids. Analogously, secondary alcohols can be oxidized to form ketones." [https://en.wikipedia.org/wiki/Albright-Goldman_oxidation]
+is_a: RXNO:0000012 ! functional group oxidation
+relationship: RXNO:0000423 CHEBI:17087 ! has specified product ketone
+relationship: RXNO:0000423 CHEBI:17478 ! has specified product aldehyde
+relationship: RXNO:0000424 CHEBI:15734 ! has specified reactant primary alcohol
+relationship: RXNO:0000424 CHEBI:35681 ! has specified reactant secondary alcohol
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
+property_value: http://purl.org/dc/elements/1.1/date 2021-11-15T09:30:47Z xsd:dateTime
+
+[Term]
+id: RXNO:0000669
+name: Rubottom oxidation
+def: "The Rubottom oxidation is a useful, high-yielding chemical reaction between silyl enol ethers and peroxy acids to give the corresponding α-hydroxy carbonyl product." [https://en.wikipedia.org/wiki/Rubottom_oxidation]
+synonym: "Rubottom reaction" RELATED []
+is_a: RXNO:0000012 ! functional group oxidation
+relationship: RXNO:0000423 CHEBI:139588 ! has specified product alpha-hydroxy ketone
+relationship: RXNO:0000423 CHEBI:47986 ! has specified product silyl enol ether
+relationship: RXNO:0000423 CHEBI:50413 ! has specified product hydroxyaldehyde
+relationship: RXNO:0000424 CHEBI:52094 ! has specified reactant peroxy acid
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
+property_value: http://purl.org/dc/elements/1.1/date 2021-11-15T09:44:42Z xsd:dateTime
+
+[Term]
+id: RXNO:0000673
+name: IBX oxidation
+def: "Oxidation of alcohols to the corresponding carbonyl product using 2-iodoxybenzoic acid (IBX) as oxidizing agent." [https://doi.org/10.1021/ol026427n]
+comment: IBX oxidation and Dess-Martin oxidation are alcohol oxidation by hypervalent iodine reagents. The Dess-Martin periodinane used for oxidation in the Dess-Martin oxidation is prepared by reacting IBX with acetic anhydride in DMSO.
+is_a: RXNO:0000012 ! functional group oxidation
+relationship: RXNO:0000423 CHEBI:17087 ! has specified product ketone
+relationship: RXNO:0000423 CHEBI:17478 ! has specified product aldehyde
+relationship: RXNO:0000424 CHEBI:15734 ! has specified reactant primary alcohol
+relationship: RXNO:0000424 CHEBI:35681 ! has specified reactant secondary alcohol
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
+property_value: http://purl.org/dc/elements/1.1/date 2021-11-15T11:24:35Z xsd:dateTime
 
 [Typedef]
 id: BFO:0000055

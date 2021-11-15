@@ -11,12 +11,12 @@
      xmlns:chebi="http://purl.obolibrary.org/obo/chebi/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
-    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/rxno.obo.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/rxno.obo/2021-01-21/rxno.obo.owl"/>
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/rxno.owl">
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/rxno.obo/2021-11-15/rxno.owl"/>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO is the name reaction ontology. It contains more than 500 classes representing organic reactions such as the Diels–Alder cyclization.</dc:description>
         <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</dc:title>
         <terms:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
-        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18:01:2021 12:00</oboInOwl:date>
+        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15:11:2021 13:00</oboInOwl:date>
         <oboInOwl:default-namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:default-namespace>
         <oboInOwl:hasOBOFormatVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.4</oboInOwl:hasOBOFormatVersion>
     </owl:Ontology>
@@ -528,6 +528,20 @@
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:13759</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alkylamine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_139588 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_139588">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_52395"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An alpha-oxyketone that has a hydroxy group as the alpha-oxy moiety.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/chebi/205/chebi.owl</obo:IAO_0000412>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chebi_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:139588</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/chebi#3_STAR"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alpha-hydroxy ketone</rdfs:label>
     </owl:Class>
     
 
@@ -1243,6 +1257,19 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_26407 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_26407">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_38104"/>
+        <obo:IAO_0000412 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/chebi/205/chebi.owl</obo:IAO_0000412>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chebi_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:26407</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/chebi#3_STAR"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pyrans</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_26410 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_26410">
@@ -1283,6 +1310,20 @@
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:26513</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quinolines</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_26519 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_26519">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A molecular entity possessing an unpaired electron.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/chebi/205/chebi.owl</obo:IAO_0000412>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chebi_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:26519</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/chebi#3_STAR"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radical</rdfs:label>
     </owl:Class>
     
 
@@ -2024,6 +2065,32 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_36871 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_36871">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_26519"/>
+        <obo:IAO_0000412 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/chebi/205/chebi.owl</obo:IAO_0000412>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chebi_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:36871</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/chebi#3_STAR"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inorganic radical</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_36872 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_36872">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_26519"/>
+        <obo:IAO_0000412 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/chebi/205/chebi.owl</obo:IAO_0000412>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chebi_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:36872</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/chebi#3_STAR"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organic radical</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_36963 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_36963">
@@ -2109,6 +2176,20 @@
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:37757</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iodoalkane</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_37963 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_37963">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_26407"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any of a class of cyclic chemical compounds that contain an unsaturated six-membered ring with one ring oxygen atom and an oxo substituent.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/chebi/205/chebi.owl</obo:IAO_0000412>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chebi_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:37963</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/chebi#3_STAR"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pyranone</rdfs:label>
     </owl:Class>
     
 
@@ -2247,6 +2328,20 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_39477 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_39477">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36872"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radicals derived from hydroxylamines by removal of the hydrogen atom from the hydroxy group. The synonymous terms nitroxyl radicals and nitroxides erroneously suggest the presence of a nitro group.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/chebi/205/chebi.owl</obo:IAO_0000412>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chebi_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:39477</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/chebi#3_STAR"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aminoxyls</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_42485 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_42485">
@@ -2327,6 +2422,34 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_47985 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_47985">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25698"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ethers ROR&apos; where R has a double bond adjacent to the oxygen of the ether linkage.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/chebi/205/chebi.owl</obo:IAO_0000412>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chebi_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:47985</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/chebi#3_STAR"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">enol ether</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_47986 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_47986">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_47985"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Enol ethers ROR&apos; where R&apos; has the structure SiR&apos;&apos;R&apos;&apos;&apos;R&apos;&apos;&apos;&apos;.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/chebi/205/chebi.owl</obo:IAO_0000412>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chebi_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:47986</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/chebi#3_STAR"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">silyl enol ether</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_48420 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_48420">
@@ -2368,6 +2491,21 @@
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:50075</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dihydropyridine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_50413 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_50413">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17478"/>
+        <obo:IAO_0000412 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/chebi/205/chebi.owl</obo:IAO_0000412>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:24671</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:5798</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chebi_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:50413</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/chebi#3_STAR"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hydroxyaldehyde</rdfs:label>
     </owl:Class>
     
 
@@ -2565,6 +2703,20 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_52395 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_52395">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17087"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A compound with the general formula R2C=O (R=/=H) where one or more of the R groups contains an oxy (-O-) group.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/chebi/205/chebi.owl</obo:IAO_0000412>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chebi_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:52395</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/chebi#3_STAR"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oxyketone</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_53212 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_53212">
@@ -2590,7 +2742,7 @@
     <!-- http://purl.obolibrary.org/obo/CHEBI_55380 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_55380">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17087"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_52395"/>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:55380</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">beta-hydroxy ketone</rdfs:label>
@@ -14767,6 +14919,7 @@
         <dc:creator rdf:resource="http://orcid.org/0000-0002-4378-6061"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-05-05T09:08:42Z</dc:date>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alkyne hydrothiolation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000383</oboInOwl:id>
         <rdfs:label xml:lang="en">Thiol-yne reaction</rdfs:label>
     </owl:Class>
@@ -19729,9 +19882,11 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000597">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MOP_0000580"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000037"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Enantioselective reduction of a ketone to an alcohol with a chiral oxazaborolidine.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r87/</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q903598</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CBS reduction</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corey-Itsuno reduction</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000597</oboInOwl:id>
@@ -20923,6 +21078,7 @@
         <obo:IAO_0000115 xml:lang="en">The Mukaiyama hydration is an organic reaction involving formal addition of an equivalent of water across an alkene by the action of catalytic bis(acetylacetonato)cobalt(II) complex, phenylsilane and atmospheric oxygen.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0002-4378-6061"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-05-11T07:40:36Z</dc:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000654</oboInOwl:id>
         <rdfs:label xml:lang="en">Mukaiyama hydration</rdfs:label>
     </owl:Class>
@@ -20960,6 +21116,7 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A reaction between an alkyne and a carbonyl group under basic conditions in which a terminal alkyne serves as the CH-acidic moiety. When the carbonyl is an aldehyde, the &apos;Favorskii rearrangement&apos; (RXNO:0000385) takes place and leads to an enone.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0002-4378-6061"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-05-17T08:17:36Z</dc:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faworski-Babayan reaction</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000655</oboInOwl:id>
         <rdfs:label xml:lang="en">Favorskii reaction</rdfs:label>
@@ -20998,6 +21155,7 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reductions with diimide are a chemical reactions that convert unsaturated organic compounds to reduced alkane products. In the process, diimide is oxidized to dinitrogen.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0002-4378-6061"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-05-17T08:35:08Z</dc:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000656</oboInOwl:id>
         <rdfs:label xml:lang="en">Diimide reduction</rdfs:label>
     </owl:Class>
@@ -21029,6 +21187,7 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A protection reaction where the reactive centre is a carbonyl oxygen.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0002-4378-6061"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-05-17T09:33:23Z</dc:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000657</oboInOwl:id>
         <rdfs:label xml:lang="en">carbonyl group protection</rdfs:label>
     </owl:Class>
@@ -21066,6 +21225,7 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The acid-catalyzed formation of an acetal (or ketal) to protect a carbonyl group by nucleophilic addition of an alcohol to an aldehyde (or ketone) with the elimination of water.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0002-4378-6061"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-05-17T09:38:59Z</dc:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">acetalisation</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">acetalization</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000658</oboInOwl:id>
@@ -21107,6 +21267,7 @@
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-11-04T10:48:44Z</dc:date>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miyaura boration</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miyaura borylation reaction</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000659</oboInOwl:id>
         <rdfs:label xml:lang="en">Miyaura borylation</rdfs:label>
     </owl:Class>
@@ -21139,6 +21300,7 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chemical reaction for the stereoselective synthesis of an olefin from a 1,2-diol.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0002-4378-6061"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-11-04T11:03:16Z</dc:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corey-Winter fragmentation</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corey-Winter olefination</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corey–Winter olefin synthesis</oboInOwl:hasRelatedSynonym>
@@ -21174,6 +21336,7 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Tsuji–Wilkinson decarbonylation reaction is a method for the decarbonylation of aldehydes and some acyl chlorides.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0002-4378-6061"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-11-04T12:09:26Z</dc:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000661</oboInOwl:id>
         <rdfs:label xml:lang="en">Tsuji–Wilkinson decarbonylation</rdfs:label>
     </owl:Class>
@@ -21218,6 +21381,7 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chemical reaction in which ketones are synthesized from formaldehyde or other aldehydes, involving a temporary repolarization of a carbonyl group.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0002-4378-6061"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-11-05T07:51:22Z</dc:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corey-Seebach Umpolung</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seebach Umpolung</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000662</oboInOwl:id>
@@ -21230,6 +21394,323 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Corey-Seebach_reaction</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.organic-chemistry.org/namedreactions/corey-seebach-reaction.shtm</oboInOwl:hasDbXref>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Usually, the aldehyde is first reacted with propane-1,3-dithiol to form a 1,3-dithiane, which then reacts with an electrophile after deprotonation with n-butyllithium.</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RXNO_0000663 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000663">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000011"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000423"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_39477"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_39477"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nitroxide exchange reactions are based on thermal C–O bond homolysis of alkoxyamines, which leads to transient carbon-centred radicals and persistent nitroxide radicals. Usually these carbon centred radicals are quickly trapped by the nitroxide radicals and reform the alkoxyamines.</obo:IAO_0000115>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4378-6061"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-11-12T08:28:13Z</dc:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000663</oboInOwl:id>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IUPAC does not recommend the use of the often synonymously used terms &quot;nitroxyl radicals&quot; or &quot;nitroxides&quot; for the class of &quot;aminoxyl radicals&quot;.</rdfs:comment>
+        <rdfs:label xml:lang="en">nitroxide exchange reaction</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000663"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nitroxide exchange reactions are based on thermal C–O bond homolysis of alkoxyamines, which leads to transient carbon-centred radicals and persistent nitroxide radicals. Usually these carbon centred radicals are quickly trapped by the nitroxide radicals and reform the alkoxyamines.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://doi.org/10.1039/C6RA06510D"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000663"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IUPAC does not recommend the use of the often synonymously used terms &quot;nitroxyl radicals&quot; or &quot;nitroxides&quot; for the class of &quot;aminoxyl radicals&quot;.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://doi.org/10.1351/goldbook.A00285"/>
+        <oboInOwl:hasDbXref rdf:resource="https://doi.org/10.1351/goldbook.N04171"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RXNO_0000664 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000664">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000011"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000423"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_26421"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_26407"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The conversion of pyran or pyrone (pyranone) derivatives to the corresponding pyridine derivative.</obo:IAO_0000115>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4378-6061"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-11-12T09:25:38Z</dc:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000664</oboInOwl:id>
+        <rdfs:label xml:lang="en">Baeyer pyridine synthesis</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000664"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The conversion of pyran or pyrone (pyranone) derivatives to the corresponding pyridine derivative.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://doi.org/10.1021/cr60130a004"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RXNO_0000665 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000665">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000012"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000423"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17087"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000423"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17478"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15734"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35681"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oxidation of primary and secondary alcohols via their alkoxysulfonium salts. Upon the addition of base, the salt rearranges intramolecularly to aldehydes and ketones, respectively.</obo:IAO_0000115>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4378-6061"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-11-15T08:58:15Z</dc:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corey-Kim reaction</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000665</oboInOwl:id>
+        <rdfs:label xml:lang="en">Corey-Kim oxidation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000665"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oxidation of primary and secondary alcohols via their alkoxysulfonium salts. Upon the addition of base, the salt rearranges intramolecularly to aldehydes and ketones, respectively.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://www.rsc.org/Merck-Index/reaction/r90/corey-kim%20oxidation"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RXNO_0000666 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000666">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000012"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000423"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17087"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000423"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17478"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15734"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35681"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oxidation of primary and secondary alcohols to aldehydes and ketones, respectively, through the use of pyridinium chlorochromate (PCC).</obo:IAO_0000115>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4378-6061"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-11-15T09:09:31Z</dc:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PCC oxidation</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000666</oboInOwl:id>
+        <rdfs:label xml:lang="en">Corey-Suggs oxidation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000666"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oxidation of primary and secondary alcohols to aldehydes and ketones, respectively, through the use of pyridinium chlorochromate (PCC).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://www.rsc.org/Merck-Index/reaction/r92/corey-suggs%20pcc%20oxidation"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RXNO_0000667 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000667">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000012"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oxidation of primary and secondary alcohols to aldehydes and ketones, respectively, through the use of pyridinium dichromate (PDC).</obo:IAO_0000115>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4378-6061"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-11-15T09:20:03Z</dc:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PDC oxidation</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000667</oboInOwl:id>
+        <rdfs:label xml:lang="en">Corey-Schmidt oxidation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000667"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oxidation of primary and secondary alcohols to aldehydes and ketones, respectively, through the use of pyridinium dichromate (PDC).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://second.wiki/wiki/corey-schmidt-oxidation"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RXNO_0000668 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000668">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000012"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000423"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17087"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000423"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17478"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15734"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35681"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A particularly mild oxidation method in which, for example, dimethyl sulfoxide and acetic anhydride can be used as oxidizing agents to selectively produce aldehydes from primary alcohols without further oxidation to carboxylic acids. Analogously, secondary alcohols can be oxidized to form ketones.</obo:IAO_0000115>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4378-6061"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-11-15T09:30:47Z</dc:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000668</oboInOwl:id>
+        <rdfs:label xml:lang="en">Albright-Goldman oxidation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000668"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A particularly mild oxidation method in which, for example, dimethyl sulfoxide and acetic anhydride can be used as oxidizing agents to selectively produce aldehydes from primary alcohols without further oxidation to carboxylic acids. Analogously, secondary alcohols can be oxidized to form ketones.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://en.wikipedia.org/wiki/Albright-Goldman_oxidation"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RXNO_0000669 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000669">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000012"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000423"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_139588"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000423"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_47986"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000423"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50413"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_52094"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Rubottom oxidation is a useful, high-yielding chemical reaction between silyl enol ethers and peroxy acids to give the corresponding α-hydroxy carbonyl product.</obo:IAO_0000115>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4378-6061"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-11-15T09:44:42Z</dc:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rubottom reaction</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000669</oboInOwl:id>
+        <rdfs:label xml:lang="en">Rubottom oxidation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000669"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Rubottom oxidation is a useful, high-yielding chemical reaction between silyl enol ethers and peroxy acids to give the corresponding α-hydroxy carbonyl product.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://en.wikipedia.org/wiki/Rubottom_oxidation"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RXNO_0000673 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000673">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000012"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000423"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17087"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000423"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17478"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15734"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000424"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35681"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oxidation of alcohols to the corresponding carbonyl product using 2-iodoxybenzoic acid (IBX) as oxidizing agent.</obo:IAO_0000115>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4378-6061"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-11-15T11:24:35Z</dc:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000673</oboInOwl:id>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IBX oxidation and Dess-Martin oxidation are alcohol oxidation by hypervalent iodine reagents. The Dess-Martin periodinane used for oxidation in the Dess-Martin oxidation is prepared by reacting IBX with acetic anhydride in DMSO.</rdfs:comment>
+        <rdfs:label xml:lang="en">IBX oxidation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000673"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oxidation of alcohols to the corresponding carbonyl product using 2-iodoxybenzoic acid (IBX) as oxidizing agent.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://doi.org/10.1021/ol026427n"/>
     </owl:Axiom>
 </rdf:RDF>
 
