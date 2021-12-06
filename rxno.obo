@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: rxno.obo/2021-11-15
-date: 15:11:2021 13:00
+data-version: rxno.obo/2021-12-06
+date: 06:12:2021 15:00
 default-namespace: RXNO
 ontology: rxno
 property_value: http://purl.org/dc/elements/1.1/description "RXNO is the name reaction ontology. It contains more than 500 classes representing organic reactions such as the Diels–Alder cyclization." xsd:string
@@ -87,9 +87,21 @@ name: aldehyde
 is_a: CHEBI:36587 ! carbonyl compound
 
 [Term]
+id: CHEBI:17792
+name: organohalogen compound
+namespace: chebi_ontology
+alt_id: CHEBI:13444
+alt_id: CHEBI:36684
+alt_id: CHEBI:8767
+def: "A compound containing at least one carbon-halogen bond (where X is a halogen atom)." []
+subset: 3_STAR
+is_a: CHEBI:37578 ! halide
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
+
+[Term]
 id: CHEBI:17883
 name: hydrogen chloride
-is_a: CHEBI:23367 ! molecular entity
+is_a: CHEBI:18140 ! hydrogen halide
 
 [Term]
 id: CHEBI:17997
@@ -131,6 +143,17 @@ property_value: http://purl.obolibrary.org/obo/chebi/inchikey "IJGRMHOSHXDMSA-UH
 property_value: http://purl.obolibrary.org/obo/chebi/mass "28.01348" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "28.00615" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "N#N" xsd:string
+
+[Term]
+id: CHEBI:18140
+name: hydrogen halide
+namespace: chebi_ontology
+alt_id: CHEBI:13368
+alt_id: CHEBI:37140
+alt_id: CHEBI:5599
+subset: 3_STAR
+is_a: CHEBI:23367 ! molecular entity
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
 
 [Term]
 id: CHEBI:18310
@@ -192,6 +215,15 @@ is_a: CHEBI:35352 ! organonitrogen compound
 id: CHEBI:22698
 name: benzaldehydes
 is_a: CHEBI:17478 ! aldehyde
+
+[Term]
+id: CHEBI:22712
+name: benzenes
+namespace: chebi_ontology
+def: "Any benzenoid aromatic compound consisting of the benzene skeleton and its substituted derivatives." []
+subset: 3_STAR
+is_a: CHEBI:33836 ! benzenoid aromatic compound
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
 
 [Term]
 id: CHEBI:22715
@@ -267,7 +299,16 @@ is_a: CHEBI:24431 ! chemical entity
 [Term]
 id: CHEBI:24469
 name: haloalkane
-is_a: CHEBI:23367 ! molecular entity
+is_a: CHEBI:24472 ! halohydrocarbon
+
+[Term]
+id: CHEBI:24472
+name: halohydrocarbon
+namespace: chebi_ontology
+def: "A compound derived from a hydrocarbon by replacing a hydrogen atom with a halogen atom." []
+subset: 3_STAR
+is_a: CHEBI:17792 ! organohalogen compound
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
 
 [Term]
 id: CHEBI:24828
@@ -281,9 +322,27 @@ name: lactone
 is_a: CHEBI:38104 ! oxacycle
 
 [Term]
+id: CHEBI:25566
+name: nitrotoluene
+namespace: chebi_ontology
+def: "Any member of the class of  toluenes bearing one or more nitro substituents on the benzene ring." []
+subset: 3_STAR
+is_a: CHEBI:27024 ! toluenes
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
+
+[Term]
 id: CHEBI:25698
 name: ether
 is_a: CHEBI:36963 ! organooxygen compound
+
+[Term]
+id: CHEBI:25707
+name: organometallic compound
+namespace: chebi_ontology
+def: "A compound having bonds between one or more metal atoms and one or more carbon atoms of an organyl group." []
+subset: 3_STAR
+is_a: CHEBI:23367 ! molecular entity
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
 
 [Term]
 id: CHEBI:25710
@@ -315,6 +374,15 @@ is_a: CHEBI:23367 ! molecular entity
 id: CHEBI:25996
 name: phenylhydrazine
 is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:2634
+name: amidine
+namespace: chebi_ontology
+def: "Derivatives of oxoacids RnE(=O)OH in which the hydroxy group is replaced by an amino group and the oxo group is replaced by =NR. In organic chemistry an unspecified amidine is commonly a carboxamidine." []
+subset: 3_STAR
+is_a: CHEBI:23367 ! molecular entity
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
 
 [Term]
 id: CHEBI:26407
@@ -372,6 +440,15 @@ is_a: CHEBI:30879 ! alcohol
 id: CHEBI:26961
 name: thiophenes
 is_a: CHEBI:38106 ! organosulfur heterocyclic compound
+
+[Term]
+id: CHEBI:27024
+name: toluenes
+namespace: chebi_ontology
+def: "Any member of the class of benzenes that is a substituted benzene in which the substituents include one (and only one) methyl group." []
+subset: 3_STAR
+is_a: CHEBI:22712 ! benzenes
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
 
 [Term]
 id: CHEBI:27081
@@ -476,6 +553,15 @@ name: alcohol
 is_a: CHEBI:33822 ! organic hydroxy compound
 
 [Term]
+id: CHEBI:31697
+name: indolin-2-one
+namespace: chebi_ontology
+def: "An indolinone carrying an oxo group at position 2." []
+subset: 3_STAR
+is_a: CHEBI:24828 ! indoles
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
+
+[Term]
 id: CHEBI:32816
 name: pyruvic acid
 is_a: CHEBI:33575 ! carboxylic acid
@@ -567,14 +653,66 @@ name: cyclic compound
 is_a: CHEBI:23367 ! molecular entity
 
 [Term]
+id: CHEBI:33597
+name: homocyclic compound
+namespace: chebi_ontology
+def: "A cyclic compound having as ring members atoms of the same element only." []
+subset: 3_STAR
+is_a: CHEBI:33595 ! cyclic compound
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
+
+[Term]
+id: CHEBI:33598
+name: carbocyclic compound
+namespace: chebi_ontology
+def: "A homocyclic compound in which all of the ring members are carbon atoms." []
+subset: 3_STAR
+is_a: CHEBI:33597 ! homocyclic compound
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
+
+[Term]
+id: CHEBI:33635
+name: polycyclic compound
+namespace: chebi_ontology
+subset: 3_STAR
+is_a: CHEBI:33595 ! cyclic compound
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
+
+[Term]
 id: CHEBI:33641
 name: olefin
 is_a: CHEBI:23367 ! molecular entity
 
 [Term]
+id: CHEBI:33655
+name: aromatic compound
+namespace: chebi_ontology
+def: "A cyclically conjugated molecular entity with a stability (due to delocalization) significantly greater than that of a hypothetical localized structure (e.g. Kekule structure) is said to possess aromatic character." []
+subset: 3_STAR
+is_a: CHEBI:33595 ! cyclic compound
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
+
+[Term]
 id: CHEBI:33658
 name: arene
-is_a: CHEBI:72695 ! organic molecule
+is_a: CHEBI:33659 ! organic aromatic compound
+
+[Term]
+id: CHEBI:33659
+name: organic aromatic compound
+namespace: chebi_ontology
+subset: 3_STAR
+is_a: CHEBI:33655 ! aromatic compound
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
+
+[Term]
+id: CHEBI:33671
+name: heteropolycyclic compound
+namespace: chebi_ontology
+def: "A polycyclic compound in which at least one of the rings contains at least one non-carbon atom." []
+subset: 3_STAR
+is_a: CHEBI:33635 ! polycyclic compound
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
 
 [Term]
 id: CHEBI:33822
@@ -587,6 +725,14 @@ name: enol
 is_a: CHEBI:33822 ! organic hydroxy compound
 
 [Term]
+id: CHEBI:33836
+name: benzenoid aromatic compound
+namespace: chebi_ontology
+subset: 3_STAR
+is_a: CHEBI:33659 ! organic aromatic compound
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
+
+[Term]
 id: CHEBI:33839
 name: macromolecule
 is_a: CHEBI:23367 ! molecular entity
@@ -594,7 +740,8 @@ is_a: CHEBI:23367 ! molecular entity
 [Term]
 id: CHEBI:33853
 name: phenols
-is_a: CHEBI:72695 ! organic molecule
+is_a: CHEBI:33659 ! organic aromatic compound
+is_a: CHEBI:33822 ! organic hydroxy compound
 
 [Term]
 id: CHEBI:33860
@@ -604,17 +751,26 @@ is_a: CHEBI:32952 ! amine
 [Term]
 id: CHEBI:35255
 name: chloroform
-is_a: CHEBI:72695 ! organic molecule
+is_a: CHEBI:23128 ! chloroalkane
 
 [Term]
 id: CHEBI:35293
 name: fused compound
-is_a: CHEBI:33595 ! cyclic compound
+is_a: CHEBI:33635 ! polycyclic compound
 
 [Term]
 id: CHEBI:35352
 name: organonitrogen compound
 is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:35353
+name: isocyanide
+namespace: chebi_ontology
+def: "The isomer HN(+)#C(-) of hydrocyanic acid, HC#N, and its hydrocarbyl derivatives RNC (RN(+)#C(-))." []
+subset: 3_STAR
+is_a: CHEBI:35352 ! organonitrogen compound
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
 
 [Term]
 id: CHEBI:35403
@@ -677,11 +833,6 @@ name: acid anhydride
 is_a: CHEBI:23367 ! molecular entity
 
 [Term]
-id: CHEBI:36684
-name: organohalogen compound
-is_a: CHEBI:72695 ! organic molecule
-
-[Term]
 id: CHEBI:36687
 name: acyl chloride
 is_a: CHEBI:37579 ! acyl halide
@@ -718,9 +869,18 @@ name: bromoarene
 is_a: CHEBI:50887 ! haloarene
 
 [Term]
+id: CHEBI:37578
+name: halide
+namespace: chebi_ontology
+def: "Any heteroatomic molecular entity that is a chemical compound of halogen with other chemical elements." []
+subset: 3_STAR
+is_a: CHEBI:23367 ! molecular entity
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
+
+[Term]
 id: CHEBI:37579
 name: acyl halide
-is_a: CHEBI:23367 ! molecular entity
+is_a: CHEBI:37578 ! halide
 
 [Term]
 id: CHEBI:37592
@@ -735,7 +895,7 @@ is_a: CHEBI:23367 ! molecular entity
 [Term]
 id: CHEBI:37613
 name: cyclohexadiene
-is_a: CHEBI:33595 ! cyclic compound
+is_a: CHEBI:33598 ! carbocyclic compound
 is_a: CHEBI:33641 ! olefin
 
 [Term]
@@ -773,6 +933,16 @@ name: organosulfur heterocyclic compound
 comment: I think this is the same as a thiacycle but need to check.
 synonym: "thiacycle" EXACT []
 is_a: CHEBI:5686 ! heterocyclic compound
+
+[Term]
+id: CHEBI:38166
+name: organic heteropolycyclic compound
+namespace: chebi_ontology
+alt_id: CHEBI:25429
+alt_id: CHEBI:38075
+subset: 3_STAR
+is_a: CHEBI:33671 ! heteropolycyclic compound
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
 
 [Term]
 id: CHEBI:38269
@@ -860,7 +1030,7 @@ is_a: CHEBI:24433 ! group
 [Term]
 id: CHEBI:47266
 name: hydrogen bromide
-is_a: CHEBI:23367 ! molecular entity
+is_a: CHEBI:18140 ! hydrogen halide
 
 [Term]
 id: CHEBI:47875
@@ -927,13 +1097,13 @@ name: haloarene
 namespace: chebi_ontology
 def: "A compound derived from an arene by replacing a hydrogen atom with a halogen atom." []
 subset: 3_STAR
-is_a: CHEBI:36684 ! organohalogen compound
+is_a: CHEBI:24472 ! halohydrocarbon
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/200/chebi.owl xsd:string
 
 [Term]
 id: CHEBI:50888
 name: fluoroarene
-is_a: CHEBI:23367 ! molecular entity
+is_a: CHEBI:50887 ! haloarene
 
 [Term]
 id: CHEBI:50978
@@ -965,18 +1135,27 @@ name: organolithium compound
 namespace: chebi_ontology
 def: "A compound containing at least one carbon-lithium bond." []
 subset: 3_STAR
-is_a: CHEBI:23367 ! molecular entity
+is_a: CHEBI:25707 ! organometallic compound
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/200/chebi.owl xsd:string
+
+[Term]
+id: CHEBI:51187
+name: organomagnesium compound
+namespace: chebi_ontology
+def: "A compound containing at least one carbon-magnesium bond." []
+subset: 3_STAR
+is_a: CHEBI:25707 ! organometallic compound
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
 
 [Term]
 id: CHEBI:51236
 name: organomagnesium halide
-is_a: CHEBI:23367 ! molecular entity
+is_a: CHEBI:51187 ! organomagnesium compound
 
 [Term]
 id: CHEBI:51454
 name: cyclopropanes
-is_a: CHEBI:33595 ! cyclic compound
+is_a: CHEBI:33598 ! carbocyclic compound
 
 [Term]
 id: CHEBI:51462
@@ -7433,7 +7612,6 @@ synonym: "Miyaura boration" EXACT []
 synonym: "Miyaura borylation reaction" EXACT []
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
 relationship: RXNO:0000423 CHEBI:50978 ! has specified product boronate
-relationship: RXNO:0000424 CHEBI:36684 ! has specified reactant organohalogen compound
 relationship: RXNO:0000425 CHEBI:33363 ! has_catalyst palladium atom
 property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
 property_value: http://purl.org/dc/elements/1.1/date 2021-11-04T10:48:44Z xsd:dateTime
@@ -7479,7 +7657,7 @@ property_value: http://purl.org/dc/elements/1.1/date 2021-11-05T07:51:22Z xsd:da
 id: RXNO:0000663
 name: nitroxide exchange reaction
 def: "Nitroxide exchange reactions are based on thermal C–O bond homolysis of alkoxyamines, which leads to transient carbon-centred radicals and persistent nitroxide radicals. Usually these carbon centred radicals are quickly trapped by the nitroxide radicals and reform the alkoxyamines." [https://doi.org/10.1039/C6RA06510D]
-comment: IUPAC does not recommend the use of the often synonymously used terms "nitroxyl radicals" or "nitroxides" for the class of "aminoxyl radicals". {xref="https://doi.org/10.1351/goldbook.N04171", xref="https://doi.org/10.1351/goldbook.A00285"}
+comment: IUPAC does not recommend the use of the often synonymously used terms "nitroxyl radicals" or "nitroxides" for the class of "aminoxyl radicals". {xref="https://doi.org/10.1351/goldbook.A00285", xref="https://doi.org/10.1351/goldbook.N04171"}
 is_a: RXNO:0000011 ! functional group modification
 relationship: RXNO:0000423 CHEBI:39477 ! has specified product aminoxyls
 relationship: RXNO:0000424 CHEBI:39477 ! has specified reactant aminoxyls
@@ -7557,6 +7735,41 @@ property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-00
 property_value: http://purl.org/dc/elements/1.1/date 2021-11-15T09:44:42Z xsd:dateTime
 
 [Term]
+id: RXNO:0000670
+name: Groebke-Blackburn-Bienaymé reaction
+def: "A three-component reaction (3CR) of a heterocyclic amidine, an aldehyde, and an isocyanide, resulting in a cyclic compound with imidazo[1,2-a] heterocycle as the core structure." [https://doi.org/10.1002/ejoc.201901124]
+synonym: "GBB reaction" EXACT []
+synonym: "GBB‐3CR reaction" EXACT []
+is_a: RXNO:0000052 ! fused-ring-system formation
+relationship: RXNO:0000423 CHEBI:38166 ! has specified product organic heteropolycyclic compound
+relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
+relationship: RXNO:0000424 CHEBI:2634 ! has specified reactant amidine
+relationship: RXNO:0000424 CHEBI:35353 ! has specified reactant isocyanide
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
+property_value: http://purl.org/dc/elements/1.1/date 2021-12-03T09:13:40Z xsd:dateTime
+
+[Term]
+id: RXNO:0000671
+name: Baeyer oxindole synthesis
+def: "The preparation of oxindole/indolin-2-one from 2-nitrophenylacetic acid by reduction of the nitro group and subsequent dehydration." [https://doi.org/10.1021/cr60118a003]
+synonym: "Baeyer indolinone synthesis" RELATED []
+is_a: RXNO:0000052 ! fused-ring-system formation
+relationship: RXNO:0000423 CHEBI:31697 ! has specified product indolin-2-one
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
+property_value: http://purl.org/dc/elements/1.1/date 2021-12-03T14:20:07Z xsd:dateTime
+
+[Term]
+id: RXNO:0000672
+name: Leimgruber-Batcho indole synthesis
+def: "Condensation of a formamide acetal with a derivative of o-nitrotoluene to yield an enamine intermediate that subsequently undergoes reductive cyclization to give the corresponding indole." [https://www.rsc.org/Merck-Index/reaction/r253/leimgruber-batcho%20indole%20synthesis]
+synonym: "Batcho-Leimgruber indole synthesis" EXACT []
+is_a: RXNO:0000395 ! indole synthesis
+relationship: RXNO:0000423 CHEBI:24828 ! has specified product indoles
+relationship: RXNO:0000424 CHEBI:25566 ! has specified reactant nitrotoluene
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
+property_value: http://purl.org/dc/elements/1.1/date 2021-12-03T14:45:01Z xsd:dateTime
+
+[Term]
 id: RXNO:0000673
 name: IBX oxidation
 def: "Oxidation of alcohols to the corresponding carbonyl product using 2-iodoxybenzoic acid (IBX) as oxidizing agent." [https://doi.org/10.1021/ol026427n]
@@ -7568,6 +7781,27 @@ relationship: RXNO:0000424 CHEBI:15734 ! has specified reactant primary alcohol
 relationship: RXNO:0000424 CHEBI:35681 ! has specified reactant secondary alcohol
 property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
 property_value: http://purl.org/dc/elements/1.1/date 2021-11-15T11:24:35Z xsd:dateTime
+
+[Term]
+id: RXNO:0000674
+name: decarboxylative cross-coupling
+def: "A chemical reaction in which a carboxylic acid (or its salt) reacts with an organic (alkyl or aryl) halide to form a new carbon-carbon bond with concomitant loss of CO2. In addition, the reaction requires a metal catalyst, a base and an oxidizing agent." [https://en.wikipedia.org/wiki/Decarboxylative_cross-coupling]
+is_a: RXNO:0000603 ! cross-coupling
+relationship: RXNO:0000423 CHEBI:16526 ! has specified product carbon dioxide
+relationship: RXNO:0000424 CHEBI:17792 ! has specified reactant organohalogen compound
+relationship: RXNO:0000424 CHEBI:33575 ! has specified reactant carboxylic acid
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
+property_value: http://purl.org/dc/elements/1.1/date 2021-12-06T08:44:51Z xsd:dateTime
+
+[Term]
+id: RXNO:0000675
+name: Balsohn alkylation
+def: "A carbon-carbon coupling reaction between an arene and an alkene to give a substituted arene. The reaction is catalysed by a Lewis acid." [https://second.wiki/wiki/balsohn-alkylierung]
+is_a: RXNO:0000002 ! carbon-carbon coupling reaction
+relationship: RXNO:0000424 CHEBI:32878 ! has specified reactant alkene
+relationship: RXNO:0000424 CHEBI:33658 ! has specified reactant arene
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
+property_value: http://purl.org/dc/elements/1.1/date 2021-12-06T11:08:37Z xsd:dateTime
 
 [Typedef]
 id: BFO:0000055
