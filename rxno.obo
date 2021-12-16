@@ -1,12 +1,12 @@
 format-version: 1.2
-data-version: rxno.obo/2021-12-06
-date: 06:12:2021 15:00
+data-version: releases/2021-12-16
+date: 16:12:2021 15:55
 default-namespace: RXNO
 ontology: rxno
 property_value: http://purl.org/dc/elements/1.1/description "RXNO is the name reaction ontology. It contains more than 500 classes representing organic reactions such as the Diels–Alder cyclization." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "RXNO" xsd:string
 property_value: http://purl.org/dc/terms/license http://creativecommons.org/licenses/by/4.0/
-owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#id>))\n\n\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CHEBI_22495> \"CHEBI:33855\"^^xsd:string)\n)
+owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_16134>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_17087>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_17478>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_32863>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_32877>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_33403>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_33848>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_36587>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_38976>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_60983>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/RXNO_0000676>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/RXNO_0000679>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/RXNO_0000688>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RXNO_0000423>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RXNO_0000424>))\nDeclaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#id>))\n\n\n\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/RXNO_0000676> (Kabachnik-Fields reaction)\n\nSubClassOf(<http://purl.obolibrary.org/obo/RXNO_0000676> ObjectIntersectionOf(ObjectUnionOf(<http://purl.obolibrary.org/obo/CHEBI_17478> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RXNO_0000424> <http://purl.obolibrary.org/obo/CHEBI_17087>)) ObjectUnionOf(<http://purl.obolibrary.org/obo/CHEBI_32863> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RXNO_0000424> <http://purl.obolibrary.org/obo/CHEBI_32877>)) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RXNO_0000424> <http://purl.obolibrary.org/obo/CHEBI_60983>)))\n\n# Class: <http://purl.obolibrary.org/obo/RXNO_0000679> (Baddeley isomerization)\n\nSubClassOf(<http://purl.obolibrary.org/obo/RXNO_0000679> ObjectUnionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RXNO_0000423> <http://purl.obolibrary.org/obo/CHEBI_33848>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RXNO_0000423> <http://purl.obolibrary.org/obo/CHEBI_38976>)))\nSubClassOf(<http://purl.obolibrary.org/obo/RXNO_0000679> ObjectUnionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RXNO_0000424> <http://purl.obolibrary.org/obo/CHEBI_33848>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RXNO_0000424> <http://purl.obolibrary.org/obo/CHEBI_38976>)))\n\n# Class: <http://purl.obolibrary.org/obo/RXNO_0000688> (Asinger reaction)\n\nSubClassOf(<http://purl.obolibrary.org/obo/RXNO_0000688> ObjectIntersectionOf(ObjectUnionOf(<http://purl.obolibrary.org/obo/CHEBI_17478> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RXNO_0000424> <http://purl.obolibrary.org/obo/CHEBI_17087>)) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RXNO_0000424> <http://purl.obolibrary.org/obo/CHEBI_16134>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RXNO_0000424> <http://purl.obolibrary.org/obo/CHEBI_33403>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RXNO_0000424> <http://purl.obolibrary.org/obo/CHEBI_36587>)))\n\n\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CHEBI_22495> \"CHEBI:33855\"^^xsd:string)\n)
 
 [Term]
 id: BFO:0000015
@@ -41,6 +41,37 @@ name: primary alcohol
 is_a: CHEBI:30879 ! alcohol
 
 [Term]
+id: CHEBI:15882
+name: phenol
+namespace: chebi_ontology
+alt_id: CHEBI:14777
+alt_id: CHEBI:25966
+alt_id: CHEBI:43543
+alt_id: CHEBI:8071
+def: "An organic hydroxy compound that consists of benzene bearing a single hydroxy substituent. The parent of the class of phenols." []
+subset: 3_STAR
+is_a: CHEBI:33853 ! phenols
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
+
+[Term]
+id: CHEBI:16134
+name: ammonia
+namespace: chebi_ontology
+alt_id: CHEBI:13405
+alt_id: CHEBI:13406
+alt_id: CHEBI:13407
+alt_id: CHEBI:13771
+alt_id: CHEBI:22533
+alt_id: CHEBI:44269
+alt_id: CHEBI:44284
+alt_id: CHEBI:44404
+alt_id: CHEBI:7434
+def: "An azane that consists of a single nitrogen atom covelently bonded to three hydrogen atoms." []
+subset: 3_STAR
+is_a: CHEBI:23367 ! molecular entity
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
+
+[Term]
 id: CHEBI:16227
 name: pyridine
 is_a: CHEBI:26421 ! pyridines
@@ -64,7 +95,18 @@ is_a: CHEBI:23367 ! molecular entity
 [Term]
 id: CHEBI:16526
 name: carbon dioxide
-is_a: CHEBI:23367 ! molecular entity
+is_a: CHEBI:23014 ! carbon oxide
+
+[Term]
+id: CHEBI:16648
+name: dialkyl phosphate
+namespace: chebi_ontology
+alt_id: CHEBI:14137
+alt_id: CHEBI:23664
+alt_id: CHEBI:4486
+subset: 3_STAR
+is_a: CHEBI:22324 ! alkyl phosphate
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
 
 [Term]
 id: CHEBI:16670
@@ -80,6 +122,28 @@ is_a: CHEBI:17478 ! aldehyde
 id: CHEBI:17087
 name: ketone
 is_a: CHEBI:36587 ! carbonyl compound
+
+[Term]
+id: CHEBI:17245
+name: carbon monoxide
+namespace: chebi_ontology
+alt_id: CHEBI:13281
+alt_id: CHEBI:23013
+alt_id: CHEBI:3282
+alt_id: CHEBI:41526
+def: "A one-carbon compound in which the carbon is joined only to a single oxygen. It is a colourless, odourless, tasteless, toxic gas." []
+subset: 3_STAR
+is_a: CHEBI:23014 ! carbon oxide
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
+
+[Term]
+id: CHEBI:172874
+name: phenylsilane
+namespace: chebi_ontology
+def: "An organosilicon compound that is benzene in which a hydrogen is replaced by a silyl group." []
+subset: 3_STAR
+is_a: CHEBI:25713 ! organosilicon compound
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
 
 [Term]
 id: CHEBI:17478
@@ -156,6 +220,18 @@ is_a: CHEBI:23367 ! molecular entity
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
 
 [Term]
+id: CHEBI:18291
+name: manganese atom
+namespace: chebi_ontology
+alt_id: CHEBI:13382
+alt_id: CHEBI:25153
+alt_id: CHEBI:6681
+def: "A manganese group element atom that has formula Mn." []
+subset: 3_STAR
+is_a: CHEBI:27081 ! transition element atom
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
+
+[Term]
 id: CHEBI:18310
 name: alkane
 namespace: chebi_ontology
@@ -185,13 +261,21 @@ property_value: http://purl.obolibrary.org/obo/chebi/smiles "C[*]" xsd:string
 [Term]
 id: CHEBI:18379
 name: nitrile
-is_a: CHEBI:23367 ! molecular entity
+is_a: CHEBI:23424 ! cyanides
 
 [Term]
 id: CHEBI:22213
 name: acridines
 is_a: CHEBI:35293 ! fused compound
-is_a: CHEBI:38101 ! azacycle
+is_a: CHEBI:38101 ! organonitrogen heterocyclic compound
+
+[Term]
+id: CHEBI:22324
+name: alkyl phosphate
+namespace: chebi_ontology
+subset: 3_STAR
+is_a: CHEBI:25703 ! organic phosphate
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
 
 [Term]
 id: CHEBI:22339
@@ -209,7 +293,7 @@ is_a: CHEBI:17478 ! aldehyde
 [Term]
 id: CHEBI:22680
 name: azide
-is_a: CHEBI:35352 ! organonitrogen compound
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:22698
@@ -234,6 +318,14 @@ is_a: CHEBI:23367 ! molecular entity
 id: CHEBI:22929
 name: bromoalkane
 is_a: CHEBI:24469 ! haloalkane
+
+[Term]
+id: CHEBI:23014
+name: carbon oxide
+namespace: chebi_ontology
+subset: 3_STAR
+is_a: CHEBI:36963 ! organooxygen compound
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
 
 [Term]
 id: CHEBI:23019
@@ -271,6 +363,15 @@ id: CHEBI:23367
 name: molecular entity
 is_a: CHEBI:24431 ! chemical entity
 disjoint_from: CHEBI:24433 ! group
+
+[Term]
+id: CHEBI:23424
+name: cyanides
+namespace: chebi_ontology
+def: "Salts and C-organyl derivatives of hydrogen cyanide, HC#N." []
+subset: 3_STAR
+is_a: CHEBI:35352 ! organonitrogen compound
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
 
 [Term]
 id: CHEBI:24043
@@ -314,7 +415,7 @@ property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl x
 id: CHEBI:24828
 name: indoles
 is_a: CHEBI:35293 ! fused compound
-is_a: CHEBI:38101 ! azacycle
+is_a: CHEBI:38101 ! organonitrogen heterocyclic compound
 
 [Term]
 id: CHEBI:25000
@@ -334,6 +435,14 @@ property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl x
 id: CHEBI:25698
 name: ether
 is_a: CHEBI:36963 ! organooxygen compound
+
+[Term]
+id: CHEBI:25703
+name: organic phosphate
+namespace: chebi_ontology
+subset: 3_STAR
+is_a: CHEBI:25710 ! organophosphorus compound
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
 
 [Term]
 id: CHEBI:25707
@@ -395,22 +504,22 @@ property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/205/chebi.owl x
 [Term]
 id: CHEBI:26410
 name: pyrazoles
-is_a: CHEBI:38101 ! azacycle
+is_a: CHEBI:38101 ! organonitrogen heterocyclic compound
 
 [Term]
 id: CHEBI:26421
 name: pyridines
-is_a: CHEBI:38101 ! azacycle
+is_a: CHEBI:38101 ! organonitrogen heterocyclic compound
 
 [Term]
 id: CHEBI:26455
 name: pyrroles
-is_a: CHEBI:38101 ! azacycle
+is_a: CHEBI:38101 ! organonitrogen heterocyclic compound
 
 [Term]
 id: CHEBI:26513
 name: quinolines
-is_a: CHEBI:38101 ! azacycle
+is_a: CHEBI:38101 ! organonitrogen heterocyclic compound
 
 [Term]
 id: CHEBI:26519
@@ -424,7 +533,7 @@ property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/205/chebi.owl x
 [Term]
 id: CHEBI:26588
 name: triazines
-is_a: CHEBI:38101 ! azacycle
+is_a: CHEBI:38101 ! organonitrogen heterocyclic compound
 
 [Term]
 id: CHEBI:26708
@@ -590,7 +699,7 @@ is_a: CHEBI:33641 ! olefin
 [Term]
 id: CHEBI:32952
 name: amine
-is_a: CHEBI:23367 ! molecular entity
+is_a: CHEBI:50047 ! organic amino compound
 
 [Term]
 id: CHEBI:32955
@@ -611,6 +720,15 @@ is_a: CHEBI:24431 ! chemical entity
 id: CHEBI:33256
 name: primary amide
 is_a: CHEBI:32988 ! amide
+
+[Term]
+id: CHEBI:33259
+name: elemental molecular entity
+namespace: chebi_ontology
+def: "A molecular entity all atoms of which have the same atomic number." []
+subset: 3_STAR
+is_a: CHEBI:23367 ! molecular entity
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
 
 [Term]
 id: CHEBI:33308
@@ -636,6 +754,22 @@ is_a: CHEBI:27081 ! transition element atom
 id: CHEBI:33364
 name: platinum atom
 is_a: CHEBI:27081 ! transition element atom
+
+[Term]
+id: CHEBI:33403
+name: elemental sulfur
+namespace: chebi_ontology
+subset: 3_STAR
+is_a: CHEBI:33259 ! elemental molecular entity
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
+
+[Term]
+id: CHEBI:33434
+name: elemental halogen
+namespace: chebi_ontology
+subset: 3_STAR
+is_a: CHEBI:33259 ! elemental molecular entity
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
 
 [Term]
 id: CHEBI:33521
@@ -738,6 +872,24 @@ name: macromolecule
 is_a: CHEBI:23367 ! molecular entity
 
 [Term]
+id: CHEBI:33847
+name: monocyclic arene
+namespace: chebi_ontology
+def: "A monocyclic aromatic hydrocarbon." []
+subset: 3_STAR
+is_a: CHEBI:33658 ! arene
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
+
+[Term]
+id: CHEBI:33848
+name: polycyclic arene
+namespace: chebi_ontology
+def: "A polycyclic aromatic hydrocarbon." []
+subset: 3_STAR
+is_a: CHEBI:33658 ! arene
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
+
+[Term]
 id: CHEBI:33853
 name: phenols
 is_a: CHEBI:33659 ! organic aromatic compound
@@ -746,7 +898,8 @@ is_a: CHEBI:33822 ! organic hydroxy compound
 [Term]
 id: CHEBI:33860
 name: aromatic amine
-is_a: CHEBI:32952 ! amine
+is_a: CHEBI:33659 ! organic aromatic compound
+is_a: CHEBI:50047 ! organic amino compound
 
 [Term]
 id: CHEBI:35255
@@ -795,7 +948,18 @@ is_a: CHEBI:30879 ! alcohol
 [Term]
 id: CHEBI:35689
 name: tetrazoles
-is_a: CHEBI:38101 ! azacycle
+is_a: CHEBI:38101 ! organonitrogen heterocyclic compound
+
+[Term]
+id: CHEBI:35701
+name: ester
+namespace: chebi_ontology
+alt_id: CHEBI:23960
+alt_id: CHEBI:4859
+def: "A compound formally derived from an oxoacid RkE(=O)l(OH)m (l > 0) and an alcohol, phenol, heteroarenol, or enol by linking with formal loss of water from an acidic hydroxy group of the former and a hydroxy group of the latter." []
+subset: 3_STAR
+is_a: CHEBI:36963 ! organooxygen compound
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
 
 [Term]
 id: CHEBI:35715
@@ -904,6 +1068,17 @@ name: carboxamide
 is_a: CHEBI:33256 ! primary amide
 
 [Term]
+id: CHEBI:37735
+name: phosphonic ester
+namespace: chebi_ontology
+alt_id: CHEBI:26068
+alt_id: CHEBI:4861
+def: "A phosphonic acid derivative in which one or both OH groups have been esterified." []
+subset: 3_STAR
+is_a: CHEBI:35701 ! ester
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
+
+[Term]
 id: CHEBI:37757
 name: iodoalkane
 is_a: CHEBI:24469 ! haloalkane
@@ -919,8 +1094,13 @@ property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/205/chebi.owl x
 
 [Term]
 id: CHEBI:38101
-name: azacycle
+name: organonitrogen heterocyclic compound
+namespace: chebi_ontology
+def: "Any organonitrogen compound containing a cyclic component with nitrogen and at least one other element as ring member atoms." []
+subset: 3_STAR
+is_a: CHEBI:35352 ! organonitrogen compound
 is_a: CHEBI:5686 ! heterocyclic compound
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
 
 [Term]
 id: CHEBI:38104
@@ -965,6 +1145,16 @@ name: oxetanes
 is_a: CHEBI:38104 ! oxacycle
 
 [Term]
+id: CHEBI:38976
+name: alkylbenzene
+namespace: chebi_ontology
+def: "A  monocyclic arene that is benzene substituted with one or more alkyl groups." []
+subset: 3_STAR
+is_a: CHEBI:22712 ! benzenes
+is_a: CHEBI:33847 ! monocyclic arene
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
+
+[Term]
 id: CHEBI:39141
 name: Brønsted acid
 is_a: BFO:0000016 ! disposition
@@ -985,9 +1175,18 @@ name: Lewis base
 is_a: BFO:0000016 ! disposition
 
 [Term]
+id: CHEBI:39279
+name: halomethane
+namespace: chebi_ontology
+def: "A haloalkane that is methane in which one (or more) of the hydrogens have been replaced by a halogen atom/halogen atoms." []
+subset: 3_STAR
+is_a: CHEBI:24469 ! haloalkane
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
+
+[Term]
 id: CHEBI:39447
 name: pyrimidines
-is_a: CHEBI:38101 ! azacycle
+is_a: CHEBI:38101 ! organonitrogen heterocyclic compound
 
 [Term]
 id: CHEBI:39477
@@ -1035,7 +1234,7 @@ is_a: CHEBI:18140 ! hydrogen halide
 [Term]
 id: CHEBI:47875
 name: tetrabromomethane
-is_a: CHEBI:23367 ! molecular entity
+is_a: CHEBI:22929 ! bromoalkane
 
 [Term]
 id: CHEBI:47985
@@ -1056,6 +1255,16 @@ is_a: CHEBI:47985 ! enol ether
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/205/chebi.owl xsd:string
 
 [Term]
+id: CHEBI:47988
+name: silyl ether
+namespace: chebi_ontology
+def: "Ethers ROR' where R' has the structure SiR''R'''R''''." []
+subset: 3_STAR
+is_a: CHEBI:25698 ! ether
+is_a: CHEBI:25713 ! organosilicon compound
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
+
+[Term]
 id: CHEBI:48420
 name: chromium trioxide
 is_a: CHEBI:35403 ! chromium coordination entity
@@ -1064,7 +1273,17 @@ is_a: CHEBI:35403 ! chromium coordination entity
 id: CHEBI:48513
 name: carbazoles
 is_a: CHEBI:35293 ! fused compound
-is_a: CHEBI:38101 ! azacycle
+is_a: CHEBI:38101 ! organonitrogen heterocyclic compound
+
+[Term]
+id: CHEBI:48901
+name: thiazoles
+namespace: chebi_ontology
+def: "An azole in which the five-membered heterocyclic aromatic skeleton contains a N atom and one S atom." []
+subset: 3_STAR
+is_a: CHEBI:38106 ! organosulfur heterocyclic compound
+is_a: CHEBI:68452 ! azole
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
 
 [Term]
 id: CHEBI:49553
@@ -1072,9 +1291,18 @@ name: copper(II) chloride
 is_a: CHEBI:23367 ! molecular entity
 
 [Term]
+id: CHEBI:50047
+name: organic amino compound
+namespace: chebi_ontology
+def: "A compound formally derived from ammonia by replacing one, two or three hydrogen atoms by organyl groups." []
+subset: 3_STAR
+is_a: CHEBI:35352 ! organonitrogen compound
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
+
+[Term]
 id: CHEBI:50075
 name: dihydropyridine
-is_a: CHEBI:38101 ! azacycle
+is_a: CHEBI:38101 ! organonitrogen heterocyclic compound
 
 [Term]
 id: CHEBI:50413
@@ -1117,7 +1345,7 @@ property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/200/chebi.owl x
 [Term]
 id: CHEBI:51080
 name: nitrate ester
-is_a: CHEBI:23367 ! molecular entity
+is_a: CHEBI:36963 ! organooxygen compound
 
 [Term]
 id: CHEBI:51142
@@ -1153,6 +1381,15 @@ name: organomagnesium halide
 is_a: CHEBI:51187 ! organomagnesium compound
 
 [Term]
+id: CHEBI:51277
+name: thioester
+namespace: chebi_ontology
+def: "A compound of general formula RC(=O)SR'. Compare with thionoester, RC(=S)OR'." []
+subset: 3_STAR
+is_a: CHEBI:36587 ! carbonyl compound
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
+
+[Term]
 id: CHEBI:51454
 name: cyclopropanes
 is_a: CHEBI:33598 ! carbocyclic compound
@@ -1176,15 +1413,52 @@ is_a: CHEBI:51462 ! alkyllithium compound
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/200/chebi.owl xsd:string
 
 [Term]
+id: CHEBI:51494
+name: organozinc compound
+namespace: chebi_ontology
+def: "A compound containing at least one carbon-zinc bond." []
+subset: 3_STAR
+is_a: CHEBI:25707 ! organometallic compound
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
+
+[Term]
+id: CHEBI:51614
+name: diarylmethane
+namespace: chebi_ontology
+def: "Any compound containing two aryl groups connected by a single C atom." []
+subset: 3_STAR
+is_a: CHEBI:33659 ! organic aromatic compound
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
+
+[Term]
 id: CHEBI:51721
 name: alpha,beta-unsaturated ketone
 is_a: CHEBI:17087 ! ketone
+
+[Term]
+id: CHEBI:51839
+name: alpha-haloketone
+namespace: chebi_ontology
+def: "A haloketone in which the halogen and oxo substituents are on adjacent carbon atoms." []
+subset: 3_STAR
+is_a: CHEBI:17087 ! ketone
+is_a: CHEBI:17792 ! organohalogen compound
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
 
 [Term]
 id: CHEBI:51849
 name: beta-ketoester
 is_a: CHEBI:17087 ! ketone
 is_a: CHEBI:33308 ! carboxylic ester
+
+[Term]
+id: CHEBI:51867
+name: methyl ketone
+namespace: chebi_ontology
+def: "A ketone of formula RC(=O)CH3 (R =/= H)." []
+subset: 3_STAR
+is_a: CHEBI:17087 ! ketone
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
 
 [Term]
 id: CHEBI:51929
@@ -1209,6 +1483,7 @@ property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/205/chebi.owl x
 id: CHEBI:53212
 name: isocyanates
 is_a: CHEBI:35352 ! organonitrogen compound
+is_a: CHEBI:36963 ! organooxygen compound
 
 [Term]
 id: CHEBI:53434
@@ -1258,6 +1533,62 @@ is_a: CHEBI:36963 ! organooxygen compound
 id: CHEBI:59831
 name: enyne
 is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:59999
+name: chemical substance
+namespace: chebi_ontology
+def: "A chemical substance is a portion of matter of constant composition, composed of molecular entities of the same type or of different types." []
+subset: 3_STAR
+is_a: CHEBI:24431 ! chemical entity
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
+
+[Term]
+id: CHEBI:60004
+name: mixture
+namespace: chebi_ontology
+def: "A mixture is a chemical substance composed of multiple molecules, at least two of which are of a different kind." []
+subset: 3_STAR
+is_a: CHEBI:59999 ! chemical substance
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
+
+[Term]
+id: CHEBI:60027
+name: polymer
+namespace: chebi_ontology
+def: "A polymer is a mixture, which is composed of macromolecules of different kinds and which may be differentiated by composition, length, degree of branching etc.." []
+subset: 3_STAR
+is_a: CHEBI:60004 ! mixture
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
+
+[Term]
+id: CHEBI:60983
+name: alkylphosphonate
+namespace: chebi_ontology
+alt_id: CHEBI:2591
+def: "An organic phosphonate containing a C-PO(OH)2 or C-PO(OR)2  group (where R = alkyl group)." []
+subset: 3_STAR
+is_a: CHEBI:37592 ! organic phosphonate
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
+
+[Term]
+id: CHEBI:61111
+name: aminophosphonate
+namespace: chebi_ontology
+def: "An organic phosphonate of formula (RO)2P(=O)-CR2-NR2; R can be H." []
+subset: 3_STAR
+is_a: CHEBI:35352 ! organonitrogen compound
+is_a: CHEBI:37592 ! organic phosphonate
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
+
+[Term]
+id: CHEBI:68452
+name: azole
+namespace: chebi_ontology
+def: "Any monocyclic heteroarene consisting of a five-membered ring containing nitrogen. Azoles can also contain one or more other non-carbon atoms, such as nitrogen, sulfur or oxygen." []
+subset: 3_STAR
+is_a: CHEBI:38101 ! organonitrogen heterocyclic compound
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi/206/chebi.owl xsd:string
 
 [Term]
 id: CHEBI:72695
@@ -5013,8 +5344,8 @@ def: "A ring formation reaction where the intended product contains an azacycle 
 xref: NAMERXN:4.1
 is_a: RXNO:0000349 ! heterocycle synthesis
 intersection_of: MOP:0000543 ! molecular process
-intersection_of: RXNO:0000423 CHEBI:38101 ! has specified product azacycle
-relationship: RXNO:0000423 CHEBI:38101 ! has specified product azacycle
+intersection_of: RXNO:0000423 CHEBI:38101 ! has specified product organonitrogen heterocyclic compound
+relationship: RXNO:0000423 CHEBI:38101 ! has specified product organonitrogen heterocyclic compound
 created_by: batchelorc
 creation_date: 2012-03-22T03:24:12Z
 
@@ -5328,7 +5659,7 @@ is_a: RXNO:0000331 ! substitution step
 
 [Term]
 id: RXNO:0000383
-name: Thiol-yne reaction
+name: thiol-yne reaction
 def: "Reaction of an thiol with an alkyne to form an alkenyl sulfide." [https://en.wikipedia.org/wiki/Thiol-yne_reaction]
 synonym: "alkyne hydrothiolation" EXACT []
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
@@ -7186,6 +7517,10 @@ name: Liebeskind-Srogl coupling
 def: "A cross-coupling reaction where a thioester and a boronic acid react to form a ketone. It uses a metal catalyst." [https://orcid.org/0000-0001-5985-7429]
 xref: https://www.wikidata.org/wiki/Q6543886
 is_a: RXNO:0000603 ! cross-coupling
+relationship: RXNO:0000423 CHEBI:17087 ! has specified product ketone
+relationship: RXNO:0000424 CHEBI:38269 ! has specified reactant boronic acids
+relationship: RXNO:0000424 CHEBI:51277 ! has specified reactant thioester
+relationship: RXNO:0000425 CHEBI:27081 ! has_catalyst transition element atom
 
 [Term]
 id: RXNO:0000605
@@ -7193,6 +7528,10 @@ name: Fukuyama coupling
 def: "A cross-coupling reaction where a thioester and an organozinc halide react to form a ketone. It uses a palladium catalyst." [https://orcid.org/0000-0001-5985-7429]
 xref: https://www.wikidata.org/wiki/Q5507762
 is_a: RXNO:0000603 ! cross-coupling
+relationship: RXNO:0000423 CHEBI:17087 ! has specified product ketone
+relationship: RXNO:0000424 CHEBI:51277 ! has specified reactant thioester
+relationship: RXNO:0000424 CHEBI:51494 ! has specified reactant organozinc compound
+relationship: RXNO:0000425 CHEBI:33363 ! has_catalyst palladium atom
 
 [Term]
 id: RXNO:0000606
@@ -7552,7 +7891,7 @@ def: "The Mukaiyama hydration is an organic reaction involving formal addition o
 is_a: MOP:0000642 ! addition reaction
 relationship: RXNO:0000423 CHEBI:30879 ! has specified product alcohol
 relationship: RXNO:0000424 CHEBI:15379 ! has specified reactant dioxygen
-relationship: RXNO:0000424 CHEBI:25713 ! has specified reactant organosilicon compound
+relationship: RXNO:0000424 CHEBI:172874 ! has specified reactant phenylsilane
 relationship: RXNO:0000424 CHEBI:32878 ! has specified reactant alkene
 property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
 property_value: http://purl.org/dc/elements/1.1/date 2021-05-11T07:40:36Z xsd:dateTime
@@ -7631,8 +7970,8 @@ property_value: http://purl.org/dc/elements/1.1/date 2021-11-04T11:03:16Z xsd:da
 
 [Term]
 id: RXNO:0000661
-name: Tsuji–Wilkinson decarbonylation
-def: "The Tsuji–Wilkinson decarbonylation reaction is a method for the decarbonylation of aldehydes and some acyl chlorides." [https://dbpedia.org/page/Tsuji%E2%80%93Wilkinson_decarbonylation_reaction] {comment="Although decarbonylation can be effected by several transition metal complexes, Wilkinson's catalyst has proven the most effective."}
+name: Tsuji-Wilkinson decarbonylation
+def: "The Tsuji-Wilkinson decarbonylation reaction is a method for the decarbonylation of aldehydes and some acyl chlorides." [https://dbpedia.org/page/Tsuji%E2%80%93Wilkinson_decarbonylation_reaction] {comment="Although decarbonylation can be effected by several transition metal complexes, Wilkinson's catalyst has proven the most effective."}
 is_a: RXNO:0000105 ! end-of-chain chain shortening
 relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
 relationship: RXNO:0000424 CHEBI:36687 ! has specified reactant acyl chloride
@@ -7802,6 +8141,199 @@ relationship: RXNO:0000424 CHEBI:32878 ! has specified reactant alkene
 relationship: RXNO:0000424 CHEBI:33658 ! has specified reactant arene
 property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
 property_value: http://purl.org/dc/elements/1.1/date 2021-12-06T11:08:37Z xsd:dateTime
+
+[Term]
+id: RXNO:0000676
+name: Kabachnik-Fields reaction
+def: "A three-component condensation reaction in which primary or secondary amines react with a carbonyl compound (aldehyde or ketone) and a dialkyl phosphonate (also called dialkyl phosphite) to form an alpha-aminophosphonate." [https://doi.org/10.3390/molecules171112821]
+synonym: "phospha-Mannich reaction" RELATED []
+is_a: MOP:0000628 ! molecular dehydration reaction
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
+relationship: RXNO:0000423 CHEBI:61111 ! has specified product aminophosphonate
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
+property_value: http://purl.org/dc/elements/1.1/date 2021-12-13T11:39:08Z xsd:dateTime
+
+[Term]
+id: RXNO:0000677
+name: Baekeland-Manasse-Lederer reaction
+def: "A polymerisation reaction in which phenol and formaldehyde react together in a chain reaction to form a phenol formaldehyde resin (also infrequently called phenoplast)." [https://doi.org/10.1021/ie50003a004]
+is_a: RXNO:0000246 ! polymerisation reaction
+relationship: RXNO:0000424 CHEBI:15882 ! has specified reactant phenol
+relationship: RXNO:0000424 CHEBI:16842 ! has specified reactant formaldehyde
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
+property_value: http://purl.org/dc/elements/1.1/date 2021-12-13T12:52:17Z xsd:dateTime
+
+[Term]
+id: RXNO:0000678
+name: Aston-Greenburg rearrangement
+def: "The rearrangement of an alpha-haloketone into an ester with a tertiary alpha-carbon atom by intramolecular migration of an alkyl or aryl group." [https://doi.org/10.1021/ja01867a003]
+is_a: RXNO:0000025 ! rearrangement step
+relationship: RXNO:0000423 CHEBI:33308 ! has specified product carboxylic ester
+relationship: RXNO:0000424 CHEBI:51839 ! has specified reactant alpha-haloketone
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
+property_value: http://purl.org/dc/elements/1.1/date 2021-12-14T08:15:45Z xsd:dateTime
+
+[Term]
+id: RXNO:0000679
+name: Baddeley isomerization
+def: "The rearrangement/migration of alkyl groups in polyalkylbenzenes or polynuclear aromatic compounds in the presence of anhydrous aluminum chloride or the mixture of protonic acid and Lewis acid." [https://doi.org/10.1002/9780470638859.conrr030]
+is_a: RXNO:0000025 ! rearrangement step
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
+property_value: http://purl.org/dc/elements/1.1/date 2021-12-14T08:45:33Z xsd:dateTime
+
+[Term]
+id: RXNO:0000680
+name: Fukuyama reduction
+def: "The reduction of a thioester to an aldehyde by a silyl hydride in the presence of catalytic amounts of palladium." [https://en.wikipedia.org/wiki/Fukuyama_reduction, https://www.rsc.org/Merck-Index/reaction/r163/fukuyama%20reduction]
+is_a: RXNO:0000037 ! functional group reduction
+relationship: RXNO:0000423 CHEBI:17478 ! has specified product aldehyde
+relationship: RXNO:0000424 CHEBI:25713 ! has specified reactant organosilicon compound
+relationship: RXNO:0000424 CHEBI:51277 ! has specified reactant thioester
+relationship: RXNO:0000425 CHEBI:33363 ! has_catalyst palladium atom
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
+property_value: http://purl.org/dc/elements/1.1/date 2021-12-14T09:43:52Z xsd:dateTime
+
+[Term]
+id: RXNO:0000681
+name: Dötz reaction
+def: "A three component cyclization of an aromatic or vinylic alkoxy pentacarbonyl chromium carbene complex, an alkyne and carbon monoxide to give a Cr(CO)3 coordinated phenol." [https://en.wikipedia.org/wiki/Wulff%E2%80%93D%C3%B6tz_reaction, https://www.rsc.org/Merck-Index/reaction/r116/d%C3%B6tz%20reaction]
+synonym: "benzannulation reaction of Fischer carbene complexes" RELATED []
+synonym: "Doetz reaction" RELATED []
+synonym: "Wulff-Dötz reaction" RELATED []
+is_a: RXNO:0000005 ! ring formation reaction step
+relationship: RXNO:0000423 CHEBI:33853 ! has specified product phenols
+relationship: RXNO:0000424 CHEBI:17245 ! has specified reactant carbon monoxide
+relationship: RXNO:0000424 CHEBI:22339 ! has specified reactant alkyne
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
+property_value: http://purl.org/dc/elements/1.1/date 2021-12-14T10:45:04Z xsd:dateTime
+
+[Term]
+id: RXNO:0000682
+name: Kulinkovich reaction
+def: "The formation of a substituted cyclopropanol by reaction of a carboxylic ester with a Grignard reagent (carrying a hydrogen atom in the beta-position) in the presence of a titanium(IV) alkoxide as catalyst. A modified cyclopropanol product can be generated by addition of a terminal alkene as a further reactant." [https://en.wikipedia.org/wiki/Kulinkovich_reaction, https://www.rsc.org/Merck-Index/reaction/r247/kulinkovich%20reaction]
+comment: The dialkyldialkoxytitanium reagent, which actually reacts with the carboxylic ester, is generated in situ from the Grignard reagent and the titanium(IV) alkoxide.
+is_a: RXNO:0000005 ! ring formation reaction step
+relationship: RXNO:0000423 CHEBI:51454 ! has specified product cyclopropanes
+relationship: RXNO:0000424 CHEBI:32878 ! has specified reactant alkene
+relationship: RXNO:0000424 CHEBI:33308 ! has specified reactant carboxylic ester
+relationship: RXNO:0000424 CHEBI:51236 ! has specified reactant organomagnesium halide
+relationship: RXNO:0000425 CHEBI:33341 ! has_catalyst titanium atom
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
+property_value: http://purl.org/dc/elements/1.1/date 2021-12-15T09:10:05Z xsd:dateTime
+
+[Term]
+id: RXNO:0000683
+name: Kulinkovich-de Meijere reaction
+def: "The formation of a substituted cyclopropylamine by reaction of an amide with a Grignard reagent (carrying a hydrogen atom in the beta-position) in the presence of a titanium(IV) alkoxide as catalyst." [https://en.wikipedia.org/wiki/Kulinkovich_reaction, https://www.rsc.org/Merck-Index/reaction/r247/kulinkovich%20reaction]
+comment: The Kulinkovich-de Meijere reaction is a modification of the Kulinkovich reaction (i.e., the reaction of an amide instead of a carboxylic ester under Kulinkovich conditions).
+is_a: RXNO:0000005 ! ring formation reaction step
+relationship: RXNO:0000423 CHEBI:51454 ! has specified product cyclopropanes
+relationship: RXNO:0000424 CHEBI:37622 ! has specified reactant carboxamide
+relationship: RXNO:0000424 CHEBI:51236 ! has specified reactant organomagnesium halide
+relationship: RXNO:0000425 CHEBI:33341 ! has_catalyst titanium atom
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
+property_value: http://purl.org/dc/elements/1.1/date 2021-12-15T10:14:52Z xsd:dateTime
+
+[Term]
+id: RXNO:0000684
+name: Kulinkovich-Szymoniak reaction
+def: "The formation of a substituted primary cyclopropylamine by reaction of a nitrile with a Grignard reagent (carrying a hydrogen atom in the beta-position) in the presence of a titanium(IV) alkoxide as catalyst." [https://en.wikipedia.org/wiki/Kulinkovich_reaction, https://www.rsc.org/Merck-Index/reaction/r247/kulinkovich%20reaction]
+comment: The Kulinkovich-Szymoniak reaction is a modification of the Kulinkovich reaction (i.e., the reaction of a nitrile instead of a carboxylic ester under Kulinkovich conditions).
+is_a: RXNO:0000005 ! ring formation reaction step
+relationship: RXNO:0000423 CHEBI:51454 ! has specified product cyclopropanes
+relationship: RXNO:0000424 CHEBI:18379 ! has specified reactant nitrile
+relationship: RXNO:0000424 CHEBI:51236 ! has specified reactant organomagnesium halide
+relationship: RXNO:0000425 CHEBI:33341 ! has_catalyst titanium atom
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
+property_value: http://purl.org/dc/elements/1.1/date 2021-12-15T10:47:43Z xsd:dateTime
+
+[Term]
+id: RXNO:0000686
+name: Jacobsen epoxidation
+def: "Chiral (salen)manganese(III)-catalyzed asymmetric epoxidation of alkenes. In addition to the catalyst, stoichiometric amounts of an oxidant (e.g. sodium hypochlorite) are required." [https://en.wikipedia.org/wiki/Jacobsen_epoxidation, https://www.rsc.org/Merck-Index/reaction/r218/jacobsen%20epoxidation]
+synonym: "Jacobsen-Katsuki epoxidation" RELATED []
+is_a: MOP:0000671 ! epoxidation
+is_a: RXNO:0000005 ! ring formation reaction step
+relationship: RXNO:0000423 CHEBI:32955 ! has specified product epoxide
+relationship: RXNO:0000424 CHEBI:32878 ! has specified reactant alkene
+relationship: RXNO:0000425 CHEBI:18291 ! has_catalyst manganese atom
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
+property_value: http://purl.org/dc/elements/1.1/date 2021-12-16T08:34:02Z xsd:dateTime
+
+[Term]
+id: RXNO:0000687
+name: Shi epoxidation
+def: "Organocatalytic enantioselective epoxidation of trans- and tri-substituted olefins using a fructose derived chiral ketone catalyst and potassium peroxomonosulfate or H2O2 as an oxidant." [https://www.rsc.org/Merck-Index/reaction/r399/shi%20epoxidation]
+is_a: MOP:0000671 ! epoxidation
+is_a: RXNO:0000005 ! ring formation reaction step
+relationship: RXNO:0000423 CHEBI:32955 ! has specified product epoxide
+relationship: RXNO:0000424 CHEBI:32878 ! has specified reactant alkene
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
+property_value: http://purl.org/dc/elements/1.1/date 2021-12-16T08:57:48Z xsd:dateTime
+
+[Term]
+id: RXNO:0000688
+name: Asinger reaction
+def: "A multicomponent reaction (A-4CR) in which 3-thiazolines (2,5-dihydro-1,3-thiazoles) or mixtures of several 3-thiazolines are synthesized from elemental sulfur, an alpha-substitutable ketone or aldehyde, another carbonyl component and ammonia." [https://doi.org/10.1002/cmdc.202100086, https://en.wikipedia.org/wiki/Asinger_reaction]
+synonym: "Asinger thiazoline synthesis" RELATED []
+synonym: "Asinger-4 component reaction (A-4CR)" RELATED []
+is_a: RXNO:0000005 ! ring formation reaction step
+is_a: RXNO:0000348 ! thiacycle synthesis
+relationship: RXNO:0000423 CHEBI:48901 ! has specified product thiazoles
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
+property_value: http://purl.org/dc/elements/1.1/date 2021-12-16T09:29:30Z xsd:dateTime
+
+[Term]
+id: RXNO:0000689
+name: haloform reaction
+def: "Cleavage of methyl ketones (i.e. oxidative demethylation) with halogens (or hypohalites) in the presence of a base to give a carboxylic acid and haloform (trihalomethane)." [https://en.wikipedia.org/wiki/Haloform_reaction, https://www.rsc.org/Merck-Index/reaction/r257/lieben%20iodoform%20reaction]
+synonym: "Einhorn reaction" RELATED []
+synonym: "Lieben reaction" RELATED []
+is_a: MOP:0000550 ! halogenation
+is_a: RXNO:0000105 ! end-of-chain chain shortening
+relationship: RXNO:0000423 CHEBI:33575 ! has specified product carboxylic acid
+relationship: RXNO:0000423 CHEBI:39279 ! has specified product halomethane
+relationship: RXNO:0000424 CHEBI:33434 ! has specified reactant elemental halogen
+relationship: RXNO:0000424 CHEBI:51867 ! has specified reactant methyl ketone
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
+property_value: http://purl.org/dc/elements/1.1/date 2021-12-16T11:10:42Z xsd:dateTime
+
+[Term]
+id: RXNO:0000690
+name: Atherton-Todd reaction
+def: "The conversion of dialkyl phosphites (dialkyl phosphonates) to dialkyl chlorophosphates using tetrachloromethane and a base (usually a primary, secondary or tertiary amine)." [https://doi.org/10.3762/bjoc.10.117, https://en.wikipedia.org/wiki/Atherton%E2%80%93Todd_reaction]
+comment: Since the dialkyl chlorophosphates formed are often too reactive to be isolated, conversion to the corresponding phosphate or phosphoramidate occurs in the presence of a suitable nucleophile (e.g., alcohol or amine) after the actual Atherton-Todd reaction.
+synonym: "AT reaction" RELATED []
+is_a: MOP:0000550 ! halogenation
+is_a: RXNO:0000012 ! functional group oxidation
+relationship: RXNO:0000423 CHEBI:16648 ! has specified product dialkyl phosphate
+relationship: RXNO:0000424 CHEBI:27385 ! has specified reactant tetrachloromethane
+relationship: RXNO:0000424 CHEBI:37735 ! has specified reactant phosphonic ester
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
+property_value: http://purl.org/dc/elements/1.1/date 2021-12-16T12:05:47Z xsd:dateTime
+
+[Term]
+id: RXNO:0000691
+name: Baeyer diarylmethane synthesis
+def: "Synthesis of diarylmethane derivatives using an aldehyde and an aromatic compound at low temperature in an acidic medium." [https://doi.org/10.1016/B978-0-08-096630-4.00412-8]
+comment: A Friedel-Crafts type reaction proceeding via electrophilic aromatic substitution.
+is_a: MOP:0000628 ! molecular dehydration reaction
+is_a: RXNO:0000000 ! molecular skeleton joining reaction
+relationship: RXNO:0000423 CHEBI:51614 ! has specified product diarylmethane
+relationship: RXNO:0000424 CHEBI:17478 ! has specified reactant aldehyde
+relationship: RXNO:0000424 CHEBI:33659 ! has specified reactant organic aromatic compound
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
+property_value: http://purl.org/dc/elements/1.1/date 2021-12-16T12:54:23Z xsd:dateTime
+
+[Term]
+id: RXNO:0000692
+name: silyl deprotection
+def: "A hydroxyl group deprotection in which an silyl ether group is transformed into a hydroxy group." []
+is_a: RXNO:0000430 ! hydroxy group deprotection
+relationship: RXNO:0000417 CHEBI:43176 ! deprotects hydroxy group
+relationship: RXNO:0000424 CHEBI:47988 ! has specified reactant silyl ether
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
+property_value: http://purl.org/dc/elements/1.1/date 2021-12-16T13:23:35Z xsd:dateTime
 
 [Typedef]
 id: BFO:0000055
