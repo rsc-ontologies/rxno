@@ -1,8 +1,9 @@
 format-version: 1.2
-data-version: releases/2014-09-03
+data-version: releases/2022-02-01
 synonymtypedef: FORMULA "FORMULA"
 synonymtypedef: IUPAC_NAME "IUPAC NAME"
 ontology: mop
+property_value: http://purl.org/dc/elements/1.1/date "01:02:2022 11:15" xsd:string
 property_value: http://purl.org/dc/elements/1.1/description "MOP is the molecular process ontology. It contains the molecular processes that underlie the name reaction ontology RXNO, for example cyclization, methylation and demethylation." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "MOP" xsd:string
 property_value: http://purl.org/dc/terms/license http://creativecommons.org/licenses/by/4.0/
@@ -29,6 +30,11 @@ is_a: CHEBI:36342 ! subatomic particle
 id: CHEBI:18379
 name: nitrile
 is_a: CHEBI:36357 ! polyatomic entity
+
+[Term]
+id: CHEBI:22221
+name: acyl group
+is_a: CHEBI:33247 ! organic group
 
 [Term]
 id: CHEBI:23367
@@ -112,6 +118,11 @@ name: inorganic group
 is_a: CHEBI:24433 ! group
 
 [Term]
+id: CHEBI:33247
+name: organic group
+is_a: CHEBI:24433 ! group
+
+[Term]
 id: CHEBI:33595
 name: cyclic compound
 is_a: CHEBI:36357 ! polyatomic entity
@@ -187,6 +198,11 @@ synonym: "TeCN-" RELATED [IUPAC:]
 is_a: CHEBI:36823 ! pseudohalo groups
 
 [Term]
+id: CHEBI:37838
+name: carboacyl group
+is_a: CHEBI:22221 ! acyl group
+
+[Term]
 id: CHEBI:37997
 name: homopolymer
 def: "A macromolecule derived from one species of (real, implicit or hypothetical) monomer." []
@@ -239,6 +255,11 @@ xref: MSDchem:CN "MSDchem"
 is_a: CHEBI:36823 ! pseudohalo groups
 
 [Term]
+id: CHEBI:51100
+name: sulfonyl groups
+is_a: CHEBI:24433 ! group
+
+[Term]
 id: CHEBI:51142
 name: amino groups
 is_a: CHEBI:51144 ! nitrogen group
@@ -251,6 +272,7 @@ is_a: CHEBI:24433 ! group
 [Term]
 id: CHEBI:51870
 name: boryl group
+is_a: CHEBI:24433 ! group
 is_a: CHEBI:33246 ! inorganic group
 
 [Term]
@@ -329,16 +351,24 @@ name: acetylenic compound
 is_a: CHEBI:36357 ! polyatomic entity
 
 [Term]
-id: CHEBI:51870
-name: boryl group
-is_a: CHEBI:24433
+id: GO:0070206
+name: protein trimerization
+namespace: biological_process
+def: "The formation of a protein trimer, a macromolecular structure consisting of three noncovalently associated identical or nonidentical subunits." []
+synonym: "protein trimer assembly" EXACT []
+synonym: "protein trimer biosynthesis" EXACT []
+synonym: "protein trimer biosynthetic process" EXACT []
+synonym: "protein trimer formation" EXACT []
+xref: GOC:hjd
+is_a: MOP:0000715 ! trimerization
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/go/releases/2022-01-13/go.owl xsd:string
 
 [Term]
 id: MOP:0000000
 name: borylation
 def: "Formation of a covalent bond between a substrate and a boryl group (-BR'R')." [https://orcid.org/0000-0001-5985-7429]
 is_a: MOP:0000801 ! formation of covalent bond with boron centre
-relationship: BFO:0000057 CHEBI:51870 ! boryl group
+relationship: BFO:0000057 CHEBI:51870 ! has_participant boryl group
 
 [Term]
 id: MOP:0000001
@@ -563,22 +593,7 @@ def: "Formation of a covalent bond between a substrate and a carboacyl group." [
 synonym: "carboacylation" EXACT []
 is_a: MOP:0000479 ! acylation
 is_a: MOP:0000800 ! formation of covalent bond with carbon centre
-relationship: BFO:0000057 CHEBI:37838
-
-[Term]
-id: CHEBI:37838
-name: carboacyl group
-is_a: CHEBI:22221 ! acyl group
-
-[Term]
-id: CHEBI:22221
-name: acyl group
-is_a: CHEBI:33247 ! organic group
-
-[Term]
-id: CHEBI:33247
-name: organic group
-is_a: CHEBI:24433
+relationship: BFO:0000057 CHEBI:37838 ! has_participant carboacyl group
 
 [Term]
 id: MOP:0000029
@@ -4156,8 +4171,8 @@ name: acylation
 def: "Formation of a covalent bond between a substrate and an acyl group." [RSC:xp]
 comment: you probably want "carboacylation", MOP:0000028, here
 synonym: "acylation" EXACT []
-is_a: MOP:0000800 ! formation of covalent bond with group
-relationship: BFO:0000057 CHEBI:22221
+is_a: MOP:0000800 ! formation of covalent bond with carbon centre
+relationship: BFO:0000057 CHEBI:22221 ! has_participant acyl group
 
 [Term]
 id: MOP:0000480
@@ -4631,13 +4646,8 @@ def: "Formation of a covalent bond between a substrate and a sulfonyl group." [R
 synonym: "sulfonylation" EXACT []
 is_a: MOP:0000798 ! formation of covalent bond with sulfur centre
 intersection_of: MOP:0000798 ! formation of covalent bond with sulfur centre
-intersection_of: BFO:0000057 CHEBI:51100
-relationship: BFO:0000057 CHEBI:51100
-
-[Term]
-id: CHEBI:51100
-name: sulfonyl groups
-is_a: CHEBI:24433
+intersection_of: BFO:0000057 CHEBI:51100 ! has_participant sulfonyl groups
+relationship: BFO:0000057 CHEBI:51100 ! has_participant sulfonyl groups
 
 [Term]
 id: MOP:0000540
@@ -6050,7 +6060,7 @@ relationship: BFO:0000078 CHEBI:33641 ! has participant ceasing to exist olefin
 [Term]
 id: MOP:0000713
 name: acetylene reduction
-def: "Hydrogenation of an acetylene to an olefin." 
+def: "Hydrogenation of an acetylene to an olefin." []
 is_a: MOP:0000589 ! hydrogenation
 
 [Term]
@@ -6063,6 +6073,23 @@ is_a: MOP:0000543 ! molecular process
 relationship: BFO:0000057 CHEBI:52214 ! has_participant ligand
 created_by: http://orcid.org/0000-0002-4378-6061
 creation_date: 2021-11-03T09:13:45Z
+
+[Term]
+id: MOP:0000715
+name: trimerization
+def: "The formation of a trimer from three molecular subunits." [https://en.wiktionary.org/wiki/trimerization]
+is_a: MOP:0000543 ! molecular process
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
+property_value: http://purl.org/dc/elements/1.1/date 2022-02-01T09:40:48Z xsd:dateTime
+
+[Term]
+id: MOP:0000716
+name: cyclotrimerization
+def: "The formation of a trimer by cycloaddition of three unsaturated compounds (e.g. alkynes, alkenes, nitriles or mixtures thereof). A metal catalyst is usually required for this type of reaction." [https://doi.org/10.1002/anie.200700802]
+is_a: MOP:0000562 ! cycloaddition
+is_a: MOP:0000715 ! trimerization
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
+property_value: http://purl.org/dc/elements/1.1/date 2022-02-01T09:48:59Z xsd:dateTime
 
 [Term]
 id: MOP:0000721
