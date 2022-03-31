@@ -19,6 +19,7 @@
         <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16:12:2021 15:55</oboInOwl:date>
         <oboInOwl:default-namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:default-namespace>
         <oboInOwl:hasOBOFormatVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.4</oboInOwl:hasOBOFormatVersion>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-12-16</owl:versionInfo>
     </owl:Ontology>
     
 
