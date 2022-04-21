@@ -3677,33 +3677,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/MOP_0000577 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MOP_0000577">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MOP_0000569"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000078"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33308"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A reduction process where the oxidation state carbonyl carbon in the ester functionality is reduced.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">batchelorc</oboInOwl:created_by>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009-06-02T05:30:48Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reduction of ester</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MOP:0000577</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ester reduction</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MOP_0000577"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A reduction process where the oxidation state carbonyl carbon in the ester functionality is reduced.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-5985-7429</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/MOP_0000578 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MOP_0000578">
