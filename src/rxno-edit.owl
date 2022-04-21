@@ -3667,16 +3667,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/MOP_0000524 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MOP_0000524">
-        <obo:IAO_0000231 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000227"/>
-        <obo:IAO_0100001 rdf:resource="http://purl.obolibrary.org/obo/MOP_0000539"/>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/MOP_0000579 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MOP_0000579">
