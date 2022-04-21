@@ -3667,17 +3667,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/MOP_0000364 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MOP_0000364">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MOP_0000369"/>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MOP:0000364</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">methylation</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/MOP_0000369 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MOP_0000369">
