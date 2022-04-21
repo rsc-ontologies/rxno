@@ -2,6 +2,7 @@
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/rxno.obo.owl#"
      xml:base="http://purl.obolibrary.org/obo/rxno.obo.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:mop="http://purl.obolibrary.org/obo/mop#"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -13,6 +14,7 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/rxno.owl">
         <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/rxno/releases/2021-12-16/rxno.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/mop/releases/2022-02-01/mop.owl"/>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO is the name reaction ontology. It contains more than 500 classes representing organic reactions such as the Diels–Alder cyclization.</dc:description>
         <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</dc:title>
         <terms:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
