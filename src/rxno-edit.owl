@@ -3720,24 +3720,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/MOP_0000715 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MOP_0000715">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MOP_0000562"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cycloaddition in which one participant contributes three electrons and the other participant contributes two electrons to the transformation of reactants to products.</obo:IAO_0000115>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MOP:0000715</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[3+2] cycloaddition</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MOP_0000715"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cycloaddition in which one participant contributes three electrons and the other participant contributes two electrons to the transformation of reactants to products.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-5985-7429</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/MOP_0000716 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MOP_0000716">
