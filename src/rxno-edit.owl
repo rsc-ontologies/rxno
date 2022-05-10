@@ -3720,30 +3720,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/MOP_0000713 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MOP_0000713">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MOP_0000479"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_46883"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Formation of a covalent bond between a molecule and a carboxy group.</obo:IAO_0000115>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MOP:0000713</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">carboxylation</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MOP_0000713"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Formation of a covalent bond between a molecule and a carboxy group.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RSC:xp</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/MOP_0000714 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MOP_0000714">
@@ -8861,7 +8837,7 @@
     <!-- http://purl.obolibrary.org/obo/RXNO_0000182 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000182">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MOP_0000713"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MOP_0000591"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000002"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -8873,6 +8849,10 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.rsc.org/Merck-Index/reaction/r239/</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RXNO:0000182</oboInOwl:id>
+        <rdfs:comment>Prior to the resolving of https://github.com/rsc-ontologies/rxno/issues/27 the parent of this class was wrongly also defined in RXNO under the ID MOP:0000713 (&apos;acetylene reduction&apos;). 
+Thus the &quot;has_participant some &apos;carboxy group&apos;&quot; axiom, which was not yet present on &apos;carboxylation&apos; (MOP:0000591) in MOP was copied from this wrongly defined  &apos;carboxylation&apos; in RXNO to the proper one in MOP.
+
+The only RXNO subclass &apos;Kolbe-Schmitt reaction&apos; (RXNO:0000182) of &apos;carboxylation&apos; was also moved to be correctly subsumed in RXNO.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kolbe-Schmitt reaction</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -8882,6 +8862,15 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RSC:db</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-5985-7429</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-4077-4719</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000182"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget>Prior to the resolving of https://github.com/rsc-ontologies/rxno/issues/27 the parent of this class was wrongly also defined in RXNO under the ID MOP:0000713 (&apos;acetylene reduction&apos;). 
+Thus the &quot;has_participant some &apos;carboxy group&apos;&quot; axiom, which was not yet present on &apos;carboxylation&apos; (MOP:0000591) in MOP was copied from this wrongly defined  &apos;carboxylation&apos; in RXNO to the proper one in MOP.
+
+The only RXNO subclass &apos;Kolbe-Schmitt reaction&apos; (RXNO:0000182) of &apos;carboxylation&apos; was also moved to be correctly subsumed in RXNO.</owl:annotatedTarget>
+        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1595-3213"/>
     </owl:Axiom>
     
 
