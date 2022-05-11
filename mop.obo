@@ -1,9 +1,9 @@
 format-version: 1.2
-data-version: releases/2022-02-01
+data-version: releases/2022-05-11
 synonymtypedef: FORMULA "FORMULA"
 synonymtypedef: IUPAC_NAME "IUPAC NAME"
 ontology: mop
-property_value: http://purl.org/dc/elements/1.1/date "01:02:2022 11:15" xsd:string
+property_value: http://purl.org/dc/elements/1.1/date "11:05:2022 11:15" xsd:string
 property_value: http://purl.org/dc/elements/1.1/description "MOP is the molecular process ontology. It contains the molecular processes that underlie the name reaction ontology RXNO, for example cyclization, methylation and demethylation." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "MOP" xsd:string
 property_value: http://purl.org/dc/terms/license http://creativecommons.org/licenses/by/4.0/
@@ -349,19 +349,6 @@ is_a: CHEBI:33839 ! macromolecule
 id: CHEBI:73474
 name: acetylenic compound
 is_a: CHEBI:36357 ! polyatomic entity
-
-[Term]
-id: GO:0070206
-name: protein trimerization
-namespace: biological_process
-def: "The formation of a protein trimer, a macromolecular structure consisting of three noncovalently associated identical or nonidentical subunits." []
-synonym: "protein trimer assembly" EXACT []
-synonym: "protein trimer biosynthesis" EXACT []
-synonym: "protein trimer biosynthetic process" EXACT []
-synonym: "protein trimer formation" EXACT []
-xref: GOC:hjd
-is_a: MOP:0000715 ! trimerization
-property_value: IAO:0000412 http://purl.obolibrary.org/obo/go/releases/2022-01-13/go.owl xsd:string
 
 [Term]
 id: MOP:0000000
