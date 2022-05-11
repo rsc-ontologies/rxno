@@ -1,3 +1,4 @@
+classes defined in MOP			classes defined in RXNO		
 ID	LABEL	SubClass Of	ID	LABEL	SubClass Of
 MOP:0000000	borylation	formation of covalent bond with boron centre, has_participant some 'boryl group'			
 MOP:0000001	methanidylation	formation of covalent bond with carbon centre			
