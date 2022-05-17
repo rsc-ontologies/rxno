@@ -6068,6 +6068,9 @@ def: "The formation of a trimer from three molecular subunits." [https://en.wikt
 is_a: MOP:0000543 ! molecular process
 property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-4378-6061
 property_value: http://purl.org/dc/elements/1.1/date 2022-02-01T09:40:48Z xsd:dateTime
+property_value: IAO:0000116 "The GO class \"protein trimerization\" (https://purl.obolibrary.org/obo/GO_0070206) would actually be a subclass of \"trimerization\" according to the definition provided here. However, for the reason of not wanting to inject this subclassOf axiom into GO, we decided to not assert this in MOP as of yet. Further discussion is needed with the GO and/or OBO team to see how this GO class can be integrated." xsd:string
+property_value: seeAlso https://github.com/rsc-ontologies/rxno/issues/45
+property_value: seeAlso "issuecomment-1124151946"
 
 [Term]
 id: MOP:0000716
