@@ -3629,10 +3629,10 @@ is_a: RXNO:0000130 ! Wacker-Tsuji oxidation
 [Term]
 id: RXNO:0000132
 name: Monsanto process
-def: "The reaction of formaldehyde with methanol to form acetic acid, catalysed by a rhodium complex." [https://orcid.org/0000-0001-5985-7429, https://orcid.org/0000-0002-4077-4719, RSC:db]
+def: "The reaction of carbon monoxide with methanol to form acetic acid, catalysed by a rhodium complex." [https://orcid.org/0000-0001-5985-7429, https://orcid.org/0000-0002-4077-4719, RSC:db]
 xref: https://www.wikidata.org/wiki/Q901246
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
-relationship: RXNO:0000424 CHEBI:16842 ! has specified reactant formaldehyde
+relationship: RXNO:0000424 CHEBI:17245 ! has specified reactant carbon monoxide
 
 [Term]
 id: RXNO:0000133
@@ -3640,7 +3640,7 @@ name: Cativa process
 def: "The reaction of carbon monoxide with methanol to form acetic acid, catalysed by an iridium complex." [https://orcid.org/0000-0001-5985-7429, https://orcid.org/0000-0002-4077-4719, RSC:db]
 xref: https://www.wikidata.org/wiki/Q579304
 is_a: RXNO:0000000 ! molecular skeleton joining reaction
-relationship: RXNO:0000424 CHEBI:16842 ! has specified reactant formaldehyde
+relationship: RXNO:0000424 CHEBI:17245 ! has specified reactant carbon monoxide
 
 [Term]
 id: RXNO:0000134
