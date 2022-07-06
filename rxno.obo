@@ -7321,7 +7321,6 @@ def: "A Suzuki coupling where the halide is an iodide." [https://orcid.org/0000-
 synonym: "iodo Suzuki-Miyaura coupling" EXACT []
 xref: NAMERXN:3.1.3
 is_a: RXNO:0000140 ! Suzuki-Miyaura coupling
-is_a: RXNO:0000580 ! iodo Suzuki coupling
 
 [Term]
 id: RXNO:0000581
