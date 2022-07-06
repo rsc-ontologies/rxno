@@ -20306,7 +20306,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/RXNO_0000580">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000140"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/RXNO_0000580"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Suzuki coupling where the halide is an iodide.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NAMERXN:3.1.3</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iodo Suzuki-Miyaura coupling</oboInOwl:hasExactSynonym>
