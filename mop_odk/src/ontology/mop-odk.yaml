@@ -1,0 +1,39 @@
+catalog_file: catalog-v001.xml
+ci:
+- github_actions
+components: null
+contact: null
+contributors: null
+create_obo_metadata: true
+creators: null
+description: None
+edit_format: owl
+id: mop
+title: "Molecular Process Ontology"
+github_org: rsc-ontologies
+repo: rxno
+report_fail_on: ERROR
+edit_format: owl
+export_formats:
+  - owl
+  - obo
+  - json
+release_artefacts: 
+  - base
+  - full
+primary_release: full
+import_group:
+  products:
+    - id: ro
+      module_type: slme
+      module_type_slme: BOT
+      slme_individuals: include
+    - id: bfo
+      module_type: mirror
+    - id: obi
+      module_type: custom
+    - id: iao
+      module_type: custom
+    - id: omo
+      module_type: mirror
+robot_java_args: '-Xmx8G'
